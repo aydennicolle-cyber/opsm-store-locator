@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rhythm x Ozmosis Store Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    :root {
+      --ink: #202629;
+      --muted: #687376;
+      --line: #d9ded9;
+      --paper: #f5f3ec;
+      --panel: #fffdf7;
+      --accent: #1f6b5f;
+      --accent-2: #c84f2c;
+      --sand: #e8ddc7;
+      --sea: #d7e7e0;
+      --active: #fff0dc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: minmax(340px, 430px) minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    aside {
+      background: var(--panel);
+      border-right: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      z-index: 2;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 22px 22px 18px;
+    }
+
+    .brand {
+      align-items: center;
+      display: flex;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .mark {
+      align-items: center;
+      background: var(--accent);
+      border-radius: 50%;
+      color: #fffdf7;
+      display: inline-flex;
+      font-size: 17px;
+      font-weight: 900;
+      height: 42px;
+      justify-content: center;
+      width: 42px;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .brand span {
+      color: var(--muted);
+      display: block;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .eyebrow {
+      color: var(--accent-2);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 30px;
+      line-height: 1.05;
+      margin: 7px 0 10px;
+    }
+
+    .source {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .metrics {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 18px;
+    }
+
+    .metric {
+      background: #faf7ef;
+      border: 1px solid var(--sand);
+      border-radius: 8px;
+      padding: 11px 12px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .controls {
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      gap: 12px;
+      padding: 16px 18px;
+    }
+
+    label {
+      color: var(--muted);
+      display: block;
+      font-size: 12px;
+      font-weight: 750;
+      margin-bottom: 6px;
+    }
+
+    input,
+    select {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      font: inherit;
+      min-height: 42px;
+      outline: none;
+      padding: 0 12px;
+      width: 100%;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(31, 107, 95, 0.16);
+    }
+
+    .row {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .list-head {
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      font-size: 13px;
+      font-weight: 850;
+      justify-content: space-between;
+      padding: 13px 18px;
+    }
+
+    .list-head button {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      cursor: pointer;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 850;
+      min-height: 32px;
+      padding: 0 10px;
+    }
+
+    .stores {
+      overflow: auto;
+      padding: 8px;
+    }
+
+    .store {
+      border: 1px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 13px 12px;
+    }
+
+    .store:hover,
+    .store.active {
+      background: var(--active);
+      border-color: #ecd3b6;
+    }
+
+    .store h2 {
+      font-size: 15px;
+      line-height: 1.25;
+      margin: 0 0 5px;
+    }
+
+    .store p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 9px;
+    }
+
+    .tag {
+      background: var(--sea);
+      border: 1px solid #bdd5cb;
+      border-radius: 999px;
+      color: #22564d;
+      font-size: 11px;
+      font-weight: 850;
+      padding: 4px 7px;
+    }
+
+    #map {
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    .leaflet-popup-content {
+      margin: 14px 16px;
+      min-width: 220px;
+    }
+
+    .popup-title {
+      font-size: 15px;
+      font-weight: 900;
+      margin-bottom: 7px;
+    }
+
+    .popup-meta {
+      color: #445160;
+      line-height: 1.4;
+      margin: 0 0 8px;
+    }
+
+    .popup-phone {
+      color: var(--accent);
+      font-weight: 850;
+    }
+
+    .loading {
+      align-items: center;
+      background: rgba(255, 253, 247, 0.9);
+      display: flex;
+      inset: 0;
+      justify-content: center;
+      position: fixed;
+      z-index: 10;
+    }
+
+    @media (max-width: 850px) {
+      .app {
+        display: flex;
+        flex-direction: column;
+      }
+
+      aside {
+        border-right: 0;
+        min-height: auto;
+      }
+
+      #map {
+        min-height: 58vh;
+        order: -1;
+      }
+
+      .stores {
+        max-height: 48vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading" id="loading">Loading Ozmosis store map...</div>
+  <main class="app">
+    <aside>
+      <header>
+        <div class="brand">
+          <div class="mark">R</div>
+          <div>
+            <strong>Rhythm</strong>
+            <span>Ozmosis Australia</span>
+          </div>
+        </div>
+        <div class="eyebrow">Retail network map</div>
+        <h1>Ozmosis Store Map</h1>
+        <p class="source" id="source">Official Ozmosis locator data, filtered to Australian stores.</p>
+        <div class="metrics">
+          <div class="metric"><strong id="totalCount">0</strong><span>Total stores</span></div>
+          <div class="metric"><strong id="visibleCount">0</strong><span>Visible now</span></div>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="Filters">
+        <div>
+          <label for="search">Search</label>
+          <input id="search" type="search" placeholder="Store, suburb, postcode">
+        </div>
+        <div class="row">
+          <div>
+            <label for="state">State</label>
+            <select id="state">
+              <option value="">All states</option>
+            </select>
+          </div>
+          <div>
+            <label for="service">Filter</label>
+            <select id="service">
+              <option value="">All stores</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <div class="list-head">
+        <span id="resultText">Stores</span>
+        <button type="button" id="reset">Reset</button>
+      </div>
+      <section class="stores" id="stores" aria-label="Store list"></section>
+    </aside>
+    <div id="map"></div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map("map", { scrollWheelZoom: true }).setView([-25.2744, 133.7751], 4);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    const icons = {
+      default: L.divIcon({
+        className: "store-marker",
+        html: '<div style="width:18px;height:18px;border-radius:50%;background:#1f6b5f;border:3px solid white;box-shadow:0 1px 7px rgba(0,0,0,.35)"></div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+        popupAnchor: [0, -8]
+      }),
+      active: L.divIcon({
+        className: "store-marker-active",
+        html: '<div style="width:24px;height:24px;border-radius:50%;background:#c84f2c;border:4px solid white;box-shadow:0 1px 10px rgba(0,0,0,.45)"></div>',
+        iconSize: [24, 24],
+        iconAnchor: [12, 12],
+        popupAnchor: [0, -10]
+      })
+    };
+
+    const stateNames = {
+      ACT: "ACT",
+      NSW: "New South Wales",
+      NT: "Northern Territory",
+      QLD: "Queensland",
+      SA: "South Australia",
+      TAS: "Tasmania",
+      VIC: "Victoria",
+      WA: "Western Australia"
+    };
+
+    let features = [];
+    let markers = new Map();
+    let activeId = null;
+    const layer = L.layerGroup().addTo(map);
+
+    const searchInput = document.getElementById("search");
+    const stateSelect = document.getElementById("state");
+    const serviceSelect = document.getElementById("service");
+    const storesEl = document.getElementById("stores");
+    const loadingEl = document.getElementById("loading");
+
+    function escapeHtml(value) {
+      return String(value || "").replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      }[char]));
+    }
+
+    function storeId(props) {
+      return props.id || props.identifier || props.name;
+    }
+
+    function tagHtml(services) {
+      return services
+        ? `<div class="tags">${services.split(", ").map((service) => `<span class="tag">${escapeHtml(service)}</span>`).join("")}</div>`
+        : "";
+    }
+
+    function popupHtml(props) {
+      const phone = props.phone ? `<div class="popup-phone">${escapeHtml(props.phone)}</div>` : "";
+      const storeLink = props.store_url ? `<a href="${escapeHtml(props.store_url)}" target="_blank" rel="noopener">Store page</a>` : "";
+      return `
+        <div class="popup-title">${escapeHtml(props.name)}</div>
+        <p class="popup-meta">${escapeHtml(props.full_address)}</p>
+        ${phone}
+        ${tagHtml(props.services)}
+        ${storeLink}
+      `;
+    }
+
+    function markerFor(feature) {
+      const props = feature.properties;
+      const [lng, lat] = feature.geometry.coordinates;
+      const marker = L.marker([lat, lng], { icon: icons.default }).bindPopup(popupHtml(props));
+      marker.on("click", () => setActive(storeId(props), true));
+      return marker;
+    }
+
+    function setActive(id, fromMap = false) {
+      if (activeId && markers.has(activeId)) {
+        markers.get(activeId).setIcon(icons.default);
+      }
+      activeId = id;
+      const marker = markers.get(id);
+      if (marker) {
+        marker.setIcon(icons.active);
+        if (!fromMap) {
+          marker.openPopup();
+          map.panTo(marker.getLatLng());
+        }
+      }
+      document.querySelectorAll(".store.active").forEach((el) => el.classList.remove("active"));
+      const card = document.querySelector(`[data-store-id="${CSS.escape(id)}"]`);
+      if (card) {
+        card.classList.add("active");
+        if (fromMap) card.scrollIntoView({ block: "nearest" });
+      }
+    }
+
+    function matches(feature) {
+      const props = feature.properties;
+      const haystack = `${props.name} ${props.full_address} ${props.city} ${props.state} ${props.postal_code}`.toLowerCase();
+      const term = searchInput.value.trim().toLowerCase();
+      const stateMatch = !stateSelect.value || props.state === stateSelect.value;
+      const serviceMatch = !serviceSelect.value || (props.services || "").includes(serviceSelect.value);
+      return (!term || haystack.includes(term)) && stateMatch && serviceMatch;
+    }
+
+    function renderList(filtered) {
+      storesEl.innerHTML = filtered.map((feature) => {
+        const props = feature.properties;
+        const id = storeId(props);
+        return `
+          <article class="store" data-store-id="${escapeHtml(id)}">
+            <h2>${escapeHtml(props.name)}</h2>
+            <p>${escapeHtml(props.full_address)}</p>
+            <p>${escapeHtml(props.phone || "")}</p>
+            ${tagHtml(props.services)}
+          </article>
+        `;
+      }).join("");
+      storesEl.querySelectorAll(".store").forEach((card) => {
+        card.addEventListener("click", () => setActive(card.dataset.storeId));
+      });
+    }
+
+    function render() {
+      const filtered = features.filter(matches);
+      layer.clearLayers();
+      markers.clear();
+
+      filtered.forEach((feature) => {
+        const marker = markerFor(feature);
+        const id = storeId(feature.properties);
+        markers.set(id, marker);
+        marker.addTo(layer);
+      });
+
+      renderList(filtered);
+      document.getElementById("visibleCount").textContent = filtered.length;
+      document.getElementById("resultText").textContent = `${filtered.length} stores`;
+
+      if (filtered.length) {
+        const bounds = L.latLngBounds(filtered.map((f) => [f.geometry.coordinates[1], f.geometry.coordinates[0]]));
+        map.fitBounds(bounds, { padding: [35, 35], maxZoom: filtered.length === 1 ? 14 : 8 });
+      }
+    }
+
+    function populateFilters() {
+      const states = [...new Set(features.map((f) => f.properties.state).filter(Boolean))].sort();
+      stateSelect.insertAdjacentHTML(
+        "beforeend",
+        states.map((state) => `<option value="${state}">${stateNames[state] || state}</option>`).join("")
+      );
+
+      const services = [...new Set(features.flatMap((f) => f.properties.services ? f.properties.services.split(", ") : []))].sort();
+      serviceSelect.insertAdjacentHTML(
+        "beforeend",
+        services.map((service) => `<option value="${escapeHtml(service)}">${escapeHtml(service)}</option>`).join("")
+      );
+    }
+
+    function resetFilters() {
+      searchInput.value = "";
+      stateSelect.value = "";
+      serviceSelect.value = "";
+      render();
+    }
+
+    fetch("stores.geojson")
+      .then((response) => response.json())
+      .then((geojson) => {
+        features = geojson.features || [];
+        document.getElementById("totalCount").textContent = geojson.metadata?.store_count || features.length;
+        if (geojson.metadata?.fetched_at) {
+          const fetched = new Date(geojson.metadata.fetched_at);
+          document.getElementById("source").textContent = `Official Ozmosis locator data, refreshed ${fetched.toLocaleDateString()}.`;
+        }
+        populateFilters();
+        render();
+      })
+      .catch(() => {
+        storesEl.innerHTML = '<article class="store"><h2>Store data could not be loaded.</h2><p>Check stores.geojson is published beside this page.</p></article>';
+      })
+      .finally(() => {
+        loadingEl.style.display = "none";
+      });
+
+    [searchInput, stateSelect, serviceSelect].forEach((el) => el.addEventListener("input", render));
+    document.getElementById("reset").addEventListener("click", resetFilters);
+  </script>
+</body>
+</html>

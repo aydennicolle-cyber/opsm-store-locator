@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{RETAILER_NAME}} Store Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #17202a; }
+    .app { display: grid; grid-template-columns: minmax(320px, 410px) 1fr; min-height: 100vh; }
+    aside { border-right: 1px solid #d8dde5; background: #fff; display: flex; flex-direction: column; }
+    header { padding: 22px; border-bottom: 1px solid #d8dde5; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    .muted { color: #5e6978; font-size: 13px; margin: 0; }
+    .controls { display: grid; gap: 10px; padding: 16px; border-bottom: 1px solid #d8dde5; }
+    input, select { min-height: 42px; border: 1px solid #d8dde5; border-radius: 8px; padding: 0 12px; font: inherit; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .count { padding: 12px 16px; font-weight: 800; border-bottom: 1px solid #d8dde5; }
+    .stores { overflow: auto; padding: 8px; }
+    .store { border-radius: 8px; cursor: pointer; padding: 13px 12px; }
+    .store:hover, .store.active { background: #eef6f6; }
+    .store h2 { margin: 0 0 5px; font-size: 15px; }
+    .store p { color: #5e6978; margin: 0; font-size: 13px; line-height: 1.35; }
+    #map { min-height: 100vh; }
+    @media (max-width: 850px) {
+      .app { display: flex; flex-direction: column; }
+      #map { min-height: 58vh; order: -1; }
+      .stores { max-height: 48vh; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <aside>
+      <header>
+        <h1>{{RETAILER_NAME}} Store Map</h1>
+        <p class="muted" id="source">Store locator data.</p>
+      </header>
+      <section class="controls">
+        <input id="search" type="search" placeholder="Store, suburb, postcode">
+        <div class="row">
+          <select id="state"><option value="">All states</option></select>
+          <select id="service"><option value="">All services</option></select>
+        </div>
+      </section>
+      <div class="count" id="count">0 stores</div>
+      <section class="stores" id="stores"></section>
+    </aside>
+    <div id="map"></div>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map("map").setView([-25.2744, 133.7751], 4);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    const layer = L.layerGroup().addTo(map);
+    const markers = new Map();
+    let features = [];
+
+    const searchInput = document.getElementById("search");
+    const stateSelect = document.getElementById("state");
+    const serviceSelect = document.getElementById("service");
+    const storesEl = document.getElementById("stores");
+
+    const icon = L.divIcon({
+      className: "store-marker",
+      html: '<div style="width:18px;height:18px;border-radius:50%;background:#006d77;border:3px solid white;box-shadow:0 1px 7px rgba(0,0,0,.35)"></div>',
+      iconSize: [18, 18],
+      iconAnchor: [9, 9],
+      popupAnchor: [0, -8]
+    });
+
+    function text(props) {
+      return `${props.name || ""} ${props.full_address || ""} ${props.city || ""} ${props.state || ""} ${props.postal_code || ""}`.toLowerCase();
+    }
+
+    function matches(feature) {
+      const props = feature.properties;
+      const term = searchInput.value.trim().toLowerCase();
+      const services = props.services || "";
+      return (!term || text(props).includes(term))
+        && (!stateSelect.value || props.state === stateSelect.value)
+        && (!serviceSelect.value || services.includes(serviceSelect.value));
+    }
+
+    function render() {
+      const filtered = features.filter(matches);
+      layer.clearLayers();
+      markers.clear();
+      storesEl.innerHTML = "";
+
+      filtered.forEach((feature) => {
+        const props = feature.properties;
+        const [lng, lat] = feature.geometry.coordinates;
+        const id = props.id || props.sap_id || props.identifier || props.name;
+        const marker = L.marker([lat, lng], { icon }).bindPopup(`<strong>${props.name}</strong><br>${props.full_address || ""}<br>${props.phone || ""}`);
+        markers.set(id, marker);
+        marker.addTo(layer);
+
+        const card = document.createElement("article");
+        card.className = "store";
+        card.innerHTML = `<h2>${props.name}</h2><p>${props.full_address || ""}</p><p>${props.phone || ""}</p>`;
+        card.addEventListener("click", () => {
+          map.panTo(marker.getLatLng());
+          marker.openPopup();
+        });
+        storesEl.appendChild(card);
+      });
+
+      document.getElementById("count").textContent = `${filtered.length} stores`;
+      if (filtered.length) {
+        const bounds = L.latLngBounds(filtered.map((f) => [f.geometry.coordinates[1], f.geometry.coordinates[0]]));
+        map.fitBounds(bounds, { padding: [35, 35], maxZoom: filtered.length === 1 ? 14 : 8 });
+      }
+    }
+
+    fetch("stores.geojson")
+      .then((response) => response.json())
+      .then((geojson) => {
+        features = geojson.features || [];
+        const states = [...new Set(features.map((f) => f.properties.state).filter(Boolean))].sort();
+        stateSelect.insertAdjacentHTML("beforeend", states.map((s) => `<option value="${s}">${s}</option>`).join(""));
+        const services = [...new Set(features.flatMap((f) => (f.properties.services || "").split(", ").filter(Boolean)))].sort();
+        serviceSelect.insertAdjacentHTML("beforeend", services.map((s) => `<option value="${s}">${s}</option>`).join(""));
+        render();
+      });
+
+    [searchInput, stateSelect, serviceSelect].forEach((el) => el.addEventListener("input", render));
+  </script>
+</body>
+</html>

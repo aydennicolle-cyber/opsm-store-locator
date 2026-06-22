@@ -1,0 +1,843 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "retailer": "Ozmosis",
+    "brand_context": "Rhythm",
+    "source": "https://stockinstore.net/stores/getAllStores",
+    "source_page": "https://www.ozmosis.com.au/pages/stores",
+    "source_post_data": {
+      "site": "10326",
+      "storeid": "",
+      "widget": "330",
+      "lang": "en",
+      "widgetType": "storelocator",
+      "isajax": "1",
+      "info": "none",
+      "preview": "false"
+    },
+    "fetched_at": "2026-06-22T12:36:01+00:00",
+    "geography_filter": "Australia",
+    "store_count": 39
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1345058,
+          -35.1853422
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Gungahlin",
+        "id": "206",
+        "state": "ACT",
+        "city": "Gungahlin",
+        "postal_code": "2912",
+        "full_address": "Shop H58 & H59 The Marketplace Gungahlin Shopping Centre, 33 Hibberson Street, Gungahlin, ACT, 2912",
+        "phone": "02 6152 9240",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-gungahlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.4732646,
+          -33.3747254
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Bateau Bay",
+        "id": "210",
+        "state": "NSW",
+        "city": "Bateau Bay",
+        "postal_code": "2261",
+        "full_address": "Shop 088-89 Bateau Bay Square, 12 Bay Village Road, Bateau Bay, NSW, 2261",
+        "phone": "02 4333 9452",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-bateau-bay"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.5915485,
+          -32.7622124
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Green Hills",
+        "id": "201",
+        "state": "NSW",
+        "city": "East Maitland",
+        "postal_code": "2323",
+        "full_address": "Shop 2014/1 Molly Morgan Drive Stockland Green Hills Shopping Centre, East Maitland, NSW, 2323",
+        "phone": "",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-green-hills"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.391555,
+          -33.4377235
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Erina Fair",
+        "id": "207",
+        "state": "NSW",
+        "city": "Erina",
+        "postal_code": "2250",
+        "full_address": "Shop KM007 Level 1 Erina Fair Shopping Centre, 620/658 Terrigal Drive, Erina, NSW, 2250",
+        "phone": "02 4365 4411",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-erina-fair"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.6429414,
+          -32.9365469
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Glendale",
+        "id": "202",
+        "state": "NSW",
+        "city": "Glendale",
+        "postal_code": "2285",
+        "full_address": "Shop 17/387 Lake Road, Glendale, NSW, 2285",
+        "phone": "02 4954 7389",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-glendale"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.5041525,
+          -33.2405551
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Lake Haven",
+        "id": "209",
+        "state": "NSW",
+        "city": "Lake Haven",
+        "postal_code": "2263",
+        "full_address": "Shop 083 Lake Haven Shopping Centre, Lake Haven Drive, Lake Haven, NSW, 2263",
+        "phone": "02 4393 1444",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-lake-haven"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.1070178,
+          -32.7345189
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Salamander",
+        "id": "212",
+        "state": "NSW",
+        "city": "Salamander Bay",
+        "postal_code": "2317",
+        "full_address": "Shop 66 Salamander Bay Square, Salamander Bay, NSW, 2317",
+        "phone": "02 4216 5336",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-salamander"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.1639759,
+          -32.566397
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Singleton",
+        "id": "211",
+        "state": "NSW",
+        "city": "Singleton",
+        "postal_code": "2330",
+        "full_address": "Tenancy T09/1 Gowrie St, The Square Shopping Centre, Singleton, NSW, 2330",
+        "phone": "02 9000 7490",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-singleton"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.3237056,
+          -33.4878177
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Deepwater",
+        "id": "208",
+        "state": "NSW",
+        "city": "Woy Woy",
+        "postal_code": "2256",
+        "full_address": "Deepwater Plaza, Shop 45 / 50-54 Railway Street, Woy Woy, NSW, 2256",
+        "phone": "02 4344 1705",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-deepwater"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.631394,
+          -37.8256243
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Bairnsdale",
+        "id": "334",
+        "state": "VIC",
+        "city": "Bairnsdale",
+        "postal_code": "3875",
+        "full_address": "132A Main Street, Bairnsdale, VIC, 3875",
+        "phone": "03 4224 5001",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-bairnsdale"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.2789778,
+          -36.7613725
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Bendigo",
+        "id": "336",
+        "state": "VIC",
+        "city": "Bendigo",
+        "postal_code": "3550",
+        "full_address": "357 Hargreaves Street, Bendigo, VIC, 3550",
+        "phone": "03 9419 0163",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-bendigo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.2824625,
+          -38.109828
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Cranbourne",
+        "id": "364",
+        "state": "VIC",
+        "city": "Cranbourne",
+        "postal_code": "3977",
+        "full_address": "Shop SP103 Cranbourne Park Shopping Centre, Cranbourne, VIC, 3977",
+        "phone": "03 5995 9664",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-cranbourne"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.7505643,
+          -36.1284579
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Echuca",
+        "id": "329",
+        "state": "VIC",
+        "city": "Echuca",
+        "postal_code": "3564",
+        "full_address": "221 Pakenham Street, Echuca, VIC, 3564",
+        "phone": "03 5482 1232",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-echuca"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.1248234,
+          -38.1399556
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Frankston",
+        "id": "301",
+        "state": "VIC",
+        "city": "Frankston",
+        "postal_code": "3199",
+        "full_address": "28 Beach Street, Shop 140 Bayside Shopping Centre, Frankston, VIC, 3199",
+        "phone": "03 9781 2930",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-frankston"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.9916459,
+          -37.879309
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Lakes Entrance",
+        "id": "335",
+        "state": "VIC",
+        "city": "Lakes Entrance",
+        "postal_code": "3909",
+        "full_address": "531 Esplanade, Lakes Entrance, VIC, 3909",
+        "phone": "03 4224 5002",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-lakes-entrance"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.453829,
+          -38.186083
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Leopold",
+        "id": "323",
+        "state": "VIC",
+        "city": "Leopold",
+        "postal_code": "3224",
+        "full_address": "Shop G-052 Gateway Plaza, 641- 659 Bellarine Highway, Leopold, VIC, 3224",
+        "phone": "03 5250 6505",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-leopold"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.348737,
+          -37.760195
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Lilydale",
+        "id": "362",
+        "state": "VIC",
+        "city": "Lilydale",
+        "postal_code": "3140",
+        "full_address": "Shop 50-51 Lilydale Marketplace, 33-45 Hutchinson Street, Lilydale, VIC, 3140",
+        "phone": "03 9739 6452",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-lilydale"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.9750715,
+          -38.5414811
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Lorne",
+        "id": "337",
+        "state": "VIC",
+        "city": "Lorne",
+        "postal_code": "3232",
+        "full_address": "142 Mountjoy Parade, Lorne, VIC, 3232",
+        "phone": "03 5289 1600",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-lorne"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.5639724,
+          -37.6860761
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Woodgrove",
+        "id": "309",
+        "state": "VIC",
+        "city": "Melton West",
+        "postal_code": "3337",
+        "full_address": "Woodgrove Shopping Centre Shop T129, 533-555 High Street, Melton West, VIC, 3337",
+        "phone": "03 9967 4688",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-woodgrove"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.138646,
+          -34.2067999
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Mildura",
+        "id": "338",
+        "state": "VIC",
+        "city": "Mildura",
+        "postal_code": "3500",
+        "full_address": "Central Shopping Centre Tenancy G011/831, Fifteenth Street, Mildura, VIC, 3500",
+        "phone": "03 6156 4121",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-mildura"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.0721066,
+          -37.6512877
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Plenty Valley",
+        "id": "306",
+        "state": "VIC",
+        "city": "Mill Park",
+        "postal_code": "3082",
+        "full_address": "54/415 McDonalds Road, Mill Park, VIC, 3082",
+        "phone": "03 9407 1568",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-plenty-valley"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.0382472,
+          -38.2188535
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Mornington",
+        "id": "352",
+        "state": "VIC",
+        "city": "Mornington",
+        "postal_code": "3931",
+        "full_address": "78 Main Street, Mornington, VIC, 3931",
+        "phone": "03 5975 9608",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-mornington"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.3048791,
+          -38.017924
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Fountain Gate",
+        "id": "305",
+        "state": "VIC",
+        "city": "Narre Warren",
+        "postal_code": "3805",
+        "full_address": "Westfield Fountain Gate, 1217-1218/352 Princes Highway, Narre Warren, VIC, 3805",
+        "phone": "03 9705 7285",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-fountain-gate"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.4826928,
+          -38.0772831
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Pakenham",
+        "id": "365",
+        "state": "VIC",
+        "city": "Pakenham",
+        "postal_code": "3810",
+        "full_address": "Pakenham Central Marketplace 26/50/54 John Street, Pakenham, VIC, 3810",
+        "phone": "03 5941 9611",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-pakenham"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.8917726,
+          -38.3609742
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Rosebud",
+        "id": "353",
+        "state": "VIC",
+        "city": "Rosebud",
+        "postal_code": "3939",
+        "full_address": "Rosebud Shopping Centre, Shop R15 McCombe Street, Rosebud, VIC, 3939",
+        "phone": "03 5982 2433",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-rosebud"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.0629256,
+          -38.1066221
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Sale Plaza",
+        "id": "331",
+        "state": "VIC",
+        "city": "Sale",
+        "postal_code": "3850",
+        "full_address": "24 Gippsland Centre, Shop 22/37-39 Cunninghame Street, Sale, VIC, 3850",
+        "phone": "03 5143 1051",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-sale-plaza"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.5397985,
+          -38.1949942
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Traralgon",
+        "id": "368",
+        "state": "VIC",
+        "city": "Traralgon",
+        "postal_code": "3844",
+        "full_address": "Shop 35 Stockland Shopping Centre, 166-188 Franklin Street, Traralgon, VIC, 3844",
+        "phone": "03 5174 9099",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-traralgon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.2394344,
+          -37.868245
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Knox City",
+        "id": "313",
+        "state": "VIC",
+        "city": "Wantirna South",
+        "postal_code": "3152",
+        "full_address": "Shop 1-2136 Westfield Knox City, 425 Burwood Highway, Wantirna South, VIC, 3152",
+        "phone": "03 8521 8070",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-knox-city"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.93068,
+          -38.1627771
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Warragul",
+        "id": "366",
+        "state": "VIC",
+        "city": "Warragul",
+        "postal_code": "3820",
+        "full_address": "11 Victoria Street, Warragul, VIC, 3820",
+        "phone": "03 5622 0759",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-warragul"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.4832744,
+          -38.383252
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Warrnambool",
+        "id": "330",
+        "state": "VIC",
+        "city": "Warrnambool",
+        "postal_code": "3280",
+        "full_address": "136 Koroit Street, Warrnambool, VIC, 3280",
+        "phone": "03 5562 1981",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-warrnambool"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.3193062,
+          -38.1991068
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Waurn Ponds",
+        "id": "325",
+        "state": "VIC",
+        "city": "Waurn Ponds",
+        "postal_code": "3216",
+        "full_address": "Shop 915 / 916 / 917/173-199 Pioneer Road, Waurn Ponds, VIC, 3216",
+        "phone": "03 5241 9321",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-waurn-ponds"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.8250986,
+          -37.5342322
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Wendouree",
+        "id": "326",
+        "state": "VIC",
+        "city": "Wendouree",
+        "postal_code": "3355",
+        "full_address": "Shop 009 Stockland Wendouree, Corner Norman & Gillies Street North, Wendouree, VIC, 3355",
+        "phone": "03 5338 2332",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-wendouree"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.4013196,
+          -36.3798829
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Shepparton",
+        "id": "328",
+        "state": "VIC",
+        "city": "shepparton",
+        "postal_code": "3630",
+        "full_address": "195-197 Maude Street, shepparton, VIC, 3630",
+        "phone": "03 5821 4277",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-shepparton"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.816539,
+          -32.3326
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Baldivis",
+        "id": "611",
+        "state": "WA",
+        "city": "Baldivis",
+        "postal_code": "6171",
+        "full_address": "Shop 039-39 Stockland Baldivis, 20 Settlers Avenue, Baldivis, WA, 6171",
+        "phone": "08 9523 0852",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-baldivis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.9354763,
+          -31.9645031
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Belmont",
+        "id": "601",
+        "state": "WA",
+        "city": "Cloverdale",
+        "postal_code": "6105",
+        "full_address": "97/277 Belmont Avenue, Cloverdale, WA, 6105",
+        "phone": "08 9479 4155",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-belmont"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.660489,
+          -32.5837335
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Falcon",
+        "id": "614",
+        "state": "WA",
+        "city": "Falcon",
+        "postal_code": "6210",
+        "full_address": "Tenancy 21/3 Olive Road, Miami Plaza, Falcon, WA, 6210",
+        "phone": "08 9534 4344",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-falcon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.7993747,
+          -31.9009332
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Innaloo",
+        "id": "605",
+        "state": "WA",
+        "city": "Innaloo",
+        "postal_code": "6018",
+        "full_address": "Shop 1088 Ellen Stirling Boulevard, Innaloo, WA, 6018",
+        "phone": "08 9204 5328",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-innaloo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.7601569,
+          -32.4708465
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Lakelands",
+        "id": "613",
+        "state": "WA",
+        "city": "Lakelands",
+        "postal_code": "6180",
+        "full_address": "Shops 26-27 Lakelands Shopping Centre, 49 Banksiadale Gate, Lakelands, WA, 6180",
+        "phone": "08 7100 1995",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-lakelands"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.7436532,
+          -32.2899379
+        ]
+      },
+      "properties": {
+        "name": "Ozmosis Rockingham",
+        "id": "608",
+        "state": "WA",
+        "city": "Rockingham",
+        "postal_code": "6168",
+        "full_address": "Shop T176 Rockingham Shopping Centre, Read Street, Rockingham, WA, 6168",
+        "phone": "08 9592 3405",
+        "services": "Official Ozmosis store, Click & Collect",
+        "store_url": "https://www.ozmosis.com.au/pages/ozmosis-rockingham"
+      }
+    }
+  ]
+}
