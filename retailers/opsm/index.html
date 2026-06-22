@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OPSM Australia Store Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #5e6978;
+      --line: #d8dde5;
+      --paper: #f7f8fa;
+      --panel: #ffffff;
+      --accent: #006d77;
+      --accent-2: #b85c38;
+      --chip: #eef6f6;
+      --focus: #f4c95d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: minmax(340px, 430px) minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    aside {
+      background: var(--panel);
+      border-right: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      z-index: 2;
+    }
+
+    header {
+      padding: 22px 22px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 28px;
+      line-height: 1.05;
+      margin: 8px 0 10px;
+    }
+
+    .source {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+      background: #fbfcfd;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .controls {
+      display: grid;
+      gap: 12px;
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    label {
+      color: var(--muted);
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      background: #ffffff;
+      font: inherit;
+      min-height: 42px;
+      padding: 0 12px;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0, 109, 119, 0.15);
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .list-head {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 13px 18px;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .list-head button {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+      color: var(--ink);
+      cursor: pointer;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      min-height: 32px;
+      padding: 0 10px;
+    }
+
+    .stores {
+      overflow: auto;
+      padding: 8px;
+    }
+
+    .store {
+      border: 1px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 13px 12px;
+    }
+
+    .store:hover,
+    .store.active {
+      background: var(--chip);
+      border-color: #c4e2e1;
+    }
+
+    .store h2 {
+      font-size: 15px;
+      line-height: 1.25;
+      margin: 0 0 5px;
+    }
+
+    .store p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 9px;
+    }
+
+    .tag {
+      background: #f3efe9;
+      border: 1px solid #e7d8c9;
+      border-radius: 999px;
+      color: #74401f;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 7px;
+    }
+
+    #map {
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    .leaflet-popup-content {
+      margin: 14px 16px;
+      min-width: 220px;
+    }
+
+    .popup-title {
+      font-size: 15px;
+      font-weight: 900;
+      margin-bottom: 7px;
+    }
+
+    .popup-meta {
+      color: #445160;
+      line-height: 1.4;
+      margin: 0 0 8px;
+    }
+
+    .popup-phone {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .loading {
+      align-items: center;
+      background: rgba(255, 255, 255, 0.88);
+      display: flex;
+      inset: 0;
+      justify-content: center;
+      position: fixed;
+      z-index: 10;
+    }
+
+    @media (max-width: 850px) {
+      .app {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        border-right: 0;
+        min-height: auto;
+      }
+
+      #map {
+        min-height: 58vh;
+        order: -1;
+      }
+
+      .app {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .stores {
+        max-height: 48vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading" id="loading">Loading OPSM store map...</div>
+  <main class="app">
+    <aside>
+      <header>
+        <div class="eyebrow">Australia retail network</div>
+        <h1>OPSM Store Map</h1>
+        <p class="source" id="source">Official locator data, filtered to Australian stores.</p>
+        <div class="metrics">
+          <div class="metric"><strong id="totalCount">0</strong><span>Total stores</span></div>
+          <div class="metric"><strong id="visibleCount">0</strong><span>Visible now</span></div>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="Filters">
+        <div>
+          <label for="search">Search</label>
+          <input id="search" type="search" placeholder="Store, suburb, postcode">
+        </div>
+        <div class="row">
+          <div>
+            <label for="state">State</label>
+            <select id="state">
+              <option value="">All states</option>
+            </select>
+          </div>
+          <div>
+            <label for="service">Service</label>
+            <select id="service">
+              <option value="">All services</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <div class="list-head">
+        <span id="resultText">Stores</span>
+        <button type="button" id="reset">Reset</button>
+      </div>
+      <section class="stores" id="stores" aria-label="Store list"></section>
+    </aside>
+    <div id="map"></div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map("map", { scrollWheelZoom: true }).setView([-25.2744, 133.7751], 4);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    const icons = {
+      default: L.divIcon({
+        className: "store-marker",
+        html: '<div style="width:18px;height:18px;border-radius:50%;background:#006d77;border:3px solid white;box-shadow:0 1px 7px rgba(0,0,0,.35)"></div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+        popupAnchor: [0, -8]
+      }),
+      active: L.divIcon({
+        className: "store-marker-active",
+        html: '<div style="width:24px;height:24px;border-radius:50%;background:#b85c38;border:4px solid white;box-shadow:0 1px 10px rgba(0,0,0,.45)"></div>',
+        iconSize: [24, 24],
+        iconAnchor: [12, 12],
+        popupAnchor: [0, -10]
+      })
+    };
+
+    const stateNames = {
+      ACT: "ACT",
+      NSW: "New South Wales",
+      NT: "Northern Territory",
+      QLD: "Queensland",
+      SA: "South Australia",
+      TAS: "Tasmania",
+      VIC: "Victoria",
+      WA: "Western Australia"
+    };
+
+    let features = [];
+    let markers = new Map();
+    let activeId = null;
+    const layer = L.layerGroup().addTo(map);
+
+    const searchInput = document.getElementById("search");
+    const stateSelect = document.getElementById("state");
+    const serviceSelect = document.getElementById("service");
+    const storesEl = document.getElementById("stores");
+    const loadingEl = document.getElementById("loading");
+
+    function popupHtml(props) {
+      const services = props.services ? `<div class="tags">${props.services.split(", ").map((s) => `<span class="tag">${s}</span>`).join("")}</div>` : "";
+      const phone = props.phone ? `<div class="popup-phone">${props.phone}</div>` : "";
+      return `
+        <div class="popup-title">${props.name}</div>
+        <p class="popup-meta">${props.full_address}</p>
+        ${phone}
+        ${services}
+      `;
+    }
+
+    function markerFor(feature) {
+      const props = feature.properties;
+      const [lng, lat] = feature.geometry.coordinates;
+      const marker = L.marker([lat, lng], { icon: icons.default }).bindPopup(popupHtml(props));
+      marker.on("click", () => setActive(props.sap_id || props.identifier, true));
+      return marker;
+    }
+
+    function setActive(id, fromMap = false) {
+      if (activeId && markers.has(activeId)) {
+        markers.get(activeId).setIcon(icons.default);
+      }
+      activeId = id;
+      const marker = markers.get(id);
+      if (marker) {
+        marker.setIcon(icons.active);
+        if (!fromMap) {
+          marker.openPopup();
+          map.panTo(marker.getLatLng());
+        }
+      }
+      document.querySelectorAll(".store.active").forEach((el) => el.classList.remove("active"));
+      const card = document.querySelector(`[data-store-id="${CSS.escape(id)}"]`);
+      if (card) {
+        card.classList.add("active");
+        if (fromMap) card.scrollIntoView({ block: "nearest" });
+      }
+    }
+
+    function matches(feature) {
+      const props = feature.properties;
+      const haystack = `${props.name} ${props.full_address} ${props.city} ${props.state} ${props.postal_code}`.toLowerCase();
+      const term = searchInput.value.trim().toLowerCase();
+      const stateMatch = !stateSelect.value || props.state === stateSelect.value;
+      const serviceMatch = !serviceSelect.value || props.services.includes(serviceSelect.value);
+      return (!term || haystack.includes(term)) && stateMatch && serviceMatch;
+    }
+
+    function renderList(filtered) {
+      storesEl.innerHTML = filtered.map((feature) => {
+        const props = feature.properties;
+        const id = props.sap_id || props.identifier;
+        const tags = props.services
+          ? `<div class="tags">${props.services.split(", ").map((s) => `<span class="tag">${s}</span>`).join("")}</div>`
+          : "";
+        return `
+          <article class="store" data-store-id="${id}">
+            <h2>${props.name}</h2>
+            <p>${props.full_address}</p>
+            <p>${props.phone || ""}</p>
+            ${tags}
+          </article>
+        `;
+      }).join("");
+      storesEl.querySelectorAll(".store").forEach((card) => {
+        card.addEventListener("click", () => setActive(card.dataset.storeId));
+      });
+    }
+
+    function render() {
+      const filtered = features.filter(matches);
+      layer.clearLayers();
+      markers.clear();
+
+      filtered.forEach((feature) => {
+        const marker = markerFor(feature);
+        const id = feature.properties.sap_id || feature.properties.identifier;
+        markers.set(id, marker);
+        marker.addTo(layer);
+      });
+
+      renderList(filtered);
+      document.getElementById("visibleCount").textContent = filtered.length;
+      document.getElementById("resultText").textContent = `${filtered.length} stores`;
+
+      const bounds = L.latLngBounds(filtered.map((f) => [f.geometry.coordinates[1], f.geometry.coordinates[0]]));
+      if (filtered.length) {
+        map.fitBounds(bounds, { padding: [35, 35], maxZoom: filtered.length === 1 ? 14 : 8 });
+      }
+    }
+
+    function populateFilters() {
+      const states = [...new Set(features.map((f) => f.properties.state))].sort();
+      stateSelect.insertAdjacentHTML(
+        "beforeend",
+        states.map((state) => `<option value="${state}">${stateNames[state] || state}</option>`).join("")
+      );
+
+      const services = [...new Set(features.flatMap((f) => f.properties.services ? f.properties.services.split(", ") : []))].sort();
+      serviceSelect.insertAdjacentHTML(
+        "beforeend",
+        services.map((service) => `<option value="${service}">${service}</option>`).join("")
+      );
+    }
+
+    fetch("opsm_stores.geojson")
+      .then((response) => response.json())
+      .then((geojson) => {
+        features = geojson.features;
+        populateFilters();
+        document.getElementById("totalCount").textContent = features.length;
+        document.getElementById("visibleCount").textContent = features.length;
+        const date = geojson.metadata?.fetched_at ? new Date(geojson.metadata.fetched_at) : null;
+        if (date) {
+          document.getElementById("source").textContent = `Official OPSM locator data, fetched ${date.toLocaleDateString()}.`;
+        }
+        render();
+      })
+      .catch(() => {
+        loadingEl.textContent = "Could not load opsm_stores.geojson.";
+      })
+      .finally(() => {
+        loadingEl.style.display = "none";
+      });
+
+    [searchInput, stateSelect, serviceSelect].forEach((control) => control.addEventListener("input", render));
+    document.getElementById("reset").addEventListener("click", () => {
+      searchInput.value = "";
+      stateSelect.value = "";
+      serviceSelect.value = "";
+      render();
+    });
+  </script>
+</body>
+</html>
