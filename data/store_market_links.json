@@ -1,0 +1,4019 @@
+{
+  "metadata": {
+    "store_count": 802,
+    "matched_count": 802,
+    "source_release_date": "2026-05-26"
+  },
+  "links": {
+    "bailey-nelson-belconnen": {
+      "sa2_code": "801011002",
+      "sa2_name": "Belconnen",
+      "match_confidence": "High"
+    },
+    "opsm-1221": {
+      "sa2_code": "801011002",
+      "sa2_name": "Belconnen",
+      "match_confidence": "High"
+    },
+    "specsavers-3307": {
+      "sa2_code": "801011002",
+      "sa2_name": "Belconnen",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-canberra": {
+      "sa2_code": "801051053",
+      "sa2_name": "Civic",
+      "match_confidence": "High"
+    },
+    "opsm-1029": {
+      "sa2_code": "801051053",
+      "sa2_name": "Civic",
+      "match_confidence": "High"
+    },
+    "specsavers-3309": {
+      "sa2_code": "801051053",
+      "sa2_name": "Civic",
+      "match_confidence": "High"
+    },
+    "specsavers-3308": {
+      "sa2_code": "801071080",
+      "sa2_name": "Greenway",
+      "match_confidence": "High"
+    },
+    "opsm-1121": {
+      "sa2_code": "801041040",
+      "sa2_name": "Gungahlin",
+      "match_confidence": "High"
+    },
+    "specsavers-3583": {
+      "sa2_code": "801041040",
+      "sa2_name": "Gungahlin",
+      "match_confidence": "High"
+    },
+    "specsavers-3346": {
+      "sa2_code": "801091109",
+      "sa2_name": "Phillip",
+      "match_confidence": "High"
+    },
+    "opsm-1009": {
+      "sa2_code": "801071080",
+      "sa2_name": "Greenway",
+      "match_confidence": "High"
+    },
+    "opsm-2265": {
+      "sa2_code": "801081098",
+      "sa2_name": "Weston",
+      "match_confidence": "High"
+    },
+    "specsavers-3657": {
+      "sa2_code": "801081098",
+      "sa2_name": "Weston",
+      "match_confidence": "High"
+    },
+    "opsm-1226": {
+      "sa2_code": "801091109",
+      "sa2_name": "Phillip",
+      "match_confidence": "High"
+    },
+    "opsm-1017": {
+      "sa2_code": "109011174",
+      "sa2_name": "Albury - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3465": {
+      "sa2_code": "109011174",
+      "sa2_name": "Albury - South",
+      "match_confidence": "High"
+    },
+    "opsm-1108": {
+      "sa2_code": "110011186",
+      "sa2_name": "Armidale",
+      "match_confidence": "High"
+    },
+    "specsavers-3611": {
+      "sa2_code": "110011186",
+      "sa2_name": "Armidale",
+      "match_confidence": "High"
+    },
+    "opsm-1175": {
+      "sa2_code": "120031677",
+      "sa2_name": "Ashfield - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3519": {
+      "sa2_code": "120031677",
+      "sa2_name": "Ashfield - South",
+      "match_confidence": "High"
+    },
+    "opsm-2986": {
+      "sa2_code": "122011418",
+      "sa2_name": "Balgowlah - Clontarf - Seaforth",
+      "match_confidence": "High"
+    },
+    "specsavers-3624": {
+      "sa2_code": "122011418",
+      "sa2_name": "Balgowlah - Clontarf - Seaforth",
+      "match_confidence": "High"
+    },
+    "opsm-1259": {
+      "sa2_code": "112011236",
+      "sa2_name": "Ballina",
+      "match_confidence": "High"
+    },
+    "specsavers-3296": {
+      "sa2_code": "112011236",
+      "sa2_name": "Ballina",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-balmain": {
+      "sa2_code": "120021387",
+      "sa2_name": "Balmain",
+      "match_confidence": "High"
+    },
+    "opsm-2984": {
+      "sa2_code": "120021387",
+      "sa2_name": "Balmain",
+      "match_confidence": "High"
+    },
+    "opsm-1178": {
+      "sa2_code": "119011571",
+      "sa2_name": "Bankstown - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3383": {
+      "sa2_code": "119011571",
+      "sa2_name": "Bankstown - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3622": {
+      "sa2_code": "119011354",
+      "sa2_name": "Bass Hill - Georges Hall",
+      "match_confidence": "High"
+    },
+    "opsm-2990": {
+      "sa2_code": "102021044",
+      "sa2_name": "Bateau Bay - Killarney Vale",
+      "match_confidence": "High"
+    },
+    "specsavers-3523": {
+      "sa2_code": "102021044",
+      "sa2_name": "Bateau Bay - Killarney Vale",
+      "match_confidence": "High"
+    },
+    "opsm-2995": {
+      "sa2_code": "101041017",
+      "sa2_name": "Batemans Bay",
+      "match_confidence": "High"
+    },
+    "specsavers-3276": {
+      "sa2_code": "101041017",
+      "sa2_name": "Batemans Bay",
+      "match_confidence": "High"
+    },
+    "opsm-1020": {
+      "sa2_code": "103011612",
+      "sa2_name": "Bathurst - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3513": {
+      "sa2_code": "103011612",
+      "sa2_name": "Bathurst - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3633": {
+      "sa2_code": "115011290",
+      "sa2_name": "Baulkham Hills - East",
+      "match_confidence": "High"
+    },
+    "opsm-2943": {
+      "sa2_code": "101021009",
+      "sa2_name": "Queanbeyan",
+      "match_confidence": "High"
+    },
+    "specsavers-3589": {
+      "sa2_code": "101041019",
+      "sa2_name": "Bega - Tathra",
+      "match_confidence": "High"
+    },
+    "opsm-1462": {
+      "sa2_code": "116011303",
+      "sa2_name": "Blacktown (East) - Kings Park",
+      "match_confidence": "High"
+    },
+    "specsavers-3357": {
+      "sa2_code": "116011303",
+      "sa2_name": "Blacktown (East) - Kings Park",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-bondi-beach": {
+      "sa2_code": "118011340",
+      "sa2_name": "Bondi Beach - North Bondi",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-bondi-junction": {
+      "sa2_code": "118011341",
+      "sa2_name": "Bondi Junction - Waverly",
+      "match_confidence": "High"
+    },
+    "opsm-1103": {
+      "sa2_code": "118011341",
+      "sa2_name": "Bondi Junction - Waverly",
+      "match_confidence": "High"
+    },
+    "specsavers-3606": {
+      "sa2_code": "118011341",
+      "sa2_name": "Bondi Junction - Waverly",
+      "match_confidence": "High"
+    },
+    "specsavers-3399": {
+      "sa2_code": "118011341",
+      "sa2_name": "Bondi Junction - Waverly",
+      "match_confidence": "High"
+    },
+    "specsavers-3612": {
+      "sa2_code": "127021509",
+      "sa2_name": "Bonnyrigg Heights - Bonnyrigg",
+      "match_confidence": "High"
+    },
+    "opsm-1658": {
+      "sa2_code": "114021284",
+      "sa2_name": "Bowral",
+      "match_confidence": "High"
+    },
+    "opsm-7062": {
+      "sa2_code": "105021097",
+      "sa2_name": "Broken Hill",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-warringah-mall": {
+      "sa2_code": "122031429",
+      "sa2_name": "Freshwater - Brookvale",
+      "match_confidence": "High"
+    },
+    "opsm-1201": {
+      "sa2_code": "122031429",
+      "sa2_name": "Freshwater - Brookvale",
+      "match_confidence": "High"
+    },
+    "specsavers-3361": {
+      "sa2_code": "122031429",
+      "sa2_name": "Freshwater - Brookvale",
+      "match_confidence": "High"
+    },
+    "opsm-2216": {
+      "sa2_code": "120031678",
+      "sa2_name": "Burwood (NSW)",
+      "match_confidence": "High"
+    },
+    "specsavers-3298": {
+      "sa2_code": "120031678",
+      "sa2_name": "Burwood (NSW)",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-byron-bay": {
+      "sa2_code": "112011240",
+      "sa2_name": "Byron Bay",
+      "match_confidence": "High"
+    },
+    "opsm-2992": {
+      "sa2_code": "112011240",
+      "sa2_name": "Byron Bay",
+      "match_confidence": "High"
+    },
+    "opsm-1192": {
+      "sa2_code": "123021437",
+      "sa2_name": "Campbelltown - Woodbine",
+      "match_confidence": "High"
+    },
+    "specsavers-3347": {
+      "sa2_code": "123021437",
+      "sa2_name": "Campbelltown - Woodbine",
+      "match_confidence": "High"
+    },
+    "specsavers-3348": {
+      "sa2_code": "123021437",
+      "sa2_name": "Campbelltown - Woodbine",
+      "match_confidence": "High"
+    },
+    "specsavers-3663": {
+      "sa2_code": "125021712",
+      "sa2_name": "Carlingford - West",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-castle-towers": {
+      "sa2_code": "115011555",
+      "sa2_name": "Castle Hill - North",
+      "match_confidence": "High"
+    },
+    "opsm-1321": {
+      "sa2_code": "115011555",
+      "sa2_name": "Castle Hill - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3405": {
+      "sa2_code": "115011555",
+      "sa2_name": "Castle Hill - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3558": {
+      "sa2_code": "127031522",
+      "sa2_name": "Casula",
+      "match_confidence": "High"
+    },
+    "specsavers-3382": {
+      "sa2_code": "106011108",
+      "sa2_name": "Cessnock",
+      "match_confidence": "High"
+    },
+    "opsm-1219": {
+      "sa2_code": "111011208",
+      "sa2_name": "Charlestown - Dudley",
+      "match_confidence": "High"
+    },
+    "specsavers-3329": {
+      "sa2_code": "111011208",
+      "sa2_name": "Charlestown - Dudley",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-chatswood": {
+      "sa2_code": "121011684",
+      "sa2_name": "Chatswood - East",
+      "match_confidence": "High"
+    },
+    "opsm-1460": {
+      "sa2_code": "121011684",
+      "sa2_name": "Chatswood - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3319": {
+      "sa2_code": "121011684",
+      "sa2_name": "Chatswood - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3659": {
+      "sa2_code": "121011684",
+      "sa2_name": "Chatswood - East",
+      "match_confidence": "High"
+    },
+    "opsm-1086": {
+      "sa2_code": "115011558",
+      "sa2_name": "Cherrybrook",
+      "match_confidence": "High"
+    },
+    "specsavers-3668": {
+      "sa2_code": "119011655",
+      "sa2_name": "Greenacre - North",
+      "match_confidence": "High"
+    },
+    "opsm-1229": {
+      "sa2_code": "104021084",
+      "sa2_name": "Coffs Harbour - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3339": {
+      "sa2_code": "104021084",
+      "sa2_name": "Coffs Harbour - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3301": {
+      "sa2_code": "104021085",
+      "sa2_name": "Coffs Harbour - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3413": {
+      "sa2_code": "107041145",
+      "sa2_name": "Corrimal - Tarrawanna - Bellambi",
+      "match_confidence": "High"
+    },
+    "opsm-1439": {
+      "sa2_code": "121041414",
+      "sa2_name": "Crows Nest - Waverton",
+      "match_confidence": "High"
+    },
+    "opsm-1133": {
+      "sa2_code": "107011131",
+      "sa2_name": "Dapto - Avondale",
+      "match_confidence": "High"
+    },
+    "specsavers-3531": {
+      "sa2_code": "107011131",
+      "sa2_name": "Dapto - Avondale",
+      "match_confidence": "High"
+    },
+    "opsm-1205": {
+      "sa2_code": "122031695",
+      "sa2_name": "Dee Why - North",
+      "match_confidence": "High"
+    },
+    "opsm-1227": {
+      "sa2_code": "105031101",
+      "sa2_name": "Dubbo - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3681": {
+      "sa2_code": "105031101",
+      "sa2_name": "Dubbo - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3489": {
+      "sa2_code": "105031101",
+      "sa2_name": "Dubbo - South",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-green-hills": {
+      "sa2_code": "106021614",
+      "sa2_name": "East Maitland - Metford",
+      "match_confidence": "High"
+    },
+    "opsm-1403": {
+      "sa2_code": "106021614",
+      "sa2_name": "East Maitland - Metford",
+      "match_confidence": "High"
+    },
+    "specsavers-3446": {
+      "sa2_code": "106021614",
+      "sa2_name": "East Maitland - Metford",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-eastgardens": {
+      "sa2_code": "117011323",
+      "sa2_name": "Pagewood - Hillsdale - Daceyville",
+      "match_confidence": "High"
+    },
+    "specsavers-3355": {
+      "sa2_code": "117011323",
+      "sa2_name": "Pagewood - Hillsdale - Daceyville",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-erina-fair": {
+      "sa2_code": "102011031",
+      "sa2_name": "Erina - Green Point",
+      "match_confidence": "High"
+    },
+    "opsm-1416": {
+      "sa2_code": "102011031",
+      "sa2_name": "Erina - Green Point",
+      "match_confidence": "High"
+    },
+    "specsavers-3331": {
+      "sa2_code": "102011031",
+      "sa2_name": "Erina - Green Point",
+      "match_confidence": "High"
+    },
+    "specsavers-3468": {
+      "sa2_code": "127021515",
+      "sa2_name": "Fairfield",
+      "match_confidence": "High"
+    },
+    "specsavers-3685": {
+      "sa2_code": "107041146",
+      "sa2_name": "Figtree - Keiraville",
+      "match_confidence": "High"
+    },
+    "opsm-1350": {
+      "sa2_code": "108011152",
+      "sa2_name": "Forster",
+      "match_confidence": "High"
+    },
+    "specsavers-3613": {
+      "sa2_code": "108011152",
+      "sa2_name": "Forster",
+      "match_confidence": "High"
+    },
+    "opsm-1473": {
+      "sa2_code": "122031696",
+      "sa2_name": "Frenchs Forest - Oxford Falls",
+      "match_confidence": "High"
+    },
+    "specsavers-3336": {
+      "sa2_code": "111011209",
+      "sa2_name": "Glendale - Cardiff - Hillsborough",
+      "match_confidence": "High"
+    },
+    "specsavers-3682": {
+      "sa2_code": "124031460",
+      "sa2_name": "Glenmore Park - Regentville",
+      "match_confidence": "High"
+    },
+    "opsm-1113": {
+      "sa2_code": "121031407",
+      "sa2_name": "Gordon - Killara",
+      "match_confidence": "High"
+    },
+    "specsavers-3334": {
+      "sa2_code": "102011032",
+      "sa2_name": "Gosford - Springfield",
+      "match_confidence": "High"
+    },
+    "opsm-1016": {
+      "sa2_code": "101051539",
+      "sa2_name": "Goulburn",
+      "match_confidence": "High"
+    },
+    "specsavers-3498": {
+      "sa2_code": "101051539",
+      "sa2_name": "Goulburn",
+      "match_confidence": "High"
+    },
+    "specsavers-3605": {
+      "sa2_code": "104011080",
+      "sa2_name": "Grafton",
+      "match_confidence": "High"
+    },
+    "opsm-1550": {
+      "sa2_code": "113011256",
+      "sa2_name": "Griffith (NSW)",
+      "match_confidence": "High"
+    },
+    "specsavers-3592": {
+      "sa2_code": "113011256",
+      "sa2_name": "Griffith (NSW)",
+      "match_confidence": "High"
+    },
+    "specsavers-3586": {
+      "sa2_code": "127011596",
+      "sa2_name": "Hoxton Park - Carnes Hill - Horningsea Park",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-hornsby": {
+      "sa2_code": "121021578",
+      "sa2_name": "Hornsby - West",
+      "match_confidence": "High"
+    },
+    "opsm-1102": {
+      "sa2_code": "121021577",
+      "sa2_name": "Hornsby - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3418": {
+      "sa2_code": "121021577",
+      "sa2_name": "Hornsby - East",
+      "match_confidence": "High"
+    },
+    "opsm-2217": {
+      "sa2_code": "119031664",
+      "sa2_name": "Hurstville - Central",
+      "match_confidence": "High"
+    },
+    "specsavers-3402": {
+      "sa2_code": "119031664",
+      "sa2_name": "Hurstville - Central",
+      "match_confidence": "High"
+    },
+    "specsavers-3344": {
+      "sa2_code": "123021705",
+      "sa2_name": "Ingleburn",
+      "match_confidence": "High"
+    },
+    "specsavers-3684": {
+      "sa2_code": "110021191",
+      "sa2_name": "Inverell",
+      "match_confidence": "High"
+    },
+    "opsm-4719": {
+      "sa2_code": "111031231",
+      "sa2_name": "Shortland - Jesmond",
+      "match_confidence": "High"
+    },
+    "specsavers-3471": {
+      "sa2_code": "111031231",
+      "sa2_name": "Shortland - Jesmond",
+      "match_confidence": "High"
+    },
+    "opsm-1279": {
+      "sa2_code": "124011452",
+      "sa2_name": "Katoomba - Leura",
+      "match_confidence": "High"
+    },
+    "specsavers-3475": {
+      "sa2_code": "124011452",
+      "sa2_name": "Katoomba - Leura",
+      "match_confidence": "High"
+    },
+    "opsm-2218": {
+      "sa2_code": "108021155",
+      "sa2_name": "Kempsey",
+      "match_confidence": "High"
+    },
+    "specsavers-3677": {
+      "sa2_code": "107031138",
+      "sa2_name": "Kiama",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-kotara": {
+      "sa2_code": "111031222",
+      "sa2_name": "Adamstown - Kotara",
+      "match_confidence": "High"
+    },
+    "opsm-1396": {
+      "sa2_code": "111031222",
+      "sa2_name": "Adamstown - Kotara",
+      "match_confidence": "High"
+    },
+    "specsavers-3333": {
+      "sa2_code": "111031222",
+      "sa2_name": "Adamstown - Kotara",
+      "match_confidence": "High"
+    },
+    "opsm-1320": {
+      "sa2_code": "102021048",
+      "sa2_name": "Gorokan - Kanwal - Charmhaven",
+      "match_confidence": "High"
+    },
+    "specsavers-3511": {
+      "sa2_code": "102021048",
+      "sa2_name": "Gorokan - Kanwal - Charmhaven",
+      "match_confidence": "High"
+    },
+    "opsm-2295": {
+      "sa2_code": "108041162",
+      "sa2_name": "Laurieton - Bonny Hills",
+      "match_confidence": "High"
+    },
+    "opsm-1243": {
+      "sa2_code": "109011176",
+      "sa2_name": "Lavington",
+      "match_confidence": "High"
+    },
+    "specsavers-3466": {
+      "sa2_code": "109011176",
+      "sa2_name": "Lavington",
+      "match_confidence": "High"
+    },
+    "opsm-1179": {
+      "sa2_code": "120021675",
+      "sa2_name": "Leichhardt",
+      "match_confidence": "High"
+    },
+    "specsavers-3423": {
+      "sa2_code": "120021675",
+      "sa2_name": "Leichhardt",
+      "match_confidence": "High"
+    },
+    "specsavers-3638": {
+      "sa2_code": "125011586",
+      "sa2_name": "Lidcombe",
+      "match_confidence": "High"
+    },
+    "opsm-1210": {
+      "sa2_code": "112021248",
+      "sa2_name": "Lismore",
+      "match_confidence": "High"
+    },
+    "specsavers-3299": {
+      "sa2_code": "112021248",
+      "sa2_name": "Lismore",
+      "match_confidence": "High"
+    },
+    "opsm-1106": {
+      "sa2_code": "127031731",
+      "sa2_name": "Liverpool - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3373": {
+      "sa2_code": "127031731",
+      "sa2_name": "Liverpool - East",
+      "match_confidence": "High"
+    },
+    "opsm-1013": {
+      "sa2_code": "106021114",
+      "sa2_name": "Maitland",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-manly": {
+      "sa2_code": "122011419",
+      "sa2_name": "Manly - Fairlight",
+      "match_confidence": "High"
+    },
+    "specsavers-3647": {
+      "sa2_code": "118021568",
+      "sa2_name": "Maroubra - West",
+      "match_confidence": "High"
+    },
+    "opsm-2991": {
+      "sa2_code": "117021636",
+      "sa2_name": "Marrickville - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3544": {
+      "sa2_code": "117021636",
+      "sa2_name": "Marrickville - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3532": {
+      "sa2_code": "128021535",
+      "sa2_name": "Menai - Lucas Heights - Woronora",
+      "match_confidence": "High"
+    },
+    "opsm-2942": {
+      "sa2_code": "101041025",
+      "sa2_name": "Merimbula - Tura Beach",
+      "match_confidence": "High"
+    },
+    "specsavers-3454": {
+      "sa2_code": "125031714",
+      "sa2_name": "Merrylands - Holroyd",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-miranda": {
+      "sa2_code": "128011530",
+      "sa2_name": "Miranda - Yowie Bay",
+      "match_confidence": "High"
+    },
+    "opsm-1174": {
+      "sa2_code": "128011530",
+      "sa2_name": "Miranda - Yowie Bay",
+      "match_confidence": "High"
+    },
+    "specsavers-3417": {
+      "sa2_code": "128011530",
+      "sa2_name": "Miranda - Yowie Bay",
+      "match_confidence": "High"
+    },
+    "specsavers-3559": {
+      "sa2_code": "128011530",
+      "sa2_name": "Miranda - Yowie Bay",
+      "match_confidence": "High"
+    },
+    "specsavers-3561": {
+      "sa2_code": "114021286",
+      "sa2_name": "Mittagong",
+      "match_confidence": "High"
+    },
+    "opsm-2941": {
+      "sa2_code": "122021690",
+      "sa2_name": "Mona Vale - Warriewood (North)",
+      "match_confidence": "High"
+    },
+    "specsavers-3321": {
+      "sa2_code": "111021218",
+      "sa2_name": "Morisset - Cooranbong",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-mosman": {
+      "sa2_code": "121041689",
+      "sa2_name": "Mosman - South",
+      "match_confidence": "High"
+    },
+    "opsm-2967": {
+      "sa2_code": "121041688",
+      "sa2_name": "Mosman - North",
+      "match_confidence": "High"
+    },
+    "opsm-1193": {
+      "sa2_code": "116031317",
+      "sa2_name": "Mount Druitt - Whalan",
+      "match_confidence": "High"
+    },
+    "specsavers-3323": {
+      "sa2_code": "116031317",
+      "sa2_name": "Mount Druitt - Whalan",
+      "match_confidence": "High"
+    },
+    "opsm-1217": {
+      "sa2_code": "111011210",
+      "sa2_name": "Mount Hutton - Windale",
+      "match_confidence": "High"
+    },
+    "specsavers-3335": {
+      "sa2_code": "111011210",
+      "sa2_name": "Mount Hutton - Windale",
+      "match_confidence": "High"
+    },
+    "opsm-1056": {
+      "sa2_code": "123011699",
+      "sa2_name": "Elderslie - Narellan",
+      "match_confidence": "High"
+    },
+    "specsavers-3345": {
+      "sa2_code": "123011699",
+      "sa2_name": "Elderslie - Narellan",
+      "match_confidence": "High"
+    },
+    "specsavers-3494": {
+      "sa2_code": "121041413",
+      "sa2_name": "Cremorne - Cammeray",
+      "match_confidence": "High"
+    },
+    "opsm-4718": {
+      "sa2_code": "111031229",
+      "sa2_name": "Newcastle - Cooks Hill",
+      "match_confidence": "High"
+    },
+    "specsavers-3632": {
+      "sa2_code": "111031229",
+      "sa2_name": "Newcastle - Cooks Hill",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-newtown": {
+      "sa2_code": "117031640",
+      "sa2_name": "Newtown (NSW)",
+      "match_confidence": "High"
+    },
+    "specsavers-3398": {
+      "sa2_code": "125041490",
+      "sa2_name": "North Rocks",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-macquarie": {
+      "sa2_code": "126021500",
+      "sa2_name": "Macquarie Park - Marsfield",
+      "match_confidence": "High"
+    },
+    "opsm-1213": {
+      "sa2_code": "126021500",
+      "sa2_name": "Macquarie Park - Marsfield",
+      "match_confidence": "High"
+    },
+    "specsavers-3359": {
+      "sa2_code": "126021500",
+      "sa2_name": "Macquarie Park - Marsfield",
+      "match_confidence": "High"
+    },
+    "opsm-2200": {
+      "sa2_code": "121041417",
+      "sa2_name": "North Sydney - Lavender Bay",
+      "match_confidence": "High"
+    },
+    "specsavers-3356": {
+      "sa2_code": "121041417",
+      "sa2_name": "North Sydney - Lavender Bay",
+      "match_confidence": "High"
+    },
+    "opsm-2994": {
+      "sa2_code": "114011278",
+      "sa2_name": "Nowra",
+      "match_confidence": "High"
+    },
+    "specsavers-3315": {
+      "sa2_code": "114011278",
+      "sa2_name": "Nowra",
+      "match_confidence": "High"
+    },
+    "specsavers-3316": {
+      "sa2_code": "114011278",
+      "sa2_name": "Nowra",
+      "match_confidence": "High"
+    },
+    "opsm-4614": {
+      "sa2_code": "127011729",
+      "sa2_name": "Oran Park",
+      "match_confidence": "High"
+    },
+    "specsavers-3675": {
+      "sa2_code": "127011729",
+      "sa2_name": "Oran Park",
+      "match_confidence": "High"
+    },
+    "opsm-1028": {
+      "sa2_code": "103041077",
+      "sa2_name": "Orange",
+      "match_confidence": "High"
+    },
+    "specsavers-3517": {
+      "sa2_code": "103041077",
+      "sa2_name": "Orange",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-paddington": {
+      "sa2_code": "118011345",
+      "sa2_name": "Paddington - Moore Park",
+      "match_confidence": "High"
+    },
+    "opsm-1180": {
+      "sa2_code": "117011323",
+      "sa2_name": "Pagewood - Hillsdale - Daceyville",
+      "match_confidence": "High"
+    },
+    "opsm-1117": {
+      "sa2_code": "103021067",
+      "sa2_name": "Parkes (NSW)",
+      "match_confidence": "High"
+    },
+    "opsm-1326": {
+      "sa2_code": "125041717",
+      "sa2_name": "Parramatta - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3625": {
+      "sa2_code": "125041717",
+      "sa2_name": "Parramatta - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3385": {
+      "sa2_code": "125041717",
+      "sa2_name": "Parramatta - North",
+      "match_confidence": "High"
+    },
+    "opsm-1300": {
+      "sa2_code": "124031464",
+      "sa2_name": "Penrith",
+      "match_confidence": "High"
+    },
+    "opsm-1328": {
+      "sa2_code": "124031464",
+      "sa2_name": "Penrith",
+      "match_confidence": "High"
+    },
+    "specsavers-3578": {
+      "sa2_code": "124031464",
+      "sa2_name": "Penrith",
+      "match_confidence": "High"
+    },
+    "specsavers-3386": {
+      "sa2_code": "124031464",
+      "sa2_name": "Penrith",
+      "match_confidence": "High"
+    },
+    "opsm-1351": {
+      "sa2_code": "116031315",
+      "sa2_name": "Hassall Grove - Plumpton",
+      "match_confidence": "High"
+    },
+    "specsavers-3528": {
+      "sa2_code": "116031315",
+      "sa2_name": "Hassall Grove - Plumpton",
+      "match_confidence": "High"
+    },
+    "opsm-2297": {
+      "sa2_code": "108041164",
+      "sa2_name": "Port Macquarie - West",
+      "match_confidence": "High"
+    },
+    "opsm-2296": {
+      "sa2_code": "108041164",
+      "sa2_name": "Port Macquarie - West",
+      "match_confidence": "High"
+    },
+    "specsavers-3438": {
+      "sa2_code": "108041164",
+      "sa2_name": "Port Macquarie - West",
+      "match_confidence": "High"
+    },
+    "specsavers-3584": {
+      "sa2_code": "108041164",
+      "sa2_name": "Port Macquarie - West",
+      "match_confidence": "High"
+    },
+    "opsm-1384": {
+      "sa2_code": "101021009",
+      "sa2_name": "Queanbeyan",
+      "match_confidence": "High"
+    },
+    "specsavers-3574": {
+      "sa2_code": "101021009",
+      "sa2_name": "Queanbeyan",
+      "match_confidence": "High"
+    },
+    "opsm-2971": {
+      "sa2_code": "118021570",
+      "sa2_name": "Randwick - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3313": {
+      "sa2_code": "118021570",
+      "sa2_name": "Randwick - South",
+      "match_confidence": "High"
+    },
+    "opsm-1430": {
+      "sa2_code": "106031122",
+      "sa2_name": "Raymond Terrace",
+      "match_confidence": "High"
+    },
+    "specsavers-3652": {
+      "sa2_code": "106031122",
+      "sa2_name": "Raymond Terrace",
+      "match_confidence": "High"
+    },
+    "opsm-2966": {
+      "sa2_code": "120011673",
+      "sa2_name": "Rhodes",
+      "match_confidence": "High"
+    },
+    "specsavers-3588": {
+      "sa2_code": "120011673",
+      "sa2_name": "Rhodes",
+      "match_confidence": "High"
+    },
+    "opsm-1257": {
+      "sa2_code": "124041466",
+      "sa2_name": "Richmond - Clarendon",
+      "match_confidence": "High"
+    },
+    "specsavers-3439": {
+      "sa2_code": "124041466",
+      "sa2_name": "Richmond - Clarendon",
+      "match_confidence": "High"
+    },
+    "specsavers-3546": {
+      "sa2_code": "119041381",
+      "sa2_name": "Rockdale - Banksia",
+      "match_confidence": "High"
+    },
+    "opsm-1415": {
+      "sa2_code": "119021367",
+      "sa2_name": "Roselands",
+      "match_confidence": "High"
+    },
+    "specsavers-3419": {
+      "sa2_code": "119021367",
+      "sa2_name": "Roselands",
+      "match_confidence": "High"
+    },
+    "opsm-4633": {
+      "sa2_code": "115041625",
+      "sa2_name": "Rouse Hill - Beaumont Hills",
+      "match_confidence": "High"
+    },
+    "specsavers-3526": {
+      "sa2_code": "115041625",
+      "sa2_name": "Rouse Hill - Beaumont Hills",
+      "match_confidence": "High"
+    },
+    "opsm-1551": {
+      "sa2_code": "126021724",
+      "sa2_name": "Ryde - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3428": {
+      "sa2_code": "126021724",
+      "sa2_name": "Ryde - North",
+      "match_confidence": "High"
+    },
+    "opsm-1375": {
+      "sa2_code": "106031121",
+      "sa2_name": "Nelson Bay Peninsula",
+      "match_confidence": "High"
+    },
+    "specsavers-3563": {
+      "sa2_code": "106031121",
+      "sa2_name": "Nelson Bay Peninsula",
+      "match_confidence": "High"
+    },
+    "specsavers-3516": {
+      "sa2_code": "116011626",
+      "sa2_name": "Seven Hills - Prospect",
+      "match_confidence": "High"
+    },
+    "opsm-1105": {
+      "sa2_code": "107031142",
+      "sa2_name": "Shellharbour - Oak Flats",
+      "match_confidence": "High"
+    },
+    "specsavers-3377": {
+      "sa2_code": "107031142",
+      "sa2_name": "Shellharbour - Oak Flats",
+      "match_confidence": "High"
+    },
+    "opsm-4702": {
+      "sa2_code": "106011112",
+      "sa2_name": "Singleton",
+      "match_confidence": "High"
+    },
+    "specsavers-3614": {
+      "sa2_code": "106011112",
+      "sa2_name": "Singleton",
+      "match_confidence": "High"
+    },
+    "opsm-1398": {
+      "sa2_code": "121031410",
+      "sa2_name": "St Ives",
+      "match_confidence": "High"
+    },
+    "specsavers-3637": {
+      "sa2_code": "121031410",
+      "sa2_name": "St Ives",
+      "match_confidence": "High"
+    },
+    "specsavers-3496": {
+      "sa2_code": "124051581",
+      "sa2_name": "St Marys - North St Marys",
+      "match_confidence": "High"
+    },
+    "specsavers-3367": {
+      "sa2_code": "116021633",
+      "sa2_name": "Stanhope Gardens - Parklea",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-pitt-st-sydney": {
+      "sa2_code": "117031644",
+      "sa2_name": "Sydney (North) - Millers Point",
+      "match_confidence": "High"
+    },
+    "opsm-1304": {
+      "sa2_code": "117031644",
+      "sa2_name": "Sydney (North) - Millers Point",
+      "match_confidence": "High"
+    },
+    "opsm-1177": {
+      "sa2_code": "117031644",
+      "sa2_name": "Sydney (North) - Millers Point",
+      "match_confidence": "High"
+    },
+    "specsavers-3581": {
+      "sa2_code": "117031644",
+      "sa2_name": "Sydney (North) - Millers Point",
+      "match_confidence": "High"
+    },
+    "opsm-2996": {
+      "sa2_code": "128011531",
+      "sa2_name": "Sylvania - Taren Point",
+      "match_confidence": "High"
+    },
+    "specsavers-3488": {
+      "sa2_code": "128011531",
+      "sa2_name": "Sylvania - Taren Point",
+      "match_confidence": "High"
+    },
+    "opsm-2938": {
+      "sa2_code": "110041203",
+      "sa2_name": "Tamworth - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3403": {
+      "sa2_code": "110041203",
+      "sa2_name": "Tamworth - North",
+      "match_confidence": "High"
+    },
+    "opsm-2298": {
+      "sa2_code": "108051169",
+      "sa2_name": "Taree",
+      "match_confidence": "High"
+    },
+    "specsavers-3469": {
+      "sa2_code": "108051169",
+      "sa2_name": "Taree",
+      "match_confidence": "High"
+    },
+    "opsm-1228": {
+      "sa2_code": "104021089",
+      "sa2_name": "Sawtell - Boambee",
+      "match_confidence": "High"
+    },
+    "opsm-2266": {
+      "sa2_code": "111021219",
+      "sa2_name": "Toronto - Awaba",
+      "match_confidence": "High"
+    },
+    "specsavers-3459": {
+      "sa2_code": "111021219",
+      "sa2_name": "Toronto - Awaba",
+      "match_confidence": "High"
+    },
+    "opsm-1127": {
+      "sa2_code": "102021055",
+      "sa2_name": "Tuggerah - Kangy Angy",
+      "match_confidence": "High"
+    },
+    "specsavers-3332": {
+      "sa2_code": "102021055",
+      "sa2_name": "Tuggerah - Kangy Angy",
+      "match_confidence": "High"
+    },
+    "opsm-1107": {
+      "sa2_code": "112031254",
+      "sa2_name": "Tweed Heads",
+      "match_confidence": "High"
+    },
+    "opsm-1406": {
+      "sa2_code": "112031552",
+      "sa2_name": "Tweed Heads South",
+      "match_confidence": "High"
+    },
+    "specsavers-3371": {
+      "sa2_code": "112031552",
+      "sa2_name": "Tweed Heads South",
+      "match_confidence": "High"
+    },
+    "opsm-2993": {
+      "sa2_code": "114011282",
+      "sa2_name": "Ulladulla",
+      "match_confidence": "High"
+    },
+    "specsavers-3673": {
+      "sa2_code": "114011282",
+      "sa2_name": "Ulladulla",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-broadway": {
+      "sa2_code": "117031331",
+      "sa2_name": "Glebe - Forest Lodge",
+      "match_confidence": "High"
+    },
+    "opsm-1423": {
+      "sa2_code": "117031331",
+      "sa2_name": "Glebe - Forest Lodge",
+      "match_confidence": "High"
+    },
+    "specsavers-3505": {
+      "sa2_code": "117031331",
+      "sa2_name": "Glebe - Forest Lodge",
+      "match_confidence": "High"
+    },
+    "opsm-1021": {
+      "sa2_code": "113031270",
+      "sa2_name": "Wagga Wagga - West",
+      "match_confidence": "High"
+    },
+    "specsavers-3254": {
+      "sa2_code": "113031270",
+      "sa2_name": "Wagga Wagga - West",
+      "match_confidence": "High"
+    },
+    "opsm-2959": {
+      "sa2_code": "111031233",
+      "sa2_name": "Wallsend - Elermore Vale",
+      "match_confidence": "High"
+    },
+    "specsavers-3220": {
+      "sa2_code": "107031143",
+      "sa2_name": "Warilla",
+      "match_confidence": "High"
+    },
+    "specsavers-3210": {
+      "sa2_code": "107011546",
+      "sa2_name": "Port Kembla - Warrawong",
+      "match_confidence": "High"
+    },
+    "opsm-1068": {
+      "sa2_code": "122021691",
+      "sa2_name": "North Narrabeen - Warriewood (South)",
+      "match_confidence": "High"
+    },
+    "specsavers-3575": {
+      "sa2_code": "122021691",
+      "sa2_name": "North Narrabeen - Warriewood (South)",
+      "match_confidence": "High"
+    },
+    "opsm-2299": {
+      "sa2_code": "108041166",
+      "sa2_name": "Wauchope",
+      "match_confidence": "High"
+    },
+    "opsm-1307": {
+      "sa2_code": "127021517",
+      "sa2_name": "Greenfield Park - Prairiewood",
+      "match_confidence": "High"
+    },
+    "specsavers-3497": {
+      "sa2_code": "127021517",
+      "sa2_name": "Greenfield Park - Prairiewood",
+      "match_confidence": "High"
+    },
+    "specsavers-3678": {
+      "sa2_code": "124041467",
+      "sa2_name": "Windsor - Bligh Park",
+      "match_confidence": "High"
+    },
+    "opsm-2928": {
+      "sa2_code": "125041494",
+      "sa2_name": "Winston Hills",
+      "match_confidence": "High"
+    },
+    "specsavers-3501": {
+      "sa2_code": "125041494",
+      "sa2_name": "Winston Hills",
+      "match_confidence": "High"
+    },
+    "opsm-1015": {
+      "sa2_code": "107041548",
+      "sa2_name": "Wollongong - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3456": {
+      "sa2_code": "107041548",
+      "sa2_name": "Wollongong - East",
+      "match_confidence": "High"
+    },
+    "opsm-1311": {
+      "sa2_code": "102011042",
+      "sa2_name": "Woy Woy - Blackwall",
+      "match_confidence": "High"
+    },
+    "specsavers-3538": {
+      "sa2_code": "102011042",
+      "sa2_name": "Woy Woy - Blackwall",
+      "match_confidence": "High"
+    },
+    "opsm-1582": {
+      "sa2_code": "702011045",
+      "sa2_name": "Charles",
+      "match_confidence": "High"
+    },
+    "opsm-1200": {
+      "sa2_code": "701021013",
+      "sa2_name": "Brinkin - Nakara",
+      "match_confidence": "High"
+    },
+    "opsm-1577": {
+      "sa2_code": "701011002",
+      "sa2_name": "Darwin City",
+      "match_confidence": "High"
+    },
+    "specsavers-3317": {
+      "sa2_code": "701021020",
+      "sa2_name": "Leanyer",
+      "match_confidence": "High"
+    },
+    "opsm-1580": {
+      "sa2_code": "702051067",
+      "sa2_name": "Katherine",
+      "match_confidence": "High"
+    },
+    "specsavers-3318": {
+      "sa2_code": "701041041",
+      "sa2_name": "Palmerston - North",
+      "match_confidence": "High"
+    },
+    "opsm-1191": {
+      "sa2_code": "701041041",
+      "sa2_name": "Palmerston - North",
+      "match_confidence": "High"
+    },
+    "opsm-1161": {
+      "sa2_code": "318021467",
+      "sa2_name": "Aitkenvale",
+      "match_confidence": "High"
+    },
+    "specsavers-3499": {
+      "sa2_code": "318021467",
+      "sa2_name": "Aitkenvale",
+      "match_confidence": "High"
+    },
+    "specsavers-3636": {
+      "sa2_code": "308031217",
+      "sa2_name": "Rockhampton City",
+      "match_confidence": "High"
+    },
+    "specsavers-3224": {
+      "sa2_code": "309031235",
+      "sa2_name": "Arundel",
+      "match_confidence": "High"
+    },
+    "opsm-2272": {
+      "sa2_code": "302021027",
+      "sa2_name": "Aspley",
+      "match_confidence": "High"
+    },
+    "specsavers-3629": {
+      "sa2_code": "302021027",
+      "sa2_name": "Aspley",
+      "match_confidence": "High"
+    },
+    "specsavers-3378": {
+      "sa2_code": "319011500",
+      "sa2_name": "Millbank - Avoca",
+      "match_confidence": "High"
+    },
+    "specsavers-3285": {
+      "sa2_code": "311011305",
+      "sa2_name": "Beaudesert",
+      "match_confidence": "High"
+    },
+    "specsavers-3447": {
+      "sa2_code": "311021306",
+      "sa2_name": "Beenleigh",
+      "match_confidence": "High"
+    },
+    "specsavers-3207": {
+      "sa2_code": "316061439",
+      "sa2_name": "Beerwah",
+      "match_confidence": "High"
+    },
+    "opsm-2982": {
+      "sa2_code": "316021424",
+      "sa2_name": "Wurtulla - Birtinya",
+      "match_confidence": "High"
+    },
+    "specsavers-3619": {
+      "sa2_code": "313011363",
+      "sa2_name": "Bribie Island",
+      "match_confidence": "High"
+    },
+    "opsm-1065": {
+      "sa2_code": "310031287",
+      "sa2_name": "Ipswich - East",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-brisbane-macarthur": {
+      "sa2_code": "305011105",
+      "sa2_name": "Brisbane City",
+      "match_confidence": "High"
+    },
+    "opsm-1513": {
+      "sa2_code": "305011105",
+      "sa2_name": "Brisbane City",
+      "match_confidence": "High"
+    },
+    "opsm-1464": {
+      "sa2_code": "305011105",
+      "sa2_name": "Brisbane City",
+      "match_confidence": "High"
+    },
+    "specsavers-3527": {
+      "sa2_code": "305011105",
+      "sa2_name": "Brisbane City",
+      "match_confidence": "High"
+    },
+    "specsavers-3432": {
+      "sa2_code": "305011105",
+      "sa2_name": "Brisbane City",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-gold-coast": {
+      "sa2_code": "309011224",
+      "sa2_name": "Broadbeach Waters",
+      "match_confidence": "High"
+    },
+    "opsm-1495": {
+      "sa2_code": "309011224",
+      "sa2_name": "Broadbeach Waters",
+      "match_confidence": "High"
+    },
+    "specsavers-3562": {
+      "sa2_code": "309011224",
+      "sa2_name": "Broadbeach Waters",
+      "match_confidence": "High"
+    },
+    "opsm-1357": {
+      "sa2_code": "311031312",
+      "sa2_name": "Browns Plains",
+      "match_confidence": "High"
+    },
+    "specsavers-3411": {
+      "sa2_code": "311031312",
+      "sa2_name": "Browns Plains",
+      "match_confidence": "High"
+    },
+    "opsm-7059": {
+      "sa2_code": "316021418",
+      "sa2_name": "Buddina - Minyama",
+      "match_confidence": "High"
+    },
+    "specsavers-3202": {
+      "sa2_code": "316021418",
+      "sa2_name": "Buddina - Minyama",
+      "match_confidence": "High"
+    },
+    "specsavers-3205": {
+      "sa2_code": "316011414",
+      "sa2_name": "Buderim - South",
+      "match_confidence": "High"
+    },
+    "opsm-1111": {
+      "sa2_code": "319011495",
+      "sa2_name": "Bundaberg",
+      "match_confidence": "High"
+    },
+    "opsm-1386": {
+      "sa2_code": "319011500",
+      "sa2_name": "Millbank - Avoca",
+      "match_confidence": "High"
+    },
+    "specsavers-3646": {
+      "sa2_code": "319011495",
+      "sa2_name": "Bundaberg",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-burleigh-heads": {
+      "sa2_code": "309011225",
+      "sa2_name": "Burleigh Heads",
+      "match_confidence": "High"
+    },
+    "opsm-1085": {
+      "sa2_code": "309011225",
+      "sa2_name": "Burleigh Heads",
+      "match_confidence": "High"
+    },
+    "specsavers-3225": {
+      "sa2_code": "309011225",
+      "sa2_name": "Burleigh Heads",
+      "match_confidence": "High"
+    },
+    "opsm-1336": {
+      "sa2_code": "306021145",
+      "sa2_name": "Cairns City",
+      "match_confidence": "High"
+    },
+    "opsm-1237": {
+      "sa2_code": "306011142",
+      "sa2_name": "Trinity Beach - Smithfield",
+      "match_confidence": "High"
+    },
+    "specsavers-3223": {
+      "sa2_code": "306021145",
+      "sa2_name": "Cairns City",
+      "match_confidence": "High"
+    },
+    "opsm-1385": {
+      "sa2_code": "316021419",
+      "sa2_name": "Caloundra - Kings Beach",
+      "match_confidence": "High"
+    },
+    "specsavers-3692": {
+      "sa2_code": "316021419",
+      "sa2_name": "Caloundra - Kings Beach",
+      "match_confidence": "High"
+    },
+    "opsm-1264": {
+      "sa2_code": "303011048",
+      "sa2_name": "Cannon Hill",
+      "match_confidence": "High"
+    },
+    "specsavers-3658": {
+      "sa2_code": "303011048",
+      "sa2_name": "Cannon Hill",
+      "match_confidence": "High"
+    },
+    "specsavers-3541": {
+      "sa2_code": "312031359",
+      "sa2_name": "Airlie - Whitsundays",
+      "match_confidence": "High"
+    },
+    "opsm-1246": {
+      "sa2_code": "301011004",
+      "sa2_name": "Capalaba",
+      "match_confidence": "High"
+    },
+    "specsavers-3374": {
+      "sa2_code": "301011004",
+      "sa2_name": "Capalaba",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-carindale": {
+      "sa2_code": "303011051",
+      "sa2_name": "Carindale",
+      "match_confidence": "High"
+    },
+    "opsm-1266": {
+      "sa2_code": "303011051",
+      "sa2_name": "Carindale",
+      "match_confidence": "High"
+    },
+    "specsavers-3246": {
+      "sa2_code": "303011051",
+      "sa2_name": "Carindale",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-chermside": {
+      "sa2_code": "302021028",
+      "sa2_name": "Chermside",
+      "match_confidence": "High"
+    },
+    "opsm-1346": {
+      "sa2_code": "302021028",
+      "sa2_name": "Chermside",
+      "match_confidence": "High"
+    },
+    "specsavers-3393": {
+      "sa2_code": "302021028",
+      "sa2_name": "Chermside",
+      "match_confidence": "High"
+    },
+    "opsm-1337": {
+      "sa2_code": "301021007",
+      "sa2_name": "Cleveland",
+      "match_confidence": "High"
+    },
+    "specsavers-3607": {
+      "sa2_code": "301021007",
+      "sa2_name": "Cleveland",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-coomera": {
+      "sa2_code": "309071251",
+      "sa2_name": "Coomera",
+      "match_confidence": "High"
+    },
+    "opsm-2974": {
+      "sa2_code": "309071251",
+      "sa2_name": "Coomera",
+      "match_confidence": "High"
+    },
+    "specsavers-3591": {
+      "sa2_code": "309071251",
+      "sa2_name": "Coomera",
+      "match_confidence": "High"
+    },
+    "specsavers-3206": {
+      "sa2_code": "316021417",
+      "sa2_name": "Aroona - Currimundi",
+      "match_confidence": "High"
+    },
+    "opsm-1162": {
+      "sa2_code": "306021146",
+      "sa2_name": "Earlville - Bayview Heights",
+      "match_confidence": "High"
+    },
+    "specsavers-3437": {
+      "sa2_code": "306021146",
+      "sa2_name": "Earlville - Bayview Heights",
+      "match_confidence": "High"
+    },
+    "opsm-1569": {
+      "sa2_code": "309021233",
+      "sa2_name": "Elanora",
+      "match_confidence": "High"
+    },
+    "specsavers-3568": {
+      "sa2_code": "309021233",
+      "sa2_name": "Elanora",
+      "match_confidence": "High"
+    },
+    "specsavers-3545": {
+      "sa2_code": "308011192",
+      "sa2_name": "Emerald",
+      "match_confidence": "High"
+    },
+    "opsm-7009": {
+      "sa2_code": "303021054",
+      "sa2_name": "Fairfield - Dutton Park",
+      "match_confidence": "High"
+    },
+    "specsavers-3643": {
+      "sa2_code": "303021054",
+      "sa2_name": "Fairfield - Dutton Park",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-fortitude-valley": {
+      "sa2_code": "305011106",
+      "sa2_name": "Fortitude Valley",
+      "match_confidence": "High"
+    },
+    "specsavers-3303": {
+      "sa2_code": "318021475",
+      "sa2_name": "Garbutt - West End",
+      "match_confidence": "High"
+    },
+    "opsm-1588": {
+      "sa2_code": "308051539",
+      "sa2_name": "West Gladstone",
+      "match_confidence": "High"
+    },
+    "specsavers-3487": {
+      "sa2_code": "319031512",
+      "sa2_name": "Gympie - North",
+      "match_confidence": "High"
+    },
+    "opsm-1069": {
+      "sa2_code": "309071252",
+      "sa2_name": "Helensvale",
+      "match_confidence": "High"
+    },
+    "specsavers-3387": {
+      "sa2_code": "309071252",
+      "sa2_name": "Helensvale",
+      "match_confidence": "High"
+    },
+    "opsm-1465": {
+      "sa2_code": "319041518",
+      "sa2_name": "Pialba - Eli Waters",
+      "match_confidence": "High"
+    },
+    "opsm-2958": {
+      "sa2_code": "318021487",
+      "sa2_name": "Oonoonba",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-indooroopilly": {
+      "sa2_code": "304031094",
+      "sa2_name": "Indooroopilly",
+      "match_confidence": "High"
+    },
+    "opsm-1277": {
+      "sa2_code": "304031094",
+      "sa2_name": "Indooroopilly",
+      "match_confidence": "High"
+    },
+    "specsavers-3427": {
+      "sa2_code": "304031094",
+      "sa2_name": "Indooroopilly",
+      "match_confidence": "High"
+    },
+    "opsm-1564": {
+      "sa2_code": "306031159",
+      "sa2_name": "Innisfail",
+      "match_confidence": "High"
+    },
+    "specsavers-3362": {
+      "sa2_code": "310031286",
+      "sa2_name": "Ipswich - Central",
+      "match_confidence": "High"
+    },
+    "specsavers-3687": {
+      "sa2_code": "317011446",
+      "sa2_name": "Darling Heights",
+      "match_confidence": "High"
+    },
+    "opsm-1570": {
+      "sa2_code": "319021505",
+      "sa2_name": "Kingaroy",
+      "match_confidence": "High"
+    },
+    "specsavers-3603": {
+      "sa2_code": "319021505",
+      "sa2_name": "Kingaroy",
+      "match_confidence": "High"
+    },
+    "opsm-2970": {
+      "sa2_code": "313051380",
+      "sa2_name": "Rothwell - Kippa-Ring",
+      "match_confidence": "High"
+    },
+    "specsavers-3461": {
+      "sa2_code": "313051380",
+      "sa2_name": "Rothwell - Kippa-Ring",
+      "match_confidence": "High"
+    },
+    "opsm-2283": {
+      "sa2_code": "318021482",
+      "sa2_name": "Kirwan - West",
+      "match_confidence": "High"
+    },
+    "specsavers-3302": {
+      "sa2_code": "311051327",
+      "sa2_name": "Shailer Park",
+      "match_confidence": "High"
+    },
+    "specsavers-3653": {
+      "sa2_code": "305031131",
+      "sa2_name": "Wooloowin - Lutwyche",
+      "match_confidence": "High"
+    },
+    "opsm-1295": {
+      "sa2_code": "312021346",
+      "sa2_name": "Mackay",
+      "match_confidence": "High"
+    },
+    "opsm-2264": {
+      "sa2_code": "312021348",
+      "sa2_name": "Mount Pleasant - Glenella",
+      "match_confidence": "High"
+    },
+    "specsavers-3404": {
+      "sa2_code": "312021346",
+      "sa2_name": "Mackay",
+      "match_confidence": "High"
+    },
+    "opsm-2968": {
+      "sa2_code": "314021579",
+      "sa2_name": "North Lakes",
+      "match_confidence": "High"
+    },
+    "opsm-1263": {
+      "sa2_code": "316031427",
+      "sa2_name": "Maroochydore - Kuluin",
+      "match_confidence": "High"
+    },
+    "specsavers-3201": {
+      "sa2_code": "316031427",
+      "sa2_name": "Maroochydore - Kuluin",
+      "match_confidence": "High"
+    },
+    "opsm-1167": {
+      "sa2_code": "319051524",
+      "sa2_name": "Maryborough (Qld)",
+      "match_confidence": "High"
+    },
+    "specsavers-3483": {
+      "sa2_code": "319051524",
+      "sa2_name": "Maryborough (Qld)",
+      "match_confidence": "High"
+    },
+    "opsm-1119": {
+      "sa2_code": "304041101",
+      "sa2_name": "Mitchelton",
+      "match_confidence": "High"
+    },
+    "specsavers-3408": {
+      "sa2_code": "304041101",
+      "sa2_name": "Mitchelton",
+      "match_confidence": "High"
+    },
+    "opsm-1273": {
+      "sa2_code": "313021366",
+      "sa2_name": "Caboolture - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3363": {
+      "sa2_code": "313021366",
+      "sa2_name": "Caboolture - South",
+      "match_confidence": "High"
+    },
+    "opsm-2270": {
+      "sa2_code": "303031063",
+      "sa2_name": "Mount Gravatt",
+      "match_confidence": "High"
+    },
+    "opsm-1585": {
+      "sa2_code": "315021405",
+      "sa2_name": "Mount Isa",
+      "match_confidence": "High"
+    },
+    "specsavers-3406": {
+      "sa2_code": "304011081",
+      "sa2_name": "Jindalee - Mount Ommaney",
+      "match_confidence": "High"
+    },
+    "opsm-1274": {
+      "sa2_code": "304011081",
+      "sa2_name": "Jindalee - Mount Ommaney",
+      "match_confidence": "High"
+    },
+    "specsavers-3203": {
+      "sa2_code": "316071548",
+      "sa2_name": "Nambour",
+      "match_confidence": "High"
+    },
+    "specsavers-3628": {
+      "sa2_code": "309061248",
+      "sa2_name": "Nerang - Mount Nathan",
+      "match_confidence": "High"
+    },
+    "specsavers-3572": {
+      "sa2_code": "317011453",
+      "sa2_name": "Newtown (Qld)",
+      "match_confidence": "High"
+    },
+    "opsm-2998": {
+      "sa2_code": "316051435",
+      "sa2_name": "Noosaville",
+      "match_confidence": "High"
+    },
+    "specsavers-3204": {
+      "sa2_code": "316051435",
+      "sa2_name": "Noosaville",
+      "match_confidence": "High"
+    },
+    "opsm-2978": {
+      "sa2_code": "310031286",
+      "sa2_name": "Ipswich - Central",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-north-lakes": {
+      "sa2_code": "314021579",
+      "sa2_name": "North Lakes",
+      "match_confidence": "High"
+    },
+    "specsavers-3305": {
+      "sa2_code": "314021579",
+      "sa2_name": "North Lakes",
+      "match_confidence": "High"
+    },
+    "specsavers-3604": {
+      "sa2_code": "312021348",
+      "sa2_name": "Mount Pleasant - Glenella",
+      "match_confidence": "High"
+    },
+    "specsavers-3455": {
+      "sa2_code": "308031214",
+      "sa2_name": "Park Avenue",
+      "match_confidence": "High"
+    },
+    "opsm-1299": {
+      "sa2_code": "319041518",
+      "sa2_name": "Pialba - Eli Waters",
+      "match_confidence": "High"
+    },
+    "specsavers-3343": {
+      "sa2_code": "319041518",
+      "sa2_name": "Pialba - Eli Waters",
+      "match_confidence": "High"
+    },
+    "specsavers-3576": {
+      "sa2_code": "318021475",
+      "sa2_name": "Garbutt - West End",
+      "match_confidence": "High"
+    },
+    "specsavers-3277": {
+      "sa2_code": "310041299",
+      "sa2_name": "Collingwood Park - Redbank",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-robina": {
+      "sa2_code": "309081560",
+      "sa2_name": "Robina - West",
+      "match_confidence": "High"
+    },
+    "specsavers-3381": {
+      "sa2_code": "309081560",
+      "sa2_name": "Robina - West",
+      "match_confidence": "High"
+    },
+    "opsm-1322": {
+      "sa2_code": "309081560",
+      "sa2_name": "Robina - West",
+      "match_confidence": "High"
+    },
+    "opsm-1064": {
+      "sa2_code": "308031205",
+      "sa2_name": "Berserker",
+      "match_confidence": "High"
+    },
+    "opsm-1076": {
+      "sa2_code": "309031240",
+      "sa2_name": "Runaway Bay",
+      "match_confidence": "High"
+    },
+    "specsavers-3391": {
+      "sa2_code": "309031240",
+      "sa2_name": "Runaway Bay",
+      "match_confidence": "High"
+    },
+    "opsm-1562": {
+      "sa2_code": "311051327",
+      "sa2_name": "Shailer Park",
+      "match_confidence": "High"
+    },
+    "specsavers-3304": {
+      "sa2_code": "306011142",
+      "sa2_name": "Trinity Beach - Smithfield",
+      "match_confidence": "High"
+    },
+    "opsm-1343": {
+      "sa2_code": "309091540",
+      "sa2_name": "Southport - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3453": {
+      "sa2_code": "309091540",
+      "sa2_name": "Southport - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3567": {
+      "sa2_code": "310041304",
+      "sa2_name": "Springfield Lakes",
+      "match_confidence": "High"
+    },
+    "opsm-1110": {
+      "sa2_code": "310041304",
+      "sa2_name": "Springfield Lakes",
+      "match_confidence": "High"
+    },
+    "specsavers-3651": {
+      "sa2_code": "311061334",
+      "sa2_name": "Springwood",
+      "match_confidence": "High"
+    },
+    "opsm-7025": {
+      "sa2_code": "302021032",
+      "sa2_name": "Stafford",
+      "match_confidence": "High"
+    },
+    "opsm-1436": {
+      "sa2_code": "314031394",
+      "sa2_name": "Strathpine - Brendale",
+      "match_confidence": "High"
+    },
+    "specsavers-3389": {
+      "sa2_code": "314031394",
+      "sa2_name": "Strathpine - Brendale",
+      "match_confidence": "High"
+    },
+    "opsm-1268": {
+      "sa2_code": "303041069",
+      "sa2_name": "Robertson",
+      "match_confidence": "High"
+    },
+    "specsavers-3479": {
+      "sa2_code": "303041069",
+      "sa2_name": "Robertson",
+      "match_confidence": "High"
+    },
+    "specsavers-3518": {
+      "sa2_code": "302041045",
+      "sa2_name": "Taigum - Fitzgibbon",
+      "match_confidence": "High"
+    },
+    "opsm-1387": {
+      "sa2_code": "304041103",
+      "sa2_name": "The Gap",
+      "match_confidence": "High"
+    },
+    "specsavers-3476": {
+      "sa2_code": "318021482",
+      "sa2_name": "Kirwan - West",
+      "match_confidence": "High"
+    },
+    "opsm-1565": {
+      "sa2_code": "305041137",
+      "sa2_name": "Toowong",
+      "match_confidence": "High"
+    },
+    "specsavers-3566": {
+      "sa2_code": "305041137",
+      "sa2_name": "Toowong",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-toowoomba": {
+      "sa2_code": "317011456",
+      "sa2_name": "Toowoomba - Central",
+      "match_confidence": "High"
+    },
+    "opsm-1339": {
+      "sa2_code": "317011453",
+      "sa2_name": "Newtown (Qld)",
+      "match_confidence": "High"
+    },
+    "opsm-1062": {
+      "sa2_code": "317011456",
+      "sa2_name": "Toowoomba - Central",
+      "match_confidence": "High"
+    },
+    "specsavers-3416": {
+      "sa2_code": "317011456",
+      "sa2_name": "Toowoomba - Central",
+      "match_confidence": "High"
+    },
+    "opsm-1169": {
+      "sa2_code": "318021475",
+      "sa2_name": "Garbutt - West End",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-mt-gravatt": {
+      "sa2_code": "303031065",
+      "sa2_name": "Upper Mount Gravatt",
+      "match_confidence": "High"
+    },
+    "opsm-1262": {
+      "sa2_code": "303031065",
+      "sa2_name": "Upper Mount Gravatt",
+      "match_confidence": "High"
+    },
+    "specsavers-3248": {
+      "sa2_code": "303031065",
+      "sa2_name": "Upper Mount Gravatt",
+      "match_confidence": "High"
+    },
+    "specsavers-3342": {
+      "sa2_code": "319041518",
+      "sa2_name": "Pialba - Eli Waters",
+      "match_confidence": "High"
+    },
+    "opsm-1552": {
+      "sa2_code": "301021013",
+      "sa2_name": "Victoria Point",
+      "match_confidence": "High"
+    },
+    "specsavers-3445": {
+      "sa2_code": "301021013",
+      "sa2_name": "Victoria Point",
+      "match_confidence": "High"
+    },
+    "specsavers-3626": {
+      "sa2_code": "307031189",
+      "sa2_name": "Warwick",
+      "match_confidence": "High"
+    },
+    "specsavers-3506": {
+      "sa2_code": "308051539",
+      "sa2_name": "West Gladstone",
+      "match_confidence": "High"
+    },
+    "specsavers-3442": {
+      "sa2_code": "301031021",
+      "sa2_name": "Wynnum West - Hemmant",
+      "match_confidence": "High"
+    },
+    "specsavers-3664": {
+      "sa2_code": "310031285",
+      "sa2_name": "Churchill - Yamanto",
+      "match_confidence": "High"
+    },
+    "opsm-2957": {
+      "sa2_code": "308031223",
+      "sa2_name": "Yeppoon",
+      "match_confidence": "High"
+    },
+    "opsm-2961": {
+      "sa2_code": "403041071",
+      "sa2_name": "Aberfoyle Park",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-adelaide-arcade": {
+      "sa2_code": "401011001",
+      "sa2_name": "Adelaide",
+      "match_confidence": "High"
+    },
+    "opsm-1376": {
+      "sa2_code": "401011001",
+      "sa2_name": "Adelaide",
+      "match_confidence": "High"
+    },
+    "opsm-1050": {
+      "sa2_code": "401011001",
+      "sa2_name": "Adelaide",
+      "match_confidence": "High"
+    },
+    "specsavers-3208": {
+      "sa2_code": "401011001",
+      "sa2_name": "Adelaide",
+      "match_confidence": "High"
+    },
+    "opsm-1579": {
+      "sa2_code": "407031160",
+      "sa2_name": "Berri",
+      "match_confidence": "High"
+    },
+    "specsavers-3217": {
+      "sa2_code": "407031160",
+      "sa2_name": "Berri",
+      "match_confidence": "High"
+    },
+    "specsavers-3269": {
+      "sa2_code": "405021116",
+      "sa2_name": "Clare",
+      "match_confidence": "High"
+    },
+    "opsm-1572": {
+      "sa2_code": "403021058",
+      "sa2_name": "Edwardstown",
+      "match_confidence": "High"
+    },
+    "specsavers-3369": {
+      "sa2_code": "403021058",
+      "sa2_name": "Edwardstown",
+      "match_confidence": "High"
+    },
+    "opsm-1155": {
+      "sa2_code": "402021030",
+      "sa2_name": "Elizabeth",
+      "match_confidence": "High"
+    },
+    "specsavers-3351": {
+      "sa2_code": "402021030",
+      "sa2_name": "Elizabeth",
+      "match_confidence": "High"
+    },
+    "opsm-1422": {
+      "sa2_code": "401051018",
+      "sa2_name": "Payneham - Felixstow",
+      "match_confidence": "High"
+    },
+    "opsm-1251": {
+      "sa2_code": "402011026",
+      "sa2_name": "Gawler - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3616": {
+      "sa2_code": "402011026",
+      "sa2_name": "Gawler - South",
+      "match_confidence": "High"
+    },
+    "opsm-1211": {
+      "sa2_code": "403011057",
+      "sa2_name": "Glenelg (SA)",
+      "match_confidence": "High"
+    },
+    "opsm-1011": {
+      "sa2_code": "401031013",
+      "sa2_name": "Toorak Gardens",
+      "match_confidence": "High"
+    },
+    "opsm-1468": {
+      "sa2_code": "402051049",
+      "sa2_name": "Golden Grove",
+      "match_confidence": "High"
+    },
+    "specsavers-3662": {
+      "sa2_code": "402051049",
+      "sa2_name": "Golden Grove",
+      "match_confidence": "High"
+    },
+    "specsavers-3514": {
+      "sa2_code": "402041040",
+      "sa2_name": "Ingle Farm",
+      "match_confidence": "High"
+    },
+    "specsavers-3273": {
+      "sa2_code": "405041124",
+      "sa2_name": "Kadina",
+      "match_confidence": "High"
+    },
+    "opsm-1648": {
+      "sa2_code": "404011097",
+      "sa2_name": "Woodville - Cheltenham",
+      "match_confidence": "High"
+    },
+    "specsavers-3524": {
+      "sa2_code": "404011097",
+      "sa2_name": "Woodville - Cheltenham",
+      "match_confidence": "High"
+    },
+    "specsavers-3244": {
+      "sa2_code": "401051019",
+      "sa2_name": "St Peters - Marden",
+      "match_confidence": "High"
+    },
+    "opsm-1231": {
+      "sa2_code": "402051052",
+      "sa2_name": "Hope Valley - Modbury",
+      "match_confidence": "High"
+    },
+    "specsavers-3212": {
+      "sa2_code": "402051052",
+      "sa2_name": "Hope Valley - Modbury",
+      "match_confidence": "High"
+    },
+    "opsm-2934": {
+      "sa2_code": "403041084",
+      "sa2_name": "Morphett Vale - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3509": {
+      "sa2_code": "403041085",
+      "sa2_name": "Morphett Vale - West",
+      "match_confidence": "High"
+    },
+    "opsm-1245": {
+      "sa2_code": "401021007",
+      "sa2_name": "Mount Barker",
+      "match_confidence": "High"
+    },
+    "specsavers-3458": {
+      "sa2_code": "401021007",
+      "sa2_name": "Mount Barker",
+      "match_confidence": "High"
+    },
+    "opsm-1584": {
+      "sa2_code": "407021174",
+      "sa2_name": "Mount Gambier - West",
+      "match_confidence": "High"
+    },
+    "specsavers-3412": {
+      "sa2_code": "407021174",
+      "sa2_name": "Mount Gambier - West",
+      "match_confidence": "High"
+    },
+    "specsavers-3594": {
+      "sa2_code": "407031165",
+      "sa2_name": "Murray Bridge",
+      "match_confidence": "High"
+    },
+    "specsavers-3512": {
+      "sa2_code": "401041015",
+      "sa2_name": "Paradise - Newton",
+      "match_confidence": "High"
+    },
+    "opsm-7071": {
+      "sa2_code": "403041073",
+      "sa2_name": "Christie Downs",
+      "match_confidence": "High"
+    },
+    "specsavers-3376": {
+      "sa2_code": "403041073",
+      "sa2_name": "Christie Downs",
+      "match_confidence": "High"
+    },
+    "opsm-1058": {
+      "sa2_code": "401011002",
+      "sa2_name": "North Adelaide",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-norwood": {
+      "sa2_code": "401051017",
+      "sa2_name": "Norwood (SA)",
+      "match_confidence": "High"
+    },
+    "opsm-2989": {
+      "sa2_code": "401051017",
+      "sa2_name": "Norwood (SA)",
+      "match_confidence": "High"
+    },
+    "specsavers-3415": {
+      "sa2_code": "401051017",
+      "sa2_name": "Norwood (SA)",
+      "match_confidence": "High"
+    },
+    "specsavers-3271": {
+      "sa2_code": "405011114",
+      "sa2_name": "Nuriootpa",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-marion": {
+      "sa2_code": "403021064",
+      "sa2_name": "Warradale",
+      "match_confidence": "High"
+    },
+    "opsm-1254": {
+      "sa2_code": "403021064",
+      "sa2_name": "Warradale",
+      "match_confidence": "High"
+    },
+    "specsavers-3521": {
+      "sa2_code": "403021064",
+      "sa2_name": "Warradale",
+      "match_confidence": "High"
+    },
+    "specsavers-3209": {
+      "sa2_code": "403021064",
+      "sa2_name": "Warradale",
+      "match_confidence": "High"
+    },
+    "opsm-2962": {
+      "sa2_code": "403031070",
+      "sa2_name": "Panorama",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-port-adelaide": {
+      "sa2_code": "404021101",
+      "sa2_name": "Port Adelaide",
+      "match_confidence": "High"
+    },
+    "opsm-1586": {
+      "sa2_code": "406011133",
+      "sa2_name": "Port Lincoln",
+      "match_confidence": "High"
+    },
+    "specsavers-3635": {
+      "sa2_code": "406011133",
+      "sa2_name": "Port Lincoln",
+      "match_confidence": "High"
+    },
+    "specsavers-3283": {
+      "sa2_code": "405031122",
+      "sa2_name": "Port Pirie",
+      "match_confidence": "High"
+    },
+    "opsm-1256": {
+      "sa2_code": "401061021",
+      "sa2_name": "Prospect",
+      "match_confidence": "High"
+    },
+    "opsm-1066": {
+      "sa2_code": "402041046",
+      "sa2_name": "Salisbury",
+      "match_confidence": "High"
+    },
+    "specsavers-3214": {
+      "sa2_code": "402041046",
+      "sa2_name": "Salisbury",
+      "match_confidence": "High"
+    },
+    "specsavers-3213": {
+      "sa2_code": "402041046",
+      "sa2_name": "Salisbury",
+      "match_confidence": "High"
+    },
+    "opsm-1514": {
+      "sa2_code": "403041177",
+      "sa2_name": "Seaford - Seaford Meadows",
+      "match_confidence": "High"
+    },
+    "specsavers-3642": {
+      "sa2_code": "403041177",
+      "sa2_name": "Seaford - Seaford Meadows",
+      "match_confidence": "High"
+    },
+    "specsavers-3211": {
+      "sa2_code": "402031036",
+      "sa2_name": "Enfield - Blair Athol",
+      "match_confidence": "High"
+    },
+    "specsavers-3215": {
+      "sa2_code": "402021034",
+      "sa2_name": "Smithfield - Elizabeth North",
+      "match_confidence": "High"
+    },
+    "opsm-1289": {
+      "sa2_code": "403031069",
+      "sa2_name": "Mitcham (SA)",
+      "match_confidence": "High"
+    },
+    "specsavers-3627": {
+      "sa2_code": "403031069",
+      "sa2_name": "Mitcham (SA)",
+      "match_confidence": "High"
+    },
+    "opsm-2930": {
+      "sa2_code": "404031108",
+      "sa2_name": "Richmond (SA)",
+      "match_confidence": "High"
+    },
+    "specsavers-3569": {
+      "sa2_code": "404031108",
+      "sa2_name": "Richmond (SA)",
+      "match_confidence": "High"
+    },
+    "opsm-7082": {
+      "sa2_code": "407011148",
+      "sa2_name": "Victor Harbor",
+      "match_confidence": "High"
+    },
+    "specsavers-3573": {
+      "sa2_code": "407011148",
+      "sa2_name": "Victor Harbor",
+      "match_confidence": "High"
+    },
+    "opsm-1081": {
+      "sa2_code": "404011096",
+      "sa2_name": "West Lakes",
+      "match_confidence": "High"
+    },
+    "specsavers-3375": {
+      "sa2_code": "404011096",
+      "sa2_name": "West Lakes",
+      "match_confidence": "High"
+    },
+    "opsm-1583": {
+      "sa2_code": "406011136",
+      "sa2_name": "Whyalla",
+      "match_confidence": "High"
+    },
+    "specsavers-3388": {
+      "sa2_code": "406011136",
+      "sa2_name": "Whyalla",
+      "match_confidence": "High"
+    },
+    "opsm-1573": {
+      "sa2_code": "403041084",
+      "sa2_name": "Morphett Vale - East",
+      "match_confidence": "High"
+    },
+    "opsm-2287": {
+      "sa2_code": "604011077",
+      "sa2_name": "Burnie - Wivenhoe",
+      "match_confidence": "High"
+    },
+    "specsavers-3543": {
+      "sa2_code": "604011077",
+      "sa2_name": "Burnie - Wivenhoe",
+      "match_confidence": "High"
+    },
+    "opsm-2294": {
+      "sa2_code": "604021085",
+      "sa2_name": "Devonport",
+      "match_confidence": "High"
+    },
+    "specsavers-3585": {
+      "sa2_code": "604021085",
+      "sa2_name": "Devonport",
+      "match_confidence": "High"
+    },
+    "opsm-1662": {
+      "sa2_code": "601031017",
+      "sa2_name": "Glenorchy",
+      "match_confidence": "High"
+    },
+    "specsavers-3515": {
+      "sa2_code": "601031017",
+      "sa2_name": "Glenorchy",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-hobart": {
+      "sa2_code": "601051027",
+      "sa2_name": "Hobart",
+      "match_confidence": "High"
+    },
+    "opsm-2293": {
+      "sa2_code": "601051027",
+      "sa2_name": "Hobart",
+      "match_confidence": "High"
+    },
+    "specsavers-3495": {
+      "sa2_code": "601051027",
+      "sa2_name": "Hobart",
+      "match_confidence": "High"
+    },
+    "opsm-1666": {
+      "sa2_code": "602011037",
+      "sa2_name": "Kings Meadows - Punchbowl",
+      "match_confidence": "High"
+    },
+    "specsavers-3641": {
+      "sa2_code": "602011037",
+      "sa2_name": "Kings Meadows - Punchbowl",
+      "match_confidence": "High"
+    },
+    "opsm-2292": {
+      "sa2_code": "601041022",
+      "sa2_name": "Kingston - Huntingfield",
+      "match_confidence": "High"
+    },
+    "specsavers-3547": {
+      "sa2_code": "601041022",
+      "sa2_name": "Kingston - Huntingfield",
+      "match_confidence": "High"
+    },
+    "opsm-2291": {
+      "sa2_code": "602011038",
+      "sa2_name": "Launceston",
+      "match_confidence": "High"
+    },
+    "specsavers-3325": {
+      "sa2_code": "602011038",
+      "sa2_name": "Launceston",
+      "match_confidence": "High"
+    },
+    "opsm-2290": {
+      "sa2_code": "601031019",
+      "sa2_name": "Moonah",
+      "match_confidence": "High"
+    },
+    "opsm-2289": {
+      "sa2_code": "601021004",
+      "sa2_name": "Bellerive - Rosny",
+      "match_confidence": "High"
+    },
+    "specsavers-3421": {
+      "sa2_code": "601021004",
+      "sa2_name": "Bellerive - Rosny",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-hobart-eastlands": {
+      "sa2_code": "601021004",
+      "sa2_name": "Bellerive - Rosny",
+      "match_confidence": "High"
+    },
+    "opsm-2288": {
+      "sa2_code": "604011084",
+      "sa2_name": "Wynyard",
+      "match_confidence": "High"
+    },
+    "opsm-1488": {
+      "sa2_code": "210011226",
+      "sa2_name": "Airport West",
+      "match_confidence": "High"
+    },
+    "specsavers-3431": {
+      "sa2_code": "210011226",
+      "sa2_name": "Airport West",
+      "match_confidence": "High"
+    },
+    "opsm-1428": {
+      "sa2_code": "213021343",
+      "sa2_name": "Altona North",
+      "match_confidence": "High"
+    },
+    "specsavers-3258": {
+      "sa2_code": "213021342",
+      "sa2_name": "Altona Meadows",
+      "match_confidence": "High"
+    },
+    "specsavers-3457": {
+      "sa2_code": "213021343",
+      "sa2_name": "Altona North",
+      "match_confidence": "High"
+    },
+    "specsavers-3602": {
+      "sa2_code": "213041353",
+      "sa2_name": "Bacchus Marsh",
+      "match_confidence": "High"
+    },
+    "opsm-2914": {
+      "sa2_code": "205021081",
+      "sa2_name": "Bairnsdale",
+      "match_confidence": "High"
+    },
+    "specsavers-3564": {
+      "sa2_code": "205021081",
+      "sa2_name": "Bairnsdale",
+      "match_confidence": "High"
+    },
+    "opsm-1057": {
+      "sa2_code": "201011002",
+      "sa2_name": "Ballarat",
+      "match_confidence": "High"
+    },
+    "opsm-2261": {
+      "sa2_code": "201011002",
+      "sa2_name": "Ballarat",
+      "match_confidence": "High"
+    },
+    "specsavers-3396": {
+      "sa2_code": "201011002",
+      "sa2_name": "Ballarat",
+      "match_confidence": "High"
+    },
+    "specsavers-3275": {
+      "sa2_code": "203021037",
+      "sa2_name": "Belmont",
+      "match_confidence": "High"
+    },
+    "specsavers-3291": {
+      "sa2_code": "204021063",
+      "sa2_name": "Benalla",
+      "match_confidence": "High"
+    },
+    "opsm-1037": {
+      "sa2_code": "202011018",
+      "sa2_name": "Bendigo",
+      "match_confidence": "High"
+    },
+    "opsm-7008": {
+      "sa2_code": "202011018",
+      "sa2_name": "Bendigo",
+      "match_confidence": "High"
+    },
+    "specsavers-3322": {
+      "sa2_code": "202011018",
+      "sa2_name": "Bendigo",
+      "match_confidence": "High"
+    },
+    "opsm-1134": {
+      "sa2_code": "208021174",
+      "sa2_name": "Bentleigh - McKinnon",
+      "match_confidence": "High"
+    },
+    "specsavers-3282": {
+      "sa2_code": "208021174",
+      "sa2_name": "Bentleigh - McKinnon",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-berwick": {
+      "sa2_code": "212021293",
+      "sa2_name": "Berwick - North",
+      "match_confidence": "High"
+    },
+    "opsm-7046": {
+      "sa2_code": "212021293",
+      "sa2_name": "Berwick - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3474": {
+      "sa2_code": "212021553",
+      "sa2_name": "Berwick - South East",
+      "match_confidence": "High"
+    },
+    "specsavers-3525": {
+      "sa2_code": "207031163",
+      "sa2_name": "Box Hill",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-brighton": {
+      "sa2_code": "208011169",
+      "sa2_name": "Brighton (Vic.)",
+      "match_confidence": "High"
+    },
+    "opsm-7075": {
+      "sa2_code": "208011169",
+      "sa2_name": "Brighton (Vic.)",
+      "match_confidence": "High"
+    },
+    "specsavers-3557": {
+      "sa2_code": "208011169",
+      "sa2_name": "Brighton (Vic.)",
+      "match_confidence": "High"
+    },
+    "specsavers-3295": {
+      "sa2_code": "210051242",
+      "sa2_name": "Broadmeadows",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-brunswick": {
+      "sa2_code": "206011496",
+      "sa2_name": "Brunswick - South",
+      "match_confidence": "High"
+    },
+    "opsm-1482": {
+      "sa2_code": "206011496",
+      "sa2_name": "Brunswick - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3449": {
+      "sa2_code": "206011496",
+      "sa2_name": "Brunswick - South",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-camberwell": {
+      "sa2_code": "207011149",
+      "sa2_name": "Camberwell",
+      "match_confidence": "High"
+    },
+    "specsavers-3358": {
+      "sa2_code": "207011149",
+      "sa2_name": "Camberwell",
+      "match_confidence": "High"
+    },
+    "specsavers-3648": {
+      "sa2_code": "213041463",
+      "sa2_name": "Caroline Springs",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-chadstone": {
+      "sa2_code": "208041195",
+      "sa2_name": "Malvern East",
+      "match_confidence": "High"
+    },
+    "opsm-1410": {
+      "sa2_code": "208041195",
+      "sa2_name": "Malvern East",
+      "match_confidence": "High"
+    },
+    "specsavers-3444": {
+      "sa2_code": "208041195",
+      "sa2_name": "Malvern East",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-southland": {
+      "sa2_code": "208031188",
+      "sa2_name": "Highett (East) - Cheltenham ",
+      "match_confidence": "High"
+    },
+    "opsm-1407": {
+      "sa2_code": "208031188",
+      "sa2_name": "Highett (East) - Cheltenham ",
+      "match_confidence": "High"
+    },
+    "specsavers-3218": {
+      "sa2_code": "208031188",
+      "sa2_name": "Highett (East) - Cheltenham ",
+      "match_confidence": "High"
+    },
+    "specsavers-3272": {
+      "sa2_code": "208031188",
+      "sa2_name": "Highett (East) - Cheltenham ",
+      "match_confidence": "High"
+    },
+    "opsm-1649": {
+      "sa2_code": "211051275",
+      "sa2_name": "Chirnside Park",
+      "match_confidence": "High"
+    },
+    "specsavers-3401": {
+      "sa2_code": "211051275",
+      "sa2_name": "Chirnside Park",
+      "match_confidence": "High"
+    },
+    "opsm-1043": {
+      "sa2_code": "207011149",
+      "sa2_name": "Camberwell",
+      "match_confidence": "High"
+    },
+    "opsm-2254": {
+      "sa2_code": "216021411",
+      "sa2_name": "Cobram",
+      "match_confidence": "High"
+    },
+    "opsm-1144": {
+      "sa2_code": "206011497",
+      "sa2_name": "Coburg - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3294": {
+      "sa2_code": "217031472",
+      "sa2_name": "Colac",
+      "match_confidence": "High"
+    },
+    "opsm-1291": {
+      "sa2_code": "203021486",
+      "sa2_name": "Corio - Lovely Banks",
+      "match_confidence": "High"
+    },
+    "specsavers-3262": {
+      "sa2_code": "203021486",
+      "sa2_name": "Corio - Lovely Banks",
+      "match_confidence": "High"
+    },
+    "opsm-2282": {
+      "sa2_code": "210051543",
+      "sa2_name": "Craigieburn - West",
+      "match_confidence": "High"
+    },
+    "specsavers-3533": {
+      "sa2_code": "210051543",
+      "sa2_name": "Craigieburn - West",
+      "match_confidence": "High"
+    },
+    "opsm-1290": {
+      "sa2_code": "212031300",
+      "sa2_name": "Cranbourne",
+      "match_confidence": "High"
+    },
+    "specsavers-3425": {
+      "sa2_code": "212031300",
+      "sa2_name": "Cranbourne",
+      "match_confidence": "High"
+    },
+    "opsm-2999": {
+      "sa2_code": "211031450",
+      "sa2_name": "Croydon - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3667": {
+      "sa2_code": "211031450",
+      "sa2_name": "Croydon - East",
+      "match_confidence": "High"
+    },
+    "opsm-1486": {
+      "sa2_code": "212041563",
+      "sa2_name": "Dandenong - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3352": {
+      "sa2_code": "212041563",
+      "sa2_name": "Dandenong - North",
+      "match_confidence": "High"
+    },
+    "opsm-1312": {
+      "sa2_code": "213011569",
+      "sa2_name": "Deer Park",
+      "match_confidence": "High"
+    },
+    "specsavers-3256": {
+      "sa2_code": "213011569",
+      "sa2_name": "Deer Park",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-doncaster": {
+      "sa2_code": "207021157",
+      "sa2_name": "Doncaster",
+      "match_confidence": "High"
+    },
+    "opsm-1214": {
+      "sa2_code": "207021157",
+      "sa2_name": "Doncaster",
+      "match_confidence": "High"
+    },
+    "specsavers-3552": {
+      "sa2_code": "207021157",
+      "sa2_name": "Doncaster",
+      "match_confidence": "High"
+    },
+    "specsavers-3407": {
+      "sa2_code": "207021424",
+      "sa2_name": "Doncaster East - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3595": {
+      "sa2_code": "216011406",
+      "sa2_name": "Echuca",
+      "match_confidence": "High"
+    },
+    "opsm-1156": {
+      "sa2_code": "208021179",
+      "sa2_name": "Elsternwick",
+      "match_confidence": "High"
+    },
+    "specsavers-3621": {
+      "sa2_code": "208021179",
+      "sa2_name": "Elsternwick",
+      "match_confidence": "High"
+    },
+    "specsavers-3671": {
+      "sa2_code": "209031209",
+      "sa2_name": "Eltham",
+      "match_confidence": "High"
+    },
+    "specsavers-3484": {
+      "sa2_code": "212021454",
+      "sa2_name": "Endeavour Hills - South",
+      "match_confidence": "High"
+    },
+    "opsm-1032": {
+      "sa2_code": "209041432",
+      "sa2_name": "Epping - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3353": {
+      "sa2_code": "209041432",
+      "sa2_name": "Epping - South",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-fitzroy": {
+      "sa2_code": "206071142",
+      "sa2_name": "Fitzroy",
+      "match_confidence": "High"
+    },
+    "opsm-1487": {
+      "sa2_code": "211041269",
+      "sa2_name": "Forest Hill",
+      "match_confidence": "High"
+    },
+    "specsavers-3338": {
+      "sa2_code": "211041269",
+      "sa2_name": "Forest Hill",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-bayside-frankston": {
+      "sa2_code": "214011371",
+      "sa2_name": "Frankston",
+      "match_confidence": "High"
+    },
+    "opsm-1087": {
+      "sa2_code": "214011371",
+      "sa2_name": "Frankston",
+      "match_confidence": "High"
+    },
+    "specsavers-3221": {
+      "sa2_code": "214011371",
+      "sa2_name": "Frankston",
+      "match_confidence": "High"
+    },
+    "specsavers-3565": {
+      "sa2_code": "214011371",
+      "sa2_name": "Frankston",
+      "match_confidence": "High"
+    },
+    "specsavers-3414": {
+      "sa2_code": "214011372",
+      "sa2_name": "Frankston North",
+      "match_confidence": "High"
+    },
+    "opsm-1485": {
+      "sa2_code": "203021039",
+      "sa2_name": "Geelong",
+      "match_confidence": "High"
+    },
+    "specsavers-3293": {
+      "sa2_code": "203021039",
+      "sa2_name": "Geelong",
+      "match_confidence": "High"
+    },
+    "specsavers-3314": {
+      "sa2_code": "203021039",
+      "sa2_name": "Geelong",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-glen-waverley": {
+      "sa2_code": "212051322",
+      "sa2_name": "Glen Waverley - West",
+      "match_confidence": "High"
+    },
+    "opsm-1152": {
+      "sa2_code": "212051322",
+      "sa2_name": "Glen Waverley - West",
+      "match_confidence": "High"
+    },
+    "specsavers-3259": {
+      "sa2_code": "212051322",
+      "sa2_name": "Glen Waverley - West",
+      "match_confidence": "High"
+    },
+    "opsm-1157": {
+      "sa2_code": "209011197",
+      "sa2_name": "Greensborough",
+      "match_confidence": "High"
+    },
+    "specsavers-3426": {
+      "sa2_code": "209011197",
+      "sa2_name": "Greensborough",
+      "match_confidence": "High"
+    },
+    "specsavers-3691": {
+      "sa2_code": "214021379",
+      "sa2_name": "Hastings - Somers",
+      "match_confidence": "High"
+    },
+    "opsm-1507": {
+      "sa2_code": "207011520",
+      "sa2_name": "Hawthorn - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3477": {
+      "sa2_code": "209011198",
+      "sa2_name": "Heidelberg - Rosanna",
+      "match_confidence": "High"
+    },
+    "specsavers-3326": {
+      "sa2_code": "215011388",
+      "sa2_name": "Horsham",
+      "match_confidence": "High"
+    },
+    "opsm-1089": {
+      "sa2_code": "209011200",
+      "sa2_name": "Ivanhoe",
+      "match_confidence": "High"
+    },
+    "specsavers-3289": {
+      "sa2_code": "202011022",
+      "sa2_name": "Kangaroo Flat - Golden Square",
+      "match_confidence": "High"
+    },
+    "specsavers-3257": {
+      "sa2_code": "213011332",
+      "sa2_name": "Keilor Downs",
+      "match_confidence": "High"
+    },
+    "opsm-1078": {
+      "sa2_code": "212041565",
+      "sa2_name": "Keysborough - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3278": {
+      "sa2_code": "212041565",
+      "sa2_name": "Keysborough - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3645": {
+      "sa2_code": "203021044",
+      "sa2_name": "Leopold",
+      "match_confidence": "High"
+    },
+    "specsavers-3534": {
+      "sa2_code": "211051278",
+      "sa2_name": "Lilydale - Coldstream",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-malvern": {
+      "sa2_code": "206061135",
+      "sa2_name": "Armadale",
+      "match_confidence": "High"
+    },
+    "opsm-7076": {
+      "sa2_code": "206061135",
+      "sa2_name": "Armadale",
+      "match_confidence": "High"
+    },
+    "specsavers-3252": {
+      "sa2_code": "206061135",
+      "sa2_name": "Armadale",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-highpoint": {
+      "sa2_code": "213031349",
+      "sa2_name": "Maribyrnong",
+      "match_confidence": "High"
+    },
+    "opsm-1478": {
+      "sa2_code": "213031349",
+      "sa2_name": "Maribyrnong",
+      "match_confidence": "High"
+    },
+    "specsavers-3372": {
+      "sa2_code": "213031349",
+      "sa2_name": "Maribyrnong",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-flinders-lane-melbourne": {
+      "sa2_code": "206041503",
+      "sa2_name": "Melbourne CBD - East",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-melbourne-cbd": {
+      "sa2_code": "206041504",
+      "sa2_name": "Melbourne CBD - North",
+      "match_confidence": "High"
+    },
+    "opsm-1589": {
+      "sa2_code": "206041504",
+      "sa2_name": "Melbourne CBD - North",
+      "match_confidence": "High"
+    },
+    "opsm-1472": {
+      "sa2_code": "206041504",
+      "sa2_name": "Melbourne CBD - North",
+      "match_confidence": "High"
+    },
+    "opsm-1030": {
+      "sa2_code": "206041503",
+      "sa2_name": "Melbourne CBD - East",
+      "match_confidence": "High"
+    },
+    "opsm-1091": {
+      "sa2_code": "206041504",
+      "sa2_name": "Melbourne CBD - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3548": {
+      "sa2_code": "206041505",
+      "sa2_name": "Melbourne CBD - West",
+      "match_confidence": "High"
+    },
+    "specsavers-3241": {
+      "sa2_code": "206041503",
+      "sa2_name": "Melbourne CBD - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3397": {
+      "sa2_code": "206041504",
+      "sa2_name": "Melbourne CBD - North",
+      "match_confidence": "High"
+    },
+    "opsm-2352": {
+      "sa2_code": "213041358",
+      "sa2_name": "Melton West",
+      "match_confidence": "High"
+    },
+    "specsavers-3463": {
+      "sa2_code": "213041358",
+      "sa2_name": "Melton West",
+      "match_confidence": "High"
+    },
+    "specsavers-3508": {
+      "sa2_code": "215021470",
+      "sa2_name": "Mildura - South",
+      "match_confidence": "High"
+    },
+    "opsm-1506": {
+      "sa2_code": "209041220",
+      "sa2_name": "Mill Park - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3264": {
+      "sa2_code": "209041220",
+      "sa2_name": "Mill Park - North",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-moonee-ponds": {
+      "sa2_code": "206031116",
+      "sa2_name": "Moonee Ponds",
+      "match_confidence": "High"
+    },
+    "opsm-7081": {
+      "sa2_code": "206031116",
+      "sa2_name": "Moonee Ponds",
+      "match_confidence": "High"
+    },
+    "specsavers-3522": {
+      "sa2_code": "206031116",
+      "sa2_name": "Moonee Ponds",
+      "match_confidence": "High"
+    },
+    "opsm-1148": {
+      "sa2_code": "214021592",
+      "sa2_name": "Mornington - West",
+      "match_confidence": "High"
+    },
+    "specsavers-3222": {
+      "sa2_code": "214021592",
+      "sa2_name": "Mornington - West",
+      "match_confidence": "High"
+    },
+    "opsm-1145": {
+      "sa2_code": "205041096",
+      "sa2_name": "Morwell",
+      "match_confidence": "High"
+    },
+    "specsavers-3639": {
+      "sa2_code": "205041096",
+      "sa2_name": "Morwell",
+      "match_confidence": "High"
+    },
+    "opsm-1242": {
+      "sa2_code": "212051325",
+      "sa2_name": "Mulgrave",
+      "match_confidence": "High"
+    },
+    "specsavers-3279": {
+      "sa2_code": "212051325",
+      "sa2_name": "Mulgrave",
+      "match_confidence": "High"
+    },
+    "opsm-1360": {
+      "sa2_code": "212021456",
+      "sa2_name": "Narre Warren - South West",
+      "match_confidence": "High"
+    },
+    "specsavers-3623": {
+      "sa2_code": "212031457",
+      "sa2_name": "Narre Warren South - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3286": {
+      "sa2_code": "212021456",
+      "sa2_name": "Narre Warren - South West",
+      "match_confidence": "High"
+    },
+    "specsavers-3507": {
+      "sa2_code": "212021456",
+      "sa2_name": "Narre Warren - South West",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-geelong": {
+      "sa2_code": "203021046",
+      "sa2_name": "Newtown (Vic.)",
+      "match_confidence": "High"
+    },
+    "specsavers-3654": {
+      "sa2_code": "207031161",
+      "sa2_name": "Blackburn",
+      "match_confidence": "High"
+    },
+    "opsm-1286": {
+      "sa2_code": "206021499",
+      "sa2_name": "Northcote - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3551": {
+      "sa2_code": "206021499",
+      "sa2_name": "Northcote - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3601": {
+      "sa2_code": "212051326",
+      "sa2_name": "Oakleigh - Huntingdale",
+      "match_confidence": "High"
+    },
+    "opsm-7012": {
+      "sa2_code": "212011550",
+      "sa2_name": "Pakenham - North West",
+      "match_confidence": "High"
+    },
+    "specsavers-3491": {
+      "sa2_code": "212011551",
+      "sa2_name": "Pakenham - South East",
+      "match_confidence": "High"
+    },
+    "specsavers-3571": {
+      "sa2_code": "213051580",
+      "sa2_name": "Point Cook - North East",
+      "match_confidence": "High"
+    },
+    "specsavers-3478": {
+      "sa2_code": "206061136",
+      "sa2_name": "Prahran - Windsor",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-northland": {
+      "sa2_code": "209021428",
+      "sa2_name": "Preston - East",
+      "match_confidence": "High"
+    },
+    "opsm-1419": {
+      "sa2_code": "209021428",
+      "sa2_name": "Preston - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3306": {
+      "sa2_code": "209021428",
+      "sa2_name": "Preston - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3679": {
+      "sa2_code": "209021525",
+      "sa2_name": "Reservoir - South East",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-richmond": {
+      "sa2_code": "206071517",
+      "sa2_name": "Richmond (South) - Cremorne",
+      "match_confidence": "High"
+    },
+    "opsm-1341": {
+      "sa2_code": "206071518",
+      "sa2_name": "Richmond - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3448": {
+      "sa2_code": "206071518",
+      "sa2_name": "Richmond - North",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-eastland-shopping-centre": {
+      "sa2_code": "211031266",
+      "sa2_name": "Ringwood",
+      "match_confidence": "High"
+    },
+    "opsm-1149": {
+      "sa2_code": "211031266",
+      "sa2_name": "Ringwood",
+      "match_confidence": "High"
+    },
+    "specsavers-3261": {
+      "sa2_code": "211031266",
+      "sa2_name": "Ringwood",
+      "match_confidence": "High"
+    },
+    "opsm-2932": {
+      "sa2_code": "214021384",
+      "sa2_name": "Rosebud - McCrae",
+      "match_confidence": "High"
+    },
+    "specsavers-3354": {
+      "sa2_code": "214021384",
+      "sa2_name": "Rosebud - McCrae",
+      "match_confidence": "High"
+    },
+    "specsavers-3230": {
+      "sa2_code": "211011256",
+      "sa2_name": "Rowville - Central",
+      "match_confidence": "High"
+    },
+    "specsavers-3251": {
+      "sa2_code": "205051103",
+      "sa2_name": "Sale",
+      "match_confidence": "High"
+    },
+    "opsm-1046": {
+      "sa2_code": "216031416",
+      "sa2_name": "Shepparton - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3292": {
+      "sa2_code": "216031594",
+      "sa2_name": "Shepparton - South East",
+      "match_confidence": "High"
+    },
+    "specsavers-3669": {
+      "sa2_code": "216031416",
+      "sa2_name": "Shepparton - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3631": {
+      "sa2_code": "206051512",
+      "sa2_name": "South Melbourne",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-chapel-st-melbourne": {
+      "sa2_code": "206061516",
+      "sa2_name": "South Yarra - South",
+      "match_confidence": "High"
+    },
+    "opsm-7077": {
+      "sa2_code": "206061515",
+      "sa2_name": "South Yarra - North",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-st-kilda": {
+      "sa2_code": "206051514",
+      "sa2_name": "St Kilda - West",
+      "match_confidence": "High"
+    },
+    "specsavers-3327": {
+      "sa2_code": "215011392",
+      "sa2_name": "Stawell",
+      "match_confidence": "High"
+    },
+    "opsm-4710": {
+      "sa2_code": "210041540",
+      "sa2_name": "Sunbury - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3242": {
+      "sa2_code": "210041540",
+      "sa2_name": "Sunbury - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3536": {
+      "sa2_code": "213011336",
+      "sa2_name": "Sunshine",
+      "match_confidence": "High"
+    },
+    "specsavers-3683": {
+      "sa2_code": "215031404",
+      "sa2_name": "Swan Hill",
+      "match_confidence": "High"
+    },
+    "opsm-1131": {
+      "sa2_code": "213011340",
+      "sa2_name": "Taylors Lakes",
+      "match_confidence": "High"
+    },
+    "specsavers-3268": {
+      "sa2_code": "213051583",
+      "sa2_name": "Tarneit - Central",
+      "match_confidence": "High"
+    },
+    "specsavers-3311": {
+      "sa2_code": "213011340",
+      "sa2_name": "Taylors Lakes",
+      "match_confidence": "High"
+    },
+    "specsavers-3661": {
+      "sa2_code": "203031053",
+      "sa2_name": "Torquay",
+      "match_confidence": "High"
+    },
+    "opsm-1302": {
+      "sa2_code": "205041493",
+      "sa2_name": "Traralgon - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3503": {
+      "sa2_code": "205041493",
+      "sa2_name": "Traralgon - East",
+      "match_confidence": "High"
+    },
+    "opsm-1040": {
+      "sa2_code": "204021066",
+      "sa2_name": "Wangaratta",
+      "match_confidence": "High"
+    },
+    "specsavers-3596": {
+      "sa2_code": "204021066",
+      "sa2_name": "Wangaratta",
+      "match_confidence": "High"
+    },
+    "opsm-1467": {
+      "sa2_code": "211011260",
+      "sa2_name": "Wantirna South",
+      "match_confidence": "High"
+    },
+    "specsavers-3263": {
+      "sa2_code": "211011260",
+      "sa2_name": "Wantirna South",
+      "match_confidence": "High"
+    },
+    "specsavers-3467": {
+      "sa2_code": "205011079",
+      "sa2_name": "Warragul",
+      "match_confidence": "High"
+    },
+    "opsm-1136": {
+      "sa2_code": "217041480",
+      "sa2_name": "Warrnambool - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3297": {
+      "sa2_code": "217041480",
+      "sa2_name": "Warrnambool - South",
+      "match_confidence": "High"
+    },
+    "opsm-7064": {
+      "sa2_code": "203021487",
+      "sa2_name": "Grovedale - Mount Duneed",
+      "match_confidence": "High"
+    },
+    "specsavers-3288": {
+      "sa2_code": "203021487",
+      "sa2_name": "Grovedale - Mount Duneed",
+      "match_confidence": "High"
+    },
+    "opsm-7014": {
+      "sa2_code": "201011008",
+      "sa2_name": "Wendouree - Miners Rest",
+      "match_confidence": "High"
+    },
+    "specsavers-3582": {
+      "sa2_code": "201011008",
+      "sa2_name": "Wendouree - Miners Rest",
+      "match_confidence": "High"
+    },
+    "opsm-1655": {
+      "sa2_code": "213051362",
+      "sa2_name": "Hoppers Crossing - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3267": {
+      "sa2_code": "213051362",
+      "sa2_name": "Hoppers Crossing - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3281": {
+      "sa2_code": "212051325",
+      "sa2_name": "Mulgrave",
+      "match_confidence": "High"
+    },
+    "opsm-1170": {
+      "sa2_code": "209041225",
+      "sa2_name": "Whittlesea",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-williamstown": {
+      "sa2_code": "213021346",
+      "sa2_name": "Williamstown",
+      "match_confidence": "High"
+    },
+    "opsm-2267": {
+      "sa2_code": "204031492",
+      "sa2_name": "Wodonga",
+      "match_confidence": "High"
+    },
+    "specsavers-3422": {
+      "sa2_code": "204031492",
+      "sa2_name": "Wodonga",
+      "match_confidence": "High"
+    },
+    "specsavers-3609": {
+      "sa2_code": "205031093",
+      "sa2_name": "Wonthaggi - Inverloch",
+      "match_confidence": "High"
+    },
+    "opsm-1195": {
+      "sa2_code": "509011225",
+      "sa2_name": "Albany",
+      "match_confidence": "High"
+    },
+    "specsavers-3577": {
+      "sa2_code": "509011225",
+      "sa2_name": "Albany",
+      "match_confidence": "High"
+    },
+    "opsm-1306": {
+      "sa2_code": "506011110",
+      "sa2_name": "Armadale - Wungong - Brookdale",
+      "match_confidence": "High"
+    },
+    "specsavers-3236": {
+      "sa2_code": "506011110",
+      "sa2_name": "Armadale - Wungong - Brookdale",
+      "match_confidence": "High"
+    },
+    "opsm-1515": {
+      "sa2_code": "507051313",
+      "sa2_name": "Baldivis - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3555": {
+      "sa2_code": "507051313",
+      "sa2_name": "Baldivis - South",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-booragoon": {
+      "sa2_code": "507041178",
+      "sa2_name": "Booragoon",
+      "match_confidence": "High"
+    },
+    "opsm-1442": {
+      "sa2_code": "507041178",
+      "sa2_name": "Booragoon",
+      "match_confidence": "High"
+    },
+    "specsavers-3429": {
+      "sa2_code": "507041178",
+      "sa2_name": "Booragoon",
+      "match_confidence": "High"
+    },
+    "opsm-1027": {
+      "sa2_code": "510011262",
+      "sa2_name": "Broome",
+      "match_confidence": "High"
+    },
+    "opsm-1516": {
+      "sa2_code": "507041179",
+      "sa2_name": "Bull Creek",
+      "match_confidence": "High"
+    },
+    "opsm-1382": {
+      "sa2_code": "501021253",
+      "sa2_name": "South Bunbury - Bunbury",
+      "match_confidence": "High"
+    },
+    "opsm-1283": {
+      "sa2_code": "501021015",
+      "sa2_name": "East Bunbury - Glen Iris",
+      "match_confidence": "High"
+    },
+    "specsavers-3441": {
+      "sa2_code": "501021253",
+      "sa2_name": "South Bunbury - Bunbury",
+      "match_confidence": "High"
+    },
+    "opsm-1197": {
+      "sa2_code": "501011293",
+      "sa2_name": "Busselton - East",
+      "match_confidence": "High"
+    },
+    "opsm-4610": {
+      "sa2_code": "501011293",
+      "sa2_name": "Busselton - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3226": {
+      "sa2_code": "501011293",
+      "sa2_name": "Busselton - East",
+      "match_confidence": "High"
+    },
+    "specsavers-3665": {
+      "sa2_code": "505031099",
+      "sa2_name": "Butler - Merriwa - Ridgewood",
+      "match_confidence": "High"
+    },
+    "opsm-1395": {
+      "sa2_code": "506031125",
+      "sa2_name": "Canning Vale - West",
+      "match_confidence": "High"
+    },
+    "specsavers-3366": {
+      "sa2_code": "506031125",
+      "sa2_name": "Canning Vale - West",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-carousel": {
+      "sa2_code": "506031127",
+      "sa2_name": "Cannington - Queens Park",
+      "match_confidence": "High"
+    },
+    "opsm-1366": {
+      "sa2_code": "506031127",
+      "sa2_name": "Cannington - Queens Park",
+      "match_confidence": "High"
+    },
+    "specsavers-3349": {
+      "sa2_code": "506031127",
+      "sa2_name": "Cannington - Queens Park",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-claremont": {
+      "sa2_code": "503011031",
+      "sa2_name": "Claremont (WA)",
+      "match_confidence": "High"
+    },
+    "opsm-1418": {
+      "sa2_code": "503011031",
+      "sa2_name": "Claremont (WA)",
+      "match_confidence": "High"
+    },
+    "opsm-1059": {
+      "sa2_code": "505031101",
+      "sa2_name": "Clarkson",
+      "match_confidence": "High"
+    },
+    "specsavers-3287": {
+      "sa2_code": "505031101",
+      "sa2_name": "Clarkson",
+      "match_confidence": "High"
+    },
+    "opsm-7047": {
+      "sa2_code": "506021309",
+      "sa2_name": "Cloverdale",
+      "match_confidence": "High"
+    },
+    "specsavers-3249": {
+      "sa2_code": "506021309",
+      "sa2_name": "Cloverdale",
+      "match_confidence": "High"
+    },
+    "opsm-1561": {
+      "sa2_code": "501021009",
+      "sa2_name": "Collie",
+      "match_confidence": "High"
+    },
+    "opsm-2985": {
+      "sa2_code": "503011032",
+      "sa2_name": "Cottesloe",
+      "match_confidence": "High"
+    },
+    "specsavers-3688": {
+      "sa2_code": "505011071",
+      "sa2_name": "Currambine - Kinross",
+      "match_confidence": "High"
+    },
+    "opsm-1571": {
+      "sa2_code": "505021302",
+      "sa2_name": "Dianella - South",
+      "match_confidence": "High"
+    },
+    "specsavers-3452": {
+      "sa2_code": "501021012",
+      "sa2_name": "Eaton - Pelican Point",
+      "match_confidence": "High"
+    },
+    "opsm-1557": {
+      "sa2_code": "504031300",
+      "sa2_name": "Ellenbrook",
+      "match_confidence": "High"
+    },
+    "specsavers-3486": {
+      "sa2_code": "504031300",
+      "sa2_name": "Ellenbrook",
+      "match_confidence": "High"
+    },
+    "opsm-1567": {
+      "sa2_code": "511011274",
+      "sa2_name": "Esperance",
+      "match_confidence": "High"
+    },
+    "opsm-1112": {
+      "sa2_code": "503011033",
+      "sa2_name": "Floreat",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-fremantle": {
+      "sa2_code": "507021165",
+      "sa2_name": "Fremantle",
+      "match_confidence": "High"
+    },
+    "opsm-1083": {
+      "sa2_code": "507021165",
+      "sa2_name": "Fremantle",
+      "match_confidence": "High"
+    },
+    "specsavers-3424": {
+      "sa2_code": "507021165",
+      "sa2_name": "Fremantle",
+      "match_confidence": "High"
+    },
+    "opsm-1354": {
+      "sa2_code": "511041285",
+      "sa2_name": "Geraldton",
+      "match_confidence": "High"
+    },
+    "specsavers-3535": {
+      "sa2_code": "511041285",
+      "sa2_name": "Geraldton",
+      "match_confidence": "High"
+    },
+    "specsavers-3579": {
+      "sa2_code": "502011024",
+      "sa2_name": "Halls Head - Erskine",
+      "match_confidence": "High"
+    },
+    "specsavers-3649": {
+      "sa2_code": "506011307",
+      "sa2_name": "Harrisdale",
+      "match_confidence": "High"
+    },
+    "opsm-1447": {
+      "sa2_code": "505011075",
+      "sa2_name": "Hillarys",
+      "match_confidence": "High"
+    },
+    "specsavers-3364": {
+      "sa2_code": "505011075",
+      "sa2_name": "Hillarys",
+      "match_confidence": "High"
+    },
+    "opsm-1361": {
+      "sa2_code": "505021088",
+      "sa2_name": "Innaloo - Doubleview",
+      "match_confidence": "High"
+    },
+    "specsavers-3473": {
+      "sa2_code": "505021088",
+      "sa2_name": "Innaloo - Doubleview",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-joondalup": {
+      "sa2_code": "505011077",
+      "sa2_name": "Joondalup - Edgewater",
+      "match_confidence": "High"
+    },
+    "opsm-1404": {
+      "sa2_code": "505011077",
+      "sa2_name": "Joondalup - Edgewater",
+      "match_confidence": "High"
+    },
+    "specsavers-3247": {
+      "sa2_code": "505011077",
+      "sa2_name": "Joondalup - Edgewater",
+      "match_confidence": "High"
+    },
+    "opsm-7011": {
+      "sa2_code": "506051140",
+      "sa2_name": "Kalamunda - Maida Vale - Gooseberry Hill",
+      "match_confidence": "High"
+    },
+    "specsavers-3237": {
+      "sa2_code": "506051140",
+      "sa2_name": "Kalamunda - Maida Vale - Gooseberry Hill",
+      "match_confidence": "High"
+    },
+    "opsm-1007": {
+      "sa2_code": "511031279",
+      "sa2_name": "Kalgoorlie",
+      "match_confidence": "High"
+    },
+    "specsavers-3493": {
+      "sa2_code": "511031279",
+      "sa2_name": "Kalgoorlie",
+      "match_confidence": "High"
+    },
+    "specsavers-3231": {
+      "sa2_code": "506071146",
+      "sa2_name": "Manning - Waterford",
+      "match_confidence": "High"
+    },
+    "opsm-1233": {
+      "sa2_code": "510031272",
+      "sa2_name": "Karratha",
+      "match_confidence": "High"
+    },
+    "specsavers-3686": {
+      "sa2_code": "510031272",
+      "sa2_name": "Karratha",
+      "match_confidence": "High"
+    },
+    "opsm-1370": {
+      "sa2_code": "505021089",
+      "sa2_name": "Karrinyup - Gwelup - Carine",
+      "match_confidence": "High"
+    },
+    "specsavers-3436": {
+      "sa2_code": "505021089",
+      "sa2_name": "Karrinyup - Gwelup - Carine",
+      "match_confidence": "High"
+    },
+    "opsm-4636": {
+      "sa2_code": "507031174",
+      "sa2_name": "Parmelia - Orelia",
+      "match_confidence": "High"
+    },
+    "specsavers-3615": {
+      "sa2_code": "507031174",
+      "sa2_name": "Parmelia - Orelia",
+      "match_confidence": "High"
+    },
+    "specsavers-3676": {
+      "sa2_code": "502011027",
+      "sa2_name": "Mandurah - North",
+      "match_confidence": "High"
+    },
+    "opsm-1427": {
+      "sa2_code": "506041136",
+      "sa2_name": "Maddington - Orange Grove - Martin",
+      "match_confidence": "High"
+    },
+    "specsavers-3433": {
+      "sa2_code": "506041136",
+      "sa2_name": "Maddington - Orange Grove - Martin",
+      "match_confidence": "High"
+    },
+    "specsavers-3451": {
+      "sa2_code": "505031305",
+      "sa2_name": "Madeley - Darch",
+      "match_confidence": "High"
+    },
+    "opsm-1517": {
+      "sa2_code": "502011024",
+      "sa2_name": "Halls Head - Erskine",
+      "match_confidence": "High"
+    },
+    "opsm-1405": {
+      "sa2_code": "502011025",
+      "sa2_name": "Mandurah",
+      "match_confidence": "High"
+    },
+    "specsavers-3553": {
+      "sa2_code": "502011025",
+      "sa2_name": "Mandurah",
+      "match_confidence": "High"
+    },
+    "specsavers-3227": {
+      "sa2_code": "501031019",
+      "sa2_name": "Manjimup",
+      "match_confidence": "High"
+    },
+    "opsm-1115": {
+      "sa2_code": "501011004",
+      "sa2_name": "Margaret River",
+      "match_confidence": "High"
+    },
+    "opsm-1281": {
+      "sa2_code": "504031066",
+      "sa2_name": "Midland - Guildford",
+      "match_confidence": "High"
+    },
+    "specsavers-3238": {
+      "sa2_code": "504031066",
+      "sa2_name": "Midland - Guildford",
+      "match_confidence": "High"
+    },
+    "specsavers-3504": {
+      "sa2_code": "504031066",
+      "sa2_name": "Midland - Guildford",
+      "match_confidence": "High"
+    },
+    "opsm-2280": {
+      "sa2_code": "505021301",
+      "sa2_name": "Dianella - North",
+      "match_confidence": "High"
+    },
+    "specsavers-3365": {
+      "sa2_code": "505021301",
+      "sa2_name": "Dianella - North",
+      "match_confidence": "High"
+    },
+    "opsm-1198": {
+      "sa2_code": "504011047",
+      "sa2_name": "Morley",
+      "match_confidence": "High"
+    },
+    "specsavers-3554": {
+      "sa2_code": "504011047",
+      "sa2_name": "Morley",
+      "match_confidence": "High"
+    },
+    "opsm-1425": {
+      "sa2_code": "503021038",
+      "sa2_name": "Mount Hawthorn - Leederville",
+      "match_confidence": "High"
+    },
+    "opsm-1365": {
+      "sa2_code": "509021243",
+      "sa2_name": "Northam",
+      "match_confidence": "High"
+    },
+    "specsavers-3617": {
+      "sa2_code": "509021243",
+      "sa2_name": "Northam",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-state-buildings-perth": {
+      "sa2_code": "503021297",
+      "sa2_name": "Perth (West) - Northbridge",
+      "match_confidence": "High"
+    },
+    "opsm-1082": {
+      "sa2_code": "503021297",
+      "sa2_name": "Perth (West) - Northbridge",
+      "match_confidence": "High"
+    },
+    "specsavers-3239": {
+      "sa2_code": "503021297",
+      "sa2_name": "Perth (West) - Northbridge",
+      "match_confidence": "High"
+    },
+    "specsavers-3481": {
+      "sa2_code": "503021297",
+      "sa2_name": "Perth (West) - Northbridge",
+      "match_confidence": "High"
+    },
+    "opsm-1369": {
+      "sa2_code": "506031129",
+      "sa2_name": "Riverton - Shelley - Rossmoyne",
+      "match_confidence": "High"
+    },
+    "specsavers-3443": {
+      "sa2_code": "506031129",
+      "sa2_name": "Riverton - Shelley - Rossmoyne",
+      "match_confidence": "High"
+    },
+    "opsm-1285": {
+      "sa2_code": "507051188",
+      "sa2_name": "Rockingham",
+      "match_confidence": "High"
+    },
+    "specsavers-3228": {
+      "sa2_code": "507051188",
+      "sa2_name": "Rockingham",
+      "match_confidence": "High"
+    },
+    "opsm-2933": {
+      "sa2_code": "507051191",
+      "sa2_name": "Singleton - Golden Bay - Secret Harbour",
+      "match_confidence": "High"
+    },
+    "opsm-1042": {
+      "sa2_code": "510021270",
+      "sa2_name": "South Hedland",
+      "match_confidence": "High"
+    },
+    "opsm-2354": {
+      "sa2_code": "506071147",
+      "sa2_name": "South Perth - Kensington",
+      "match_confidence": "High"
+    },
+    "opsm-1426": {
+      "sa2_code": "507011160",
+      "sa2_name": "Spearwood",
+      "match_confidence": "High"
+    },
+    "specsavers-3464": {
+      "sa2_code": "507011160",
+      "sa2_name": "Spearwood",
+      "match_confidence": "High"
+    },
+    "opsm-1288": {
+      "sa2_code": "503021042",
+      "sa2_name": "Subiaco - Shenton Park",
+      "match_confidence": "High"
+    },
+    "specsavers-3644": {
+      "sa2_code": "503021042",
+      "sa2_name": "Subiaco - Shenton Park",
+      "match_confidence": "High"
+    },
+    "opsm-1424": {
+      "sa2_code": "507011161",
+      "sa2_name": "Success - Hammond Park",
+      "match_confidence": "High"
+    },
+    "specsavers-3434": {
+      "sa2_code": "507011161",
+      "sa2_name": "Success - Hammond Park",
+      "match_confidence": "High"
+    },
+    "specsavers-3234": {
+      "sa2_code": "506021123",
+      "sa2_name": "Victoria Park - Lathlain - Burswood",
+      "match_confidence": "High"
+    },
+    "opsm-2935": {
+      "sa2_code": "505031306",
+      "sa2_name": "Wanneroo - Sinagra",
+      "match_confidence": "High"
+    },
+    "specsavers-3472": {
+      "sa2_code": "505031306",
+      "sa2_name": "Wanneroo - Sinagra",
+      "match_confidence": "High"
+    },
+    "opsm-1249": {
+      "sa2_code": "507051193",
+      "sa2_name": "Warnbro",
+      "match_confidence": "High"
+    },
+    "specsavers-3492": {
+      "sa2_code": "507051193",
+      "sa2_name": "Warnbro",
+      "match_confidence": "High"
+    },
+    "opsm-1077": {
+      "sa2_code": "505021084",
+      "sa2_name": "Balcatta - Hamersley",
+      "match_confidence": "High"
+    },
+    "specsavers-3462": {
+      "sa2_code": "505021084",
+      "sa2_name": "Balcatta - Hamersley",
+      "match_confidence": "High"
+    },
+    "specsavers-3395": {
+      "sa2_code": "506031131",
+      "sa2_name": "Willetton",
+      "match_confidence": "High"
+    },
+    "specsavers-3229": {
+      "sa2_code": "507041182",
+      "sa2_name": "Murdoch - Kardinya",
+      "match_confidence": "High"
+    },
+    "specsavers-3435": {
+      "sa2_code": "505021097",
+      "sa2_name": "Yokine - Coolbinia - Menora",
+      "match_confidence": "High"
+    }
+  }
+}

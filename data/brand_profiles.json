@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "profiles": [
+    {
+      "id": "generic-optical",
+      "name": "Generic optical network",
+      "retailer": "",
+      "preferred_location_types": ["Shopping Centre", "Main Street / Street-front"],
+      "preferred_area_min_sqm": null,
+      "preferred_area_max_sqm": null,
+      "required_services": [],
+      "weights": {
+        "market_demand": 25,
+        "competitive_white_space": 25,
+        "centre_strength": 20,
+        "accessibility": 10,
+        "network_fit": 10,
+        "format_fit": 10
+      }
+    },
+    {
+      "id": "opsm",
+      "name": "OPSM",
+      "retailer": "OPSM",
+      "preferred_location_types": ["Shopping Centre", "Main Street / Street-front"],
+      "preferred_area_min_sqm": null,
+      "preferred_area_max_sqm": null,
+      "required_services": [],
+      "weights": {
+        "market_demand": 25,
+        "competitive_white_space": 25,
+        "centre_strength": 20,
+        "accessibility": 10,
+        "network_fit": 10,
+        "format_fit": 10
+      }
+    },
+    {
+      "id": "specsavers",
+      "name": "Specsavers",
+      "retailer": "Specsavers",
+      "preferred_location_types": ["Shopping Centre", "Main Street / Street-front"],
+      "preferred_area_min_sqm": null,
+      "preferred_area_max_sqm": null,
+      "required_services": [],
+      "weights": {
+        "market_demand": 25,
+        "competitive_white_space": 25,
+        "centre_strength": 20,
+        "accessibility": 10,
+        "network_fit": 10,
+        "format_fit": 10
+      }
+    },
+    {
+      "id": "bailey-nelson",
+      "name": "Bailey Nelson",
+      "retailer": "Bailey Nelson",
+      "preferred_location_types": ["Shopping Centre", "Main Street / Street-front"],
+      "preferred_area_min_sqm": null,
+      "preferred_area_max_sqm": null,
+      "required_services": [],
+      "weights": {
+        "market_demand": 25,
+        "competitive_white_space": 25,
+        "centre_strength": 20,
+        "accessibility": 10,
+        "network_fit": 10,
+        "format_fit": 10
+      }
+    }
+  ],
+  "notes": "Area targets remain unset until supplied by an authorised brand source. Missing score components reduce coverage and are never guessed."
+}

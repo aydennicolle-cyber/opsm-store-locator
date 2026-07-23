@@ -18,6 +18,7 @@ OUTPUT_GEOJSON = DATA_DIR / "optical_stores.geojson"
 OUTPUT_META = DATA_DIR / "optical_stores.meta.json"
 REVIEW_PATH = DATA_DIR / "classification_review.csv"
 OVERRIDE_PATH = DATA_DIR / "location_overrides.csv"
+AREA_OVERRIDE_PATH = DATA_DIR / "public_area_overrides.csv"
 VALID_STATES = {"ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"}
 FIELDS = [
     "retailer",
@@ -39,6 +40,11 @@ FIELDS = [
     "location_type",
     "classification_confidence",
     "classification_basis",
+    "store_area_sqm",
+    "area_measure",
+    "area_source",
+    "area_date",
+    "area_confidence",
     "source_url",
     "fetched_at",
 ]
@@ -311,6 +317,31 @@ def load_overrides() -> dict[tuple[str, str], dict]:
     return overrides
 
 
+def load_area_overrides() -> dict[tuple[str, str], dict]:
+    overrides = {}
+    for row in read_csv(AREA_OVERRIDE_PATH):
+        key = (tidy(row.get("retailer", "")), tidy(row.get("store_id", "")))
+        if not all(key):
+            continue
+        area = tidy(row.get("store_area_sqm", ""))
+        if area:
+            numeric_area = float(area)
+            if numeric_area <= 0:
+                raise ValueError(f"Invalid store area for {key[0]} {key[1]}")
+            area = f"{numeric_area:g}"
+        measure = tidy(row.get("area_measure", "")).upper()
+        if measure and measure not in {"NLA", "GLA", "GFA", "ESTIMATED FOOTPRINT"}:
+            raise ValueError(f"Invalid area measure for {key[0]} {key[1]}: {measure}")
+        overrides[key] = {
+            "store_area_sqm": area,
+            "area_measure": measure,
+            "area_source": tidy(row.get("area_source", "")),
+            "area_date": tidy(row.get("area_date", "")),
+            "area_confidence": tidy(row.get("area_confidence", "")),
+        }
+    return overrides
+
+
 def validate(stores: list[dict]) -> None:
     ids = [store["store_id"] for store in stores]
     if len(ids) != len(set(ids)):
@@ -355,11 +386,24 @@ def main() -> None:
     freshness = read_freshness()
     stores = load_stores(freshness)
     overrides = load_overrides()
+    area_overrides = load_area_overrides()
     for store in stores:
         store.update(classify(store))
+        store.update(
+            {
+                "store_area_sqm": "",
+                "area_measure": "",
+                "area_source": "",
+                "area_date": "",
+                "area_confidence": "Unknown",
+            }
+        )
         override = overrides.get((store["retailer"], store["store_id"]))
         if override:
             store.update(override)
+        area_override = area_overrides.get((store["retailer"], store["store_id"]))
+        if area_override:
+            store.update(area_override)
     stores.sort(key=lambda item: (item["state"], item["suburb"], item["retailer"], item["name"]))
     validate(stores)
 

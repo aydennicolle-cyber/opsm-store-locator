@@ -36,6 +36,11 @@ REQUIRED_FIELDS = {
     "classification_basis",
     "source_url",
     "fetched_at",
+    "store_area_sqm",
+    "area_measure",
+    "area_source",
+    "area_date",
+    "area_confidence",
 }
 
 
@@ -82,6 +87,19 @@ class OpticalNetworkTests(unittest.TestCase):
             self.assertTrue(row["source_url"])
             self.assertTrue(row["fetched_at"])
             self.assertTrue(row["classification_basis"])
+
+    def test_area_provenance_is_explicit(self) -> None:
+        valid_measures = {"", "NLA", "GLA", "GFA", "Estimated footprint"}
+        for row in self.rows:
+            self.assertIn(row["area_measure"], valid_measures)
+            if row["store_area_sqm"]:
+                self.assertGreater(float(row["store_area_sqm"]), 0)
+                self.assertTrue(row["area_source"])
+                self.assertTrue(row["area_date"])
+                self.assertIn(row["area_confidence"], {"High", "Medium", "Low"})
+            else:
+                self.assertEqual(row["area_measure"], "")
+                self.assertEqual(row["area_source"], "")
 
     def test_zero_distance_and_symmetry(self) -> None:
         first, second = self.rows[0], self.rows[1]

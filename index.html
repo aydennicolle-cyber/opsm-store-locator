@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#171b1f" />
-    <title>Australian Optical Retail Network</title>
+    <title>Optical Leasing Intelligence</title>
     <link rel="preconnect" href="https://unpkg.com" />
     <link rel="preconnect" href="https://tile.openstreetmap.org" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -13,149 +13,118 @@
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
-    <main class="app-shell">
-      <aside class="sidebar" aria-label="Store filters and results">
-        <header class="brand-header">
-          <div>
-            <p class="eyebrow">Australian Optical</p>
-            <h1>Retail network</h1>
-          </div>
-          <button class="icon-button" id="resetButton" type="button" title="Reset map and filters" aria-label="Reset map and filters">
-            <i data-lucide="rotate-ccw"></i>
-          </button>
-        </header>
+    <header class="app-header">
+      <div class="product-mark">
+        <span class="product-symbol">OI</span>
+        <div>
+          <strong>Optical Leasing Intelligence</strong>
+          <span>Australian tenant network</span>
+        </div>
+      </div>
+      <nav class="task-nav" aria-label="Leasing intelligence views">
+        <button class="active" type="button" data-view="network"><i data-lucide="map"></i><span>Network</span></button>
+        <button type="button" data-view="centres"><i data-lucide="building-2"></i><span>Centres</span></button>
+        <button type="button" data-view="opportunity"><i data-lucide="scan-search"></i><span>Opportunity</span></button>
+        <button type="button" data-view="trends"><i data-lucide="chart-no-axes-combined"></i><span>Trends</span></button>
+        <button type="button" data-view="compare"><i data-lucide="columns-3"></i><span>Compare</span></button>
+      </nav>
+      <div class="header-actions">
+        <span class="public-badge"><i data-lucide="globe-2"></i>Public intelligence</span>
+        <button class="icon-button" id="resetButton" type="button" title="Reset workspace" aria-label="Reset workspace">
+          <i data-lucide="rotate-ccw"></i>
+        </button>
+      </div>
+    </header>
 
-        <section class="network-strip" aria-label="Network totals">
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Leasing analysis controls">
+        <header class="view-header">
+          <p class="eyebrow" id="viewEyebrow">Retail footprint</p>
+          <h1 id="viewTitle">Network</h1>
+          <p id="viewSubtitle">Filter, inspect and compare the national optical network.</p>
+        </header>
+        <section class="network-strip" aria-label="Visible network totals">
           <strong id="visibleTotal">802</strong>
           <span>locations visible</span>
-          <span class="freshness" id="freshnessLabel">Loading sources</span>
+          <span class="freshness" id="freshnessLabel">Loading official sources</span>
         </section>
-
-        <section class="filters" aria-label="Map filters">
-          <label class="search-field">
-            <i data-lucide="search"></i>
-            <span class="sr-only">Search stores, suburbs or postcodes</span>
-            <input id="searchInput" type="search" placeholder="Store, suburb or postcode" autocomplete="off" />
-          </label>
-
-          <fieldset class="retailer-filter">
-            <legend>Retailer</legend>
-            <label class="retailer-option" data-retailer="OPSM">
-              <input type="checkbox" value="OPSM" checked />
-              <span class="marker-key marker-opsm"></span>
-              <span>OPSM</span>
-              <output id="opsmCount">335</output>
-            </label>
-            <label class="retailer-option" data-retailer="Specsavers">
-              <input type="checkbox" value="Specsavers" checked />
-              <span class="marker-key marker-specsavers"></span>
-              <span>Specsavers</span>
-              <output id="specsaversCount">399</output>
-            </label>
-            <label class="retailer-option" data-retailer="Bailey Nelson">
-              <input type="checkbox" value="Bailey Nelson" checked />
-              <span class="marker-key marker-bailey"></span>
-              <span>Bailey Nelson</span>
-              <output id="baileyCount">68</output>
-            </label>
-          </fieldset>
-
-          <div class="select-grid">
-            <label>
-              <span>State</span>
-              <select id="stateSelect"><option value="">All states</option></select>
-            </label>
-            <label>
-              <span>Location</span>
-              <select id="locationSelect">
-                <option value="">All locations</option>
-                <option>Shopping Centre</option>
-                <option>Main Street / Street-front</option>
-                <option>Other</option>
-                <option>Unclassified</option>
-              </select>
-            </label>
-            <label>
-              <span>Audiology</span>
-              <select id="audiologySelect">
-                <option value="">Any</option>
-                <option value="true">Available</option>
-                <option value="false">Not listed</option>
-              </select>
-            </label>
-            <label>
-              <span>Status</span>
-              <select id="statusSelect"><option value="">All statuses</option></select>
-            </label>
-          </div>
-
-          <label class="service-field">
-            <span>Service</span>
-            <input id="serviceInput" type="search" placeholder="e.g. dry eye, contact lens" autocomplete="off" />
-          </label>
-        </section>
-
-        <section class="result-section" aria-live="polite">
-          <div class="section-heading">
-            <h2>Locations</h2>
-            <span id="resultCount">802 results</span>
-          </div>
-          <div class="store-list" id="storeList"></div>
-        </section>
+        <div class="view-content" id="viewContent"></div>
       </aside>
 
-      <section class="map-workspace" aria-label="Interactive optical retail map">
+      <section class="map-workspace" aria-label="Interactive leasing intelligence map">
         <div class="map-toolbar" role="toolbar" aria-label="Map tools">
-          <button id="compareButton" type="button" title="Compare two stores">
-            <i data-lucide="ruler"></i><span>Compare</span>
-          </button>
-          <button id="candidateButton" type="button" title="Analyse a proposed leasing site">
-            <i data-lucide="map-pin-plus"></i><span>Candidate site</span>
-          </button>
-          <button id="summaryButton" type="button" title="View network summary">
-            <i data-lucide="chart-no-axes-combined"></i><span>Summary</span>
-          </button>
-          <button id="downloadButton" type="button" title="Download filtered stores as CSV">
-            <i data-lucide="download"></i><span>CSV</span>
-          </button>
+          <button id="layersButton" type="button" title="Map layers"><i data-lucide="layers-3"></i><span>Layers</span></button>
+          <button id="storeCompareButton" type="button" title="Compare store distance"><i data-lucide="ruler"></i><span>Store distance</span></button>
+          <button id="candidateButton" type="button" title="Drop a candidate site"><i data-lucide="map-pin-plus"></i><span>Candidate</span></button>
+          <button id="saveViewButton" type="button" title="Save this view"><i data-lucide="bookmark"></i><span>Save</span></button>
+          <button id="shareButton" type="button" title="Copy a sanitised public link"><i data-lucide="share-2"></i><span>Share</span></button>
+          <button id="reportButton" type="button" title="Create client report"><i data-lucide="file-down"></i><span>Report</span></button>
+          <button id="downloadButton" type="button" title="Download filtered stores"><i data-lucide="download"></i><span>CSV</span></button>
         </div>
 
-        <div class="mode-notice" id="modeNotice" hidden></div>
-        <div id="map" aria-label="Map of Australian optical stores"></div>
+        <aside class="layer-panel" id="layerPanel" hidden aria-label="Map layers">
+          <header><strong>Map layers</strong><button class="icon-button" id="layerClose" type="button" aria-label="Close layers"><i data-lucide="x"></i></button></header>
+          <label><input type="checkbox" data-layer="demographic" /><span><i class="swatch demographic"></i>Demographic demand</span></label>
+          <label><input type="checkbox" data-layer="growth" /><span><i class="swatch growth"></i>Population growth</span></label>
+          <label><input type="checkbox" data-layer="saturation" /><span><i class="swatch saturation"></i>Competitor saturation</span></label>
+          <label><input type="checkbox" data-layer="centres" checked /><span><i class="swatch centres"></i>Shopping centres</span></label>
+          <div class="layer-rule"></div>
+          <label><input type="checkbox" data-layer="health" /><span><i data-lucide="cross"></i>Health retailers</span></label>
+          <label><input type="checkbox" data-layer="transport" /><span><i data-lucide="train-front"></i>Public transport</span></label>
+          <label><input type="checkbox" data-layer="parking" /><span><i data-lucide="square-parking"></i>Parking</span></label>
+          <p>Local amenity layers use OpenStreetMap and load only when zoomed into a precinct.</p>
+        </aside>
 
-        <aside class="detail-panel" id="detailPanel" aria-label="Location details" aria-hidden="true">
+        <div class="mode-notice" id="modeNotice" hidden></div>
+        <div id="map" aria-label="Map of Australian optical stores and leasing markets"></div>
+
+        <aside class="detail-panel" id="detailPanel" aria-label="Location intelligence" aria-hidden="true">
           <button class="panel-close icon-button" id="panelClose" type="button" aria-label="Close details" title="Close details">
             <i data-lucide="x"></i>
           </button>
           <div id="detailContent"></div>
         </aside>
 
-        <div class="compare-tray" id="compareTray" hidden>
-          <div>
-            <span class="tray-label">A</span>
-            <strong id="compareA">Select first store</strong>
-          </div>
+        <div class="store-compare-tray" id="storeCompareTray" hidden>
+          <div><span class="tray-label">A</span><strong id="compareA">Select first store</strong></div>
           <i data-lucide="arrow-right"></i>
-          <div>
-            <span class="tray-label">B</span>
-            <strong id="compareB">Select second store</strong>
-          </div>
+          <div><span class="tray-label">B</span><strong id="compareB">Select second store</strong></div>
           <output id="compareDistance"></output>
-          <button class="icon-button" id="clearCompare" type="button" title="Clear comparison" aria-label="Clear comparison">
-            <i data-lucide="trash-2"></i>
-          </button>
+          <button class="icon-button" id="clearStoreCompare" type="button" title="Clear comparison" aria-label="Clear comparison"><i data-lucide="trash-2"></i></button>
         </div>
+
+        <section class="candidate-dock" id="candidateDock" hidden aria-label="Candidate comparison">
+          <header>
+            <div><span>Candidate shortlist</span><strong id="candidateDockCount">0 sites</strong></div>
+            <button class="icon-button" id="candidateDockClose" type="button" aria-label="Close candidate comparison"><i data-lucide="chevron-down"></i></button>
+          </header>
+          <div class="candidate-cards" id="candidateCards"></div>
+        </section>
 
         <div class="loading-state" id="loadingState">
           <span class="loading-mark"></span>
-          <strong>Building optical network</strong>
+          <strong>Building leasing intelligence</strong>
+          <span>Stores, centres and ABS market indicators</span>
         </div>
+        <div class="toast" id="toast" hidden role="status"></div>
       </section>
     </main>
 
+    <section class="report-sheet" id="reportSheet" aria-hidden="true">
+      <header>
+        <span class="product-symbol">OI</span>
+        <div><p>Australian optical leasing intelligence</p><h2>Candidate site brief</h2></div>
+        <time id="reportDate"></time>
+      </header>
+      <div id="reportContent"></div>
+      <footer>Public-source market intelligence. Straight-line catchments are not drive-time trade areas. Verify commercial and legal information independently.</footer>
+    </section>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="assets/intelligence.js"></script>
     <script src="assets/app.js"></script>
   </body>
 </html>
