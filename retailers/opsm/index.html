@@ -468,7 +468,7 @@
       );
     }
 
-    fetch("opsm_stores.geojson")
+    fetch("stores.geojson")
       .then((response) => response.json())
       .then((geojson) => {
         features = geojson.features;
@@ -482,7 +482,7 @@
         render();
       })
       .catch(() => {
-        loadingEl.textContent = "Could not load opsm_stores.geojson.";
+        loadingEl.textContent = "Could not load stores.geojson.";
       })
       .finally(() => {
         loadingEl.style.display = "none";
