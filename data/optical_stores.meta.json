@@ -35,8 +35,8 @@
       "WA": 109
     },
     "by_location_type": {
-      "Main Street / Street-front": 362,
-      "Shopping Centre": 395,
+      "Main Street / Street-front": 356,
+      "Shopping Centre": 401,
       "Unclassified": 45
     },
     "multi_brand_venues": [
@@ -53,6 +53,14 @@
         "venue_name": "Castle Towers",
         "retailers": [
           "Bailey Nelson",
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-city-tweed",
+        "venue_name": "Tweed City Shopping Centre",
+        "retailers": [
           "OPSM",
           "Specsavers"
         ]
@@ -91,6 +99,14 @@
         ]
       },
       {
+        "venue_id": "nsw-park-beach-plaza",
+        "venue_name": "Park Beach Plaza",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "nsw-southgate",
         "venue_name": "Southgate Shopping Centre",
         "retailers": [
@@ -103,6 +119,14 @@
         "venue_name": "Warringah Mall Shopping Centre",
         "retailers": [
           "Bailey Nelson",
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-bay-hervey-stockland",
+        "venue_name": "Stockland Hervey Bay",
+        "retailers": [
           "OPSM",
           "Specsavers"
         ]
@@ -248,6 +272,14 @@
         ]
       },
       {
+        "venue_id": "wa-belmont-forum",
+        "venue_name": "Belmont Forum",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "wa-bunbury-centrepoint",
         "venue_name": "Bunbury Centrepoint Shopping Centre",
         "retailers": [
@@ -264,6 +296,14 @@
         ]
       },
       {
+        "venue_id": "wa-forum-mandurah",
+        "venue_name": "Mandurah Forum",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "wa-westfield-booragoon",
         "venue_name": "Westfield Booragoon",
         "retailers": [
@@ -273,6 +313,6 @@
         ]
       }
     ],
-    "single_brand_venue_count": 251
+    "single_brand_venue_count": 277
   }
 }

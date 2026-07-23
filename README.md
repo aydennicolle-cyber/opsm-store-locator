@@ -56,8 +56,13 @@ The combined schema is published in:
 - `data/brand_profiles.json`
 - `data/network_events.json`
 - `data/history/YYYY-MM-DD.json`
+- `data/shopping_centres.csv`
+- `data/centre_store_memberships.csv`
+- `data/centre_recognition_review.csv`
 
-Classification corrections are kept in `data/location_overrides.csv`. Low-confidence and unclassified stores are listed in `data/classification_review.csv` for manual review.
+Verified shopping-centre identities are kept in `data/shopping_centres.csv`. A store is joined to one of those centres only when a reviewed, public source is recorded in `data/centre_store_memberships.csv`. Other classification corrections are kept in `data/location_overrides.csv`.
+
+Low-confidence and unclassified stores are listed in `data/classification_review.csv`. `data/centre_recognition_review.csv` is a broader centre audit covering possible missed centres, missing venue names and duplicate centre IDs.
 
 Store-area fields distinguish `NLA`, `GLA`, `GFA` and `Estimated footprint`, and remain blank unless supported by a dated source in `data/public_area_overrides.csv`. A whole-building footprint is never presented as confirmed tenancy area.
 
@@ -97,6 +102,7 @@ Rebuild the combined network after refreshing any retailer:
 
 ```bash
 python3 scripts/build_optical_network.py
+python3 scripts/audit_centre_recognition.py
 python3 scripts/build_market_intelligence.py
 ```
 
@@ -120,7 +126,9 @@ Locations use four values:
 - `Other`
 - `Unclassified`
 
-Classification uses official names and addresses. Proximity is never used to assign a shopping centre or shared venue. Reviewed corrections belong in `data/location_overrides.csv` so they survive future refreshes.
+Classification uses official names and addresses. Proximity is never used to assign a shopping centre or shared venue.
+
+The centre audit may use distance, matching names and verified centre addresses to find review candidates, but it never changes published classifications. Add a centre to `data/shopping_centres.csv` and its source-backed store memberships to `data/centre_store_memberships.csv` only after checking an official centre directory, retailer page or equivalent authoritative source. These reviewed memberships survive future retailer refreshes.
 
 ## Local Preview
 

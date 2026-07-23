@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "centre_count": 279,
-    "enriched_count": 1,
-    "generated_at": "2026-07-23T03:55:29.036112+00:00"
+    "centre_count": 310,
+    "enriched_count": 2,
+    "generated_at": "2026-07-23T06:44:53.451068+00:00"
   },
   "centres": [
     {
@@ -110,58 +110,6 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "nsw-011-and-g-lidcombe",
-      "name": "& G-011 Lidcombe Shopping Centre",
-      "state": "NSW",
-      "suburb": "Lidcombe",
-      "latitude": -33.849342,
-      "longitude": 151.04956,
-      "retailers": [
-        "Specsavers"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "",
-      "metrics_date": "",
-      "confidence": "Base",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
-      "centre_id": "nsw-1-lvl-miranda-westfield",
-      "name": "Miranda Westfield Lvl 1",
-      "state": "NSW",
-      "suburb": "Miranda",
-      "latitude": -34.03511,
-      "longitude": 151.10007,
-      "retailers": [
-        "Specsavers"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "Scentre Group",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "https://www.westfield.com.au/",
-      "metrics_date": "",
-      "confidence": "Medium",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
       "centre_id": "nsw-2-lv-miranda-westfield",
       "name": "Miranda Westfield Lv 2",
       "state": "NSW",
@@ -188,12 +136,12 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "nsw-2a-and-ulladulla",
-      "name": "& 2A Ulladulla Shopping Centre",
+      "centre_id": "nsw-ashfield",
+      "name": "Ashfield Mall",
       "state": "NSW",
-      "suburb": "Ulladulla",
-      "latitude": -35.35865,
-      "longitude": 150.47401,
+      "suburb": "Ashfield",
+      "latitude": -33.88912,
+      "longitude": 151.12392,
       "retailers": [
         "Specsavers"
       ],
@@ -214,12 +162,38 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "nsw-ashfield",
-      "name": "Ashfield Mall",
+      "centre_id": "nsw-balgowlah",
+      "name": "Balgowlah Shopping Centre",
       "state": "NSW",
-      "suburb": "Ashfield",
-      "latitude": -33.88912,
-      "longitude": 151.12392,
+      "suburb": "Balgowlah",
+      "latitude": -33.793247,
+      "longitude": 151.26442,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "nsw-bass-hill-plaza",
+      "name": "Bass Hill Plaza",
+      "state": "NSW",
+      "suburb": "Bass Hill",
+      "latitude": -33.89985,
+      "longitude": 150.9932,
       "retailers": [
         "Specsavers"
       ],
@@ -868,15 +842,16 @@
     },
     {
       "centre_id": "nsw-city-tweed",
-      "name": "Tweed City Shopping Centre",
+      "name": "TWEED CITY SHOPPING CENTRE",
       "state": "NSW",
       "suburb": "Tweed Heads South",
-      "latitude": -28.201036,
-      "longitude": 153.54582,
+      "latitude": -28.201538,
+      "longitude": 153.54595,
       "retailers": [
+        "OPSM",
         "Specsavers"
       ],
-      "optical_store_count": 1,
+      "optical_store_count": 2,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -1155,7 +1130,7 @@
     },
     {
       "centre_id": "nsw-forster-stockland",
-      "name": "Stockland Forster Shopping Centre",
+      "name": "Forster Stockland",
       "state": "NSW",
       "suburb": "Forster",
       "latitude": -32.199314,
@@ -1232,12 +1207,64 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "nsw-grafton",
+      "name": "Grafton Shoppingworld",
+      "state": "NSW",
+      "suburb": "Grafton",
+      "latitude": -29.692156,
+      "longitude": 152.93628,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "nsw-greenwood-plaza",
       "name": "Greenwood Plaza",
       "state": "NSW",
       "suburb": "North Sydney",
       "latitude": -33.840374,
       "longitude": 151.2077,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "nsw-grove-square",
+      "name": "Grove Square",
+      "state": "NSW",
+      "suburb": "Baulkham Hills",
+      "latitude": -33.759014,
+      "longitude": 150.99103,
       "retailers": [
         "Specsavers"
       ],
@@ -1519,6 +1546,32 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "nsw-lake-macquarie-square",
+      "name": "Lake Macquarie Square",
+      "state": "NSW",
+      "suburb": "Mt Hutton",
+      "latitude": -32.98463,
+      "longitude": 151.67255,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "nsw-lavington-square",
       "name": "Lavington Square",
       "state": "NSW",
@@ -1551,6 +1604,32 @@
       "suburb": "Leichhardt",
       "latitude": -33.884857,
       "longitude": 151.14975,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "nsw-lidcombe",
+      "name": "Lidcombe Shopping Centre",
+      "state": "NSW",
+      "suburb": "Lidcombe",
+      "latitude": -33.849342,
+      "longitude": 151.04956,
       "retailers": [
         "Specsavers"
       ],
@@ -1704,8 +1783,8 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "nsw-marketplace-menai-t30",
-      "name": "T30 Menai Marketplace Shopping Centre",
+      "centre_id": "nsw-marketplace-menai",
+      "name": "Menai Marketplace Shopping Centre",
       "state": "NSW",
       "suburb": "Menai",
       "latitude": -34.01346,
@@ -1886,6 +1965,58 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "nsw-merrylands-stockland",
+      "name": "Merrylands Stockland",
+      "state": "NSW",
+      "suburb": "Merrylands",
+      "latitude": -33.834496,
+      "longitude": 150.98941,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "Stockland",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "https://www.stockland.com.au/shopping-centres",
+      "metrics_date": "",
+      "confidence": "Medium",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "nsw-miranda-westfield",
+      "name": "Miranda Westfield Lvl 1",
+      "state": "NSW",
+      "suburb": "Miranda",
+      "latitude": -34.03511,
+      "longitude": 151.10007,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "Scentre Group",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "https://www.westfield.com.au/",
+      "metrics_date": "",
+      "confidence": "Medium",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "nsw-morisset-square",
       "name": "Morisset Square",
       "state": "NSW",
@@ -2039,6 +2170,59 @@
       "public_url": "",
       "metrics_date": "",
       "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "nsw-park-beach-plaza",
+      "name": "Park Beach Plaza",
+      "state": "NSW",
+      "suburb": "Coffs Harbour",
+      "latitude": -30.283255,
+      "longitude": 153.13164,
+      "retailers": [
+        "OPSM",
+        "Specsavers"
+      ],
+      "optical_store_count": 2,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "https://www.parkbeachplaza.com.au/",
+      "metrics_date": "",
+      "confidence": "High",
+      "source_basis": "Verified public shopping-centre registry"
+    },
+    {
+      "centre_id": "nsw-park-stockland-wetherill",
+      "name": "Wetherill Park Stockland",
+      "state": "NSW",
+      "suburb": "Wetherill Park",
+      "latitude": -33.858765,
+      "longitude": 150.89783,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "Stockland",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "https://www.stockland.com.au/shopping-centres",
+      "metrics_date": "",
+      "confidence": "Medium",
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
@@ -2198,6 +2382,32 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "nsw-randwick-royal",
+      "name": "Royal Randwick Shopping Centre",
+      "state": "NSW",
+      "suburb": "Randwick",
+      "latitude": -33.915173,
+      "longitude": 151.24101,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "nsw-rhodes-waterside",
       "name": "Rhodes Waterside Shopping Centre",
       "state": "NSW",
@@ -2276,8 +2486,34 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "nsw-salamander",
+      "name": "Salamander Shopping Centre",
+      "state": "NSW",
+      "suburb": "Salamander Bay",
+      "latitude": -32.73578,
+      "longitude": 152.1069,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "nsw-shellharbour-stockland",
-      "name": "Stockland Shellharbour Shopping Centre",
+      "name": "Shellharbour Stockland",
       "state": "NSW",
       "suburb": "Shellharbour City",
       "latitude": -34.56457,
@@ -2299,6 +2535,32 @@
       "public_url": "https://www.stockland.com.au/shopping-centres",
       "metrics_date": "",
       "confidence": "Medium",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "nsw-singleton-square",
+      "name": "Singleton Square",
+      "state": "NSW",
+      "suburb": "Singleton",
+      "latitude": -32.566017,
+      "longitude": 151.16463,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
@@ -2335,6 +2597,32 @@
       "suburb": "Warriewood",
       "latitude": -33.695763,
       "longitude": 151.29584,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "nsw-stanhope-village",
+      "name": "Stanhope Village Shopping Centre",
+      "state": "NSW",
+      "suburb": "Stanhope Gardens",
+      "latitude": -33.71977,
+      "longitude": 150.92029,
       "retailers": [
         "Specsavers"
       ],
@@ -2407,6 +2695,32 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "nsw-ulladulla",
+      "name": "Ulladulla Shopping Centre",
+      "state": "NSW",
+      "suburb": "Ulladulla",
+      "latitude": -35.35865,
+      "longitude": 150.47401,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "nsw-warringah",
       "name": "Warringah Mall",
       "state": "NSW",
@@ -2419,6 +2733,32 @@
         "Specsavers"
       ],
       "optical_store_count": 3,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "nt-hibiscus",
+      "name": "Hibiscus Shoppingtown",
+      "state": "NT",
+      "suburb": "Darwin",
+      "latitude": -12.377735,
+      "longitude": 130.89606,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -2487,34 +2827,8 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "qld-167-191-dr-robina-town",
-      "name": "167-191 Robina Town Centre Dr",
-      "state": "QLD",
-      "suburb": "Robina Town Centre",
-      "latitude": -28.07611,
-      "longitude": 153.38606,
-      "retailers": [
-        "OPSM"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "",
-      "metrics_date": "",
-      "confidence": "Base",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
-      "centre_id": "qld-25-fairfield-gardens-t23",
-      "name": "T23 / 25 Fairfield Gardens Shopping Centre",
+      "centre_id": "qld-25-fairfield-gardens",
+      "name": "/ 25 Fairfield Gardens Shopping Centre",
       "state": "QLD",
       "suburb": "Fairfield",
       "latitude": -27.509064,
@@ -2617,6 +2931,59 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "qld-aspley-hypermarket",
+      "name": "Aspley Hypermarket",
+      "state": "QLD",
+      "suburb": "Aspley",
+      "latitude": -27.361555,
+      "longitude": 153.01357,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "qld-bay-hervey-stockland",
+      "name": "Stocklands Hervey Bay",
+      "state": "QLD",
+      "suburb": "Hervey Bay",
+      "latitude": -25.290101,
+      "longitude": 152.835055,
+      "retailers": [
+        "OPSM",
+        "Specsavers"
+      ],
+      "optical_store_count": 2,
+      "owner": "",
+      "manager": "Stockland",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "https://www.stockland.com.au/shopping-centres",
+      "metrics_date": "",
+      "confidence": "Medium",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "qld-bay-plaza-yeppoon",
       "name": "Bay Plaza Yeppoon",
       "state": "QLD",
@@ -2649,6 +3016,32 @@
       "suburb": "Runaway Bay",
       "latitude": -27.913984,
       "longitude": 153.40071,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "qld-beaudesert-central",
+      "name": "Beaudesert Central Shopping Centre",
+      "state": "QLD",
+      "suburb": "Beaudesert",
+      "latitude": -27.98553,
+      "longitude": 152.9966,
       "retailers": [
         "Specsavers"
       ],
@@ -2822,6 +3215,32 @@
       "public_url": "",
       "metrics_date": "",
       "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "qld-burleigh-heads-stockland",
+      "name": "Burleigh Heads Stockland",
+      "state": "QLD",
+      "suburb": "Burleigh Heads",
+      "latitude": -28.097614,
+      "longitude": 153.44109,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "Stockland",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "https://www.stockland.com.au/shopping-centres",
+      "metrics_date": "",
+      "confidence": "Medium",
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
@@ -3034,6 +3453,32 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "qld-castletown",
+      "name": "Castletown Shoppingworld",
+      "state": "QLD",
+      "suburb": "Pimlico",
+      "latitude": -19.2718,
+      "longitude": 146.7905,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "qld-central-grand-toowoomba",
       "name": "Toowoomba Grand Central Shopping Centre",
       "state": "QLD",
@@ -3110,6 +3555,32 @@
       "public_url": "https://www.westfield.com.au/",
       "metrics_date": "",
       "confidence": "Medium",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "qld-city-rose",
+      "name": "Rose City Shoppingworld",
+      "state": "QLD",
+      "suburb": "Warwick",
+      "latitude": -28.215103,
+      "longitude": 152.03166,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
@@ -3214,6 +3685,32 @@
       "public_url": "https://www.westfield.com.au/",
       "metrics_date": "",
       "confidence": "Medium",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "qld-dr-robina-town",
+      "name": "Robina Town Centre Dr",
+      "state": "QLD",
+      "suburb": "Robina Town Centre",
+      "latitude": -28.07611,
+      "longitude": 153.38606,
+      "retailers": [
+        "OPSM"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
@@ -3401,6 +3898,32 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "qld-hyperdome-logan",
+      "name": "Logan Hyperdome",
+      "state": "QLD",
+      "suburb": "Loganholme",
+      "latitude": -27.658688,
+      "longitude": 153.17096,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "qld-indooroopilly",
       "name": "Indooroopilly",
       "state": "QLD",
@@ -3435,6 +3958,32 @@
       "suburb": "Ipswich",
       "latitude": -27.609728,
       "longitude": 152.75957,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "qld-kawana",
+      "name": "Kawana Shoppingworld",
+      "state": "QLD",
+      "suburb": "Buddina",
+      "latitude": -26.70294,
+      "longitude": 153.13101,
       "retailers": [
         "Specsavers"
       ],
@@ -3872,6 +4421,32 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "qld-rockhampton-stockland",
+      "name": "Rockhampton Stockland",
+      "state": "QLD",
+      "suburb": "Park Avenue",
+      "latitude": -23.354399,
+      "longitude": 150.52243,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "Stockland",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "https://www.stockland.com.au/shopping-centres",
+      "metrics_date": "",
+      "confidence": "Medium",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "qld-square-station",
       "name": "Station Square Shopping Centre",
       "state": "QLD",
@@ -3924,32 +4499,6 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "qld-stockland",
-      "name": "Stockland Shopping Centre",
-      "state": "QLD",
-      "suburb": "Burleigh Heads",
-      "latitude": -28.097614,
-      "longitude": 153.44109,
-      "retailers": [
-        "Specsavers"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "Stockland",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "https://www.stockland.com.au/shopping-centres",
-      "metrics_date": "",
-      "confidence": "Medium",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
       "centre_id": "qld-strathpine",
       "name": "Strathpine Centre",
       "state": "QLD",
@@ -3961,6 +4510,32 @@
         "Specsavers"
       ],
       "optical_store_count": 2,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "qld-sugarland",
+      "name": "Sugarland Shoppingtown",
+      "state": "QLD",
+      "suburb": "Avoca",
+      "latitude": -24.887964,
+      "longitude": 152.31892,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -4035,84 +4610,6 @@
       "suburb": "Thuringowa Central",
       "latitude": -19.315872,
       "longitude": 146.72647,
-      "retailers": [
-        "Specsavers"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "",
-      "metrics_date": "",
-      "confidence": "Base",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
-      "centre_id": "sa-2-east-lvl-marion-westfield",
-      "name": "Marion East Westfield Lvl 2",
-      "state": "SA",
-      "suburb": "Oaklands Park",
-      "latitude": -35.016357,
-      "longitude": 138.54594,
-      "retailers": [
-        "Specsavers"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "Scentre Group",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "https://www.westfield.com.au/",
-      "metrics_date": "",
-      "confidence": "Medium",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
-      "centre_id": "sa-2-lvl-marion-west-westfield",
-      "name": "Marion West Westfield Lvl 2",
-      "state": "SA",
-      "suburb": "Oaklands Park",
-      "latitude": -35.015724,
-      "longitude": 138.54639,
-      "retailers": [
-        "Specsavers"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "Scentre Group",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "https://www.westfield.com.au/",
-      "metrics_date": "",
-      "confidence": "Medium",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
-      "centre_id": "sa-3-mitcham-t2",
-      "name": "T2/3 Mitcham Shopping Centre",
-      "state": "SA",
-      "suburb": "Torrens Park",
-      "latitude": -34.975246,
-      "longitude": 138.61046,
       "retailers": [
         "Specsavers"
       ],
@@ -4341,6 +4838,32 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "sa-east-marion-westfield",
+      "name": "Marion East Westfield Lvl 2",
+      "state": "SA",
+      "suburb": "Oaklands Park",
+      "latitude": -35.016357,
+      "longitude": 138.54594,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "Scentre Group",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "https://www.westfield.com.au/",
+      "metrics_date": "",
+      "confidence": "Medium",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "sa-elizabeth",
       "name": "Elizabeth Shopping Centre",
       "state": "SA",
@@ -4477,6 +5000,58 @@
       "suburb": "Marden",
       "latitude": -34.8955,
       "longitude": 138.63847,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "sa-marion-west-westfield",
+      "name": "Marion West Westfield Lvl 2",
+      "state": "SA",
+      "suburb": "Oaklands Park",
+      "latitude": -35.015724,
+      "longitude": 138.54639,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "Scentre Group",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "https://www.westfield.com.au/",
+      "metrics_date": "",
+      "confidence": "Medium",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "sa-mitcham",
+      "name": "Mitcham Shopping Centre",
+      "state": "SA",
+      "suburb": "Torrens Park",
+      "latitude": -34.975246,
+      "longitude": 138.61046,
       "retailers": [
         "Specsavers"
       ],
@@ -4914,110 +5489,6 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "vic-1-fountain-gate-lvl-westfield",
-      "name": "Fountain Gate Westfield Lvl 1",
-      "state": "VIC",
-      "suburb": "Narre Warren",
-      "latitude": -38.017136,
-      "longitude": 145.30081,
-      "retailers": [
-        "Specsavers"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "Scentre Group",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "https://www.westfield.com.au/",
-      "metrics_date": "",
-      "confidence": "Medium",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
-      "centre_id": "vic-1-lvl-southland-westfield",
-      "name": "Southland Westfield Lvl 1",
-      "state": "VIC",
-      "suburb": "Cheltenham",
-      "latitude": -37.95823,
-      "longitude": 145.05072,
-      "retailers": [
-        "Specsavers"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "Scentre Group",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "https://www.westfield.com.au/",
-      "metrics_date": "",
-      "confidence": "Medium",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
-      "centre_id": "vic-2-fountain-gate-lvl-westfield",
-      "name": "Fountain Gate Westfield Lvl 2",
-      "state": "VIC",
-      "suburb": "Narre Warren",
-      "latitude": -38.0212,
-      "longitude": 145.3027,
-      "retailers": [
-        "Specsavers"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "Scentre Group",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "https://www.westfield.com.au/",
-      "metrics_date": "",
-      "confidence": "Medium",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
-      "centre_id": "vic-3-lvl-southland-westfield",
-      "name": "Southland Westfield Lvl 3",
-      "state": "VIC",
-      "suburb": "Cheltenham",
-      "latitude": -37.958633,
-      "longitude": 145.0554,
-      "retailers": [
-        "Specsavers"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "Scentre Group",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "https://www.westfield.com.au/",
-      "metrics_date": "",
-      "confidence": "Medium",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
       "centre_id": "vic-airport-west-westfield",
       "name": "Airport West Westfield",
       "state": "VIC",
@@ -5312,6 +5783,58 @@
       "suburb": "Broadmeadows",
       "latitude": -37.68043,
       "longitude": 144.91936,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "vic-caroline-springs-square",
+      "name": "Caroline Springs Square",
+      "state": "VIC",
+      "suburb": "Caroline Springs",
+      "latitude": -37.731388,
+      "longitude": 144.74329,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "vic-casey-central",
+      "name": "Casey Central Shopping Centre",
+      "state": "VIC",
+      "suburb": "Narre Warren",
+      "latitude": -38.067703,
+      "longitude": 145.3002,
       "retailers": [
         "Specsavers"
       ],
@@ -5814,12 +6337,64 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "vic-fountain-gate-westfield",
+      "name": "Fountain Gate Westfield Lvl 1",
+      "state": "VIC",
+      "suburb": "Narre Warren",
+      "latitude": -38.019168,
+      "longitude": 145.301755,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 2,
+      "owner": "",
+      "manager": "Scentre Group",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "https://www.westfield.com.au/",
+      "metrics_date": "",
+      "confidence": "Medium",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "vic-gardens-richmond-victoria",
       "name": "Richmond Victoria Gardens Shopping Centre",
       "state": "VIC",
       "suburb": "Richmond",
       "latitude": -37.81337,
       "longitude": 145.01129,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "vic-gardens-waverley",
+      "name": "Waverley Gardens Shopping Centre",
+      "state": "VIC",
+      "suburb": "Mulgrave",
+      "latitude": -37.935715,
+      "longitude": 145.19008,
       "retailers": [
         "Specsavers"
       ],
@@ -6030,6 +6605,32 @@
       "suburb": "Shepparton",
       "latitude": -36.38768,
       "longitude": 145.42328,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "vic-marketplace-sunshine",
+      "name": "Sunshine Marketplace",
+      "state": "VIC",
+      "suburb": "Sunshine",
+      "latitude": -37.78072,
+      "longitude": 144.83138,
       "retailers": [
         "Specsavers"
       ],
@@ -6365,8 +6966,34 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "vic-southland-westfield",
+      "name": "Southland Westfield Lvl 1",
+      "state": "VIC",
+      "suburb": "Cheltenham",
+      "latitude": -37.958432,
+      "longitude": 145.05306,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 2,
+      "owner": "",
+      "manager": "Scentre Group",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "https://www.westfield.com.au/",
+      "metrics_date": "",
+      "confidence": "Medium",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "vic-stockland-wendouree",
-      "name": "Stockland Wendouree Shopping Centre",
+      "name": "Wendouree Stockland",
       "state": "VIC",
       "suburb": "Wendouree",
       "latitude": -37.53536,
@@ -6495,12 +7122,12 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "wa-11b-and-forum-riverton",
-      "name": "& 11B Riverton Forum Shopping Centre",
+      "centre_id": "wa-arcade-manning",
+      "name": "Manning Arcade",
       "state": "WA",
-      "suburb": "Riverton",
-      "latitude": -32.039955,
-      "longitude": 115.90556,
+      "suburb": "Fremantle",
+      "latitude": -32.054436,
+      "longitude": 115.74713,
       "retailers": [
         "Specsavers"
       ],
@@ -6521,16 +7148,43 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "wa-arcade-manning",
-      "name": "Manning Arcade",
+      "centre_id": "wa-baldivis-stockland",
+      "name": "Stockland Baldivis",
       "state": "WA",
-      "suburb": "Fremantle",
-      "latitude": -32.054436,
-      "longitude": 115.74713,
+      "suburb": "Baldivis",
+      "latitude": -32.33328,
+      "longitude": 115.81641,
       "retailers": [
         "Specsavers"
       ],
       "optical_store_count": 1,
+      "owner": "",
+      "manager": "Stockland",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "https://www.stockland.com.au/shopping-centres",
+      "metrics_date": "",
+      "confidence": "Medium",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "wa-belmont-forum",
+      "name": "Belmont Forum",
+      "state": "WA",
+      "suburb": "Cloverdale",
+      "latitude": -31.96464,
+      "longitude": 115.935375,
+      "retailers": [
+        "OPSM",
+        "Specsavers"
+      ],
+      "optical_store_count": 2,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -6610,6 +7264,32 @@
         "Specsavers"
       ],
       "optical_store_count": 2,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "wa-bunbury-forum",
+      "name": "Bunbury Forum",
+      "state": "WA",
+      "suburb": "Bunbury",
+      "latitude": -33.33696,
+      "longitude": 115.66005,
+      "retailers": [
+        "OPSM"
+      ],
+      "optical_store_count": 1,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -6731,8 +7411,8 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "wa-city-karratha-plaza-sp007",
-      "name": "SP007 Karratha City Plaza",
+      "centre_id": "wa-city-karratha-plaza",
+      "name": "Karratha City Plaza",
       "state": "WA",
       "suburb": "Karratha",
       "latitude": -20.73569,
@@ -6861,6 +7541,32 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "wa-cockburn-gateway",
+      "name": "Cockburn Gateway Shopping Centre",
+      "state": "WA",
+      "suburb": "Success",
+      "latitude": -32.132576,
+      "longitude": 115.85778,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "wa-dog-swamp",
       "name": "Dog Swamp Shopping Centre",
       "state": "WA",
@@ -6923,6 +7629,33 @@
         "Specsavers"
       ],
       "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "wa-forum-mandurah",
+      "name": "Mandurah Forum",
+      "state": "WA",
+      "suburb": "Mandurah",
+      "latitude": -32.535515,
+      "longitude": 115.742885,
+      "retailers": [
+        "OPSM",
+        "Specsavers"
+      ],
+      "optical_store_count": 2,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -7121,6 +7854,58 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
+      "centre_id": "wa-kwinana-marketplace",
+      "name": "Kwinana Marketplace",
+      "state": "WA",
+      "suburb": "Kwinana Town Centre",
+      "latitude": -32.245247,
+      "longitude": 115.81453,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "wa-lakelands",
+      "name": "Lakelands Shopping Centre",
+      "state": "WA",
+      "suburb": "Lakelands",
+      "latitude": -32.47093,
+      "longitude": 115.760254,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "",
+      "metrics_date": "",
+      "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
       "centre_id": "wa-livingston-marketplace",
       "name": "Livingston Marketplace",
       "state": "WA",
@@ -7196,6 +7981,32 @@
       "public_url": "",
       "metrics_date": "",
       "confidence": "Base",
+      "source_basis": "Centre entity derived from reviewed store venue IDs"
+    },
+    {
+      "centre_id": "wa-riverton-stockland",
+      "name": "Riverton Stockland",
+      "state": "WA",
+      "suburb": "Riverton",
+      "latitude": -32.039955,
+      "longitude": 115.90556,
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "owner": "",
+      "manager": "Stockland",
+      "centre_type": "",
+      "gla_sqm": null,
+      "annual_visits": null,
+      "trade_area_population": null,
+      "anchors": [],
+      "tenancy_count": null,
+      "redevelopment_activity": "",
+      "leasing_contact": "",
+      "public_url": "https://www.stockland.com.au/shopping-centres",
+      "metrics_date": "",
+      "confidence": "Medium",
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {

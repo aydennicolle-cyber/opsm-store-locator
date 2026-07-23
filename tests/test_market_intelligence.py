@@ -66,8 +66,8 @@ class MarketIntelligenceTests(unittest.TestCase):
         self.assertTrue(all(link["sa2_code"] for link in self.links["links"].values()))
 
     def test_centre_entities_and_curated_profile(self) -> None:
-        self.assertEqual(self.centres["metadata"]["centre_count"], 279)
-        self.assertEqual(len(self.centres["centres"]), 279)
+        self.assertEqual(self.centres["metadata"]["centre_count"], 310)
+        self.assertEqual(len(self.centres["centres"]), 310)
         chadstone = next(
             centre for centre in self.centres["centres"] if centre["centre_id"] == "vic-chadstone"
         )
@@ -75,6 +75,17 @@ class MarketIntelligenceTests(unittest.TestCase):
         self.assertGreater(chadstone["gla_sqm"], 200_000)
         self.assertGreater(chadstone["annual_visits"], 10_000_000)
         self.assertTrue(chadstone["public_url"])
+        park_beach = next(
+            centre
+            for centre in self.centres["centres"]
+            if centre["centre_id"] == "nsw-park-beach-plaza"
+        )
+        self.assertEqual(park_beach["name"], "Park Beach Plaza")
+        self.assertEqual(park_beach["optical_store_count"], 2)
+        self.assertEqual(set(park_beach["retailers"]), {"OPSM", "Specsavers"})
+        self.assertEqual(park_beach["confidence"], "High")
+        self.assertEqual(park_beach["source_basis"], "Verified public shopping-centre registry")
+        self.assertEqual(park_beach["public_url"], "https://www.parkbeachplaza.com.au/")
 
     def test_network_history_snapshot(self) -> None:
         self.assertEqual(self.events["event_count"], len(self.events["events"]))

@@ -131,6 +131,33 @@ class OpticalNetworkTests(unittest.TestCase):
         for radius, count in expected.items():
             self.assertEqual(sum(haversine(origin, point) <= radius for point in points), count)
 
+    def test_park_beach_plaza_memberships_are_confirmed(self) -> None:
+        park_beach = {
+            row["store_id"]: row
+            for row in self.rows
+            if row["store_id"] in {"opsm-1229", "specsavers-3339"}
+        }
+        self.assertEqual(set(park_beach), {"opsm-1229", "specsavers-3339"})
+        for row in park_beach.values():
+            self.assertEqual(row["location_type"], "Shopping Centre")
+            self.assertEqual(row["venue_name"], "Park Beach Plaza")
+            self.assertEqual(row["venue_id"], "nsw-park-beach-plaza")
+            self.assertEqual(row["classification_confidence"], "High")
+            self.assertIn("Official Park Beach Plaza directory", row["classification_basis"])
+
+    def test_centre_memberships_require_non_proximity_evidence(self) -> None:
+        membership_path = ROOT / "data" / "centre_store_memberships.csv"
+        with membership_path.open(newline="", encoding="utf-8") as handle:
+            memberships = list(csv.DictReader(handle))
+        self.assertEqual(
+            len(memberships),
+            len({(row["retailer"], row["store_id"]) for row in memberships}),
+        )
+        for row in memberships:
+            self.assertTrue(row["source_url"].startswith("https://"))
+            self.assertNotIn("proximity", row["classification_basis"].lower())
+            self.assertEqual(row["confidence"], "High")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -30,6 +30,7 @@ STORE_LINK_OUTPUT = DATA_DIR / "store_market_links.json"
 CENTRE_OUTPUT = DATA_DIR / "centres.json"
 EVENT_OUTPUT = DATA_DIR / "network_events.json"
 PROFILE_CSV = DATA_DIR / "centre_profiles.csv"
+CENTRE_REGISTRY_CSV = DATA_DIR / "shopping_centres.csv"
 BRAND_PROFILES = DATA_DIR / "brand_profiles.json"
 
 ABS_RELEASE_DATE = "2026-05-26"
@@ -346,13 +347,15 @@ def build_centres(stores: list[dict]) -> list[dict]:
         if store.get("venue_id"):
             grouped[store["venue_id"]].append(store)
     overrides = {row["venue_id"]: row for row in read_csv(PROFILE_CSV)}
+    registry = {row["venue_id"]: row for row in read_csv(CENTRE_REGISTRY_CSV)}
     centres = []
     for venue_id, members in sorted(grouped.items()):
         override = overrides.get(venue_id, {})
-        venue_name = members[0]["venue_name"]
+        registered = registry.get(venue_id, {})
+        venue_name = registered.get("venue_name", "") or members[0]["venue_name"]
         manager = override.get("manager", "")
-        public_url = override.get("public_url", "")
-        confidence = override.get("confidence", "")
+        public_url = override.get("public_url", "") or registered.get("official_url", "")
+        confidence = override.get("confidence", "") or registered.get("confidence", "")
         if not manager and "westfield" in venue_name.lower():
             manager = "Scentre Group"
             public_url = "https://www.westfield.com.au/"
@@ -365,10 +368,20 @@ def build_centres(stores: list[dict]) -> list[dict]:
             {
                 "centre_id": venue_id,
                 "name": venue_name,
-                "state": members[0]["state"],
-                "suburb": members[0]["suburb"],
-                "latitude": round(sum(float(item["latitude"]) for item in members) / len(members), 6),
-                "longitude": round(sum(float(item["longitude"]) for item in members) / len(members), 6),
+                "state": registered.get("state", "") or members[0]["state"],
+                "suburb": registered.get("suburb", "") or members[0]["suburb"],
+                "latitude": round(
+                    float(registered["latitude"])
+                    if registered.get("latitude")
+                    else sum(float(item["latitude"]) for item in members) / len(members),
+                    6,
+                ),
+                "longitude": round(
+                    float(registered["longitude"])
+                    if registered.get("longitude")
+                    else sum(float(item["longitude"]) for item in members) / len(members),
+                    6,
+                ),
                 "retailers": sorted({item["retailer"] for item in members}),
                 "optical_store_count": len(members),
                 "owner": override.get("owner", ""),
@@ -387,7 +400,11 @@ def build_centres(stores: list[dict]) -> list[dict]:
                 "source_basis": (
                     "Curated public centre profile"
                     if override
-                    else "Centre entity derived from reviewed store venue IDs"
+                    else (
+                        "Verified public shopping-centre registry"
+                        if registered
+                        else "Centre entity derived from reviewed store venue IDs"
+                    )
                 ),
             }
         )

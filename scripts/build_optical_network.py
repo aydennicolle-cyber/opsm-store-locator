@@ -19,6 +19,8 @@ OUTPUT_META = DATA_DIR / "optical_stores.meta.json"
 REVIEW_PATH = DATA_DIR / "classification_review.csv"
 OVERRIDE_PATH = DATA_DIR / "location_overrides.csv"
 AREA_OVERRIDE_PATH = DATA_DIR / "public_area_overrides.csv"
+CENTRE_REGISTRY_PATH = DATA_DIR / "shopping_centres.csv"
+CENTRE_MEMBERSHIP_PATH = DATA_DIR / "centre_store_memberships.csv"
 VALID_STATES = {"ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"}
 FIELDS = [
     "retailer",
@@ -82,6 +84,12 @@ CENTRE_NAME_TERMS = (
     " chase",
     " mall",
     " village",
+    " forum",
+    " shoppingtown",
+    " shoppingworld",
+    " hypermarket",
+    " hyperdome",
+    " stockland",
     " highpoint",
     " chadstone",
     " northland",
@@ -212,7 +220,31 @@ def cleaned_store_name(store: dict) -> str:
 
 def clean_venue(value: str) -> str:
     value = tidy(value)
-    value = re.sub(r"^(shop|suite|level|unit)\s*[a-z0-9/ -]+,?\s*", "", value, flags=re.IGNORECASE)
+    unit_code = r"(?:[a-z]*\d+[a-z]*|[a-z])(?:[./-](?:[a-z]*\d+[a-z]*|\d+[a-z]*))*"
+    unit_prefix = re.compile(
+        rf"^(?:shop|suite|level|unit)\s*(?:no\.?\s*)?{unit_code}"
+        rf"(?:\s*(?:,|&)\s*{unit_code})*\s*(?:\([^)]*\))?\s*,?\s*",
+        flags=re.IGNORECASE,
+    )
+    for _ in range(2):
+        cleaned = unit_prefix.sub("", value, count=1)
+        if cleaned == value:
+            break
+        value = cleaned
+    value = re.sub(
+        rf"\s+(?:shop|suite|level|unit)\s*(?:no\.?\s*)?{unit_code}\s*$",
+        "",
+        value,
+        flags=re.IGNORECASE,
+    )
+    leading_code = re.match(rf"^{unit_code}\s+(.+)$", value, flags=re.IGNORECASE)
+    if leading_code:
+        remainder = leading_code.group(1)
+        lowered = f" {remainder.lower()}"
+        if any(phrase in lowered for phrase in CENTRE_PHRASES) or any(
+            term in lowered for term in CENTRE_NAME_TERMS
+        ):
+            value = remainder
     value = re.sub(r"^\d+[a-z]?\s+", "", value, flags=re.IGNORECASE)
     value = re.sub(r"\bS/C\b", "Shopping Centre", value, flags=re.IGNORECASE)
     return value.strip(" ,- ")
@@ -242,6 +274,9 @@ def venue_identifier(state: str, venue_name: str) -> str:
     if not venue_name:
         return ""
     value = venue_name.lower().replace("&", " and ")
+    value = re.sub(r"\bstocklands\b", "stockland", value)
+    value = re.sub(r"\b(?:level|lvl)\s*[a-z0-9./-]+\b", " ", value)
+    value = re.sub(r"\b(?:shop|suite|unit)\s*[a-z0-9./-]+\b", " ", value)
     value = re.sub(r"\b(shopping|centre|center|s/c|mall)\b", " ", value)
     tokens = sorted(set(re.findall(r"[a-z0-9]+", value)))
     return slug(f"{state} {' '.join(tokens)}") if tokens else ""
@@ -317,6 +352,27 @@ def load_overrides() -> dict[tuple[str, str], dict]:
     return overrides
 
 
+def load_centre_memberships() -> dict[tuple[str, str], dict]:
+    centres = {row["venue_id"]: row for row in read_csv(CENTRE_REGISTRY_PATH)}
+    memberships = {}
+    for row in read_csv(CENTRE_MEMBERSHIP_PATH):
+        venue_id = tidy(row["venue_id"])
+        if venue_id not in centres:
+            raise ValueError(f"Unknown centre membership venue ID: {venue_id}")
+        key = (tidy(row["retailer"]), tidy(row["store_id"]))
+        if key in memberships:
+            raise ValueError(f"Duplicate centre membership: {key[0]} {key[1]}")
+        centre = centres[venue_id]
+        memberships[key] = {
+            "venue_name": tidy(centre["venue_name"]),
+            "venue_id": venue_id,
+            "location_type": "Shopping Centre",
+            "classification_confidence": tidy(row.get("confidence", "")) or "High",
+            "classification_basis": tidy(row["classification_basis"]),
+        }
+    return memberships
+
+
 def load_area_overrides() -> dict[tuple[str, str], dict]:
     overrides = {}
     for row in read_csv(AREA_OVERRIDE_PATH):
@@ -385,8 +441,10 @@ def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     freshness = read_freshness()
     stores = load_stores(freshness)
+    centre_memberships = load_centre_memberships()
     overrides = load_overrides()
     area_overrides = load_area_overrides()
+    matched_memberships = set()
     for store in stores:
         store.update(classify(store))
         store.update(
@@ -398,12 +456,21 @@ def main() -> None:
                 "area_confidence": "Unknown",
             }
         )
+        membership_key = (store["retailer"], store["store_id"])
+        membership = centre_memberships.get(membership_key)
+        if membership:
+            store.update(membership)
+            matched_memberships.add(membership_key)
         override = overrides.get((store["retailer"], store["store_id"]))
         if override:
             store.update(override)
         area_override = area_overrides.get((store["retailer"], store["store_id"]))
         if area_override:
             store.update(area_override)
+    unmatched_memberships = set(centre_memberships) - matched_memberships
+    if unmatched_memberships:
+        first = sorted(unmatched_memberships)[0]
+        raise ValueError(f"Centre membership store not found: {first[0]} {first[1]}")
     stores.sort(key=lambda item: (item["state"], item["suburb"], item["retailer"], item["name"]))
     validate(stores)
 
