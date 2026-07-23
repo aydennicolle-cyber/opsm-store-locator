@@ -4,9 +4,9 @@
   const Intel = window.LeasingIntel;
   const BRAND_ORDER = ["OPSM", "Specsavers", "Bailey Nelson"];
   const BRAND_CONFIG = {
-    OPSM: { color: "#0087a1", slug: "opsm", short: "OPSM" },
-    Specsavers: { color: "#4f7f31", slug: "specsavers", short: "SPEC" },
-    "Bailey Nelson": { color: "#e05b44", slug: "bailey-nelson", short: "BN" },
+    OPSM: { color: "#0087a1", slug: "opsm", short: "OPSM", mark: "OPSM" },
+    Specsavers: { color: "#4f7f31", slug: "specsavers", short: "SPEC", mark: "S" },
+    "Bailey Nelson": { color: "#e05b44", slug: "bailey-nelson", short: "BN", mark: "B N" },
   };
   const VIEW_CONFIG = {
     network: {
@@ -160,11 +160,19 @@
     iconCreateFunction(cluster) {
       const children = cluster.getAllChildMarkers();
       const retailers = new Set(children.map((marker) => marker.options.retailer));
-      const color = retailers.size === 1 ? BRAND_CONFIG[children[0].options.retailer].color : "#171b1f";
       const size = children.length > 99 ? 42 : children.length > 19 ? 38 : 34;
+      if (retailers.size === 1) {
+        const retailer = children[0].options.retailer;
+        return L.divIcon({
+          className: "",
+          html: `<div class="brand-cluster">${brandMarkHtml(retailer, "cluster")}<b>${children.length}</b></div>`,
+          iconSize: [48, 28],
+          iconAnchor: [24, 14],
+        });
+      }
       return L.divIcon({
         className: "",
-        html: `<div class="cluster-icon" style="width:${size}px;height:${size}px;background:${color}">${children.length}</div>`,
+        html: `<div class="cluster-icon mixed" style="width:${size}px;height:${size}px">${children.length}</div>`,
         iconSize: [size, size],
       });
     },
@@ -212,13 +220,19 @@
     }, 3200);
   }
 
+  function brandMarkHtml(retailer, context = "inline") {
+    const config = BRAND_CONFIG[retailer];
+    return `<span class="retailer-logo ${config.slug} ${context}" aria-hidden="true"><span>${escapeHtml(
+      config.mark
+    )}</span></span>`;
+  }
+
   function storeIcon(store) {
-    const config = BRAND_CONFIG[store.retailer];
     return L.divIcon({
       className: "store-marker",
-      html: `<div class="store-pin ${config.slug}" style="--pin-color:${config.color}"></div>`,
-      iconSize: [20, 20],
-      iconAnchor: [10, 10],
+      html: `<div class="store-logo-marker">${brandMarkHtml(store.retailer, "map")}</div>`,
+      iconSize: [38, 24],
+      iconAnchor: [19, 12],
     });
   }
 
@@ -306,7 +320,7 @@
       const count = state.filteredStores.filter((store) => store.retailer === retailer).length;
       return `<label class="retailer-option" data-retailer="${escapeHtml(retailer)}">
         <input type="checkbox" value="${escapeHtml(retailer)}" ${state.filters.retailers.has(retailer) ? "checked" : ""} />
-        <span class="marker-key marker-${config.slug === "bailey-nelson" ? "bailey" : config.slug}"></span>
+        ${brandMarkHtml(retailer, "filter")}
         <span>${escapeHtml(retailer)}</span><output>${count}</output>
       </label>`;
     }).join("");
@@ -741,9 +755,7 @@
     }));
     elements.detailContent.innerHTML = `
       <header class="detail-header" style="--brand-color:${config.color}">
-        <span class="retailer-tag"><span class="marker-key marker-${
-          config.slug === "bailey-nelson" ? "bailey" : config.slug
-        }"></span>${escapeHtml(store.retailer)}</span>
+        <span class="retailer-tag">${brandMarkHtml(store.retailer, "detail")}${escapeHtml(store.retailer)}</span>
         <h2>${escapeHtml(store.name)}</h2><address>${escapeHtml(store.full_address)}</address>
         <div class="link-row">${store.phone ? `<a class="command-link" href="tel:${escapeHtml(store.phone.replace(/[^+\d]/g, ""))}"><i data-lucide="phone"></i>Call</a>` : ""}
           <a class="command-link primary" href="${escapeHtml(store.official_url)}" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Official store</a></div>

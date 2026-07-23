@@ -67,16 +67,22 @@ fieldset { margin: 13px 0; padding: 0; border: 0; }
 legend, .select-grid label > span, .service-field > span, .opportunity-form label > span, .input-grid label > span { margin-bottom: 6px; color: var(--muted); font-size: 9px; font-weight: 800; text-transform: uppercase; }
 .retailer-filter { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
 .retailer-filter legend { grid-column: 1 / -1; }
-.retailer-option { min-width: 0; height: 50px; display: grid; grid-template-columns: 16px 1fr; grid-template-rows: 1fr 1fr; gap: 0 7px; align-items: center; padding: 7px 8px; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; }
+.retailer-option { min-width: 0; height: 50px; display: grid; grid-template-columns: 30px 1fr; grid-template-rows: 1fr 1fr; gap: 0 7px; align-items: center; padding: 7px 8px; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; }
 .retailer-option input { position: absolute; opacity: 0; pointer-events: none; }
 .retailer-option:has(input:not(:checked)) { opacity: .42; background: var(--soft); }
-.retailer-option .marker-key { grid-row: 1 / 3; }
+.retailer-option .retailer-logo { grid-row: 1 / 3; }
 .retailer-option span:nth-of-type(2) { min-width: 0; align-self: end; overflow: hidden; font-size: 9px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; }
 .retailer-option output { align-self: start; color: var(--muted); font-size: 10px; }
-.marker-key { width: 13px; height: 13px; display: inline-block; background: currentColor; border: 2px solid white; box-shadow: 0 0 0 1px currentColor; }
-.marker-opsm { color: var(--opsm); border-radius: 50%; }
-.marker-specsavers { color: var(--specsavers); transform: rotate(45deg); }
-.marker-bailey { color: var(--bailey); border-radius: 2px; }
+.retailer-logo { position: relative; width: 30px; height: 18px; display: inline-grid; place-items: center; flex: 0 0 auto; border: 2px solid white; box-shadow: 0 1px 5px rgb(23 27 31 / 32%); font-weight: 900; line-height: 1; }
+.retailer-logo > span { position: relative; z-index: 2; white-space: nowrap; }
+.retailer-logo.opsm { border-radius: 9px; background: #0087a1; color: white; font-size: 7px; font-style: italic; }
+.retailer-logo.specsavers { border: 0; background: transparent; box-shadow: none; color: white; font-size: 7px; }
+.retailer-logo.specsavers::before, .retailer-logo.specsavers::after { position: absolute; top: 2px; width: 20px; height: 14px; border: 2px solid white; border-radius: 50%; background: #4f7f31; box-shadow: 0 1px 5px rgb(23 27 31 / 28%); content: ""; }
+.retailer-logo.specsavers::before { left: 0; transform: rotate(8deg); }
+.retailer-logo.specsavers::after { right: 0; transform: rotate(-8deg); }
+.retailer-logo.bailey-nelson { border: 1.5px solid #171b1f; border-radius: 2px; background: white; color: #171b1f; box-shadow: 2px 2px 0 #e05b44, 0 1px 5px rgb(23 27 31 / 24%); font-size: 7px; letter-spacing: 1px; }
+.retailer-logo.filter { width: 27px; height: 17px; }
+.retailer-logo.detail { width: 30px; height: 18px; }
 .select-grid, .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
 .select-grid label, .service-field, .opportunity-form label, .input-grid label { min-width: 0; display: flex; flex-direction: column; }
 select, .service-field input, .opportunity-form input { width: 100%; height: 36px; padding: 0 9px; border: 1px solid #bbc2c6; border-radius: 4px; background: white; color: var(--ink); font-size: 11px; }
@@ -185,13 +191,21 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .mode-notice { position: absolute; z-index: 490; top: 62px; left: 14px; max-width: 390px; padding: 9px 12px; border-radius: 3px; background: var(--ink); color: white; box-shadow: var(--shadow); font-size: 9px; }
 
 .store-marker { background: transparent; border: 0; }
-.store-pin { width: 20px; height: 20px; border: 3px solid white; background: var(--pin-color); box-shadow: 0 2px 8px rgb(23 27 31 / 35%); transition: transform .14s ease; }
-.store-pin:hover { transform: scale(1.18); }
-.store-pin.opsm { border-radius: 50%; }
-.store-pin.specsavers { transform: rotate(45deg); }
-.store-pin.specsavers:hover { transform: rotate(45deg) scale(1.18); }
-.store-pin.bailey-nelson { border-radius: 3px; }
-.cluster-icon { display: grid; place-items: center; border: 3px solid white; border-radius: 50%; color: white; box-shadow: 0 2px 12px rgb(23 27 31 / 30%); font-size: 10px; font-weight: 850; }
+.store-logo-marker { width: 38px; height: 24px; display: grid; place-items: center; transition: transform .14s ease; }
+.store-logo-marker:hover { transform: scale(1.16); }
+.retailer-logo.map { width: 34px; height: 21px; }
+.retailer-logo.map.opsm { border-radius: 11px; font-size: 8px; }
+.retailer-logo.map.specsavers { width: 36px; height: 22px; font-size: 8px; }
+.retailer-logo.map.specsavers::before, .retailer-logo.map.specsavers::after { top: 2px; width: 24px; height: 17px; }
+.retailer-logo.map.bailey-nelson { width: 31px; font-size: 8px; }
+.cluster-icon { display: grid; place-items: center; border: 3px solid white; border-radius: 50%; background: #171b1f; color: white; box-shadow: 0 2px 12px rgb(23 27 31 / 30%); font-size: 10px; font-weight: 850; }
+.brand-cluster { position: relative; width: 48px; height: 28px; display: grid; place-items: center; filter: drop-shadow(0 2px 5px rgb(23 27 31 / 25%)); }
+.brand-cluster .retailer-logo.cluster { width: 40px; height: 24px; }
+.brand-cluster .retailer-logo.cluster.opsm { border-radius: 12px; }
+.brand-cluster .retailer-logo.cluster.specsavers { width: 42px; height: 25px; }
+.brand-cluster .retailer-logo.cluster.specsavers::before, .brand-cluster .retailer-logo.cluster.specsavers::after { top: 3px; width: 28px; height: 19px; }
+.brand-cluster .retailer-logo.cluster.bailey-nelson { width: 36px; }
+.brand-cluster b { position: absolute; z-index: 4; right: -1px; top: -4px; min-width: 16px; height: 16px; display: grid; place-items: center; padding: 0 3px; border: 2px solid white; border-radius: 8px; background: #171b1f; color: white; font-size: 7px; }
 .centre-pin { width: 20px; height: 20px; display: grid; place-items: center; border: 3px solid white; background: var(--gold); box-shadow: 0 2px 8px rgb(23 27 31 / 32%); transform: rotate(45deg); }
 .centre-pin i { width: 5px; height: 5px; display: block; background: white; }
 .candidate-marker { width: 32px; height: 32px; display: grid; place-items: center; border: 3px solid white; border-radius: 50%; background: var(--violet); color: white; box-shadow: 0 3px 12px rgb(23 27 31 / 35%); font-size: 11px; font-weight: 900; }
