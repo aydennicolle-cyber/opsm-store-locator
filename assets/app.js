@@ -4,9 +4,21 @@
   const Intel = window.LeasingIntel;
   const BRAND_ORDER = ["OPSM", "Specsavers", "Bailey Nelson"];
   const BRAND_CONFIG = {
-    OPSM: { color: "#0087a1", slug: "opsm", short: "OPSM", mark: "OPSM" },
-    Specsavers: { color: "#4f7f31", slug: "specsavers", short: "SPEC", mark: "S" },
-    "Bailey Nelson": { color: "#e05b44", slug: "bailey-nelson", short: "BN", mark: "B N" },
+    OPSM: { color: "#211d1b", slug: "opsm", short: "OPSM", mark: "OPSM", markerWidth: 38 },
+    Specsavers: {
+      color: "#009b55",
+      slug: "specsavers",
+      short: "SPEC",
+      mark: "Specsavers",
+      markerWidth: 58,
+    },
+    "Bailey Nelson": {
+      color: "#171717",
+      slug: "bailey-nelson",
+      short: "BN",
+      mark: "BN",
+      markerWidth: 50,
+    },
   };
   const VIEW_CONFIG = {
     network: {
@@ -166,8 +178,8 @@
         return L.divIcon({
           className: "",
           html: `<div class="brand-cluster">${brandMarkHtml(retailer, "cluster")}<b>${children.length}</b></div>`,
-          iconSize: [48, 28],
-          iconAnchor: [24, 14],
+          iconSize: [BRAND_CONFIG[retailer].markerWidth + 12, 30],
+          iconAnchor: [(BRAND_CONFIG[retailer].markerWidth + 12) / 2, 15],
         });
       }
       return L.divIcon({
@@ -222,17 +234,21 @@
 
   function brandMarkHtml(retailer, context = "inline") {
     const config = BRAND_CONFIG[retailer];
+    if (retailer === "Bailey Nelson") {
+      return `<span class="retailer-logo ${config.slug} ${context}" aria-hidden="true"><span class="bn-letter">B</span><i></i><span class="bn-letter">N</span></span>`;
+    }
     return `<span class="retailer-logo ${config.slug} ${context}" aria-hidden="true"><span>${escapeHtml(
       config.mark
     )}</span></span>`;
   }
 
   function storeIcon(store) {
+    const width = BRAND_CONFIG[store.retailer].markerWidth;
     return L.divIcon({
       className: "store-marker",
       html: `<div class="store-logo-marker">${brandMarkHtml(store.retailer, "map")}</div>`,
-      iconSize: [38, 24],
-      iconAnchor: [19, 12],
+      iconSize: [width, 26],
+      iconAnchor: [width / 2, 13],
     });
   }
 
