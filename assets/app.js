@@ -389,8 +389,8 @@
   function storeRowHtml(store) {
     return `<button class="store-row ${store.store_id === state.selectedStoreId ? "active" : ""}" data-store-id="${escapeHtml(
       store.store_id
-    )}" data-retailer="${escapeHtml(store.retailer)}" style="--row-color:${BRAND_CONFIG[store.retailer].color}">
-      <span class="row-marker"></span><span class="row-copy"><strong>${escapeHtml(store.name)}</strong>
+    )}" data-retailer="${escapeHtml(store.retailer)}">
+      ${brandMarkHtml(store.retailer, "list")}<span class="row-copy"><strong>${escapeHtml(store.name)}</strong>
       <small>${escapeHtml(`${store.suburb}, ${store.state} ${store.postcode}`)}</small></span>
       <span class="row-type">${escapeHtml(store.location_type)}</span></button>`;
   }
@@ -718,14 +718,18 @@
   function nearestBrandHtml(model) {
     return BRAND_ORDER.map((brand) => {
       const entry = model.nearestByBrand[brand];
-      return `<div class="nearest-brand"><span>${escapeHtml(brand)}</span><strong>${
+      return `<div class="nearest-brand">${brandMarkHtml(brand, "summary")}<span class="sr-only">${escapeHtml(
+        brand
+      )}</span><strong>${
         entry ? Intel.formatDistance(entry.distance) : "None"
       }</strong></div>`;
     }).join("");
   }
 
   function radiusTableHtml(model) {
-    return `<table class="radius-table"><thead><tr><th>Radius</th><th>OPSM</th><th>SPEC</th><th>BN</th><th>Total</th></tr></thead>
+    return `<table class="radius-table"><thead><tr><th>Radius</th>${BRAND_ORDER.map(
+      (brand) => `<th>${brandMarkHtml(brand, "table")}<span class="sr-only">${escapeHtml(brand)}</span></th>`
+    ).join("")}<th>Total</th></tr></thead>
       <tbody>${model.radiusCounts
         .map(
           (row) => `<tr><td>${row.radius < 1 ? `${row.radius * 1000} m` : `${row.radius} km`}</td>
@@ -739,9 +743,10 @@
     return entries
       .slice(0, limit)
       .map(
-        (entry) => `<button class="near-row" data-store-id="${escapeHtml(entry.store.store_id)}" style="--row-color:${
-          BRAND_CONFIG[entry.store.retailer].color
-        }"><span class="dot"></span><strong>${escapeHtml(entry.store.name)}</strong><span>${Intel.formatDistance(
+        (entry) => `<button class="near-row" data-store-id="${escapeHtml(entry.store.store_id)}">${brandMarkHtml(
+          entry.store.retailer,
+          "compact"
+        )}<strong>${escapeHtml(entry.store.name)}</strong><span>${Intel.formatDistance(
           entry.distance
         )}</span></button>`
       )
@@ -869,9 +874,10 @@
       <section class="detail-section"><h3>Optical representation</h3>
         <div class="brand-presence">${BRAND_ORDER.map(
           (brand) =>
-            `<span class="${stores.some((store) => store.retailer === brand) ? "present" : ""}"><i style="--brand:${
-              BRAND_CONFIG[brand].color
-            }"></i>${escapeHtml(brand)}</span>`
+            `<span class="${stores.some((store) => store.retailer === brand) ? "present" : ""}">${brandMarkHtml(
+              brand,
+              "compact"
+            )}<b>${escapeHtml(brand)}</b></span>`
         ).join("")}</div>
         <div class="nearest-list">${stores.map((store) => nearRows([{ store, distance: 0 }], 1)).join("")}</div>
       </section>
@@ -1064,8 +1070,12 @@
   }
 
   function renderStoreComparison() {
-    elements.compareA.textContent = state.compareStores[0]?.name || "Select first store";
-    elements.compareB.textContent = state.compareStores[1]?.name || "Select second store";
+    [elements.compareA, elements.compareB].forEach((element, index) => {
+      const store = state.compareStores[index];
+      element.innerHTML = store
+        ? `${brandMarkHtml(store.retailer, "tray")}<span>${escapeHtml(store.name)}</span>`
+        : `<span>Select ${index ? "second" : "first"} store</span>`;
+    });
     if (compareLine) map.removeLayer(compareLine);
     compareLine = null;
     if (state.compareStores.length === 2) {
