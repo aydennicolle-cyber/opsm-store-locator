@@ -19,6 +19,10 @@ ENDPOINT = (
 CSV_PATH = ROOT / "opsm_stores.csv"
 GEOJSON_PATH = ROOT / "opsm_stores.geojson"
 RAW_PATH = ROOT / "opsm_store_locator_raw.json"
+RETAILER_DIR = ROOT / "retailers" / "opsm"
+RETAILER_CSV_PATH = RETAILER_DIR / "stores.csv"
+RETAILER_GEOJSON_PATH = RETAILER_DIR / "stores.geojson"
+RETAILER_RAW_PATH = RETAILER_DIR / "source_snapshot.json"
 
 
 def attr_map(store: dict) -> dict[str, str]:
@@ -103,7 +107,7 @@ def fetch_json() -> dict:
         return json.loads(response.read().decode("utf-8"))
 
 
-def write_csv(stores: list[dict]) -> None:
+def write_csv(stores: list[dict], path: Path) -> None:
     fields = [
         "name",
         "sap_id",
@@ -122,13 +126,13 @@ def write_csv(stores: list[dict]) -> None:
         "services",
         "hours",
     ]
-    with CSV_PATH.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         writer.writerows({field: store.get(field, "") for field in fields} for store in stores)
 
 
-def write_geojson(stores: list[dict], fetched_at: str) -> None:
+def write_geojson(stores: list[dict], fetched_at: str, path: Path) -> None:
     features = []
     for store in stores:
         properties = {key: value for key, value in store.items() if key not in {"latitude", "longitude"}}
@@ -143,7 +147,7 @@ def write_geojson(stores: list[dict], fetched_at: str) -> None:
             }
         )
 
-    GEOJSON_PATH.write_text(
+    path.write_text(
         json.dumps(
             {
                 "type": "FeatureCollection",
@@ -164,7 +168,10 @@ def write_geojson(stores: list[dict], fetched_at: str) -> None:
 def main() -> None:
     fetched_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     raw = fetch_json()
-    RAW_PATH.write_text(json.dumps(raw, indent=2), encoding="utf-8")
+    RETAILER_DIR.mkdir(parents=True, exist_ok=True)
+    raw_text = json.dumps(raw, indent=2)
+    RAW_PATH.write_text(raw_text, encoding="utf-8")
+    RETAILER_RAW_PATH.write_text(raw_text, encoding="utf-8")
 
     seen = set()
     stores = []
@@ -179,8 +186,10 @@ def main() -> None:
         stores.append(cleaned)
 
     stores.sort(key=lambda item: (item["state"], item["city"], item["name"]))
-    write_csv(stores)
-    write_geojson(stores, fetched_at)
+    write_csv(stores, CSV_PATH)
+    write_csv(stores, RETAILER_CSV_PATH)
+    write_geojson(stores, fetched_at, GEOJSON_PATH)
+    write_geojson(stores, fetched_at, RETAILER_GEOJSON_PATH)
 
     by_state: dict[str, int] = {}
     for store in stores:
@@ -191,6 +200,7 @@ def main() -> None:
     print(", ".join(f"{state}: {count}" for state, count in sorted(by_state.items())))
     print(f"CSV: {CSV_PATH}")
     print(f"GeoJSON: {GEOJSON_PATH}")
+    print(f"Retailer map data: {RETAILER_DIR}")
 
 
 if __name__ == "__main__":

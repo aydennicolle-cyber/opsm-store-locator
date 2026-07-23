@@ -36,23 +36,23 @@ def main() -> None:
 
     csv_path = folder / "stores.csv"
     if not csv_path.exists():
-      with csv_path.open("w", newline="", encoding="utf-8") as handle:
-          writer = csv.DictWriter(
-              handle,
-              fieldnames=[
-                  "name",
-                  "id",
-                  "state",
-                  "city",
-                  "postal_code",
-                  "full_address",
-                  "phone",
-                  "latitude",
-                  "longitude",
-                  "services",
-              ],
-          )
-          writer.writeheader()
+        with csv_path.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(
+                handle,
+                fieldnames=[
+                    "name",
+                    "id",
+                    "state",
+                    "city",
+                    "postal_code",
+                    "full_address",
+                    "phone",
+                    "latitude",
+                    "longitude",
+                    "services",
+                ],
+            )
+            writer.writeheader()
 
     geojson_path = folder / "stores.geojson"
     if not geojson_path.exists():
