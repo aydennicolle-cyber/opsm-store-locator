@@ -1,0 +1,278 @@
+{
+  "name": "Australian Optical Retail Network",
+  "store_count": 802,
+  "source_freshness": {
+    "OPSM": "2026-07-23T00:26:21+00:00",
+    "Specsavers": "2026-07-23T00:53:33.174Z",
+    "Bailey Nelson": "2026-07-23T01:01:27+00:00"
+  },
+  "retailer_counts": {
+    "Bailey Nelson": 68,
+    "OPSM": 335,
+    "Specsavers": 399
+  },
+  "classification_types": [
+    "Shopping Centre",
+    "Main Street / Street-front",
+    "Other",
+    "Unclassified"
+  ],
+  "network_summary": {
+    "total": 802,
+    "by_retailer": {
+      "Bailey Nelson": 68,
+      "OPSM": 335,
+      "Specsavers": 399
+    },
+    "by_state": {
+      "ACT": 14,
+      "NSW": 244,
+      "NT": 7,
+      "QLD": 151,
+      "SA": 69,
+      "TAS": 20,
+      "VIC": 188,
+      "WA": 109
+    },
+    "by_location_type": {
+      "Main Street / Street-front": 362,
+      "Shopping Centre": 395,
+      "Unclassified": 45
+    },
+    "multi_brand_venues": [
+      {
+        "venue_id": "nsw-bondi-junction",
+        "venue_name": "Bondi Junction",
+        "retailers": [
+          "Bailey Nelson",
+          "OPSM"
+        ]
+      },
+      {
+        "venue_id": "nsw-castle-towers",
+        "venue_name": "Castle Towers",
+        "retailers": [
+          "Bailey Nelson",
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-erina-fair",
+        "venue_name": "Erina Fair",
+        "retailers": [
+          "Bailey Nelson",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-hornsby-westfield",
+        "venue_name": "Hornsby Westfield",
+        "retailers": [
+          "Bailey Nelson",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-macarthur-square",
+        "venue_name": "Macarthur Square",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-macquarie-centre",
+        "venue_name": "Macquarie Centre",
+        "retailers": [
+          "Bailey Nelson",
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-southgate",
+        "venue_name": "Southgate Shopping Centre",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-warringah",
+        "venue_name": "Warringah Mall Shopping Centre",
+        "retailers": [
+          "Bailey Nelson",
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-carindale",
+        "venue_name": "Carindale",
+        "retailers": [
+          "Bailey Nelson",
+          "OPSM"
+        ]
+      },
+      {
+        "venue_id": "qld-chermside",
+        "venue_name": "Chermside",
+        "retailers": [
+          "Bailey Nelson",
+          "OPSM"
+        ]
+      },
+      {
+        "venue_id": "qld-fair-pacific",
+        "venue_name": "Pacific Fair",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-helensvale-westfield",
+        "venue_name": "Helensvale Westfield",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-indooroopilly",
+        "venue_name": "Indooroopilly Shopping Centre",
+        "retailers": [
+          "Bailey Nelson",
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-robina-town",
+        "venue_name": "Robina Town Centre",
+        "retailers": [
+          "Bailey Nelson",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-strathpine",
+        "venue_name": "Strathpine Centre",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "sa-plaza-tea-tree",
+        "venue_name": "Tea Tree Plaza",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-ballarat-bridge",
+        "venue_name": "Ballarat Bridge Mall",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-bendigo-marketplace",
+        "venue_name": "Bendigo Marketplace",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-chadstone",
+        "venue_name": "Chadstone Shopping Centre",
+        "retailers": [
+          "Bailey Nelson",
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-chase-forest-hill",
+        "venue_name": "Forest Hill Chase",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-dandenong-square",
+        "venue_name": "Dandenong Square",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-eastland",
+        "venue_name": "Eastland Shopping Centre",
+        "retailers": [
+          "Bailey Nelson",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-highpoint",
+        "venue_name": "Highpoint Shopping Centre",
+        "retailers": [
+          "Bailey Nelson",
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-northland",
+        "venue_name": "Northland Shopping Centre",
+        "retailers": [
+          "Bailey Nelson",
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-southland",
+        "venue_name": "Southland",
+        "retailers": [
+          "Bailey Nelson",
+          "OPSM"
+        ]
+      },
+      {
+        "venue_id": "wa-bunbury-centrepoint",
+        "venue_name": "Bunbury Centrepoint Shopping Centre",
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "wa-carousel",
+        "venue_name": "Carousel",
+        "retailers": [
+          "Bailey Nelson",
+          "OPSM"
+        ]
+      },
+      {
+        "venue_id": "wa-westfield-booragoon",
+        "venue_name": "Westfield Booragoon",
+        "retailers": [
+          "Bailey Nelson",
+          "OPSM",
+          "Specsavers"
+        ]
+      }
+    ],
+    "single_brand_venue_count": 251
+  }
+}

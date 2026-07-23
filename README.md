@@ -1,56 +1,103 @@
-# Store Locator Project
+# Australian Optical Retail Network
 
-This repository publishes interactive store maps for Australian retail networks.
+Public-source leasing and network comparison map for Australian optical retail.
 
-Current live map:
+Live map:
 
 https://aydennicolle-cyber.github.io/opsm-store-locator/
 
-Retailer maps:
+Current validated network:
 
-- OPSM root map: https://aydennicolle-cyber.github.io/opsm-store-locator/
-- Rhythm x City Beach: https://aydennicolle-cyber.github.io/opsm-store-locator/retailers/city-beach/
-- Rhythm x Ozmosis: https://aydennicolle-cyber.github.io/opsm-store-locator/retailers/ozmosis/
+- OPSM: 335 stores
+- Specsavers: 399 stores
+- Bailey Nelson: 68 stores
+- Combined: 802 stores
 
-## Files
+The original OPSM-only map remains at:
 
-- `index.html` is the root OPSM map kept for the current public share link.
-- `opsm_stores.csv` and `opsm_stores.geojson` are the root OPSM exports.
-- `retailers/opsm/` is the OPSM map in the reusable multi-retailer structure.
-- `templates/map.html` is the starter map page for future retailers.
-- `scripts/scaffold_retailer.py` creates a blank retailer folder from the template.
-- `scripts/fetch_opsm_stores.py` refreshes OPSM from the public OPSM locator endpoint.
-- `scripts/fetch_city_beach_stores.py` refreshes City Beach from the public City Beach locator endpoint.
-- `scripts/fetch_ozmosis_stores.py` refreshes Ozmosis from the public Stockinstore locator endpoint used by the Ozmosis store page.
+https://aydennicolle-cyber.github.io/opsm-store-locator/retailers/opsm/
 
-## Add A Retailer
+Other retailer maps remain separate from the optical analysis:
 
-```bash
-python3 scripts/scaffold_retailer.py "Retailer Name"
-```
+- City Beach: https://aydennicolle-cyber.github.io/opsm-store-locator/retailers/city-beach/
+- Ozmosis: https://aydennicolle-cyber.github.io/opsm-store-locator/retailers/ozmosis/
 
-Then replace `retailers/<slug>/stores.csv` and `retailers/<slug>/stores.geojson` with the cleaned store data.
+## Map Functions
 
-## Refresh OPSM Data
+- Filter by retailer, state, location type, service, audiology, status, suburb or postcode.
+- View nearest stores by brand, ten nearest stores and competitor counts within 500 m, 1 km, 2 km, 5 km and 10 km.
+- Compare any two stores by straight-line distance.
+- Drop a proposed leasing site anywhere on the map for the same proximity analysis.
+- Review same-centre competitors only where a shared venue ID is supported by official naming or a reviewed override.
+- Download the currently filtered network as CSV.
+- View store totals by brand, state and location type, plus reviewed multi-brand and single-brand venues.
+
+## Public Data
+
+The combined schema is published in:
+
+- `data/optical_stores.csv`
+- `data/optical_stores.geojson`
+- `data/optical_stores.meta.json`
+
+Classification corrections are kept in `data/location_overrides.csv`. Low-confidence and unclassified stores are listed in `data/classification_review.csv` for manual review.
+
+Only public store and venue information belongs in this repository. Do not add rent, lease expiry, turnover, sales performance, trading terms, internal contacts or private leasing notes.
+
+## Refresh Data
+
+Refresh OPSM from its public locator endpoint:
 
 ```bash
 python3 scripts/fetch_opsm_stores.py
 ```
 
-The refresh pulls the OPSM locator response, filters to `country = AU`, removes duplicate store IDs, and rewrites the CSV and GeoJSON.
-
-## Refresh City Beach Data
+Refresh Bailey Nelson from its public store list, structured store pages and official map links:
 
 ```bash
-python3 scripts/fetch_city_beach_stores.py
+python3 scripts/fetch_bailey_nelson_stores.py
 ```
 
-The refresh pulls the City Beach Australia locator response, filters to Australian stores, removes duplicate store IDs, and rewrites the Rhythm-branded City Beach CSV and GeoJSON.
-
-## Refresh Ozmosis Data
+Specsavers protects its raw endpoint, so refresh through its rendered public pages. This opens a controlled Chrome window and can take several minutes:
 
 ```bash
-python3 scripts/fetch_ozmosis_stores.py
+npm install
+npm run fetch:specsavers
+python3 scripts/build_specsavers_stores.py
 ```
 
-The refresh pulls the Ozmosis Australia locator response, filters to Australian stores, removes duplicate store IDs, and rewrites the Rhythm-branded Ozmosis CSV and GeoJSON.
+Rebuild the combined network after refreshing any retailer:
+
+```bash
+python3 scripts/build_optical_network.py
+python3 -m unittest discover -s tests -v
+```
+
+Each importer validates source counts, unique IDs, required fields and Australian coordinate bounds. A failed or incomplete refresh stops before replacing the last good snapshot.
+
+## Classification Rules
+
+Locations use four values:
+
+- `Shopping Centre`
+- `Main Street / Street-front`
+- `Other`
+- `Unclassified`
+
+Classification uses official names and addresses. Proximity is never used to assign a shopping centre or shared venue. Reviewed corrections belong in `data/location_overrides.csv` so they survive future refreshes.
+
+## Local Preview
+
+```bash
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+Then open http://127.0.0.1:8000/.
+
+## Add Another Retailer Map
+
+```bash
+python3 scripts/scaffold_retailer.py "Retailer Name"
+```
+
+This creates `retailers/<retailer-name>/` from the reusable map template without adding the retailer to the optical comparison.

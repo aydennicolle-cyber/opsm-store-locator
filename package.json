@@ -1,0 +1,12 @@
+{
+  "name": "australian-optical-retail-network",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Public-source Australian optical store network map",
+  "scripts": {
+    "fetch:specsavers": "node scripts/fetch_specsavers_stores.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.61.1"
+  }
+}
