@@ -130,7 +130,7 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .centre-row { width: 100%; min-height: 62px; display: grid; grid-template-columns: 34px 1fr auto; gap: 9px; align-items: center; padding: 10px 16px; border: 0; border-bottom: 1px solid #e7eaeb; background: white; text-align: left; cursor: pointer; }
 .centre-row > span:last-child { text-align: right; }
 .centre-row-icon { width: 30px; height: 30px; display: grid; place-items: center; background: #f4ead2; color: #855e0c; }
-.centre-row-icon svg { width: 16px; }
+.centre-row-icon svg { width: 16px; height: 16px; }
 
 .opportunity-form { overflow: auto; }
 .opportunity-form > label { margin-bottom: 10px; }
@@ -203,7 +203,7 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .swatch.demographic { background: #4d9a98; }
 .swatch.growth { background: #76a744; }
 .swatch.saturation { background: #ed8b45; border-radius: 50%; }
-.swatch.centres { background: var(--gold); transform: rotate(45deg); }
+.centre-layer-icon { color: #855e0c; }
 .mode-notice { position: absolute; z-index: 490; top: 62px; left: 14px; max-width: 390px; padding: 9px 12px; border-radius: 3px; background: var(--ink); color: white; box-shadow: var(--shadow); font-size: 9px; }
 
 .store-marker { background: transparent; border: 0; }
@@ -222,8 +222,9 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .brand-cluster .retailer-logo.cluster.bailey-nelson { width: 52px; height: 26px; }
 .brand-cluster .retailer-logo.cluster.bailey-nelson .bn-letter { width: 26px; height: 26px; }
 .brand-cluster b { position: absolute; z-index: 4; right: -1px; top: -4px; min-width: 16px; height: 16px; display: grid; place-items: center; padding: 0 3px; border: 2px solid white; border-radius: 8px; background: #171b1f; color: white; font-size: 7px; }
-.centre-pin { width: 20px; height: 20px; display: grid; place-items: center; border: 3px solid white; background: var(--gold); box-shadow: 0 2px 8px rgb(23 27 31 / 32%); transform: rotate(45deg); }
-.centre-pin i { width: 5px; height: 5px; display: block; background: white; }
+.centre-bag-icon { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.centre-pin { width: 26px; height: 26px; display: grid; place-items: center; border: 2px solid white; border-radius: 50%; background: var(--gold); color: white; box-shadow: 0 2px 8px rgb(23 27 31 / 32%); }
+.centre-pin .centre-bag-icon { width: 14px; height: 14px; stroke-width: 2.2; }
 .candidate-marker { width: 32px; height: 32px; display: grid; place-items: center; border: 3px solid white; border-radius: 50%; background: var(--violet); color: white; box-shadow: 0 3px 12px rgb(23 27 31 / 35%); font-size: 11px; font-weight: 900; }
 
 .detail-panel { position: absolute; z-index: 650; top: 0; right: 0; width: min(430px, 43vw); height: 100%; overflow: auto; border-left: 1px solid var(--line); background: white; box-shadow: -12px 0 36px rgb(23 27 31 / 14%); transform: translateX(102%); transition: transform .22s ease; }

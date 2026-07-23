@@ -3,6 +3,11 @@
 
   const Intel = window.LeasingIntel;
   const BRAND_ORDER = ["OPSM", "Specsavers", "Bailey Nelson"];
+  const CENTRE_BAG_SVG = `<svg class="centre-bag-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+    <path d="M3 6h18"></path>
+    <path d="M16 10a4 4 0 0 1-8 0"></path>
+  </svg>`;
   const BRAND_CONFIG = {
     OPSM: { color: "#211d1b", slug: "opsm", short: "OPSM", mark: "OPSM", markerWidth: 38 },
     Specsavers: {
@@ -276,9 +281,9 @@
       const marker = L.marker([centre.latitude, centre.longitude], {
         icon: L.divIcon({
           className: "",
-          html: `<div class="centre-pin"><i></i></div>`,
-          iconSize: [22, 22],
-          iconAnchor: [11, 11],
+          html: `<div class="centre-pin">${CENTRE_BAG_SVG}</div>`,
+          iconSize: [26, 26],
+          iconAnchor: [13, 13],
         }),
         title: centre.name,
       });
@@ -477,7 +482,7 @@
           .slice(0, 160)
           .map(
             (centre) => `<button class="centre-row" data-centre-id="${escapeHtml(centre.centre_id)}">
-              <span class="centre-row-icon"><i data-lucide="building-2"></i></span>
+              <span class="centre-row-icon">${CENTRE_BAG_SVG}</span>
               <span><strong>${escapeHtml(centre.name)}</strong><small>${escapeHtml(
               `${centre.suburb}, ${centre.state}`
             )}</small></span>
@@ -849,7 +854,7 @@
     const stores = state.allStores.filter((store) => store.venue_id === centre.centre_id);
     elements.detailContent.innerHTML = `
       <header class="detail-header" style="--brand-color:#d29b27">
-        <span class="retailer-tag"><i data-lucide="building-2"></i>Centre profile</span>
+        <span class="retailer-tag">${CENTRE_BAG_SVG}Centre profile</span>
         <h2>${escapeHtml(centre.name)}</h2><address>${escapeHtml(`${centre.suburb}, ${centre.state}`)}</address>
         ${centre.public_url ? `<div class="link-row"><a class="command-link primary" href="${escapeHtml(
           centre.public_url

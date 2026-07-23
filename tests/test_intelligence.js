@@ -1,4 +1,5 @@
 const assert = require("node:assert/strict");
+const fs = require("node:fs");
 const Intel = require("../assets/intelligence.js");
 
 assert.equal(Intel.haversine({latitude: 0, longitude: 0}, {latitude: 0, longitude: 0}), 0);
@@ -65,4 +66,10 @@ const shared = Intel.sanitiseShareState({
 assert.equal(shared.candidates[0].asking_rent, undefined);
 assert.equal(shared.candidates[0].notes, undefined);
 assert.equal(shared.lease_expiry, undefined);
+
+const appSource = fs.readFileSync(require.resolve("../assets/app.js"), "utf8");
+const indexSource = fs.readFileSync(require.resolve("../index.html"), "utf8");
+assert.ok(appSource.includes("const CENTRE_BAG_SVG"));
+assert.ok(appSource.match(/CENTRE_BAG_SVG/g).length >= 4);
+assert.ok(indexSource.includes("centre-bag-icon centre-layer-icon"));
 console.log("Intelligence tests passed");
