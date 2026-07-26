@@ -2,7 +2,14 @@
   "use strict";
 
   const Intel = window.LeasingIntel;
-  const BRAND_ORDER = ["OPSM", "Specsavers", "Bailey Nelson"];
+  const BRAND_ORDER = [
+    "OPSM",
+    "Specsavers",
+    "Bailey Nelson",
+    "Oscar Wylee",
+    "Independent / Other optical",
+  ];
+  const DEFAULT_RETAILERS = BRAND_ORDER.filter((retailer) => retailer !== "Independent / Other optical");
   const CENTRE_BAG_SVG = `<svg class="centre-bag-icon" viewBox="0 0 24 24" aria-hidden="true">
     <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
     <path d="M3 6h18"></path>
@@ -24,12 +31,26 @@
       mark: "BN",
       markerWidth: 50,
     },
+    "Oscar Wylee": {
+      color: "#2848a7",
+      slug: "oscar-wylee",
+      short: "OW",
+      mark: "Oscar Wylee",
+      markerWidth: 54,
+    },
+    "Independent / Other optical": {
+      color: "#6b5b4b",
+      slug: "independent-other",
+      short: "IND",
+      mark: "IND",
+      markerWidth: 34,
+    },
   };
   const VIEW_CONFIG = {
     network: {
       eyebrow: "Retail footprint",
       title: "Network",
-      subtitle: "Filter, inspect and compare the national optical network.",
+      subtitle: "Filter, inspect and compare the trans-Tasman optical network.",
     },
     centres: {
       eyebrow: "Landlord intelligence",
@@ -55,11 +76,17 @@
   const STORE_RADII = [0.5, 1, 2, 5, 10];
   const CATCHMENT_RADII = [1, 3, 5, 10];
   const AUSTRALIA_VIEW = { center: [-25.8, 134.4], zoom: 4 };
+  const NEW_ZEALAND_VIEW = { center: [-41.15, 172.7], zoom: 5 };
+  const NETWORK_BOUNDS = [
+    [-47.6, 112],
+    [-9, 179.5],
+  ];
   const PUBLIC_STORE_FIELDS = [
     "retailer",
     "store_id",
     "name",
     "status",
+    "country",
     "state",
     "suburb",
     "postcode",
@@ -128,7 +155,8 @@
     compareStores: [],
     candidates: [],
     filters: {
-      retailers: new Set(BRAND_ORDER),
+      retailers: new Set(DEFAULT_RETAILERS),
+      country: "",
       search: "",
       state: "",
       location: "",
@@ -297,6 +325,17 @@
     });
   }
 
+  function updateCentreMarkersForFilters() {
+    const visibleVenueIds = new Set(
+      state.filteredStores.map((store) => store.venue_id).filter(Boolean)
+    );
+    centreLayer.clearLayers();
+    visibleVenueIds.forEach((venueId) => {
+      const marker = centreMarkerById.get(venueId);
+      if (marker) centreLayer.addLayer(marker);
+    });
+  }
+
   function createCandidateMarker(candidate) {
     const marker = L.marker([candidate.latitude, candidate.longitude], {
       icon: L.divIcon({
@@ -338,11 +377,13 @@
   function retailerOptionsHtml() {
     return BRAND_ORDER.map((retailer) => {
       const config = BRAND_CONFIG[retailer];
-      const count = state.filteredStores.filter((store) => store.retailer === retailer).length;
+      const count = state.allStores.filter(
+        (store) => store.retailer === retailer && storeMatchesFilters(store, true)
+      ).length;
       return `<label class="retailer-option" data-retailer="${escapeHtml(retailer)}">
         <input type="checkbox" value="${escapeHtml(retailer)}" ${state.filters.retailers.has(retailer) ? "checked" : ""} />
         ${brandMarkHtml(retailer, "filter")}
-        <span>${escapeHtml(retailer)}</span><output>${count}</output>
+        <span title="${escapeHtml(retailer)}">${escapeHtml(retailer)}</span><output>${count}</output>
       </label>`;
     }).join("");
   }
@@ -354,9 +395,12 @@
   }
 
   function renderNetworkView() {
-    const states = [...new Set(state.allStores.map((store) => store.state))].sort();
+    const countryStores = state.filters.country
+      ? state.allStores.filter((store) => store.country === state.filters.country)
+      : state.allStores;
+    const countries = [...new Set(state.allStores.map((store) => store.country))].sort();
+    const states = [...new Set(countryStores.map((store) => store.state))].sort();
     const statuses = [...new Set(state.allStores.map((store) => store.status))].sort();
-    const rows = state.filteredStores.slice(0, 100);
     elements.viewContent.innerHTML = `
       <section class="filters" aria-label="Network filters">
         <label class="search-field"><i data-lucide="search"></i><span class="sr-only">Search stores</span>
@@ -364,7 +408,16 @@
         </label>
         <fieldset class="retailer-filter"><legend>Retailer</legend>${retailerOptionsHtml()}</fieldset>
         <div class="select-grid">
-          <label><span>State</span><select id="stateSelect">${filterOptions(states, state.filters.state, "All states")}</select></label>
+          <label><span>Country</span><select id="countrySelect">${filterOptions(
+            countries,
+            state.filters.country,
+            "Australia + New Zealand"
+          )}</select></label>
+          <label><span>State / region</span><select id="stateSelect">${filterOptions(
+            states,
+            state.filters.state,
+            "All states / regions"
+          )}</select></label>
           <label><span>Location</span><select id="locationSelect">${filterOptions(
             ["Shopping Centre", "Main Street / Street-front", "Other", "Unclassified"],
             state.filters.location,
@@ -381,14 +434,34 @@
         )}" type="search" placeholder="e.g. dry eye, contact lens" /></label>
       </section>
       <section class="result-section">
-        <div class="section-heading"><h2>Locations</h2><span>${state.filteredStores.length.toLocaleString("en-AU")} results</span></div>
-        <div class="store-list" id="storeList">${rows.map(storeRowHtml).join("")}${
-          state.filteredStores.length > rows.length
-            ? `<div class="list-limit">Showing the first ${rows.length} locations. Refine filters to narrow the list.</div>`
-            : ""
-        }${rows.length ? "" : '<div class="list-limit">No locations match these filters.</div>'}</div>
+        <div class="section-heading"><h2>Locations</h2><span id="networkResultCount"></span></div>
+        <div class="store-list" id="storeList"></div>
       </section>`;
+    renderNetworkResults();
     bindNetworkView();
+  }
+
+  function renderNetworkResults() {
+    const rows = state.filteredStores.slice(0, 100);
+    const count = document.getElementById("networkResultCount");
+    const list = document.getElementById("storeList");
+    if (!count || !list) return;
+    count.textContent = `${state.filteredStores.length.toLocaleString("en-AU")} results`;
+    list.innerHTML = `${rows.map(storeRowHtml).join("")}${
+      state.filteredStores.length > rows.length
+        ? `<div class="list-limit">Showing the first ${rows.length} locations. Refine filters to narrow the list.</div>`
+        : ""
+    }${rows.length ? "" : '<div class="list-limit">No locations match these filters.</div>'}`;
+    document.querySelectorAll(".retailer-option").forEach((option) => {
+      const output = option.querySelector("output");
+      if (!output) return;
+      output.textContent = state.allStores
+        .filter(
+          (store) =>
+            store.retailer === option.dataset.retailer && storeMatchesFilters(store, true)
+        )
+        .length.toLocaleString("en-AU");
+    });
   }
 
   function storeRowHtml(store) {
@@ -405,13 +478,16 @@
     const service = document.getElementById("serviceInput");
     search.addEventListener("input", () => {
       state.filters.search = search.value;
-      applyFilters();
+      applyFilters(false);
+      renderNetworkResults();
     });
     service.addEventListener("input", () => {
       state.filters.service = service.value;
-      applyFilters();
+      applyFilters(false);
+      renderNetworkResults();
     });
     [
+      ["countrySelect", "country"],
       ["stateSelect", "state"],
       ["locationSelect", "location"],
       ["audiologySelect", "audiology"],
@@ -419,7 +495,17 @@
     ].forEach(([id, key]) => {
       document.getElementById(id).addEventListener("change", (event) => {
         state.filters[key] = event.target.value;
+        if (key === "country") state.filters.state = "";
         applyFilters();
+        if (key === "country") {
+          if (state.filters.country === "Australia") {
+            map.setView(AUSTRALIA_VIEW.center, AUSTRALIA_VIEW.zoom);
+          } else if (state.filters.country === "New Zealand") {
+            map.setView(NEW_ZEALAND_VIEW.center, NEW_ZEALAND_VIEW.zoom);
+          } else {
+            map.fitBounds(NETWORK_BOUNDS, { padding: [18, 18] });
+          }
+        }
       });
     });
     document.querySelectorAll('.retailer-option input[type="checkbox"]').forEach((input) => {
@@ -435,24 +521,28 @@
     });
   }
 
-  function applyFilters(render = true) {
+  function storeMatchesFilters(store, ignoreRetailer = false) {
     const query = state.filters.search.trim().toLowerCase();
     const serviceQuery = state.filters.service.trim().toLowerCase();
-    state.filteredStores = state.allStores.filter((store) => {
-      const haystack =
-        `${store.name} ${store.suburb} ${store.postcode} ${store.full_address} ${store.venue_name}`.toLowerCase();
-      return (
-        state.filters.retailers.has(store.retailer) &&
-        (!query || haystack.includes(query)) &&
-        (!state.filters.state || store.state === state.filters.state) &&
-        (!state.filters.location || store.location_type === state.filters.location) &&
-        (!state.filters.audiology || String(store.audiology) === state.filters.audiology) &&
-        (!state.filters.status || store.status === state.filters.status) &&
-        (!serviceQuery || store.services.toLowerCase().includes(serviceQuery))
-      );
-    });
+    const haystack =
+      `${store.name} ${store.suburb} ${store.postcode} ${store.full_address} ${store.venue_name}`.toLowerCase();
+    return (
+      (ignoreRetailer || state.filters.retailers.has(store.retailer)) &&
+      (!state.filters.country || store.country === state.filters.country) &&
+      (!query || haystack.includes(query)) &&
+      (!state.filters.state || store.state === state.filters.state) &&
+      (!state.filters.location || store.location_type === state.filters.location) &&
+      (!state.filters.audiology || String(store.audiology) === state.filters.audiology) &&
+      (!state.filters.status || store.status === state.filters.status) &&
+      (!serviceQuery || store.services.toLowerCase().includes(serviceQuery))
+    );
+  }
+
+  function applyFilters(render = true) {
+    state.filteredStores = state.allStores.filter((store) => storeMatchesFilters(store));
     storeClusters.clearLayers();
     state.filteredStores.forEach((store) => storeClusters.addLayer(markerById.get(store.store_id)));
+    updateCentreMarkersForFilters();
     elements.visibleTotal.textContent = state.filteredStores.length.toLocaleString("en-AU");
     if (render && state.view === "network") renderNetworkView();
     updateSaturationLayer();
@@ -460,10 +550,6 @@
   }
 
   function renderCentresView() {
-    const query = state.filters.search.toLowerCase();
-    const centres = state.centres
-      .filter((centre) => !query || `${centre.name} ${centre.suburb} ${centre.state} ${centre.manager}`.toLowerCase().includes(query))
-      .sort((a, b) => b.optical_store_count - a.optical_store_count || a.name.localeCompare(b.name));
     const enriched = state.centres.filter((centre) => centre.confidence === "High").length;
     elements.viewContent.innerHTML = `
       <section class="filters">
@@ -477,23 +563,13 @@
         </div>
       </section>
       <section class="result-section">
-        <div class="section-heading"><h2>Centre profiles</h2><span>${centres.length} results</span></div>
-        <div class="centre-list" id="centreList">${centres
-          .slice(0, 160)
-          .map(
-            (centre) => `<button class="centre-row" data-centre-id="${escapeHtml(centre.centre_id)}">
-              <span class="centre-row-icon">${CENTRE_BAG_SVG}</span>
-              <span><strong>${escapeHtml(centre.name)}</strong><small>${escapeHtml(
-              `${centre.suburb}, ${centre.state}`
-            )}</small></span>
-              <span><strong>${centre.optical_store_count}</strong><small>${centre.retailers.length} brands</small></span>
-            </button>`
-          )
-          .join("")}</div>
+        <div class="section-heading"><h2>Centre profiles</h2><span id="centreResultCount"></span></div>
+        <div class="centre-list" id="centreList"></div>
       </section>`;
+    renderCentreResults();
     document.getElementById("centreSearch").addEventListener("input", (event) => {
       state.filters.search = event.target.value;
-      renderCentresView();
+      renderCentreResults();
     });
     document.getElementById("centreList").addEventListener("click", (event) => {
       const row = event.target.closest("[data-centre-id]");
@@ -502,6 +578,32 @@
       openCentreDetail(centre);
       map.setView([centre.latitude, centre.longitude], 15);
     });
+  }
+
+  function renderCentreResults() {
+    const query = state.filters.search.trim().toLowerCase();
+    const centres = state.centres
+      .filter(
+        (centre) =>
+          !query || `${centre.name} ${centre.suburb} ${centre.state} ${centre.manager}`.toLowerCase().includes(query)
+      )
+      .sort((a, b) => b.optical_store_count - a.optical_store_count || a.name.localeCompare(b.name));
+    const count = document.getElementById("centreResultCount");
+    const list = document.getElementById("centreList");
+    if (!count || !list) return;
+    count.textContent = `${centres.length.toLocaleString("en-AU")} results`;
+    list.innerHTML = centres
+      .slice(0, 160)
+      .map(
+        (centre) => `<button class="centre-row" data-centre-id="${escapeHtml(centre.centre_id)}">
+          <span class="centre-row-icon">${CENTRE_BAG_SVG}</span>
+          <span><strong>${escapeHtml(centre.name)}</strong><small>${escapeHtml(
+          `${centre.suburb}, ${centre.state}`
+        )}</small></span>
+          <span><strong>${centre.optical_store_count}</strong><small>${centre.retailers.length} brands</small></span>
+        </button>`
+      )
+      .join("");
   }
 
   function profileOptions() {
@@ -533,7 +635,7 @@
           )}" placeholder="Unset" /><b>sqm</b></div></label>
         </div>
         <button class="primary-command" id="dropSiteButton" type="button"><i data-lucide="map-pin-plus"></i>Drop candidate on map</button>
-        <p class="form-note">Scores use sourced ABS market data and visible network evidence. Unavailable components reduce coverage rather than being guessed.</p>
+        <p class="form-note">Scores use available public market data and visible network evidence. Unavailable components reduce coverage rather than being guessed.</p>
       </section>
       <section class="result-section">
         <div class="section-heading"><h2>Shortlist</h2><span>${state.candidates.length} sites</span></div>
@@ -738,7 +840,7 @@
       <tbody>${model.radiusCounts
         .map(
           (row) => `<tr><td>${row.radius < 1 ? `${row.radius * 1000} m` : `${row.radius} km`}</td>
-            <td>${row.counts.OPSM}</td><td>${row.counts.Specsavers}</td><td>${row.counts["Bailey Nelson"]}</td><td>${row.total}</td></tr>`
+            ${BRAND_ORDER.map((brand) => `<td>${row.counts[brand]}</td>`).join("")}<td>${row.total}</td></tr>`
         )
         .join("")}</tbody></table>`;
   }
@@ -795,13 +897,22 @@
           )}</span></strong></div>
           <div class="data-point"><span>Venue</span><strong>${escapeHtml(store.venue_name || "Not confirmed")}</strong></div>
           <div class="data-point"><span>Status</span><strong>${escapeHtml(store.status)}</strong></div>
+          <div class="data-point"><span>Country</span><strong>${escapeHtml(store.country)}</strong></div>
+          <div class="data-point"><span>State / region</span><strong>${escapeHtml(store.state)}</strong></div>
         </div>
         ${areaHtml(store)}
         <p class="empty-note">${escapeHtml(store.classification_basis)}</p>
         <div class="service-list">${services.length ? services.map((service) => `<span>${escapeHtml(service)}</span>`).join("") : "<span>No services listed</span>"}</div>
         <div class="link-row"><button class="detail-action" id="compareFromDetail" type="button"><i data-lucide="ruler"></i>Add to store comparison</button></div>
       </section>
-      ${market ? marketEvidenceHtml(market.properties) : ""}
+      ${
+        market
+          ? marketEvidenceHtml(market.properties)
+          : store.country === "New Zealand"
+            ? `<section class="detail-section coverage-note"><h3>New Zealand demographics</h3>
+              <p class="empty-note">Store, centre and proximity coverage is available. Stats NZ demographic catchments are not yet published in this build, so no Australian proxy is shown.</p></section>`
+            : ""
+      }
       <section class="detail-section"><h3>Nearest brand locations</h3>
         <div class="proximity-summary">${nearestBrandHtml(model)}</div>${radiusTableHtml(model)}
       </section>
@@ -814,8 +925,14 @@
       <section class="detail-section"><h3>Ten nearest stores</h3><div class="nearest-list">${nearRows(
         model.distances
       )}</div></section>
-      <section class="detail-section source-block"><i data-lucide="database"></i><div><strong>Official retailer source</strong>
-        <span>Refreshed ${escapeHtml(formatDate(store.fetched_at))} · ${escapeHtml(store.store_id)}</span></div></section>`;
+      <section class="detail-section source-block"><i data-lucide="database"></i><div><strong>${
+        store.retailer === "Independent / Other optical"
+          ? "Community-mapped public source"
+          : "Official retailer source"
+      }</strong>
+        <span>Refreshed ${escapeHtml(formatDate(store.fetched_at))} · ${escapeHtml(
+          store.store_id
+        )}${store.retailer === "Independent / Other optical" ? " · Non-exhaustive OSM coverage" : ""}</span></div></section>`;
     openDetailPanel();
     document.getElementById("compareFromDetail").addEventListener("click", () => {
       setStoreCompareMode(true);
@@ -1393,7 +1510,7 @@
         <li>${model.nearestCentre ? `Nearest reviewed centre is ${escapeHtml(model.nearestCentre.centre.name)}.` : "No reviewed shopping centre is recorded within 750 metres."}</li>
         <li>Driving time, pedestrian barriers, rent and lease terms are outside this public assessment.</li>
       </ul></section>
-      <section><h3>Sources</h3><p>Australian Bureau of Statistics Data by Region 2011–25, official retailer locators, reviewed venue IDs and public landlord profiles where available. Every source retains its own reference date.</p></section>`;
+      <section><h3>Sources</h3><p>Australian Bureau of Statistics Data by Region 2011–25, Stats NZ regional boundaries, official retailer locators, OpenStreetMap contributors, reviewed venue IDs and public landlord profiles where available. Every source retains its own reference date and coverage label.</p></section>`;
     elements.reportSheet.setAttribute("aria-hidden", "false");
     window.print();
     window.setTimeout(() => elements.reportSheet.setAttribute("aria-hidden", "true"), 500);
@@ -1456,8 +1573,9 @@
     if (VIEW_CONFIG[payload.view]) state.view = payload.view;
     if (payload.filters) {
       state.filters.retailers = new Set(
-        payload.filters.retailers?.filter((retailer) => BRAND_ORDER.includes(retailer)) || BRAND_ORDER
+        payload.filters.retailers?.filter((retailer) => BRAND_ORDER.includes(retailer)) || DEFAULT_RETAILERS
       );
+      state.filters.country = payload.filters.country || "";
       state.filters.state = payload.filters.state || "";
       state.filters.location = payload.filters.location || "";
       state.filters.search = payload.filters.search || "";
@@ -1506,7 +1624,8 @@
 
   function resetAll() {
     state.filters = {
-      retailers: new Set(BRAND_ORDER),
+      retailers: new Set(DEFAULT_RETAILERS),
+      country: "",
       search: "",
       state: "",
       location: "",
@@ -1528,7 +1647,7 @@
     });
     updateLayerVisibility();
     applyFilters(false);
-    map.setView(AUSTRALIA_VIEW.center, AUSTRALIA_VIEW.zoom);
+    map.fitBounds(NETWORK_BOUNDS, { padding: [18, 18] });
     setView("network");
     renderCandidateDock();
     showToast("Workspace reset.");
@@ -1619,8 +1738,10 @@
       createStoreMarkers();
       createCentreMarkers();
       bindGlobalEvents();
+      const hasSharedMap = new URLSearchParams(window.location.search).has("share");
       restoreShareState();
       applyFilters(false);
+      if (!hasSharedMap) map.fitBounds(NETWORK_BOUNDS, { padding: [18, 18] });
       updateLayerVisibility();
       setView(state.view);
       renderCandidateDock();

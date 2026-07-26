@@ -1,0 +1,24 @@
+{
+  "source": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/copyright",
+  "license": "ODbL 1.0",
+  "fetched_at": "2026-07-26T04:42:28.467247Z",
+  "store_count": 425,
+  "coverage": "Community-mapped shop=optician records; non-exhaustive",
+  "excluded_major_brands": [
+    "OPSM",
+    "Specsavers",
+    "Bailey Nelson",
+    "Oscar Wylee"
+  ],
+  "queries": [
+    {
+      "country": "Australia",
+      "elements": 559
+    },
+    {
+      "country": "New Zealand",
+      "elements": 149
+    }
+  ]
+}

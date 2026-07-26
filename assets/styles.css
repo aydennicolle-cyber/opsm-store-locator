@@ -59,6 +59,7 @@ button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px s
 .view-content { min-height: 0; display: flex; flex: 1; flex-direction: column; overflow: hidden; }
 
 .filters, .opportunity-form, .trend-summary, .compare-intro { flex: 0 0 auto; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+.view-content > .filters { max-height: 390px; overflow-y: auto; }
 .search-field { height: 40px; display: flex; align-items: center; gap: 9px; padding: 0 10px; border: 1px solid #aeb7bc; border-radius: 4px; background: white; }
 .search-field:focus-within { border-color: var(--teal); }
 .search-field svg { width: 17px; color: var(--muted); }
@@ -83,15 +84,24 @@ legend, .select-grid label > span, .service-field > span, .opportunity-form labe
 .retailer-logo.bailey-nelson { width: 44px; height: 21px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 1px 3px rgb(23 27 31 / 24%)); }
 .retailer-logo.bailey-nelson .bn-letter { width: 21px; height: 21px; display: grid; place-items: center; border: 2px solid #171717; border-radius: 50%; background: white; color: #171717; font-size: 9px; font-weight: 700; }
 .retailer-logo.bailey-nelson i { width: 4px; height: 2px; flex: 0 0 auto; background: #171717; }
+.retailer-logo.oscar-wylee { width: 50px; height: 20px; border: 1px solid #2848a7; background: white; color: #2848a7; font-family: Georgia, "Times New Roman", serif; font-size: 7px; font-weight: 600; }
+.retailer-logo.independent-other { width: 32px; height: 20px; border: 1px solid #6b5b4b; border-radius: 3px; background: #6b5b4b; color: white; font-size: 7px; font-weight: 850; }
+.retailer-option[data-retailer="Independent / Other optical"] { grid-column: span 2; }
 .retailer-logo.filter.opsm { width: 38px; height: 20px; font-size: 8px; }
 .retailer-logo.filter.specsavers { width: 52px; height: 21px; }
 .retailer-logo.filter.bailey-nelson { width: 44px; height: 21px; }
+.retailer-logo.filter.oscar-wylee { width: 50px; height: 21px; }
+.retailer-logo.filter.independent-other { width: 34px; height: 21px; }
 .retailer-logo.detail.opsm { width: 38px; height: 20px; }
 .retailer-logo.detail.specsavers { width: 54px; height: 22px; }
 .retailer-logo.detail.bailey-nelson { width: 46px; height: 22px; }
+.retailer-logo.detail.oscar-wylee { width: 54px; height: 22px; }
+.retailer-logo.detail.independent-other { width: 38px; height: 22px; }
 .retailer-logo.list.opsm { width: 38px; height: 20px; font-size: 8px; }
 .retailer-logo.list.specsavers { width: 52px; height: 21px; font-size: 8px; }
 .retailer-logo.list.bailey-nelson { width: 44px; height: 21px; }
+.retailer-logo.list.oscar-wylee { width: 50px; height: 21px; }
+.retailer-logo.list.independent-other { width: 34px; height: 21px; }
 .retailer-logo.compact.opsm, .retailer-logo.summary.opsm, .retailer-logo.table.opsm, .retailer-logo.tray.opsm { width: 30px; height: 17px; font-size: 7px; }
 .retailer-logo.compact.specsavers, .retailer-logo.summary.specsavers, .retailer-logo.table.specsavers, .retailer-logo.tray.specsavers { width: 42px; height: 18px; font-size: 7px; }
 .retailer-logo.compact.specsavers::before, .retailer-logo.compact.specsavers::after,
@@ -99,6 +109,8 @@ legend, .select-grid label > span, .service-field > span, .opportunity-form labe
 .retailer-logo.table.specsavers::before, .retailer-logo.table.specsavers::after,
 .retailer-logo.tray.specsavers::before, .retailer-logo.tray.specsavers::after { top: 1px; width: 25px; height: 16px; }
 .retailer-logo.compact.bailey-nelson, .retailer-logo.summary.bailey-nelson, .retailer-logo.table.bailey-nelson, .retailer-logo.tray.bailey-nelson { width: 36px; height: 18px; }
+.retailer-logo.compact.oscar-wylee, .retailer-logo.summary.oscar-wylee, .retailer-logo.table.oscar-wylee, .retailer-logo.tray.oscar-wylee { width: 42px; height: 18px; font-size: 6px; }
+.retailer-logo.compact.independent-other, .retailer-logo.summary.independent-other, .retailer-logo.table.independent-other, .retailer-logo.tray.independent-other { width: 28px; height: 18px; font-size: 6px; }
 .retailer-logo.compact.bailey-nelson .bn-letter, .retailer-logo.summary.bailey-nelson .bn-letter,
 .retailer-logo.table.bailey-nelson .bn-letter, .retailer-logo.tray.bailey-nelson .bn-letter { width: 18px; height: 18px; font-size: 7px; border-width: 1.5px; }
 .select-grid, .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
@@ -214,6 +226,8 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .retailer-logo.map.specsavers::before, .retailer-logo.map.specsavers::after { top: 1px; width: 34px; height: 22px; }
 .retailer-logo.map.bailey-nelson { width: 50px; height: 24px; }
 .retailer-logo.map.bailey-nelson .bn-letter { width: 24px; height: 24px; font-size: 10px; }
+.retailer-logo.map.oscar-wylee { width: 54px; height: 24px; font-size: 7px; }
+.retailer-logo.map.independent-other { width: 34px; height: 24px; font-size: 7px; }
 .cluster-icon { display: grid; place-items: center; border: 3px solid white; border-radius: 50%; background: #171b1f; color: white; box-shadow: 0 2px 12px rgb(23 27 31 / 30%); font-size: 10px; font-weight: 850; }
 .brand-cluster { position: relative; width: 100%; height: 30px; display: grid; place-items: center; filter: drop-shadow(0 2px 5px rgb(23 27 31 / 25%)); }
 .brand-cluster .retailer-logo.cluster.opsm { width: 42px; height: 24px; font-size: 9px; }
@@ -221,6 +235,8 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .brand-cluster .retailer-logo.cluster.specsavers::before, .brand-cluster .retailer-logo.cluster.specsavers::after { top: 1px; width: 37px; height: 24px; }
 .brand-cluster .retailer-logo.cluster.bailey-nelson { width: 52px; height: 26px; }
 .brand-cluster .retailer-logo.cluster.bailey-nelson .bn-letter { width: 26px; height: 26px; }
+.brand-cluster .retailer-logo.cluster.oscar-wylee { width: 58px; height: 26px; font-size: 7px; }
+.brand-cluster .retailer-logo.cluster.independent-other { width: 38px; height: 26px; font-size: 7px; }
 .brand-cluster b { position: absolute; z-index: 4; right: -1px; top: -4px; min-width: 16px; height: 16px; display: grid; place-items: center; padding: 0 3px; border: 2px solid white; border-radius: 8px; background: #171b1f; color: white; font-size: 7px; }
 .centre-bag-icon { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .centre-pin { width: 26px; height: 26px; display: grid; place-items: center; border: 2px solid white; border-radius: 50%; background: var(--gold); color: white; box-shadow: 0 2px 8px rgb(23 27 31 / 32%); }
@@ -265,7 +281,7 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .source-block strong { font-size: 10px; }
 .source-block span { margin-top: 4px; color: var(--muted); font-size: 8px; line-height: 1.4; }
 
-.proximity-summary { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); }
+.proximity-summary { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--line); }
 .nearest-brand { min-width: 0; display: grid; justify-items: center; padding: 9px 5px; border-right: 1px solid var(--line); }
 .nearest-brand:last-child { border-right: 0; }
 .nearest-brand strong { display: block; margin-top: 4px; font-size: 10px; }

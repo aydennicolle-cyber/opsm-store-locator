@@ -1,15 +1,23 @@
 {
-  "name": "Australian Optical Retail Network",
-  "store_count": 802,
+  "name": "Australia and New Zealand Optical Retail Network",
+  "store_count": 1491,
   "source_freshness": {
-    "OPSM": "2026-07-23T00:26:21+00:00",
-    "Specsavers": "2026-07-23T00:53:33.174Z",
-    "Bailey Nelson": "2026-07-23T01:01:27+00:00"
+    "OPSM Australia": "2026-07-23T00:26:21+00:00",
+    "Specsavers Australia": "2026-07-23T00:53:33.174Z",
+    "Bailey Nelson Australia": "2026-07-23T01:01:27+00:00",
+    "Oscar Wylee Australia": "2026-07-26T03:48:56+00:00",
+    "Specsavers New Zealand": "2026-07-26T04:15:04.480Z",
+    "Oscar Wylee New Zealand": "2026-07-26T04:03:57.996Z",
+    "OPSM New Zealand": "2026-07-26T03:51:36+00:00",
+    "Bailey Nelson New Zealand": "2026-07-26T04:50:33+00:00",
+    "Independent / Other optical": "2026-07-26T04:42:28.467247Z"
   },
   "retailer_counts": {
-    "Bailey Nelson": 68,
-    "OPSM": 335,
-    "Specsavers": 399
+    "Bailey Nelson": 82,
+    "Independent / Other optical": 425,
+    "OPSM": 392,
+    "Oscar Wylee": 131,
+    "Specsavers": 461
   },
   "classification_types": [
     "Shopping Centre",
@@ -18,28 +26,123 @@
     "Unclassified"
   ],
   "network_summary": {
-    "total": 802,
+    "total": 1491,
     "by_retailer": {
-      "Bailey Nelson": 68,
-      "OPSM": 335,
-      "Specsavers": 399
+      "Bailey Nelson": 82,
+      "Independent / Other optical": 425,
+      "OPSM": 392,
+      "Oscar Wylee": 131,
+      "Specsavers": 461
+    },
+    "by_country": {
+      "Australia": 1269,
+      "New Zealand": 222
     },
     "by_state": {
-      "ACT": 14,
-      "NSW": 244,
-      "NT": 7,
-      "QLD": 151,
-      "SA": 69,
-      "TAS": 20,
-      "VIC": 188,
-      "WA": 109
+      "ACT": 26,
+      "Auckland": 84,
+      "Bay of Plenty": 10,
+      "Canterbury": 22,
+      "Gisborne": 4,
+      "Hawke's Bay": 10,
+      "Manawatu-Whanganui": 8,
+      "Marlborough": 1,
+      "NSW": 357,
+      "NT": 12,
+      "Nelson": 7,
+      "Northland": 5,
+      "Otago": 8,
+      "QLD": 236,
+      "SA": 94,
+      "Southland": 4,
+      "TAS": 39,
+      "Taranaki": 5,
+      "Tasman": 2,
+      "VIC": 357,
+      "WA": 148,
+      "Waikato": 23,
+      "Wellington": 29
     },
     "by_location_type": {
-      "Main Street / Street-front": 356,
-      "Shopping Centre": 401,
-      "Unclassified": 45
+      "Main Street / Street-front": 573,
+      "Shopping Centre": 595,
+      "Unclassified": 323
     },
     "multi_brand_venues": [
+      {
+        "venue_id": "act-belconnen-westfield",
+        "venue_name": "Belconnen Westfield",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "act-canberra",
+        "venue_name": "Canberra Centre",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "act-westfield-woden",
+        "venue_name": "Woden Westfield",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "auckland-albany-westfield",
+        "venue_name": "Albany Westfield",
+        "retailers": [
+          "Bailey Nelson",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "auckland-botany-town",
+        "venue_name": "Botany Town Centre",
+        "retailers": [
+          "Bailey Nelson",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "auckland-lukes-st-westfield",
+        "venue_name": "St Lukes Westfield",
+        "retailers": [
+          "Bailey Nelson",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "auckland-onehunga",
+        "venue_name": "Onehunga Mall",
+        "retailers": [
+          "Independent / Other optical",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "bay-of-plenty-bayfair",
+        "venue_name": "Bayfair Shopping Centre",
+        "retailers": [
+          "Bailey Nelson",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "canterbury-northlands",
+        "venue_name": "Northlands Mall",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
       {
         "venue_id": "nsw-bondi-junction",
         "venue_name": "Bondi Junction",
@@ -49,11 +152,36 @@
         ]
       },
       {
+        "venue_id": "nsw-burwood-westfield",
+        "venue_name": "Burwood Westfield",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "nsw-castle-towers",
         "venue_name": "Castle Towers",
         "retailers": [
           "Bailey Nelson",
           "OPSM",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-charlestown-square",
+        "venue_name": "Charlestown Square",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-chase-chatswood",
+        "venue_name": "Chatswood Chase",
+        "retailers": [
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -62,6 +190,23 @@
         "venue_name": "Tweed City Shopping Centre",
         "retailers": [
           "OPSM",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-druitt-mt-westfield",
+        "venue_name": "Mt Druitt Westfield",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-eastgardens-westfield",
+        "venue_name": "Eastgardens Westfield",
+        "retailers": [
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -70,6 +215,23 @@
         "venue_name": "Erina Fair",
         "retailers": [
           "Bailey Nelson",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-hill-rouse-town",
+        "venue_name": "Rouse Hill Town Centre",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-hills-winston",
+        "venue_name": "Winston Hills Mall",
+        "retailers": [
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -78,6 +240,31 @@
         "venue_name": "Hornsby Westfield",
         "retailers": [
           "Bailey Nelson",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-hurstville-westfield",
+        "venue_name": "Hurstville Westfield",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-kotara-westfield",
+        "venue_name": "Westfield Kotara",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-liverpool-westfield",
+        "venue_name": "Liverpool Westfield",
+        "retailers": [
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -86,6 +273,7 @@
         "venue_name": "Macarthur Square",
         "retailers": [
           "OPSM",
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -99,6 +287,30 @@
         ]
       },
       {
+        "venue_id": "nsw-merrylands-stockland",
+        "venue_name": "Merrylands Stockland",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-miranda-westfield",
+        "venue_name": "Miranda Westfield Lvl 1",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-narellan-town",
+        "venue_name": "Narellan Town Centre",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "nsw-park-beach-plaza",
         "venue_name": "Park Beach Plaza",
         "retailers": [
@@ -107,10 +319,50 @@
         ]
       },
       {
+        "venue_id": "nsw-park-stockland-wetherill",
+        "venue_name": "Wetherill Park Stockland",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-parramatta-westfield",
+        "venue_name": "Westfield Parramatta",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-penrith-westfield",
+        "venue_name": "Penrith Westfield",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-shellharbour-stockland",
+        "venue_name": "Stockland Shellharbour",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "nsw-southgate",
         "venue_name": "Southgate Shopping Centre",
         "retailers": [
           "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-tuggerah-westfield",
+        "venue_name": "Tuggerah Westfield",
+        "retailers": [
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -132,11 +384,27 @@
         ]
       },
       {
+        "venue_id": "qld-brookside",
+        "venue_name": "Brookside Shopping Centre",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "qld-carindale",
         "venue_name": "Carindale",
         "retailers": [
           "Bailey Nelson",
           "OPSM"
+        ]
+      },
+      {
+        "venue_id": "qld-carindale-westfield",
+        "venue_name": "Carindale Westfield",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
         ]
       },
       {
@@ -148,11 +416,44 @@
         ]
       },
       {
+        "venue_id": "qld-chermside-westfield",
+        "venue_name": "Chermside Westfield",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-coomera-westfield",
+        "venue_name": "Westfield Coomera",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-dr-robina-town",
+        "venue_name": "Robina Town Centre Dr",
+        "retailers": [
+          "OPSM",
+          "Oscar Wylee"
+        ]
+      },
+      {
         "venue_id": "qld-fair-pacific",
         "venue_name": "Pacific Fair",
         "retailers": [
           "OPSM",
+          "Oscar Wylee",
           "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-gravatt-mt-westfield",
+        "venue_name": "Westfield Mt Gravatt",
+        "retailers": [
+          "OPSM",
+          "Oscar Wylee"
         ]
       },
       {
@@ -160,6 +461,7 @@
         "venue_name": "Helensvale Westfield",
         "retailers": [
           "OPSM",
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -169,6 +471,31 @@
         "retailers": [
           "Bailey Nelson",
           "OPSM",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-kawana",
+        "venue_name": "Kawana Shoppingworld",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-lakes-north-westfield",
+        "venue_name": "North Lakes Westfield",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-morayfield",
+        "venue_name": "Morayfield Shopping Centre",
+        "retailers": [
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -181,10 +508,27 @@
         ]
       },
       {
+        "venue_id": "qld-rockhampton-stockland",
+        "venue_name": "Rockhampton Stockland",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "qld-strathpine",
         "venue_name": "Strathpine Centre",
         "retailers": [
           "OPSM",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "sa-lakes-west-westfield",
+        "venue_name": "West Lakes Westfield",
+        "retailers": [
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -193,6 +537,23 @@
         "venue_name": "Tea Tree Plaza",
         "retailers": [
           "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "sa-rundle",
+        "venue_name": "Rundle Mall",
+        "retailers": [
+          "Independent / Other optical",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-airport-west-westfield",
+        "venue_name": "Airport West Westfield",
+        "retailers": [
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -209,6 +570,7 @@
         "venue_name": "Bendigo Marketplace",
         "retailers": [
           "OPSM",
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -218,6 +580,7 @@
         "retailers": [
           "Bailey Nelson",
           "OPSM",
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -226,6 +589,7 @@
         "venue_name": "Forest Hill Chase",
         "retailers": [
           "OPSM",
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -238,10 +602,51 @@
         ]
       },
       {
+        "venue_id": "vic-doncaster-westfield",
+        "venue_name": "Westfield Doncaster",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "vic-eastland",
         "venue_name": "Eastland Shopping Centre",
         "retailers": [
           "Bailey Nelson",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-fountain-gate-westfield",
+        "venue_name": "Fountain Gate Westfield Lvl 2",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-geelong-westfield",
+        "venue_name": "Geelong Westfield",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-glen-the",
+        "venue_name": "The Glen",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-greensborough-plaza",
+        "venue_name": "Greensborough Plaza",
+        "retailers": [
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -251,6 +656,15 @@
         "retailers": [
           "Bailey Nelson",
           "OPSM",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-marketplace-shepparton",
+        "venue_name": "Shepparton Marketplace",
+        "retailers": [
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -260,6 +674,15 @@
         "retailers": [
           "Bailey Nelson",
           "OPSM",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-road",
+        "venue_name": "Centre Road",
+        "retailers": [
+          "Independent / Other optical",
           "Specsavers"
         ]
       },
@@ -269,6 +692,22 @@
         "retailers": [
           "Bailey Nelson",
           "OPSM"
+        ]
+      },
+      {
+        "venue_id": "vic-southland-westfield",
+        "venue_name": "Southland Westfield Lvl 3",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-woodgrove",
+        "venue_name": "Woodgrove Shopping Centre",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
         ]
       },
       {
@@ -296,10 +735,59 @@
         ]
       },
       {
+        "venue_id": "wa-carousel-westfield",
+        "venue_name": "Carousel Westfield",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "wa-city-westfield-whitford",
+        "venue_name": "Whitford Westfield City",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "wa-forum-mandurah",
         "venue_name": "Mandurah Forum",
         "retailers": [
           "OPSM",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "wa-gate-midland",
+        "venue_name": "Midland Gate Shopping Centre",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "wa-innaloo-westfield",
+        "venue_name": "Innaloo Westfield",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "wa-karrinyup",
+        "venue_name": "Karrinyup Shopping Centre",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "wa-rockingham",
+        "venue_name": "Rockingham Shopping Centre",
+        "retailers": [
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -311,8 +799,25 @@
           "OPSM",
           "Specsavers"
         ]
+      },
+      {
+        "venue_id": "waikato-chartwell",
+        "venue_name": "Chartwell Shopping Centre",
+        "retailers": [
+          "Bailey Nelson",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "wellington-queensgate",
+        "venue_name": "Queensgate Shopping Centre",
+        "retailers": [
+          "Bailey Nelson",
+          "Oscar Wylee",
+          "Specsavers"
+        ]
       }
     ],
-    "single_brand_venue_count": 277
+    "single_brand_venue_count": 304
   }
 }

@@ -58,7 +58,7 @@ assert.ok(covered.score >= 0 && covered.score <= 100);
 
 const shared = Intel.sanitiseShareState({
   view: "opportunity",
-  filters: {retailers: new Set(["OPSM"]), state: "NSW"},
+  filters: {retailers: new Set(["OPSM"]), country: "Australia", state: "NSW"},
   map: {latitude: -33.87, longitude: 151.2, zoom: 12},
   candidates: [{id: "one", name: "Public candidate", latitude: -33.8, longitude: 151.1, area_sqm: 120, profile_id: "opsm", asking_rent: 900000, notes: "private"}],
   lease_expiry: "2030-01-01",
@@ -66,6 +66,7 @@ const shared = Intel.sanitiseShareState({
 assert.equal(shared.candidates[0].asking_rent, undefined);
 assert.equal(shared.candidates[0].notes, undefined);
 assert.equal(shared.lease_expiry, undefined);
+assert.equal(shared.filters.country, "Australia");
 
 const appSource = fs.readFileSync(require.resolve("../assets/app.js"), "utf8");
 const indexSource = fs.readFileSync(require.resolve("../index.html"), "utf8");

@@ -14,11 +14,30 @@ ROOT = Path(__file__).resolve().parents[1]
 CSV_PATH = ROOT / "data" / "optical_stores.csv"
 GEOJSON_PATH = ROOT / "data" / "optical_stores.geojson"
 VALID_STATES = {"ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"}
+VALID_NZ_REGIONS = {
+    "Auckland",
+    "Bay of Plenty",
+    "Canterbury",
+    "Gisborne",
+    "Hawke's Bay",
+    "Manawatu-Whanganui",
+    "Marlborough",
+    "Nelson",
+    "Northland",
+    "Otago",
+    "Southland",
+    "Taranaki",
+    "Tasman",
+    "Waikato",
+    "Wellington",
+    "West Coast",
+}
 REQUIRED_FIELDS = {
     "retailer",
     "store_id",
     "name",
     "status",
+    "country",
     "state",
     "suburb",
     "postcode",
@@ -65,25 +84,53 @@ class OpticalNetworkTests(unittest.TestCase):
         cls.geojson = json.loads(GEOJSON_PATH.read_text(encoding="utf-8"))
 
     def test_counts_and_schema_match(self) -> None:
-        self.assertEqual(len(self.rows), 802)
-        self.assertEqual(len(self.geojson["features"]), 802)
+        self.assertEqual(len(self.rows), 1491)
+        self.assertEqual(len(self.geojson["features"]), 1491)
         self.assertEqual(set(self.rows[0]), REQUIRED_FIELDS)
-        self.assertEqual(self.geojson["metadata"]["store_count"], 802)
+        self.assertEqual(self.geojson["metadata"]["store_count"], 1491)
 
     def test_retailer_counts(self) -> None:
         counts = {
             retailer: sum(row["retailer"] == retailer for row in self.rows)
-            for retailer in ("OPSM", "Specsavers", "Bailey Nelson")
+            for retailer in (
+                "OPSM",
+                "Specsavers",
+                "Bailey Nelson",
+                "Oscar Wylee",
+                "Independent / Other optical",
+            )
         }
-        self.assertEqual(counts, {"OPSM": 335, "Specsavers": 399, "Bailey Nelson": 68})
+        self.assertEqual(
+            counts,
+            {
+                "OPSM": 392,
+                "Specsavers": 461,
+                "Bailey Nelson": 82,
+                "Oscar Wylee": 131,
+                "Independent / Other optical": 425,
+            },
+        )
+        countries = {country: sum(row["country"] == country for row in self.rows) for country in ("Australia", "New Zealand")}
+        self.assertEqual(countries, {"Australia": 1269, "New Zealand": 222})
+        bailey_nz = [
+            row for row in self.rows if row["retailer"] == "Bailey Nelson" and row["country"] == "New Zealand"
+        ]
+        self.assertEqual(len(bailey_nz), 14)
+        self.assertTrue(all(row["status"] == "Active" for row in bailey_nz))
 
     def test_ids_states_coordinates_and_sources(self) -> None:
         ids = [row["store_id"] for row in self.rows]
         self.assertEqual(len(ids), len(set(ids)))
         for row in self.rows:
-            self.assertIn(row["state"], VALID_STATES)
-            self.assertTrue(-44.5 <= float(row["latitude"]) <= -9.0)
-            self.assertTrue(112.0 <= float(row["longitude"]) <= 154.5)
+            if row["country"] == "Australia":
+                self.assertIn(row["state"], VALID_STATES)
+                self.assertTrue(-44.5 <= float(row["latitude"]) <= -9.0)
+                self.assertTrue(112.0 <= float(row["longitude"]) <= 154.5)
+            else:
+                self.assertEqual(row["country"], "New Zealand")
+                self.assertIn(row["state"], VALID_NZ_REGIONS)
+                self.assertTrue(-48.0 <= float(row["latitude"]) <= -33.5)
+                self.assertTrue(165.0 <= float(row["longitude"]) <= 179.5)
             self.assertTrue(row["source_url"])
             self.assertTrue(row["fetched_at"])
             self.assertTrue(row["classification_basis"])

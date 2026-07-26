@@ -271,6 +271,7 @@
       view: state.view || "network",
       filters: {
         retailers: Array.from(state.filters?.retailers || []),
+        country: state.filters?.country || "",
         state: state.filters?.state || "",
         location: state.filters?.location || "",
         search: state.filters?.search || "",

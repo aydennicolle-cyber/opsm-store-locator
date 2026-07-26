@@ -1,0 +1,4810 @@
+{
+  "source_url": "https://www.specsavers.co.nz/stores/full-store-list",
+  "fetched_at": "2026-07-26T04:15:04.480Z",
+  "list_count": 62,
+  "store_count": 62,
+  "collection_method": "Rendered official store pages; Schema.org structured data",
+  "country": "New Zealand",
+  "stores": [
+    {
+      "ok": true,
+      "list_name": "Albany Westfield",
+      "official_url": "https://www.specsavers.co.nz/stores/albany",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3801",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/albany/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 221, Westfield Albany, 219 Don Mckinnon Dr, Albany, Auckland, 0632"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "0632",
+          "streetAddress": "Shop 221, Westfield Albany, 219 Don Mckinnon Dr, Albany"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.72871,
+          "longitude": 174.70837
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Albany Westfield",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "09 447 1465",
+        "url": "albany"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Auckland CBD",
+      "official_url": "https://www.specsavers.co.nz/stores/aucklandcbd",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3842",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book-appointment/aucklandcbd/optical-appointment"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "155 Queen St, Auckland Central, Auckland, 1010"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "1010",
+          "streetAddress": "155 Queen St, Auckland Central"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.847565,
+          "longitude": 174.76553
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Auckland CBD",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "09 303 1364",
+        "url": "aucklandcbd"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Botany",
+      "official_url": "https://www.specsavers.co.nz/stores/botany",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3827",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/botany/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop SP0522 Botany Town Centre, 22 Town Centre Drive, East Tamaki, Auckland, 2016"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "2016",
+          "streetAddress": "Shop SP0522 Botany Town Centre, 22 Town Centre Drive, East Tamaki"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.931423,
+          "longitude": 174.91295
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Botany",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "09 279 8007",
+        "url": "botany"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Chartwell Shopping Centre",
+      "official_url": "https://www.specsavers.co.nz/stores/chartwell",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3813",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/chartwell/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Chartwell Shopping Centre, Cnr Hukanui &amp; Comries Roads, Chartwell, Hamilton, 3210"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Hamilton",
+          "postalCode": "3210",
+          "streetAddress": "Chartwell Shopping Centre, Cnr Hukanui &amp; Comries Roads, Chartwell"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.750374,
+          "longitude": 175.2788
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Chartwell Shopping Centre",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "07 853 6909",
+        "url": "chartwell"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Cuba Street - Wellington",
+      "official_url": "https://www.specsavers.co.nz/stores/wellingtoncbdsouth",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3858",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book-appointment/wellingtoncbdsouth/optical-appointment"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "83 Cuba Street, Cnr Cuba Mall and Dixon Street, Wellington, 6011"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Wellington",
+          "postalCode": "6011",
+          "streetAddress": "83 Cuba Street, Cnr Cuba Mall and Dixon Street"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -41.2919,
+          "longitude": 174.77666
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Cuba Street - Wellington",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "04 801 9793",
+        "url": "wellingtoncbdsouth"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Gisborne",
+      "official_url": "https://www.specsavers.co.nz/stores/gisborne",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3833",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/gisborne/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "127-131 Gladstone Rd, Gisborne, Gisborne, 4010"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Gisborne",
+          "postalCode": "4010",
+          "streetAddress": "127-131 Gladstone Rd, Gisborne"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -38.665657,
+          "longitude": 178.02528
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Gisborne",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "08:30"
+          }
+        ],
+        "telephone": "06 868 6533",
+        "url": "gisborne"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Glenfield Mall",
+      "official_url": "https://www.specsavers.co.nz/stores/glenfield",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3811",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/glenfield/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Glenfield Mall, Glenfield, Auckland, 0629"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "0629",
+          "streetAddress": "Glenfield Mall, Glenfield"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.782238,
+          "longitude": 174.72249
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Glenfield Mall",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "09 441 7936",
+        "url": "glenfield"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Hamilton CBD",
+      "official_url": "https://www.specsavers.co.nz/stores/hamiltoncbd",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3857",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/hamiltoncbd/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "54 Bryce St, Hamilton, 3204"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Hamilton",
+          "postalCode": "3204",
+          "streetAddress": "54 Bryce St"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.785618,
+          "longitude": 175.27953
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Hamilton CBD",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "07 839 5094",
+        "url": "hamiltoncbd"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Hastings",
+      "official_url": "https://www.specsavers.co.nz/stores/hastings",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3836",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/hastings/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "210 Heretaunga Street West, Hastings, Hastings, 4122"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Hastings",
+          "postalCode": "4122",
+          "streetAddress": "210 Heretaunga Street West, Hastings"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -39.640903,
+          "longitude": 176.8419
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Hastings",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Wednesday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:00",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "15:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "06 878 8686",
+        "url": "hastings"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Henderson - WestCity S/C",
+      "official_url": "https://www.specsavers.co.nz/stores/henderson",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3806",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/henderson/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 225, WestCity Waitakere Shopping Centre, 7 Catherine Street, Henderson, Auckland, 0612"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "0612",
+          "streetAddress": "Shop 225, WestCity Waitakere Shopping Centre, 7 Catherine Street, Henderson"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.88098,
+          "longitude": 174.63277
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Henderson - WestCity S/C",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "09 838 6853",
+        "url": "henderson"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Johnsonville",
+      "official_url": "https://www.specsavers.co.nz/stores/johnsonville",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3855",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book-appointment/johnsonville/optical-appointment"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "34 Johnsonville Road, Shop 45 Johnsonville Shopping Centre, Johnsonville, Wellington, 6037"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Wellington",
+          "postalCode": "6037",
+          "streetAddress": "34 Johnsonville Road, Shop 45 Johnsonville Shopping Centre, Johnsonville"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -41.22331,
+          "longitude": 174.80688
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Johnsonville",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "04 478 5468",
+        "url": "johnsonville"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Kerikeri",
+      "official_url": "https://www.specsavers.co.nz/stores/kerikeri",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3817",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/kerikeri/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Tenancy A, 33-35 Kerikeri Road, Kerikeri, 0230"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Kerikeri",
+          "postalCode": "0230",
+          "streetAddress": "Tenancy A, 33-35 Kerikeri Road"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -35.229874,
+          "longitude": 173.94717
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Kerikeri",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:30",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "09 407 7760",
+        "url": "kerikeri"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Lambton Quay - Wellington",
+      "official_url": "https://www.specsavers.co.nz/stores/wellingtonlambton",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3843",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book-appointment/wellingtonlambton/optical-appointment"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 2A, 160 Lambton Quay, Wellington, Wellington, 6011"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Wellington",
+          "postalCode": "6011",
+          "streetAddress": "Shop 2A, 160 Lambton Quay, Wellington"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -41.281353,
+          "longitude": 174.77577
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Lambton Quay - Wellington",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "04 471 1069",
+        "url": "wellingtonlambton"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Levin",
+      "official_url": "https://www.specsavers.co.nz/stores/levin",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3876",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/levin/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "183 Oxford Street, Levin Shopping Centre, Levin, MWT, 5510"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Levin",
+          "addressRegion": "MWT",
+          "postalCode": "5510",
+          "streetAddress": "183 Oxford Street, Levin Shopping Centre"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -40.62308,
+          "longitude": 175.28503
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Levin",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "06 262 9191",
+        "url": "levin"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Lower Hutt - Queensgate S/C",
+      "official_url": "https://www.specsavers.co.nz/stores/lowerhutt",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3803",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/lowerhutt/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 133, Queensgate Shopping Centre, Cnr Queens Drive and Bunny Street, Lower Hutt, Wellington, 5010"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Wellington",
+          "postalCode": "5010",
+          "streetAddress": "Shop 133, Queensgate Shopping Centre, Cnr Queens Drive and Bunny Street, Lower Hutt"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -41.20998,
+          "longitude": 174.90646
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Lower Hutt - Queensgate S/C",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "04 589 2717",
+        "url": "lowerhutt"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Manukau Supa Centa",
+      "official_url": "https://www.specsavers.co.nz/stores/manukau-supa-centa",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3874",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book-appointment/manukau-supa-centa/optical-appointment"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "SPK201, Manukau Supa Centa, Cnr Lambie &amp; Cavendish Drive, Manukau, Manukau City Centre, 2104"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Manukau City Centre",
+          "postalCode": "2104",
+          "streetAddress": "SPK201, Manukau Supa Centa, Cnr Lambie &amp; Cavendish Drive, Manukau"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.003506,
+          "longitude": 174.87505
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Manukau Supa Centa",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "09 262 0233",
+        "url": "manukau-supa-centa"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Manukau Westfield",
+      "official_url": "https://www.specsavers.co.nz/stores/manukau",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3809",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book-appointment/manukau/optical-appointment"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 1, Level G, Westfield Manukau, Cnr Great South Road &amp; Manukau Station Road, Manukau, Auckland, 2241"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "2241",
+          "streetAddress": "Shop 1, Level G, Westfield Manukau, Cnr Great South Road &amp; Manukau Station Road, Manukau"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.99122,
+          "longitude": 174.8821
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Manukau Westfield",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "09 263 5115",
+        "url": "manukau"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Massey - NorthWest S/C",
+      "official_url": "https://www.specsavers.co.nz/stores/massey",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3807",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/massey/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 56, Northwest Shopping Centre, 1/7 Fred Taylor Drive, Massey, Auckland, 0657"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "0657",
+          "streetAddress": "Shop 56, Northwest Shopping Centre, 1/7 Fred Taylor Drive, Massey"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.8185,
+          "longitude": 174.61165
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Massey - NorthWest S/C",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "09 833 1337",
+        "url": "massey"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Masterton",
+      "official_url": "https://www.specsavers.co.nz/stores/masterton",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3861",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/masterton/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 2, 227 Queen St, Masterton, 5810"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Masterton",
+          "postalCode": "5810",
+          "streetAddress": "Shop 2, 227 Queen St"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -40.951496,
+          "longitude": 175.6594
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Masterton",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "15:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "06 370 1412",
+        "url": "masterton"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Mt Roskill",
+      "official_url": "https://www.specsavers.co.nz/stores/mtroskill",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3865",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/mtroskill/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "The Warehouse, 22 Stoddard Rd, Auckland, 1041"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "1041",
+          "streetAddress": "The Warehouse, 22 Stoddard Rd"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.90764,
+          "longitude": 174.73293
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Mt Roskill",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:30",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "09 620 1101",
+        "url": "mtroskill"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Mt Wellington",
+      "official_url": "https://www.specsavers.co.nz/stores/mtwellington",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3866",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/mtwellington/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "The Warehouse, 87-101 Lunn Avenue, Mt Wellington, Auckland, 1072"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "1072",
+          "streetAddress": "The Warehouse, 87-101 Lunn Avenue, Mt Wellington"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.88814,
+          "longitude": 174.8329
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Mt Wellington",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "08:30"
+          }
+        ],
+        "telephone": "09 570 2222",
+        "url": "mtwellington"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Mt. Maunganui - Bayfair S/C",
+      "official_url": "https://www.specsavers.co.nz/stores/mtmaunganui",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3812",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/mtmaunganui/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop SP0815, Bayfair Shopping Centre, Cnr Maunganui &amp; Girven Roads, Mt Maunganui, Tauranga, 3116"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Tauranga",
+          "postalCode": "3116",
+          "streetAddress": "Shop SP0815, Bayfair Shopping Centre, Cnr Maunganui &amp; Girven Roads, Mt Maunganui"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.675346,
+          "longitude": 176.22324
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Mt. Maunganui - Bayfair S/C",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "07 575 0259",
+        "url": "mtmaunganui"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Napier",
+      "official_url": "https://www.specsavers.co.nz/stores/napier",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3837",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/napier/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "205 Emerson Street, Napier, Napier, 4110"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Napier",
+          "postalCode": "4110",
+          "streetAddress": "205 Emerson Street, Napier"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -39.49108,
+          "longitude": 176.91531
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Napier",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Tuesday"
+            ],
+            "opens": "09:15"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:00",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "14:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "06 835 3569",
+        "url": "napier"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "New Lynn LynnMall",
+      "official_url": "https://www.specsavers.co.nz/stores/newlynn",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3808",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/newlynn/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 69, LynnMall Shopping Centre, Memorial Drive, New Lynn, New Lynn, 0600"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "New Lynn",
+          "postalCode": "0600",
+          "streetAddress": "Shop 69, LynnMall Shopping Centre, Memorial Drive, New Lynn"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.90767,
+          "longitude": 174.68604
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "New Lynn LynnMall",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "09 826 3989",
+        "url": "newlynn"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "New Plymouth",
+      "official_url": "https://www.specsavers.co.nz/stores/newplymouth",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3831",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/newplymouth/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "104 Devon Street East, New Plymouth, 4310"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "New Plymouth",
+          "postalCode": "4310",
+          "streetAddress": "104 Devon Street East"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -39.056984,
+          "longitude": 174.07745
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "New Plymouth",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "14:00",
+            "dayOfWeek": [
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "06 758 2565",
+        "url": "newplymouth"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Newmarket Westfield",
+      "official_url": "https://www.specsavers.co.nz/stores/newmarket",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3849",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/newmarket/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 353, Westfield, 277 Broadway, Newmarket, Auckland, 1023"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "1023",
+          "streetAddress": "Shop 353, Westfield, 277 Broadway, Newmarket"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.87079,
+          "longitude": 174.77689
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Newmarket Westfield",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "09 523 5322",
+        "url": "newmarket"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Onehunga",
+      "official_url": "https://www.specsavers.co.nz/stores/onehunga",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3875",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/onehunga/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "178-182 Onehunga Mall, Onehunga, Auckland, 1061"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "1061",
+          "streetAddress": "178-182 Onehunga Mall, Onehunga"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.92307,
+          "longitude": 174.78522
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Onehunga",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "09 634 1437",
+        "url": "onehunga"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Ormiston",
+      "official_url": "https://www.specsavers.co.nz/stores/ormiston",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3871",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/ormiston/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Ormiston Town Centre, 240 Ormiston Road, Ormiston, Flat Bush, 2016"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Flat Bush",
+          "postalCode": "2016",
+          "streetAddress": "Ormiston Town Centre, 240 Ormiston Road, Ormiston"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.964375,
+          "longitude": 174.91454
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Ormiston",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "20:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "09 265 2240",
+        "url": "ormiston"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Pakuranga Plaza",
+      "official_url": "https://www.specsavers.co.nz/stores/pakuranga",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3821",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/pakuranga/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop S137, Pakuranga Plaza, Cnr Ti Rakau Dr and Pakuranga Highway, Pakuranga, Pakuranga, 2010"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Pakuranga",
+          "postalCode": "2010",
+          "streetAddress": "Shop S137, Pakuranga Plaza, Cnr Ti Rakau Dr and Pakuranga Highway, Pakuranga"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.91276,
+          "longitude": 174.8718
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Pakuranga Plaza",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "09 577 1431",
+        "url": "pakuranga"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Palmerston North - The Plaza",
+      "official_url": "https://www.specsavers.co.nz/stores/palmerstonnorth",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3832",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/palmerstonnorth/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 22, The Plaza, 84 The Square, Church Street, Palmerston North, 4410"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Palmerston North",
+          "postalCode": "4410",
+          "streetAddress": "Shop 22, The Plaza, 84 The Square, Church Street"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -40.357224,
+          "longitude": 175.61357
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Palmerston North - The Plaza",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "06 355 8433",
+        "url": "palmerstonnorth"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Papakura",
+      "official_url": "https://www.specsavers.co.nz/stores/papakura",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3828",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/papakura/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "172 Great South Rd, Papakura, Auckland, 2110"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "2110",
+          "streetAddress": "172 Great South Rd, Papakura"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.062855,
+          "longitude": 174.94263
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Papakura",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "09 299 7764",
+        "url": "papakura"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Paraparaumu - Coastlands S'town",
+      "official_url": "https://www.specsavers.co.nz/stores/paraparaumu",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3851",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/paraparaumu/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 50, Coastlands Shoppingtown, State Highway 1, North Island, Paraparaumu, 5032"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Paraparaumu",
+          "postalCode": "5032",
+          "streetAddress": "Shop 50, Coastlands Shoppingtown, State Highway 1, North Island"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -40.916477,
+          "longitude": 175.00487
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Paraparaumu - Coastlands S'town",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "04 297 1138",
+        "url": "paraparaumu"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Porirua - North City S/C",
+      "official_url": "https://www.specsavers.co.nz/stores/porirua",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3844",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/porirua/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 151, North City Shopping Centre, 2 Titahi Bay Road, Porirua, Porirua, 5022"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Porirua",
+          "postalCode": "5022",
+          "streetAddress": "Shop 151, North City Shopping Centre, 2 Titahi Bay Road, Porirua"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -41.137283,
+          "longitude": 174.83983
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Porirua - North City S/C",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "04 238 4030",
+        "url": "porirua"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Pukekohe",
+      "official_url": "https://www.specsavers.co.nz/stores/pukekohe",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3814",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/pukekohe/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "41 King St, Unit B, Pukekohe, Auckland, 2120"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "2120",
+          "streetAddress": "41 King St, Unit B, Pukekohe"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.20085,
+          "longitude": 174.90233
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Pukekohe",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:00",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "09 238 9906",
+        "url": "pukekohe"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Rotorua",
+      "official_url": "https://www.specsavers.co.nz/stores/rotorua",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3822",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/rotorua/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "1211 Eruera St, Rotorua, 3010"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Rotorua",
+          "postalCode": "3010",
+          "streetAddress": "1211 Eruera St"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -38.138702,
+          "longitude": 176.25015
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Rotorua",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "15:00",
+            "dayOfWeek": [
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "specialOpeningHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "13:00",
+            "opens": "10:00",
+            "validFrom": "2026-09-13",
+            "validThrough": "2026-09-13"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "13:00",
+            "opens": "10:00",
+            "validFrom": "2026-10-26",
+            "validThrough": "2026-10-26"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "13:00",
+            "opens": "10:00",
+            "validFrom": "2026-12-27",
+            "validThrough": "2026-12-27"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "13:00",
+            "opens": "10:00",
+            "validFrom": "2026-12-28",
+            "validThrough": "2026-12-28"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "15:00",
+            "opens": "09:00",
+            "validFrom": "2026-12-29",
+            "validThrough": "2026-12-29"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "15:00",
+            "opens": "09:00",
+            "validFrom": "2026-12-30",
+            "validThrough": "2026-12-30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "15:00",
+            "opens": "09:00",
+            "validFrom": "2026-12-31",
+            "validThrough": "2026-12-31"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "13:00",
+            "opens": "10:00",
+            "validFrom": "2027-01-03",
+            "validThrough": "2027-01-03"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "13:00",
+            "opens": "10:00",
+            "validFrom": "2027-01-04",
+            "validThrough": "2027-01-04"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "13:00",
+            "opens": "10:00",
+            "validFrom": "2027-02-01",
+            "validThrough": "2027-02-01"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "13:00",
+            "opens": "10:00",
+            "validFrom": "2027-02-08",
+            "validThrough": "2027-02-08"
+          }
+        ],
+        "telephone": "07 349 2020",
+        "url": "rotorua"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Silverdale",
+      "official_url": "https://www.specsavers.co.nz/stores/silverdale",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3841",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/silverdale/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "10/75 Silverdale Street, Shop PR10, Silverdale, Auckland, 0930"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "0930",
+          "streetAddress": "10/75 Silverdale Street, Shop PR10, Silverdale"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.61328,
+          "longitude": 174.68007
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Silverdale",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "09 428 0845",
+        "url": "silverdale"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "St Lukes Westfield",
+      "official_url": "https://www.specsavers.co.nz/stores/stlukes",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3825",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book-appointment/stlukes/optical-appointment"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop S830, Level 1, Westfield St Lukes Shopping Centre, 80 Saint Lukes Road, St Lukes, Mount Albert, 1025"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Mount Albert",
+          "postalCode": "1025",
+          "streetAddress": "Shop S830, Level 1, Westfield St Lukes Shopping Centre, 80 Saint Lukes Road, St Lukes"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.883354,
+          "longitude": 174.73318
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "St Lukes Westfield",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "09 846 2991",
+        "url": "stlukes"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Sylvia Park Mall",
+      "official_url": "https://www.specsavers.co.nz/stores/sylviapark",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3829",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book-appointment/sylviapark/optical-appointment"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "286 Mount Wellington Highway, Shop S006 Sylvia Park Shopping Centre, Mt Wellington, Auckland, 1060"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "1060",
+          "streetAddress": "286 Mount Wellington Highway, Shop S006 Sylvia Park Shopping Centre, Mt Wellington"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.917686,
+          "longitude": 174.8413
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Sylvia Park Mall",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "09 579 4434",
+        "url": "sylviapark"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Takapuna Shore City",
+      "official_url": "https://www.specsavers.co.nz/stores/takapuna",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3802",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/takapuna/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shore City, 52 - 56 Anzac Street, Takapuna, Auckland, 0622"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Auckland",
+          "postalCode": "0622",
+          "streetAddress": "Shore City, 52 - 56 Anzac Street, Takapuna"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.787666,
+          "longitude": 174.77007
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Takapuna Shore City",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "specialOpeningHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "opens": "10:00",
+            "validFrom": "2026-10-26",
+            "validThrough": "2026-10-26"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "opens": "09:00",
+            "validFrom": "2026-12-26",
+            "validThrough": "2026-12-26"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "opens": "10:00",
+            "validFrom": "2026-12-28",
+            "validThrough": "2026-12-28"
+          }
+        ],
+        "telephone": "09 486 0311",
+        "url": "takapuna"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Taupo",
+      "official_url": "https://www.specsavers.co.nz/stores/taupo",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3859",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/taupo/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "43 Horomatangi St, Taupo, 3330"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Taupo",
+          "postalCode": "3330",
+          "streetAddress": "43 Horomatangi St"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -38.68721,
+          "longitude": 176.07149
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Taupo",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:00",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "07 378 1854",
+        "url": "taupo"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Tauranga CBD",
+      "official_url": "https://www.specsavers.co.nz/stores/tauranga",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3839",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/tauranga/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "58a Devonport Road, Tauranga CBD, Tauranga, 3110"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Tauranga",
+          "postalCode": "3110",
+          "streetAddress": "58a Devonport Road, Tauranga CBD"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.685837,
+          "longitude": 176.16963
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Tauranga CBD",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:50"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "14:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "07 571 1902",
+        "url": "tauranga"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Tauranga Crossing",
+      "official_url": "https://www.specsavers.co.nz/stores/tauranga-crossing",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3863",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/tauranga-crossing/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop RS207, 1-5 Taurikura Drive, Tauranga Crossing, Tauranga, 3110"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Tauranga",
+          "postalCode": "3110",
+          "streetAddress": "Shop RS207, 1-5 Taurikura Drive, Tauranga Crossing"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.737015,
+          "longitude": 176.10573
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Tauranga Crossing",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "20:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "07 543 5570",
+        "url": "tauranga-crossing"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Te Rapa, Te Awa - The Base",
+      "official_url": "https://www.specsavers.co.nz/stores/terapa",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3845",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book-appointment/terapa/optical-appointment"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 39, The Base, Cnr Te Rapa Road &amp; Wairere Drive, Te Rapa, Hamilton, 3200"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Hamilton",
+          "postalCode": "3200",
+          "streetAddress": "Shop 39, The Base, Cnr Te Rapa Road &amp; Wairere Drive, Te Rapa"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.74845,
+          "longitude": 175.23355
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Te Rapa, Te Awa - The Base",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "07 850 5938",
+        "url": "terapa"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Thames",
+      "official_url": "https://www.specsavers.co.nz/stores/thames",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3869",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/thames/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Goldfields Shopping Centre, Shops 19&amp;21, Thames, 3500"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Thames",
+          "postalCode": "3500",
+          "streetAddress": "Goldfields Shopping Centre, Shops 19&amp;21"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.138805,
+          "longitude": 175.53926
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Thames",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:30",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "07 868 6090",
+        "url": "thames"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Upper Hutt",
+      "official_url": "https://www.specsavers.co.nz/stores/upperhutt",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3867",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/upperhutt/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "134-136 Main Street, Upper Hutt, 5018"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Upper Hutt",
+          "postalCode": "5018",
+          "streetAddress": "134-136 Main Street"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -41.12446,
+          "longitude": 175.0717
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Upper Hutt",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "04 528 0140",
+        "url": "upperhutt"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Whakatane",
+      "official_url": "https://www.specsavers.co.nz/stores/whakatane",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3853",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/whakatane/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "184 The Strand, Whakatane, 3120"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Whakatane",
+          "postalCode": "3120",
+          "streetAddress": "184 The Strand"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.951527,
+          "longitude": 176.99525
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Whakatane",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Monday",
+              "Saturday"
+            ],
+            "opens": "08:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00"
+          }
+        ],
+        "telephone": "07 308 2154",
+        "url": "whakatane"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Whanganui",
+      "official_url": "https://www.specsavers.co.nz/stores/whanganui",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3847",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/whanganui/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "87 Victoria Ave, Whanganui, Whanganui, 4500"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Whanganui",
+          "postalCode": "4500",
+          "streetAddress": "87 Victoria Ave, Whanganui"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -39.93327,
+          "longitude": 175.0522
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Whanganui",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Wednesday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:00",
+            "dayOfWeek": [
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "06 345 9542",
+        "url": "whanganui"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Whangarei",
+      "official_url": "https://www.specsavers.co.nz/stores/whangarei",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3818",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/whangarei/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "22 James St, Whangarei, 0110"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Whangarei",
+          "postalCode": "0110",
+          "streetAddress": "22 James St"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -35.7252,
+          "longitude": 174.32185
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Whangarei",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday"
+            ],
+            "opens": "08:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "08:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:00",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "09 438 3509",
+        "url": "whangarei"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Ashburton",
+      "official_url": "https://www.specsavers.co.nz/stores/ashburton",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3864",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/ashburton/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "58 Cass Street, Ashburton, Ashburton, New Zealand, 7700"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Ashburton",
+          "addressRegion": "New Zealand",
+          "postalCode": "7700",
+          "streetAddress": "58 Cass Street, Ashburton"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -43.906452,
+          "longitude": 171.74904
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Ashburton",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "03 307 6071",
+        "url": "ashburton"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Blenheim",
+      "official_url": "https://www.specsavers.co.nz/stores/blenheim",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3852",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/blenheim/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "67 Market Street, Blenheim Central, Blenheim, 7201"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Blenheim",
+          "postalCode": "7201",
+          "streetAddress": "67 Market Street, Blenheim Central"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -41.512814,
+          "longitude": 173.95683
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Blenheim",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:15",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:15"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "08:30"
+          }
+        ],
+        "telephone": "03 577 9644",
+        "url": "blenheim"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Dunedin",
+      "official_url": "https://www.specsavers.co.nz/stores/dunedin",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3838",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/dunedin/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "290 George St, Dunedin, Dunedin, 9016"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Dunedin",
+          "postalCode": "9016",
+          "streetAddress": "290 George St, Dunedin"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -45.870113,
+          "longitude": 170.50604
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Dunedin",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "03 477 0301",
+        "url": "dunedin"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Hornby - The Hub",
+      "official_url": "https://www.specsavers.co.nz/stores/hornby",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3854",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/hornby/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 25, The Hub Hornby Mall, 418 Main South Road, Hornby, Christchurch, 8042"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Christchurch",
+          "postalCode": "8042",
+          "streetAddress": "Shop 25, The Hub Hornby Mall, 418 Main South Road, Hornby"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -43.5425,
+          "longitude": 172.52383
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Hornby - The Hub",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "08:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "03 349 5193",
+        "url": "hornby"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Invercargill",
+      "official_url": "https://www.specsavers.co.nz/stores/invercargill",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3835",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/invercargill/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "1, 22 Kelvin St, Invercargill, 9810"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Invercargill",
+          "postalCode": "9810",
+          "streetAddress": "1, 22 Kelvin St"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -46.411602,
+          "longitude": 168.3505
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Invercargill",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "15:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "03 218 1250",
+        "url": "invercargill"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Nelson CBD",
+      "official_url": "https://www.specsavers.co.nz/stores/nelson",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3834",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/nelson/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "176 Trafalgar St, Nelson, Nelson, 7010"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Nelson",
+          "postalCode": "7010",
+          "streetAddress": "176 Trafalgar St, Nelson"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -41.272705,
+          "longitude": 173.28362
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Nelson CBD",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "14:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "03 548 0168",
+        "url": "nelson"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Papanui - Northlands Mall",
+      "official_url": "https://www.specsavers.co.nz/stores/papanui",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3804",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/papanui/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "S57 Northlands Mall, Papanui, Main North Road, Papanui, Christchurch, 8052"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Christchurch",
+          "postalCode": "8052",
+          "streetAddress": "S57 Northlands Mall, Papanui, Main North Road, Papanui"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -43.491516,
+          "longitude": 172.6112
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Papanui - Northlands Mall",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "03 354 1435",
+        "url": "papanui"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Queenstown- Remarkables",
+      "official_url": "https://www.specsavers.co.nz/stores/queenstown",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3856",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book-appointment/queenstown/optical-appointment"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Remarkables Park Town Centre, 12 Hawthorne Drive, Frankton, Queenstown, 9300"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Queenstown",
+          "postalCode": "9300",
+          "streetAddress": "Remarkables Park Town Centre, 12 Hawthorne Drive, Frankton"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -45.02575,
+          "longitude": 168.74352
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Queenstown- Remarkables",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "03 409 2678",
+        "url": "queenstown"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Rangiora",
+      "official_url": "https://www.specsavers.co.nz/stores/rangiora",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3862",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/rangiora/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "151 - 183 High Street, Farmers Rangiora Building, Rangiora, Rangiora, 7400"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Rangiora",
+          "postalCode": "7400",
+          "streetAddress": "151 - 183 High Street, Farmers Rangiora Building, Rangiora"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -43.303886,
+          "longitude": 172.59363
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Rangiora",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Friday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Thursday"
+            ],
+            "opens": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:30",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "03 313 1590",
+        "url": "rangiora"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Riccarton Westfield",
+      "official_url": "https://www.specsavers.co.nz/stores/riccartonwestfield",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3824",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/riccartonwestfield/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 256 &amp; 257, Level 2, Westfield Riccarton, 129 Riccarton Rd, Riccarton, Christchurch, 8041"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Christchurch",
+          "postalCode": "8041",
+          "streetAddress": "Shop 256 &amp; 257, Level 2, Westfield Riccarton, 129 Riccarton Rd, Riccarton"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -43.530746,
+          "longitude": 172.59802
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Riccarton Westfield",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "opens": "08:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "03 343 1499",
+        "url": "riccartonwestfield"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Richmond Mall",
+      "official_url": "https://www.specsavers.co.nz/stores/richmond",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3805",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/richmond/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop 34 Richmond Mall, Cnr Queen, Croucher &amp; Talbot Streets, Richmond, 7020"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Richmond",
+          "postalCode": "7020",
+          "streetAddress": "Shop 34 Richmond Mall, Cnr Queen, Croucher &amp; Talbot Streets"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -41.33972,
+          "longitude": 173.18542
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Richmond Mall",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "16:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "08:30"
+          }
+        ],
+        "telephone": "03 544 2020",
+        "url": "richmond"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Shirley - The Palms S/C",
+      "official_url": "https://www.specsavers.co.nz/stores/shirley",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3815",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book-appointment/shirley/optical-appointment"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop P080, The Palms Shopping Centre, Cnr Marshland &amp; New Brighton Roads, Shirley, Christchurch, 8061"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Christchurch",
+          "postalCode": "8061",
+          "streetAddress": "Shop P080, The Palms Shopping Centre, Cnr Marshland &amp; New Brighton Roads, Shirley"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -43.50567,
+          "longitude": 172.66417
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Shirley - The Palms S/C",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Saturday"
+            ],
+            "opens": "08:45"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "21:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:45"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "03 385 2780",
+        "url": "shirley"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "South Dunedin",
+      "official_url": "https://www.specsavers.co.nz/stores/south-dunedin",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3872",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/south-dunedin/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "155 King Edward Street, South Dunedin, Dunedin, 9012"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Dunedin",
+          "postalCode": "9012",
+          "streetAddress": "155 King Edward Street, South Dunedin"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -45.894024,
+          "longitude": 170.49876
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "South Dunedin",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "",
+        "url": "south-dunedin"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Timaru",
+      "official_url": "https://www.specsavers.co.nz/stores/timaru",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3826",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/timaru/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "15 Elizabeth Street, Timaru, 7910"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NZ",
+          "addressLocality": "Timaru",
+          "postalCode": "7910",
+          "streetAddress": "15 Elizabeth Street"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -44.39457,
+          "longitude": 171.24748
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Timaru",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Thursday"
+            ],
+            "opens": "08:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Wednesday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Friday"
+            ],
+            "opens": "08:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "13:00",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "08:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "15:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "03 688 4179",
+        "url": "timaru"
+      }
+    }
+  ]
+}

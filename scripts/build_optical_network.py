@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Combine, classify, validate, and export the Australian optical store network."""
+"""Combine, classify, validate, and export the AU/NZ optical store network."""
 
 from __future__ import annotations
 
@@ -22,11 +22,30 @@ AREA_OVERRIDE_PATH = DATA_DIR / "public_area_overrides.csv"
 CENTRE_REGISTRY_PATH = DATA_DIR / "shopping_centres.csv"
 CENTRE_MEMBERSHIP_PATH = DATA_DIR / "centre_store_memberships.csv"
 VALID_STATES = {"ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"}
+VALID_NZ_REGIONS = {
+    "Auckland",
+    "Bay of Plenty",
+    "Canterbury",
+    "Gisborne",
+    "Hawke's Bay",
+    "Manawatu-Whanganui",
+    "Marlborough",
+    "Nelson",
+    "Northland",
+    "Otago",
+    "Southland",
+    "Taranaki",
+    "Tasman",
+    "Waikato",
+    "Wellington",
+    "West Coast",
+}
 FIELDS = [
     "retailer",
     "store_id",
     "name",
     "status",
+    "country",
     "state",
     "suburb",
     "postcode",
@@ -141,10 +160,29 @@ def read_freshness() -> dict[str, str]:
     bailey = json.loads(
         (ROOT / "retailers" / "bailey-nelson" / "source_snapshot.json").read_text(encoding="utf-8")
     )
+    oscar_wylee = json.loads(
+        (ROOT / "retailers" / "oscar-wylee" / "source_snapshot.json").read_text(encoding="utf-8")
+    )
     return {
-        "OPSM": opsm["fetched_at"],
-        "Specsavers": specsavers["fetched_at"],
-        "Bailey Nelson": bailey["fetched_at"],
+        "OPSM Australia": opsm["fetched_at"],
+        "Specsavers Australia": specsavers["fetched_at"],
+        "Bailey Nelson Australia": bailey["fetched_at"],
+        "Oscar Wylee Australia": oscar_wylee["fetched_at"],
+        "Specsavers New Zealand": json.loads(
+            (ROOT / "retailers" / "specsavers-nz" / "source_snapshot.json").read_text(encoding="utf-8")
+        )["fetched_at"],
+        "Oscar Wylee New Zealand": json.loads(
+            (ROOT / "retailers" / "oscar-wylee-nz" / "source_snapshot.json").read_text(encoding="utf-8")
+        )["fetched_at"],
+        "OPSM New Zealand": json.loads(
+            (ROOT / "retailers" / "opsm-nz" / "source_snapshot.json").read_text(encoding="utf-8")
+        )["fetched_at"],
+        "Bailey Nelson New Zealand": json.loads(
+            (ROOT / "retailers" / "bailey-nelson-nz" / "source_snapshot.json").read_text(encoding="utf-8")
+        )["fetched_at"],
+        "Independent / Other optical": json.loads(
+            (ROOT / "retailers" / "independent-other" / "source_snapshot.json").read_text(encoding="utf-8")
+        )["fetched_at"],
     }
 
 
@@ -167,6 +205,7 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                 "store_id": f"opsm-{local_id}",
                 "name": tidy(row["name"]),
                 "status": "Active",
+                "country": "Australia",
                 "state": tidy(row["state"]).upper(),
                 "suburb": tidy(row["city"]),
                 "postcode": tidy(row["postal_code"]),
@@ -178,19 +217,34 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                 "services": services,
                 "audiology": str("audiology" in services.lower()).lower(),
                 "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-                "fetched_at": freshness["OPSM"],
+                "fetched_at": freshness["OPSM Australia"],
             }
         )
-    for retailer, folder in (("Specsavers", "specsavers"), ("Bailey Nelson", "bailey-nelson")):
+    for retailer, folder, source_key, id_country in (
+        ("Specsavers", "specsavers", "Specsavers Australia", ""),
+        ("Bailey Nelson", "bailey-nelson", "Bailey Nelson Australia", ""),
+        ("Oscar Wylee", "oscar-wylee", "Oscar Wylee Australia", ""),
+        ("Specsavers", "specsavers-nz", "Specsavers New Zealand", "nz-"),
+        ("Oscar Wylee", "oscar-wylee-nz", "Oscar Wylee New Zealand", "nz-"),
+        ("Bailey Nelson", "bailey-nelson-nz", "Bailey Nelson New Zealand", "nz-"),
+        (
+            "Independent / Other optical",
+            "independent-other",
+            "Independent / Other optical",
+            "",
+        ),
+    ):
         for row in read_csv(ROOT / "retailers" / folder / "stores.csv"):
             local_id = tidy(row["id"])
+            country = tidy(row.get("country", "")) or "Australia"
             stores.append(
                 {
                     "retailer": retailer,
-                    "store_id": f"{slug(retailer)}-{local_id}",
+                    "store_id": f"{slug(retailer)}-{id_country}{local_id}",
                     "name": tidy(row["name"]),
                     "status": tidy(row.get("status", "Active")) or "Active",
-                    "state": tidy(row["state"]).upper(),
+                    "country": country,
+                    "state": tidy(row["state"]).upper() if country == "Australia" else tidy(row["state"]),
                     "suburb": tidy(row["city"]),
                     "postcode": tidy(row["postal_code"]),
                     "full_address": tidy(row["full_address"]),
@@ -200,16 +254,40 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                     "official_url": tidy(row["official_url"]),
                     "services": tidy(row.get("services", "")),
                     "audiology": tidy(row.get("audiology", "false")).lower(),
-                    "source_url": tidy(row["official_url"]),
-                    "fetched_at": freshness[retailer],
+                    "source_url": tidy(row.get("source_url", "")) or tidy(row["official_url"]),
+                    "fetched_at": freshness[source_key],
                 }
             )
+    for row in read_csv(ROOT / "retailers" / "opsm-nz" / "stores.csv"):
+        local_id = row.get("sap_id") or row.get("identifier")
+        services = tidy(row.get("services", ""))
+        stores.append(
+            {
+                "retailer": "OPSM",
+                "store_id": f"opsm-nz-{local_id}",
+                "name": tidy(row["name"]),
+                "status": tidy(row.get("status", "Active")) or "Active",
+                "country": "New Zealand",
+                "state": tidy(row["state"]),
+                "suburb": tidy(row["city"]),
+                "postcode": tidy(row["postal_code"]),
+                "full_address": tidy(row["full_address"]),
+                "phone": tidy(row.get("phone", "")),
+                "latitude": float(row["latitude"]),
+                "longitude": float(row["longitude"]),
+                "official_url": tidy(row["official_url"]),
+                "services": services,
+                "audiology": tidy(row.get("audiology", "false")).lower(),
+                "source_url": tidy(row["official_url"]),
+                "fetched_at": freshness["OPSM New Zealand"],
+            }
+        )
     return stores
 
 
 def cleaned_store_name(store: dict) -> str:
     name = store["name"]
-    for prefix in ("OPSM ", "Bailey Nelson ", "Specsavers "):
+    for prefix in ("OPSM ", "Bailey Nelson ", "Specsavers ", "Oscar Wylee "):
         if name.lower().startswith(prefix.lower()):
             name = name[len(prefix) :]
     if " - " in name:
@@ -403,15 +481,36 @@ def validate(stores: list[dict]) -> None:
     if len(ids) != len(set(ids)):
         duplicates = [item for item, count in Counter(ids).items() if count > 1]
         raise ValueError(f"Duplicate store IDs: {duplicates[:10]}")
-    expected = {"OPSM": 335, "Specsavers": 399, "Bailey Nelson": 68}
+    independent_count = int(
+        json.loads(
+            (ROOT / "retailers" / "independent-other" / "source_snapshot.json").read_text(
+                encoding="utf-8"
+            )
+        )["store_count"]
+    )
+    expected = {
+        "OPSM": 392,
+        "Specsavers": 461,
+        "Bailey Nelson": 82,
+        "Oscar Wylee": 131,
+        "Independent / Other optical": independent_count,
+    }
     counts = Counter(store["retailer"] for store in stores)
     if dict(counts) != expected:
         raise ValueError(f"Unexpected retailer counts: {dict(counts)}")
     for store in stores:
-        if store["state"] not in VALID_STATES:
-            raise ValueError(f"Invalid state for {store['store_id']}: {store['state']}")
-        if not (-44.5 <= store["latitude"] <= -9.0 and 112.0 <= store["longitude"] <= 154.5):
-            raise ValueError(f"Invalid coordinates for {store['store_id']}")
+        if store["country"] not in {"Australia", "New Zealand"}:
+            raise ValueError(f"Invalid country for {store['store_id']}: {store['country']}")
+        if store["country"] == "Australia":
+            if store["state"] not in VALID_STATES:
+                raise ValueError(f"Invalid state for {store['store_id']}: {store['state']}")
+            if not (-44.5 <= store["latitude"] <= -9.0 and 112.0 <= store["longitude"] <= 154.5):
+                raise ValueError(f"Invalid coordinates for {store['store_id']}")
+        else:
+            if store["state"] not in VALID_NZ_REGIONS:
+                raise ValueError(f"Invalid region for {store['store_id']}: {store['state']}")
+            if not (-48.0 <= store["latitude"] <= -33.5 and 165.0 <= store["longitude"] <= 179.5):
+                raise ValueError(f"Invalid coordinates for {store['store_id']}")
         if not store["source_url"] or not store["fetched_at"]:
             raise ValueError(f"Missing source metadata for {store['store_id']}")
 
@@ -426,6 +525,7 @@ def network_summary(stores: list[dict]) -> dict:
     return {
         "total": len(stores),
         "by_retailer": dict(sorted(Counter(store["retailer"] for store in stores).items())),
+        "by_country": dict(sorted(Counter(store["country"] for store in stores).items())),
         "by_state": dict(sorted(Counter(store["state"] for store in stores).items())),
         "by_location_type": dict(sorted(Counter(store["location_type"] for store in stores).items())),
         "multi_brand_venues": [
@@ -491,7 +591,7 @@ def main() -> None:
         )
     summary = network_summary(stores)
     metadata = {
-        "name": "Australian Optical Retail Network",
+        "name": "Australia and New Zealand Optical Retail Network",
         "store_count": len(stores),
         "source_freshness": freshness,
         "retailer_counts": summary["by_retailer"],

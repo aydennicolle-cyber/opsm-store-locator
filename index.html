@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/styles.css?v=20260726c" />
   </head>
   <body>
     <header class="app-header">
@@ -18,7 +18,7 @@
         <span class="product-symbol">OI</span>
         <div>
           <strong>Optical Leasing Intelligence</strong>
-          <span>Australian tenant network</span>
+          <span>Australia + New Zealand tenant network</span>
         </div>
       </div>
       <nav class="task-nav" aria-label="Leasing intelligence views">
@@ -41,10 +41,10 @@
         <header class="view-header">
           <p class="eyebrow" id="viewEyebrow">Retail footprint</p>
           <h1 id="viewTitle">Network</h1>
-          <p id="viewSubtitle">Filter, inspect and compare the national optical network.</p>
+          <p id="viewSubtitle">Filter, inspect and compare the trans-Tasman optical network.</p>
         </header>
         <section class="network-strip" aria-label="Visible network totals">
-          <strong id="visibleTotal">802</strong>
+          <strong id="visibleTotal">1,066</strong>
           <span>locations visible</span>
           <span class="freshness" id="freshnessLabel">Loading official sources</span>
         </section>
@@ -83,7 +83,7 @@
         </aside>
 
         <div class="mode-notice" id="modeNotice" hidden></div>
-        <div id="map" aria-label="Map of Australian optical stores and leasing markets"></div>
+        <div id="map" aria-label="Map of Australian and New Zealand optical stores and leasing markets"></div>
 
         <aside class="detail-panel" id="detailPanel" aria-label="Location intelligence" aria-hidden="true">
           <button class="panel-close icon-button" id="panelClose" type="button" aria-label="Close details" title="Close details">
@@ -111,7 +111,7 @@
         <div class="loading-state" id="loadingState">
           <span class="loading-mark"></span>
           <strong>Building leasing intelligence</strong>
-          <span>Stores, centres and ABS market indicators</span>
+          <span>Stores, centres and public market indicators</span>
         </div>
         <div class="toast" id="toast" hidden role="status"></div>
       </section>
@@ -120,7 +120,7 @@
     <section class="report-sheet" id="reportSheet" aria-hidden="true">
       <header>
         <span class="product-symbol">OI</span>
-        <div><p>Australian optical leasing intelligence</p><h2>Candidate site brief</h2></div>
+        <div><p>Australia + New Zealand optical leasing intelligence</p><h2>Candidate site brief</h2></div>
         <time id="reportDate"></time>
       </header>
       <div id="reportContent"></div>
@@ -131,7 +131,7 @@
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
-    <script src="assets/intelligence.js"></script>
-    <script src="assets/app.js"></script>
+    <script src="assets/intelligence.js?v=20260726c"></script>
+    <script src="assets/app.js?v=20260726c"></script>
   </body>
 </html>

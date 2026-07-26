@@ -2,9 +2,11 @@
   "name": "australian-optical-retail-network",
   "private": true,
   "version": "1.0.0",
-  "description": "Public-source Australian optical store network map",
+  "description": "Public-source Australia and New Zealand optical store network map",
   "scripts": {
-    "fetch:specsavers": "node scripts/fetch_specsavers_stores.mjs"
+    "fetch:specsavers": "node scripts/fetch_specsavers_stores.mjs",
+    "fetch:specsavers:nz": "SPECSAVERS_COUNTRY=NZ node scripts/fetch_specsavers_stores.mjs",
+    "fetch:oscar-wylee:nz": "node scripts/fetch_oscar_wylee_nz_stores.mjs"
   },
   "devDependencies": {
     "playwright": "1.61.1"

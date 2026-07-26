@@ -313,6 +313,15 @@ def link_stores_to_market(stores: list[dict], features: list[dict]) -> dict[str,
         spatial.append((geometry_bounds(feature["geometry"]), feature))
     links = {}
     for store in stores:
+        if store.get("country") != "Australia":
+            links[store["store_id"]] = {
+                "sa2_code": "",
+                "sa2_name": "",
+                "match_confidence": "Not available",
+                "geography_system": "Stats NZ",
+                "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build.",
+            }
+            continue
         longitude = float(store["longitude"])
         latitude = float(store["latitude"])
         match = None
@@ -368,6 +377,7 @@ def build_centres(stores: list[dict]) -> list[dict]:
             {
                 "centre_id": venue_id,
                 "name": venue_name,
+                "country": members[0].get("country", "Australia"),
                 "state": registered.get("state", "") or members[0]["state"],
                 "suburb": registered.get("suburb", "") or members[0]["suburb"],
                 "latitude": round(
@@ -434,6 +444,7 @@ def build_history(stores: list[dict]) -> dict:
             for key in (
                 "store_id",
                 "retailer",
+                "country",
                 "name",
                 "status",
                 "state",
@@ -448,15 +459,29 @@ def build_history(stores: list[dict]) -> dict:
     }
     prior_paths = [path for path in sorted(HISTORY_DIR.glob("*.json")) if path != snapshot_path]
     events = []
+    coverage_baselines_added = []
     baseline_date = snapshot_date
     if prior_paths:
         prior_payload = json.loads(prior_paths[-1].read_text(encoding="utf-8"))
         prior = prior_payload["stores"]
         baseline_date = prior_payload["snapshot_date"]
+        prior_scopes = {
+            (store["retailer"], store.get("country", "Australia")) for store in prior.values()
+        }
+        current_scopes = {(store["retailer"], store["country"]) for store in current.values()}
+        coverage_baselines_added = [
+            {"retailer": retailer, "country": country}
+            for retailer, country in sorted(current_scopes - prior_scopes)
+        ]
         for store_id in sorted(current.keys() - prior.keys()):
-            events.append({"type": "Opened", "date": snapshot_date, **current[store_id]})
+            store = current[store_id]
+            if (store["retailer"], store["country"]) in prior_scopes:
+                events.append({"type": "Opened", "date": snapshot_date, **store})
         for store_id in sorted(prior.keys() - current.keys()):
-            events.append({"type": "Closed", "date": snapshot_date, **prior[store_id]})
+            store = prior[store_id]
+            scope = (store["retailer"], store.get("country", "Australia"))
+            if scope in current_scopes:
+                events.append({"type": "Closed", "date": snapshot_date, **store})
         for store_id in sorted(current.keys() & prior.keys()):
             before = prior[store_id]
             after = current[store_id]
@@ -480,10 +505,15 @@ def build_history(stores: list[dict]) -> dict:
         "current_snapshot_date": snapshot_date,
         "event_count": len(events),
         "events": events,
+        "coverage_baselines_added": coverage_baselines_added,
         "note": (
             "This is the first archived baseline; changes will appear after the next successful refresh."
             if not prior_paths
-            else "Events compare the current network with the latest prior successful snapshot."
+            else (
+                "New retailer or country coverage was added as a baseline, not counted as store openings."
+                if coverage_baselines_added
+                else "Events compare the current network with the latest prior successful snapshot."
+            )
         ),
     }
 

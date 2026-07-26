@@ -1,6 +1,6 @@
-# Australian Optical Leasing Intelligence
+# Australia + New Zealand Optical Leasing Intelligence
 
-Public-source network, centre, demographic and site-selection intelligence for Australian optical retail.
+Public-source network, centre, demographic and site-selection intelligence for Australian and New Zealand optical retail.
 
 Live map:
 
@@ -8,10 +8,14 @@ https://aydennicolle-cyber.github.io/opsm-store-locator/
 
 Current validated network:
 
-- OPSM: 335 stores
-- Specsavers: 399 stores
-- Bailey Nelson: 68 stores
-- Combined: 802 stores
+- OPSM: 392 stores
+- Specsavers: 461 stores
+- Bailey Nelson: 82 stores
+- Oscar Wylee: 131 stores
+- Independent / Other optical: 425 community-mapped locations
+- Combined: 1,491 locations (1,269 Australia; 222 New Zealand)
+
+The independent/other layer is sourced from OpenStreetMap `shop=optician` records. It is useful competitive coverage but is non-exhaustive, may include regional groups, and is switched off by default in the two-country view.
 
 The original OPSM-only map remains at:
 
@@ -24,7 +28,7 @@ Other retailer maps remain separate from the optical analysis:
 
 ## Leasing Views
 
-- **Network:** preserve retailer filters, proximity analysis, same-centre checks, pair comparison and CSV export.
+- **Network:** filter by country, region and retailer; preserve proximity analysis, same-centre checks, pair comparison and CSV export.
 - **Centres:** search reviewed centre entities and inspect public ownership, management, GLA, visitation, trade-area and redevelopment data where sourced.
 - **Opportunity:** drop candidate sites, apply brand profiles and compare transparent component scores.
 - **Trends:** review source dates, archived store snapshots and detected openings, closures or relocations.
@@ -32,7 +36,7 @@ Other retailer maps remain separate from the optical analysis:
 
 The public map also provides:
 
-- ABS SA2 demographic demand and population-growth layers.
+- ABS SA2 demographic demand and population-growth layers for Australia.
 - Competitor saturation, reviewed centre and optional OpenStreetMap health, transport and parking layers.
 - 1 km, 3 km, 5 km and 10 km catchment summaries using intersecting SA2-centroid estimates.
 - A white-space score using market demand, competitive white space, centre strength, accessibility, network fit and format fit.
@@ -82,12 +86,14 @@ Refresh OPSM from its public locator endpoint:
 
 ```bash
 python3 scripts/fetch_opsm_stores.py
+python3 scripts/fetch_opsm_nz_stores.py
 ```
 
 Refresh Bailey Nelson from its public store list, structured store pages and official map links:
 
 ```bash
 python3 scripts/fetch_bailey_nelson_stores.py
+python3 scripts/fetch_bailey_nelson_nz_stores.py
 ```
 
 Specsavers protects its raw endpoint, so refresh through its rendered public pages. This opens a controlled Chrome window and can take several minutes:
@@ -96,6 +102,16 @@ Specsavers protects its raw endpoint, so refresh through its rendered public pag
 npm install
 npm run fetch:specsavers
 python3 scripts/build_specsavers_stores.py
+npm run fetch:specsavers:nz
+SPECSAVERS_COUNTRY=NZ python3 scripts/build_specsavers_stores.py
+```
+
+Refresh Oscar Wylee and the optional independent/other public layer:
+
+```bash
+python3 scripts/fetch_oscar_wylee_stores.py
+npm run fetch:oscar-wylee:nz
+python3 scripts/fetch_independent_optometrists.py
 ```
 
 Rebuild the combined network after refreshing any retailer:
@@ -106,7 +122,7 @@ python3 scripts/audit_centre_recognition.py
 python3 scripts/build_market_intelligence.py
 ```
 
-The market-intelligence build uses official ABS Data by Region workbooks and SA2 boundaries, refreshes public centre profiles, joins all stores to SA2 and archives the successful network snapshot.
+The market-intelligence build uses official ABS Data by Region workbooks and SA2 boundaries for Australia, refreshes public centre profiles, and archives the successful trans-Tasman network snapshot. New Zealand stores retain explicit Stats NZ coverage status and are never joined to Australian market data.
 
 Run the complete public checks:
 
@@ -115,7 +131,9 @@ python3 -m unittest discover -s tests -v
 node tests/test_intelligence.js
 ```
 
-Each importer validates source counts, unique IDs, required fields and Australian coordinate bounds. A failed or incomplete refresh stops before replacing the last good snapshot. Review `data/network_events.json` before publishing changes.
+Each importer validates source counts, unique IDs, required fields and country coordinate bounds. A failed or incomplete refresh stops before replacing the last good snapshot. Review `data/network_events.json` before publishing changes.
+
+Independent/other optical records are © OpenStreetMap contributors and are available under the [Open Database License](https://www.openstreetmap.org/copyright).
 
 ## Classification Rules
 

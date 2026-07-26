@@ -7,9 +7,13 @@ import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const RETAILER_DIR = path.join(ROOT, "retailers", "specsavers");
+const COUNTRY = (process.env.SPECSAVERS_COUNTRY || "AU").toUpperCase();
+const IS_NZ = COUNTRY === "NZ";
+const RETAILER_DIR = path.join(ROOT, "retailers", IS_NZ ? "specsavers-nz" : "specsavers");
 const SNAPSHOT_PATH = path.join(RETAILER_DIR, "source_snapshot.json");
-const LIST_URL = "https://www.specsavers.com.au/stores/full-store-list";
+const LIST_URL = IS_NZ
+  ? "https://www.specsavers.co.nz/stores/full-store-list"
+  : "https://www.specsavers.com.au/stores/full-store-list";
 const CHROME_PATH = process.env.CHROME_PATH || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const WORKERS = Math.max(1, Math.min(4, Number(process.env.SPECSAVERS_WORKERS || 4)));
 
@@ -38,7 +42,7 @@ async function main() {
     headless: process.env.HEADLESS === "1",
   });
   try {
-    const context = await browser.newContext({ locale: "en-AU" });
+    const context = await browser.newContext({ locale: IS_NZ ? "en-NZ" : "en-AU" });
     const listPage = await context.newPage();
     await listPage.goto(LIST_URL, { waitUntil: "domcontentloaded", timeout: 60000 });
     const links = await listPage.locator('a[href*="/stores/"]').evaluateAll((anchors) =>
@@ -54,7 +58,9 @@ async function main() {
         ).values()
       )
     );
-    if (links.length < 350 || links.length > 450) {
+    const minimum = IS_NZ ? 45 : 350;
+    const maximum = IS_NZ ? 75 : 450;
+    if (links.length < minimum || links.length > maximum) {
       throw new Error(`Unexpected public store-list count: ${links.length}. Existing data was not replaced.`);
     }
 
@@ -87,6 +93,7 @@ async function main() {
       list_count: links.length,
       store_count: stores.length,
       collection_method: "Rendered official store pages; Schema.org structured data",
+      country: IS_NZ ? "New Zealand" : "Australia",
       stores,
     };
     await mkdir(RETAILER_DIR, { recursive: true });

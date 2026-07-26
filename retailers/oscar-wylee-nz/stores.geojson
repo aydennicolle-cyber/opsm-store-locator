@@ -1,0 +1,230 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "retailer": "Oscar Wylee",
+    "countries": [
+      "New Zealand"
+    ],
+    "source_url": "https://www.oscarwylee.co.nz/locations/",
+    "fetched_at": "2026-07-26T04:03:57.996Z",
+    "store_count": 9
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7074882152879,
+          -36.728246379963444
+        ]
+      },
+      "properties": {
+        "name": "Oscar Wylee Westfield Albany",
+        "id": "optometrist-albany",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Albany",
+        "postal_code": "0632",
+        "full_address": "Westfield Albany, Shop S229, 219 Don McKinnon Drive, Albany, Auckland 0632",
+        "phone": "09 281 0674",
+        "official_url": "https://www.oscarwylee.co.nz/locations/optometrist-albany.html",
+        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
+        "audiology": "false",
+        "status": "Active"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.76513282605924,
+          -36.847641330406674
+        ]
+      },
+      "properties": {
+        "name": "Oscar Wylee Auckland CBD",
+        "id": "optometrist-auckland-cbd",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Auckland CBD",
+        "postal_code": "1010",
+        "full_address": "Shop S9, 163 Queen Street, Auckland CBD, Auckland 1010",
+        "phone": "09 282 0368",
+        "official_url": "https://www.oscarwylee.co.nz/locations/optometrist-auckland-cbd.html",
+        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
+        "audiology": "false",
+        "status": "Active"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8817606,
+          -36.991585
+        ]
+      },
+      "properties": {
+        "name": "Oscar Wylee Manukau",
+        "id": "optometrist-manukau",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Manukau",
+        "postal_code": "2104",
+        "full_address": "Westfield Manukau City, Shop S-041, 1 Leyton Way, Manukau City Centre, Auckland 2104",
+        "phone": "(09) 217 6391",
+        "official_url": "https://www.oscarwylee.co.nz/locations/optometrist-manukau.html",
+        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
+        "audiology": "false",
+        "status": "Active"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.73083761506345,
+          -36.882475279931676
+        ]
+      },
+      "properties": {
+        "name": "Oscar Wylee Westfield St Lukes",
+        "id": "stlukes",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Mount Albert",
+        "postal_code": "1025",
+        "full_address": "Westfield St Lukes, Level 1, 80 St Lukes Road, Mount Albert, Auckland 1025",
+        "phone": "09 280 1877",
+        "official_url": "https://www.oscarwylee.co.nz/locations/stlukes.html",
+        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
+        "audiology": "false",
+        "status": "Active"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.68280191529288,
+          -36.906516079926845
+        ]
+      },
+      "properties": {
+        "name": "Oscar Wylee Lynn Mall",
+        "id": "optometrist-new-lynn",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "New Lynn",
+        "postal_code": "0600",
+        "full_address": "LynnMall, 3058 Great North Road, New Lynn, Auckland 0600",
+        "phone": "09 282 0421",
+        "official_url": "https://www.oscarwylee.co.nz/locations/optometrist-new-lynn.html",
+        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
+        "audiology": "false",
+        "status": "Active"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.6063809154926,
+          -43.49404827912709
+        ]
+      },
+      "properties": {
+        "name": "Oscar Wylee Northlands Mall",
+        "id": "optometrist-northlands",
+        "country": "New Zealand",
+        "state": "Canterbury",
+        "city": "Papanui",
+        "postal_code": "8052",
+        "full_address": "Northlands Mall, Shop 070, 55 Main North Road, Papanui, Christchurch 8052",
+        "phone": "(03) 926 0069",
+        "official_url": "https://www.oscarwylee.co.nz/locations/optometrist-northlands.html",
+        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
+        "audiology": "false",
+        "status": "Active"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          175.6110683153941,
+          -40.35688817937212
+        ]
+      },
+      "properties": {
+        "name": "Oscar Wylee The Plaza Palmerston North",
+        "id": "optometrist-palmerston-north",
+        "country": "New Zealand",
+        "state": "Manawatu-Whanganui",
+        "city": "Palmerston North",
+        "postal_code": "4410",
+        "full_address": "The Plaza, Shop 48-A, 84 The Square, Palmerston North 4410",
+        "phone": "06 280 0014",
+        "official_url": "https://www.oscarwylee.co.nz/locations/optometrist-palmerston-north.html",
+        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
+        "audiology": "false",
+        "status": "Active"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.905966,
+          -41.2100157
+        ]
+      },
+      "properties": {
+        "name": "Oscar Wylee Queensgate Shopping Centre",
+        "id": "optometrist-queensgate",
+        "country": "New Zealand",
+        "state": "Wellington",
+        "city": "Lower Hutt",
+        "postal_code": "5011",
+        "full_address": "Queensgate Shopping Centre, Shop 128, Cnr Queens Drive and Bunny Street, Lower Hutt, Wellington 5011",
+        "phone": "04 280 0058",
+        "official_url": "https://www.oscarwylee.co.nz/locations/optometrist-queensgate.html",
+        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
+        "audiology": "false",
+        "status": "Active"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7736222154227,
+          -41.28677447927353
+        ]
+      },
+      "properties": {
+        "name": "Oscar Wylee Wellington Central",
+        "id": "optometrist-wellington-central",
+        "country": "New Zealand",
+        "state": "Wellington",
+        "city": "Wellington",
+        "postal_code": "6011",
+        "full_address": "G01, 18 Willis Street, Wellington, Central Wellington 6011",
+        "phone": "04 280 0120",
+        "official_url": "https://www.oscarwylee.co.nz/locations/optometrist-wellington-central.html",
+        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
+        "audiology": "false",
+        "status": "Active"
+      }
+    }
+  ]
+}

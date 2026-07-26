@@ -1,0 +1,1496 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "retailer": "OPSM",
+    "countries": [
+      "New Zealand"
+    ],
+    "source_url": "https://www.opsm.co.nz/AjaxStoreLocatorSearch?storeId=10152&radius=5000&latitude=-41.2866&longitude=174.7756",
+    "fetched_at": "2026-07-26T03:51:36+00:00",
+    "store_count": 57
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.70773,
+          -36.72871
+        ]
+      },
+      "properties": {
+        "name": "OPSM Albany",
+        "sap_id": "1309",
+        "identifier": "OPSM Albany_1309",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Albany",
+        "postal_code": "0632",
+        "full_address": "219 Don Mckinnon Dr, Albany, AKL, 0632",
+        "phone": "(09) 414 0214",
+        "services": "Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-18:00; Sun: 10:00-17:30",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.88192,
+          -36.99147
+        ]
+      },
+      "properties": {
+        "name": "OPSM Auckland Manukau",
+        "sap_id": "1689",
+        "identifier": "OPSM Auckland Manukau_1689",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Auckland",
+        "postal_code": "2104",
+        "full_address": "Great South Rd &amp; Wiri Station Rd, Auckland, AKL, 2104",
+        "phone": "(09) 263 7605",
+        "services": "Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-18:00; Sun: 10:00-17:30",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7623,
+          -36.882
+        ]
+      },
+      "properties": {
+        "name": "OPSM Mt Eden",
+        "sap_id": "4712",
+        "identifier": "OPSM Mt Eden_4712",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Auckland",
+        "postal_code": "1023",
+        "full_address": "Mt Eden Road, Auckland, AUK, 1023",
+        "phone": "09 630 3280",
+        "services": "Dry Eye",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-19:00; Fri: 09:00-17:30; Sat: 09:00-16:00; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.76513,
+          -36.85045
+        ]
+      },
+      "properties": {
+        "name": "OPSM Queen Street Auckland",
+        "sap_id": "1612",
+        "identifier": "OPSM Queen Street Auckland_1612",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Auckland",
+        "postal_code": "1010",
+        "full_address": "155A Queen Street  NZ, Auckland, AKL, 1010",
+        "phone": "(09) 303 3042",
+        "services": "Dry Eye, Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 08:30-17:30; Tue: 08:30-17:30; Wed: 08:30-17:30; Thu: 08:30-17:30; Fri: 08:30-17:30; Sat: 09:00-17:00; Sun: 10:00-17:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.79849,
+          -36.88088
+        ]
+      },
+      "properties": {
+        "name": "OPSM Remuera",
+        "sap_id": "1682",
+        "identifier": "OPSM Remuera_1682",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Auckland",
+        "postal_code": "1050",
+        "full_address": "395 Remuera Rd, Auckland, AKL, 1050",
+        "phone": "(09) 520 3155",
+        "services": "Dry Eye, Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 09:00-17:30; Sun: 10:00-17:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.913,
+          -36.93377
+        ]
+      },
+      "properties": {
+        "name": "OPSM Botany Downs",
+        "sap_id": "1630",
+        "identifier": "OPSM Botany Downs_1630",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Botany Downs",
+        "postal_code": "2013",
+        "full_address": "Town Centre Dr, Botany Downs, AKL, 2013",
+        "phone": "(09) 271 0361",
+        "services": "Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-18:00; Sun: 10:00-18:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.74809,
+          -36.71594
+        ]
+      },
+      "properties": {
+        "name": "OPSM Browns Bay",
+        "sap_id": "1692",
+        "identifier": "OPSM Browns Bay_1692",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Browns Bay",
+        "postal_code": "0630",
+        "full_address": "30 Clyde Rd, Browns Bay, AKL, 0630",
+        "phone": "(09) 478 6453",
+        "services": "Kids Vision Centre, Collect & Return",
+        "hours": "Mon: closed; Tue: 17:30-09:00; Wed: 17:30-09:00; Thu: 17:30-09:00; Fri: 17:30-09:00; Sat: 17:30-closed; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.62935,
+          -36.85577
+        ]
+      },
+      "properties": {
+        "name": "OPSM Lincoln North",
+        "sap_id": "2833",
+        "identifier": "OPSM Lincoln North_2833",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Henderson",
+        "postal_code": "0610",
+        "full_address": "192 Universal Dr, Henderson, AKL, 0610",
+        "phone": "(09) 837 2627",
+        "services": "",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: closed; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.6322,
+          -36.8811
+        ]
+      },
+      "properties": {
+        "name": "OPSM West City",
+        "sap_id": "1642",
+        "identifier": "OPSM West City_1642",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Henderson",
+        "postal_code": "0612",
+        "full_address": "7 Catherine St, Henderson, AKL, 0612",
+        "phone": "(09) 836 6169",
+        "services": "Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-18:00; Sun: 10:00-17:30",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.61109,
+          -36.81766
+        ]
+      },
+      "properties": {
+        "name": "OPSM Northwest",
+        "sap_id": "2929",
+        "identifier": "OPSM Northwest_2929",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Massey",
+        "postal_code": "0814",
+        "full_address": "Maki St, Massey, AKL, 0814",
+        "phone": "(09) 974 0766",
+        "services": "Dry Eye, Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-18:00; Sat: 09:00-18:00; Sun: 09:00-18:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7653,
+          -36.77095
+        ]
+      },
+      "properties": {
+        "name": "OPSM Milford",
+        "sap_id": "1684",
+        "identifier": "OPSM Milford_1684",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Milford",
+        "postal_code": "0620",
+        "full_address": "SHOP WH04B, 24 MILFORD RD, Milford, AKL, 0620",
+        "phone": "(09) 489 8070",
+        "services": "Audiology",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 10:00-17:00; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "true"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.73334,
+          -36.88267
+        ]
+      },
+      "properties": {
+        "name": "OPSM St Lukes",
+        "sap_id": "1687",
+        "identifier": "OPSM St Lukes_1687",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Mount Albert",
+        "postal_code": "1025",
+        "full_address": "80 St Lukes Rd, Mount Albert, AKL, 1025",
+        "phone": "(09) 846 9102",
+        "services": "Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-18:00; Sun: 10:00-17:30",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.842,
+          -36.91788
+        ]
+      },
+      "properties": {
+        "name": "OPSM Sylvia Park",
+        "sap_id": "2911",
+        "identifier": "OPSM Sylvia Park_2911",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Mount Wellington",
+        "postal_code": "1060",
+        "full_address": "286 Mount Wellington Hwy, Mount Wellington, AKL, 1060",
+        "phone": "(09) 974 0044",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-19:00; Tue: 09:00-19:00; Wed: 09:00-19:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-19:00; Sun: 09:00-19:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.68537,
+          -36.90819
+        ]
+      },
+      "properties": {
+        "name": "OPSM Lynnmall",
+        "sap_id": "1686",
+        "identifier": "OPSM Lynnmall_1686",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "New Lynn",
+        "postal_code": "0600",
+        "full_address": "3058 Great North Rd, New Lynn, AKL, 0600",
+        "phone": "(09) 827 7585",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-18:00; Sun: 09:00-18:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.77659,
+          -36.871
+        ]
+      },
+      "properties": {
+        "name": "OPSM Auckland Newmarket",
+        "sap_id": "1646",
+        "identifier": "OPSM Auckland Newmarket_1646",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Newmarket",
+        "postal_code": "1023",
+        "full_address": "277 Broadway Newmarket, Newmarket, AKL, 1023",
+        "phone": "(09) 524 8850",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-19:00; Tue: 09:00-19:00; Wed: 09:00-19:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-19:00; Sun: 10:00-19:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.94189,
+          -37.0624
+        ]
+      },
+      "properties": {
+        "name": "OPSM Papakura",
+        "sap_id": "1602",
+        "identifier": "OPSM Papakura_1602",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Papakura",
+        "postal_code": "2110",
+        "full_address": "143 Great South Rd, Papakura, AKL, 2110",
+        "phone": "(09) 298 5340",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-19:00; Fri: 09:00-17:30; Sat: 09:00-16:00; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.90491,
+          -37.19877
+        ]
+      },
+      "properties": {
+        "name": "OPSM OPTIK EYECARE BY OPSM",
+        "sap_id": "2926",
+        "identifier": "OPSM OPTIK EYECARE BY OPSM_2926",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Pukekohe Hill",
+        "postal_code": "2120",
+        "full_address": "20 Hall Street, Pukekohe Hill, AKL, 2120",
+        "phone": "(09) 238 3796",
+        "services": "Dry Eye, Collect & Return",
+        "hours": "Mon: 08:30-17:00; Tue: 08:30-17:00; Wed: 08:30-17:00; Thu: 08:30-17:00; Fri: 08:30-17:00; Sat: 08:30-17:00; Sun: 08:30-17:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.77481,
+          -36.91047
+        ]
+      },
+      "properties": {
+        "name": "OPSM Royal Oak",
+        "sap_id": "1688",
+        "identifier": "OPSM Royal Oak_1688",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Royal Oak",
+        "postal_code": "1023",
+        "full_address": "691 Manukau Rd, Royal Oak, AKL, 1023",
+        "phone": "(09) 624 2094",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 10:00-19:00; Fri: 09:00-17:30; Sat: 09:00-17:00; Sun: 10:00-17:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.68071,
+          -36.61493
+        ]
+      },
+      "properties": {
+        "name": "OPSM Silverdale",
+        "sap_id": "2353",
+        "identifier": "OPSM Silverdale_2353",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Silverdale",
+        "postal_code": "0932",
+        "full_address": "61 Silverdale, Silverdale, AKL, 0932",
+        "phone": "(09) 426 7902",
+        "services": "Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-18:00; Fri: 09:00-18:00; Sat: 09:00-17:00; Sun: 10:00-17:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.85767,
+          -36.8507
+        ]
+      },
+      "properties": {
+        "name": "OPSM St Heliers",
+        "sap_id": "1683",
+        "identifier": "OPSM St Heliers_1683",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "St Heliers",
+        "postal_code": "1071",
+        "full_address": "16-20 St Heliers Bay Rd, St Heliers, AKL, 1071",
+        "phone": "(09) 575 5568",
+        "services": "Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 09:00-17:30; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.77247,
+          -36.7869
+        ]
+      },
+      "properties": {
+        "name": "OPSM Hurstmere Takapuna Beach",
+        "sap_id": "2832",
+        "identifier": "OPSM Hurstmere Takapuna Beach_2832",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Takapuna",
+        "postal_code": "0622",
+        "full_address": "62-78 Hurstmere Rd, Takapuna, AKL, 0622",
+        "phone": "(09) 488 7132",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 09:00-16:00; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          176.9949,
+          -37.95195
+        ]
+      },
+      "properties": {
+        "name": "Whakatane Optometrist by OPSM",
+        "sap_id": "2830",
+        "identifier": "Whakatane Optometrist by OPSM_2830",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "Whakatane",
+        "postal_code": "3120",
+        "full_address": "185 The Strand, Whakatane, AKL, 3120",
+        "phone": "(07) 308 8487",
+        "services": "",
+        "hours": "Mon: 08:30-17:00; Tue: 08:30-17:00; Wed: 08:30-17:00; Thu: 08:30-17:00; Fri: 08:30-17:00; Sat: 09:00-16:00; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          176.22389,
+          -37.67488
+        ]
+      },
+      "properties": {
+        "name": "OPSM Bayfair",
+        "sap_id": "1390",
+        "identifier": "OPSM Bayfair_1390",
+        "country": "New Zealand",
+        "state": "Bay of Plenty",
+        "city": "Mount Maunganui",
+        "postal_code": "3116",
+        "full_address": "Mt Maunganui Rd &amp; Girven Rd, Mount Maunganui, BOP, 3116",
+        "phone": "(07) 575 0185",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-18:00; Sun: 09:00-18:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          176.25293,
+          -38.13673
+        ]
+      },
+      "properties": {
+        "name": "OPSM Rotorua",
+        "sap_id": "1625",
+        "identifier": "OPSM Rotorua_1625",
+        "country": "New Zealand",
+        "state": "Bay of Plenty",
+        "city": "Rotorua",
+        "postal_code": "3010",
+        "full_address": "1129 Pukuatua St, Rotorua, BOP, 3010",
+        "phone": "(07) 348 5288",
+        "services": "Dry Eye, Collect & Return",
+        "hours": "Mon: 08:30-17:00; Tue: 08:30-17:00; Wed: 08:30-17:00; Thu: 08:30-17:00; Fri: 08:30-17:00; Sat: 09:00-17:00; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          176.10546,
+          -37.73721
+        ]
+      },
+      "properties": {
+        "name": "OPSM Tauranga",
+        "sap_id": "1412",
+        "identifier": "OPSM Tauranga_1412",
+        "country": "New Zealand",
+        "state": "Bay of Plenty",
+        "city": "Tauranga",
+        "postal_code": "3110",
+        "full_address": "2 Taurikura Drive, Tauranga, BOP, 3110",
+        "phone": "(07) 578 7703",
+        "services": "Audiology",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-20:00; Fri: 09:00-18:00; Sat: 09:00-18:00; Sun: 09:00-18:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "true"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.52378,
+          -43.54264
+        ]
+      },
+      "properties": {
+        "name": "OPSM Hornby",
+        "sap_id": "1010",
+        "identifier": "OPSM Hornby_1010",
+        "country": "New Zealand",
+        "state": "Canterbury",
+        "city": "Christchurch",
+        "postal_code": "8441",
+        "full_address": "418 Main South Rd, Christchurch, CHC, 8441",
+        "phone": "(03)349 3155",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-18:00; Sat: 09:00-18:00; Sun: 10:00-18:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.63756,
+          -43.534
+        ]
+      },
+      "properties": {
+        "name": "OPSM The Crossing",
+        "sap_id": "1620",
+        "identifier": "OPSM The Crossing_1620",
+        "country": "New Zealand",
+        "state": "Canterbury",
+        "city": "Christchurch",
+        "postal_code": "8011",
+        "full_address": "The Crossing, Kivers Ln, Christchurch, CHC, 8011",
+        "phone": "(03) 379 6307",
+        "services": "Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 09:00-17:00; Sun: 10:00-17:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.65922,
+          -43.38146
+        ]
+      },
+      "properties": {
+        "name": "Kaiapoi Eyecare",
+        "sap_id": "2949",
+        "identifier": "Kaiapoi Eyecare_2949",
+        "country": "New Zealand",
+        "state": "Canterbury",
+        "city": "Kaiapoi",
+        "postal_code": "7630",
+        "full_address": "192 Williams Street Kaiapoi, Kaiapoi, CAN, 7630",
+        "phone": "(03) 327 8292",
+        "services": "Collect & Return",
+        "hours": "Mon: 08:30-17:00; Tue: 08:30-17:00; Wed: 08:30-17:00; Thu: 08:30-17:00; Fri: 08:30-17:00; Sat: closed; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.62182,
+          -43.51252
+        ]
+      },
+      "properties": {
+        "name": "OPSM Merivale",
+        "sap_id": "1672",
+        "identifier": "OPSM Merivale_1672",
+        "country": "New Zealand",
+        "state": "Canterbury",
+        "city": "Merrivale",
+        "postal_code": "8014",
+        "full_address": "189 Papanui Rd, Merrivale, CHC, 8014",
+        "phone": "(03) 355 6410",
+        "services": "Dry Eye, Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-19:00; Fri: 09:00-18:00; Sat: 09:00-18:00; Sun: 10:00-17:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.61008,
+          -43.4924
+        ]
+      },
+      "properties": {
+        "name": "OPSM Papanui",
+        "sap_id": "1653",
+        "identifier": "OPSM Papanui_1653",
+        "country": "New Zealand",
+        "state": "Canterbury",
+        "city": "Papanui",
+        "postal_code": "8053",
+        "full_address": "55 Main North Rd, Papanui, CHC, 8053",
+        "phone": "(03) 352 0151",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-18:00; Sun: 10:00-18:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.59676,
+          -43.30285
+        ]
+      },
+      "properties": {
+        "name": "Rangiora Eyecare",
+        "sap_id": "2948",
+        "identifier": "Rangiora Eyecare_2948",
+        "country": "New Zealand",
+        "state": "Canterbury",
+        "city": "Rangiora",
+        "postal_code": "7400",
+        "full_address": "42 High Street, Rangiora, CAN, 7400",
+        "phone": "(03) 313 8811",
+        "services": "Dry Eye, Collect & Return",
+        "hours": "Mon: 08:30-17:30; Tue: 08:30-17:30; Wed: 08:30-17:30; Thu: 08:30-17:30; Fri: 08:30-17:30; Sat: 09:00-17:30; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.59705,
+          -43.53122
+        ]
+      },
+      "properties": {
+        "name": "OPSM Riccarton",
+        "sap_id": "1593",
+        "identifier": "OPSM Riccarton_1593",
+        "country": "New Zealand",
+        "state": "Canterbury",
+        "city": "Riccarton",
+        "postal_code": "8041",
+        "full_address": "129 Riccarton Rd, Riccarton, CHC, 8041",
+        "phone": "(03) 341 3125",
+        "services": "Dry Eye, Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-18:00; Sun: 10:00-18:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.66302,
+          -43.50708
+        ]
+      },
+      "properties": {
+        "name": "OPSM The Palms",
+        "sap_id": "1413",
+        "identifier": "OPSM The Palms_1413",
+        "country": "New Zealand",
+        "state": "Canterbury",
+        "city": "Shirley",
+        "postal_code": "8061",
+        "full_address": "Cnr Marshland Rd &amp; New Brighton Rd, Shirley, CHC, 8061",
+        "phone": "(03) 386 1690",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-18:00; Sun: 10:00-18:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          178.02225,
+          -38.66371
+        ]
+      },
+      "properties": {
+        "name": "OPSM GISBORNE",
+        "sap_id": "7705",
+        "identifier": "OPSM GISBORNE_7705",
+        "country": "New Zealand",
+        "state": "Gisborne",
+        "city": "Gisborne",
+        "postal_code": "4010",
+        "full_address": "260 Gladstone Rd, Gisborne, GIS, 4010",
+        "phone": "(06) 867 7176",
+        "services": "",
+        "hours": "Mon: 08:00-17:00; Tue: 08:00-17:00; Wed: 08:00-17:00; Thu: 08:00-17:00; Fri: 08:00-17:00; Sat: 09:00-12:00; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          176.84239,
+          -39.64145
+        ]
+      },
+      "properties": {
+        "name": "OPSM Hastings",
+        "sap_id": "1607",
+        "identifier": "OPSM Hastings_1607",
+        "country": "New Zealand",
+        "state": "Hawke's Bay",
+        "city": "Hastings",
+        "postal_code": "4122",
+        "full_address": "106 Heretaunga St, Hastings, HAB, 4122",
+        "phone": "(06) 878 6600",
+        "services": "Collect & Return",
+        "hours": "Mon: 08:30-17:00; Tue: 08:30-17:00; Wed: 08:30-17:00; Thu: 08:30-17:00; Fri: 08:30-17:00; Sat: 09:00-14:00; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          176.91653,
+          -39.49046
+        ]
+      },
+      "properties": {
+        "name": "OPSM Napier",
+        "sap_id": "1619",
+        "identifier": "OPSM Napier_1619",
+        "country": "New Zealand",
+        "state": "Hawke's Bay",
+        "city": "Napier",
+        "postal_code": "4110",
+        "full_address": "134 Emeson St, Napier, HAB, 4110",
+        "phone": "(06) 833 7518",
+        "services": "Collect & Return",
+        "hours": "Mon: 08:30-17:00; Tue: 08:30-17:00; Wed: 08:30-17:00; Thu: 08:30-17:00; Fri: 08:30-17:00; Sat: 08:30-17:00; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          173.95649,
+          -41.5131
+        ]
+      },
+      "properties": {
+        "name": "OPSM Blenheim",
+        "sap_id": "2955",
+        "identifier": "OPSM Blenheim_2955",
+        "country": "New Zealand",
+        "state": "Nelson",
+        "city": "Blenheim",
+        "postal_code": "7201",
+        "full_address": "70 Market St, Blenheim, NLS, 7201",
+        "phone": "(03) 577 9908",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: closed; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          173.28407,
+          -41.27283
+        ]
+      },
+      "properties": {
+        "name": "OPSM Nelson",
+        "sap_id": "1643",
+        "identifier": "OPSM Nelson_1643",
+        "country": "New Zealand",
+        "state": "Nelson",
+        "city": "Nelson",
+        "postal_code": "7010",
+        "full_address": "183 Trafalgar St, Nelson, NLS, 7010",
+        "phone": "(03) 539 4962",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-18:00; Fri: 09:00-18:00; Sat: 09:00-16:30; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          173.18609,
+          -41.33947
+        ]
+      },
+      "properties": {
+        "name": "OPSM Richmond",
+        "sap_id": "2828",
+        "identifier": "OPSM Richmond_2828",
+        "country": "New Zealand",
+        "state": "Nelson",
+        "city": "Richmond",
+        "postal_code": "7020",
+        "full_address": "T111, Richmond Mall, Richmond, NLS, 7020",
+        "phone": "(03) 544 9160",
+        "services": "Dry Eye",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-18:00; Fri: 09:00-18:00; Sat: 09:00-17:00; Sun: 10:00-16:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.32004,
+          -35.72518
+        ]
+      },
+      "properties": {
+        "name": "OPSM Whangarei",
+        "sap_id": "1694",
+        "identifier": "OPSM Whangarei_1694",
+        "country": "New Zealand",
+        "state": "Northland",
+        "city": "Whangarei",
+        "postal_code": "0110",
+        "full_address": "Cameron St, Whangarei, NTL, 0110",
+        "phone": "(09) 438 4930",
+        "services": "Collect & Return",
+        "hours": "Mon: 08:00-17:00; Tue: 08:00-17:00; Wed: 08:00-17:00; Thu: 08:00-17:00; Fri: 08:00-17:00; Sat: 08:00-14:30; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.50574,
+          -45.87003
+        ]
+      },
+      "properties": {
+        "name": "OPSM Dunedin",
+        "sap_id": "1675",
+        "identifier": "OPSM Dunedin_1675",
+        "country": "New Zealand",
+        "state": "Otago",
+        "city": "Dunedin",
+        "postal_code": "9016",
+        "full_address": "291 George St, Dunedin, OTA, 9016",
+        "phone": "(03) 477 6012",
+        "services": "Collect & Return",
+        "hours": "Mon: 08:30-17:30; Tue: 08:30-17:30; Wed: 08:30-17:30; Thu: 08:30-17:30; Fri: 08:30-17:30; Sat: 09:00-16:00; Sun: 10:00-16:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.74344,
+          -45.01244
+        ]
+      },
+      "properties": {
+        "name": "OPSM Queenstown",
+        "sap_id": "1610",
+        "identifier": "OPSM Queenstown_1610",
+        "country": "New Zealand",
+        "state": "Otago",
+        "city": "Queenstown",
+        "postal_code": "9300",
+        "full_address": "19 Grant Rd, Queenstown, OTA, 9300",
+        "phone": "(03) 442 9412",
+        "services": "Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-18:00; Fri: 09:00-18:00; Sat: 09:00-18:00; Sun: 10:00-17:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.3487,
+          -46.41174
+        ]
+      },
+      "properties": {
+        "name": "OPSM Invercargill",
+        "sap_id": "2910",
+        "identifier": "OPSM Invercargill_2910",
+        "country": "New Zealand",
+        "state": "Southland",
+        "city": "Invercargill",
+        "postal_code": "9810",
+        "full_address": "40 Esk St, Invercargill, STL, 9810",
+        "phone": "(03) 218 8561",
+        "services": "Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 09:00-15:00; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.07426,
+          -39.05639
+        ]
+      },
+      "properties": {
+        "name": "OPSM New Plymouth",
+        "sap_id": "1676",
+        "identifier": "OPSM New Plymouth_1676",
+        "country": "New Zealand",
+        "state": "Taranaki",
+        "city": "New Plymouth",
+        "postal_code": "4310",
+        "full_address": "11 Gill St, New Plymouth, TAR, 4310",
+        "phone": "(06) 759 4970",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-20:00; Fri: 09:00-17:30; Sat: 09:00-17:00; Sun: 10:00-16:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          175.27973,
+          -37.78589
+        ]
+      },
+      "properties": {
+        "name": "OPSM Hamilton",
+        "sap_id": "1611",
+        "identifier": "OPSM Hamilton_1611",
+        "country": "New Zealand",
+        "state": "Waikato",
+        "city": "Hamilton",
+        "postal_code": "3204",
+        "full_address": "501 Victoria St, Hamilton, WAI, 3204",
+        "phone": "(07) 838 1472",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-19:00; Fri: 09:00-18:00; Sat: 09:00-18:00; Sun: 10:00-17:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          175.28027,
+          -37.75132
+        ]
+      },
+      "properties": {
+        "name": "OPSM Hamilton Chartwell",
+        "sap_id": "1690",
+        "identifier": "OPSM Hamilton Chartwell_1690",
+        "country": "New Zealand",
+        "state": "Waikato",
+        "city": "Hamilton",
+        "postal_code": "3210",
+        "full_address": "Cnr Comries and Hukanui Rds, Hamilton, WAI, 3210",
+        "phone": "(07) 854 8348",
+        "services": "Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-18:00; Sat: 09:00-18:00; Sun: 10:00-17:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          175.23383,
+          -37.74886
+        ]
+      },
+      "properties": {
+        "name": "OPSM The Base",
+        "sap_id": "2956",
+        "identifier": "OPSM The Base_2956",
+        "country": "New Zealand",
+        "state": "Waikato",
+        "city": "Hamilton",
+        "postal_code": "3200",
+        "full_address": "Cnr Te Rapa Rd &amp; Wairere Dr, Hamilton, WAI, 3200",
+        "phone": "(07) 929 2081",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-18:00; Sun: 09:00-18:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          176.07101,
+          -38.68778
+        ]
+      },
+      "properties": {
+        "name": "OPSM Taupo",
+        "sap_id": "2979",
+        "identifier": "OPSM Taupo_2979",
+        "country": "New Zealand",
+        "state": "Waikato",
+        "city": "Taupo",
+        "postal_code": "3330",
+        "full_address": "32 Te Heuheu St, Taupo, WAI, 3330",
+        "phone": "(07) 378 8770",
+        "services": "Collect & Return",
+        "hours": "Mon: 08:30-17:00; Tue: 08:30-17:00; Wed: 08:30-17:00; Thu: 08:30-17:00; Fri: 08:30-17:00; Sat: 09:00-13:00; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          175.54274,
+          -37.13973
+        ]
+      },
+      "properties": {
+        "name": "OPSM Thames",
+        "sap_id": "1605",
+        "identifier": "OPSM Thames_1605",
+        "country": "New Zealand",
+        "state": "Waikato",
+        "city": "Thames",
+        "postal_code": "3500",
+        "full_address": "500 Pollen St, Thames, WAI, 3500",
+        "phone": "(07) 868 6509",
+        "services": "Collect & Return",
+        "hours": "Mon: 08:30-17:00; Tue: 08:30-17:00; Wed: 08:30-17:00; Thu: 08:30-17:00; Fri: 08:30-17:00; Sat: 09:00-16:00; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.77588,
+          -41.28548
+        ]
+      },
+      "properties": {
+        "name": "OPSM Lambton Quay",
+        "sap_id": "1621",
+        "identifier": "OPSM Lambton Quay_1621",
+        "country": "New Zealand",
+        "state": "Wellington",
+        "city": "Central Wellington",
+        "postal_code": "6011",
+        "full_address": "33 Hunter St, Central Wellington, WLG, 6011",
+        "phone": "(04) 471 0310",
+        "services": "Dry Eye, Collect & Return",
+        "hours": "Mon: 08:30-17:30; Tue: 08:30-17:30; Wed: 08:30-17:30; Thu: 08:30-19:00; Fri: 08:30-17:30; Sat: 09:00-17:30; Sun: 10:00-17:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.9045,
+          -41.20966
+        ]
+      },
+      "properties": {
+        "name": "OPSM Queensgate",
+        "sap_id": "1645",
+        "identifier": "OPSM Queensgate_1645",
+        "country": "New Zealand",
+        "state": "Wellington",
+        "city": "Lower Hutt",
+        "postal_code": "5010",
+        "full_address": "Cnr Queens Dr &amp; Bunny St, Lower Hutt, WLG, 5010",
+        "phone": "(04) 566 9169",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-18:00; Sat: 09:00-18:00; Sun: 10:00-17:30",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          175.61325,
+          -40.35688
+        ]
+      },
+      "properties": {
+        "name": "OPSM The Plaza",
+        "sap_id": "1679",
+        "identifier": "OPSM The Plaza_1679",
+        "country": "New Zealand",
+        "state": "Wellington",
+        "city": "Palmerston North",
+        "postal_code": "4410",
+        "full_address": "84 The Square, Palmerston North, WLG, 4410",
+        "phone": "(06) 354 9806",
+        "services": "Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-21:00; Fri: 09:00-19:00; Sat: 09:00-17:30; Sun: 10:00-17:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          175.00435,
+          -40.91675
+        ]
+      },
+      "properties": {
+        "name": "OPSM Coastlands",
+        "sap_id": "1631",
+        "identifier": "OPSM Coastlands_1631",
+        "country": "New Zealand",
+        "state": "Wellington",
+        "city": "Paraparaumu",
+        "postal_code": "5032",
+        "full_address": "State Hwy 1, Paraparaumu, WLG, 5032",
+        "phone": "(04) 298 5317",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-19:00; Fri: 09:00-17:30; Sat: 09:00-17:30; Sun: 10:00-17:30",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.83989,
+          -41.13753
+        ]
+      },
+      "properties": {
+        "name": "OPSM Porirua",
+        "sap_id": "1681",
+        "identifier": "OPSM Porirua_1681",
+        "country": "New Zealand",
+        "state": "Wellington",
+        "city": "Porirua",
+        "postal_code": "5022",
+        "full_address": "2 Titahi Bay Rd, Porirua, WLG, 5022",
+        "phone": "(04) 237 5913",
+        "services": "Dry Eye, Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-18:00; Sat: 09:00-18:00; Sun: 10:00-18:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          175.66152,
+          -40.94974
+        ]
+      },
+      "properties": {
+        "name": "OPSM Masterton",
+        "sap_id": "1600",
+        "identifier": "OPSM Masterton_1600",
+        "country": "New Zealand",
+        "state": "Wellington",
+        "city": "South Wairarapa District",
+        "postal_code": "5810",
+        "full_address": "122 Queen St, South Wairarapa District, WLG, 5810",
+        "phone": "(06) 377 5542",
+        "services": "Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 08:30-17:00; Tue: 08:30-17:00; Wed: 08:30-17:00; Thu: 08:30-17:00; Fri: 08:30-17:00; Sat: 08:30-15:00; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.77654,
+          -41.2916
+        ]
+      },
+      "properties": {
+        "name": "OPSM Cuba St",
+        "sap_id": "1604",
+        "identifier": "OPSM Cuba St_1604",
+        "country": "New Zealand",
+        "state": "Wellington",
+        "city": "Te Aro",
+        "postal_code": "6011",
+        "full_address": "80 Cuba St, Te Aro, WLG, 6011",
+        "phone": "(04) 473 3000",
+        "services": "Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 09:00-17:30; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          175.07299,
+          -41.12404
+        ]
+      },
+      "properties": {
+        "name": "OPSM Upper Hutt",
+        "sap_id": "1663",
+        "identifier": "OPSM Upper Hutt_1663",
+        "country": "New Zealand",
+        "state": "Wellington",
+        "city": "Upper Hutt",
+        "postal_code": "5018",
+        "full_address": "185 Main St, Upper Hutt, WLG, 5018",
+        "phone": "(04) 528 1001",
+        "services": "Collect & Return",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 09:00-17:30; Sun: 09:00-16:00",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    }
+  ]
+}

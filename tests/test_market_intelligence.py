@@ -60,14 +60,19 @@ class MarketIntelligenceTests(unittest.TestCase):
         self.assertTrue(required.issubset(populated[0]["properties"]))
 
     def test_all_stores_join_to_sa2(self) -> None:
-        self.assertEqual(self.links["metadata"]["store_count"], 802)
-        self.assertEqual(self.links["metadata"]["matched_count"], 802)
-        self.assertEqual(len(self.links["links"]), 802)
-        self.assertTrue(all(link["sa2_code"] for link in self.links["links"].values()))
+        self.assertEqual(self.links["metadata"]["store_count"], 1491)
+        self.assertEqual(self.links["metadata"]["matched_count"], 1269)
+        self.assertEqual(len(self.links["links"]), 1491)
+        australian = [link for link in self.links["links"].values() if link.get("geography_system") != "Stats NZ"]
+        new_zealand = [link for link in self.links["links"].values() if link.get("geography_system") == "Stats NZ"]
+        self.assertEqual(len(australian), 1269)
+        self.assertEqual(len(new_zealand), 222)
+        self.assertTrue(all(link["sa2_code"] for link in australian))
+        self.assertTrue(all(not link["sa2_code"] for link in new_zealand))
 
     def test_centre_entities_and_curated_profile(self) -> None:
-        self.assertEqual(self.centres["metadata"]["centre_count"], 310)
-        self.assertEqual(len(self.centres["centres"]), 310)
+        self.assertEqual(self.centres["metadata"]["centre_count"], 394)
+        self.assertEqual(len(self.centres["centres"]), 394)
         chadstone = next(
             centre for centre in self.centres["centres"] if centre["centre_id"] == "vic-chadstone"
         )
@@ -89,10 +94,19 @@ class MarketIntelligenceTests(unittest.TestCase):
 
     def test_network_history_snapshot(self) -> None:
         self.assertEqual(self.events["event_count"], len(self.events["events"]))
+        for scope in self.events.get("coverage_baselines_added", []):
+            self.assertFalse(
+                any(
+                    event["type"] == "Opened"
+                    and event["retailer"] == scope["retailer"]
+                    and event.get("country", "Australia") == scope["country"]
+                    for event in self.events["events"]
+                )
+            )
         snapshots = list((DATA / "history").glob("*.json"))
         self.assertTrue(snapshots)
         latest = json.loads(sorted(snapshots)[-1].read_text())
-        self.assertEqual(len(latest["stores"]), 802)
+        self.assertEqual(len(latest["stores"]), 1491)
 
     def test_public_json_contains_no_private_fields(self) -> None:
         for path in DATA.rglob("*.json"):
