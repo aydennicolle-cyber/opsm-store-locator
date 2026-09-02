@@ -142,6 +142,15 @@ class OpticalNetworkTests(unittest.TestCase):
         self.assertTrue(all(row["source_store_id"] not in ids for row in remaps))
         self.assertTrue(all(row["canonical_store_id"] in ids for row in remaps))
 
+    def test_additional_network_logos_are_local_assets(self) -> None:
+        registry = json.loads((ROOT / "data" / "retailer_registry.json").read_text(encoding="utf-8"))["retailers"]
+        additional = [item for item in registry if item["network_type"] == "additional"]
+        self.assertEqual(len(additional), 6)
+        for item in additional:
+            logo = item.get("logo", "")
+            self.assertTrue(logo.startswith("assets/"), item["name"])
+            self.assertTrue((ROOT / logo).is_file(), item["name"])
+
     def test_provision_is_an_affiliation_not_a_retailer(self) -> None:
         self.assertNotIn("ProVision", {row["retailer"] for row in self.rows})
         affiliated = [row for row in self.rows if "provision" in row["affiliations"].split("|")]

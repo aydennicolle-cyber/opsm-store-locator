@@ -131,6 +131,8 @@ legend, .select-grid label > span, .service-field > span, .opportunity-form labe
 .retailer-logo.bailey-nelson i { width: 4px; height: 2px; flex: 0 0 auto; background: #171717; }
 .retailer-logo.oscar-wylee { width: 50px; height: 20px; border: 1px solid #2848a7; background: white; color: #2848a7; font-family: Georgia, "Times New Roman", serif; font-size: 7px; font-weight: 600; }
 .retailer-logo.independent-other { width: 32px; height: 20px; border: 1px solid #6b5b4b; border-radius: 3px; background: #6b5b4b; color: white; font-size: 7px; font-weight: 850; }
+.retailer-logo.brand-asset { width: var(--brand-logo-width); height: 22px; padding: 2px 4px; border: 1px solid rgb(23 27 31 / 18%); border-radius: 3px; background: white; }
+.retailer-logo.brand-asset img { width: 100%; height: 100%; display: block; object-fit: contain; }
 .retailer-logo.generic-network { width: min(100%, 60px); min-width: 34px; height: 20px; padding: 0 5px; border: 1px solid color-mix(in srgb, var(--brand-color) 78%, black); border-radius: 3px; background: var(--brand-color); color: white; font-size: 6px; font-weight: 850; letter-spacing: -.1px; }
 .retailer-option[data-retailer="Independent / Other optical"] { grid-column: span 2; }
 .retailer-logo.filter.opsm { width: 38px; height: 20px; font-size: 8px; }
@@ -157,6 +159,7 @@ legend, .select-grid label > span, .service-field > span, .opportunity-form labe
 .retailer-logo.compact.bailey-nelson, .retailer-logo.summary.bailey-nelson, .retailer-logo.table.bailey-nelson, .retailer-logo.tray.bailey-nelson { width: 36px; height: 18px; }
 .retailer-logo.compact.oscar-wylee, .retailer-logo.summary.oscar-wylee, .retailer-logo.table.oscar-wylee, .retailer-logo.tray.oscar-wylee { width: 42px; height: 18px; font-size: 6px; }
 .retailer-logo.compact.independent-other, .retailer-logo.summary.independent-other, .retailer-logo.table.independent-other, .retailer-logo.tray.independent-other { width: 28px; height: 18px; font-size: 6px; }
+.retailer-logo.brand-asset.compact, .retailer-logo.brand-asset.summary, .retailer-logo.brand-asset.table, .retailer-logo.brand-asset.tray { width: min(var(--brand-logo-width), 52px); height: 18px; padding: 2px 3px; }
 .retailer-logo.compact.bailey-nelson .bn-letter, .retailer-logo.summary.bailey-nelson .bn-letter,
 .retailer-logo.table.bailey-nelson .bn-letter, .retailer-logo.tray.bailey-nelson .bn-letter { width: 18px; height: 18px; font-size: 7px; border-width: 1.5px; }
 .select-grid, .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
@@ -302,6 +305,7 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .retailer-logo.map.bailey-nelson .bn-letter { width: 24px; height: 24px; font-size: 10px; }
 .retailer-logo.map.oscar-wylee { width: 54px; height: 24px; font-size: 7px; }
 .retailer-logo.map.independent-other { width: 34px; height: 24px; font-size: 7px; }
+.retailer-logo.brand-asset.map { width: var(--brand-logo-width); height: 26px; padding: 2px 3px; border-width: 1.5px; box-shadow: 0 1px 4px rgb(23 27 31 / 18%); }
 .cluster-icon { display: grid; place-items: center; border: 3px solid white; border-radius: 50%; background: #171b1f; color: white; box-shadow: 0 2px 12px rgb(23 27 31 / 30%); font-size: 10px; font-weight: 850; }
 .brand-cluster { position: relative; width: 100%; height: 30px; display: grid; place-items: center; filter: drop-shadow(0 2px 5px rgb(23 27 31 / 25%)); }
 .brand-cluster .retailer-logo.cluster.opsm { width: 42px; height: 24px; font-size: 9px; }
@@ -311,6 +315,7 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .brand-cluster .retailer-logo.cluster.bailey-nelson .bn-letter { width: 26px; height: 26px; }
 .brand-cluster .retailer-logo.cluster.oscar-wylee { width: 58px; height: 26px; font-size: 7px; }
 .brand-cluster .retailer-logo.cluster.independent-other { width: 38px; height: 26px; font-size: 7px; }
+.brand-cluster .retailer-logo.brand-asset.cluster { width: var(--brand-logo-width); height: 28px; padding: 2px 3px; border-width: 1.5px; }
 .brand-cluster b { position: absolute; z-index: 4; right: -1px; top: -4px; min-width: 16px; height: 16px; display: grid; place-items: center; padding: 0 3px; border: 2px solid white; border-radius: 8px; background: #171b1f; color: white; font-size: 7px; }
 .centre-bag-icon { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .centre-pin { width: 26px; height: 26px; display: grid; place-items: center; border: 2px solid white; border-radius: 50%; background: var(--gold); color: white; box-shadow: 0 2px 8px rgb(23 27 31 / 32%); }

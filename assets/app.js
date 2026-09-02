@@ -283,6 +283,7 @@
       slug: item.slug,
       short: item.short,
       mark: item.mark,
+      logo: item.logo || "",
       markerWidth: Number(item.marker_width) || 40,
       networkType: item.network_type || "additional",
       minMarkerZoom: Number(item.min_marker_zoom) || 0,
@@ -323,6 +324,13 @@
     const config = BRAND_CONFIG[retailer];
     if (retailer === "Bailey Nelson") {
       return `<span class="retailer-logo ${config.slug} ${context}" aria-hidden="true"><span class="bn-letter">B</span><i></i><span class="bn-letter">N</span></span>`;
+    }
+    if (config.logo) {
+      return `<span class="retailer-logo ${config.slug} ${context} brand-asset" style="--brand-color:${escapeHtml(
+        config.color
+      )};--brand-logo-width:${config.markerWidth}px" aria-hidden="true"><img src="${escapeHtml(
+        config.logo
+      )}" alt="" /></span>`;
     }
     const generic = ["OPSM", "Specsavers", "Oscar Wylee", "Independent / Other optical"].includes(retailer)
       ? "" : " generic-network";

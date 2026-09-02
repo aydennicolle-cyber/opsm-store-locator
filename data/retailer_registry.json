@@ -68,7 +68,8 @@
       "color": "#e5522d",
       "short": "G&M",
       "mark": "G&M",
-      "marker_width": 42,
+      "logo": "assets/logo-george-matilda.svg",
+      "marker_width": 66,
       "source_folders": ["george-and-matilda"]
     },
     {
@@ -79,10 +80,11 @@
       "is_named_network": true,
       "default_visible": false,
       "min_marker_zoom": 8,
-      "color": "#147b8f",
+      "color": "#f58220",
       "short": "E+",
       "mark": "Eyecare+",
-      "marker_width": 52,
+      "logo": "assets/logo-eyecare-plus.svg",
+      "marker_width": 66,
       "source_folders": ["eyecare-plus"]
     },
     {
@@ -93,10 +95,11 @@
       "is_named_network": true,
       "default_visible": false,
       "min_marker_zoom": 8,
-      "color": "#7c3fa1",
+      "color": "#174878",
       "short": "OSS",
       "mark": "Optical Superstore",
-      "marker_width": 66,
+      "logo": "assets/logo-optical-superstore.svg",
+      "marker_width": 70,
       "source_folders": ["optical-superstore"]
     },
     {
@@ -107,10 +110,11 @@
       "is_named_network": true,
       "default_visible": false,
       "min_marker_zoom": 8,
-      "color": "#135c9e",
+      "color": "#111111",
       "short": "1001",
       "mark": "1001",
-      "marker_width": 42,
+      "logo": "assets/logo-1001-optometry.svg",
+      "marker_width": 54,
       "source_folders": ["1001-optometry"]
     },
     {
@@ -121,10 +125,11 @@
       "is_named_network": true,
       "default_visible": false,
       "min_marker_zoom": 8,
-      "color": "#254f72",
+      "color": "#1672b9",
       "short": "EyeQ",
       "mark": "EyeQ",
-      "marker_width": 44,
+      "logo": "assets/logo-eyeq-optometrists.svg",
+      "marker_width": 56,
       "source_folders": ["eyeq-optometrists"]
     },
     {
@@ -135,10 +140,11 @@
       "is_named_network": true,
       "default_visible": false,
       "min_marker_zoom": 8,
-      "color": "#6a0f6a",
+      "color": "#174f87",
       "short": "L&P",
       "mark": "L&P",
-      "marker_width": 42,
+      "logo": "assets/logo-laubman-and-pank.svg",
+      "marker_width": 68,
       "source_folders": ["laubman-and-pank"]
     },
     {
