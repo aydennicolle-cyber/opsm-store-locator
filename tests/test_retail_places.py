@@ -422,6 +422,43 @@ class RetailPlaceTests(unittest.TestCase):
             places["place-au-nsw-bondi-junction-eastgate"]["aliases"],
         )
 
+    def test_current_pacific_casula_richmond_and_grove_names_preserve_stable_ids(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        expected = {
+            "place-au-nsw-pacific-square-shopping-centre": (
+                "Pacific Square",
+                "737 Anzac Parade",
+                "Maroubra",
+                "2035",
+            ),
+            "place-au-nsw-casula-mall": ("Casula Mall", "1 Ingham Drive", "Casula", "2170"),
+            "place-au-nsw-richmond-marketplace": (
+                "Richmond Marketplace",
+                "78 March Street",
+                "Richmond",
+                "2753",
+            ),
+            "place-au-nsw-grove-square": (
+                "Grove Square - The Hills",
+                "375-383 Windsor Road",
+                "Baulkham Hills",
+                "2153",
+            ),
+        }
+        for place_id, (name, address, locality, postcode) in expected.items():
+            with self.subTest(place_id=place_id):
+                place = places[place_id]
+                self.assertEqual(place["name"], name)
+                self.assertEqual(place["address"], address)
+                self.assertEqual(place["locality"], locality)
+                self.assertEqual(place["postcode"], postcode)
+                self.assertEqual(place["location_setting"], "Shopping Centre")
+
+        self.assertIn(
+            "Stockland Baulkham Hills Shopping Centre",
+            places["place-au-nsw-grove-square"]["aliases"],
+        )
+
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, expected_name in {

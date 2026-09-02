@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T03:40:54.401157+00:00",
+  "generated_at": "2026-09-02T03:44:46.438495+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 122,
-    "relationship_count": 821,
-    "active_relationship_count": 819,
+    "group_count": 124,
+    "relationship_count": 837,
+    "active_relationship_count": 835,
     "shopping_centre_count": 584,
-    "researched_property_count": 249,
-    "classed_property_count": 239,
+    "researched_property_count": 253,
+    "classed_property_count": 243,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -2090,6 +2090,42 @@
         "RP6",
         "Retail Partnership No6"
       ]
+    },
+    {
+      "group_id": "group-dexus-wholesale-australian-property-fund",
+      "canonical_name": "Dexus Wholesale Australian Property Fund",
+      "parent_group_id": "group-dexus",
+      "brand_name": "DWAPF",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.dexus.com/investing/funds/dexus-wholesale-australian-property-fund-dwapf.html",
+      "status": "Active",
+      "source_url": "https://www.dexus.com/investing/properties/casula-mall-1-ingham-drive-casula.html",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Dexus Wholesale Australian Property Fund",
+        "DWAPF",
+        "Dexus Wholesale Australian Property Fund (DWAPF)"
+      ]
+    },
+    {
+      "group_id": "group-mintus-grove-square-trust",
+      "canonical_name": "Mintus Investments Pty Ltd ATF The Retail Investment Trust 4",
+      "parent_group_id": "group-mintus",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.mintus.com.au/",
+      "status": "Active",
+      "source_url": "https://grovesquare.com.au/privacy-policy/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Mintus Investments Pty Ltd ATF The Retail Investment Trust 4",
+        "Mintus Investments Pty Ltd",
+        "The Retail Investment Trust 4"
+      ]
     }
   ],
   "group_alias_index": {
@@ -2330,7 +2366,13 @@
     "westlandsunittrust": "group-westlands-unit-trust",
     "thetrusteeforwestlandsunittrust": "group-westlands-unit-trust",
     "retailpartnershipno6": "group-charter-hall-rp6",
-    "rp6": "group-charter-hall-rp6"
+    "rp6": "group-charter-hall-rp6",
+    "dexuswholesaleaustralianpropertyfund": "group-dexus-wholesale-australian-property-fund",
+    "dwapf": "group-dexus-wholesale-australian-property-fund",
+    "dexuswholesaleaustralianpropertyfunddwapf": "group-dexus-wholesale-australian-property-fund",
+    "mintusinvestmentsptyltdatftheretailinvestmenttrust4": "group-mintus-grove-square-trust",
+    "mintusinvestmentsptyltd": "group-mintus-grove-square-trust",
+    "theretailinvestmenttrust4": "group-mintus-grove-square-trust"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -15469,6 +15511,262 @@
       "confidence": "High",
       "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent casual and vacant-shop leasing through Charter Hall",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-rp6-pacific-square-owner-owner",
+      "place_id": "place-au-nsw-pacific-square-shopping-centre",
+      "group_id": "group-charter-hall-rp6",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Pacific-Square-Shopping-Centre",
+      "source_type": "Official current fund ownership and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall identifies 100 percent RP6 fund ownership for the current Convenience Plus centre",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-pacific-square-management-manager",
+      "place_id": "place-au-nsw-pacific-square-shopping-centre",
+      "group_id": "group-charter-hall",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.pacificsquare.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-pacific-square-management-operator",
+      "place_id": "place-au-nsw-pacific-square-shopping-centre",
+      "group_id": "group-charter-hall",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.pacificsquare.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-pacific-square-management-leasing_controller",
+      "place_id": "place-au-nsw-pacific-square-shopping-centre",
+      "group_id": "group-charter-hall",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.pacificsquare.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-pacific-square-casual-leasing-external_leasing_agent",
+      "place_id": "place-au-nsw-pacific-square-shopping-centre",
+      "group_id": "group-jll",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.pacificsquare.com.au/lease-here",
+      "source_type": "Official current venue leasing appointment",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue appoints JLL for casual mall leasing only while Charter Hall retains permanent leasing control",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-dwapf-casula-mall-owner-owner",
+      "place_id": "place-au-nsw-casula-mall",
+      "group_id": "group-dexus-wholesale-australian-property-fund",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.dexus.com/investing/properties/casula-mall-1-ingham-drive-casula.html",
+      "source_type": "Official current fund and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Dexus identifies Casula Mall as a DWAPF asset and its current fund profile reports full ownership",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-dexus-casula-mall-management-manager",
+      "place_id": "place-au-nsw-casula-mall",
+      "group_id": "group-dexus",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.dexus.com/leasing/retail/properties/Casula-Mall.html",
+      "source_type": "Official current property and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Dexus publishes operates and directly handles leasing for the current centre profile",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-dexus-casula-mall-management-operator",
+      "place_id": "place-au-nsw-casula-mall",
+      "group_id": "group-dexus",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.dexus.com/leasing/retail/properties/Casula-Mall.html",
+      "source_type": "Official current property and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Dexus publishes operates and directly handles leasing for the current centre profile",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-dexus-casula-mall-management-leasing_controller",
+      "place_id": "place-au-nsw-casula-mall",
+      "group_id": "group-dexus",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.dexus.com/leasing/retail/properties/Casula-Mall.html",
+      "source_type": "Official current property and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Dexus publishes operates and directly handles leasing for the current centre profile",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ifm-richmond-marketplace-management-manager",
+      "place_id": "place-au-nsw-richmond-marketplace",
+      "group_id": "group-ifm-investors",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/richmond-marketplace/",
+      "source_type": "Official current manager portfolio and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "IFM publishes the current asset profile direct leasing pathway and a 100 percent unnamed fund stake; the legal owning vehicle is not named on the profile",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ifm-richmond-marketplace-management-operator",
+      "place_id": "place-au-nsw-richmond-marketplace",
+      "group_id": "group-ifm-investors",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/richmond-marketplace/",
+      "source_type": "Official current manager portfolio and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "IFM publishes the current asset profile direct leasing pathway and a 100 percent unnamed fund stake; the legal owning vehicle is not named on the profile",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ifm-richmond-marketplace-management-leasing_controller",
+      "place_id": "place-au-nsw-richmond-marketplace",
+      "group_id": "group-ifm-investors",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/richmond-marketplace/",
+      "source_type": "Official current manager portfolio and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "IFM publishes the current asset profile direct leasing pathway and a 100 percent unnamed fund stake; the legal owning vehicle is not named on the profile",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mintus-grove-square-owner-owner",
+      "place_id": "place-au-nsw-grove-square",
+      "group_id": "group-mintus-grove-square-trust",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://grovesquare.com.au/privacy-policy/",
+      "source_type": "Official current venue ownership statement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue privacy policy identifies Mintus Investments Pty Ltd as trustee for The Retail Investment Trust 4 and legal owner of Grove Square",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mintus-grove-square-management-manager",
+      "place_id": "place-au-nsw-grove-square",
+      "group_id": "group-mintus",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://grovesquare.com.au/contact-us/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies Mintus as operator manager and controller of permanent and casual leasing and the Mintus asset profile lists three supermarkets plus 80 specialty stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mintus-grove-square-management-operator",
+      "place_id": "place-au-nsw-grove-square",
+      "group_id": "group-mintus",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://grovesquare.com.au/contact-us/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies Mintus as operator manager and controller of permanent and casual leasing and the Mintus asset profile lists three supermarkets plus 80 specialty stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mintus-grove-square-management-leasing_controller",
+      "place_id": "place-au-nsw-grove-square",
+      "group_id": "group-mintus",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://grovesquare.com.au/contact-us/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies Mintus as operator manager and controller of permanent and casual leasing and the Mintus asset profile lists three supermarkets plus 80 specialty stores",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -23567,6 +23865,190 @@
       "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent casual and vacant-shop leasing through Charter Hall",
       "match_status": "Matched",
       "matched_place_id": "place-au-nsw-morisset-square"
+    },
+    {
+      "portfolio_asset_id": "rp6-pacific-square-owner",
+      "group_id": "group-charter-hall-rp6",
+      "canonical_name": "Pacific Square",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Pacific Square Shopping Centre",
+      "preferred_place_id": "place-au-nsw-pacific-square-shopping-centre",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "13710",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Pacific-Square-Shopping-Centre",
+      "source_type": "Official current fund ownership and property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall identifies 100 percent RP6 fund ownership for the current Convenience Plus centre",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-pacific-square-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "charter-hall-pacific-square-management",
+      "group_id": "group-charter-hall",
+      "canonical_name": "Pacific Square",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Pacific Square Shopping Centre",
+      "preferred_place_id": "place-au-nsw-pacific-square-shopping-centre",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "13710",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.pacificsquare.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-pacific-square-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "jll-pacific-square-casual-leasing",
+      "group_id": "group-jll",
+      "canonical_name": "Pacific Square",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Pacific Square Shopping Centre",
+      "preferred_place_id": "place-au-nsw-pacific-square-shopping-centre",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.pacificsquare.com.au/lease-here",
+      "source_type": "Official current venue leasing appointment",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue appoints JLL for casual mall leasing only while Charter Hall retains permanent leasing control",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-pacific-square-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "dwapf-casula-mall-owner",
+      "group_id": "group-dexus-wholesale-australian-property-fund",
+      "canonical_name": "Casula Mall",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-casula-mall",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.dexus.com/investing/properties/casula-mall-1-ingham-drive-casula.html",
+      "source_type": "Official current fund and property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Dexus identifies Casula Mall as a DWAPF asset and its current fund profile reports full ownership",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-casula-mall"
+    },
+    {
+      "portfolio_asset_id": "dexus-casula-mall-management",
+      "group_id": "group-dexus",
+      "canonical_name": "Casula Mall",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-casula-mall",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "20025",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.dexus.com/leasing/retail/properties/Casula-Mall.html",
+      "source_type": "Official current property and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Dexus publishes operates and directly handles leasing for the current centre profile",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-casula-mall"
+    },
+    {
+      "portfolio_asset_id": "ifm-richmond-marketplace-management",
+      "group_id": "group-ifm-investors",
+      "canonical_name": "Richmond Marketplace",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-richmond-marketplace",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "18685",
+      "tenancy_count": "58",
+      "annual_visits_m": "",
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/richmond-marketplace/",
+      "source_type": "Official current manager portfolio and leasing profile",
+      "source_date": "2026-06-30",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "IFM publishes the current asset profile direct leasing pathway and a 100 percent unnamed fund stake; the legal owning vehicle is not named on the profile",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-richmond-marketplace"
+    },
+    {
+      "portfolio_asset_id": "mintus-grove-square-owner",
+      "group_id": "group-mintus-grove-square-trust",
+      "canonical_name": "Grove Square - The Hills",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Grove Square|Stockland Baulkham Hills Shopping Centre",
+      "preferred_place_id": "place-au-nsw-grove-square",
+      "roles": "OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "83",
+      "annual_visits_m": "",
+      "source_url": "https://grovesquare.com.au/privacy-policy/",
+      "source_type": "Official current venue ownership statement",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue privacy policy identifies Mintus Investments Pty Ltd as trustee for The Retail Investment Trust 4 and legal owner of Grove Square",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-grove-square"
+    },
+    {
+      "portfolio_asset_id": "mintus-grove-square-management",
+      "group_id": "group-mintus",
+      "canonical_name": "Grove Square - The Hills",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Grove Square|Stockland Baulkham Hills Shopping Centre",
+      "preferred_place_id": "place-au-nsw-grove-square",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "83",
+      "annual_visits_m": "",
+      "source_url": "https://grovesquare.com.au/contact-us/",
+      "source_type": "Official current venue management and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue identifies Mintus as operator manager and controller of permanent and casual leasing and the Mintus asset profile lists three supermarkets plus 80 specialty stores",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-grove-square"
     }
   ],
   "property_summaries": {
@@ -44108,37 +44590,71 @@
     },
     "place-au-nsw-casula-mall": {
       "place_id": "place-au-nsw-casula-mall",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-casula-mall",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.dexus.com/leasing/retail/properties/Casula-Mall.html",
+        "source_type": "Official current manager and leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from 20025 square metres of centre size and the Kmart Coles and Aldi anchor mix"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-casula-mall",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.dexus.com/investing/properties/casula-mall-1-ingham-drive-casula.html",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Dexus sources confirm 100 percent DWAPF ownership Dexus management direct leasing a defensible inferred sub-regional class and current public centre metrics"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-dwapf-casula-mall-owner-owner",
+        "rel-portfolio-dexus-casula-mall-management-manager",
+        "rel-portfolio-dexus-casula-mall-management-operator",
+        "rel-portfolio-dexus-casula-mall-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-dexus",
+        "group-dexus-wholesale-australian-property-fund"
+      ],
+      "owner_names": [
+        "Dexus Wholesale Australian Property Fund"
+      ],
+      "manager_names": [
+        "Dexus"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
+      "portfolio_overlap_status": "LEASING_CONTROLLER_OVERLAP",
+      "portfolio_overlap_groups": [
+        {
+          "group_id": "group-dexus",
+          "canonical_name": "Dexus",
+          "role": "LEASING_CONTROLLER",
+          "bailey_property_count": 3,
+          "bailey_store_count": 3
+        },
+        {
+          "group_id": "group-dexus",
+          "canonical_name": "Dexus",
+          "role": "MANAGER",
+          "bailey_property_count": 3,
+          "bailey_store_count": 3
+        },
+        {
+          "group_id": "group-dexus",
+          "canonical_name": "Dexus",
+          "role": "OPERATOR",
+          "bailey_property_count": 3,
+          "bailey_store_count": 3
+        }
+      ],
+      "portfolio_white_space": true,
       "nearest_bailey_km": 20.92,
       "competitor_context": {
         "by_retailer": {
@@ -44171,7 +44687,10 @@
         "median_household_income": 923,
         "age_45_plus_pct": 38.1,
         "retail_businesses": 112
-      }
+      },
+      "gla_sqm": 20025.0,
+      "source_url": "https://www.dexus.com/leasing/retail/properties/Casula-Mall.html",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-cessnock-plaza-shopping-centre": {
       "place_id": "place-au-nsw-cessnock-plaza-shopping-centre",
@@ -46169,35 +46688,47 @@
     },
     "place-au-nsw-grove-square": {
       "place_id": "place-au-nsw-grove-square",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-grove-square",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.mintus.com.au/project/grove-square-the-hills/",
+        "source_type": "Official current owner and manager asset profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from the three-supermarket anchor mix and 80 specialty stores; Mintus does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-grove-square",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://grovesquare.com.au/privacy-policy/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Mintus and venue sources confirm the legal owner in-house management direct leasing a defensible inferred sub-regional class current name address and public tenant metrics"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-mintus-grove-square-owner-owner",
+        "rel-portfolio-mintus-grove-square-management-manager",
+        "rel-portfolio-mintus-grove-square-management-operator",
+        "rel-portfolio-mintus-grove-square-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-mintus",
+        "group-mintus-grove-square-trust"
+      ],
+      "owner_names": [
+        "Mintus Investments Pty Ltd ATF The Retail Investment Trust 4"
+      ],
+      "manager_names": [
+        "Mintus Pty Ltd"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 3.53,
@@ -46232,7 +46763,10 @@
         "median_household_income": 1352,
         "age_45_plus_pct": 39.1,
         "retail_businesses": 133
-      }
+      },
+      "tenancy_count": 83,
+      "source_url": "https://grovesquare.com.au/privacy-policy/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-hcf-eyecare-centres": {
       "place_id": "place-au-nsw-hcf-eyecare-centres",
@@ -48903,35 +49437,49 @@
     },
     "place-au-nsw-pacific-square-shopping-centre": {
       "place_id": "place-au-nsw-pacific-square-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Neighbourhood",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-pacific-square-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Neighbourhood",
+        "classification_method": "Inferred",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Pacific-Square-Shopping-Centre",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Neighbourhood format inferred from the official Convenience Plus grade 13710 square metres of NLA and two-supermarket retail mix"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-pacific-square-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Pacific-Square-Shopping-Centre",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Charter Hall sources confirm 100 percent RP6 ownership Charter Hall management permanent leasing a defensible inferred neighbourhood class and current public centre metrics; JLL handles casual mall leasing"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-rp6-pacific-square-owner-owner",
+        "rel-portfolio-charter-hall-pacific-square-management-manager",
+        "rel-portfolio-charter-hall-pacific-square-management-operator",
+        "rel-portfolio-charter-hall-pacific-square-management-leasing_controller",
+        "rel-portfolio-jll-pacific-square-casual-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-charter-hall",
+        "group-charter-hall-rp6",
+        "group-jll"
+      ],
+      "owner_names": [
+        "Retail Partnership No.6"
+      ],
+      "manager_names": [
+        "Charter Hall"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 1.43,
@@ -49005,7 +49553,10 @@
         "median_household_income": 1350,
         "age_45_plus_pct": 38.3,
         "retail_businesses": 55
-      }
+      },
+      "gla_sqm": 13710.0,
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Pacific-Square-Shopping-Centre",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-park-beach-plaza": {
       "place_id": "place-au-nsw-park-beach-plaza",
@@ -49350,32 +49901,40 @@
     },
     "place-au-nsw-richmond-marketplace": {
       "place_id": "place-au-nsw-richmond-marketplace",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-richmond-marketplace",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/richmond-marketplace/",
+        "source_type": "Official current manager portfolio profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "IFM explicitly classifies Richmond Marketplace as a sub-regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-richmond-marketplace",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/richmond-marketplace/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current IFM evidence confirms management direct leasing a confirmed sub-regional class and current public centre metrics; the profile reports a 100 percent fund stake without naming the legal owning vehicle"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-ifm-richmond-marketplace-management-manager",
+        "rel-portfolio-ifm-richmond-marketplace-management-operator",
+        "rel-portfolio-ifm-richmond-marketplace-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-ifm-investors"
+      ],
       "owner_names": [],
-      "manager_names": [],
+      "manager_names": [
+        "IFM Investors"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -49424,7 +49983,11 @@
         "median_household_income": 1009,
         "age_45_plus_pct": 44.1,
         "retail_businesses": 111
-      }
+      },
+      "gla_sqm": 18685.0,
+      "tenancy_count": 58,
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/richmond-marketplace/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-riverside-plaza-queanbeyan": {
       "place_id": "place-au-nsw-riverside-plaza-queanbeyan",
@@ -117316,7 +117879,7 @@
     },
     "group-dexus": {
       "group_id": "group-dexus",
-      "property_count": 5,
+      "property_count": 6,
       "bailey_property_count": 3,
       "bailey_store_count": 3,
       "bailey_property_ids": [
@@ -117325,6 +117888,11 @@
         "place-nz-bay-of-plenty-bayfair-shopping-centre"
       ],
       "asset_roles": {
+        "place-au-nsw-casula-mall": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-nsw-royal-randwick-shopping-centre": [
           "LEASING_CONTROLLER",
           "MANAGER",
@@ -117349,6 +117917,7 @@
         ]
       },
       "white_space_property_ids": [
+        "place-au-nsw-casula-mall",
         "place-au-nsw-royal-randwick-shopping-centre",
         "place-au-wa-clarkson-ocean-keys-shopping-centre"
       ]
@@ -117725,7 +118294,7 @@
     },
     "group-charter-hall": {
       "group_id": "group-charter-hall",
-      "property_count": 14,
+      "property_count": 15,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -117781,6 +118350,11 @@
           "OPERATOR"
         ],
         "place-au-nsw-orange-central-square": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-nsw-pacific-square-shopping-centre": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
@@ -118248,7 +118822,7 @@
     },
     "group-jll": {
       "group_id": "group-jll",
-      "property_count": 14,
+      "property_count": 15,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -118267,6 +118841,9 @@
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
+        ],
+        "place-au-nsw-pacific-square-shopping-centre": [
+          "EXTERNAL_LEASING_AGENT"
         ],
         "place-au-nsw-roselands-shopping-centre": [
           "EXTERNAL_LEASING_AGENT"
@@ -118851,11 +119428,16 @@
     },
     "group-ifm-investors": {
       "group_id": "group-ifm-investors",
-      "property_count": 4,
+      "property_count": 5,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-richmond-marketplace": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-nsw-southgate-shopping-centre": [
           "LEASING_CONTROLLER",
           "MANAGER",
@@ -119021,12 +119603,17 @@
     },
     "group-mintus": {
       "group_id": "group-mintus",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
         "place-au-nsw-ashfield-mall": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-nsw-grove-square": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
@@ -119694,7 +120281,7 @@
     },
     "group-charter-hall-rp6": {
       "group_id": "group-charter-hall-rp6",
-      "property_count": 2,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -119703,6 +120290,35 @@
           "OWNER"
         ],
         "place-au-nsw-bondi-junction-eastgate": [
+          "OWNER"
+        ],
+        "place-au-nsw-pacific-square-shopping-centre": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-dexus-wholesale-australian-property-fund": {
+      "group_id": "group-dexus-wholesale-australian-property-fund",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-casula-mall": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-mintus-grove-square-trust": {
+      "group_id": "group-mintus-grove-square-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-grove-square": [
           "OWNER"
         ]
       },
@@ -132113,7 +132729,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -132127,11 +132743,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 20.92,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-dexus",
+            "group-dexus-wholesale-australian-property-fund"
+          ],
+          "overlap_status": "LEASING_CONTROLLER_OVERLAP"
         }
       }
     },
@@ -133193,7 +133812,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -133207,11 +133826,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 3.53,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-mintus",
+            "group-mintus-grove-square-trust"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -134589,7 +135211,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Neighbourhood"
         }
       },
       "accessibility": {
@@ -134603,11 +135225,15 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 1.43,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-charter-hall",
+            "group-charter-hall-rp6",
+            "group-jll"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -134776,7 +135402,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -134790,10 +135416,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 27.54,
-          "group_ids": [],
+          "group_ids": [
+            "group-ifm-investors"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }

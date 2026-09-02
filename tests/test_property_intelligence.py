@@ -899,6 +899,54 @@ class PropertyIntelligenceTests(unittest.TestCase):
             self.assertIn("group-jll", self.payload["property_summaries"][place_id]["group_ids"])
         self.assertNotIn("group-jll", self.payload["property_summaries"]["place-au-nsw-morisset-square"]["group_ids"])
 
+    def test_current_pacific_casula_richmond_and_grove_roles_are_explicit(self) -> None:
+        groups = {group["group_id"]: group for group in self.groups}
+        self.assertEqual(
+            groups["group-dexus-wholesale-australian-property-fund"]["brand_name"],
+            "DWAPF",
+        )
+        self.assertEqual(
+            groups["group-mintus-grove-square-trust"]["parent_group_id"],
+            "group-mintus",
+        )
+
+        pacific = self.payload["property_summaries"]["place-au-nsw-pacific-square-shopping-centre"]
+        self.assertEqual(pacific["research_status"], "Verified")
+        self.assertEqual(pacific["centre_class"], "Neighbourhood")
+        self.assertEqual(pacific["owner_names"], ["Retail Partnership No.6"])
+        self.assertEqual(pacific["manager_names"], ["Charter Hall"])
+        self.assertEqual(pacific["leasing_arrangement"], "External agency")
+        self.assertEqual(pacific["gla_sqm"], 13710)
+        self.assertIn("group-jll", pacific["group_ids"])
+
+        casula = self.payload["property_summaries"]["place-au-nsw-casula-mall"]
+        self.assertEqual(casula["research_status"], "Verified")
+        self.assertEqual(casula["centre_class"], "Sub-regional")
+        self.assertEqual(casula["owner_names"], ["Dexus Wholesale Australian Property Fund"])
+        self.assertEqual(casula["manager_names"], ["Dexus"])
+        self.assertEqual(casula["leasing_arrangement"], "In-house")
+        self.assertEqual(casula["gla_sqm"], 20025)
+
+        richmond = self.payload["property_summaries"]["place-au-nsw-richmond-marketplace"]
+        self.assertEqual(richmond["research_status"], "Partial")
+        self.assertEqual(richmond["centre_class"], "Sub-regional")
+        self.assertEqual(richmond["owner_names"], [])
+        self.assertEqual(richmond["manager_names"], ["IFM Investors"])
+        self.assertEqual(richmond["leasing_arrangement"], "In-house")
+        self.assertEqual(richmond["gla_sqm"], 18685)
+        self.assertEqual(richmond["tenancy_count"], 58)
+
+        grove = self.payload["property_summaries"]["place-au-nsw-grove-square"]
+        self.assertEqual(grove["research_status"], "Verified")
+        self.assertEqual(grove["centre_class"], "Sub-regional")
+        self.assertEqual(
+            grove["owner_names"],
+            ["Mintus Investments Pty Ltd ATF The Retail Investment Trust 4"],
+        )
+        self.assertEqual(grove["manager_names"], ["Mintus Pty Ltd"])
+        self.assertEqual(grove["leasing_arrangement"], "In-house")
+        self.assertEqual(grove["tenancy_count"], 83)
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})
