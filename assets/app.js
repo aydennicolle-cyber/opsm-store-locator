@@ -1576,6 +1576,8 @@
           <div><strong>${formatNumber(propertyHealth.counts?.researched_centres || 0)}</strong><span>centres researched</span></div>
           <div><strong>${formatNumber(propertyHealth.counts?.researched_bailey_centres || 0)}/${formatNumber(propertyHealth.counts?.bailey_centres || 0)}</strong><span>Bailey centres researched</span></div>
           <div><strong>${formatNumber(propertyHealth.counts?.classed_bailey_centres || 0)}/${formatNumber(propertyHealth.counts?.bailey_centres || 0)}</strong><span>Bailey centres classed</span></div>
+          <div><strong>${formatNumber(propertyHealth.counts?.unmatched_active_portfolio_assets || 0)}</strong><span>active portfolio reviews</span></div>
+          <div><strong>${formatNumber(propertyHealth.counts?.development_assets || 0)}</strong><span>monitored developments</span></div>
           <div><strong>${formatNumber(propertyHealth.counts?.conflicts || 0)}</strong><span>relationship conflicts</span></div>
         </div>
         <p>${escapeHtml(propertyHealth.coverage_statement || "Property relationship coverage is reported separately.")}</p>

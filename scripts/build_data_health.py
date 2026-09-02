@@ -269,6 +269,8 @@ def main() -> None:
                 "classed_bailey_centres": len(classed_bailey_centres),
                 "conflicts": len(property_conflicts),
                 "review_items": len(property_intelligence.get("review_items", [])),
+                "development_assets": property_intelligence.get("metadata", {}).get("development_asset_count", 0),
+                "unmatched_active_portfolio_assets": property_intelligence.get("metadata", {}).get("unmatched_active_portfolio_count", 0),
             },
             "freshness_policy_days": {"ownership_management": 180, "leasing_agency": 90},
         },

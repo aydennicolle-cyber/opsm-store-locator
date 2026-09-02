@@ -824,6 +824,21 @@ class RetailPlaceTests(unittest.TestCase):
                 "210 Pitt Street",
                 "2000",
             ),
+            "place-au-nsw-stockland-gables": (
+                "Stockland Gables",
+                "4 Lakefront Crescent",
+                "2765",
+            ),
+            "place-au-qld-stockland-providence": (
+                "Stockland Providence",
+                "7004 Barrams Road",
+                "4306",
+            ),
+            "place-au-wa-stockland-sienna-wood-shopping-centre": (
+                "Stockland Sienna Wood Shopping Centre",
+                "10 Daintree Street",
+                "6112",
+            ),
         }.items():
             with self.subTest(place_id=place_id):
                 place = places[place_id]

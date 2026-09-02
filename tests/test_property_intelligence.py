@@ -68,7 +68,10 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(self.payload["group_portfolios"]["group-scentre"]["property_count"], 42)
         north_rocks = "place-au-nsw-north-rocks-shopping-centre"
         self.assertFalse(any(row["group_id"] == "group-scentre" and row["place_id"] == north_rocks for row in self.relationships))
-        unmatched = [row for row in assets if row["match_status"] != "Matched"]
+        unmatched = [
+            row for row in assets
+            if row["status"] == "ACTIVE" and row["match_status"] != "Matched"
+        ]
         review_ids = {row["review_id"] for row in self.payload["review_items"]}
         self.assertTrue(unmatched)
         self.assertTrue(all(f"review-portfolio-{row['portfolio_asset_id']}" in review_ids for row in unmatched))
@@ -80,9 +83,17 @@ class PropertyIntelligenceTests(unittest.TestCase):
 
         stockland = [row for row in assets if row["group_id"] == "group-stockland"]
         self.assertEqual(len(stockland), 20)
-        self.assertEqual(sum(row["match_status"] == "Matched" for row in stockland), 15)
-        self.assertEqual(sum(row["match_status"] != "Matched" for row in stockland), 5)
-        self.assertEqual(self.payload["group_portfolios"]["group-stockland"]["property_count"], 15)
+        self.assertEqual(sum(row["match_status"] == "Matched" for row in stockland), 18)
+        self.assertEqual(sum(row["match_status"] == "Unmatched" for row in stockland), 1)
+        self.assertEqual(sum(row["match_status"] == "Development" for row in stockland), 1)
+        self.assertEqual(self.payload["group_portfolios"]["group-stockland"]["property_count"], 18)
+        self.assertEqual(self.payload["metadata"]["unmatched_active_portfolio_count"], 1)
+        self.assertEqual(self.payload["metadata"]["development_asset_count"], 1)
+        self.assertEqual(
+            {row["portfolio_asset_id"] for row in self.payload["development_leads"]},
+            {"stockland-fy26-aura-stage-1"},
+        )
+        self.assertNotIn("review-portfolio-stockland-fy26-aura-stage-1", review_ids)
 
     def test_centre_class_inference_uses_two_official_measures(self) -> None:
         inferred = [
@@ -1351,6 +1362,33 @@ class PropertyIntelligenceTests(unittest.TestCase):
         review_ids = {item["review_id"] for item in self.payload["review_items"]}
         self.assertNotIn("review-portfolio-stockland-fy26-baringa", review_ids)
         self.assertNotIn("review-portfolio-stockland-fy26-piccadilly", review_ids)
+
+    def test_newly_open_stockland_centres_are_canonical_and_reconciled(self) -> None:
+        expected = {
+            "place-au-nsw-stockland-gables": ("Neighbourhood", 9342, {"CO_OWNER"}),
+            "place-au-qld-stockland-providence": ("Neighbourhood", 9200, {"CO_OWNER", "LEASING_CONTROLLER"}),
+            "place-au-wa-stockland-sienna-wood-shopping-centre": ("Neighbourhood", 6093, {"CO_OWNER"}),
+        }
+        for place_id, (centre_class, gla, expected_roles) in expected.items():
+            with self.subTest(place_id=place_id):
+                summary = self.payload["property_summaries"][place_id]
+                self.assertEqual(summary["research_status"], "Partial")
+                self.assertEqual(summary["centre_class"], centre_class)
+                self.assertEqual(summary["centre_class_method"], "Confirmed")
+                self.assertEqual(summary["owner_names"], ["Stockland"])
+                self.assertEqual(summary["gla_sqm"], gla)
+                roles = {
+                    row["role"] for row in self.relationships
+                    if row["place_id"] == place_id and row["group_id"] == "group-stockland"
+                }
+                self.assertEqual(roles, expected_roles)
+        self.assertEqual(
+            self.payload["property_summaries"]["place-au-qld-stockland-providence"]["leasing_arrangement"],
+            "In-house",
+        )
+        review_ids = {item["review_id"] for item in self.payload["review_items"]}
+        for asset_id in ("gables", "providence", "sienna-wood"):
+            self.assertNotIn(f"review-portfolio-stockland-fy26-{asset_id}", review_ids)
 
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]

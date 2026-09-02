@@ -322,7 +322,7 @@ def load_portfolio_assets(places: dict[str, dict], groups: dict[str, dict]) -> t
         asset["source_url"] = require_url(asset.get("source_url", ""), f"{asset_id}.source_url")
         parse_date(asset.get("source_date", ""), f"{asset_id}.source_date", True)
         parse_date(asset.get("last_verified_at", ""), f"{asset_id}.last_verified_at", True)
-        if asset.get("confidence") not in CONFIDENCE or asset.get("status") not in {"ACTIVE", "RETIRED"}:
+        if asset.get("confidence") not in CONFIDENCE or asset.get("status") not in {"ACTIVE", "RETIRED", "DEVELOPMENT"}:
             raise ValueError(f"Invalid portfolio asset status/confidence: {asset_id}")
         roles = [role for role in asset.get("roles", "").split("|") if role]
         if not roles or any(role not in ROLES for role in roles):
@@ -334,6 +334,14 @@ def load_portfolio_assets(places: dict[str, dict], groups: dict[str, dict]) -> t
                     raise ValueError
             except ValueError as error:
                 raise ValueError(f"Invalid portfolio ownership percentage: {asset_id}") from error
+
+        # Preserve future retail projects as public portfolio intelligence without
+        # treating them as operating centres or failed canonical-place matches.
+        if asset["status"] == "DEVELOPMENT":
+            asset["match_status"] = "Development"
+            asset["matched_place_id"] = ""
+            assets.append(asset)
+            continue
 
         preferred = asset.get("preferred_place_id", "")
         candidates = [preferred] if preferred and preferred in places else []
@@ -766,6 +774,11 @@ def main() -> None:
 
     shopping_centres = [place for place in places.values() if place.get("place_type") == "Shopping Centre"]
     relationship_conflicts = [item for item in research.values() if item["research_status"] == "Conflict"]
+    development_leads = [item for item in portfolio_assets if item.get("match_status") == "Development"]
+    unmatched_active_assets = [
+        item for item in portfolio_assets
+        if item.get("status") == "ACTIVE" and item.get("match_status") != "Matched"
+    ]
     metadata = {
         "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
         "group_count": len(groups),
@@ -775,6 +788,8 @@ def main() -> None:
         "researched_property_count": sum(summaries[item["place_id"]]["research_status"] != "Not researched" for item in shopping_centres),
         "classed_property_count": sum(summaries[item["place_id"]]["centre_class"] != "Unknown" for item in shopping_centres),
         "conflict_count": len(relationship_conflicts),
+        "development_asset_count": len(development_leads),
+        "unmatched_active_portfolio_count": len(unmatched_active_assets),
         "unknown_is_valid": True,
         "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
         "portfolio_overlap_note": "Portfolio overlap is derived from public tenancy and property-group evidence; it is not proof of a private commercial relationship.",
@@ -791,6 +806,7 @@ def main() -> None:
         "property_summaries": summaries,
         "group_portfolios": group_portfolios,
         "feature_vectors": feature_vectors,
+        "development_leads": development_leads,
         "review_items": reviews,
     }
     OUTPUT_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
