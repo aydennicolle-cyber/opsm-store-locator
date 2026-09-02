@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T03:02:46.790617+00:00",
+  "generated_at": "2026-09-02T03:07:06.061058+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 100,
-    "relationship_count": 721,
-    "active_relationship_count": 719,
+    "group_count": 104,
+    "relationship_count": 734,
+    "active_relationship_count": 732,
     "shopping_centre_count": 586,
-    "researched_property_count": 226,
-    "classed_property_count": 216,
+    "researched_property_count": 229,
+    "classed_property_count": 219,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -1708,6 +1708,74 @@
         "Greenpool Management Co",
         "Greenpool Management Co. Pty Ltd"
       ]
+    },
+    {
+      "group_id": "group-sentinel-casuarina-fund",
+      "canonical_name": "Casuarina Investment Fund",
+      "parent_group_id": "group-sentinel-property",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.sentinelpg.com.au/property-trusts/sentinel-casuarina-investment-fund-trust/",
+      "status": "Active",
+      "source_url": "https://www.sentinelpg.com.au/property-trusts/sentinel-casuarina-investment-fund-trust/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Casuarina Investment Fund",
+        "Sentinel Casuarina Investment Fund"
+      ]
+    },
+    {
+      "group_id": "group-tgc-retail",
+      "canonical_name": "TGC Retail",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "CENTRE_OPERATOR",
+      "country_scope": "Australia",
+      "official_url": "https://www.tgretail.com.au/",
+      "status": "Active",
+      "source_url": "https://www.tgretail.com.au/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "TGC Retail",
+        "TGC Retail Pty Ltd"
+      ]
+    },
+    {
+      "group_id": "group-united-property-services",
+      "canonical_name": "United Property Services",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "EXTERNAL_AGENCY",
+      "country_scope": "Australia",
+      "official_url": "https://unitedpropertyservices.com.au/",
+      "status": "Active",
+      "source_url": "https://unitedpropertyservices.com.au/wp-content/uploads/2025/07/Winston-Hills-Mall-Brochure.pdf",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "United Property Services",
+        "UPS Property Services"
+      ]
+    },
+    {
+      "group_id": "group-winston-hills-owner-partnership",
+      "canonical_name": "The Vicfam Trust & The BME Unit Trust",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "PRIVATE_LANDLORD",
+      "country_scope": "Australia",
+      "official_url": "https://abr.business.gov.au/ABN/View/81378112590",
+      "status": "Active",
+      "source_url": "https://abr.business.gov.au/ABN/View/81378112590",
+      "last_verified_at": "2026-09-02",
+      "confidence": "Medium",
+      "aliases": [
+        "The Vicfam Trust & The BME Unit Trust",
+        "THE VICFAM TRUST & THE BME UNIT TRUST"
+      ]
     }
   ],
   "group_alias_index": {
@@ -1900,7 +1968,14 @@
     "greenpoolcapital": "group-greenpool-capital",
     "greenpoolcapitalgroup": "group-greenpool-capital",
     "greenpoolmanagementcoptyltd": "group-greenpool-management",
-    "greenpoolmanagementco": "group-greenpool-management"
+    "greenpoolmanagementco": "group-greenpool-management",
+    "casuarinainvestmentfund": "group-sentinel-casuarina-fund",
+    "sentinelcasuarinainvestmentfund": "group-sentinel-casuarina-fund",
+    "tgcretail": "group-tgc-retail",
+    "tgcretailptyltd": "group-tgc-retail",
+    "unitedpropertyservices": "group-united-property-services",
+    "upspropertyservices": "group-united-property-services",
+    "thevicfamtrustthebmeunittrust": "group-winston-hills-owner-partnership"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -13439,6 +13514,214 @@
       "confidence": "High",
       "public_note": "The current venue states that it is proudly managed by MA Financial Group and routes long-term and casual leasing through the same team; RetPro is the stable canonical ID for MA Financial retail services",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-sentinel-casuarina-fund-owner-owner",
+      "place_id": "place-au-nt-casuarina-square",
+      "group_id": "group-sentinel-casuarina-fund",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.sentinelpg.com.au/property-trusts/sentinel-casuarina-investment-fund-trust/",
+      "source_type": "Official current investment fund property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Sentinel's current fund profile identifies Casuarina Investment Fund as the owning vehicle and publishes current GLA and annual visits; ownership percentage is not separately published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-sentinel-casuarina-manager-manager",
+      "place_id": "place-au-nt-casuarina-square",
+      "group_id": "group-sentinel-property",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.casuarinasquare.com.au/centre-info/leasing/",
+      "source_type": "Official current venue and manager portfolio profiles",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Sentinel owns and manages Casuarina Square and the current venue routes long-term leasing through Sentinel's national retail team",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-sentinel-casuarina-manager-operator",
+      "place_id": "place-au-nt-casuarina-square",
+      "group_id": "group-sentinel-property",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.casuarinasquare.com.au/centre-info/leasing/",
+      "source_type": "Official current venue and manager portfolio profiles",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Sentinel owns and manages Casuarina Square and the current venue routes long-term leasing through Sentinel's national retail team",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-sentinel-casuarina-manager-leasing_controller",
+      "place_id": "place-au-nt-casuarina-square",
+      "group_id": "group-sentinel-property",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.casuarinasquare.com.au/centre-info/leasing/",
+      "source_type": "Official current venue and manager portfolio profiles",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Sentinel owns and manages Casuarina Square and the current venue routes long-term leasing through Sentinel's national retail team",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-arkadia-rosebud-owner",
+      "place_id": "place-au-vic-rosebud-plaza-shopping-centre",
+      "group_id": "group-arkadia",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://rosebudplaza.com.au/carbon/assets/0007e9/000008/Winter-Bonus-Promotion-August-2025_Terms-and-Conditions-FINAL-1.pdf",
+      "source_type": "Official current venue ownership operation and leasing evidence",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current venue terms identify Arkadia as owner and operator while the venue routes permanent and pop-up leasing through Arkadia; the ownership percentage is not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-arkadia-rosebud-manager",
+      "place_id": "place-au-vic-rosebud-plaza-shopping-centre",
+      "group_id": "group-arkadia",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://rosebudplaza.com.au/carbon/assets/0007e9/000008/Winter-Bonus-Promotion-August-2025_Terms-and-Conditions-FINAL-1.pdf",
+      "source_type": "Official current venue ownership operation and leasing evidence",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current venue terms identify Arkadia as owner and operator while the venue routes permanent and pop-up leasing through Arkadia; the ownership percentage is not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-arkadia-rosebud-operator",
+      "place_id": "place-au-vic-rosebud-plaza-shopping-centre",
+      "group_id": "group-arkadia",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://rosebudplaza.com.au/carbon/assets/0007e9/000008/Winter-Bonus-Promotion-August-2025_Terms-and-Conditions-FINAL-1.pdf",
+      "source_type": "Official current venue ownership operation and leasing evidence",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current venue terms identify Arkadia as owner and operator while the venue routes permanent and pop-up leasing through Arkadia; the ownership percentage is not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-arkadia-rosebud-leasing_controller",
+      "place_id": "place-au-vic-rosebud-plaza-shopping-centre",
+      "group_id": "group-arkadia",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://rosebudplaza.com.au/carbon/assets/0007e9/000008/Winter-Bonus-Promotion-August-2025_Terms-and-Conditions-FINAL-1.pdf",
+      "source_type": "Official current venue ownership operation and leasing evidence",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current venue terms identify Arkadia as owner and operator while the venue routes permanent and pop-up leasing through Arkadia; the ownership percentage is not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-winston-hills-owner-owner",
+      "place_id": "place-au-nsw-winston-hills-mall",
+      "group_id": "group-winston-hills-owner-partnership",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://abr.business.gov.au/ABN/View/81378112590",
+      "source_type": "Current Australian Business Register",
+      "last_verified_at": "2026-09-02",
+      "confidence": "Medium",
+      "public_note": "The current ABN record identifies this trust partnership as the entity trading as Winston Hills Mall; land-title ownership shares are not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-tgc-winston-hills-manager-manager",
+      "place_id": "place-au-nsw-winston-hills-mall",
+      "group_id": "group-tgc-retail",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.tgretail.com.au/",
+      "source_type": "Official current manager portfolio and venue profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "TGC Retail lists Winston Hills Mall in its current centre portfolio and the venue reports more than 24000 square metres with over 60 specialty shops without publishing exact current totals",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-tgc-winston-hills-manager-operator",
+      "place_id": "place-au-nsw-winston-hills-mall",
+      "group_id": "group-tgc-retail",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.tgretail.com.au/",
+      "source_type": "Official current manager portfolio and venue profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "TGC Retail lists Winston Hills Mall in its current centre portfolio and the venue reports more than 24000 square metres with over 60 specialty shops without publishing exact current totals",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ups-winston-hills-leasing-leasing_controller",
+      "place_id": "place-au-nsw-winston-hills-mall",
+      "group_id": "group-united-property-services",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://unitedpropertyservices.com.au/wp-content/uploads/2025/07/Winston-Hills-Mall-Brochure.pdf",
+      "source_type": "Current public leasing brochure",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current public leasing brochure directs all Winston Hills Mall leasing enquiries through United Property Services and identifies TGC Retail as centre manager",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ups-winston-hills-leasing-external_leasing_agent",
+      "place_id": "place-au-nsw-winston-hills-mall",
+      "group_id": "group-united-property-services",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://unitedpropertyservices.com.au/wp-content/uploads/2025/07/Winston-Hills-Mall-Brochure.pdf",
+      "source_type": "Current public leasing brochure",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current public leasing brochure directs all Winston Hills Mall leasing enquiries through United Property Services and identifies TGC Retail as centre manager",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -20410,6 +20693,144 @@
       "public_note": "The current venue states that it is proudly managed by MA Financial Group and routes long-term and casual leasing through the same team; RetPro is the stable canonical ID for MA Financial retail services",
       "match_status": "Matched",
       "matched_place_id": "place-au-qld-sugarland-shoppingtown"
+    },
+    {
+      "portfolio_asset_id": "sentinel-casuarina-fund-owner",
+      "group_id": "group-sentinel-casuarina-fund",
+      "canonical_name": "Casuarina Square",
+      "country": "Australia",
+      "state": "NT",
+      "aliases": "Casuarina Square Shopping Centre",
+      "preferred_place_id": "place-au-nt-casuarina-square",
+      "roles": "OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "54328",
+      "tenancy_count": "",
+      "annual_visits_m": "7.4",
+      "source_url": "https://www.sentinelpg.com.au/property-trusts/sentinel-casuarina-investment-fund-trust/",
+      "source_type": "Official current investment fund property profile",
+      "source_date": "2026-08-01",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Sentinel's current fund profile identifies Casuarina Investment Fund as the owning vehicle and publishes current GLA and annual visits; ownership percentage is not separately published",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nt-casuarina-square"
+    },
+    {
+      "portfolio_asset_id": "sentinel-casuarina-manager",
+      "group_id": "group-sentinel-property",
+      "canonical_name": "Casuarina Square",
+      "country": "Australia",
+      "state": "NT",
+      "aliases": "Casuarina Square Shopping Centre",
+      "preferred_place_id": "place-au-nt-casuarina-square",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "54328",
+      "tenancy_count": "",
+      "annual_visits_m": "7.4",
+      "source_url": "https://www.casuarinasquare.com.au/centre-info/leasing/",
+      "source_type": "Official current venue and manager portfolio profiles",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Sentinel owns and manages Casuarina Square and the current venue routes long-term leasing through Sentinel's national retail team",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nt-casuarina-square"
+    },
+    {
+      "portfolio_asset_id": "arkadia-rosebud",
+      "group_id": "group-arkadia",
+      "canonical_name": "Rosebud Plaza",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "Rosebud Plaza Shopping Centre",
+      "preferred_place_id": "place-au-vic-rosebud-plaza-shopping-centre",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "61",
+      "annual_visits_m": "",
+      "source_url": "https://rosebudplaza.com.au/carbon/assets/0007e9/000008/Winter-Bonus-Promotion-August-2025_Terms-and-Conditions-FINAL-1.pdf",
+      "source_type": "Official current venue ownership operation and leasing evidence",
+      "source_date": "2025-08-01",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Current venue terms identify Arkadia as owner and operator while the venue routes permanent and pop-up leasing through Arkadia; the ownership percentage is not published",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-rosebud-plaza-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "winston-hills-owner",
+      "group_id": "group-winston-hills-owner-partnership",
+      "canonical_name": "Winston Hills Mall",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Winston Hills Shopping Village",
+      "preferred_place_id": "place-au-nsw-winston-hills-mall",
+      "roles": "OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://abr.business.gov.au/ABN/View/81378112590",
+      "source_type": "Current Australian Business Register",
+      "source_date": "2026-08-06",
+      "last_verified_at": "2026-09-02",
+      "confidence": "Medium",
+      "status": "ACTIVE",
+      "public_note": "The current ABN record identifies this trust partnership as the entity trading as Winston Hills Mall; land-title ownership shares are not published",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-winston-hills-mall"
+    },
+    {
+      "portfolio_asset_id": "tgc-winston-hills-manager",
+      "group_id": "group-tgc-retail",
+      "canonical_name": "Winston Hills Mall",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Winston Hills Shopping Village",
+      "preferred_place_id": "place-au-nsw-winston-hills-mall",
+      "roles": "MANAGER|OPERATOR",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.tgretail.com.au/",
+      "source_type": "Official current manager portfolio and venue profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "TGC Retail lists Winston Hills Mall in its current centre portfolio and the venue reports more than 24000 square metres with over 60 specialty shops without publishing exact current totals",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-winston-hills-mall"
+    },
+    {
+      "portfolio_asset_id": "ups-winston-hills-leasing",
+      "group_id": "group-united-property-services",
+      "canonical_name": "Winston Hills Mall",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Winston Hills Shopping Village",
+      "preferred_place_id": "place-au-nsw-winston-hills-mall",
+      "roles": "LEASING_CONTROLLER|EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://unitedpropertyservices.com.au/wp-content/uploads/2025/07/Winston-Hills-Mall-Brochure.pdf",
+      "source_type": "Current public leasing brochure",
+      "source_date": "2025-07-01",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current public leasing brochure directs all Winston Hills Mall leasing enquiries through United Property Services and identifies TGC Retail as centre manager",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-winston-hills-mall"
     }
   ],
   "property_summaries": {
@@ -51061,32 +51482,46 @@
     },
     "place-au-nsw-winston-hills-mall": {
       "place_id": "place-au-nsw-winston-hills-mall",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-winston-hills-mall",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.winstonhillsmall.com.au/leasing",
+        "source_type": "Official current venue leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from more than 24000 square metres of retail space Big W and three supermarket anchors plus over 60 specialty shops; the venue does not publish a formal class"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-winston-hills-mall",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.winstonhillsmall.com.au/leasing",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current sources identify the venue business entity TGC Retail management United Property Services external leasing and a defensible inferred sub-regional class; land-title ownership shares remain unresolved"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-winston-hills-owner-owner",
+        "rel-portfolio-tgc-winston-hills-manager-manager",
+        "rel-portfolio-tgc-winston-hills-manager-operator",
+        "rel-portfolio-ups-winston-hills-leasing-leasing_controller",
+        "rel-portfolio-ups-winston-hills-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-tgc-retail",
+        "group-united-property-services",
+        "group-winston-hills-owner-partnership"
+      ],
+      "owner_names": [
+        "The Vicfam Trust & The BME Unit Trust"
+      ],
+      "manager_names": [
+        "TGC Retail"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -51580,35 +52015,47 @@
     },
     "place-au-nt-casuarina-square": {
       "place_id": "place-au-nt-casuarina-square",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nt-casuarina-square",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.sentinelpg.com.au/property-trusts/sentinel-casuarina-investment-fund-trust/",
+        "source_type": "Official current investment fund property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Regional format inferred from 54328 square metres of current GLA five major anchors and more than 190 stores; the current profile does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nt-casuarina-square",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.sentinelpg.com.au/property-trusts/sentinel-casuarina-investment-fund-trust/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Sentinel and venue sources identify the investment fund ownership vehicle Sentinel management direct leasing current centre metrics and a defensible inferred Regional class"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-sentinel-casuarina-fund-owner-owner",
+        "rel-portfolio-sentinel-casuarina-manager-manager",
+        "rel-portfolio-sentinel-casuarina-manager-operator",
+        "rel-portfolio-sentinel-casuarina-manager-leasing_controller"
+      ],
+      "group_ids": [
+        "group-sentinel-casuarina-fund",
+        "group-sentinel-property"
+      ],
+      "owner_names": [
+        "Casuarina Investment Fund"
+      ],
+      "manager_names": [
+        "Sentinel Property Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 2614.64,
@@ -51674,7 +52121,11 @@
         },
         "independent_2km_count": 1
       },
-      "market": {}
+      "market": {},
+      "gla_sqm": 54328.0,
+      "annual_visits": 7400000.0,
+      "source_url": "https://www.sentinelpg.com.au/property-trusts/sentinel-casuarina-investment-fund-trust/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nt-hibiscus-shoppingtown": {
       "place_id": "place-au-nt-hibiscus-shoppingtown",
@@ -90731,35 +91182,46 @@
     },
     "place-au-vic-rosebud-plaza-shopping-centre": {
       "place_id": "place-au-vic-rosebud-plaza-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-vic-rosebud-plaza-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://rosebudplaza.com.au/stores/",
+        "source_type": "Official current venue directory",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from Kmart Coles and Woolworths anchors plus the current 61-store directory; the venue does not publish a formal class"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-vic-rosebud-plaza-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://rosebudplaza.com.au/carbon/assets/0007e9/000008/Winter-Bonus-Promotion-August-2025_Terms-and-Conditions-FINAL-1.pdf",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue evidence identifies Arkadia ownership operation direct leasing and a defensible inferred sub-regional class"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-arkadia-rosebud-owner",
+        "rel-portfolio-arkadia-rosebud-manager",
+        "rel-portfolio-arkadia-rosebud-operator",
+        "rel-portfolio-arkadia-rosebud-leasing_controller"
+      ],
+      "group_ids": [
+        "group-arkadia"
+      ],
+      "owner_names": [
+        "Arkadia"
+      ],
+      "manager_names": [
+        "Arkadia"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 20.28,
@@ -90805,7 +91267,10 @@
         "median_household_income": 784,
         "age_45_plus_pct": 57.7,
         "retail_businesses": 112
-      }
+      },
+      "tenancy_count": 61,
+      "source_url": "https://rosebudplaza.com.au/carbon/assets/0007e9/000008/Winter-Bonus-Promotion-August-2025_Terms-and-Conditions-FINAL-1.pdf",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-vic-shepparton-marketplace": {
       "place_id": "place-au-vic-shepparton-marketplace",
@@ -114974,11 +115439,17 @@
     },
     "group-arkadia": {
       "group_id": "group-arkadia",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-vic-rosebud-plaza-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ],
         "place-au-vic-sunshine-marketplace": [
           "CO_OWNER"
         ]
@@ -115653,11 +116124,16 @@
     },
     "group-sentinel-property": {
       "group_id": "group-sentinel-property",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nt-casuarina-square": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-qld-caneland-centre": [
           "LEASING_CONTROLLER",
           "MANAGER",
@@ -115759,6 +116235,60 @@
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-sentinel-casuarina-fund": {
+      "group_id": "group-sentinel-casuarina-fund",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nt-casuarina-square": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-tgc-retail": {
+      "group_id": "group-tgc-retail",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-winston-hills-mall": [
+          "MANAGER",
+          "OPERATOR"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-united-property-services": {
+      "group_id": "group-united-property-services",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-winston-hills-mall": [
+          "EXTERNAL_LEASING_AGENT",
+          "LEASING_CONTROLLER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-winston-hills-owner-partnership": {
+      "group_id": "group-winston-hills-owner-partnership",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-winston-hills-mall": [
+          "OWNER"
         ]
       },
       "white_space_property_ids": []
@@ -133137,7 +133667,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -133151,10 +133681,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 5.86,
-          "group_ids": [],
+          "group_ids": [
+            "group-tgc-retail",
+            "group-united-property-services",
+            "group-winston-hills-owner-partnership"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -133425,7 +133959,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -133439,11 +133973,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 2614.64,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-sentinel-casuarina-fund",
+            "group-sentinel-property"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -153328,7 +153865,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -153342,11 +153879,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 20.28,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-arkadia"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },

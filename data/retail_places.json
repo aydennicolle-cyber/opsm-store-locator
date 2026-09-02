@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T03:02:39+00:00",
+    "generated_at": "2026-09-02T03:06:58+00:00",
     "place_count": 1032,
     "centre_count": 586,
     "corridor_count": 446,
@@ -14327,8 +14327,8 @@
       "state": "NSW",
       "locality": "Winston Hills",
       "suburb": "Winston Hills",
-      "postcode": "",
-      "address": "",
+      "postcode": "2153",
+      "address": "180-192 Caroline Chisholm Drive",
       "latitude": -33.772687,
       "longitude": 150.969481,
       "owner": "",
@@ -14341,11 +14341,11 @@
       "tenancy_count": "",
       "redevelopment_activity": "",
       "official_url": "https://www.winstonhillsmall.com.au/",
-      "source_url": "https://www.winstonhillsmall.com.au/",
-      "source_date": "",
+      "source_url": "https://www.winstonhillsmall.com.au/leasing",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "The current official venue confirms the centre identity address and active leasing profile while the stable place ID is retained",
       "retailers": [
         "Oscar Wylee",
         "Specsavers"
@@ -14572,8 +14572,8 @@
       "state": "NT",
       "locality": "Casuarina",
       "suburb": "Casuarina",
-      "postcode": "",
-      "address": "",
+      "postcode": "0810",
+      "address": "247 Trower Road",
       "latitude": -12.373874,
       "longitude": 130.881327,
       "owner": "",
@@ -14586,11 +14586,11 @@
       "tenancy_count": "",
       "redevelopment_activity": "",
       "official_url": "https://www.casuarinasquare.com.au/",
-      "source_url": "https://www.casuarinasquare.com.au/",
-      "source_date": "",
+      "source_url": "https://www.casuarinasquare.com.au/centre-info/leasing/",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "The current official venue and Sentinel fund profile confirm the centre identity and address while the stable place ID is retained",
       "retailers": [
         "Oscar Wylee",
         "Specsavers"
@@ -31558,17 +31558,19 @@
     {
       "place_id": "place-au-vic-rosebud-plaza-shopping-centre",
       "centre_id": "place-au-vic-rosebud-plaza-shopping-centre",
-      "name": "Rosebud Plaza Shopping Centre",
-      "canonical_name": "Rosebud Plaza Shopping Centre",
-      "aliases": [],
+      "name": "Rosebud Plaza",
+      "canonical_name": "Rosebud Plaza",
+      "aliases": [
+        "Rosebud Plaza Shopping Centre"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
       "state": "VIC",
       "locality": "Rosebud",
       "suburb": "Rosebud",
-      "postcode": "",
-      "address": "",
+      "postcode": "3939",
+      "address": "Corner Boneo Road and McCombe Street",
       "latitude": -38.361275,
       "longitude": 144.89122,
       "owner": "",
@@ -31580,12 +31582,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "",
-      "source_url": "",
-      "source_date": "",
+      "official_url": "https://rosebudplaza.com.au/",
+      "source_url": "https://rosebudplaza.com.au/contact/",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "The current official venue uses Rosebud Plaza as the canonical name and confirms the address while the stable place ID is retained",
       "retailers": [
         "OPSM",
         "Specsavers"
@@ -31594,7 +31596,7 @@
       "has_bailey": false,
       "mapping_confidence": "Medium",
       "certification_status": "Best available",
-      "evidence_tier": "Derived"
+      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-vic-shepparton-marketplace",

@@ -252,6 +252,22 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertIn("Stockland Bundaberg", sugarland["aliases"])
         self.assertEqual(sugarland["postcode"], "4670")
 
+    def test_current_priority_centre_names_and_addresses_are_publicly_resolved(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        casuarina = places["place-au-nt-casuarina-square"]
+        self.assertEqual(casuarina["name"], "Casuarina Square")
+        self.assertEqual(casuarina["address"], "247 Trower Road")
+        self.assertEqual(casuarina["postcode"], "0810")
+
+        rosebud = places["place-au-vic-rosebud-plaza-shopping-centre"]
+        self.assertEqual(rosebud["name"], "Rosebud Plaza")
+        self.assertIn("Rosebud Plaza Shopping Centre", rosebud["aliases"])
+        self.assertEqual(rosebud["postcode"], "3939")
+
+        winston_hills = places["place-au-nsw-winston-hills-mall"]
+        self.assertEqual(winston_hills["address"], "180-192 Caroline Chisholm Drive")
+        self.assertEqual(winston_hills["postcode"], "2153")
+
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, expected_name in {

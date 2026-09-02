@@ -650,6 +650,32 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(groups["group-retpro"]["parent_group_id"], "group-ma-financial")
         self.assertEqual(groups["group-greenpool-management"]["parent_group_id"], "group-greenpool-capital")
 
+    def test_casuarina_rosebud_and_winston_hills_roles_are_current_and_explicit(self) -> None:
+        casuarina = self.payload["property_summaries"]["place-au-nt-casuarina-square"]
+        self.assertEqual(casuarina["centre_class"], "Regional")
+        self.assertEqual(casuarina["research_status"], "Verified")
+        self.assertEqual(casuarina["owner_names"], ["Casuarina Investment Fund"])
+        self.assertEqual(casuarina["manager_names"], ["Sentinel Property Group"])
+        self.assertEqual(casuarina["leasing_arrangement"], "In-house")
+        self.assertEqual(casuarina["gla_sqm"], 54328)
+
+        rosebud = self.payload["property_summaries"]["place-au-vic-rosebud-plaza-shopping-centre"]
+        self.assertEqual(rosebud["centre_class"], "Sub-regional")
+        self.assertEqual(rosebud["research_status"], "Verified")
+        self.assertEqual(rosebud["owner_names"], ["Arkadia"])
+        self.assertEqual(rosebud["manager_names"], ["Arkadia"])
+        self.assertEqual(rosebud["leasing_arrangement"], "In-house")
+        self.assertEqual(rosebud["tenancy_count"], 61)
+
+        winston_hills = self.payload["property_summaries"]["place-au-nsw-winston-hills-mall"]
+        self.assertEqual(winston_hills["centre_class"], "Sub-regional")
+        self.assertEqual(winston_hills["research_status"], "Partial")
+        self.assertEqual(winston_hills["owner_names"], ["The Vicfam Trust & The BME Unit Trust"])
+        self.assertEqual(winston_hills["manager_names"], ["TGC Retail"])
+        self.assertEqual(winston_hills["leasing_arrangement"], "External agency")
+        self.assertNotIn("gla_sqm", winston_hills)
+        self.assertNotIn("tenancy_count", winston_hills)
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})
