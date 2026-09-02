@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T01:52:20+00:00",
+    "generated_at": "2026-09-02T01:56:42+00:00",
     "place_count": 1031,
     "centre_count": 588,
     "corridor_count": 443,
@@ -12850,17 +12850,19 @@
     {
       "place_id": "place-au-nsw-st-ives-shopping-centre",
       "centre_id": "place-au-nsw-st-ives-shopping-centre",
-      "name": "St Ives Shopping Centre",
-      "canonical_name": "St Ives Shopping Centre",
-      "aliases": [],
+      "name": "St Ives Shopping Village",
+      "canonical_name": "St Ives Shopping Village",
+      "aliases": [
+        "St Ives Shopping Centre"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
       "state": "NSW",
-      "locality": "Ives",
-      "suburb": "Ives",
-      "postcode": "",
-      "address": "",
+      "locality": "St Ives",
+      "suburb": "St Ives",
+      "postcode": "2075",
+      "address": "166 Mona Vale Road",
       "latitude": -33.729648,
       "longitude": 151.159126,
       "owner": "",
@@ -12872,12 +12874,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "",
-      "source_url": "",
-      "source_date": "",
+      "official_url": "https://stivesvillage.com.au/",
+      "source_url": "https://stivesvillage.com.au/leasing-enquiries/",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "The official venue source confirms St Ives Shopping Village as the canonical name while the stable place ID is retained",
       "retailers": [
         "OPSM",
         "Oscar Wylee",
@@ -12887,7 +12889,7 @@
       "has_bailey": false,
       "mapping_confidence": "Medium",
       "certification_status": "Best available",
-      "evidence_tier": "Derived"
+      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-nsw-st-marys-village-shopping-centre",
@@ -13348,10 +13350,11 @@
     {
       "place_id": "place-au-nsw-top-ryde-city-shopping-centre",
       "centre_id": "place-au-nsw-top-ryde-city-shopping-centre",
-      "name": "Top Ryde City Shopping Centre",
-      "canonical_name": "Top Ryde City Shopping Centre",
+      "name": "Top Ryde City",
+      "canonical_name": "Top Ryde City",
       "aliases": [
-        "Top Ryde City Shopping Centre 109-129 Blaxland Road Ryde NSW 2112"
+        "Top Ryde City Shopping Centre 109-129 Blaxland Road Ryde NSW 2112",
+        "Top Ryde City Shopping Centre"
       ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
@@ -13359,8 +13362,8 @@
       "state": "NSW",
       "locality": "Ryde",
       "suburb": "Ryde",
-      "postcode": "",
-      "address": "",
+      "postcode": "2112",
+      "address": "Corner Devlin Street and Blaxland Road",
       "latitude": -33.812181,
       "longitude": 151.10602,
       "owner": "",
@@ -13372,12 +13375,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "",
-      "source_url": "",
-      "source_date": "",
+      "official_url": "https://www.toprydecity.com.au/",
+      "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "The current owner and venue sources confirm Top Ryde City as the canonical name while the stable place ID is retained",
       "retailers": [
         "OPSM",
         "Oscar Wylee",
@@ -13387,7 +13390,7 @@
       "has_bailey": false,
       "mapping_confidence": "Medium",
       "certification_status": "Best available",
-      "evidence_tier": "Derived"
+      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-nsw-town-centre-circuit",
@@ -18419,10 +18422,11 @@
     {
       "place_id": "place-au-qld-noosa-civic-shopping-centre",
       "centre_id": "place-au-qld-noosa-civic-shopping-centre",
-      "name": "Noosa Civic Shopping Centre",
-      "canonical_name": "Noosa Civic Shopping Centre",
+      "name": "Noosa Civic",
+      "canonical_name": "Noosa Civic",
       "aliases": [
-        "Noosa Civic Shopping Centre TP 1050X-01C 28 Eenie Creek Rd Noosaville QLD 4566"
+        "Noosa Civic Shopping Centre TP 1050X-01C 28 Eenie Creek Rd Noosaville QLD 4566",
+        "Noosa Civic Shopping Centre"
       ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
@@ -18430,8 +18434,8 @@
       "state": "QLD",
       "locality": "Noosaville",
       "suburb": "Noosaville",
-      "postcode": "",
-      "address": "",
+      "postcode": "4566",
+      "address": "28 Eenie Creek Road",
       "latitude": -26.416405,
       "longitude": 153.048705,
       "owner": "",
@@ -18443,12 +18447,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "",
-      "source_url": "",
-      "source_date": "",
+      "official_url": "https://www.noosacivicshopping.com.au/",
+      "source_url": "https://www.noosacivicshopping.com.au/noosa-civic-retail-centre-shopping-services-in-noosaville/",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "The official venue source confirms Noosa Civic as the canonical name while the stable place ID is retained",
       "retailers": [
         "OPSM",
         "Oscar Wylee",
@@ -18458,7 +18462,7 @@
       "has_bailey": false,
       "mapping_confidence": "Medium",
       "certification_status": "Best available",
-      "evidence_tier": "Derived"
+      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-unknown-north-shore-village",

@@ -356,6 +356,28 @@ class PropertyIntelligenceTests(unittest.TestCase):
                 self.assertEqual(summary["gla_sqm"], gla_sqm)
                 self.assertEqual(summary["tenancy_count"], tenancy_count)
 
+    def test_priority_independent_and_ma_financial_centres_preserve_role_evidence(self) -> None:
+        top_ryde = self.payload["property_summaries"]["place-au-nsw-top-ryde-city-shopping-centre"]
+        self.assertEqual(top_ryde["centre_class"], "Regional")
+        self.assertEqual(
+            set(top_ryde["owner_names"]),
+            {"Keppel REIT", "MA-managed Top Ryde fund"},
+        )
+        self.assertEqual(top_ryde["manager_names"], ["MA Financial"])
+        self.assertEqual(top_ryde["leasing_arrangement"], "In-house")
+
+        noosa = self.payload["property_summaries"]["place-au-qld-noosa-civic-shopping-centre"]
+        self.assertEqual(noosa["centre_class"], "Sub-regional")
+        self.assertEqual(noosa["owner_names"], ["Stockwell"])
+        self.assertEqual(noosa["manager_names"], ["Stockwell"])
+        self.assertEqual(noosa["leasing_arrangement"], "In-house")
+
+        st_ives = self.payload["property_summaries"]["place-au-nsw-st-ives-shopping-centre"]
+        self.assertEqual(st_ives["centre_class"], "Neighbourhood")
+        self.assertEqual(st_ives["owner_names"], ["St Ives Shopping Village ownership"])
+        self.assertEqual(st_ives["manager_names"], [])
+        self.assertEqual(st_ives["leasing_arrangement"], "Private landlord")
+
     def test_research_queue_covers_every_unresolved_property_or_class(self) -> None:
         with (DATA / "property_research_queue.csv").open(newline="", encoding="utf-8") as handle:
             queue = list(csv.DictReader(handle))

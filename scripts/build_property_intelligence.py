@@ -499,10 +499,10 @@ def derive_arrangement(relationships: list[dict], groups: dict[str, dict]) -> st
         return "External agency"
     controllers = {item["group_id"] for item in active if item["role"] == "LEASING_CONTROLLER"}
     operating = {item["group_id"] for item in active if item["role"] in PROPERTY_GROUP_ROLES}
-    if controllers & operating:
-        return "In-house"
     if any(groups[group_id]["group_type"] == "PRIVATE_LANDLORD" for group_id in controllers):
         return "Private landlord"
+    if controllers & operating:
+        return "In-house"
     return "Unknown"
 
 

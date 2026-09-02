@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T01:52:28.501878+00:00",
+  "generated_at": "2026-09-02T01:58:03.315137+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 65,
-    "relationship_count": 584,
-    "active_relationship_count": 582,
+    "group_count": 69,
+    "relationship_count": 596,
+    "active_relationship_count": 594,
     "shopping_centre_count": 588,
-    "researched_property_count": 192,
-    "classed_property_count": 182,
+    "researched_property_count": 195,
+    "classed_property_count": 185,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -214,7 +214,8 @@
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "aliases": [
-        "MA Financial"
+        "MA Financial",
+        "MA Financial Group"
       ]
     },
     {
@@ -1099,6 +1100,74 @@
         "CapitaLand Integrated Commercial Trust",
         "CICT"
       ]
+    },
+    {
+      "group_id": "group-keppel-reit",
+      "canonical_name": "Keppel REIT",
+      "parent_group_id": "",
+      "brand_name": "Keppel REIT",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Singapore and Australia",
+      "official_url": "https://www.keppelreit.com/",
+      "status": "Active",
+      "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Keppel REIT",
+        "Keppel REIT Management Limited"
+      ]
+    },
+    {
+      "group_id": "group-ma-top-ryde-fund",
+      "canonical_name": "MA-managed Top Ryde fund",
+      "parent_group_id": "group-ma-financial",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://mafinancial.com/",
+      "status": "Active",
+      "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "MA-managed Top Ryde fund",
+        "MA managed fund"
+      ]
+    },
+    {
+      "group_id": "group-stockwell",
+      "canonical_name": "Stockwell",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "PROPERTY_COMPANY",
+      "country_scope": "Australia",
+      "official_url": "https://www.stockwell.com.au/",
+      "status": "Active",
+      "source_url": "https://www.noosacivicshopping.com.au/noosa-civic-retail-centre-shopping-services-in-noosaville/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Stockwell",
+        "Stockwell Retail Management Pty Ltd"
+      ]
+    },
+    {
+      "group_id": "group-st-ives-shopping-village-ownership",
+      "canonical_name": "St Ives Shopping Village ownership",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "PRIVATE_LANDLORD",
+      "country_scope": "Australia",
+      "official_url": "https://stivesvillage.com.au/",
+      "status": "Active",
+      "source_url": "https://stivesvillage.com.au/leasing-enquiries/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "St Ives Shopping Village ownership",
+        "St Ives Shopping Village"
+      ]
     }
   ],
   "group_alias_index": {
@@ -1124,6 +1193,7 @@
     "region": "group-region",
     "charterhall": "group-charter-hall",
     "mafinancial": "group-ma-financial",
+    "mafinancialgroup": "group-ma-financial",
     "ipgeneration": "group-ip-generation",
     "retpro": "group-retpro",
     "haben": "group-haben",
@@ -1211,7 +1281,15 @@
     "ifm": "group-ifm-investors",
     "ifminvestorsptyltd": "group-ifm-investors",
     "capitalandintegratedcommercialtrust": "group-capitaland-integrated-commercial-trust",
-    "cict": "group-capitaland-integrated-commercial-trust"
+    "cict": "group-capitaland-integrated-commercial-trust",
+    "keppelreit": "group-keppel-reit",
+    "keppelreitmanagementlimited": "group-keppel-reit",
+    "mamanagedtoprydefund": "group-ma-top-ryde-fund",
+    "mamanagedfund": "group-ma-top-ryde-fund",
+    "stockwell": "group-stockwell",
+    "stockwellretailmanagementptyltd": "group-stockwell",
+    "stivesshoppingvillageownership": "group-st-ives-shopping-village-ownership",
+    "stivesshoppingvillage": "group-st-ives-shopping-village-ownership"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -10558,6 +10636,198 @@
       "confidence": "High",
       "public_note": "Mirvac's FY26 portfolio and current retail profile confirm ownership management leasing and centre metrics",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-keppel-top-ryde-city-co_owner",
+      "place_id": "place-au-nsw-top-ryde-city-shopping-centre",
+      "group_id": "group-keppel-reit",
+      "role": "CO_OWNER",
+      "ownership_percentage": 75.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+      "source_type": "Official current acquisition announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "MA Financial confirms Keppel REIT acquired a 75 percent interest in Top Ryde City",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ma-fund-top-ryde-city-co_owner",
+      "place_id": "place-au-nsw-top-ryde-city-shopping-centre",
+      "group_id": "group-ma-top-ryde-fund",
+      "role": "CO_OWNER",
+      "ownership_percentage": 25.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+      "source_type": "Official current acquisition announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "MA Financial confirms an MA-managed fund acquired the remaining 25 percent interest",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ma-financial-top-ryde-city-manager",
+      "place_id": "place-au-nsw-top-ryde-city-shopping-centre",
+      "group_id": "group-ma-financial",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+      "source_type": "Official current acquisition and management announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "MA Financial is responsible for asset management property management leasing and development management",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ma-financial-top-ryde-city-operator",
+      "place_id": "place-au-nsw-top-ryde-city-shopping-centre",
+      "group_id": "group-ma-financial",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+      "source_type": "Official current acquisition and management announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "MA Financial is responsible for asset management property management leasing and development management",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ma-financial-top-ryde-city-leasing_controller",
+      "place_id": "place-au-nsw-top-ryde-city-shopping-centre",
+      "group_id": "group-ma-financial",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+      "source_type": "Official current acquisition and management announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "MA Financial is responsible for asset management property management leasing and development management",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-stockwell-noosa-civic-owner",
+      "place_id": "place-au-qld-noosa-civic-shopping-centre",
+      "group_id": "group-stockwell",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.noosacivicshopping.com.au/noosa-civic-retail-centre-shopping-services-in-noosaville/",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Noosa Civic states that Stockwell owns and manages the centre and publishes the direct Stockwell leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-stockwell-noosa-civic-manager",
+      "place_id": "place-au-qld-noosa-civic-shopping-centre",
+      "group_id": "group-stockwell",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.noosacivicshopping.com.au/noosa-civic-retail-centre-shopping-services-in-noosaville/",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Noosa Civic states that Stockwell owns and manages the centre and publishes the direct Stockwell leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-stockwell-noosa-civic-operator",
+      "place_id": "place-au-qld-noosa-civic-shopping-centre",
+      "group_id": "group-stockwell",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.noosacivicshopping.com.au/noosa-civic-retail-centre-shopping-services-in-noosaville/",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Noosa Civic states that Stockwell owns and manages the centre and publishes the direct Stockwell leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-stockwell-noosa-civic-leasing_controller",
+      "place_id": "place-au-qld-noosa-civic-shopping-centre",
+      "group_id": "group-stockwell",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.noosacivicshopping.com.au/noosa-civic-retail-centre-shopping-services-in-noosaville/",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Noosa Civic states that Stockwell owns and manages the centre and publishes the direct Stockwell leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-st-ives-shopping-village-private-owner",
+      "place_id": "place-au-nsw-st-ives-shopping-centre",
+      "group_id": "group-st-ives-shopping-village-ownership",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://stivesvillage.com.au/leasing-enquiries/",
+      "source_type": "Official current venue leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue identifies itself as independently owned and operated and publishes direct permanent and casual leasing pathways; the public source does not name the legal owner",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-st-ives-shopping-village-private-operator",
+      "place_id": "place-au-nsw-st-ives-shopping-centre",
+      "group_id": "group-st-ives-shopping-village-ownership",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://stivesvillage.com.au/leasing-enquiries/",
+      "source_type": "Official current venue leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue identifies itself as independently owned and operated and publishes direct permanent and casual leasing pathways; the public source does not name the legal owner",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-st-ives-shopping-village-private-leasing_controller",
+      "place_id": "place-au-nsw-st-ives-shopping-centre",
+      "group_id": "group-st-ives-shopping-village-ownership",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://stivesvillage.com.au/leasing-enquiries/",
+      "source_type": "Official current venue leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue identifies itself as independently owned and operated and publishes direct permanent and casual leasing pathways; the public source does not name the legal owner",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -16080,6 +16350,121 @@
       "public_note": "Mirvac's FY26 portfolio and current retail profile confirm ownership management leasing and centre metrics",
       "match_status": "Matched",
       "matched_place_id": "place-au-vic-moonee-ponds-central"
+    },
+    {
+      "portfolio_asset_id": "keppel-top-ryde-city",
+      "group_id": "group-keppel-reit",
+      "canonical_name": "Top Ryde City",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Top Ryde City Shopping Centre",
+      "preferred_place_id": "place-au-nsw-top-ryde-city-shopping-centre",
+      "roles": "CO_OWNER",
+      "ownership_percentage": "75",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "12",
+      "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+      "source_type": "Official current acquisition announcement",
+      "source_date": "2025-10-08",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "MA Financial confirms Keppel REIT acquired a 75 percent interest in Top Ryde City",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-top-ryde-city-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "ma-fund-top-ryde-city",
+      "group_id": "group-ma-top-ryde-fund",
+      "canonical_name": "Top Ryde City",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Top Ryde City Shopping Centre",
+      "preferred_place_id": "place-au-nsw-top-ryde-city-shopping-centre",
+      "roles": "CO_OWNER",
+      "ownership_percentage": "25",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "12",
+      "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+      "source_type": "Official current acquisition announcement",
+      "source_date": "2025-10-08",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "MA Financial confirms an MA-managed fund acquired the remaining 25 percent interest",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-top-ryde-city-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "ma-financial-top-ryde-city",
+      "group_id": "group-ma-financial",
+      "canonical_name": "Top Ryde City",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Top Ryde City Shopping Centre",
+      "preferred_place_id": "place-au-nsw-top-ryde-city-shopping-centre",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "12",
+      "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+      "source_type": "Official current acquisition and management announcement",
+      "source_date": "2025-10-08",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "MA Financial is responsible for asset management property management leasing and development management",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-top-ryde-city-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "stockwell-noosa-civic",
+      "group_id": "group-stockwell",
+      "canonical_name": "Noosa Civic",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Noosa Civic Shopping Centre",
+      "preferred_place_id": "place-au-qld-noosa-civic-shopping-centre",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "63",
+      "annual_visits_m": "3",
+      "source_url": "https://www.noosacivicshopping.com.au/noosa-civic-retail-centre-shopping-services-in-noosaville/",
+      "source_type": "Official current venue and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Noosa Civic states that Stockwell owns and manages the centre and publishes the direct Stockwell leasing pathway",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-noosa-civic-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "st-ives-shopping-village-private",
+      "group_id": "group-st-ives-shopping-village-ownership",
+      "canonical_name": "St Ives Shopping Village",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "St Ives Shopping Centre",
+      "preferred_place_id": "place-au-nsw-st-ives-shopping-centre",
+      "roles": "OWNER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "6.6",
+      "source_url": "https://stivesvillage.com.au/leasing-enquiries/",
+      "source_type": "Official current venue leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The venue identifies itself as independently owned and operated and publishes direct permanent and casual leasing pathways; the public source does not name the legal owner",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-st-ives-shopping-centre"
     }
   ],
   "property_summaries": {
@@ -42586,31 +42971,39 @@
     },
     "place-au-nsw-st-ives-shopping-centre": {
       "place_id": "place-au-nsw-st-ives-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Neighbourhood",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-st-ives-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Neighbourhood",
+        "classification_method": "Inferred",
+        "source_url": "https://stivesvillage.com.au/leasing-enquiries/",
+        "source_type": "Official current venue leasing profile and directory",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Neighbourhood format inferred from the official supermarket-led directory and 6.6 million annual visits; the centre class is not stated by the venue"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-st-ives-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://stivesvillage.com.au/leasing-enquiries/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
+      "leasing_arrangement": "Private landlord",
+      "relationship_ids": [
+        "rel-portfolio-st-ives-shopping-village-private-owner",
+        "rel-portfolio-st-ives-shopping-village-private-operator",
+        "rel-portfolio-st-ives-shopping-village-private-leasing_controller"
+      ],
+      "group_ids": [
+        "group-st-ives-shopping-village-ownership"
+      ],
+      "owner_names": [
+        "St Ives Shopping Village ownership"
+      ],
       "manager_names": [],
       "has_bailey": false,
       "bailey_store_count": 0,
@@ -42671,7 +43064,10 @@
         "median_household_income": 1660,
         "age_45_plus_pct": 47.8,
         "retail_businesses": 163
-      }
+      },
+      "annual_visits": 6600000.0,
+      "source_url": "https://stivesvillage.com.au/leasing-enquiries/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-st-marys-village-shopping-centre": {
       "place_id": "place-au-nsw-st-marys-village-shopping-centre",
@@ -43956,32 +44352,47 @@
     },
     "place-au-nsw-top-ryde-city-shopping-centre": {
       "place_id": "place-au-nsw-top-ryde-city-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-top-ryde-city-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+        "source_type": "Official current acquisition announcement",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "MA Financial explicitly describes Top Ryde City as a metropolitan Regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-top-ryde-city-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-keppel-top-ryde-city-co_owner",
+        "rel-portfolio-ma-fund-top-ryde-city-co_owner",
+        "rel-portfolio-ma-financial-top-ryde-city-manager",
+        "rel-portfolio-ma-financial-top-ryde-city-operator",
+        "rel-portfolio-ma-financial-top-ryde-city-leasing_controller"
+      ],
+      "group_ids": [
+        "group-keppel-reit",
+        "group-ma-financial",
+        "group-ma-top-ryde-fund"
+      ],
+      "owner_names": [
+        "Keppel REIT",
+        "MA-managed Top Ryde fund"
+      ],
+      "manager_names": [
+        "MA Financial"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -44033,7 +44444,10 @@
         },
         "independent_2km_count": 0
       },
-      "market": {}
+      "market": {},
+      "annual_visits": 12000000.0,
+      "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-town-centre-circuit": {
       "place_id": "place-au-nsw-town-centre-circuit",
@@ -55494,32 +55908,43 @@
     },
     "place-au-qld-noosa-civic-shopping-centre": {
       "place_id": "place-au-qld-noosa-civic-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-qld-noosa-civic-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.noosacivicshopping.com.au/noosa-civic-retail-centre-shopping-services-in-noosaville/",
+        "source_type": "Official current venue and leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional scale inferred from the official Big W and Woolworths anchors approximately 63 specialty stores and 3 million annual visits"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-qld-noosa-civic-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.noosacivicshopping.com.au/noosa-civic-retail-centre-shopping-services-in-noosaville/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-stockwell-noosa-civic-owner",
+        "rel-portfolio-stockwell-noosa-civic-manager",
+        "rel-portfolio-stockwell-noosa-civic-operator",
+        "rel-portfolio-stockwell-noosa-civic-leasing_controller"
+      ],
+      "group_ids": [
+        "group-stockwell"
+      ],
+      "owner_names": [
+        "Stockwell"
+      ],
+      "manager_names": [
+        "Stockwell"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -55579,7 +56004,11 @@
         "median_household_income": 944,
         "age_45_plus_pct": 65.4,
         "retail_businesses": 155
-      }
+      },
+      "tenancy_count": 63,
+      "annual_visits": 3000000.0,
+      "source_url": "https://www.noosacivicshopping.com.au/noosa-civic-retail-centre-shopping-services-in-noosaville/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-unknown-north-shore-village": {
       "place_id": "place-au-unknown-north-shore-village",
@@ -66115,7 +66544,7 @@
         "confidence": "High",
         "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
       },
-      "leasing_arrangement": "In-house",
+      "leasing_arrangement": "Private landlord",
       "relationship_ids": [
         "rel-portfolio-silverleaf-cat-fiddle-manager",
         "rel-portfolio-silverleaf-cat-fiddle-leasing_controller"
@@ -109129,11 +109558,17 @@
     },
     "group-ma-financial": {
       "group_id": "group-ma-financial",
-      "property_count": 0,
+      "property_count": 1,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
-      "asset_roles": {},
+      "asset_roles": {
+        "place-au-nsw-top-ryde-city-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ]
+      },
       "white_space_property_ids": []
     },
     "group-ip-generation": {
@@ -110068,6 +110503,63 @@
       "asset_roles": {
         "place-au-nsw-greenwood-plaza": [
           "CO_OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-keppel-reit": {
+      "group_id": "group-keppel-reit",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-top-ryde-city-shopping-centre": [
+          "CO_OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-ma-top-ryde-fund": {
+      "group_id": "group-ma-top-ryde-fund",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-top-ryde-city-shopping-centre": [
+          "CO_OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-stockwell": {
+      "group_id": "group-stockwell",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-noosa-civic-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-st-ives-shopping-village-ownership": {
+      "group_id": "group-st-ives-shopping-village-ownership",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-st-ives-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "OPERATOR",
+          "OWNER"
         ]
       },
       "white_space_property_ids": []
@@ -125669,7 +126161,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Neighbourhood"
         }
       },
       "accessibility": {
@@ -125683,10 +126175,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 6.34,
-          "group_ids": [],
+          "group_ids": [
+            "group-st-ives-shopping-village-ownership"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -126253,7 +126747,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -126267,10 +126761,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 4.16,
-          "group_ids": [],
+          "group_ids": [
+            "group-keppel-reit",
+            "group-ma-financial",
+            "group-ma-top-ryde-fund"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -132218,7 +132716,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -132232,10 +132730,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 91.77,
-          "group_ids": [],
+          "group_ids": [
+            "group-stockwell"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }

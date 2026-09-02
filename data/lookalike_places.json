@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T01:52:20+00:00",
+    "generated_at": "2026-09-02T01:56:42+00:00",
     "benchmark": "All mapped Bailey Nelson stores, separated by country and location setting",
     "method": "Transparent lookalike screening rank; not a probability of store success",
     "weights": {
@@ -3716,7 +3716,7 @@
       },
       {
         "place_id": "place-au-qld-noosa-civic-shopping-centre",
-        "name": "Noosa Civic Shopping Centre",
+        "name": "Noosa Civic",
         "country": "Australia",
         "state": "QLD",
         "locality": "Noosaville",
@@ -3742,7 +3742,7 @@
           "Oscar Wylee",
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://www.noosacivicshopping.com.au/",
         "rank": 93
       },
       {
@@ -8629,10 +8629,10 @@
       },
       {
         "place_id": "place-au-nsw-st-ives-shopping-centre",
-        "name": "St Ives Shopping Centre",
+        "name": "St Ives Shopping Village",
         "country": "Australia",
         "state": "NSW",
-        "locality": "Ives",
+        "locality": "St Ives",
         "location_setting": "Shopping Centre",
         "score": 46,
         "screening_completeness": 90,
@@ -8655,7 +8655,7 @@
           "Oscar Wylee",
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://stivesvillage.com.au/",
         "rank": 264
       },
       {
@@ -14433,7 +14433,7 @@
       },
       {
         "place_id": "place-au-nsw-top-ryde-city-shopping-centre",
-        "name": "Top Ryde City Shopping Centre",
+        "name": "Top Ryde City",
         "country": "Australia",
         "state": "NSW",
         "locality": "Ryde",
@@ -14459,7 +14459,7 @@
           "Oscar Wylee",
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://www.toprydecity.com.au/",
         "rank": 467
       },
       {
