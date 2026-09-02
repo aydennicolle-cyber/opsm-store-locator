@@ -25,6 +25,7 @@ PROPERTY_INTELLIGENCE_PATH = DATA / "property_intelligence.json"
 NAMED_RETAILERS = {
     "OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee",
     "George & Matilda", "Eyecare Plus", "Optical Superstore",
+    "1001 Optometry", "EyeQ Optometrists", "Laubman & Pank",
 }
 FRESHNESS_KEYS = {
     "opsm-au": "OPSM Australia", "opsm-nz": "OPSM New Zealand",
@@ -34,6 +35,10 @@ FRESHNESS_KEYS = {
     "george-and-matilda-au": "George & Matilda Australia",
     "eyecare-plus-au": "Eyecare Plus Australia",
     "optical-superstore-au": "Optical Superstore Australia",
+    "1001-optometry-au": "1001 Optometry Australia",
+    "eyeq-optometrists-au": "EyeQ Optometrists Australia",
+    "laubman-and-pank-au": "Laubman & Pank Australia",
+    "provision-affiliation": "ProVision Australia",
     "osm-opticians": "Independent / Other optical",
 }
 
@@ -113,11 +118,13 @@ def source_results(manifest: dict, as_of: datetime, metadata: dict) -> list[dict
 def source_id_for_store(store: dict) -> str:
     country = "nz" if store["country"] == "New Zealand" else "au"
     if store["retailer"] == "Independent / Other optical":
-        return "osm-opticians"
+        return "provision-affiliation" if "provision" in store.get("affiliations", "").split("|") else "osm-opticians"
     retailer = {
         "OPSM": "opsm", "Specsavers": "specsavers", "Bailey Nelson": "bailey-nelson",
         "Oscar Wylee": "oscar-wylee", "George & Matilda": "george-and-matilda",
         "Eyecare Plus": "eyecare-plus", "Optical Superstore": "optical-superstore",
+        "1001 Optometry": "1001-optometry", "EyeQ Optometrists": "eyeq-optometrists",
+        "Laubman & Pank": "laubman-and-pank",
     }[store["retailer"]]
     return f"{retailer}-{country}"
 

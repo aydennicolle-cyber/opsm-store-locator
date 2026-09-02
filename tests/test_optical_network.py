@@ -35,6 +35,7 @@ VALID_NZ_REGIONS = {
 REQUIRED_FIELDS = {
     "retailer",
     "store_id",
+    "affiliations",
     "name",
     "status",
     "country",
@@ -102,8 +103,12 @@ class OpticalNetworkTests(unittest.TestCase):
                 with (ROOT / "retailers" / folder / "stores.csv").open(newline="", encoding="utf-8") as handle:
                     total += sum(1 for _ in csv.DictReader(handle))
             expected[item["name"]] = total
-        with (ROOT / "data" / "store_identity_remaps.csv").open(newline="", encoding="utf-8") as handle:
-            remaps = list(csv.DictReader(handle))
+        remaps = []
+        for path in (ROOT / "data" / "store_identity_remaps.csv", ROOT / "data" / "provision_identity_remaps.csv"):
+            with path.open(newline="", encoding="utf-8") as handle:
+                remaps.extend(csv.DictReader(handle))
+        with (ROOT / "retailers" / "provision" / "stores.csv").open(newline="", encoding="utf-8") as handle:
+            expected["Independent / Other optical"] += sum(1 for _ in csv.DictReader(handle))
         for remap in remaps:
             source = remap["source_store_id"]
             retailer = next(item for item in registry if source.startswith(f"{item['slug']}-"))
@@ -121,16 +126,27 @@ class OpticalNetworkTests(unittest.TestCase):
         registry = json.loads((ROOT / "data" / "retailer_registry.json").read_text(encoding="utf-8"))["retailers"]
         names = [item["name"] for item in registry]
         self.assertEqual(len(names), len(set(names)))
-        self.assertTrue({"George & Matilda", "Eyecare Plus", "Optical Superstore"}.issubset(names))
+        self.assertTrue({
+            "George & Matilda", "Eyecare Plus", "Optical Superstore", "1001 Optometry",
+            "EyeQ Optometrists", "Laubman & Pank",
+        }.issubset(names))
         additional = [item for item in registry if item["network_type"] == "additional"]
         self.assertTrue(all(not item["default_visible"] for item in additional))
         self.assertTrue(all(item["min_marker_zoom"] >= 8 for item in additional))
         ids = {row["store_id"] for row in self.rows}
-        with (ROOT / "data" / "store_identity_remaps.csv").open(newline="", encoding="utf-8") as handle:
-            remaps = list(csv.DictReader(handle))
+        remaps = []
+        for path in (ROOT / "data" / "store_identity_remaps.csv", ROOT / "data" / "provision_identity_remaps.csv"):
+            with path.open(newline="", encoding="utf-8") as handle:
+                remaps.extend(csv.DictReader(handle))
         self.assertTrue(remaps)
         self.assertTrue(all(row["source_store_id"] not in ids for row in remaps))
         self.assertTrue(all(row["canonical_store_id"] in ids for row in remaps))
+
+    def test_provision_is_an_affiliation_not_a_retailer(self) -> None:
+        self.assertNotIn("ProVision", {row["retailer"] for row in self.rows})
+        affiliated = [row for row in self.rows if "provision" in row["affiliations"].split("|")]
+        self.assertGreater(len(affiliated), 300)
+        self.assertTrue(all(row["country"] == "Australia" for row in affiliated))
 
     def test_ids_states_coordinates_and_sources(self) -> None:
         ids = [row["store_id"] for row in self.rows]

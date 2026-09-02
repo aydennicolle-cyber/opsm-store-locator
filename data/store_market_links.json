@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "store_count": 1691,
-    "matched_count": 1485,
+    "store_count": 2099,
+    "matched_count": 1893,
     "source_release_date": "2026-05-26"
   },
   "links": {
@@ -40,6 +40,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-16725": {
+      "sa2_code": "801061129",
+      "sa2_name": "Barton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "bailey-nelson-belconnen": {
       "sa2_code": "801011002",
       "sa2_name": "Belconnen",
@@ -64,6 +71,13 @@
     "specsavers-3307": {
       "sa2_code": "801011002",
       "sa2_name": "Belconnen",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16733": {
+      "sa2_code": "801051051",
+      "sa2_name": "Braddon",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -159,6 +173,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-49995": {
+      "sa2_code": "801061064",
+      "sa2_name": "Griffith (ACT)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "oscar-wylee-135": {
       "sa2_code": "801091109",
       "sa2_name": "Phillip",
@@ -197,6 +218,13 @@
     "specsavers-3657": {
       "sa2_code": "801081098",
       "sa2_name": "Weston",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "eyeq-optometrists-woden": {
+      "sa2_code": "801091109",
+      "sa2_name": "Phillip",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -1503,6 +1531,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-335966": {
+      "sa2_code": "109011174",
+      "sa2_name": "Albury - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1017": {
       "sa2_code": "109011174",
       "sa2_name": "Albury - South",
@@ -1520,6 +1555,20 @@
     "specsavers-3465": {
       "sa2_code": "109011174",
       "sa2_name": "Albury - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-137079": {
+      "sa2_code": "112011237",
+      "sa2_name": "Ballina Surrounds",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-35740": {
+      "sa2_code": "112011237",
+      "sa2_name": "Ballina Surrounds",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -1552,7 +1601,7 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-12547015064": {
+    "independent-other-optical-provision-16751": {
       "sa2_code": "122021420",
       "sa2_name": "Avalon - Palm Beach",
       "match_confidence": "High",
@@ -1622,6 +1671,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-16812": {
+      "sa2_code": "119011572",
+      "sa2_name": "Bankstown - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1178": {
       "sa2_code": "119011571",
       "sa2_name": "Bankstown - North",
@@ -1678,6 +1734,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "eyeq-optometrists-bathurst": {
+      "sa2_code": "103011612",
+      "sa2_name": "Bathurst - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16970": {
+      "sa2_code": "103011612",
+      "sa2_name": "Bathurst - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1020": {
       "sa2_code": "103011612",
       "sa2_name": "Bathurst - South",
@@ -1720,9 +1790,37 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-294787": {
+      "sa2_code": "104021083",
+      "sa2_name": "Bellingen",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-154026": {
       "sa2_code": "111011206",
       "sa2_name": "Belmont - Bennetts Green",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-62165": {
+      "sa2_code": "122031692",
+      "sa2_name": "Belrose",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "eyeq-optometrists-berowra-heights": {
+      "sa2_code": "121021404",
+      "sa2_name": "Berowra - Brooklyn - Cowan",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "1001-optometry-7240048": {
+      "sa2_code": "116011303",
+      "sa2_name": "Blacktown (East) - Kings Park",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -1751,6 +1849,20 @@
     "bailey-nelson-bondi-beach": {
       "sa2_code": "118011340",
       "sa2_name": "Bondi Beach - North Bondi",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16943": {
+      "sa2_code": "118011340",
+      "sa2_name": "Bondi Beach - North Bondi",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "1001-optometry-7240052": {
+      "sa2_code": "118011341",
+      "sa2_name": "Bondi Junction - Waverly",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -1791,6 +1903,13 @@
       "boundary_distance_km": null
     },
     "eyecare-plus-575": {
+      "sa2_code": "114021284",
+      "sa2_name": "Bowral",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-182235": {
       "sa2_code": "114021284",
       "sa2_name": "Bowral",
       "match_confidence": "High",
@@ -1839,6 +1958,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-322611": {
+      "sa2_code": "102021046",
+      "sa2_name": "Budgewoi - Buff Point - Halekulani",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "1001-optometry-7240049": {
+      "sa2_code": "120031678",
+      "sa2_name": "Burwood (NSW)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-579": {
       "sa2_code": "120031678",
       "sa2_name": "Burwood (NSW)",
@@ -1868,6 +2001,13 @@
       "boundary_distance_km": null
     },
     "bailey-nelson-byron-bay": {
+      "sa2_code": "112011240",
+      "sa2_name": "Byron Bay",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16875": {
       "sa2_code": "112011240",
       "sa2_name": "Byron Bay",
       "match_confidence": "High",
@@ -1937,6 +2077,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-16855": {
+      "sa2_code": "125021712",
+      "sa2_name": "Carlingford - West",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3663": {
       "sa2_code": "125021712",
       "sa2_name": "Carlingford - West",
@@ -1947,6 +2094,13 @@
     "eyecare-plus-584": {
       "sa2_code": "127011596",
       "sa2_name": "Hoxton Park - Carnes Hill - Horningsea Park",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-36205": {
+      "sa2_code": "112021244",
+      "sa2_name": "Casino",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2014,6 +2168,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-298186": {
+      "sa2_code": "111011208",
+      "sa2_name": "Charlestown - Dudley",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1219": {
       "sa2_code": "111011208",
       "sa2_name": "Charlestown - Dudley",
@@ -2031,6 +2192,20 @@
     "specsavers-3329": {
       "sa2_code": "111011208",
       "sa2_name": "Charlestown - Dudley",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "1001-optometry-7240050": {
+      "sa2_code": "121011684",
+      "sa2_name": "Chatswood - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "1001-optometry-7240051": {
+      "sa2_code": "121011684",
+      "sa2_name": "Chatswood - East",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2084,6 +2259,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-16770": {
+      "sa2_code": "104021084",
+      "sa2_name": "Coffs Harbour - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1229": {
       "sa2_code": "104021084",
       "sa2_name": "Coffs Harbour - North",
@@ -2112,9 +2294,23 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-16963": {
+      "sa2_code": "120011383",
+      "sa2_name": "Concord - Mortlake - Cabarita",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-475": {
       "sa2_code": "101031014",
       "sa2_name": "Cooma",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "eyeq-optometrists-cootamundra": {
+      "sa2_code": "113031263",
+      "sa2_name": "Cootamundra",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2175,9 +2371,37 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-16805": {
+      "sa2_code": "109031182",
+      "sa2_name": "Deniliquin",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-480": {
       "sa2_code": "118011650",
       "sa2_name": "Double Bay - Darling Point",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16956": {
+      "sa2_code": "120011385",
+      "sa2_name": "Drummoyne - Rodd Point",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-179952": {
+      "sa2_code": "105031101",
+      "sa2_name": "Dubbo - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-60113": {
+      "sa2_code": "105031101",
+      "sa2_name": "Dubbo - South",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2238,7 +2462,21 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "1001-optometry-7298653": {
+      "sa2_code": "117011323",
+      "sa2_name": "Pagewood - Hillsdale - Daceyville",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "bailey-nelson-eastgardens": {
+      "sa2_code": "117011323",
+      "sa2_name": "Pagewood - Hillsdale - Daceyville",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "eyeq-optometrists-eastgardens": {
       "sa2_code": "117011323",
       "sa2_name": "Pagewood - Hillsdale - Daceyville",
       "match_confidence": "High",
@@ -2259,6 +2497,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-35454": {
+      "sa2_code": "126021723",
+      "sa2_name": "Eastwood",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-600": {
       "sa2_code": "118011650",
       "sa2_name": "Double Bay - Darling Point",
@@ -2273,7 +2518,21 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-151117": {
+      "sa2_code": "117031640",
+      "sa2_name": "Newtown (NSW)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "bailey-nelson-erina-fair": {
+      "sa2_code": "102011031",
+      "sa2_name": "Erina - Green Point",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-311015": {
       "sa2_code": "102011031",
       "sa2_name": "Erina - Green Point",
       "match_confidence": "High",
@@ -2297,6 +2556,13 @@
     "specsavers-3331": {
       "sa2_code": "102011031",
       "sa2_name": "Erina - Green Point",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-71158": {
+      "sa2_code": "127021515",
+      "sa2_name": "Fairfield",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2357,6 +2623,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-337075": {
+      "sa2_code": "117031331",
+      "sa2_name": "Glebe - Forest Lodge",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3336": {
       "sa2_code": "111011209",
       "sa2_name": "Glendale - Cardiff - Hillsborough",
@@ -2399,9 +2672,23 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-35173": {
+      "sa2_code": "102011032",
+      "sa2_name": "Gosford - Springfield",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3334": {
       "sa2_code": "102011032",
       "sa2_name": "Gosford - Springfield",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-34645": {
+      "sa2_code": "101051539",
+      "sa2_name": "Goulburn",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2469,6 +2756,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-36419": {
+      "sa2_code": "110041199",
+      "sa2_name": "Gunnedah",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16916": {
+      "sa2_code": "128011529",
+      "sa2_name": "Gymea - Grays Point",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "optical-superstore-60372": {
       "sa2_code": "128011529",
       "sa2_name": "Gymea - Grays Point",
@@ -2504,6 +2805,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "1001-optometry-7297949": {
+      "sa2_code": "121021578",
+      "sa2_name": "Hornsby - West",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1102": {
       "sa2_code": "121021577",
       "sa2_name": "Hornsby - East",
@@ -2521,6 +2829,27 @@
     "specsavers-3418": {
       "sa2_code": "121021577",
       "sa2_name": "Hornsby - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-342859": {
+      "sa2_code": "126021499",
+      "sa2_name": "Hunters Hill - Woolwich",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "1001-optometry-24622066": {
+      "sa2_code": "119031664",
+      "sa2_name": "Hurstville - Central",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-335564": {
+      "sa2_code": "119031664",
+      "sa2_name": "Hurstville - Central",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2567,6 +2896,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "eyeq-optometrists-jannali": {
+      "sa2_code": "128021536",
+      "sa2_name": "Oyster Bay - Como - Jannali",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-625": {
       "sa2_code": "111031231",
       "sa2_name": "Shortland - Jesmond",
@@ -2584,6 +2920,13 @@
     "specsavers-3471": {
       "sa2_code": "111031231",
       "sa2_name": "Shortland - Jesmond",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-93628": {
+      "sa2_code": "112031250",
+      "sa2_name": "Kingscliff - Fingal Head",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2616,9 +2959,23 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "eyeq-optometrists-kiama": {
+      "sa2_code": "107031138",
+      "sa2_name": "Kiama",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3677": {
       "sa2_code": "107031138",
       "sa2_name": "Kiama",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-35332": {
+      "sa2_code": "102021044",
+      "sa2_name": "Bateau Bay - Killarney Vale",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2644,6 +3001,27 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-148746": {
+      "sa2_code": "119021663",
+      "sa2_name": "Kingsgrove - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16780": {
+      "sa2_code": "124031462",
+      "sa2_name": "Kingswood - Werrington",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16804": {
+      "sa2_code": "119041378",
+      "sa2_name": "Kogarah",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "bailey-nelson-kotara": {
       "sa2_code": "111031222",
       "sa2_name": "Adamstown - Kotara",
@@ -2661,6 +3039,13 @@
     "specsavers-3333": {
       "sa2_code": "111031222",
       "sa2_name": "Adamstown - Kotara",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-295020": {
+      "sa2_code": "108041162",
+      "sa2_name": "Laurieton - Bonny Hills",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2735,6 +3120,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "laubman-pank-lismore": {
+      "sa2_code": "112021248",
+      "sa2_name": "Lismore",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1210": {
       "sa2_code": "112021248",
       "sa2_name": "Lismore",
@@ -2745,6 +3137,13 @@
     "specsavers-3299": {
       "sa2_code": "112021248",
       "sa2_name": "Lismore",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "eyeq-optometrists-lithgow": {
+      "sa2_code": "103031070",
+      "sa2_name": "Lithgow",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2798,6 +3197,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-137585": {
+      "sa2_code": "122011419",
+      "sa2_name": "Manly - Fairlight",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16748": {
+      "sa2_code": "122011419",
+      "sa2_name": "Manly - Fairlight",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-470": {
       "sa2_code": "118021568",
       "sa2_name": "Maroubra - West",
@@ -2812,9 +3225,30 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "eyeq-optometrists-maroubra-junction": {
+      "sa2_code": "118021568",
+      "sa2_name": "Maroubra - West",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-164178": {
+      "sa2_code": "118021566",
+      "sa2_name": "Maroubra - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-17201": {
       "sa2_code": "117021636",
       "sa2_name": "Marrickville - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16840": {
+      "sa2_code": "117021637",
+      "sa2_name": "Marrickville - South",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2896,6 +3330,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-34119": {
+      "sa2_code": "128011530",
+      "sa2_name": "Miranda - Yowie Bay",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1174": {
       "sa2_code": "128011530",
       "sa2_name": "Miranda - Yowie Bay",
@@ -2931,6 +3372,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-328884": {
+      "sa2_code": "122021690",
+      "sa2_name": "Mona Vale - Warriewood (North)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-2941": {
       "sa2_code": "122021690",
       "sa2_name": "Mona Vale - Warriewood (North)",
@@ -2941,6 +3389,13 @@
     "specsavers-3321": {
       "sa2_code": "111021218",
       "sa2_name": "Morisset - Cooranbong",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-105065": {
+      "sa2_code": "119031666",
+      "sa2_name": "Mortdale - Oatley",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2962,6 +3417,13 @@
     "george-matilda-488": {
       "sa2_code": "121041689",
       "sa2_name": "Mosman - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16818": {
+      "sa2_code": "121041688",
+      "sa2_name": "Mosman - North",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -3036,7 +3498,21 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-36244": {
+      "sa2_code": "103031072",
+      "sa2_name": "Mudgee",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-425": {
+      "sa2_code": "106041126",
+      "sa2_name": "Muswellbrook",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16843": {
       "sa2_code": "106041126",
       "sa2_name": "Muswellbrook",
       "match_confidence": "High",
@@ -3071,7 +3547,7 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-6859346009": {
+    "independent-other-optical-provision-36636": {
       "sa2_code": "110031197",
       "sa2_name": "Narrabri",
       "match_confidence": "High",
@@ -3102,6 +3578,20 @@
     "eyecare-plus-655": {
       "sa2_code": "111031225",
       "sa2_name": "Lambton - New Lambton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16890": {
+      "sa2_code": "111031229",
+      "sa2_name": "Newcastle - Cooks Hill",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16868": {
+      "sa2_code": "111031229",
+      "sa2_name": "Newcastle - Cooks Hill",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -3148,6 +3638,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "1001-optometry-7297952": {
+      "sa2_code": "126021500",
+      "sa2_name": "Macquarie Park - Marsfield",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "bailey-nelson-macquarie": {
       "sa2_code": "126021500",
       "sa2_name": "Macquarie Park - Marsfield",
@@ -3186,6 +3683,20 @@
     "specsavers-3356": {
       "sa2_code": "121041417",
       "sa2_name": "North Sydney - Lavender Bay",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-284790": {
+      "sa2_code": "125041491",
+      "sa2_name": "Northmead",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "eyeq-optometrists-nowra": {
+      "sa2_code": "114011278",
+      "sa2_name": "Nowra",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -3233,6 +3744,13 @@
       "boundary_distance_km": null
     },
     "eyecare-plus-659": {
+      "sa2_code": "103041077",
+      "sa2_name": "Orange",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16825": {
       "sa2_code": "103041077",
       "sa2_name": "Orange",
       "match_confidence": "High",
@@ -3295,6 +3813,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "1001-optometry-7298848": {
+      "sa2_code": "125041717",
+      "sa2_name": "Parramatta - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16763": {
+      "sa2_code": "125041717",
+      "sa2_name": "Parramatta - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1326": {
       "sa2_code": "125041717",
       "sa2_name": "Parramatta - North",
@@ -3323,7 +3855,35 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "1001-optometry-7297950": {
+      "sa2_code": "124031464",
+      "sa2_name": "Penrith",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-661": {
+      "sa2_code": "124031464",
+      "sa2_name": "Penrith",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-337407": {
+      "sa2_code": "124031464",
+      "sa2_name": "Penrith",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-316011": {
+      "sa2_code": "124031464",
+      "sa2_name": "Penrith",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-155308": {
       "sa2_code": "124031464",
       "sa2_name": "Penrith",
       "match_confidence": "High",
@@ -3365,6 +3925,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-16904": {
+      "sa2_code": "119031371",
+      "sa2_name": "Oatley - Hurstville Grove",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1351": {
       "sa2_code": "116031315",
       "sa2_name": "Hassall Grove - Plumpton",
@@ -3375,6 +3942,13 @@
     "specsavers-3528": {
       "sa2_code": "116031315",
       "sa2_name": "Hassall Grove - Plumpton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "eyeq-optometrists-port-macquarie": {
+      "sa2_code": "108041164",
+      "sa2_name": "Port Macquarie - West",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -3456,9 +4030,30 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-33951": {
+      "sa2_code": "110041201",
+      "sa2_name": "Quirindi",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "eyeq-optometrists-ramsgate": {
+      "sa2_code": "119041382",
+      "sa2_name": "Sans Souci - Ramsgate",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-465": {
       "sa2_code": "119041382",
       "sa2_name": "Sans Souci - Ramsgate",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-101492": {
+      "sa2_code": "118021569",
+      "sa2_name": "Randwick - North",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -3494,6 +4089,20 @@
     "specsavers-3652": {
       "sa2_code": "106031122",
       "sa2_name": "Raymond Terrace",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-323950": {
+      "sa2_code": "117031642",
+      "sa2_name": "Redfern",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-325061": {
+      "sa2_code": "117031642",
+      "sa2_name": "Redfern",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -3543,6 +4152,13 @@
     "eyecare-plus-666": {
       "sa2_code": "119031373",
       "sa2_name": "Riverwood",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16794": {
+      "sa2_code": "119041381",
+      "sa2_name": "Rockdale - Banksia",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -3599,6 +4215,13 @@
     "specsavers-3526": {
       "sa2_code": "115041625",
       "sa2_name": "Rouse Hill - Beaumont Hills",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "1001-optometry-7298788": {
+      "sa2_code": "126021724",
+      "sa2_name": "Ryde - North",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -3708,6 +4331,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "eyeq-optometrists-st-ives": {
+      "sa2_code": "121031410",
+      "sa2_name": "St Ives",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-313886": {
+      "sa2_code": "121031410",
+      "sa2_name": "St Ives",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1398": {
       "sa2_code": "121031410",
       "sa2_name": "St Ives",
@@ -3729,6 +4366,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-271671": {
+      "sa2_code": "124051581",
+      "sa2_name": "St Marys - North St Marys",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3496": {
       "sa2_code": "124051581",
       "sa2_name": "St Marys - North St Marys",
@@ -3739,6 +4383,20 @@
     "specsavers-3367": {
       "sa2_code": "116021633",
       "sa2_name": "Stanhope Gardens - Parklea",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-33750": {
+      "sa2_code": "120031680",
+      "sa2_name": "Strathfield - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-141029": {
+      "sa2_code": "128021538",
+      "sa2_name": "Sutherland - Kirrawee",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -3779,6 +4437,20 @@
       "boundary_distance_km": null
     },
     "george-matilda-17209": {
+      "sa2_code": "117031644",
+      "sa2_name": "Sydney (North) - Millers Point",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16862": {
+      "sa2_code": "117031644",
+      "sa2_name": "Sydney (North) - Millers Point",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16787": {
       "sa2_code": "117031644",
       "sa2_name": "Sydney (North) - Millers Point",
       "match_confidence": "High",
@@ -3841,6 +4513,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-33817": {
+      "sa2_code": "110041202",
+      "sa2_name": "Tamworth - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-33879": {
+      "sa2_code": "110041203",
+      "sa2_name": "Tamworth - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-2938": {
       "sa2_code": "110041203",
       "sa2_name": "Tamworth - North",
@@ -3884,6 +4570,13 @@
       "boundary_distance_km": null
     },
     "george-matilda-424": {
+      "sa2_code": "111031228",
+      "sa2_name": "Merewether - The Junction",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16929": {
       "sa2_code": "111031228",
       "sa2_name": "Merewether - The Junction",
       "match_confidence": "High",
@@ -3949,6 +4642,20 @@
     "specsavers-3332": {
       "sa2_code": "102021055",
       "sa2_name": "Tuggerah - Kangy Angy",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16852": {
+      "sa2_code": "113021261",
+      "sa2_name": "Tumut",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-223610": {
+      "sa2_code": "112031552",
+      "sa2_name": "Tweed Heads South",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -4030,7 +4737,21 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "eyeq-optometrists-vincentia": {
+      "sa2_code": "114011276",
+      "sa2_name": "Huskisson - Vincentia",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-685": {
+      "sa2_code": "113031270",
+      "sa2_name": "Wagga Wagga - West",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16850": {
       "sa2_code": "113031270",
       "sa2_name": "Wagga Wagga - West",
       "match_confidence": "High",
@@ -4082,6 +4803,20 @@
     "eyecare-plus-687": {
       "sa2_code": "111011214",
       "sa2_name": "Warners Bay - Boolaroo",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16888": {
+      "sa2_code": "111011214",
+      "sa2_name": "Warners Bay - Boolaroo",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16908": {
+      "sa2_code": "107011546",
+      "sa2_name": "Port Kembla - Warrawong",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -4156,6 +4891,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-16878": {
+      "sa2_code": "124041467",
+      "sa2_name": "Windsor - Bligh Park",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3678": {
       "sa2_code": "124041467",
       "sa2_name": "Windsor - Bligh Park",
@@ -4180,6 +4922,13 @@
     "specsavers-3501": {
       "sa2_code": "125041494",
       "sa2_name": "Winston Hills",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-297282": {
+      "sa2_code": "119041671",
+      "sa2_name": "Wolli Creek",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -4229,6 +4978,20 @@
     "eyecare-plus-694": {
       "sa2_code": "104011082",
       "sa2_name": "Maclean - Yamba - Iluka",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "eyeq-optometrists-young": {
+      "sa2_code": "101061543",
+      "sa2_name": "Young",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16797": {
+      "sa2_code": "101061543",
+      "sa2_name": "Young",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -4292,6 +5055,13 @@
     "specsavers-3689": {
       "sa2_code": "701021013",
       "sa2_name": "Brinkin - Nakara",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-338705": {
+      "sa2_code": "701011002",
+      "sa2_name": "Darwin City",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -4807,7 +5577,21 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17467": {
+      "sa2_code": "305031121",
+      "sa2_name": "Ascot",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-2295": {
+      "sa2_code": "305041132",
+      "sa2_name": "Ashgrove",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-123746": {
       "sa2_code": "305041132",
       "sa2_name": "Ashgrove",
       "match_confidence": "High",
@@ -4849,6 +5633,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17524": {
+      "sa2_code": "306051166",
+      "sa2_name": "Atherton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3378": {
       "sa2_code": "319011500",
       "sa2_name": "Millbank - Avoca",
@@ -4859,6 +5650,13 @@
     "eyecare-plus-9744": {
       "sa2_code": "318011460",
       "sa2_name": "Ayr",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17605": {
+      "sa2_code": "319011493",
+      "sa2_name": "Bargara - Burnett Heads",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -4905,6 +5703,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17608": {
+      "sa2_code": "308041529",
+      "sa2_name": "Biloela",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-2982": {
       "sa2_code": "316021424",
       "sa2_name": "Wurtulla - Birtinya",
@@ -4922,6 +5727,13 @@
     "opsm-1065": {
       "sa2_code": "310031287",
       "sa2_name": "Ipswich - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17627": {
+      "sa2_code": "308051531",
+      "sa2_name": "Boyne Island - Tannum Sands",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5066,6 +5878,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-123913": {
+      "sa2_code": "316011413",
+      "sa2_name": "Buderim - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3205": {
       "sa2_code": "316011414",
       "sa2_name": "Buderim - South",
@@ -5080,6 +5899,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-316341": {
+      "sa2_code": "319011492",
+      "sa2_name": "Ashfield - Kepnock",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1111": {
       "sa2_code": "319011495",
       "sa2_name": "Bundaberg",
@@ -5090,6 +5916,13 @@
     "opsm-1386": {
       "sa2_code": "319011500",
       "sa2_name": "Millbank - Avoca",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-329067": {
+      "sa2_code": "319011495",
+      "sa2_name": "Bundaberg",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5132,6 +5965,27 @@
     "eyecare-plus-5512": {
       "sa2_code": "309011225",
       "sa2_name": "Burleigh Heads",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-224010": {
+      "sa2_code": "309011225",
+      "sa2_name": "Burleigh Heads",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17564": {
+      "sa2_code": "313041372",
+      "sa2_name": "Burpengary",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-cairns-optometrist": {
+      "sa2_code": "306021145",
+      "sa2_name": "Cairns City",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5192,6 +6046,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-124134": {
+      "sa2_code": "303011047",
+      "sa2_name": "Camp Hill",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1264": {
       "sa2_code": "303011048",
       "sa2_name": "Cannon Hill",
@@ -5220,6 +6081,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "laubman-pank-capalaba-optometrist": {
+      "sa2_code": "301011004",
+      "sa2_name": "Capalaba",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1246": {
       "sa2_code": "301011004",
       "sa2_name": "Capalaba",
@@ -5242,6 +6110,20 @@
       "boundary_distance_km": null
     },
     "bailey-nelson-carindale": {
+      "sa2_code": "303011051",
+      "sa2_name": "Carindale",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-318504": {
+      "sa2_code": "303011051",
+      "sa2_name": "Carindale",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-carindale-optometrist": {
       "sa2_code": "303011051",
       "sa2_name": "Carindale",
       "match_confidence": "High",
@@ -5290,6 +6172,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "laubman-pank-chermside-optometrist": {
+      "sa2_code": "302021028",
+      "sa2_name": "Chermside",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1346": {
       "sa2_code": "302021028",
       "sa2_name": "Chermside",
@@ -5311,9 +6200,23 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-229331": {
+      "sa2_code": "307011172",
+      "sa2_name": "Chinchilla",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-627": {
       "sa2_code": "310031288",
       "sa2_name": "Ipswich - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-37759": {
+      "sa2_code": "301021007",
+      "sa2_name": "Cleveland",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5335,6 +6238,13 @@
     "eyecare-plus-591": {
       "sa2_code": "306011139",
       "sa2_name": "Clifton Beach - Kewarra Beach",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17495": {
+      "sa2_code": "316031425",
+      "sa2_name": "Coolum Beach",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5367,7 +6277,14 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-5738744123": {
+    "independent-other-optical-provision-17548": {
+      "sa2_code": "316081549",
+      "sa2_name": "Noosa Hinterland",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17480": {
       "sa2_code": "303021053",
       "sa2_name": "Coorparoo",
       "match_confidence": "High",
@@ -5382,6 +6299,13 @@
       "boundary_distance_km": null
     },
     "george-matilda-461": {
+      "sa2_code": "307021183",
+      "sa2_name": "Wambo",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-229215": {
       "sa2_code": "307021183",
       "sa2_name": "Wambo",
       "match_confidence": "High",
@@ -5444,9 +6368,23 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17658": {
+      "sa2_code": "308011192",
+      "sa2_name": "Emerald",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3545": {
       "sa2_code": "308011192",
       "sa2_name": "Emerald",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-84177": {
+      "sa2_code": "302011025",
+      "sa2_name": "Everton Park",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5500,6 +6438,27 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17449": {
+      "sa2_code": "317011448",
+      "sa2_name": "Gatton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17631": {
+      "sa2_code": "308051534",
+      "sa2_name": "Gladstone",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17600": {
+      "sa2_code": "308051536",
+      "sa2_name": "Kin Kora - Sun Valley",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1588": {
       "sa2_code": "308051539",
       "sa2_name": "West Gladstone",
@@ -5508,6 +6467,13 @@
       "boundary_distance_km": null
     },
     "george-matilda-413": {
+      "sa2_code": "319031512",
+      "sa2_name": "Gympie - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-332038": {
       "sa2_code": "319031512",
       "sa2_name": "Gympie - North",
       "match_confidence": "High",
@@ -5556,6 +6522,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-123617": {
+      "sa2_code": "317011450",
+      "sa2_name": "Highfields",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-94236": {
+      "sa2_code": "309071253",
+      "sa2_name": "Hope Island",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "optical-superstore-60466": {
       "sa2_code": "318021475",
       "sa2_name": "Garbutt - West End",
@@ -5584,6 +6564,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "1001-optometry-86037479": {
+      "sa2_code": "304031094",
+      "sa2_name": "Indooroopilly",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "bailey-nelson-indooroopilly": {
       "sa2_code": "304031094",
       "sa2_name": "Indooroopilly",
@@ -5592,6 +6579,13 @@
       "boundary_distance_km": null
     },
     "george-matilda-17214": {
+      "sa2_code": "304031094",
+      "sa2_name": "Indooroopilly",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-indooroopilly-optometrist": {
       "sa2_code": "304031094",
       "sa2_name": "Indooroopilly",
       "match_confidence": "High",
@@ -5640,9 +6634,23 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "laubman-pank-ipswich-optometrist": {
+      "sa2_code": "310031286",
+      "sa2_name": "Ipswich - Central",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3362": {
       "sa2_code": "310031286",
       "sa2_name": "Ipswich - Central",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-83366": {
+      "sa2_code": "311041570",
+      "sa2_name": "Jimboomba - Glenlogan",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5664,6 +6672,20 @@
     "george-matilda-411": {
       "sa2_code": "304021087",
       "sa2_name": "Brookfield - Kenmore Hills",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17684": {
+      "sa2_code": "304021088",
+      "sa2_name": "Chapel Hill",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17687": {
+      "sa2_code": "319021505",
+      "sa2_name": "Kingaroy",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5710,6 +6732,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17474": {
+      "sa2_code": "311061331",
+      "sa2_name": "Logan Central",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "optical-superstore-60505": {
       "sa2_code": "311051327",
       "sa2_name": "Shailer Park",
@@ -5734,6 +6763,34 @@
     "specsavers-3653": {
       "sa2_code": "305031131",
       "sa2_name": "Wooloowin - Lutwyche",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "eyeq-optometrists-mackay": {
+      "sa2_code": "312021346",
+      "sa2_name": "Mackay",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-176491": {
+      "sa2_code": "312021346",
+      "sa2_name": "Mackay",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-mackay-caneland-optometrist": {
+      "sa2_code": "312021346",
+      "sa2_name": "Mackay",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-mackay-optometrist": {
+      "sa2_code": "312021346",
+      "sa2_name": "Mackay",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5780,6 +6837,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17571": {
+      "sa2_code": "316061440",
+      "sa2_name": "Caloundra Hinterland",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-2968": {
       "sa2_code": "314021579",
       "sa2_name": "North Lakes",
@@ -5787,9 +6851,44 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17578": {
+      "sa2_code": "301031016",
+      "sa2_name": "Manly West",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17531": {
+      "sa2_code": "306021154",
+      "sa2_name": "Westcourt - Bungalow",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17438": {
+      "sa2_code": "313051378",
+      "sa2_name": "Margate - Woody Point",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-17206": {
       "sa2_code": "316031427",
       "sa2_name": "Maroochydore - Kuluin",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-305042": {
+      "sa2_code": "316031427",
+      "sa2_name": "Maroochydore - Kuluin",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-326585": {
+      "sa2_code": "316011413",
+      "sa2_name": "Buderim - North",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5864,6 +6963,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-34551": {
+      "sa2_code": "305041135",
+      "sa2_name": "Paddington - Milton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-brookside-optometrist": {
+      "sa2_code": "304041101",
+      "sa2_name": "Mitchelton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1119": {
       "sa2_code": "304041101",
       "sa2_name": "Mitchelton",
@@ -5888,6 +7001,20 @@
     "specsavers-3408": {
       "sa2_code": "304041101",
       "sa2_name": "Mitchelton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17555": {
+      "sa2_code": "303041068",
+      "sa2_name": "Moorooka",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-morayfield-optometrist": {
+      "sa2_code": "313021366",
+      "sa2_name": "Caboolture - South",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5969,6 +7096,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "laubman-pank-mt-ommaney-optometrist": {
+      "sa2_code": "304011081",
+      "sa2_name": "Jindalee - Mount Ommaney",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1274": {
       "sa2_code": "304011081",
       "sa2_name": "Jindalee - Mount Ommaney",
@@ -5976,9 +7110,37 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17596": {
+      "sa2_code": "309051244",
+      "sa2_name": "Mudgeeraba - Bonogin",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17488": {
+      "sa2_code": "316071548",
+      "sa2_name": "Nambour",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-165486": {
+      "sa2_code": "316071548",
+      "sa2_name": "Nambour",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3203": {
       "sa2_code": "316071548",
       "sa2_name": "Nambour",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17503": {
+      "sa2_code": "313041375",
+      "sa2_name": "Narangba",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -6000,6 +7162,13 @@
     "specsavers-3572": {
       "sa2_code": "317011453",
       "sa2_name": "Newtown (Qld)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17558": {
+      "sa2_code": "316051434",
+      "sa2_name": "Noosa Heads",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -6081,6 +7250,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "laubman-pank-rockhampton-optometrist": {
+      "sa2_code": "308031205",
+      "sa2_name": "Berserker",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "optical-superstore-61167": {
       "sa2_code": "308031214",
       "sa2_name": "Park Avenue",
@@ -6088,9 +7264,23 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17516": {
+      "sa2_code": "309041242",
+      "sa2_name": "Tamborine - Canungra",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-657": {
       "sa2_code": "302031040",
       "sa2_name": "Nundah",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17621": {
+      "sa2_code": "309071553",
+      "sa2_name": "Ormeau (West) - Yatala",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -6144,9 +7334,23 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17677": {
+      "sa2_code": "306041165",
+      "sa2_name": "Port Douglas",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3277": {
       "sa2_code": "310041299",
       "sa2_name": "Collingwood Park - Redbank",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-eyecare-redbank-plains-part-laubmanpank": {
+      "sa2_code": "310041302",
+      "sa2_name": "Redbank Plains",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -6186,6 +7390,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17661": {
+      "sa2_code": "307011176",
+      "sa2_name": "Roma",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-17223": {
       "sa2_code": "309031240",
       "sa2_name": "Runaway Bay",
@@ -6221,6 +7432,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17590": {
+      "sa2_code": "304031095",
+      "sa2_name": "Sherwood",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17587": {
+      "sa2_code": "316011414",
+      "sa2_name": "Buderim - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3304": {
       "sa2_code": "306011142",
       "sa2_name": "Trinity Beach - Smithfield",
@@ -6245,6 +7470,13 @@
     "george-matilda-17222": {
       "sa2_code": "309091540",
       "sa2_name": "Southport - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-68307": {
+      "sa2_code": "309091541",
+      "sa2_name": "Southport - South",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -6375,6 +7607,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-294213": {
+      "sa2_code": "317011457",
+      "sa2_name": "Toowoomba - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "optical-superstore-61173": {
       "sa2_code": "302041045",
       "sa2_name": "Taigum - Fitzgibbon",
@@ -6431,6 +7670,55 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17664": {
+      "sa2_code": "317011456",
+      "sa2_name": "Toowoomba - Central",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-320516": {
+      "sa2_code": "317011456",
+      "sa2_name": "Toowoomba - Central",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17650": {
+      "sa2_code": "317011456",
+      "sa2_name": "Toowoomba - Central",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17426": {
+      "sa2_code": "317011456",
+      "sa2_name": "Toowoomba - Central",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-durkinblack-optometrists-part-laubmanpank-grand-central": {
+      "sa2_code": "317011456",
+      "sa2_name": "Toowoomba - Central",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-toowoomba-clifford-gardens-optometrist": {
+      "sa2_code": "317011453",
+      "sa2_name": "Newtown (Qld)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-toowoomba-optometrist": {
+      "sa2_code": "317011456",
+      "sa2_name": "Toowoomba - Central",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1339": {
       "sa2_code": "317011453",
       "sa2_name": "Newtown (Qld)",
@@ -6466,6 +7754,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17413": {
+      "sa2_code": "317011457",
+      "sa2_name": "Toowoomba - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-415": {
       "sa2_code": "318021467",
       "sa2_name": "Aitkenvale",
@@ -6476,6 +7771,13 @@
     "opsm-1169": {
       "sa2_code": "318021475",
       "sa2_name": "Garbutt - West End",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17553": {
+      "sa2_code": "311061335",
+      "sa2_name": "Underwood",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -6508,9 +7810,23 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "laubman-pank-garden-city-qld-optometrist": {
+      "sa2_code": "303031065",
+      "sa2_name": "Upper Mount Gravatt",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3342": {
       "sa2_code": "319041518",
       "sa2_name": "Pialba - Eli Waters",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17512": {
+      "sa2_code": "309011226",
+      "sa2_name": "Burleigh Waters",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -6567,6 +7883,27 @@
     "optical-superstore-153567": {
       "sa2_code": "306021154",
       "sa2_name": "Westcourt - Bungalow",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-durkinblack-optometrists-part-laubmanpank-wilsonton": {
+      "sa2_code": "317011459",
+      "sa2_name": "Wilsonton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17700": {
+      "sa2_code": "301031020",
+      "sa2_name": "Wynnum",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17614": {
+      "sa2_code": "301031021",
+      "sa2_name": "Wynnum West - Hemmant",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -6690,6 +8027,27 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-326334": {
+      "sa2_code": "401011001",
+      "sa2_name": "Adelaide",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17747": {
+      "sa2_code": "401011001",
+      "sa2_name": "Adelaide",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-adelaide-optometrist": {
+      "sa2_code": "401011001",
+      "sa2_name": "Adelaide",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1376": {
       "sa2_code": "401011001",
       "sa2_name": "Adelaide",
@@ -6707,6 +8065,13 @@
     "specsavers-3208": {
       "sa2_code": "401011001",
       "sa2_name": "Adelaide",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-121963": {
+      "sa2_code": "403041072",
+      "sa2_name": "Aldinga",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -6732,6 +8097,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17736": {
+      "sa2_code": "403031067",
+      "sa2_name": "Blackwood",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3269": {
       "sa2_code": "405021116",
       "sa2_name": "Clare",
@@ -6749,6 +8121,13 @@
     "specsavers-3369": {
       "sa2_code": "403021058",
       "sa2_name": "Edwardstown",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-elizabeth-optometrist": {
+      "sa2_code": "402021030",
+      "sa2_name": "Elizabeth",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -6816,6 +8195,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17714": {
+      "sa2_code": "403011057",
+      "sa2_name": "Glenelg (SA)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1211": {
       "sa2_code": "403011057",
       "sa2_name": "Glenelg (SA)",
@@ -6844,9 +8230,23 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17752": {
+      "sa2_code": "404011092",
+      "sa2_name": "Henley Beach",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "optical-superstore-61469": {
       "sa2_code": "404031108",
       "sa2_name": "Richmond (SA)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-ingle-farm-optometrist": {
+      "sa2_code": "402041040",
+      "sa2_name": "Ingle Farm",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -6879,6 +8279,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-186387": {
+      "sa2_code": "405011111",
+      "sa2_name": "Light",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1648": {
       "sa2_code": "404011097",
       "sa2_name": "Woodville - Cheltenham",
@@ -6903,6 +8310,20 @@
     "specsavers-3244": {
       "sa2_code": "401051019",
       "sa2_name": "St Peters - Marden",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17764": {
+      "sa2_code": "403041083",
+      "sa2_name": "McLaren Vale",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-tea-tree-plaza-optometrist": {
+      "sa2_code": "402051052",
+      "sa2_name": "Hope Valley - Modbury",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -6963,6 +8384,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-288186": {
+      "sa2_code": "407021173",
+      "sa2_name": "Mount Gambier - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1584": {
       "sa2_code": "407021174",
       "sa2_name": "Mount Gambier - West",
@@ -6977,9 +8405,30 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17756": {
+      "sa2_code": "407031165",
+      "sa2_name": "Murray Bridge",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3594": {
       "sa2_code": "407031165",
       "sa2_name": "Murray Bridge",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-naracoorte-optometrist": {
+      "sa2_code": "407021154",
+      "sa2_name": "Naracoorte",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "eyeq-optometrists-newton": {
+      "sa2_code": "401041015",
+      "sa2_name": "Paradise - Newton",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -7033,7 +8482,21 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-283176": {
+      "sa2_code": "402031175",
+      "sa2_name": "Northgate - Northfield",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "bailey-nelson-norwood": {
+      "sa2_code": "401051017",
+      "sa2_name": "Norwood (SA)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17745": {
       "sa2_code": "401051017",
       "sa2_name": "Norwood (SA)",
       "match_confidence": "High",
@@ -7054,6 +8517,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-319410": {
+      "sa2_code": "405011114",
+      "sa2_name": "Nuriootpa",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3271": {
       "sa2_code": "405011114",
       "sa2_name": "Nuriootpa",
@@ -7061,7 +8531,21 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17712": {
+      "sa2_code": "403041080",
+      "sa2_name": "Happy Valley",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "bailey-nelson-marion": {
+      "sa2_code": "403021064",
+      "sa2_name": "Warradale",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-marion-optometrist": {
       "sa2_code": "403021064",
       "sa2_name": "Warradale",
       "match_confidence": "High",
@@ -7106,6 +8590,27 @@
     "bailey-nelson-port-adelaide": {
       "sa2_code": "404021101",
       "sa2_name": "Port Adelaide",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17750": {
+      "sa2_code": "404021101",
+      "sa2_name": "Port Adelaide",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17729": {
+      "sa2_code": "406021142",
+      "sa2_name": "Port Augusta",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17721": {
+      "sa2_code": "406011133",
+      "sa2_name": "Port Lincoln",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -7180,6 +8685,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-106970": {
+      "sa2_code": "403041177",
+      "sa2_name": "Seaford - Seaford Meadows",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1514": {
       "sa2_code": "403041177",
       "sa2_name": "Seaford - Seaford Meadows",
@@ -7243,7 +8755,14 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-949241785": {
+    "independent-other-optical-provision-17765": {
+      "sa2_code": "407011148",
+      "sa2_name": "Victor Harbor",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-131737": {
       "sa2_code": "407011148",
       "sa2_name": "Victor Harbor",
       "match_confidence": "High",
@@ -7300,6 +8819,13 @@
       "boundary_distance_km": null
     },
     "specsavers-3388": {
+      "sa2_code": "406011136",
+      "sa2_name": "Whyalla",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17759": {
       "sa2_code": "406011136",
       "sa2_name": "Whyalla",
       "match_confidence": "High",
@@ -7425,6 +8951,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-331879": {
+      "sa2_code": "604011077",
+      "sa2_name": "Burnie - Wivenhoe",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-2287": {
       "sa2_code": "604011077",
       "sa2_name": "Burnie - Wivenhoe",
@@ -7435,6 +8968,13 @@
     "specsavers-3543": {
       "sa2_code": "604011077",
       "sa2_name": "Burnie - Wivenhoe",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17915": {
+      "sa2_code": "601031015",
+      "sa2_name": "Claremont (Tas.)",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -7481,6 +9021,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17866": {
+      "sa2_code": "601031017",
+      "sa2_name": "Glenorchy",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1662": {
       "sa2_code": "601031017",
       "sa2_name": "Glenorchy",
@@ -7509,6 +9056,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17858": {
+      "sa2_code": "601051027",
+      "sa2_name": "Hobart",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-2293": {
       "sa2_code": "601051027",
       "sa2_name": "Hobart",
@@ -7530,7 +9084,21 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17894": {
+      "sa2_code": "601021007",
+      "sa2_name": "Howrah - Tranmere",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-396": {
+      "sa2_code": "603021072",
+      "sa2_name": "Huonville - Franklin",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17887": {
       "sa2_code": "603021072",
       "sa2_name": "Huonville - Franklin",
       "match_confidence": "High",
@@ -7559,6 +9127,13 @@
       "boundary_distance_km": null
     },
     "george-matilda-398": {
+      "sa2_code": "601041022",
+      "sa2_name": "Kingston - Huntingfield",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17880": {
       "sa2_code": "601041022",
       "sa2_name": "Kingston - Huntingfield",
       "match_confidence": "High",
@@ -7621,6 +9196,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17901": {
+      "sa2_code": "601031020",
+      "sa2_name": "New Norfolk",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-401": {
       "sa2_code": "602011044",
       "sa2_name": "Prospect Vale - Blackstone",
@@ -7663,6 +9245,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17873": {
+      "sa2_code": "601051031",
+      "sa2_name": "Sandy Bay",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-403": {
       "sa2_code": "601061035",
       "sa2_name": "Sorell - Richmond",
@@ -7670,7 +9259,14 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-6057522187": {
+    "independent-other-optical-provision-17922": {
+      "sa2_code": "601061035",
+      "sa2_name": "Sorell - Richmond",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17868": {
       "sa2_code": "604011082",
       "sa2_name": "Ulverstone",
       "match_confidence": "High",
@@ -7792,13 +9388,6 @@
     "independent-other-optical-osm-au-node-11145701652": {
       "sa2_code": "207021425",
       "sa2_name": "Doncaster East - South",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-way-771544870": {
-      "sa2_code": "206071140",
-      "sa2_name": "Carlton North - Princes Hill",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -8496,9 +10085,37 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "eyeq-optometrists-altona": {
+      "sa2_code": "213021343",
+      "sa2_name": "Altona North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3457": {
       "sa2_code": "213021343",
       "sa2_name": "Altona North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-318897": {
+      "sa2_code": "203021487",
+      "sa2_name": "Grovedale - Mount Duneed",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-34292": {
+      "sa2_code": "207011146",
+      "sa2_name": "Ashburton (Vic.)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-313354": {
+      "sa2_code": "207011146",
+      "sa2_name": "Ashburton (Vic.)",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -8573,6 +10190,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-327464": {
+      "sa2_code": "207011148",
+      "sa2_name": "Balwyn North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "independent-other-optical-osm-au-way-266678041": {
       "sa2_code": "203021037",
       "sa2_name": "Belmont",
@@ -8608,7 +10232,7 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-way-1443622715": {
+    "independent-other-optical-provision-17134": {
       "sa2_code": "202011018",
       "sa2_name": "Bendigo",
       "match_confidence": "High",
@@ -8643,6 +10267,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17060": {
+      "sa2_code": "208021174",
+      "sa2_name": "Bentleigh - McKinnon",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1134": {
       "sa2_code": "208021174",
       "sa2_name": "Bentleigh - McKinnon",
@@ -8658,6 +10289,13 @@
       "boundary_distance_km": null
     },
     "bailey-nelson-berwick": {
+      "sa2_code": "212021293",
+      "sa2_name": "Berwick - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17293": {
       "sa2_code": "212021293",
       "sa2_name": "Berwick - North",
       "match_confidence": "High",
@@ -8692,6 +10330,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "1001-optometry-7240046": {
+      "sa2_code": "207031163",
+      "sa2_name": "Box Hill",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3525": {
       "sa2_code": "207031163",
       "sa2_name": "Box Hill",
@@ -8699,7 +10344,28 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17335": {
+      "sa2_code": "213031347",
+      "sa2_name": "Braybrook",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "bailey-nelson-brighton": {
+      "sa2_code": "208011169",
+      "sa2_name": "Brighton (Vic.)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17171": {
+      "sa2_code": "208011169",
+      "sa2_name": "Brighton (Vic.)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17405": {
       "sa2_code": "208011169",
       "sa2_name": "Brighton (Vic.)",
       "match_confidence": "High",
@@ -8755,9 +10421,30 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-56715": {
+      "sa2_code": "207021156",
+      "sa2_name": "Bulleen",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-578": {
       "sa2_code": "209041216",
       "sa2_name": "Bundoora - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17341": {
+      "sa2_code": "207031166",
+      "sa2_name": "Burwood East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17065": {
+      "sa2_code": "207031166",
+      "sa2_name": "Burwood East",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -8769,6 +10456,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "eyeq-optometrists-burwood": {
+      "sa2_code": "207011150",
+      "sa2_name": "Glen Iris - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "eyeq-optometrists-camberwell": {
+      "sa2_code": "207011152",
+      "sa2_name": "Hawthorn East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3358": {
       "sa2_code": "207011149",
       "sa2_name": "Camberwell",
@@ -8776,9 +10477,44 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-way-631561733": {
+    "independent-other-optical-provision-91990": {
+      "sa2_code": "217031471",
+      "sa2_name": "Camperdown",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17089": {
+      "sa2_code": "207011155",
+      "sa2_name": "Surrey Hills (West) - Canterbury",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17326": {
+      "sa2_code": "206041117",
+      "sa2_name": "Carlton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17190": {
       "sa2_code": "208021176",
       "sa2_name": "Carnegie",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17010": {
+      "sa2_code": "208021176",
+      "sa2_name": "Carnegie",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-186700": {
+      "sa2_code": "213041463",
+      "sa2_name": "Caroline Springs",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -8786,6 +10522,20 @@
     "specsavers-3648": {
       "sa2_code": "213041463",
       "sa2_name": "Caroline Springs",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17312": {
+      "sa2_code": "214011370",
+      "sa2_name": "Carrum Downs",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-60518": {
+      "sa2_code": "217011420",
+      "sa2_name": "Glenelg (Vic.)",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -8888,9 +10638,23 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17007": {
+      "sa2_code": "212041310",
+      "sa2_name": "Clayton South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-592": {
       "sa2_code": "206071143",
       "sa2_name": "Fitzroy North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-341179": {
+      "sa2_code": "212031556",
+      "sa2_name": "Clyde North - South",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -8902,6 +10666,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-36798": {
+      "sa2_code": "206011497",
+      "sa2_name": "Coburg - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1144": {
       "sa2_code": "206011497",
       "sa2_name": "Coburg - East",
@@ -8909,9 +10680,23 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-134130": {
+      "sa2_code": "210031236",
+      "sa2_name": "Coburg North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3294": {
       "sa2_code": "217031472",
       "sa2_name": "Colac",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17186": {
+      "sa2_code": "206071142",
+      "sa2_name": "Fitzroy",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -8933,6 +10718,13 @@
     "specsavers-3262": {
       "sa2_code": "203021486",
       "sa2_name": "Corio - Lovely Banks",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-186737": {
+      "sa2_code": "210051543",
+      "sa2_name": "Craigieburn - West",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -8986,6 +10778,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "eyeq-optometrists-croydon": {
+      "sa2_code": "211031451",
+      "sa2_name": "Croydon - West",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17118": {
+      "sa2_code": "211031450",
+      "sa2_name": "Croydon - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-2999": {
       "sa2_code": "211031450",
       "sa2_name": "Croydon - East",
@@ -8996,6 +10802,27 @@
     "specsavers-3667": {
       "sa2_code": "211031450",
       "sa2_name": "Croydon - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-140532": {
+      "sa2_code": "203031048",
+      "sa2_name": "Clifton Springs",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-138586": {
+      "sa2_code": "210051243",
+      "sa2_name": "Campbellfield - Coolaroo",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16983": {
+      "sa2_code": "212041563",
+      "sa2_name": "Dandenong - North",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9035,6 +10862,41 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-70300": {
+      "sa2_code": "209031215",
+      "sa2_name": "Wattle Glen - Diamond Creek",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17376": {
+      "sa2_code": "212041313",
+      "sa2_name": "Dingley Village",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17352": {
+      "sa2_code": "206041118",
+      "sa2_name": "Docklands",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-123978": {
+      "sa2_code": "206041118",
+      "sa2_name": "Docklands",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "1001-optometry-7240047": {
+      "sa2_code": "207021157",
+      "sa2_name": "Doncaster",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "bailey-nelson-doncaster": {
       "sa2_code": "207021157",
       "sa2_name": "Doncaster",
@@ -9063,6 +10925,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17370": {
+      "sa2_code": "207021425",
+      "sa2_name": "Doncaster East - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-85955": {
+      "sa2_code": "207021425",
+      "sa2_name": "Doncaster East - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3407": {
       "sa2_code": "207021424",
       "sa2_name": "Doncaster East - North",
@@ -9070,9 +10946,44 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-68886": {
+      "sa2_code": "209041527",
+      "sa2_name": "Doreen - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-98971": {
+      "sa2_code": "205011076",
+      "sa2_name": "Drouin",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17079": {
+      "sa2_code": "216011406",
+      "sa2_name": "Echuca",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3595": {
       "sa2_code": "216011406",
       "sa2_name": "Echuca",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17147": {
+      "sa2_code": "208021179",
+      "sa2_name": "Elsternwick",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-313171": {
+      "sa2_code": "208021179",
+      "sa2_name": "Elsternwick",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9098,6 +11009,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17329": {
+      "sa2_code": "209031209",
+      "sa2_name": "Eltham",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3671": {
       "sa2_code": "209031209",
       "sa2_name": "Eltham",
@@ -9108,6 +11026,20 @@
     "specsavers-3484": {
       "sa2_code": "212021454",
       "sa2_name": "Endeavour Hills - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-94903": {
+      "sa2_code": "209041432",
+      "sa2_name": "Epping - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-135023": {
+      "sa2_code": "209041432",
+      "sa2_name": "Epping - South",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9157,6 +11089,20 @@
     "independent-other-optical-osm-au-node-1121009477": {
       "sa2_code": "206071142",
       "sa2_name": "Fitzroy",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17164": {
+      "sa2_code": "206071143",
+      "sa2_name": "Fitzroy North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17346": {
+      "sa2_code": "211041269",
+      "sa2_name": "Forest Hill",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9273,6 +11219,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-343558": {
+      "sa2_code": "203021040",
+      "sa2_name": "Geelong West - Hamlyn Heights",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-607": {
       "sa2_code": "210051245",
       "sa2_name": "Gladstone Park - Westmeadows",
@@ -9308,6 +11261,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17035": {
+      "sa2_code": "209011197",
+      "sa2_name": "Greensborough",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1157": {
       "sa2_code": "209011197",
       "sa2_name": "Greensborough",
@@ -9329,9 +11289,30 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-300779": {
+      "sa2_code": "210051246",
+      "sa2_name": "Greenvale - Bulla",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17142": {
+      "sa2_code": "217011421",
+      "sa2_name": "Hamilton (Vic.)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3694": {
       "sa2_code": "217011421",
       "sa2_name": "Hamilton (Vic.)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17273": {
+      "sa2_code": "208011172",
+      "sa2_name": "Hampton",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9343,6 +11324,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17032": {
+      "sa2_code": "206061138",
+      "sa2_name": "Toorak",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17000": {
+      "sa2_code": "207011519",
+      "sa2_name": "Hawthorn - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1507": {
       "sa2_code": "207011520",
       "sa2_name": "Hawthorn - South",
@@ -9350,7 +11345,21 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17177": {
+      "sa2_code": "211031267",
+      "sa2_name": "Ringwood East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-619": {
+      "sa2_code": "209011198",
+      "sa2_name": "Heidelberg - Rosanna",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17025": {
       "sa2_code": "209011198",
       "sa2_name": "Heidelberg - Rosanna",
       "match_confidence": "High",
@@ -9392,6 +11401,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17281": {
+      "sa2_code": "210011228",
+      "sa2_name": "Keilor",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3257": {
       "sa2_code": "213011332",
       "sa2_name": "Keilor Downs",
@@ -9406,9 +11422,30 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-188786": {
+      "sa2_code": "215031402",
+      "sa2_name": "Kerang",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-629": {
       "sa2_code": "207011522",
       "sa2_name": "Kew - West",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17286": {
+      "sa2_code": "207011522",
+      "sa2_name": "Kew - West",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17220": {
+      "sa2_code": "207011154",
+      "sa2_name": "Kew East",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9434,9 +11471,44 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17084": {
+      "sa2_code": "216011407",
+      "sa2_name": "Kyabram",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17318": {
+      "sa2_code": "214011374",
+      "sa2_name": "Langwarrin",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-323052": {
+      "sa2_code": "203021043",
+      "sa2_name": "Lara",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17391": {
+      "sa2_code": "205031090",
+      "sa2_name": "Leongatha",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3645": {
       "sa2_code": "203021044",
       "sa2_name": "Leopold",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17201": {
+      "sa2_code": "211051278",
+      "sa2_name": "Lilydale - Coldstream",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9451,6 +11523,13 @@
     "independent-other-optical-osm-au-node-5430747734": {
       "sa2_code": "201011001",
       "sa2_name": "Alfredton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-129212": {
+      "sa2_code": "205051101",
+      "sa2_name": "Maffra",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9476,6 +11555,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-60270": {
+      "sa2_code": "208041194",
+      "sa2_name": "Malvern - Glen Iris",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-192115": {
+      "sa2_code": "204011057",
+      "sa2_name": "Mansfield (Vic.)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "bailey-nelson-highpoint": {
       "sa2_code": "213031349",
       "sa2_name": "Maribyrnong",
@@ -9497,6 +11590,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17097": {
+      "sa2_code": "201031016",
+      "sa2_name": "Maryborough (Vic.)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "1001-optometry-7298798": {
+      "sa2_code": "206041503",
+      "sa2_name": "Melbourne CBD - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "bailey-nelson-flinders-lane-melbourne": {
       "sa2_code": "206041503",
       "sa2_name": "Melbourne CBD - East",
@@ -9507,6 +11614,27 @@
     "bailey-nelson-melbourne-cbd": {
       "sa2_code": "206041504",
       "sa2_name": "Melbourne CBD - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17305": {
+      "sa2_code": "206041125",
+      "sa2_name": "South Yarra - West",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17397": {
+      "sa2_code": "206041503",
+      "sa2_name": "Melbourne CBD - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-38984": {
+      "sa2_code": "206041505",
+      "sa2_name": "Melbourne CBD - West",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9567,6 +11695,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-149771": {
+      "sa2_code": "213041577",
+      "sa2_name": "Melton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-2352": {
       "sa2_code": "213041358",
       "sa2_name": "Melton West",
@@ -9609,6 +11744,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-49127": {
+      "sa2_code": "209041220",
+      "sa2_name": "Mill Park - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "independent-other-optical-osm-au-node-2999573319": {
       "sa2_code": "209041220",
       "sa2_name": "Mill Park - North",
@@ -9640,6 +11782,20 @@
     "eyecare-plus-643": {
       "sa2_code": "211041270",
       "sa2_name": "Mitcham (Vic.)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-99369": {
+      "sa2_code": "205041095",
+      "sa2_name": "Moe - Newborough",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-57298": {
+      "sa2_code": "211051279",
+      "sa2_name": "Monbulk - Silvan",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9687,6 +11843,13 @@
       "boundary_distance_km": null
     },
     "bailey-nelson-mornington": {
+      "sa2_code": "214021592",
+      "sa2_name": "Mornington - West",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-66541": {
       "sa2_code": "214021592",
       "sa2_name": "Mornington - West",
       "match_confidence": "High",
@@ -9741,6 +11904,13 @@
       "match_confidence": "Medium",
       "match_method": "Nearest SA2 boundary fallback",
       "boundary_distance_km": 0.035
+    },
+    "independent-other-optical-provision-16976": {
+      "sa2_code": "212051324",
+      "sa2_name": "Mount Waverley - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
     },
     "eyecare-plus-650": {
       "sa2_code": "212051325",
@@ -9805,6 +11975,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17395": {
+      "sa2_code": "212031457",
+      "sa2_name": "Narre Warren South - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "eyecare-plus-160475": {
       "sa2_code": "213021344",
       "sa2_name": "Newport",
@@ -9822,6 +11999,13 @@
     "specsavers-3654": {
       "sa2_code": "207031161",
       "sa2_name": "Blackburn",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17208": {
+      "sa2_code": "206071140",
+      "sa2_name": "Carlton North - Princes Hill",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9854,6 +12038,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-36724": {
+      "sa2_code": "212051326",
+      "sa2_name": "Oakleigh - Huntingdale",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "independent-other-optical-osm-au-node-1789722881": {
       "sa2_code": "212051326",
       "sa2_name": "Oakleigh - Huntingdale",
@@ -9864,6 +12055,13 @@
     "specsavers-3601": {
       "sa2_code": "212051326",
       "sa2_name": "Oakleigh - Huntingdale",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17290": {
+      "sa2_code": "212011551",
+      "sa2_name": "Pakenham - South East",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9882,6 +12080,27 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-186553": {
+      "sa2_code": "208031185",
+      "sa2_name": "Carrum - Patterson Lakes",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17252": {
+      "sa2_code": "213051580",
+      "sa2_name": "Point Cook - North East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17193": {
+      "sa2_code": "213051580",
+      "sa2_name": "Point Cook - North East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3571": {
       "sa2_code": "213051580",
       "sa2_name": "Point Cook - North East",
@@ -9889,9 +12108,16 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-616584782": {
+    "independent-other-optical-provision-17199": {
       "sa2_code": "206051130",
       "sa2_name": "Port Melbourne",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-34385": {
+      "sa2_code": "217011422",
+      "sa2_name": "Portland",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9904,6 +12130,13 @@
       "boundary_distance_km": null
     },
     "bailey-nelson-northland": {
+      "sa2_code": "209021428",
+      "sa2_name": "Preston - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17161": {
       "sa2_code": "209021428",
       "sa2_name": "Preston - East",
       "match_confidence": "High",
@@ -9938,6 +12171,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-304140": {
+      "sa2_code": "209021526",
+      "sa2_name": "Reservoir - South West",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-49367": {
+      "sa2_code": "209021525",
+      "sa2_name": "Reservoir - South East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3679": {
       "sa2_code": "209021525",
       "sa2_name": "Reservoir - South East",
@@ -9946,6 +12193,27 @@
       "boundary_distance_km": null
     },
     "bailey-nelson-richmond": {
+      "sa2_code": "206071517",
+      "sa2_name": "Richmond (South) - Cremorne",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17153": {
+      "sa2_code": "206071517",
+      "sa2_name": "Richmond (South) - Cremorne",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17100": {
+      "sa2_code": "206071518",
+      "sa2_name": "Richmond - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-178816": {
       "sa2_code": "206071517",
       "sa2_name": "Richmond (South) - Cremorne",
       "match_confidence": "High",
@@ -9974,6 +12242,13 @@
       "boundary_distance_km": null
     },
     "bailey-nelson-eastland-shopping-centre": {
+      "sa2_code": "211031266",
+      "sa2_name": "Ringwood",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17111": {
       "sa2_code": "211031266",
       "sa2_name": "Ringwood",
       "match_confidence": "High",
@@ -10022,6 +12297,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-88678": {
+      "sa2_code": "211031268",
+      "sa2_name": "Ringwood North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-89543": {
+      "sa2_code": "214021384",
+      "sa2_name": "Rosebud - McCrae",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-2932": {
       "sa2_code": "214021384",
       "sa2_name": "Rosebud - McCrae",
@@ -10036,6 +12325,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "eyeq-optometrists-rowville": {
+      "sa2_code": "211011258",
+      "sa2_name": "Rowville - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17267": {
+      "sa2_code": "211011256",
+      "sa2_name": "Rowville - Central",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3230": {
       "sa2_code": "211011256",
       "sa2_name": "Rowville - Central",
@@ -10043,9 +12346,30 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-94979": {
+      "sa2_code": "205051103",
+      "sa2_name": "Sale",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3251": {
       "sa2_code": "205051103",
       "sa2_name": "Sale",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "eyeq-optometrists-seymour": {
+      "sa2_code": "204011059",
+      "sa2_name": "Seymour",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17129": {
+      "sa2_code": "216031416",
+      "sa2_name": "Shepparton - North",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10099,6 +12423,27 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17259": {
+      "sa2_code": "206061515",
+      "sa2_name": "South Yarra - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-36913": {
+      "sa2_code": "206061516",
+      "sa2_name": "South Yarra - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17296": {
+      "sa2_code": "206061515",
+      "sa2_name": "South Yarra - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-7077": {
       "sa2_code": "206061515",
       "sa2_name": "South Yarra - North",
@@ -10114,6 +12459,13 @@
       "boundary_distance_km": null
     },
     "eyecare-plus-672": {
+      "sa2_code": "212041317",
+      "sa2_name": "Springvale",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-185277": {
       "sa2_code": "212041317",
       "sa2_name": "Springvale",
       "match_confidence": "High",
@@ -10141,9 +12493,30 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17030": {
+      "sa2_code": "206051514",
+      "sa2_name": "St Kilda - West",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3327": {
       "sa2_code": "215011392",
       "sa2_name": "Stawell",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-241483": {
+      "sa2_code": "210041540",
+      "sa2_name": "Sunbury - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17076": {
+      "sa2_code": "210041540",
+      "sa2_name": "Sunbury - South",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10172,6 +12545,34 @@
     "specsavers-3536": {
       "sa2_code": "213011336",
       "sa2_name": "Sunshine",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-146908": {
+      "sa2_code": "213011337",
+      "sa2_name": "Sunshine North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-170939": {
+      "sa2_code": "207011147",
+      "sa2_name": "Balwyn",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-334313": {
+      "sa2_code": "207011155",
+      "sa2_name": "Surrey Hills (West) - Canterbury",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-185432": {
+      "sa2_code": "215031404",
+      "sa2_name": "Swan Hill",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10211,6 +12612,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-94852": {
+      "sa2_code": "207021157",
+      "sa2_name": "Doncaster",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "independent-other-optical-osm-au-way-612405905": {
       "sa2_code": "206021112",
       "sa2_name": "Thornbury",
@@ -10225,9 +12633,23 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-336794": {
+      "sa2_code": "203031053",
+      "sa2_name": "Torquay",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3661": {
       "sa2_code": "203031053",
       "sa2_name": "Torquay",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-16989": {
+      "sa2_code": "205041493",
+      "sa2_name": "Traralgon - East",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10256,6 +12678,20 @@
     "eyecare-plus-161803": {
       "sa2_code": "210051245",
       "sa2_name": "Gladstone Park - Westmeadows",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-95044": {
+      "sa2_code": "209041224",
+      "sa2_name": "Wallan",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-180067": {
+      "sa2_code": "204021066",
+      "sa2_name": "Wangaratta",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10302,9 +12738,37 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-99263": {
+      "sa2_code": "205011079",
+      "sa2_name": "Warragul",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3467": {
       "sa2_code": "205011079",
       "sa2_name": "Warragul",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-37146": {
+      "sa2_code": "211021262",
+      "sa2_name": "Warrandyte - Wonga Park",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-89646": {
+      "sa2_code": "217041480",
+      "sa2_name": "Warrnambool - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-34462": {
+      "sa2_code": "217041480",
+      "sa2_name": "Warrnambool - South",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10319,6 +12783,13 @@
     "specsavers-3297": {
       "sa2_code": "217041480",
       "sa2_name": "Warrnambool - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17223": {
+      "sa2_code": "209011204",
+      "sa2_name": "Watsonia",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10365,6 +12836,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17179": {
+      "sa2_code": "213051368",
+      "sa2_name": "Werribee - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1655": {
       "sa2_code": "213051362",
       "sa2_name": "Hoppers Crossing - South",
@@ -10382,6 +12860,13 @@
     "specsavers-3267": {
       "sa2_code": "213051362",
       "sa2_name": "Hoppers Crossing - South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17198": {
+      "sa2_code": "212051327",
+      "sa2_name": "Wheelers Hill",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10407,7 +12892,28 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-179109": {
+      "sa2_code": "213021346",
+      "sa2_name": "Williamstown",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17054": {
+      "sa2_code": "213021346",
+      "sa2_name": "Williamstown",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-486": {
+      "sa2_code": "204031492",
+      "sa2_name": "Wodonga",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17241": {
       "sa2_code": "204031492",
       "sa2_name": "Wodonga",
       "match_confidence": "High",
@@ -10428,9 +12934,30 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17214": {
+      "sa2_code": "205031093",
+      "sa2_name": "Wonthaggi - Inverloch",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17104": {
+      "sa2_code": "205031093",
+      "sa2_name": "Wonthaggi - Inverloch",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "specsavers-3609": {
       "sa2_code": "205031093",
       "sa2_name": "Wonthaggi - Inverloch",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-61077": {
+      "sa2_code": "211051286",
+      "sa2_name": "Yarra Valley",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10547,6 +13074,27 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17782": {
+      "sa2_code": "509011225",
+      "sa2_name": "Albany",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17814": {
+      "sa2_code": "509011225",
+      "sa2_name": "Albany",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-albany-optometrist": {
+      "sa2_code": "509011225",
+      "sa2_name": "Albany",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1195": {
       "sa2_code": "509011225",
       "sa2_name": "Albany",
@@ -10561,7 +13109,21 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17826": {
+      "sa2_code": "505031104",
+      "sa2_name": "Marangaroo",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "independent-other-optical-osm-au-node-7069706341": {
+      "sa2_code": "507041175",
+      "sa2_name": "Applecross - Ardross",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-103193": {
       "sa2_code": "507041175",
       "sa2_name": "Applecross - Ardross",
       "match_confidence": "High",
@@ -10571,6 +13133,13 @@
     "independent-other-optical-osm-au-node-2393656997": {
       "sa2_code": "507041175",
       "sa2_name": "Applecross - Ardross",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-armadale-optometrist": {
+      "sa2_code": "506011110",
+      "sa2_name": "Armadale - Wungong - Brookdale",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10603,7 +13172,28 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17795": {
+      "sa2_code": "504011044",
+      "sa2_name": "Bassendean - Eden Hill - Ashfield",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-68777": {
+      "sa2_code": "507041177",
+      "sa2_name": "Bicton - Palmyra",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "bailey-nelson-booragoon": {
+      "sa2_code": "507041178",
+      "sa2_name": "Booragoon",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-garden-city-booragoon-optometrist": {
       "sa2_code": "507041178",
       "sa2_name": "Booragoon",
       "match_confidence": "High",
@@ -10652,6 +13242,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17819": {
+      "sa2_code": "501021253",
+      "sa2_name": "South Bunbury - Bunbury",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-bunbury-optometrist": {
+      "sa2_code": "501021253",
+      "sa2_name": "South Bunbury - Bunbury",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1382": {
       "sa2_code": "501021253",
       "sa2_name": "South Bunbury - Bunbury",
@@ -10669,6 +13273,20 @@
     "specsavers-3441": {
       "sa2_code": "501021253",
       "sa2_name": "South Bunbury - Bunbury",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-292345": {
+      "sa2_code": "501011293",
+      "sa2_name": "Busselton - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-326220": {
+      "sa2_code": "501011293",
+      "sa2_name": "Busselton - East",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10722,6 +13340,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "laubman-pank-carousel-optometrist": {
+      "sa2_code": "506031127",
+      "sa2_name": "Cannington - Queens Park",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1366": {
       "sa2_code": "506031127",
       "sa2_name": "Cannington - Queens Park",
@@ -10764,6 +13389,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "laubman-pank-clarkson-optometrist": {
+      "sa2_code": "505031101",
+      "sa2_name": "Clarkson",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1059": {
       "sa2_code": "505031101",
       "sa2_name": "Clarkson",
@@ -10774,6 +13406,13 @@
     "specsavers-3287": {
       "sa2_code": "505031101",
       "sa2_name": "Clarkson",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-belmont-optometrist": {
+      "sa2_code": "506021309",
+      "sa2_name": "Cloverdale",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10830,6 +13469,13 @@
     "george-matilda-447": {
       "sa2_code": "505011072",
       "sa2_name": "Duncraig",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-326246": {
+      "sa2_code": "501011003",
+      "sa2_name": "Busselton Surrounds",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10904,6 +13550,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17774": {
+      "sa2_code": "511041285",
+      "sa2_name": "Geraldton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17791": {
+      "sa2_code": "511041285",
+      "sa2_name": "Geraldton",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1354": {
       "sa2_code": "511041285",
       "sa2_name": "Geraldton",
@@ -10946,6 +13606,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17852": {
+      "sa2_code": "505011075",
+      "sa2_name": "Hillarys",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1447": {
       "sa2_code": "505011075",
       "sa2_name": "Hillarys",
@@ -10967,6 +13634,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17843": {
+      "sa2_code": "505021088",
+      "sa2_name": "Innaloo - Doubleview",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1361": {
       "sa2_code": "505021088",
       "sa2_name": "Innaloo - Doubleview",
@@ -10982,6 +13656,13 @@
       "boundary_distance_km": null
     },
     "bailey-nelson-joondalup": {
+      "sa2_code": "505011077",
+      "sa2_name": "Joondalup - Edgewater",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-joondalup-optometrist": {
       "sa2_code": "505011077",
       "sa2_name": "Joondalup - Edgewater",
       "match_confidence": "High",
@@ -11065,7 +13746,21 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "eyeq-optometrists-karrinyup": {
+      "sa2_code": "505021089",
+      "sa2_name": "Karrinyup - Gwelup - Carine",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "independent-other-optical-osm-au-node-11396192032": {
+      "sa2_code": "505021089",
+      "sa2_name": "Karrinyup - Gwelup - Carine",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-karrinyup-optometrist": {
       "sa2_code": "505021089",
       "sa2_name": "Karrinyup - Gwelup - Carine",
       "match_confidence": "High",
@@ -11093,6 +13788,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-43639": {
+      "sa2_code": "509011230",
+      "sa2_name": "Katanning",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-4636": {
       "sa2_code": "507031174",
       "sa2_name": "Parmelia - Orelia",
@@ -11114,6 +13816,34 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-17855": {
+      "sa2_code": "503021038",
+      "sa2_name": "Mount Hawthorn - Leederville",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-335282": {
+      "sa2_code": "503021038",
+      "sa2_name": "Mount Hawthorn - Leederville",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17772": {
+      "sa2_code": "507041180",
+      "sa2_name": "Leeming",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-124069": {
+      "sa2_code": "507041180",
+      "sa2_name": "Leeming",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1427": {
       "sa2_code": "506041136",
       "sa2_name": "Maddington - Orange Grove - Martin",
@@ -11131,6 +13861,13 @@
     "specsavers-3451": {
       "sa2_code": "505031305",
       "sa2_name": "Madeley - Darch",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-mandurah-optometrist": {
+      "sa2_code": "502011025",
+      "sa2_name": "Mandurah",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -11184,6 +13921,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-297355": {
+      "sa2_code": "502011027",
+      "sa2_name": "Mandurah - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-midland-gate-optometrist": {
+      "sa2_code": "504031066",
+      "sa2_name": "Midland - Guildford",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1281": {
       "sa2_code": "504031066",
       "sa2_name": "Midland - Guildford",
@@ -11226,6 +13977,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "laubman-pank-morley-optometrist": {
+      "sa2_code": "504011047",
+      "sa2_name": "Morley",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1198": {
       "sa2_code": "504011047",
       "sa2_name": "Morley",
@@ -11261,6 +14019,20 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "independent-other-optical-provision-346487": {
+      "sa2_code": "504021053",
+      "sa2_name": "Mundaring",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-43509": {
+      "sa2_code": "509031249",
+      "sa2_name": "Narrogin",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "george-matilda-479": {
       "sa2_code": "503011035",
       "sa2_name": "Nedlands - Dalkeith - Crawley",
@@ -11268,7 +14040,21 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-11730741731": {
+    "independent-other-optical-provision-17838": {
+      "sa2_code": "503011035",
+      "sa2_name": "Nedlands - Dalkeith - Crawley",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-185529": {
+      "sa2_code": "507011158",
+      "sa2_name": "North Coogee",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-245703": {
       "sa2_code": "507021165",
       "sa2_name": "Fremantle",
       "match_confidence": "High",
@@ -11285,6 +14071,20 @@
     "specsavers-3617": {
       "sa2_code": "509021243",
       "sa2_name": "Northam",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17798": {
+      "sa2_code": "505021095",
+      "sa2_name": "Tuart Hill - Joondanna",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17831": {
+      "sa2_code": "505021093",
+      "sa2_name": "Stirling - Osborne Park",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -11331,6 +14131,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "laubman-pank-rockingham-city-optometrist": {
+      "sa2_code": "507051188",
+      "sa2_name": "Rockingham",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1285": {
       "sa2_code": "507051188",
       "sa2_name": "Rockingham",
@@ -11355,6 +14162,13 @@
     "opsm-2933": {
       "sa2_code": "507051191",
       "sa2_name": "Singleton - Golden Bay - Secret Harbour",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-287413": {
+      "sa2_code": "506031129",
+      "sa2_name": "Riverton - Shelley - Rossmoyne",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -11387,6 +14201,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "eyeq-optometrists-subiaco": {
+      "sa2_code": "503021042",
+      "sa2_name": "Subiaco - Shenton Park",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1288": {
       "sa2_code": "503021042",
       "sa2_name": "Subiaco - Shenton Park",
@@ -11401,6 +14222,13 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
+    "laubman-pank-cockburn-optometrist": {
+      "sa2_code": "507011161",
+      "sa2_name": "Success - Hammond Park",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "opsm-1424": {
       "sa2_code": "507011161",
       "sa2_name": "Success - Hammond Park",
@@ -11411,6 +14239,20 @@
     "specsavers-3434": {
       "sa2_code": "507011161",
       "sa2_name": "Success - Hammond Park",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17788": {
+      "sa2_code": "506041137",
+      "sa2_name": "Thornlie",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "laubman-pank-forest-lakes-optometrist": {
+      "sa2_code": "506041137",
+      "sa2_name": "Thornlie",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -11467,6 +14309,20 @@
     "specsavers-3462": {
       "sa2_code": "505021084",
       "sa2_name": "Balcatta - Hamersley",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-17809": {
+      "sa2_code": "503021043",
+      "sa2_name": "Wembley - West Leederville - Glendalough",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-provision-177064": {
+      "sa2_code": "506031131",
+      "sa2_name": "Willetton",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null

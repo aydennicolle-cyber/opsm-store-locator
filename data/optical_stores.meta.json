@@ -1,6 +1,6 @@
 {
   "name": "Australia and New Zealand Optical Retail Network",
-  "store_count": 1691,
+  "store_count": 2099,
   "source_freshness": {
     "OPSM Australia": "2026-09-01T07:42:23+00:00",
     "Specsavers Australia": "2026-09-01T23:21:29.969Z",
@@ -11,15 +11,22 @@
     "OPSM New Zealand": "2026-09-01T07:42:29+00:00",
     "Bailey Nelson New Zealand": "2026-09-01T07:43:01+00:00",
     "Independent / Other optical": "2026-09-01T07:48:20.085579Z",
-    "George & Matilda Australia": "2026-09-02T08:30:37.078821+00:00",
-    "Eyecare Plus Australia": "2026-09-02T08:30:37.078821+00:00",
-    "Optical Superstore Australia": "2026-09-02T08:30:37.078821+00:00"
+    "George & Matilda Australia": "2026-09-02T12:40:25.820359+00:00",
+    "Eyecare Plus Australia": "2026-09-02T12:40:25.820359+00:00",
+    "Optical Superstore Australia": "2026-09-02T12:40:25.820359+00:00",
+    "1001 Optometry Australia": "2026-09-02T12:40:25.820359+00:00",
+    "EyeQ Optometrists Australia": "2026-09-02T12:40:25.820359+00:00",
+    "Laubman & Pank Australia": "2026-09-02T12:40:25.820359+00:00",
+    "ProVision Australia": "2026-09-02T12:40:25.820359+00:00"
   },
   "retailer_counts": {
+    "1001 Optometry": 16,
     "Bailey Nelson": 82,
+    "EyeQ Optometrists": 25,
     "Eyecare Plus": 105,
     "George & Matilda": 114,
-    "Independent / Other optical": 354,
+    "Independent / Other optical": 681,
+    "Laubman & Pank": 40,
     "OPSM": 392,
     "Optical Superstore": 51,
     "Oscar Wylee": 131,
@@ -32,23 +39,26 @@
     "Unclassified"
   ],
   "network_summary": {
-    "total": 1691,
+    "total": 2099,
     "by_retailer": {
+      "1001 Optometry": 16,
       "Bailey Nelson": 82,
+      "EyeQ Optometrists": 25,
       "Eyecare Plus": 105,
       "George & Matilda": 114,
-      "Independent / Other optical": 354,
+      "Independent / Other optical": 681,
+      "Laubman & Pank": 40,
       "OPSM": 392,
       "Optical Superstore": 51,
       "Oscar Wylee": 131,
       "Specsavers": 462
     },
     "by_country": {
-      "Australia": 1485,
+      "Australia": 1893,
       "New Zealand": 206
     },
     "by_state": {
-      "ACT": 29,
+      "ACT": 33,
       "Auckland": 70,
       "Bay of Plenty": 11,
       "Canterbury": 21,
@@ -56,27 +66,27 @@
       "Hawke's Bay": 10,
       "Manawatu-Whanganui": 8,
       "Marlborough": 1,
-      "NSW": 450,
-      "NT": 16,
+      "NSW": 555,
+      "NT": 17,
       "Nelson": 7,
       "Northland": 5,
       "Otago": 9,
-      "QLD": 301,
-      "SA": 102,
+      "QLD": 382,
+      "SA": 129,
       "Southland": 4,
-      "TAS": 49,
+      "TAS": 59,
       "Taranaki": 4,
       "Tasman": 2,
-      "VIC": 387,
-      "WA": 151,
+      "VIC": 520,
+      "WA": 198,
       "Waikato": 22,
       "Wellington": 28
     },
     "by_location_type": {
-      "Main Street / Street-front": 744,
+      "Main Street / Street-front": 997,
       "Other": 2,
-      "Shopping Centre": 679,
-      "Unclassified": 266
+      "Shopping Centre": 825,
+      "Unclassified": 275
     },
     "multi_brand_venues": [
       {
@@ -165,6 +175,7 @@
         "venue_id": "nsw-bondi-junction",
         "venue_name": "Bondi Junction",
         "retailers": [
+          "1001 Optometry",
           "Bailey Nelson",
           "OPSM"
         ]
@@ -173,6 +184,7 @@
         "venue_id": "nsw-burwood-westfield",
         "venue_name": "Burwood Westfield",
         "retailers": [
+          "1001 Optometry",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -208,7 +220,24 @@
         "venue_id": "nsw-chase-chatswood",
         "venue_name": "Chatswood Chase",
         "retailers": [
+          "1001 Optometry",
           "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-chatswood-westfield",
+        "venue_name": "Chatswood Westfield",
+        "retailers": [
+          "1001 Optometry",
+          "OPSM"
+        ]
+      },
+      {
+        "venue_id": "nsw-city-ryde-top",
+        "venue_name": "Top Ryde City Shopping Centre",
+        "retailers": [
+          "1001 Optometry",
           "Specsavers"
         ]
       },
@@ -233,6 +262,8 @@
         "venue_id": "nsw-eastgardens-westfield",
         "venue_name": "Eastgardens Westfield",
         "retailers": [
+          "1001 Optometry",
+          "EyeQ Optometrists",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -267,6 +298,7 @@
         "venue_id": "nsw-hornsby-westfield",
         "venue_name": "Hornsby Westfield",
         "retailers": [
+          "1001 Optometry",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -275,6 +307,7 @@
         "venue_id": "nsw-hurstville-westfield",
         "venue_name": "Hurstville Westfield",
         "retailers": [
+          "1001 Optometry",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -302,6 +335,14 @@
           "OPSM",
           "Oscar Wylee",
           "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nsw-macquarie",
+        "venue_name": "Macquarie Centre",
+        "retailers": [
+          "1001 Optometry",
+          "Oscar Wylee"
         ]
       },
       {
@@ -347,6 +388,14 @@
         ]
       },
       {
+        "venue_id": "nsw-nepean-village",
+        "venue_name": "Nepean Village",
+        "retailers": [
+          "Independent / Other optical",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "nsw-park-beach-plaza",
         "venue_name": "Park Beach Plaza",
         "retailers": [
@@ -366,6 +415,7 @@
         "venue_id": "nsw-parramatta-westfield",
         "venue_name": "Westfield Parramatta",
         "retailers": [
+          "1001 Optometry",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -374,6 +424,8 @@
         "venue_id": "nsw-penrith-westfield",
         "venue_name": "Penrith Westfield",
         "retailers": [
+          "1001 Optometry",
+          "Independent / Other optical",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -421,6 +473,14 @@
         ]
       },
       {
+        "venue_id": "nsw-westpoint",
+        "venue_name": "Westpoint Shopping Centre",
+        "retailers": [
+          "1001 Optometry",
+          "Oscar Wylee"
+        ]
+      },
+      {
         "venue_id": "nt-casuarina-square",
         "venue_name": "Casuarina Square",
         "retailers": [
@@ -459,6 +519,7 @@
         "venue_id": "qld-brookside",
         "venue_name": "Brookside Shopping Centre",
         "retailers": [
+          "Laubman & Pank",
           "Optical Superstore",
           "Oscar Wylee",
           "Specsavers"
@@ -484,6 +545,7 @@
         "venue_id": "qld-capalaba-park",
         "venue_name": "Capalaba Park Shopping Centre",
         "retailers": [
+          "Laubman & Pank",
           "Optical Superstore",
           "Specsavers"
         ]
@@ -493,6 +555,7 @@
         "venue_name": "Carindale",
         "retailers": [
           "Bailey Nelson",
+          "Laubman & Pank",
           "OPSM"
         ]
       },
@@ -500,6 +563,7 @@
         "venue_id": "qld-carindale-westfield",
         "venue_name": "Carindale Westfield",
         "retailers": [
+          "Independent / Other optical",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -509,6 +573,7 @@
         "venue_name": "Chermside",
         "retailers": [
           "Bailey Nelson",
+          "Laubman & Pank",
           "OPSM"
         ]
       },
@@ -574,7 +639,9 @@
         "venue_id": "qld-indooroopilly",
         "venue_name": "Indooroopilly Shopping Centre",
         "retailers": [
+          "1001 Optometry",
           "Bailey Nelson",
+          "Laubman & Pank",
           "OPSM",
           "Oscar Wylee",
           "Specsavers"
@@ -600,8 +667,17 @@
         "venue_id": "qld-morayfield",
         "venue_name": "Morayfield Shopping Centre",
         "retailers": [
+          "Laubman & Pank",
           "Optical Superstore",
           "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-mt-ommaney",
+        "venue_name": "Mt Ommaney Centre",
+        "retailers": [
+          "Laubman & Pank",
           "Specsavers"
         ]
       },
@@ -611,6 +687,14 @@
         "retailers": [
           "George & Matilda",
           "Oscar Wylee"
+        ]
+      },
+      {
+        "venue_id": "qld-plaza-wynnum",
+        "venue_name": "Wynnum Plaza",
+        "retailers": [
+          "Independent / Other optical",
+          "Specsavers"
         ]
       },
       {
@@ -625,6 +709,7 @@
         "venue_id": "qld-rockhampton-stockland",
         "venue_name": "Rockhampton Stockland",
         "retailers": [
+          "Laubman & Pank",
           "Optical Superstore",
           "Oscar Wylee",
           "Specsavers"
@@ -664,9 +749,18 @@
         ]
       },
       {
+        "venue_id": "sa-marion-westfield",
+        "venue_name": "Westfield Marion",
+        "retailers": [
+          "Laubman & Pank",
+          "Oscar Wylee"
+        ]
+      },
+      {
         "venue_id": "sa-plaza-tea-tree",
         "venue_name": "Tea Tree Plaza",
         "retailers": [
+          "Laubman & Pank",
           "OPSM",
           "Specsavers"
         ]
@@ -676,6 +770,7 @@
         "venue_name": "Rundle Mall",
         "retailers": [
           "Independent / Other optical",
+          "Laubman & Pank",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -753,6 +848,7 @@
         "venue_name": "Eastland Shopping Centre",
         "retailers": [
           "Bailey Nelson",
+          "Independent / Other optical",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -861,6 +957,7 @@
         "venue_id": "wa-belmont-forum",
         "venue_name": "Belmont Forum",
         "retailers": [
+          "Laubman & Pank",
           "OPSM",
           "Specsavers"
         ]
@@ -898,9 +995,18 @@
         ]
       },
       {
+        "venue_id": "wa-forest-forum-lakes",
+        "venue_name": "Forest Lakes Forum",
+        "retailers": [
+          "Independent / Other optical",
+          "Laubman & Pank"
+        ]
+      },
+      {
         "venue_id": "wa-forum-mandurah",
         "venue_name": "Mandurah Forum",
         "retailers": [
+          "Laubman & Pank",
           "OPSM",
           "Oscar Wylee",
           "Specsavers"
@@ -910,6 +1016,7 @@
         "venue_id": "wa-gate-midland",
         "venue_name": "Midland Gate Shopping Centre",
         "retailers": [
+          "Laubman & Pank",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -918,6 +1025,7 @@
         "venue_id": "wa-innaloo-westfield",
         "venue_name": "Innaloo Westfield",
         "retailers": [
+          "Independent / Other optical",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -926,6 +1034,8 @@
         "venue_id": "wa-karrinyup",
         "venue_name": "Karrinyup Shopping Centre",
         "retailers": [
+          "EyeQ Optometrists",
+          "Laubman & Pank",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -934,6 +1044,7 @@
         "venue_id": "wa-rockingham",
         "venue_name": "Rockingham Shopping Centre",
         "retailers": [
+          "Laubman & Pank",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -965,6 +1076,6 @@
         ]
       }
     ],
-    "single_brand_venue_count": 346
+    "single_brand_venue_count": 440
   }
 }

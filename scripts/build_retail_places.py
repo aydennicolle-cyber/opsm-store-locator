@@ -38,6 +38,7 @@ LOOKALIKES_PATH = DATA / "lookalike_places.json"
 NAMED_RETAILERS = {
     "OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee",
     "George & Matilda", "Eyecare Plus", "Optical Superstore",
+    "1001 Optometry", "EyeQ Optometrists", "Laubman & Pank",
 }
 SOURCE_DISAGREEMENTS = {}
 GENERIC_PLACE_WORDS = {

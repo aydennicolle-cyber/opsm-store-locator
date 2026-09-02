@@ -317,7 +317,8 @@ class RetailPlaceTests(unittest.TestCase):
             row for row in self.memberships
             if row["place_id"] == "place-au-sa-rundle-mall"
         ]
-        self.assertEqual(len(memberships), 4)
+        self.assertEqual(len(memberships), 5)
+        self.assertIn("laubman-pank-adelaide-optometrist", {row["store_id"] for row in memberships})
         self.assertTrue(all(row["location_setting"] == "High Street" for row in memberships))
 
     def test_pitt_street_precinct_does_not_absorb_nearby_stores_by_proximity(self) -> None:
@@ -649,7 +650,7 @@ class RetailPlaceTests(unittest.TestCase):
                 "opsm-1290", "oscar-wylee-86", "specsavers-3425"
             },
             "place-au-sa-elizabeth-shopping-centre": {
-                "opsm-1155", "oscar-wylee-113", "specsavers-3351"
+                "opsm-1155", "oscar-wylee-113", "specsavers-3351", "laubman-pank-elizabeth-optometrist"
             },
             "place-au-wa-morley-galleria": {
                 "opsm-1198", "oscar-wylee-77", "specsavers-3554"

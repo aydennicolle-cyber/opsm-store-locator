@@ -92,7 +92,7 @@ assert.equal(noCertifiedNetwork.coverage, 25);
 
 const shared = Intel.sanitiseShareState({
   view: "opportunity",
-  filters: {retailers: new Set(["OPSM"]), country: "Australia", state: "NSW"},
+  filters: {retailers: new Set(["OPSM"]), country: "Australia", state: "NSW", affiliation: "provision"},
   map: {latitude: -33.87, longitude: 151.2, zoom: 12},
   candidates: [{id: "one", name: "Public candidate", latitude: -33.8, longitude: 151.1, area_sqm: 120, profile_id: "opsm", asking_rent: 900000, notes: "private"}],
   lease_expiry: "2030-01-01",
@@ -101,6 +101,7 @@ assert.equal(shared.candidates[0].asking_rent, undefined);
 assert.equal(shared.candidates[0].notes, undefined);
 assert.equal(shared.lease_expiry, undefined);
 assert.equal(shared.filters.country, "Australia");
+assert.equal(shared.filters.affiliation, "provision");
 
 assert.equal(Intel.deriveLeasingArrangement([
   {status: "ACTIVE", role: "OWNER", group_id: "one"},

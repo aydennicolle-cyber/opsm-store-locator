@@ -24,6 +24,7 @@ CENTRE_REGISTRY_PATH = DATA_DIR / "shopping_centres.csv"
 CENTRE_MEMBERSHIP_PATH = DATA_DIR / "centre_store_memberships.csv"
 RETAILER_REGISTRY_PATH = DATA_DIR / "retailer_registry.json"
 IDENTITY_REMAPS_PATH = DATA_DIR / "store_identity_remaps.csv"
+PROVISION_REMAPS_PATH = DATA_DIR / "provision_identity_remaps.csv"
 VALID_STATES = {"ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"}
 VALID_NZ_REGIONS = {
     "Auckland",
@@ -46,6 +47,7 @@ VALID_NZ_REGIONS = {
 FIELDS = [
     "retailer",
     "store_id",
+    "affiliations",
     "name",
     "status",
     "country",
@@ -195,12 +197,13 @@ def retailer_registry() -> list[dict]:
 
 def identity_remaps() -> dict[str, str]:
     remaps = {}
-    for row in read_csv(IDENTITY_REMAPS_PATH):
-        source = tidy(row.get("source_store_id", ""))
-        canonical = tidy(row.get("canonical_store_id", ""))
-        if not source or not canonical or source == canonical or source in remaps:
-            raise ValueError(f"Invalid store identity remap: {row}")
-        remaps[source] = canonical
+    for path in (IDENTITY_REMAPS_PATH, PROVISION_REMAPS_PATH):
+        for row in read_csv(path):
+            source = tidy(row.get("source_store_id", ""))
+            canonical = tidy(row.get("canonical_store_id", ""))
+            if not source or not canonical or source == canonical or source in remaps:
+                raise ValueError(f"Invalid store identity remap: {row}")
+            remaps[source] = canonical
     return remaps
 
 
@@ -240,6 +243,10 @@ def read_freshness() -> dict[str, str]:
         ("George & Matilda", "george-and-matilda", "George & Matilda Australia"),
         ("Eyecare Plus", "eyecare-plus", "Eyecare Plus Australia"),
         ("Optical Superstore", "optical-superstore", "Optical Superstore Australia"),
+        ("1001 Optometry", "1001-optometry", "1001 Optometry Australia"),
+        ("EyeQ Optometrists", "eyeq-optometrists", "EyeQ Optometrists Australia"),
+        ("Laubman & Pank", "laubman-and-pank", "Laubman & Pank Australia"),
+        ("ProVision", "provision", "ProVision Australia"),
     ):
         snapshot = json.loads(
             (ROOT / "retailers" / folder / "source_snapshot.json").read_text(encoding="utf-8")
@@ -265,6 +272,7 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
             {
                 "retailer": "OPSM",
                 "store_id": f"opsm-{local_id}",
+                "affiliations": "",
                 "name": tidy(row["name"]),
                 "status": "Active",
                 "country": "Australia",
@@ -298,6 +306,10 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
         ("George & Matilda", "george-and-matilda", "George & Matilda Australia", ""),
         ("Eyecare Plus", "eyecare-plus", "Eyecare Plus Australia", ""),
         ("Optical Superstore", "optical-superstore", "Optical Superstore Australia", ""),
+        ("1001 Optometry", "1001-optometry", "1001 Optometry Australia", ""),
+        ("EyeQ Optometrists", "eyeq-optometrists", "EyeQ Optometrists Australia", ""),
+        ("Laubman & Pank", "laubman-and-pank", "Laubman & Pank Australia", ""),
+        ("Independent / Other optical", "provision", "ProVision Australia", "provision-"),
     ):
         for row in read_csv(ROOT / "retailers" / folder / "stores.csv"):
             local_id = tidy(row["id"])
@@ -306,6 +318,7 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                 {
                     "retailer": retailer,
                     "store_id": f"{slug(retailer)}-{id_country}{local_id}",
+                    "affiliations": "provision" if folder == "provision" else "",
                     "name": tidy(row["name"]),
                     "status": tidy(row.get("status", "Active")) or "Active",
                     "country": country,
@@ -330,6 +343,7 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
             {
                 "retailer": "OPSM",
                 "store_id": f"opsm-nz-{local_id}",
+                "affiliations": "",
                 "name": tidy(row["name"]),
                 "status": tidy(row.get("status", "Active")) or "Active",
                 "country": "New Zealand",
@@ -355,6 +369,14 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
     ]
     if missing:
         raise ValueError(f"Store identity remap refers to missing source/canonical store: {missing[:5]}")
+    for source, canonical in remaps.items():
+        source_affiliations = {
+            item for item in by_id[source].get("affiliations", "").split("|") if item
+        }
+        canonical_affiliations = {
+            item for item in by_id[canonical].get("affiliations", "").split("|") if item
+        }
+        by_id[canonical]["affiliations"] = "|".join(sorted(source_affiliations | canonical_affiliations))
     return [store for store in stores if store["store_id"] not in remaps]
 
 
@@ -363,6 +385,7 @@ def cleaned_store_name(store: dict) -> str:
     for prefix in (
         "OPSM ", "Bailey Nelson ", "Specsavers ", "Oscar Wylee ",
         "George & Matilda ", "Eyecare Plus ", "Optical Superstore ",
+        "1001 Optometry ", "EyeQ Optometrists ", "Laubman & Pank ",
     ):
         if name.lower().startswith(prefix.lower()):
             name = name[len(prefix) :]
@@ -449,7 +472,10 @@ def classify(store: dict) -> dict:
         }
     evidence_segments = centre_evidence_segments(store)
     name_text = f" {store['name'].lower()} "
-    additional_network = store["retailer"] in {"George & Matilda", "Eyecare Plus", "Optical Superstore"}
+    additional_network = store["retailer"] in {
+        "George & Matilda", "Eyecare Plus", "Optical Superstore", "1001 Optometry",
+        "EyeQ Optometrists", "Laubman & Pank",
+    } or "provision" in store.get("affiliations", "").split("|")
     if additional_network:
         explicit = [
             phrase for phrase in CENTRE_PHRASES
@@ -587,6 +613,9 @@ def validate(stores: list[dict]) -> None:
     for item in registry:
         for folder in item.get("source_folders", []):
             source_counts[item["name"]] += len(read_csv(ROOT / "retailers" / folder / "stores.csv"))
+    source_counts["Independent / Other optical"] += len(
+        read_csv(ROOT / "retailers" / "provision" / "stores.csv")
+    )
     for source_store_id in identity_remaps():
         matched = next(
             (item for item in registry if source_store_id.startswith(f"{item['slug']}-")),

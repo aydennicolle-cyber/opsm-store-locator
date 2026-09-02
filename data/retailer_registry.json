@@ -100,6 +100,48 @@
       "source_folders": ["optical-superstore"]
     },
     {
+      "retailer_id": "1001-optometry",
+      "name": "1001 Optometry",
+      "slug": "1001-optometry",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": false,
+      "min_marker_zoom": 8,
+      "color": "#135c9e",
+      "short": "1001",
+      "mark": "1001",
+      "marker_width": 42,
+      "source_folders": ["1001-optometry"]
+    },
+    {
+      "retailer_id": "eyeq-optometrists",
+      "name": "EyeQ Optometrists",
+      "slug": "eyeq-optometrists",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": false,
+      "min_marker_zoom": 8,
+      "color": "#254f72",
+      "short": "EyeQ",
+      "mark": "EyeQ",
+      "marker_width": 44,
+      "source_folders": ["eyeq-optometrists"]
+    },
+    {
+      "retailer_id": "laubman-and-pank",
+      "name": "Laubman & Pank",
+      "slug": "laubman-and-pank",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": false,
+      "min_marker_zoom": 8,
+      "color": "#6a0f6a",
+      "short": "L&P",
+      "mark": "L&P",
+      "marker_width": 42,
+      "source_folders": ["laubman-and-pank"]
+    },
+    {
       "retailer_id": "independent-other",
       "name": "Independent / Other optical",
       "slug": "independent-other",
@@ -118,8 +160,10 @@
     {
       "affiliation_id": "provision",
       "name": "ProVision",
-      "status": "planned",
-      "description": "Member affiliation retained separately from the consumer-facing store banner."
+      "status": "active",
+      "description": "Independent member affiliation retained separately from each practice's consumer-facing name.",
+      "source_folders": ["provision"],
+      "source_url": "https://www.provision.com.au/search-results/"
     }
   ]
 }

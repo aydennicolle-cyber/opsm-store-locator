@@ -446,6 +446,7 @@
         state: state.filters?.state || "",
         location: state.filters?.location || "",
         search: state.filters?.search || "",
+        affiliation: state.filters?.affiliation || "",
       },
       place_filters: {
         search: state.placeFilters?.search || "",

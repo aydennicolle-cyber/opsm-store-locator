@@ -89,6 +89,7 @@
   const PUBLIC_STORE_FIELDS = [
     "retailer",
     "store_id",
+    "affiliations",
     "name",
     "status",
     "country",
@@ -148,6 +149,7 @@
     view: "network",
     allStores: [],
     retailerRegistry: [],
+    affiliations: [],
     filteredStores: [],
     metadata: {},
     centres: [],
@@ -184,6 +186,7 @@
       audiology: "",
       status: "",
       service: "",
+      affiliation: "",
     },
     opportunityForm: {
       profile_id: "generic-optical",
@@ -271,6 +274,8 @@
     const retailers = Array.isArray(payload?.retailers) ? payload.retailers : [];
     if (!retailers.length) return;
     state.retailerRegistry = retailers;
+    state.affiliations = (Array.isArray(payload?.affiliations) ? payload.affiliations : [])
+      .filter((item) => item.status === "active");
     BRAND_ORDER = retailers.map((item) => item.name);
     DEFAULT_RETAILERS = retailers.filter((item) => item.default_visible).map((item) => item.name);
     BRAND_CONFIG = Object.fromEntries(retailers.map((item) => [item.name, {
@@ -556,6 +561,9 @@
             <option value="false" ${state.filters.audiology === "false" ? "selected" : ""}>Not listed</option>
           </select></label>
           <label><span>Status</span><select id="statusSelect">${filterOptions(statuses, state.filters.status, "All statuses")}</select></label>
+          <label><span>Affiliation</span><select id="affiliationSelect"><option value="">Any affiliation</option>${state.affiliations
+            .map((item) => `<option value="${escapeHtml(item.affiliation_id)}" ${state.filters.affiliation === item.affiliation_id ? "selected" : ""}>${escapeHtml(item.name)}</option>`)
+            .join("")}</select></label>
         </div>
         <label class="service-field"><span>Service</span><input id="serviceInput" value="${escapeHtml(
           state.filters.service
@@ -620,9 +628,13 @@
       ["locationSelect", "location"],
       ["audiologySelect", "audiology"],
       ["statusSelect", "status"],
+      ["affiliationSelect", "affiliation"],
     ].forEach(([id, key]) => {
       document.getElementById(id).addEventListener("change", (event) => {
         state.filters[key] = event.target.value;
+        if (key === "affiliation" && event.target.value) {
+          state.filters.retailers.add("Independent / Other optical");
+        }
         if (key === "country") state.filters.state = "";
         applyFilters();
         if (key === "country") {
@@ -662,6 +674,7 @@
       (!state.filters.location || store.location_type === state.filters.location) &&
       (!state.filters.audiology || String(store.audiology) === state.filters.audiology) &&
       (!state.filters.status || store.status === state.filters.status) &&
+      (!state.filters.affiliation || String(store.affiliations || "").split("|").includes(state.filters.affiliation)) &&
       (!serviceQuery || store.services.toLowerCase().includes(serviceQuery))
     );
   }
@@ -1882,6 +1895,11 @@
           )}</span></strong></div>
           <div class="data-point"><span>Canonical place</span><strong>${escapeHtml(store.venue_name || "Not mapped")}</strong></div>
           <div class="data-point"><span>Status</span><strong>${escapeHtml(store.status)}</strong></div>
+          <div class="data-point"><span>Affiliation</span><strong>${escapeHtml(
+            String(store.affiliations || "").split("|").filter(Boolean)
+              .map((id) => state.affiliations.find((item) => item.affiliation_id === id)?.name || id)
+              .join(", ") || "None recorded"
+          )}</strong></div>
           <div class="data-point"><span>Network usability</span><strong><span class="confidence ${store.usable_for_network ? "" : "uncertified"}">${store.usable_for_network ? "Usable" : "Background only"}</span></strong></div>
           <div class="data-point"><span>Source freshness</span><strong>${store.current_source ? "Current" : "Warning shown"}</strong></div>
           <div class="data-point"><span>Country</span><strong>${escapeHtml(store.country)}</strong></div>
@@ -1916,12 +1934,12 @@
       )}</div></section>
       <section class="detail-section source-block"><i data-lucide="database"></i><div><strong>${
         store.retailer === "Independent / Other optical"
-          ? "Community-mapped public source"
+          ? (String(store.affiliations || "").split("|").includes("provision") ? "Official ProVision practice source" : "Community-mapped public source")
           : "Official retailer source"
       }</strong>
         <span>Refreshed ${escapeHtml(formatDate(store.fetched_at))} · ${escapeHtml(
           store.store_id
-        )}${store.retailer === "Independent / Other optical" ? " · Non-exhaustive OSM coverage" : ""}</span></div></section>`;
+        )}${store.retailer === "Independent / Other optical" && !String(store.affiliations || "").split("|").includes("provision") ? " · Non-exhaustive OSM coverage" : ""}</span></div></section>`;
     openDetailPanel();
     document.getElementById("compareFromDetail").addEventListener("click", () => {
       setStoreCompareMode(true);
@@ -2832,6 +2850,8 @@
       state.filters.state = payload.filters.state || "";
       state.filters.location = payload.filters.location || "";
       state.filters.search = payload.filters.search || "";
+      state.filters.affiliation = state.affiliations.some((item) => item.affiliation_id === payload.filters.affiliation)
+        ? payload.filters.affiliation : "";
     }
     if (payload.place_filters) {
       state.placeFilters.search = payload.place_filters.search || "";
@@ -2888,6 +2908,7 @@
       audiology: "",
       status: "",
       service: "",
+      affiliation: "",
     };
     state.candidates = [];
     candidateLayer.clearLayers();

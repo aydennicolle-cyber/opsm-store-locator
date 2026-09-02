@@ -15,11 +15,11 @@ Historical baseline captured in July 2026 (not a current completeness target):
 - Independent / Other optical: 425 community-mapped locations
 - Combined: 1,491 locations (1,269 Australia; 222 New Zealand)
 
-The local working draft now separates store usability, source freshness, location setting and canonical place mapping. As of 2 September 2026 it contains 1,691 unique stores, including 1,337 usable named-network stores, plus 628 canonical centres/plazas and 598 high-street corridors. All 1,337 named-network stores have an accepted location setting and place mapping, with no promoted mapping reviews outstanding. The 6,192 unpromoted map records remain background discovery leads rather than consultant review work.
+The local working draft now separates store usability, source freshness, location setting and canonical place mapping. As of 2 September 2026 it contains 2,099 unique stores, including 1,418 usable named-network stores, plus 715 canonical centres/plazas and 792 high-street corridors. All 1,418 named-network stores have an accepted location setting and place mapping, with no promoted mapping reviews outstanding. The 6,192 unpromoted map records remain background discovery leads rather than consultant review work.
 
-These counts are generated, not hard-coded. `data/data_health.json` reports each health dimension separately and keeps 6,192 unpromoted discovery leads informational. The four core networks remain selected by default. George & Matilda (114), Eyecare Plus (105) and Optical Superstore (51) are optional filters in the same Network view; their markers appear from zoom level 8 to prevent national-map crowding. Independent/Other appears from zoom level 10. This expansion remains local on `bailey-opportunity-v2` until deployment is explicitly approved.
+These counts are generated, not hard-coded. `data/data_health.json` reports each health dimension separately and keeps 6,192 unpromoted discovery leads informational. The four core networks remain selected by default. George & Matilda (114), Eyecare Plus (105), Optical Superstore (51), 1001 Optometry (16), EyeQ Optometrists (25) and Laubman & Pank (40) are optional filters in the same Network view; their markers appear from zoom level 8 to prevent national-map crowding. Independent/Other appears from zoom level 10.
 
-The independent/other layer is sourced from OpenStreetMap `shop=optician` records. It is useful competitive coverage but is non-exhaustive, may include regional groups, and is switched off by default in the two-country view.
+The independent/other layer combines OpenStreetMap `shop=optician` discovery with 337 practices from ProVision's official public locator. ProVision is stored as a filterable affiliation rather than a retailer brand, and accepted identity remaps prevent duplicate practice pins. The broader independent layer remains non-exhaustive and is switched off by default in the two-country view.
 
 The original OPSM-only map remains at:
 
@@ -61,6 +61,8 @@ The combined schema is published in:
 - `data/optical_stores.meta.json`
 - `data/retailer_registry.json`
 - `data/store_identity_remaps.csv`
+- `data/provision_identity_remaps.csv`
+- `data/provision_identity_review.csv`
 - `data/sa2_market.geojson`
 - `data/store_market_links.json`
 - `data/retail_places.json`
@@ -136,6 +138,7 @@ Refresh the additional official network locators:
 
 ```bash
 python3 scripts/fetch_additional_optical_networks.py
+python3 scripts/reconcile_provision_affiliations.py
 ```
 
 Rebuild the combined network after refreshing any retailer:

@@ -1,0 +1,47 @@
+{
+  "source_url": "https://1001optometry.com.au/pages/store-locator",
+  "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+  "store_count": 16,
+  "scope": "Australia",
+  "method": "Bounded official public store locator",
+  "retained_fields": [
+    "id",
+    "name",
+    "status",
+    "country",
+    "state",
+    "city",
+    "postal_code",
+    "full_address",
+    "phone",
+    "latitude",
+    "longitude",
+    "official_url",
+    "services",
+    "audiology",
+    "source_url"
+  ],
+  "excluded_fields": [
+    "email",
+    "opening_hours"
+  ],
+  "source_ids": [
+    "7240048",
+    "7240052",
+    "7240049",
+    "7240050",
+    "7240051",
+    "7298653",
+    "7297949",
+    "24622066",
+    "7297952",
+    "7298848",
+    "7297950",
+    "7298788",
+    "86037479",
+    "7240046",
+    "7240047",
+    "7298798"
+  ],
+  "coordinate_corrections": []
+}
