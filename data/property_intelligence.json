@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T03:34:47.061130+00:00",
+  "generated_at": "2026-09-02T03:40:54.401157+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 121,
-    "relationship_count": 802,
-    "active_relationship_count": 800,
+    "group_count": 122,
+    "relationship_count": 821,
+    "active_relationship_count": 819,
     "shopping_centre_count": 584,
-    "researched_property_count": 245,
-    "classed_property_count": 235,
+    "researched_property_count": 249,
+    "classed_property_count": 239,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -2072,6 +2072,24 @@
         "Westlands Unit Trust",
         "The Trustee for Westlands Unit Trust"
       ]
+    },
+    {
+      "group_id": "group-charter-hall-rp6",
+      "canonical_name": "Retail Partnership No.6",
+      "parent_group_id": "group-charter-hall",
+      "brand_name": "RP6",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.charterhall.com.au/",
+      "status": "Active",
+      "source_url": "https://www.charterhall.com.au/News/news-article/2026/08/06/charter-hall-retail-reit-2026-full-year-results",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Retail Partnership No.6",
+        "RP6",
+        "Retail Partnership No6"
+      ]
     }
   ],
   "group_alias_index": {
@@ -2310,7 +2328,9 @@
     "ppifundsmanagement": "group-ppi-funds-management",
     "ppi": "group-ppi-funds-management",
     "westlandsunittrust": "group-westlands-unit-trust",
-    "thetrusteeforwestlandsunittrust": "group-westlands-unit-trust"
+    "thetrusteeforwestlandsunittrust": "group-westlands-unit-trust",
+    "retailpartnershipno6": "group-charter-hall-rp6",
+    "rp6": "group-charter-hall-rp6"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -15145,6 +15165,310 @@
       "confidence": "High",
       "public_note": "The current venue is operated on Charter Hall infrastructure and directs vacant-shop and casual leasing through Charter Hall",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ccrf-bonnyrigg-plaza-owner-owner",
+      "place_id": "place-au-nsw-bonnyrigg-plaza",
+      "group_id": "group-charter-hall-ccrf",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/News/news-article/2026/02/18/charter-hall-grows-ccrf-by--360m-to--3-billion",
+      "source_type": "Official current acquisition announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall confirms CCRF acquired Bonnyrigg Plaza as part of a three-centre sub-regional portfolio",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-bonnyrigg-management-manager",
+      "place_id": "place-au-nsw-bonnyrigg-plaza",
+      "group_id": "group-charter-hall",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.bonnyriggplaza.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-bonnyrigg-management-operator",
+      "place_id": "place-au-nsw-bonnyrigg-plaza",
+      "group_id": "group-charter-hall",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.bonnyriggplaza.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-bonnyrigg-management-leasing_controller",
+      "place_id": "place-au-nsw-bonnyrigg-plaza",
+      "group_id": "group-charter-hall",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.bonnyriggplaza.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-bonnyrigg-casual-leasing-external_leasing_agent",
+      "place_id": "place-au-nsw-bonnyrigg-plaza",
+      "group_id": "group-jll",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.bonnyriggplaza.com.au/lease-here",
+      "source_type": "Official current venue leasing appointment",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue appoints JLL for casual mall leasing only while Charter Hall retains permanent leasing control",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-rp6-eastgate-owner-owner",
+      "place_id": "place-au-nsw-bondi-junction-eastgate",
+      "group_id": "group-charter-hall-rp6",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/eastgate-bondi-junction",
+      "source_type": "Official current fund ownership and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall identifies 100 percent RP6 fund ownership and explicitly classifies Eastgate as a sub-regional shopping centre",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-eastgate-management-manager",
+      "place_id": "place-au-nsw-bondi-junction-eastgate",
+      "group_id": "group-charter-hall",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.eastgatebondijunction.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-eastgate-management-operator",
+      "place_id": "place-au-nsw-bondi-junction-eastgate",
+      "group_id": "group-charter-hall",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.eastgatebondijunction.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-eastgate-management-leasing_controller",
+      "place_id": "place-au-nsw-bondi-junction-eastgate",
+      "group_id": "group-charter-hall",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.eastgatebondijunction.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-eastgate-casual-leasing-external_leasing_agent",
+      "place_id": "place-au-nsw-bondi-junction-eastgate",
+      "group_id": "group-jll",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.eastgatebondijunction.com.au/lease-here",
+      "source_type": "Official current venue leasing appointment",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue appoints JLL for casual mall leasing only while Charter Hall retains permanent leasing control",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-rp6-bass-hill-owner-owner",
+      "place_id": "place-au-nsw-bass-hill-plaza",
+      "group_id": "group-charter-hall-rp6",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Bass-Hill-Plaza",
+      "source_type": "Official current fund ownership and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall identifies 100 percent RP6 fund ownership for the current Convenience Plus centre",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-bass-hill-management-manager",
+      "place_id": "place-au-nsw-bass-hill-plaza",
+      "group_id": "group-charter-hall",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.basshillplaza.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-bass-hill-management-operator",
+      "place_id": "place-au-nsw-bass-hill-plaza",
+      "group_id": "group-charter-hall",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.basshillplaza.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-bass-hill-management-leasing_controller",
+      "place_id": "place-au-nsw-bass-hill-plaza",
+      "group_id": "group-charter-hall",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.basshillplaza.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-bass-hill-casual-leasing-external_leasing_agent",
+      "place_id": "place-au-nsw-bass-hill-plaza",
+      "group_id": "group-jll",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.basshillplaza.com.au/lease-here",
+      "source_type": "Official current venue leasing appointment",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue appoints JLL for casual mall leasing only while Charter Hall retains permanent leasing control",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-cqr-morisset-square-owner-owner",
+      "place_id": "place-au-nsw-morisset-square",
+      "group_id": "group-charter-hall-retail-reit",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Morisset-Square-Shopping-Centre",
+      "source_type": "Official current fund ownership and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall identifies 100 percent CQR fund ownership and describes Morisset Square as a convenience shopping centre",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-morisset-management-manager",
+      "place_id": "place-au-nsw-morisset-square",
+      "group_id": "group-charter-hall",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.morissetsquare.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent casual and vacant-shop leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-morisset-management-operator",
+      "place_id": "place-au-nsw-morisset-square",
+      "group_id": "group-charter-hall",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.morissetsquare.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent casual and vacant-shop leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-morisset-management-leasing_controller",
+      "place_id": "place-au-nsw-morisset-square",
+      "group_id": "group-charter-hall",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.morissetsquare.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent casual and vacant-shop leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -22990,6 +23314,259 @@
       "public_note": "The current venue is operated on Charter Hall infrastructure and directs vacant-shop and casual leasing through Charter Hall",
       "match_status": "Matched",
       "matched_place_id": "place-au-nsw-highlands-marketplace"
+    },
+    {
+      "portfolio_asset_id": "ccrf-bonnyrigg-plaza-owner",
+      "group_id": "group-charter-hall-ccrf",
+      "canonical_name": "Bonnyrigg Plaza",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-bonnyrigg-plaza",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/News/news-article/2026/02/18/charter-hall-grows-ccrf-by--360m-to--3-billion",
+      "source_type": "Official current acquisition announcement",
+      "source_date": "2026-02-18",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall confirms CCRF acquired Bonnyrigg Plaza as part of a three-centre sub-regional portfolio",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-bonnyrigg-plaza"
+    },
+    {
+      "portfolio_asset_id": "charter-hall-bonnyrigg-management",
+      "group_id": "group-charter-hall",
+      "canonical_name": "Bonnyrigg Plaza",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-bonnyrigg-plaza",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.bonnyriggplaza.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-bonnyrigg-plaza"
+    },
+    {
+      "portfolio_asset_id": "jll-bonnyrigg-casual-leasing",
+      "group_id": "group-jll",
+      "canonical_name": "Bonnyrigg Plaza",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-bonnyrigg-plaza",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.bonnyriggplaza.com.au/lease-here",
+      "source_type": "Official current venue leasing appointment",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue appoints JLL for casual mall leasing only while Charter Hall retains permanent leasing control",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-bonnyrigg-plaza"
+    },
+    {
+      "portfolio_asset_id": "rp6-eastgate-owner",
+      "group_id": "group-charter-hall-rp6",
+      "canonical_name": "Eastgate Bondi Junction",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Bondi Junction Eastgate|Eastgate Shopping Centre",
+      "preferred_place_id": "place-au-nsw-bondi-junction-eastgate",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "15046",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/eastgate-bondi-junction",
+      "source_type": "Official current fund ownership and property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall identifies 100 percent RP6 fund ownership and explicitly classifies Eastgate as a sub-regional shopping centre",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-bondi-junction-eastgate"
+    },
+    {
+      "portfolio_asset_id": "charter-hall-eastgate-management",
+      "group_id": "group-charter-hall",
+      "canonical_name": "Eastgate Bondi Junction",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Bondi Junction Eastgate|Eastgate Shopping Centre",
+      "preferred_place_id": "place-au-nsw-bondi-junction-eastgate",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "15046",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.eastgatebondijunction.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-bondi-junction-eastgate"
+    },
+    {
+      "portfolio_asset_id": "jll-eastgate-casual-leasing",
+      "group_id": "group-jll",
+      "canonical_name": "Eastgate Bondi Junction",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Bondi Junction Eastgate|Eastgate Shopping Centre",
+      "preferred_place_id": "place-au-nsw-bondi-junction-eastgate",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.eastgatebondijunction.com.au/lease-here",
+      "source_type": "Official current venue leasing appointment",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue appoints JLL for casual mall leasing only while Charter Hall retains permanent leasing control",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-bondi-junction-eastgate"
+    },
+    {
+      "portfolio_asset_id": "rp6-bass-hill-owner",
+      "group_id": "group-charter-hall-rp6",
+      "canonical_name": "Bass Hill Plaza",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-bass-hill-plaza",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "20379",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Bass-Hill-Plaza",
+      "source_type": "Official current fund ownership and property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall identifies 100 percent RP6 fund ownership for the current Convenience Plus centre",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-bass-hill-plaza"
+    },
+    {
+      "portfolio_asset_id": "charter-hall-bass-hill-management",
+      "group_id": "group-charter-hall",
+      "canonical_name": "Bass Hill Plaza",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-bass-hill-plaza",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "20379",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.basshillplaza.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent leasing through Charter Hall",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-bass-hill-plaza"
+    },
+    {
+      "portfolio_asset_id": "jll-bass-hill-casual-leasing",
+      "group_id": "group-jll",
+      "canonical_name": "Bass Hill Plaza",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-bass-hill-plaza",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.basshillplaza.com.au/lease-here",
+      "source_type": "Official current venue leasing appointment",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue appoints JLL for casual mall leasing only while Charter Hall retains permanent leasing control",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-bass-hill-plaza"
+    },
+    {
+      "portfolio_asset_id": "cqr-morisset-square-owner",
+      "group_id": "group-charter-hall-retail-reit",
+      "canonical_name": "Morisset Square",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-morisset-square",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "7941",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Morisset-Square-Shopping-Centre",
+      "source_type": "Official current fund ownership and property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall identifies 100 percent CQR fund ownership and describes Morisset Square as a convenience shopping centre",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-morisset-square"
+    },
+    {
+      "portfolio_asset_id": "charter-hall-morisset-management",
+      "group_id": "group-charter-hall",
+      "canonical_name": "Morisset Square",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-morisset-square",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "7941",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.morissetsquare.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent casual and vacant-shop leasing through Charter Hall",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-morisset-square"
     }
   ],
   "property_summaries": {
@@ -42570,35 +43147,49 @@
     },
     "place-au-nsw-bass-hill-plaza": {
       "place_id": "place-au-nsw-bass-hill-plaza",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-bass-hill-plaza",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Bass-Hill-Plaza",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from 20379 square metres of NLA and Woolworths Kmart and Aldi anchors; the current profile uses Convenience Plus rather than an SCCA class"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-bass-hill-plaza",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Bass-Hill-Plaza",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Charter Hall sources confirm 100 percent RP6 ownership Charter Hall management permanent leasing a defensible inferred sub-regional class and current public centre metrics; JLL handles casual mall leasing"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-rp6-bass-hill-owner-owner",
+        "rel-portfolio-charter-hall-bass-hill-management-manager",
+        "rel-portfolio-charter-hall-bass-hill-management-operator",
+        "rel-portfolio-charter-hall-bass-hill-management-leasing_controller",
+        "rel-portfolio-jll-bass-hill-casual-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-charter-hall",
+        "group-charter-hall-rp6",
+        "group-jll"
+      ],
+      "owner_names": [
+        "Retail Partnership No.6"
+      ],
+      "manager_names": [
+        "Charter Hall"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 17.36,
@@ -42644,7 +43235,10 @@
         "median_household_income": 748,
         "age_45_plus_pct": 38,
         "retail_businesses": 141
-      }
+      },
+      "gla_sqm": 20379.0,
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Bass-Hill-Plaza",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-bateau-bay-square": {
       "place_id": "place-au-nsw-bateau-bay-square",
@@ -42840,122 +43434,6 @@
         "retail_businesses": 78
       }
     },
-    "place-au-nsw-bondi-junction-eastgate": {
-      "place_id": "place-au-nsw-bondi-junction-eastgate",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-nsw-bondi-junction-eastgate",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-nsw-bondi-junction-eastgate",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 0.28,
-      "competitor_context": {
-        "by_retailer": {
-          "Independent / Other optical": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "independent-other-optical-osm-au-node-11751506894",
-                "name": "George & Matilda Eyecare for Optique",
-                "distance_km": 1.81
-              },
-              {
-                "store_id": "independent-other-optical-osm-au-node-11751506892",
-                "name": "The Eye Scene",
-                "distance_km": 1.86
-              }
-            ]
-          },
-          "Bailey Nelson": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "bailey-nelson-bondi-junction",
-                "name": "Bailey Nelson Bondi Junction",
-                "distance_km": 0.28
-              },
-              {
-                "store_id": "bailey-nelson-paddington",
-                "name": "Bailey Nelson Paddington - New Location",
-                "distance_km": 1.91
-              }
-            ]
-          },
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "opsm-1103",
-                "name": "OPSM Bondi Junction",
-                "distance_km": 0.46
-              }
-            ]
-          },
-          "Specsavers": {
-            "in_centre": [
-              {
-                "store_id": "specsavers-3606",
-                "name": "Bondi Junction Eastgate",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "specsavers-3399",
-                "name": "Bondi Junction Westfield",
-                "distance_km": 0.25
-              }
-            ]
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 1.81,
-          "Bailey Nelson": 0.28,
-          "OPSM": 0.46,
-          "Oscar Wylee": 4.5,
-          "Specsavers": 0.0
-        },
-        "independent_2km_count": 2
-      },
-      "market": {
-        "sa2_code": "118011341",
-        "sa2_name": "Bondi Junction - Waverly",
-        "population_2025": 19148,
-        "population_growth_pct": 7.21,
-        "median_household_income": 1800,
-        "age_45_plus_pct": 36.6,
-        "retail_businesses": 233
-      }
-    },
     "place-au-nsw-bondi-junction-westfield": {
       "place_id": "place-au-nsw-bondi-junction-westfield",
       "centre_class": "Super Regional",
@@ -43096,35 +43574,49 @@
     },
     "place-au-nsw-bonnyrigg-plaza": {
       "place_id": "place-au-nsw-bonnyrigg-plaza",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-bonnyrigg-plaza",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.charterhall.com.au/News/news-article/2026/02/18/charter-hall-grows-ccrf-by--360m-to--3-billion",
+        "source_type": "Official current acquisition announcement",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Charter Hall explicitly identifies Bonnyrigg Plaza as one of three sub-regional convenience-based assets acquired for CCRF"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-bonnyrigg-plaza",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.charterhall.com.au/News/news-article/2026/02/18/charter-hall-grows-ccrf-by--360m-to--3-billion",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Charter Hall sources confirm 100 percent CCRF ownership Charter Hall management permanent leasing and a confirmed sub-regional class; JLL handles casual mall leasing"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-ccrf-bonnyrigg-plaza-owner-owner",
+        "rel-portfolio-charter-hall-bonnyrigg-management-manager",
+        "rel-portfolio-charter-hall-bonnyrigg-management-operator",
+        "rel-portfolio-charter-hall-bonnyrigg-management-leasing_controller",
+        "rel-portfolio-jll-bonnyrigg-casual-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-charter-hall",
+        "group-charter-hall-ccrf",
+        "group-jll"
+      ],
+      "owner_names": [
+        "Charter Hall Convenience Retail Fund"
+      ],
+      "manager_names": [
+        "Charter Hall"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 20.51,
@@ -44924,6 +45416,139 @@
       "gla_sqm": 12806.0,
       "tenancy_count": 37,
       "source_url": "https://www.charterhall.com.au/property/property-detail/Dubbo-Square",
+      "last_verified_at": "2026-09-02"
+    },
+    "place-au-nsw-bondi-junction-eastgate": {
+      "place_id": "place-au-nsw-bondi-junction-eastgate",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
+      "centre_class_evidence": {
+        "place_id": "place-au-nsw-bondi-junction-eastgate",
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/eastgate-bondi-junction",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Charter Hall explicitly classifies Eastgate Bondi Junction as a sub-regional shopping centre"
+      },
+      "research_status": "Verified",
+      "research_evidence": {
+        "place_id": "place-au-nsw-bondi-junction-eastgate",
+        "research_status": "Verified",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/eastgate-bondi-junction",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Charter Hall sources confirm 100 percent RP6 ownership Charter Hall management permanent leasing a confirmed sub-regional class and current public centre metrics; JLL handles casual mall leasing"
+      },
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-rp6-eastgate-owner-owner",
+        "rel-portfolio-charter-hall-eastgate-management-manager",
+        "rel-portfolio-charter-hall-eastgate-management-operator",
+        "rel-portfolio-charter-hall-eastgate-management-leasing_controller",
+        "rel-portfolio-jll-eastgate-casual-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-charter-hall",
+        "group-charter-hall-rp6",
+        "group-jll"
+      ],
+      "owner_names": [
+        "Retail Partnership No.6"
+      ],
+      "manager_names": [
+        "Charter Hall"
+      ],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 0.28,
+      "competitor_context": {
+        "by_retailer": {
+          "Independent / Other optical": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "independent-other-optical-osm-au-node-11751506894",
+                "name": "George & Matilda Eyecare for Optique",
+                "distance_km": 1.81
+              },
+              {
+                "store_id": "independent-other-optical-osm-au-node-11751506892",
+                "name": "The Eye Scene",
+                "distance_km": 1.86
+              }
+            ]
+          },
+          "Bailey Nelson": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "bailey-nelson-bondi-junction",
+                "name": "Bailey Nelson Bondi Junction",
+                "distance_km": 0.28
+              },
+              {
+                "store_id": "bailey-nelson-paddington",
+                "name": "Bailey Nelson Paddington - New Location",
+                "distance_km": 1.91
+              }
+            ]
+          },
+          "OPSM": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "opsm-1103",
+                "name": "OPSM Bondi Junction",
+                "distance_km": 0.46
+              }
+            ]
+          },
+          "Specsavers": {
+            "in_centre": [
+              {
+                "store_id": "specsavers-3606",
+                "name": "Bondi Junction Eastgate",
+                "distance_km": 0.0
+              }
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "specsavers-3399",
+                "name": "Bondi Junction Westfield",
+                "distance_km": 0.25
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 1.81,
+          "Bailey Nelson": 0.28,
+          "OPSM": 0.46,
+          "Oscar Wylee": 4.5,
+          "Specsavers": 0.0
+        },
+        "independent_2km_count": 2
+      },
+      "market": {
+        "sa2_code": "118011341",
+        "sa2_name": "Bondi Junction - Waverly",
+        "population_2025": 19148,
+        "population_growth_pct": 7.21,
+        "median_household_income": 1800,
+        "age_45_plus_pct": 36.6,
+        "retail_businesses": 233
+      },
+      "gla_sqm": 15046.0,
+      "source_url": "https://www.charterhall.com.au/property/property-detail/eastgate-bondi-junction",
       "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-erina-fair": {
@@ -47393,35 +48018,47 @@
     },
     "place-au-nsw-morisset-square": {
       "place_id": "place-au-nsw-morisset-square",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Neighbourhood",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-morisset-square",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Neighbourhood",
+        "classification_method": "Inferred",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Morisset-Square-Shopping-Centre",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Neighbourhood format inferred from the official Convenience Centre grade 7941 square metres of NLA and supermarket-led retail mix"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-morisset-square",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Morisset-Square-Shopping-Centre",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Charter Hall sources confirm 100 percent CQR ownership Charter Hall management direct leasing a defensible inferred neighbourhood class and current public centre metrics"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-cqr-morisset-square-owner-owner",
+        "rel-portfolio-charter-hall-morisset-management-manager",
+        "rel-portfolio-charter-hall-morisset-management-operator",
+        "rel-portfolio-charter-hall-morisset-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-charter-hall",
+        "group-charter-hall-retail-reit"
+      ],
+      "owner_names": [
+        "Charter Hall Retail REIT"
+      ],
+      "manager_names": [
+        "Charter Hall"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 27.67,
@@ -47456,7 +48093,10 @@
         "median_household_income": 870,
         "age_45_plus_pct": 50.4,
         "retail_businesses": 92
-      }
+      },
+      "gla_sqm": 7941.0,
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Morisset-Square-Shopping-Centre",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-mt-druitt-westfield": {
       "place_id": "place-au-nsw-mt-druitt-westfield",
@@ -117085,7 +117725,7 @@
     },
     "group-charter-hall": {
       "group_id": "group-charter-hall",
-      "property_count": 10,
+      "property_count": 14,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -117095,7 +117735,22 @@
           "MANAGER",
           "OPERATOR"
         ],
+        "place-au-nsw-bass-hill-plaza": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-nsw-bateau-bay-square": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-nsw-bondi-junction-eastgate": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-nsw-bonnyrigg-plaza": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
@@ -117116,6 +117771,11 @@
           "OPERATOR"
         ],
         "place-au-nsw-highlands-marketplace": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-nsw-morisset-square": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
@@ -117588,11 +118248,20 @@
     },
     "group-jll": {
       "group_id": "group-jll",
-      "property_count": 11,
+      "property_count": 14,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-bass-hill-plaza": [
+          "EXTERNAL_LEASING_AGENT"
+        ],
+        "place-au-nsw-bondi-junction-eastgate": [
+          "EXTERNAL_LEASING_AGENT"
+        ],
+        "place-au-nsw-bonnyrigg-plaza": [
+          "EXTERNAL_LEASING_AGENT"
+        ],
         "place-au-nsw-leichhardt-marketplace": [
           "EXTERNAL_LEASING_AGENT",
           "LEASING_CONTROLLER",
@@ -118157,7 +118826,7 @@
     },
     "group-charter-hall-retail-reit": {
       "group_id": "group-charter-hall-retail-reit",
-      "property_count": 4,
+      "property_count": 5,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -118166,6 +118835,9 @@
           "OWNER"
         ],
         "place-au-nsw-dubbo-square": [
+          "OWNER"
+        ],
+        "place-au-nsw-morisset-square": [
           "OWNER"
         ],
         "place-au-nsw-orange-central-square": [
@@ -118576,11 +119248,14 @@
     },
     "group-charter-hall-ccrf": {
       "group_id": "group-charter-hall-ccrf",
-      "property_count": 2,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-bonnyrigg-plaza": [
+          "OWNER"
+        ],
         "place-au-nsw-chullora-marketplace": [
           "OWNER"
         ],
@@ -119012,6 +119687,22 @@
       "bailey_property_ids": [],
       "asset_roles": {
         "place-au-sa-whyalla-westland-shopping-centre": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-charter-hall-rp6": {
+      "group_id": "group-charter-hall-rp6",
+      "property_count": 2,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-bass-hill-plaza": [
+          "OWNER"
+        ],
+        "place-au-nsw-bondi-junction-eastgate": [
           "OWNER"
         ]
       },
@@ -130982,7 +131673,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -130996,11 +131687,15 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 17.36,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-charter-hall",
+            "group-charter-hall-rp6",
+            "group-jll"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -131107,55 +131802,6 @@
         }
       }
     },
-    "place-au-nsw-bondi-junction-eastgate": {
-      "schema_version": 1,
-      "place_id": "place-au-nsw-bondi-junction-eastgate",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "118011341",
-          "sa2_name": "Bondi Junction - Waverly",
-          "population_2025": 19148,
-          "population_growth_pct": 7.21,
-          "median_household_income": 1800,
-          "age_45_plus_pct": 36.6,
-          "retail_businesses": 233
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-nsw-bondi-junction-eastgate.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 0.28,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
     "place-au-nsw-bondi-junction-westfield": {
       "schema_version": 1,
       "place_id": "place-au-nsw-bondi-junction-westfield",
@@ -131226,7 +131872,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -131240,11 +131886,15 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 20.51,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-charter-hall",
+            "group-charter-hall-ccrf",
+            "group-jll"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -132116,6 +132766,59 @@
           "group_ids": [
             "group-charter-hall",
             "group-charter-hall-retail-reit"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
+        }
+      }
+    },
+    "place-au-nsw-bondi-junction-eastgate": {
+      "schema_version": 1,
+      "place_id": "place-au-nsw-bondi-junction-eastgate",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "118011341",
+          "sa2_name": "Bondi Junction - Waverly",
+          "population_2025": 19148,
+          "population_growth_pct": 7.21,
+          "median_household_income": 1800,
+          "age_45_plus_pct": 36.6,
+          "retail_businesses": 233
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-au-nsw-bondi-junction-eastgate.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "Shopping Centre",
+          "centre_class": "Sub-regional"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Available",
+        "values": {
+          "nearest_bailey_km": 0.28,
+          "group_ids": [
+            "group-charter-hall",
+            "group-charter-hall-rp6",
+            "group-jll"
           ],
           "overlap_status": "NO_KNOWN_OVERLAP"
         }
@@ -133437,7 +134140,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Neighbourhood"
         }
       },
       "accessibility": {
@@ -133451,11 +134154,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 27.67,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-charter-hall",
+            "group-charter-hall-retail-reit"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T03:34:38+00:00",
+    "generated_at": "2026-09-02T03:40:45+00:00",
     "benchmark": "All mapped Bailey Nelson stores, separated by country and location setting",
     "method": "Transparent lookalike screening rank; not a probability of store success",
     "weights": {
@@ -5693,7 +5693,7 @@
         "retailers": [
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://www.morissetsquare.com.au/",
         "rank": 161
       },
       {
@@ -6785,7 +6785,7 @@
         "retailers": [
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://www.basshillplaza.com.au/",
         "rank": 199
       },
       {
@@ -11330,35 +11330,6 @@
         "rank": 357
       },
       {
-        "place_id": "place-au-nsw-bondi-junction-eastgate",
-        "name": "Bondi Junction Eastgate",
-        "country": "Australia",
-        "state": "NSW",
-        "locality": "Bondi Junction",
-        "location_setting": "Shopping Centre",
-        "score": 35,
-        "screening_completeness": 90,
-        "components": {
-          "bailey_footprint_similarity": 63,
-          "bailey_whitespace": 1,
-          "optical_market_validation": 29,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": 19148.0,
-          "population_growth_2021_2025_pct": 7.21,
-          "age_45_plus_pct_2021": 36.6,
-          "median_household_income_weekly_2021": 1800.0
-        },
-        "nearest_bailey_km": 0.3,
-        "optical_store_count": 1,
-        "retailers": [
-          "Specsavers"
-        ],
-        "evidence_url": "",
-        "rank": 358
-      },
-      {
         "place_id": "place-au-unknown-capestone-village",
         "name": "Capestone Village",
         "country": "Australia",
@@ -11383,7 +11354,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.capestonevillage.com.au/",
-        "rank": 359
+        "rank": 358
       },
       {
         "place_id": "place-au-vic-centre-road",
@@ -11413,6 +11384,35 @@
           "Specsavers"
         ],
         "evidence_url": "",
+        "rank": 359
+      },
+      {
+        "place_id": "place-au-nsw-bondi-junction-eastgate",
+        "name": "Eastgate Bondi Junction",
+        "country": "Australia",
+        "state": "NSW",
+        "locality": "Bondi Junction",
+        "location_setting": "Shopping Centre",
+        "score": 35,
+        "screening_completeness": 90,
+        "components": {
+          "bailey_footprint_similarity": 63,
+          "bailey_whitespace": 1,
+          "optical_market_validation": 29,
+          "accessibility_retail_context": null
+        },
+        "market_features": {
+          "population_2025": 19148.0,
+          "population_growth_2021_2025_pct": 7.21,
+          "age_45_plus_pct_2021": 36.6,
+          "median_household_income_weekly_2021": 1800.0
+        },
+        "nearest_bailey_km": 0.3,
+        "optical_store_count": 1,
+        "retailers": [
+          "Specsavers"
+        ],
+        "evidence_url": "https://www.eastgatebondijunction.com.au/",
         "rank": 360
       },
       {

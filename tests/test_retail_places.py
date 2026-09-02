@@ -394,6 +394,34 @@ class RetailPlaceTests(unittest.TestCase):
                 self.assertEqual(place["location_setting"], "Shopping Centre")
                 self.assertEqual(place["place_type"], "Shopping Centre")
 
+    def test_current_charter_hall_sydney_and_hunter_batch_has_canonical_names_and_addresses(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        expected = {
+            "place-au-nsw-bonnyrigg-plaza": ("Bonnyrigg Plaza", "100 Bonnyrigg Avenue", "Bonnyrigg", "2177"),
+            "place-au-nsw-bondi-junction-eastgate": (
+                "Eastgate Bondi Junction",
+                "71/91 Spring Street",
+                "Bondi Junction",
+                "2022",
+            ),
+            "place-au-nsw-bass-hill-plaza": ("Bass Hill Plaza", "753 Hume Highway", "Bass Hill", "2197"),
+            "place-au-nsw-morisset-square": ("Morisset Square", "35 Yambo Street", "Morisset", "2264"),
+        }
+        for place_id, (name, address, locality, postcode) in expected.items():
+            with self.subTest(place_id=place_id):
+                place = places[place_id]
+                self.assertEqual(place["name"], name)
+                self.assertEqual(place["address"], address)
+                self.assertEqual(place["locality"], locality)
+                self.assertEqual(place["postcode"], postcode)
+                self.assertEqual(place["location_setting"], "Shopping Centre")
+                self.assertEqual(place["place_type"], "Shopping Centre")
+
+        self.assertIn(
+            "Bondi Junction Eastgate",
+            places["place-au-nsw-bondi-junction-eastgate"]["aliases"],
+        )
+
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, expected_name in {

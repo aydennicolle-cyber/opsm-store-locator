@@ -845,6 +845,60 @@ class PropertyIntelligenceTests(unittest.TestCase):
                 else:
                     self.assertEqual(summary["tenancy_count"], expected_values["tenants"])
 
+    def test_current_charter_hall_sydney_and_hunter_batch_preserves_fund_and_leasing_roles(self) -> None:
+        groups = {group["group_id"]: group for group in self.groups}
+        rp6 = groups["group-charter-hall-rp6"]
+        self.assertEqual(rp6["canonical_name"], "Retail Partnership No.6")
+        self.assertEqual(rp6["parent_group_id"], "group-charter-hall")
+        self.assertIn("RP6", rp6["aliases"])
+
+        expected = {
+            "place-au-nsw-bonnyrigg-plaza": {
+                "owner": "Charter Hall Convenience Retail Fund",
+                "class": "Sub-regional",
+                "arrangement": "External agency",
+                "gla": None,
+            },
+            "place-au-nsw-bondi-junction-eastgate": {
+                "owner": "Retail Partnership No.6",
+                "class": "Sub-regional",
+                "arrangement": "External agency",
+                "gla": 15046,
+            },
+            "place-au-nsw-bass-hill-plaza": {
+                "owner": "Retail Partnership No.6",
+                "class": "Sub-regional",
+                "arrangement": "External agency",
+                "gla": 20379,
+            },
+            "place-au-nsw-morisset-square": {
+                "owner": "Charter Hall Retail REIT",
+                "class": "Neighbourhood",
+                "arrangement": "In-house",
+                "gla": 7941,
+            },
+        }
+        for place_id, expected_values in expected.items():
+            with self.subTest(place_id=place_id):
+                summary = self.payload["property_summaries"][place_id]
+                self.assertEqual(summary["research_status"], "Verified")
+                self.assertEqual(summary["centre_class"], expected_values["class"])
+                self.assertEqual(summary["owner_names"], [expected_values["owner"]])
+                self.assertEqual(summary["manager_names"], ["Charter Hall"])
+                self.assertEqual(summary["leasing_arrangement"], expected_values["arrangement"])
+                if expected_values["gla"] is None:
+                    self.assertNotIn("gla_sqm", summary)
+                else:
+                    self.assertEqual(summary["gla_sqm"], expected_values["gla"])
+
+        for place_id in {
+            "place-au-nsw-bonnyrigg-plaza",
+            "place-au-nsw-bondi-junction-eastgate",
+            "place-au-nsw-bass-hill-plaza",
+        }:
+            self.assertIn("group-jll", self.payload["property_summaries"][place_id]["group_ids"])
+        self.assertNotIn("group-jll", self.payload["property_summaries"]["place-au-nsw-morisset-square"]["group_ids"])
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})
