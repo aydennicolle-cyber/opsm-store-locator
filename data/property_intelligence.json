@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T05:34:20.982968+00:00",
+  "generated_at": "2026-09-02T05:43:56.390489+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 144,
-    "relationship_count": 983,
-    "active_relationship_count": 981,
-    "shopping_centre_count": 581,
-    "researched_property_count": 295,
-    "classed_property_count": 291,
+    "group_count": 148,
+    "relationship_count": 1003,
+    "active_relationship_count": 1001,
+    "shopping_centre_count": 580,
+    "researched_property_count": 301,
+    "classed_property_count": 297,
     "conflict_count": 0,
     "development_asset_count": 1,
     "unmatched_active_portfolio_count": 0,
@@ -2320,6 +2320,74 @@
       ]
     },
     {
+      "group_id": "group-jmk-retail",
+      "canonical_name": "JMK Retail",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "PROPERTY_COMPANY",
+      "country_scope": "Australia",
+      "official_url": "https://www.jmkretail.com.au/",
+      "status": "Active",
+      "source_url": "https://yamantocentral.com.au/legal/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "JMK Retail",
+        "Kelly Consolidated Pty Ltd ATF Kelly Group Trust"
+      ]
+    },
+    {
+      "group_id": "group-exceed-capital",
+      "canonical_name": "Exceed Capital",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "EXTERNAL_AGENCY",
+      "country_scope": "Australia",
+      "official_url": "https://www.exceedcapital.com.au/",
+      "status": "Active",
+      "source_url": "https://www.allenstownshoppingcentre.com.au/contact",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Exceed Capital"
+      ]
+    },
+    {
+      "group_id": "group-shayher-lin-brothers-trust",
+      "canonical_name": "Shayher Properties Pty Ltd ATF Lin Brothers Trust",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.wynnumplaza.com/",
+      "status": "Active",
+      "source_url": "https://www.aer.gov.au/industry/registers/retail-exemptions/shayher-properties-pty-ltd-trustee-lin-brothers-trust-wynnum-plaza-retail-exemption",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Shayher Properties Pty Ltd ATF Lin Brothers Trust",
+        "Shayher Properties Pty Ltd",
+        "Lin Brothers Trust"
+      ]
+    },
+    {
+      "group_id": "group-wynnum-retail-management",
+      "canonical_name": "Wynnum Retail Management Pty Ltd",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "ASSET_MANAGER",
+      "country_scope": "Australia",
+      "official_url": "https://www.wynnumplaza.com/",
+      "status": "Active",
+      "source_url": "https://www.campaigncentre.com.au/_client/_images/WYNNUM_P1071/ww/centre_information/Wynnum_Plaza_Casual_Leasing_Brochure.pdf",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Wynnum Retail Management Pty Ltd",
+        "Wynnum Retail Management"
+      ]
+    },
+    {
       "group_id": "group-charter-hall-prime-retail-fund",
       "canonical_name": "Charter Hall Prime Retail Fund",
       "parent_group_id": "group-charter-hall",
@@ -2746,6 +2814,14 @@
     "mrpfund": "group-mcconaghy-retail-property-fund",
     "firstassetmanagement": "group-first-asset-management",
     "fam": "group-first-asset-management",
+    "jmkretail": "group-jmk-retail",
+    "kellyconsolidatedptyltdatfkellygrouptrust": "group-jmk-retail",
+    "exceedcapital": "group-exceed-capital",
+    "shayherpropertiesptyltdatflinbrotherstrust": "group-shayher-lin-brothers-trust",
+    "shayherpropertiesptyltd": "group-shayher-lin-brothers-trust",
+    "linbrotherstrust": "group-shayher-lin-brothers-trust",
+    "wynnumretailmanagementptyltd": "group-wynnum-retail-management",
+    "wynnumretailmanagement": "group-wynnum-retail-management",
     "charterhallprimeretailfund": "group-charter-hall-prime-retail-fund",
     "cprf": "group-charter-hall-prime-retail-fund",
     "charterhallprimeretailfundcprf": "group-charter-hall-prime-retail-fund",
@@ -18483,6 +18559,326 @@
       "derived_from": "official_portfolio_asset"
     },
     {
+      "relationship_id": "rel-portfolio-leda-riverlink-owner",
+      "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
+      "group_id": "group-leda-holdings",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.riverlink.net.au/leasing/",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states Riverlink is Leda owned and managed routes leasing directly to Leda and explicitly classifies it as Regional; tenant count combines six majors ten mini-majors and 150 specialties",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-leda-riverlink-manager",
+      "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
+      "group_id": "group-leda-holdings",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.riverlink.net.au/leasing/",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states Riverlink is Leda owned and managed routes leasing directly to Leda and explicitly classifies it as Regional; tenant count combines six majors ten mini-majors and 150 specialties",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-leda-riverlink-operator",
+      "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
+      "group_id": "group-leda-holdings",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.riverlink.net.au/leasing/",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states Riverlink is Leda owned and managed routes leasing directly to Leda and explicitly classifies it as Regional; tenant count combines six majors ten mini-majors and 150 specialties",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-leda-riverlink-leasing_controller",
+      "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
+      "group_id": "group-leda-holdings",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.riverlink.net.au/leasing/",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states Riverlink is Leda owned and managed routes leasing directly to Leda and explicitly classifies it as Regional; tenant count combines six majors ten mini-majors and 150 specialties",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jmk-yamanto-central-owner",
+      "place_id": "place-au-qld-yamanto-central",
+      "group_id": "group-jmk-retail",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://yamantocentral.com.au/legal/",
+      "source_type": "Official current operator legal and direct leasing profile corroborated by owner development profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current legal page identifies JMK Retail as operator and the live venue provides the direct leasing pathway; the owner development profile identifies JMK as owner and confirms the 20000 square metre sub-regional format",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jmk-yamanto-central-manager",
+      "place_id": "place-au-qld-yamanto-central",
+      "group_id": "group-jmk-retail",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://yamantocentral.com.au/legal/",
+      "source_type": "Official current operator legal and direct leasing profile corroborated by owner development profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current legal page identifies JMK Retail as operator and the live venue provides the direct leasing pathway; the owner development profile identifies JMK as owner and confirms the 20000 square metre sub-regional format",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jmk-yamanto-central-operator",
+      "place_id": "place-au-qld-yamanto-central",
+      "group_id": "group-jmk-retail",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://yamantocentral.com.au/legal/",
+      "source_type": "Official current operator legal and direct leasing profile corroborated by owner development profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current legal page identifies JMK Retail as operator and the live venue provides the direct leasing pathway; the owner development profile identifies JMK as owner and confirms the 20000 square metre sub-regional format",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jmk-yamanto-central-leasing_controller",
+      "place_id": "place-au-qld-yamanto-central",
+      "group_id": "group-jmk-retail",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://yamantocentral.com.au/legal/",
+      "source_type": "Official current operator legal and direct leasing profile corroborated by owner development profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current legal page identifies JMK Retail as operator and the live venue provides the direct leasing pathway; the owner development profile identifies JMK as owner and confirms the 20000 square metre sub-regional format",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-hdn-lutwyche-owner-owner",
+      "place_id": "place-au-qld-homeco-lutwyche",
+      "group_id": "group-homeco-daily-needs-reit",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "source_type": "Official current listed-fund results",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "HDN's current results retain Lutwyche in the directly owned operating portfolio and report current public GLA",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-hmc-lutwyche-management-manager",
+      "place_id": "place-au-qld-homeco-lutwyche",
+      "group_id": "group-hmc-capital",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "source_type": "Official current listed-fund and asset-manager results",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "HMC manages the HomeCo Daily Needs REIT portfolio and its current results include Lutwyche; current leasing control is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-hmc-lutwyche-management-operator",
+      "place_id": "place-au-qld-homeco-lutwyche",
+      "group_id": "group-hmc-capital",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "source_type": "Official current listed-fund and asset-manager results",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "HMC manages the HomeCo Daily Needs REIT portfolio and its current results include Lutwyche; current leasing control is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-exceed-allenstown-leasing-external_leasing_agent",
+      "place_id": "place-au-qld-allenstown-square",
+      "group_id": "group-exceed-capital",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.allenstownshoppingcentre.com.au/contact",
+      "source_type": "Official current venue leasing appointment",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue routes permanent leasing to Exceed Capital and explicitly describes its neighbourhood format; ownership and property management are not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-cqr-whitsunday-plaza-owner-owner",
+      "place_id": "place-au-qld-whitsunday-plaza",
+      "group_id": "group-charter-hall-retail-reit",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/News/news-article/2026/08/06/charter-hall-retail-reit-2026-full-year-results",
+      "source_type": "Official current listed-fund results",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "CQR confirms settlement of its 100 percent Whitsunday Plaza acquisition from Vicinity during FY26",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-whitsunday-plaza-management-manager",
+      "place_id": "place-au-qld-whitsunday-plaza",
+      "group_id": "group-charter-hall",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.whitsundayplaza.com.au/lease-here",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The live venue is Charter Hall operated and routes permanent leasing directly through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-whitsunday-plaza-management-operator",
+      "place_id": "place-au-qld-whitsunday-plaza",
+      "group_id": "group-charter-hall",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.whitsundayplaza.com.au/lease-here",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The live venue is Charter Hall operated and routes permanent leasing directly through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-whitsunday-plaza-management-leasing_controller",
+      "place_id": "place-au-qld-whitsunday-plaza",
+      "group_id": "group-charter-hall",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.whitsundayplaza.com.au/lease-here",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The live venue is Charter Hall operated and routes permanent leasing directly through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-shayher-wynnum-plaza-owner-owner",
+      "place_id": "place-au-qld-wynnum-plaza",
+      "group_id": "group-shayher-lin-brothers-trust",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.aer.gov.au/industry/registers/retail-exemptions/shayher-properties-pty-ltd-trustee-lin-brothers-trust-wynnum-plaza-retail-exemption",
+      "source_type": "Current regulator ownership record corroborated by current venue leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The active regulator record identifies Shayher Properties as trustee for Lin Brothers Trust at Wynnum Plaza and the venue publishes three anchors plus 66 specialty stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-wynnum-retail-management-manager",
+      "place_id": "place-au-qld-wynnum-plaza",
+      "group_id": "group-wynnum-retail-management",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.campaigncentre.com.au/_client/_images/WYNNUM_P1071/ww/centre_information/Wynnum_Plaza_Casual_Leasing_Brochure.pdf",
+      "source_type": "Current official centre management brochure",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current public centre brochure identifies Wynnum Retail Management as centre manager while current permanent leasing is handled externally by JLL",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-wynnum-retail-management-operator",
+      "place_id": "place-au-qld-wynnum-plaza",
+      "group_id": "group-wynnum-retail-management",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.campaigncentre.com.au/_client/_images/WYNNUM_P1071/ww/centre_information/Wynnum_Plaza_Casual_Leasing_Brochure.pdf",
+      "source_type": "Current official centre management brochure",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current public centre brochure identifies Wynnum Retail Management as centre manager while current permanent leasing is handled externally by JLL",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-wynnum-plaza-leasing-external_leasing_agent",
+      "place_id": "place-au-qld-wynnum-plaza",
+      "group_id": "group-jll",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.wynnumplaza.com/leasing-main/leasing",
+      "source_type": "Official current permanent leasing page",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue routes permanent leasing enquiries to JLL",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
       "relationship_id": "rel-portfolio-perron-galleria-co_owner",
       "place_id": "place-au-wa-morley-galleria",
       "group_id": "group-perron",
@@ -28046,6 +28442,236 @@
       "matched_place_id": "place-au-nsw-warilla-grove-shopping-centre"
     },
     {
+      "portfolio_asset_id": "leda-riverlink",
+      "group_id": "group-leda-holdings",
+      "canonical_name": "Riverlink Shopping Centre",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Ipswich Riverlink Shopping Centre|Riverlink",
+      "preferred_place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "61682",
+      "tenancy_count": "166",
+      "annual_visits_m": "",
+      "source_url": "https://www.riverlink.net.au/leasing/",
+      "source_type": "Official current owner manager and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue states Riverlink is Leda owned and managed routes leasing directly to Leda and explicitly classifies it as Regional; tenant count combines six majors ten mini-majors and 150 specialties",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-ipswich-riverlink-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "jmk-yamanto-central",
+      "group_id": "group-jmk-retail",
+      "canonical_name": "Yamanto Central",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Yamanto Central Shopping Centre",
+      "preferred_place_id": "place-au-qld-yamanto-central",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "20000",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://yamantocentral.com.au/legal/",
+      "source_type": "Official current operator legal and direct leasing profile corroborated by owner development profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current legal page identifies JMK Retail as operator and the live venue provides the direct leasing pathway; the owner development profile identifies JMK as owner and confirms the 20000 square metre sub-regional format",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-yamanto-central"
+    },
+    {
+      "portfolio_asset_id": "hdn-lutwyche-owner",
+      "group_id": "group-homeco-daily-needs-reit",
+      "canonical_name": "HomeCo Lutwyche",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Lutwyche|Lutwyche Shopping Centre|Lutwyche City",
+      "preferred_place_id": "place-au-qld-homeco-lutwyche",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "21918",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "source_type": "Official current listed-fund results",
+      "source_date": "2025-12-31",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "HDN's current results retain Lutwyche in the directly owned operating portfolio and report current public GLA",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-homeco-lutwyche"
+    },
+    {
+      "portfolio_asset_id": "hmc-lutwyche-management",
+      "group_id": "group-hmc-capital",
+      "canonical_name": "HomeCo Lutwyche",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Lutwyche|Lutwyche Shopping Centre|Lutwyche City",
+      "preferred_place_id": "place-au-qld-homeco-lutwyche",
+      "roles": "MANAGER|OPERATOR",
+      "ownership_percentage": "",
+      "gla_sqm": "21918",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "source_type": "Official current listed-fund and asset-manager results",
+      "source_date": "2025-12-31",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "HMC manages the HomeCo Daily Needs REIT portfolio and its current results include Lutwyche; current leasing control is not asserted",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-homeco-lutwyche"
+    },
+    {
+      "portfolio_asset_id": "exceed-allenstown-leasing",
+      "group_id": "group-exceed-capital",
+      "canonical_name": "Allenstown Shopping Centre",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Allenstown Square",
+      "preferred_place_id": "place-au-qld-allenstown-square",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.allenstownshoppingcentre.com.au/contact",
+      "source_type": "Official current venue leasing appointment",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue routes permanent leasing to Exceed Capital and explicitly describes its neighbourhood format; ownership and property management are not asserted",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-allenstown-square"
+    },
+    {
+      "portfolio_asset_id": "cqr-whitsunday-plaza-owner",
+      "group_id": "group-charter-hall-retail-reit",
+      "canonical_name": "Whitsunday Plaza",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "",
+      "preferred_place_id": "place-au-qld-whitsunday-plaza",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/News/news-article/2026/08/06/charter-hall-retail-reit-2026-full-year-results",
+      "source_type": "Official current listed-fund results",
+      "source_date": "2026-06-30",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "CQR confirms settlement of its 100 percent Whitsunday Plaza acquisition from Vicinity during FY26",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-whitsunday-plaza"
+    },
+    {
+      "portfolio_asset_id": "charter-hall-whitsunday-plaza-management",
+      "group_id": "group-charter-hall",
+      "canonical_name": "Whitsunday Plaza",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "",
+      "preferred_place_id": "place-au-qld-whitsunday-plaza",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.whitsundayplaza.com.au/lease-here",
+      "source_type": "Official current venue management and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The live venue is Charter Hall operated and routes permanent leasing directly through Charter Hall",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-whitsunday-plaza"
+    },
+    {
+      "portfolio_asset_id": "shayher-wynnum-plaza-owner",
+      "group_id": "group-shayher-lin-brothers-trust",
+      "canonical_name": "Wynnum Plaza",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Wynnum Plaza Shopping Centre",
+      "preferred_place_id": "place-au-qld-wynnum-plaza",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "",
+      "tenancy_count": "69",
+      "annual_visits_m": "",
+      "source_url": "https://www.aer.gov.au/industry/registers/retail-exemptions/shayher-properties-pty-ltd-trustee-lin-brothers-trust-wynnum-plaza-retail-exemption",
+      "source_type": "Current regulator ownership record corroborated by current venue leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The active regulator record identifies Shayher Properties as trustee for Lin Brothers Trust at Wynnum Plaza and the venue publishes three anchors plus 66 specialty stores",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-wynnum-plaza"
+    },
+    {
+      "portfolio_asset_id": "wynnum-retail-management",
+      "group_id": "group-wynnum-retail-management",
+      "canonical_name": "Wynnum Plaza",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Wynnum Plaza Shopping Centre",
+      "preferred_place_id": "place-au-qld-wynnum-plaza",
+      "roles": "MANAGER|OPERATOR",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.campaigncentre.com.au/_client/_images/WYNNUM_P1071/ww/centre_information/Wynnum_Plaza_Casual_Leasing_Brochure.pdf",
+      "source_type": "Current official centre management brochure",
+      "source_date": "2026-05-01",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current public centre brochure identifies Wynnum Retail Management as centre manager while current permanent leasing is handled externally by JLL",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-wynnum-plaza"
+    },
+    {
+      "portfolio_asset_id": "jll-wynnum-plaza-leasing",
+      "group_id": "group-jll",
+      "canonical_name": "Wynnum Plaza",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Wynnum Plaza Shopping Centre",
+      "preferred_place_id": "place-au-qld-wynnum-plaza",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.wynnumplaza.com/leasing-main/leasing",
+      "source_type": "Official current permanent leasing page",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue routes permanent leasing enquiries to JLL",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-wynnum-plaza"
+    },
+    {
       "portfolio_asset_id": "perron-galleria",
       "group_id": "group-perron",
       "canonical_name": "Galleria",
@@ -36867,95 +37493,6 @@
         "median_household_income": 707,
         "age_45_plus_pct": 49,
         "retail_businesses": 38
-      }
-    },
-    "place-au-unknown-riverlink-shopping-centre": {
-      "place_id": "place-au-unknown-riverlink-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-unknown-riverlink-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-unknown-riverlink-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 24.28,
-      "competitor_context": {
-        "by_retailer": {
-          "Independent / Other optical": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "independent-other-optical-osm-au-node-12254014860",
-                "name": "Sunny Line",
-                "distance_km": 0.08
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "specsavers-3362",
-                "name": "Ipswich Riverlink S/C",
-                "distance_km": 0.22
-              }
-            ],
-            "catchment_2km": []
-          },
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "opsm-2978",
-                "name": "OPSM Ipswich",
-                "distance_km": 0.11
-              }
-            ],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 0.08,
-          "Bailey Nelson": 24.28,
-          "OPSM": 0.11,
-          "Oscar Wylee": 16.06,
-          "Specsavers": 0.22
-        },
-        "independent_2km_count": 1
-      },
-      "market": {
-        "sa2_code": "310031286",
-        "sa2_name": "Ipswich - Central",
-        "population_2025": 6923,
-        "population_growth_pct": 1.41,
-        "median_household_income": 904,
-        "age_45_plus_pct": 44.6,
-        "retail_businesses": 62
       }
     },
     "place-au-unknown-riverside-plaza": {
@@ -64248,30 +64785,34 @@
     },
     "place-au-qld-allenstown-square": {
       "place_id": "place-au-qld-allenstown-square",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Neighbourhood",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-qld-allenstown-square",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Neighbourhood",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.allenstownshoppingcentre.com.au/contact",
+        "source_type": "Official current centre and leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The current venue explicitly describes Allenstown as a neighbourhood centre anchored by Woolworths and 24 specialty stores"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-qld-allenstown-square",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.allenstownshoppingcentre.com.au/contact",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue sources confirm address formal neighbourhood class public scale appointed external leasing agency and mapped Specsavers tenancy; ownership and property management remain explicitly unknown"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-exceed-allenstown-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-exceed-capital"
+      ],
       "owner_names": [],
       "manager_names": [],
       "has_bailey": false,
@@ -67188,32 +67729,43 @@
     },
     "place-au-qld-homeco-lutwyche": {
       "place_id": "place-au-qld-homeco-lutwyche",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-qld-homeco-lutwyche",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hdn-fy25-results-presentation/",
+        "source_type": "Official owner development and asset profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional class inferred from the 21918 square metre triple-supermarket-anchored daily-needs centre; the source does not publish a formal SCCA class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-qld-homeco-lutwyche",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current HDN and retailer sources confirm ownership HMC management address inferred class public GLA and mapped Specsavers tenancy; leasing control remains explicitly unknown"
       },
       "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "relationship_ids": [
+        "rel-portfolio-hdn-lutwyche-owner-owner",
+        "rel-portfolio-hmc-lutwyche-management-manager",
+        "rel-portfolio-hmc-lutwyche-management-operator"
+      ],
+      "group_ids": [
+        "group-hmc-capital",
+        "group-homeco-daily-needs-reit"
+      ],
+      "owner_names": [
+        "HomeCo Daily Needs REIT"
+      ],
+      "manager_names": [
+        "HMC Capital"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -67251,7 +67803,10 @@
         "median_household_income": 1453,
         "age_45_plus_pct": 32.7,
         "retail_businesses": 56
-      }
+      },
+      "gla_sqm": 21918.0,
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-qld-logan-hyperdome": {
       "place_id": "place-au-qld-logan-hyperdome",
@@ -67535,95 +68090,6 @@
       "tenancy_count": 280,
       "source_url": "https://www.dexus.com/leasing/retail/properties/indooroopilly-shopping-centre.html",
       "last_verified_at": "2026-09-02"
-    },
-    "place-au-qld-ipswich-riverlink-shopping-centre": {
-      "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 24.34,
-      "competitor_context": {
-        "by_retailer": {
-          "Independent / Other optical": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "independent-other-optical-osm-au-node-12254014860",
-                "name": "Sunny Line",
-                "distance_km": 0.22
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [
-              {
-                "store_id": "specsavers-3362",
-                "name": "Ipswich Riverlink S/C",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "opsm-2978",
-                "name": "OPSM Ipswich",
-                "distance_km": 0.13
-              }
-            ],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 0.22,
-          "Bailey Nelson": 24.34,
-          "OPSM": 0.13,
-          "Oscar Wylee": 15.92,
-          "Specsavers": 0.0
-        },
-        "independent_2km_count": 1
-      },
-      "market": {
-        "sa2_code": "310031286",
-        "sa2_name": "Ipswich - Central",
-        "population_2025": 6923,
-        "population_growth_pct": 1.41,
-        "median_household_income": 904,
-        "age_45_plus_pct": 44.6,
-        "retail_businesses": 62
-      }
     },
     "place-au-unknown-jimboomba-shopping-centre": {
       "place_id": "place-au-unknown-jimboomba-shopping-centre",
@@ -69339,6 +69805,110 @@
       "tenancy_count": 84,
       "annual_visits": 3730000.0,
       "source_url": "https://www.retailfirst.com.au/leasing",
+      "last_verified_at": "2026-09-02"
+    },
+    "place-au-qld-ipswich-riverlink-shopping-centre": {
+      "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
+      "centre_class": "Regional",
+      "centre_class_method": "Confirmed",
+      "centre_class_evidence": {
+        "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
+        "centre_class": "Regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.riverlink.net.au/leasing/",
+        "source_type": "Official current owner manager and leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The current venue explicitly describes Riverlink as a Regional centre and publishes its major mini-major and specialty mix"
+      },
+      "research_status": "Verified",
+      "research_evidence": {
+        "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
+        "research_status": "Verified",
+        "source_url": "https://www.riverlink.net.au/leasing/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue sources confirm Leda ownership management operation direct leasing address Regional class public metrics and mapped Specsavers tenancy"
+      },
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-leda-riverlink-owner",
+        "rel-portfolio-leda-riverlink-manager",
+        "rel-portfolio-leda-riverlink-operator",
+        "rel-portfolio-leda-riverlink-leasing_controller"
+      ],
+      "group_ids": [
+        "group-leda-holdings"
+      ],
+      "owner_names": [
+        "Leda Holdings"
+      ],
+      "manager_names": [
+        "Leda Holdings"
+      ],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 24.34,
+      "competitor_context": {
+        "by_retailer": {
+          "Independent / Other optical": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "independent-other-optical-osm-au-node-12254014860",
+                "name": "Sunny Line",
+                "distance_km": 0.22
+              }
+            ],
+            "catchment_2km": []
+          },
+          "Specsavers": {
+            "in_centre": [
+              {
+                "store_id": "specsavers-3362",
+                "name": "Ipswich Riverlink S/C",
+                "distance_km": 0.0
+              }
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": []
+          },
+          "OPSM": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "opsm-2978",
+                "name": "OPSM Ipswich",
+                "distance_km": 0.13
+              }
+            ],
+            "catchment_2km": []
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 0.22,
+          "Bailey Nelson": 24.34,
+          "OPSM": 0.13,
+          "Oscar Wylee": 15.92,
+          "Specsavers": 0.0
+        },
+        "independent_2km_count": 1
+      },
+      "market": {
+        "sa2_code": "310031286",
+        "sa2_name": "Ipswich - Central",
+        "population_2025": 6923,
+        "population_growth_pct": 1.41,
+        "median_household_income": 904,
+        "age_45_plus_pct": 44.6,
+        "retail_businesses": 62
+      },
+      "gla_sqm": 61682.0,
+      "tenancy_count": 166,
+      "source_url": "https://www.riverlink.net.au/leasing/",
       "last_verified_at": "2026-09-02"
     },
     "place-au-qld-robina-town-centre-dr": {
@@ -72686,35 +73256,47 @@
     },
     "place-au-qld-whitsunday-plaza": {
       "place_id": "place-au-qld-whitsunday-plaza",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-qld-whitsunday-plaza",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.whitsundayplaza.com.au/about-us",
+        "source_type": "Official current centre profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The current venue explicitly describes Whitsunday Plaza as a single-level Sub Regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-qld-whitsunday-plaza",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.charterhall.com.au/News/news-article/2026/08/06/charter-hall-retail-reit-2026-full-year-results",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current CQR results and live venue sources confirm completed full ownership Charter Hall management operation direct leasing address formal class and mapped Specsavers tenancy"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-cqr-whitsunday-plaza-owner-owner",
+        "rel-portfolio-charter-hall-whitsunday-plaza-management-manager",
+        "rel-portfolio-charter-hall-whitsunday-plaza-management-operator",
+        "rel-portfolio-charter-hall-whitsunday-plaza-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-charter-hall",
+        "group-charter-hall-retail-reit"
+      ],
+      "owner_names": [
+        "Charter Hall Retail REIT"
+      ],
+      "manager_names": [
+        "Charter Hall"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 874.21,
@@ -72865,35 +73447,48 @@
     },
     "place-au-qld-wynnum-plaza": {
       "place_id": "place-au-qld-wynnum-plaza",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-qld-wynnum-plaza",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.wynnumplaza.com/leasing-main/leasing",
+        "source_type": "Official current centre leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The current venue explicitly describes Wynnum Plaza as a sub-regional centre anchored by Woolworths Coles Kmart and 66 specialty stores"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-qld-wynnum-plaza",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.wynnumplaza.com/leasing-main/leasing",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue regulator and centre sources confirm ownership management external leasing address formal class public tenancy count and mapped Specsavers tenancy"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-shayher-wynnum-plaza-owner-owner",
+        "rel-portfolio-wynnum-retail-management-manager",
+        "rel-portfolio-wynnum-retail-management-operator",
+        "rel-portfolio-jll-wynnum-plaza-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-jll",
+        "group-shayher-lin-brothers-trust",
+        "group-wynnum-retail-management"
+      ],
+      "owner_names": [
+        "Shayher Properties Pty Ltd ATF Lin Brothers Trust"
+      ],
+      "manager_names": [
+        "Wynnum Retail Management Pty Ltd"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 7.39,
@@ -72928,39 +73523,53 @@
         "median_household_income": 1097,
         "age_45_plus_pct": 40.8,
         "retail_businesses": 83
-      }
+      },
+      "tenancy_count": 69,
+      "source_url": "https://www.aer.gov.au/industry/registers/retail-exemptions/shayher-properties-pty-ltd-trustee-lin-brothers-trust-wynnum-plaza-retail-exemption",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-qld-yamanto-central": {
       "place_id": "place-au-qld-yamanto-central",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-qld-yamanto-central",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://yamantocentral.com.au/leasing/",
+        "source_type": "Official current venue leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The current venue explicitly describes Yamanto Central as a sub-regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-qld-yamanto-central",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://yamantocentral.com.au/legal/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current JMK venue legal leasing and directory sources plus the owner development profile confirm ownership management operation direct leasing address formal class public scale and mapped Specsavers tenancy"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-jmk-yamanto-central-owner",
+        "rel-portfolio-jmk-yamanto-central-manager",
+        "rel-portfolio-jmk-yamanto-central-operator",
+        "rel-portfolio-jmk-yamanto-central-leasing_controller"
+      ],
+      "group_ids": [
+        "group-jmk-retail"
+      ],
+      "owner_names": [
+        "JMK Retail"
+      ],
+      "manager_names": [
+        "JMK Retail"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 28.95,
@@ -72995,7 +73604,10 @@
         "median_household_income": 988,
         "age_45_plus_pct": 35.8,
         "retail_businesses": 30
-      }
+      },
+      "gla_sqm": 20000.0,
+      "source_url": "https://yamantocentral.com.au/legal/",
+      "last_verified_at": "2026-09-02"
     },
     "corridor-au-sa-jamestown-ayr-street": {
       "place_id": "corridor-au-sa-jamestown-ayr-street",
@@ -122434,7 +123046,7 @@
     },
     "group-charter-hall": {
       "group_id": "group-charter-hall",
-      "property_count": 17,
+      "property_count": 18,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -122510,6 +123122,11 @@
           "OPERATOR"
         ],
         "place-au-nsw-singleton-square": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-qld-whitsunday-plaza": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
@@ -122994,7 +123611,7 @@
     },
     "group-jll": {
       "group_id": "group-jll",
-      "property_count": 22,
+      "property_count": 23,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -123043,6 +123660,9 @@
           "MANAGER"
         ],
         "place-au-qld-cairns-smithfield-centre": [
+          "EXTERNAL_LEASING_AGENT"
+        ],
+        "place-au-qld-wynnum-plaza": [
           "EXTERNAL_LEASING_AGENT"
         ],
         "place-au-sa-the-grove-shopping-centre": [
@@ -123639,7 +124259,7 @@
     },
     "group-charter-hall-retail-reit": {
       "group_id": "group-charter-hall-retail-reit",
-      "property_count": 6,
+      "property_count": 7,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -123660,6 +124280,9 @@
           "CO_OWNER"
         ],
         "place-au-nsw-singleton-square": [
+          "OWNER"
+        ],
+        "place-au-qld-whitsunday-plaza": [
           "OWNER"
         ]
       },
@@ -123814,12 +124437,18 @@
     },
     "group-leda-holdings": {
       "group_id": "group-leda-holdings",
-      "property_count": 3,
+      "property_count": 4,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
         "place-au-act-south-point-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ],
+        "place-au-qld-ipswich-riverlink-shopping-centre": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR",
@@ -124010,7 +124639,7 @@
     },
     "group-hmc-capital": {
       "group_id": "group-hmc-capital",
-      "property_count": 5,
+      "property_count": 6,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -124032,6 +124661,10 @@
           "OPERATOR"
         ],
         "place-au-nsw-warilla-grove-shopping-centre": [
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-qld-homeco-lutwyche": [
           "MANAGER",
           "OPERATOR"
         ]
@@ -124594,7 +125227,7 @@
     },
     "group-homeco-daily-needs-reit": {
       "group_id": "group-homeco-daily-needs-reit",
-      "property_count": 2,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -124603,6 +125236,9 @@
           "OWNER"
         ],
         "place-au-nsw-warilla-grove-shopping-centre": [
+          "OWNER"
+        ],
+        "place-au-qld-homeco-lutwyche": [
           "OWNER"
         ]
       },
@@ -124734,6 +125370,62 @@
       "asset_roles": {
         "place-au-nsw-griffith-central-shopping-centre": [
           "EXTERNAL_LEASING_AGENT",
+          "MANAGER",
+          "OPERATOR"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-jmk-retail": {
+      "group_id": "group-jmk-retail",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-yamanto-central": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-exceed-capital": {
+      "group_id": "group-exceed-capital",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-allenstown-square": [
+          "EXTERNAL_LEASING_AGENT"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-shayher-lin-brothers-trust": {
+      "group_id": "group-shayher-lin-brothers-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-wynnum-plaza": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-wynnum-retail-management": {
+      "group_id": "group-wynnum-retail-management",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-wynnum-plaza": [
           "MANAGER",
           "OPERATOR"
         ]
@@ -130538,55 +131230,6 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 210.09,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
-    "place-au-unknown-riverlink-shopping-centre": {
-      "schema_version": 1,
-      "place_id": "place-au-unknown-riverlink-shopping-centre",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "310031286",
-          "sa2_name": "Ipswich - Central",
-          "population_2025": 6923,
-          "population_growth_pct": 1.41,
-          "median_household_income": 904,
-          "age_45_plus_pct": 44.6,
-          "retail_businesses": 62
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-unknown-riverlink-shopping-centre.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 24.28,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -144850,7 +145493,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Neighbourhood"
         }
       },
       "accessibility": {
@@ -144864,10 +145507,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 485.98,
-          "group_ids": [],
+          "group_ids": [
+            "group-exceed-capital"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -146422,7 +147067,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -146436,10 +147081,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 3.98,
-          "group_ids": [],
+          "group_ids": [
+            "group-hmc-capital",
+            "group-homeco-daily-needs-reit"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -146539,55 +147187,6 @@
             "group-dexus-wholesale-shopping-centre-fund"
           ],
           "overlap_status": "SAME_CENTRE"
-        }
-      }
-    },
-    "place-au-qld-ipswich-riverlink-shopping-centre": {
-      "schema_version": 1,
-      "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "310031286",
-          "sa2_name": "Ipswich - Central",
-          "population_2025": 6923,
-          "population_growth_pct": 1.41,
-          "median_household_income": 904,
-          "age_45_plus_pct": 44.6,
-          "retail_businesses": 62
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-qld-ipswich-riverlink-shopping-centre.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 24.34,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
         }
       }
     },
@@ -147497,6 +148096,57 @@
             "group-retail-first"
           ],
           "overlap_status": "UNKNOWN"
+        }
+      }
+    },
+    "place-au-qld-ipswich-riverlink-shopping-centre": {
+      "schema_version": 1,
+      "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "310031286",
+          "sa2_name": "Ipswich - Central",
+          "population_2025": 6923,
+          "population_growth_pct": 1.41,
+          "median_household_income": 904,
+          "age_45_plus_pct": 44.6,
+          "retail_businesses": 62
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-au-qld-ipswich-riverlink-shopping-centre.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "Shopping Centre",
+          "centre_class": "Regional"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Available",
+        "values": {
+          "nearest_bailey_km": 24.34,
+          "group_ids": [
+            "group-leda-holdings"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -149073,7 +149723,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -149087,11 +149737,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 874.21,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-charter-hall",
+            "group-charter-hall-retail-reit"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -149173,7 +149826,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -149187,11 +149840,15 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 7.39,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-jll",
+            "group-shayher-lin-brothers-trust",
+            "group-wynnum-retail-management"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -149222,7 +149879,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -149236,11 +149893,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 28.95,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-jmk-retail"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },

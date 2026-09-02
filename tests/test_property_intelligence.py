@@ -1605,6 +1605,76 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(places["place-au-nsw-st-marys-village-shopping-centre"]["name"], "St Marys Village")
         self.assertEqual(places["place-au-nsw-warilla-grove-shopping-centre"]["name"], "Warilla Grove")
 
+    def test_next_qld_named_network_batch_uses_current_leasing_structures(self) -> None:
+        expected = {
+            "place-au-qld-ipswich-riverlink-shopping-centre": (
+                "Verified", "Regional", "Confirmed", ["Leda Holdings"],
+                ["Leda Holdings"], "In-house", 61682, 166,
+            ),
+            "place-au-qld-yamanto-central": (
+                "Verified", "Sub-regional", "Confirmed", ["JMK Retail"],
+                ["JMK Retail"], "In-house", 20000, None,
+            ),
+            "place-au-qld-homeco-lutwyche": (
+                "Partial", "Sub-regional", "Inferred", ["HomeCo Daily Needs REIT"],
+                ["HMC Capital"], "Unknown", 21918, None,
+            ),
+            "place-au-qld-allenstown-square": (
+                "Partial", "Neighbourhood", "Confirmed", [], [],
+                "External agency", None, None,
+            ),
+            "place-au-qld-whitsunday-plaza": (
+                "Verified", "Sub-regional", "Confirmed", ["Charter Hall Retail REIT"],
+                ["Charter Hall"], "In-house", None, None,
+            ),
+            "place-au-qld-wynnum-plaza": (
+                "Verified", "Sub-regional", "Confirmed",
+                ["Shayher Properties Pty Ltd ATF Lin Brothers Trust"],
+                ["Wynnum Retail Management Pty Ltd"], "External agency", None, 69,
+            ),
+        }
+        for place_id, values in expected.items():
+            with self.subTest(place_id=place_id):
+                summary = self.payload["property_summaries"][place_id]
+                self.assertEqual(summary["research_status"], values[0])
+                self.assertEqual(summary["centre_class"], values[1])
+                self.assertEqual(summary["centre_class_method"], values[2])
+                self.assertEqual(summary["owner_names"], values[3])
+                self.assertEqual(summary["manager_names"], values[4])
+                self.assertEqual(summary["leasing_arrangement"], values[5])
+                self.assertEqual(summary.get("gla_sqm"), values[6])
+                self.assertEqual(summary.get("tenancy_count"), values[7])
+
+        whitsunday_roles = {
+            (row["group_id"], row["role"])
+            for row in self.relationships
+            if row["place_id"] == "place-au-qld-whitsunday-plaza"
+        }
+        self.assertEqual(
+            whitsunday_roles,
+            {
+                ("group-charter-hall-retail-reit", "OWNER"),
+                ("group-charter-hall", "MANAGER"),
+                ("group-charter-hall", "OPERATOR"),
+                ("group-charter-hall", "LEASING_CONTROLLER"),
+            },
+        )
+        self.assertFalse(any(group_id == "group-vicinity" for group_id, _ in whitsunday_roles))
+
+        places = {place["place_id"]: place for place in self.places}
+        self.assertEqual(
+            places["place-au-qld-ipswich-riverlink-shopping-centre"]["name"],
+            "Riverlink Shopping Centre",
+        )
+        self.assertEqual(
+            [place["place_id"] for place in self.places if place["name"] == "Riverlink Shopping Centre"],
+            ["place-au-qld-ipswich-riverlink-shopping-centre"],
+        )
+        self.assertEqual(
+            places["place-au-qld-allenstown-square"]["name"],
+            "Allenstown Shopping Centre",
+        )
+
     def test_newly_open_stockland_centres_are_canonical_and_reconciled(self) -> None:
         expected = {
             "place-au-nsw-stockland-gables": ("Neighbourhood", 9342, {"CO_OWNER"}),
