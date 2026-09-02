@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T02:44:09.531173+00:00",
+  "generated_at": "2026-09-02T02:47:32.825321+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 92,
-    "relationship_count": 688,
-    "active_relationship_count": 686,
+    "group_count": 98,
+    "relationship_count": 705,
+    "active_relationship_count": 703,
     "shopping_centre_count": 587,
-    "researched_property_count": 218,
-    "classed_property_count": 208,
+    "researched_property_count": 222,
+    "classed_property_count": 212,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -1570,6 +1570,109 @@
         "RP1",
         "Retail Partnership No1"
       ]
+    },
+    {
+      "group_id": "group-sentinel-property",
+      "canonical_name": "Sentinel Property Group",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "PROPERTY_COMPANY",
+      "country_scope": "Australia",
+      "official_url": "https://www.sentinelpg.com.au/",
+      "status": "Active",
+      "source_url": "https://www.canelandcentral.com.au/leasing/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Sentinel Property Group",
+        "SPG"
+      ]
+    },
+    {
+      "group_id": "group-sentinel-caneland-trust",
+      "canonical_name": "Sentinel Caneland Mackay Investment Trust",
+      "parent_group_id": "group-sentinel-property",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.sentinelpg.com.au/",
+      "status": "Active",
+      "source_url": "https://www.canelandcentral.com.au/app/uploads/2026/03/Easter_2026_Terms-and-Conditions_Easter-Hamper.pdf",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Sentinel Caneland Mackay Investment Trust",
+        "Sentinel Caneland Mackay Investment Pty Ltd ATF Sentinel Caneland Mackay Investment Trust"
+      ]
+    },
+    {
+      "group_id": "group-challenger-golden-grove-trust",
+      "canonical_name": "Challenger Golden Grove Trust",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.thegrovesa.com.au/",
+      "status": "Active",
+      "source_url": "https://abr.business.gov.au/ABN/View/43420472767",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Challenger Golden Grove Trust",
+        "The Trustee for Challenger Golden Grove Trust",
+        "Golden Grove Village Shopping Centre"
+      ]
+    },
+    {
+      "group_id": "group-coastlands-shoppingtown",
+      "canonical_name": "Coastlands Shoppingtown Ltd",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "PRIVATE_LANDLORD",
+      "country_scope": "New Zealand",
+      "official_url": "https://coastlands.co.nz/",
+      "status": "Active",
+      "source_url": "https://coastlands.co.nz/centre-info/leasing/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Coastlands Shoppingtown Ltd",
+        "Coastlands Shoppingtown Limited"
+      ]
+    },
+    {
+      "group_id": "group-smithfield-centre-trust",
+      "canonical_name": "Smithfield Centre Trust",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.smithfieldcentre.com.au/",
+      "status": "Active",
+      "source_url": "https://abr.business.gov.au/ABN/View?id=80291911052",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Smithfield Centre Trust",
+        "The Trustee for Smithfield Centre Trust"
+      ]
+    },
+    {
+      "group_id": "group-cpram",
+      "canonical_name": "CPRAM",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "ASSET_MANAGER",
+      "country_scope": "Australia",
+      "official_url": "https://cpram.com.au/",
+      "status": "Active",
+      "source_url": "https://www.smithfieldcentre.com.au/centre-information/leasing/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "CPRAM",
+        "Capital Property Retail Asset Management"
+      ]
     }
   ],
   "group_alias_index": {
@@ -1745,7 +1848,20 @@
     "charterhallconvenienceretailfund": "group-charter-hall-ccrf",
     "ccrf": "group-charter-hall-ccrf",
     "retailpartnershipno1": "group-charter-hall-rp1",
-    "rp1": "group-charter-hall-rp1"
+    "rp1": "group-charter-hall-rp1",
+    "sentinelpropertygroup": "group-sentinel-property",
+    "spg": "group-sentinel-property",
+    "sentinelcanelandmackayinvestmenttrust": "group-sentinel-caneland-trust",
+    "sentinelcanelandmackayinvestmentptyltdatfsentinelcanelandmackayinvestmenttrust": "group-sentinel-caneland-trust",
+    "challengergoldengrovetrust": "group-challenger-golden-grove-trust",
+    "thetrusteeforchallengergoldengrovetrust": "group-challenger-golden-grove-trust",
+    "goldengrovevillageshoppingcentre": "group-challenger-golden-grove-trust",
+    "coastlandsshoppingtownltd": "group-coastlands-shoppingtown",
+    "coastlandsshoppingtownlimited": "group-coastlands-shoppingtown",
+    "smithfieldcentretrust": "group-smithfield-centre-trust",
+    "thetrusteeforsmithfieldcentretrust": "group-smithfield-centre-trust",
+    "cpram": "group-cpram",
+    "capitalpropertyretailassetmanagement": "group-cpram"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -12756,6 +12872,278 @@
       "confidence": "High",
       "public_note": "JLL handles casual mall leasing for Corio Village",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-sentinel-caneland-trust-owner-owner",
+      "place_id": "place-au-qld-caneland-centre",
+      "group_id": "group-sentinel-caneland-trust",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.canelandcentral.com.au/app/uploads/2026/03/Easter_2026_Terms-and-Conditions_Easter-Hamper.pdf",
+      "source_type": "Official current venue legal terms and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current venue legal terms identify the Sentinel Caneland Mackay Investment Trust as the centre entity; official leasing data reports five majors and 163 specialty stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-sentinel-caneland-manager-manager",
+      "place_id": "place-au-qld-caneland-centre",
+      "group_id": "group-sentinel-property",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.canelandcentral.com.au/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Sentinel operates the centre and handles long-term pop-up and casual leasing through its current retail portfolio",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-sentinel-caneland-manager-operator",
+      "place_id": "place-au-qld-caneland-centre",
+      "group_id": "group-sentinel-property",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.canelandcentral.com.au/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Sentinel operates the centre and handles long-term pop-up and casual leasing through its current retail portfolio",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-sentinel-caneland-manager-leasing_controller",
+      "place_id": "place-au-qld-caneland-centre",
+      "group_id": "group-sentinel-property",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.canelandcentral.com.au/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Sentinel operates the centre and handles long-term pop-up and casual leasing through its current retail portfolio",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-smithfield-centre-trust-owner-owner",
+      "place_id": "place-au-qld-cairns-smithfield-centre",
+      "group_id": "group-smithfield-centre-trust",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://abr.business.gov.au/ABN/View?id=80291911052",
+      "source_type": "Current Australian Business Register",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current ABN record identifies Smithfield Centre Trust as the entity trading as Smithfield Shopping Centre",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-cpram-smithfield-leasing-leasing_controller",
+      "place_id": "place-au-qld-cairns-smithfield-centre",
+      "group_id": "group-cpram",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.smithfieldcentre.com.au/centre-information/leasing/",
+      "source_type": "Official current venue leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue directs permanent leasing to CPRAM; the public source does not establish CPRAM as centre manager",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-cpram-smithfield-leasing-external_leasing_agent",
+      "place_id": "place-au-qld-cairns-smithfield-centre",
+      "group_id": "group-cpram",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.smithfieldcentre.com.au/centre-information/leasing/",
+      "source_type": "Official current venue leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue directs permanent leasing to CPRAM; the public source does not establish CPRAM as centre manager",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-smithfield-casual-leasing-external_leasing_agent",
+      "place_id": "place-au-qld-cairns-smithfield-centre",
+      "group_id": "group-jll",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.smithfieldcentre.com.au/centre-information/leasing/",
+      "source_type": "Official current venue leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue directs pop-up and casual mall leasing to JLL; this does not establish centre management",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-challenger-golden-grove-owner-owner",
+      "place_id": "place-au-sa-the-grove-shopping-centre",
+      "group_id": "group-challenger-golden-grove-trust",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://abr.business.gov.au/ABN/View/43420472767",
+      "source_type": "Current Australian Business Register and venue directory",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current ABN record links the trust to The Grove business names and the venue reports three majors plus more than 110 specialty stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-the-grove-manager",
+      "place_id": "place-au-sa-the-grove-shopping-centre",
+      "group_id": "group-jll",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.thegrovesa.com.au/visit/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue routes centre management permanent leasing and casual leasing through the same JLL centre channel",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-the-grove-operator",
+      "place_id": "place-au-sa-the-grove-shopping-centre",
+      "group_id": "group-jll",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.thegrovesa.com.au/visit/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue routes centre management permanent leasing and casual leasing through the same JLL centre channel",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-the-grove-leasing_controller",
+      "place_id": "place-au-sa-the-grove-shopping-centre",
+      "group_id": "group-jll",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.thegrovesa.com.au/visit/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue routes centre management permanent leasing and casual leasing through the same JLL centre channel",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-the-grove-external_leasing_agent",
+      "place_id": "place-au-sa-the-grove-shopping-centre",
+      "group_id": "group-jll",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.thegrovesa.com.au/visit/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue routes centre management permanent leasing and casual leasing through the same JLL centre channel",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-coastlands-owner-operator-owner",
+      "place_id": "place-nz-wellington-coastlands-shoppingtown",
+      "group_id": "group-coastlands-shoppingtown",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://coastlands.co.nz/centre-info/leasing/",
+      "source_type": "Official current venue ownership management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies Coastlands Shoppingtown Ltd and provides a direct management and leasing pathway; company records show it remains a locally owned operating company",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-coastlands-owner-operator-manager",
+      "place_id": "place-nz-wellington-coastlands-shoppingtown",
+      "group_id": "group-coastlands-shoppingtown",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://coastlands.co.nz/centre-info/leasing/",
+      "source_type": "Official current venue ownership management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies Coastlands Shoppingtown Ltd and provides a direct management and leasing pathway; company records show it remains a locally owned operating company",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-coastlands-owner-operator-operator",
+      "place_id": "place-nz-wellington-coastlands-shoppingtown",
+      "group_id": "group-coastlands-shoppingtown",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://coastlands.co.nz/centre-info/leasing/",
+      "source_type": "Official current venue ownership management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies Coastlands Shoppingtown Ltd and provides a direct management and leasing pathway; company records show it remains a locally owned operating company",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-coastlands-owner-operator-leasing_controller",
+      "place_id": "place-nz-wellington-coastlands-shoppingtown",
+      "group_id": "group-coastlands-shoppingtown",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://coastlands.co.nz/centre-info/leasing/",
+      "source_type": "Official current venue ownership management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies Coastlands Shoppingtown Ltd and provides a direct management and leasing pathway; company records show it remains a locally owned operating company",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -19382,6 +19770,190 @@
       "public_note": "JLL handles casual mall leasing for Corio Village",
       "match_status": "Matched",
       "matched_place_id": "place-au-vic-corio-village"
+    },
+    {
+      "portfolio_asset_id": "sentinel-caneland-trust-owner",
+      "group_id": "group-sentinel-caneland-trust",
+      "canonical_name": "Caneland Central",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Caneland Centre|Caneland",
+      "preferred_place_id": "place-au-qld-caneland-centre",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "65864",
+      "tenancy_count": "168",
+      "annual_visits_m": "5.76",
+      "source_url": "https://www.canelandcentral.com.au/app/uploads/2026/03/Easter_2026_Terms-and-Conditions_Easter-Hamper.pdf",
+      "source_type": "Official current venue legal terms and leasing profile",
+      "source_date": "2026-03-01",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Current venue legal terms identify the Sentinel Caneland Mackay Investment Trust as the centre entity; official leasing data reports five majors and 163 specialty stores",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-caneland-centre"
+    },
+    {
+      "portfolio_asset_id": "sentinel-caneland-manager",
+      "group_id": "group-sentinel-property",
+      "canonical_name": "Caneland Central",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Caneland Centre|Caneland",
+      "preferred_place_id": "place-au-qld-caneland-centre",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "65864",
+      "tenancy_count": "168",
+      "annual_visits_m": "5.76",
+      "source_url": "https://www.canelandcentral.com.au/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Sentinel operates the centre and handles long-term pop-up and casual leasing through its current retail portfolio",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-caneland-centre"
+    },
+    {
+      "portfolio_asset_id": "smithfield-centre-trust-owner",
+      "group_id": "group-smithfield-centre-trust",
+      "canonical_name": "Smithfield Shopping Centre",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Smithfield Centre|Cairns Smithfield Centre",
+      "preferred_place_id": "place-au-qld-cairns-smithfield-centre",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://abr.business.gov.au/ABN/View?id=80291911052",
+      "source_type": "Current Australian Business Register",
+      "source_date": "2026-07-18",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current ABN record identifies Smithfield Centre Trust as the entity trading as Smithfield Shopping Centre",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-cairns-smithfield-centre"
+    },
+    {
+      "portfolio_asset_id": "cpram-smithfield-leasing",
+      "group_id": "group-cpram",
+      "canonical_name": "Smithfield Shopping Centre",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Smithfield Centre|Cairns Smithfield Centre",
+      "preferred_place_id": "place-au-qld-cairns-smithfield-centre",
+      "roles": "LEASING_CONTROLLER|EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.smithfieldcentre.com.au/centre-information/leasing/",
+      "source_type": "Official current venue leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue directs permanent leasing to CPRAM; the public source does not establish CPRAM as centre manager",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-cairns-smithfield-centre"
+    },
+    {
+      "portfolio_asset_id": "jll-smithfield-casual-leasing",
+      "group_id": "group-jll",
+      "canonical_name": "Smithfield Shopping Centre",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Smithfield Centre|Cairns Smithfield Centre",
+      "preferred_place_id": "place-au-qld-cairns-smithfield-centre",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.smithfieldcentre.com.au/centre-information/leasing/",
+      "source_type": "Official current venue leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue directs pop-up and casual mall leasing to JLL; this does not establish centre management",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-cairns-smithfield-centre"
+    },
+    {
+      "portfolio_asset_id": "challenger-golden-grove-owner",
+      "group_id": "group-challenger-golden-grove-trust",
+      "canonical_name": "The Grove Shopping Centre",
+      "country": "Australia",
+      "state": "SA",
+      "aliases": "Golden Grove Village|The Grove",
+      "preferred_place_id": "place-au-sa-the-grove-shopping-centre",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "",
+      "tenancy_count": "113",
+      "annual_visits_m": "",
+      "source_url": "https://abr.business.gov.au/ABN/View/43420472767",
+      "source_type": "Current Australian Business Register and venue directory",
+      "source_date": "2026-08-31",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current ABN record links the trust to The Grove business names and the venue reports three majors plus more than 110 specialty stores",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-sa-the-grove-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "jll-the-grove",
+      "group_id": "group-jll",
+      "canonical_name": "The Grove Shopping Centre",
+      "country": "Australia",
+      "state": "SA",
+      "aliases": "Golden Grove Village|The Grove",
+      "preferred_place_id": "place-au-sa-the-grove-shopping-centre",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER|EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "113",
+      "annual_visits_m": "",
+      "source_url": "https://www.thegrovesa.com.au/visit/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue routes centre management permanent leasing and casual leasing through the same JLL centre channel",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-sa-the-grove-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "coastlands-owner-operator",
+      "group_id": "group-coastlands-shoppingtown",
+      "canonical_name": "Coastlands Shoppingtown",
+      "country": "New Zealand",
+      "state": "Wellington",
+      "aliases": "Coastlands Shopping Centre|Coastlands",
+      "preferred_place_id": "place-nz-wellington-coastlands-shoppingtown",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "100",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://coastlands.co.nz/centre-info/leasing/",
+      "source_type": "Official current venue ownership management and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue identifies Coastlands Shoppingtown Ltd and provides a direct management and leasing pathway; company records show it remains a locally owned operating company",
+      "match_status": "Matched",
+      "matched_place_id": "place-nz-wellington-coastlands-shoppingtown"
     }
   ],
   "property_summaries": {
@@ -55973,31 +56545,42 @@
     },
     "place-au-qld-cairns-smithfield-centre": {
       "place_id": "place-au-qld-cairns-smithfield-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-qld-cairns-smithfield-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://stonebridge.com.au/stonebridge-sells-qld-sub-regional-centre-for-138-million/",
+        "source_type": "Authoritative transaction and current venue profiles",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The transaction adviser explicitly classifies Smithfield Shopping Centre as sub-regional and the current venue confirms the same major-anchor format"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-qld-cairns-smithfield-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.smithfieldcentre.com.au/centre-information/leasing/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current ABN and venue evidence identify the owner trust CPRAM permanent leasing and JLL casual leasing; the current centre manager remains unidentified"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-smithfield-centre-trust-owner-owner",
+        "rel-portfolio-cpram-smithfield-leasing-leasing_controller",
+        "rel-portfolio-cpram-smithfield-leasing-external_leasing_agent",
+        "rel-portfolio-jll-smithfield-casual-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-cpram",
+        "group-jll",
+        "group-smithfield-centre-trust"
+      ],
+      "owner_names": [
+        "Smithfield Centre Trust"
+      ],
       "manager_names": [],
       "has_bailey": false,
       "bailey_store_count": 0,
@@ -56141,35 +56724,47 @@
     },
     "place-au-qld-caneland-centre": {
       "place_id": "place-au-qld-caneland-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-qld-caneland-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.lendlease.com/siteassets/lendlease/shared/media-centre/media-releases/2022/221207_mr_lendlease-sells-caneland-central-.pdf",
+        "source_type": "Official sale and current venue profiles",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The official sale profile classifies Caneland Central as regional and the current venue confirms the same anchor and regional-destination scale"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-qld-caneland-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.canelandcentral.com.au/leasing/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current legal terms and venue evidence confirm Sentinel trust ownership group management direct leasing a regional classification and public centre metrics"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-sentinel-caneland-trust-owner-owner",
+        "rel-portfolio-sentinel-caneland-manager-manager",
+        "rel-portfolio-sentinel-caneland-manager-operator",
+        "rel-portfolio-sentinel-caneland-manager-leasing_controller"
+      ],
+      "group_ids": [
+        "group-sentinel-caneland-trust",
+        "group-sentinel-property"
+      ],
+      "owner_names": [
+        "Sentinel Caneland Mackay Investment Trust"
+      ],
+      "manager_names": [
+        "Sentinel Property Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 767.34,
@@ -56226,7 +56821,12 @@
         "median_household_income": 976,
         "age_45_plus_pct": 40.4,
         "retail_businesses": 92
-      }
+      },
+      "gla_sqm": 65864.0,
+      "tenancy_count": 168,
+      "annual_visits": 5760000.0,
+      "source_url": "https://www.canelandcentral.com.au/app/uploads/2026/03/Easter_2026_Terms-and-Conditions_Easter-Hamper.pdf",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-qld-cannon-hill-kmart-plaza": {
       "place_id": "place-au-qld-cannon-hill-kmart-plaza",
@@ -67420,35 +68020,48 @@
     },
     "place-au-sa-the-grove-shopping-centre": {
       "place_id": "place-au-sa-the-grove-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-sa-the-grove-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.thegrovesa.com.au/stores/",
+        "source_type": "Official current venue directory",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from three major anchors and more than 110 specialty stores; the venue does not publish a formal class"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-sa-the-grove-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.thegrovesa.com.au/visit/leasing/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current ABN and venue evidence identify the owner trust JLL management and leasing plus a defensible inferred sub-regional class"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-challenger-golden-grove-owner-owner",
+        "rel-portfolio-jll-the-grove-manager",
+        "rel-portfolio-jll-the-grove-operator",
+        "rel-portfolio-jll-the-grove-leasing_controller",
+        "rel-portfolio-jll-the-grove-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-challenger-golden-grove-trust",
+        "group-jll"
+      ],
+      "owner_names": [
+        "Challenger Golden Grove Trust"
+      ],
+      "manager_names": [
+        "JLL"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 15.58,
@@ -67494,7 +68107,10 @@
         "median_household_income": 1055,
         "age_45_plus_pct": 49.2,
         "retail_businesses": 22
-      }
+      },
+      "tenancy_count": 113,
+      "source_url": "https://abr.business.gov.au/ABN/View/43420472767",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-sa-the-hub-shopping-centre": {
       "place_id": "place-au-sa-the-hub-shopping-centre",
@@ -111555,35 +112171,46 @@
     },
     "place-nz-wellington-coastlands-shoppingtown": {
       "place_id": "place-nz-wellington-coastlands-shoppingtown",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-nz-wellington-coastlands-shoppingtown",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Inferred",
+        "source_url": "https://coastlands.co.nz/",
+        "source_type": "Official current venue profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Regional format inferred from more than 120 stores plus multiple department store supermarket entertainment and large-format anchors; the venue does not publish a formal class"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-nz-wellington-coastlands-shoppingtown",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://coastlands.co.nz/centre-info/leasing/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The current venue identifies Coastlands Shoppingtown Ltd as the locally owned operator with direct management and leasing plus a defensible inferred Regional class"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "Private landlord",
+      "relationship_ids": [
+        "rel-portfolio-coastlands-owner-operator-owner",
+        "rel-portfolio-coastlands-owner-operator-manager",
+        "rel-portfolio-coastlands-owner-operator-operator",
+        "rel-portfolio-coastlands-owner-operator-leasing_controller"
+      ],
+      "group_ids": [
+        "group-coastlands-shoppingtown"
+      ],
+      "owner_names": [
+        "Coastlands Shoppingtown Ltd"
+      ],
+      "manager_names": [
+        "Coastlands Shoppingtown Ltd"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 33.59,
@@ -113362,7 +113989,7 @@
     },
     "group-jll": {
       "group_id": "group-jll",
-      "property_count": 7,
+      "property_count": 9,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -113375,6 +114002,15 @@
         ],
         "place-au-nsw-roselands-shopping-centre": [
           "EXTERNAL_LEASING_AGENT"
+        ],
+        "place-au-qld-cairns-smithfield-centre": [
+          "EXTERNAL_LEASING_AGENT"
+        ],
+        "place-au-sa-the-grove-shopping-centre": [
+          "EXTERNAL_LEASING_AGENT",
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
         ],
         "place-au-vic-corio-village": [
           "EXTERNAL_LEASING_AGENT"
@@ -114309,6 +114945,90 @@
       "asset_roles": {
         "place-au-vic-corio-village": [
           "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-sentinel-property": {
+      "group_id": "group-sentinel-property",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-caneland-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-sentinel-caneland-trust": {
+      "group_id": "group-sentinel-caneland-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-caneland-centre": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-challenger-golden-grove-trust": {
+      "group_id": "group-challenger-golden-grove-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-sa-the-grove-shopping-centre": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-coastlands-shoppingtown": {
+      "group_id": "group-coastlands-shoppingtown",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-nz-wellington-coastlands-shoppingtown": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-smithfield-centre-trust": {
+      "group_id": "group-smithfield-centre-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-cairns-smithfield-centre": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-cpram": {
+      "group_id": "group-cpram",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-cairns-smithfield-centre": [
+          "EXTERNAL_LEASING_AGENT",
+          "LEASING_CONTROLLER"
         ]
       },
       "white_space_property_ids": []
@@ -134942,7 +135662,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -134956,10 +135676,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 1354.72,
-          "group_ids": [],
+          "group_ids": [
+            "group-cpram",
+            "group-jll",
+            "group-smithfield-centre-trust"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -135042,7 +135766,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -135056,11 +135780,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 767.34,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-sentinel-caneland-trust",
+            "group-sentinel-property"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -141024,7 +141751,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -141038,11 +141765,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 15.58,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-challenger-golden-grove-trust",
+            "group-jll"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -163030,7 +163760,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -163044,11 +163774,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 33.59,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-coastlands-shoppingtown"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },

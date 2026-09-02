@@ -586,6 +586,34 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(corio["gla_sqm"], 33600)
         self.assertEqual(corio["tenancy_count"], 77)
 
+    def test_current_caneland_smithfield_grove_and_coastlands_roles_are_explicit(self) -> None:
+        caneland = self.payload["property_summaries"]["place-au-qld-caneland-centre"]
+        self.assertEqual(caneland["centre_class"], "Regional")
+        self.assertEqual(caneland["owner_names"], ["Sentinel Caneland Mackay Investment Trust"])
+        self.assertEqual(caneland["manager_names"], ["Sentinel Property Group"])
+        self.assertEqual(caneland["leasing_arrangement"], "In-house")
+        self.assertEqual(caneland["gla_sqm"], 65864)
+        self.assertEqual(caneland["tenancy_count"], 168)
+
+        smithfield = self.payload["property_summaries"]["place-au-qld-cairns-smithfield-centre"]
+        self.assertEqual(smithfield["centre_class"], "Sub-regional")
+        self.assertEqual(smithfield["owner_names"], ["Smithfield Centre Trust"])
+        self.assertEqual(smithfield["manager_names"], [])
+        self.assertEqual(smithfield["leasing_arrangement"], "External agency")
+
+        grove = self.payload["property_summaries"]["place-au-sa-the-grove-shopping-centre"]
+        self.assertEqual(grove["centre_class"], "Sub-regional")
+        self.assertEqual(grove["owner_names"], ["Challenger Golden Grove Trust"])
+        self.assertEqual(grove["manager_names"], ["JLL"])
+        self.assertEqual(grove["leasing_arrangement"], "External agency")
+        self.assertEqual(grove["tenancy_count"], 113)
+
+        coastlands = self.payload["property_summaries"]["place-nz-wellington-coastlands-shoppingtown"]
+        self.assertEqual(coastlands["centre_class"], "Regional")
+        self.assertEqual(coastlands["owner_names"], ["Coastlands Shoppingtown Ltd"])
+        self.assertEqual(coastlands["manager_names"], ["Coastlands Shoppingtown Ltd"])
+        self.assertEqual(coastlands["leasing_arrangement"], "Private landlord")
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})
