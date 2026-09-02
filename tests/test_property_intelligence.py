@@ -1720,6 +1720,71 @@ class PropertyIntelligenceTests(unittest.TestCase):
         review_ids = {item["review_id"] for item in self.payload["review_items"]}
         self.assertNotIn("review-portfolio-stockland-fy26-shellharbour-retail-park", review_ids)
 
+    def test_priority_new_zealand_centres_use_current_portfolio_evidence(self) -> None:
+        expected = {
+            "place-nz-auckland-lynnmall-shopping-centre": (
+                "Verified", "Regional", "Confirmed", ["Kiwi Property"],
+                ["Kiwi Property"], "In-house", 36776, 127,
+            ),
+            "place-nz-auckland-northwest-shopping-centre": (
+                "Verified", "Regional", "Inferred", ["Stride Property"],
+                ["Stride Property"], "In-house", 32500, 100,
+            ),
+            "place-nz-wellington-johnsonville-shopping-centre": (
+                "Verified", "Neighbourhood", "Inferred",
+                ["Stride Property", "Diversified Property Fund"],
+                ["Stride Property"], "In-house", None, 80,
+            ),
+            "place-nz-auckland-ormiston-town-centre": (
+                "Verified", "Sub-regional", "Inferred", ["Todd Property Group"],
+                ["Colliers"], "External agency", 38000, 90,
+            ),
+            "place-nz-auckland-glenfield-mall": (
+                "Partial", "Regional", "Inferred", [], ["Colliers"],
+                "Unknown", None, 100,
+            ),
+            "place-nz-manawatu-whanganui-the-plaza-palmerston-north": (
+                "Partial", "Regional", "Inferred", ["New Zealand Retail Property Group"],
+                ["New Zealand Retail Property Group"], "Unknown", 32237, 90,
+            ),
+        }
+        for place_id, values in expected.items():
+            with self.subTest(place_id=place_id):
+                summary = self.payload["property_summaries"][place_id]
+                self.assertEqual(summary["research_status"], values[0])
+                self.assertEqual(summary["centre_class"], values[1])
+                self.assertEqual(summary["centre_class_method"], values[2])
+                self.assertEqual(summary["owner_names"], values[3])
+                self.assertEqual(summary["manager_names"], values[4])
+                self.assertEqual(summary["leasing_arrangement"], values[5])
+                self.assertEqual(summary.get("gla_sqm"), values[6])
+                self.assertEqual(summary.get("tenancy_count"), values[7])
+
+        johnsonville_owners = {
+            (row["group_id"], row["role"], row["ownership_percentage"])
+            for row in self.relationships
+            if row["place_id"] == "place-nz-wellington-johnsonville-shopping-centre"
+            and row["role"] in {"OWNER", "CO_OWNER"}
+        }
+        self.assertEqual(
+            johnsonville_owners,
+            {
+                ("group-stride", "CO_OWNER", 50.0),
+                ("group-diversified-nz", "CO_OWNER", 50.0),
+            },
+        )
+
+        places = {place["place_id"]: place for place in self.places}
+        self.assertNotIn("place-nz-auckland-lynn-mall", places)
+        self.assertNotIn("place-nz-manawatu-whanganui-the-plaza", places)
+        self.assertNotIn("place-nz-wellington-the-plaza", places)
+        self.assertEqual(
+            places["place-nz-auckland-lynnmall-shopping-centre"]["optical_store_count"], 3,
+        )
+        self.assertEqual(
+            places["place-nz-manawatu-whanganui-the-plaza-palmerston-north"]["optical_store_count"], 3,
+        )
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

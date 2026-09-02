@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T05:43:48+00:00",
+    "generated_at": "2026-09-02T05:51:24+00:00",
     "benchmark": "All mapped Bailey Nelson stores, separated by country and location setting",
     "method": "Transparent lookalike screening rank; not a probability of store success",
     "weights": {
@@ -27300,6 +27300,37 @@
     ],
     "nz-shopping-centre": [
       {
+        "place_id": "place-nz-manawatu-whanganui-the-plaza-palmerston-north",
+        "name": "The Plaza Palmerston North",
+        "country": "New Zealand",
+        "state": "Manawatu-Whanganui",
+        "locality": "Palmerston North",
+        "location_setting": "Shopping Centre",
+        "score": 95,
+        "screening_completeness": 50,
+        "components": {
+          "bailey_footprint_similarity": null,
+          "bailey_whitespace": 100,
+          "optical_market_validation": 87,
+          "accessibility_retail_context": null
+        },
+        "market_features": {
+          "population_2025": null,
+          "population_growth_2021_2025_pct": null,
+          "age_45_plus_pct_2021": null,
+          "median_household_income_weekly_2021": null
+        },
+        "nearest_bailey_km": 111.8,
+        "optical_store_count": 3,
+        "retailers": [
+          "OPSM",
+          "Oscar Wylee",
+          "Specsavers"
+        ],
+        "evidence_url": "https://theplaza.co.nz/",
+        "rank": 1
+      },
+      {
         "place_id": "place-nz-wellington-coastlands-shoppingtown",
         "name": "Coastlands Shoppingtown",
         "country": "New Zealand",
@@ -27327,7 +27358,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 1
+        "rank": 2
       },
       {
         "place_id": "place-nz-waikato-goldfields-shopping-centre",
@@ -27356,7 +27387,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 2
+        "rank": 3
       },
       {
         "place_id": "place-nz-manawatu-whanganui-levin-shopping-centre",
@@ -27385,7 +27416,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 3
+        "rank": 4
       },
       {
         "place_id": "place-nz-otago-remarkables-park-town-centre",
@@ -27414,7 +27445,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 4
+        "rank": 5
       },
       {
         "place_id": "place-nz-nelson-richmond-mall",
@@ -27443,7 +27474,7 @@
           "OPSM"
         ],
         "evidence_url": "",
-        "rank": 5
+        "rank": 6
       },
       {
         "place_id": "place-nz-tasman-richmond-mall",
@@ -27472,7 +27503,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 6
+        "rank": 7
       },
       {
         "place_id": "place-nz-southland-southland-eye-specialists",
@@ -27501,7 +27532,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "",
-        "rank": 7
+        "rank": 8
       },
       {
         "place_id": "place-nz-taranaki-taranaki-eye-centre",
@@ -27530,94 +27561,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "",
-        "rank": 8
-      },
-      {
-        "place_id": "place-nz-manawatu-whanganui-the-plaza",
-        "name": "The Plaza",
-        "country": "New Zealand",
-        "state": "Manawatu-Whanganui",
-        "locality": "Palmerston North",
-        "location_setting": "Shopping Centre",
-        "score": 72,
-        "screening_completeness": 50,
-        "components": {
-          "bailey_footprint_similarity": null,
-          "bailey_whitespace": 100,
-          "optical_market_validation": 29,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": null,
-          "population_growth_2021_2025_pct": null,
-          "age_45_plus_pct_2021": null,
-          "median_household_income_weekly_2021": null
-        },
-        "nearest_bailey_km": 111.9,
-        "optical_store_count": 1,
-        "retailers": [
-          "Specsavers"
-        ],
-        "evidence_url": "",
         "rank": 9
-      },
-      {
-        "place_id": "place-nz-wellington-the-plaza",
-        "name": "The Plaza",
-        "country": "New Zealand",
-        "state": "Wellington",
-        "locality": "Palmerston North",
-        "location_setting": "Shopping Centre",
-        "score": 72,
-        "screening_completeness": 50,
-        "components": {
-          "bailey_footprint_similarity": null,
-          "bailey_whitespace": 100,
-          "optical_market_validation": 29,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": null,
-          "population_growth_2021_2025_pct": null,
-          "age_45_plus_pct_2021": null,
-          "median_household_income_weekly_2021": null
-        },
-        "nearest_bailey_km": 111.9,
-        "optical_store_count": 1,
-        "retailers": [
-          "OPSM"
-        ],
-        "evidence_url": "",
-        "rank": 10
-      },
-      {
-        "place_id": "place-nz-manawatu-whanganui-the-plaza-palmerston-north",
-        "name": "The Plaza Palmerston North",
-        "country": "New Zealand",
-        "state": "Manawatu-Whanganui",
-        "locality": "Palmerston North",
-        "location_setting": "Shopping Centre",
-        "score": 72,
-        "screening_completeness": 50,
-        "components": {
-          "bailey_footprint_similarity": null,
-          "bailey_whitespace": 100,
-          "optical_market_validation": 29,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": null,
-          "population_growth_2021_2025_pct": null,
-          "age_45_plus_pct_2021": null,
-          "median_household_income_weekly_2021": null
-        },
-        "nearest_bailey_km": 111.8,
-        "optical_store_count": 1,
-        "retailers": [
-          "Oscar Wylee"
-        ],
-        "evidence_url": "",
-        "rank": 11
       },
       {
         "place_id": "place-nz-auckland-manukau-westfield",
@@ -27648,7 +27592,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.westfield.com.au/",
-        "rank": 12
+        "rank": 10
       },
       {
         "place_id": "place-nz-auckland-silverdale-mall",
@@ -27677,7 +27621,38 @@
           "Specsavers"
         ],
         "evidence_url": "https://silverdalemall.co.nz/",
-        "rank": 13
+        "rank": 11
+      },
+      {
+        "place_id": "place-nz-auckland-lynnmall-shopping-centre",
+        "name": "LynnMall",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "locality": "New Lynn",
+        "location_setting": "Shopping Centre",
+        "score": 50,
+        "screening_completeness": 50,
+        "components": {
+          "bailey_footprint_similarity": null,
+          "bailey_whitespace": 25,
+          "optical_market_validation": 87,
+          "accessibility_retail_context": null
+        },
+        "market_features": {
+          "population_2025": null,
+          "population_growth_2021_2025_pct": null,
+          "age_45_plus_pct_2021": null,
+          "median_household_income_weekly_2021": null
+        },
+        "nearest_bailey_km": 5.0,
+        "optical_store_count": 3,
+        "retailers": [
+          "OPSM",
+          "Oscar Wylee",
+          "Specsavers"
+        ],
+        "evidence_url": "https://www.kiwiproperty.com/properties/lynnmall",
+        "rank": 12
       },
       {
         "place_id": "place-nz-auckland-silverdale-centre",
@@ -27706,14 +27681,14 @@
           "OPSM"
         ],
         "evidence_url": "https://silverdalecentre.co.nz/",
-        "rank": 14
+        "rank": 13
       },
       {
         "place_id": "place-nz-auckland-northwest-shopping-centre",
-        "name": "Northwest Shopping Centre",
+        "name": "NorthWest Shopping Centre",
         "country": "New Zealand",
         "state": "Auckland",
-        "locality": "Auckland",
+        "locality": "Westgate",
         "location_setting": "Shopping Centre",
         "score": 49,
         "screening_completeness": 50,
@@ -27734,8 +27709,8 @@
         "retailers": [
           "Specsavers"
         ],
-        "evidence_url": "",
-        "rank": 15
+        "evidence_url": "https://northwestshoppingcentre.co.nz/",
+        "rank": 14
       },
       {
         "place_id": "place-nz-bay-of-plenty-tauranga-crossing",
@@ -27764,7 +27739,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.co.nz/stores/tauranga-crossing",
-        "rank": 16
+        "rank": 15
       },
       {
         "place_id": "place-nz-wellington-north-city-shopping-centre",
@@ -27793,7 +27768,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 17
+        "rank": 16
       },
       {
         "place_id": "place-nz-auckland-onehunga-mall",
@@ -27823,7 +27798,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 18
+        "rank": 17
       },
       {
         "place_id": "place-nz-auckland-westcity-waitakere-shopping-centre",
@@ -27852,37 +27827,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 19
-      },
-      {
-        "place_id": "place-nz-auckland-lynnmall-shopping-centre",
-        "name": "LynnMall Shopping Centre",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "locality": "New Lynn",
-        "location_setting": "Shopping Centre",
-        "score": 38,
-        "screening_completeness": 50,
-        "components": {
-          "bailey_footprint_similarity": null,
-          "bailey_whitespace": 25,
-          "optical_market_validation": 58,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": null,
-          "population_growth_2021_2025_pct": null,
-          "age_45_plus_pct_2021": null,
-          "median_household_income_weekly_2021": null
-        },
-        "nearest_bailey_km": 5.0,
-        "optical_store_count": 2,
-        "retailers": [
-          "OPSM",
-          "Specsavers"
-        ],
-        "evidence_url": "",
-        "rank": 20
+        "rank": 18
       },
       {
         "place_id": "place-nz-auckland-manukau-city-centre",
@@ -27911,7 +27856,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 21
+        "rank": 19
       },
       {
         "place_id": "place-nz-canterbury-northlands-mall",
@@ -27941,14 +27886,14 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 22
+        "rank": 20
       },
       {
         "place_id": "place-nz-wellington-johnsonville-shopping-centre",
         "name": "Johnsonville Shopping Centre",
         "country": "New Zealand",
         "state": "Wellington",
-        "locality": "Wellington",
+        "locality": "Johnsonville",
         "location_setting": "Shopping Centre",
         "score": 34,
         "screening_completeness": 50,
@@ -27969,8 +27914,8 @@
         "retailers": [
           "Specsavers"
         ],
-        "evidence_url": "",
-        "rank": 23
+        "evidence_url": "https://www.johnsonvilleshoppingcentre.co.nz/",
+        "rank": 21
       },
       {
         "place_id": "place-nz-auckland-newmarket-westfield",
@@ -28000,7 +27945,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.westfield.com.au/",
-        "rank": 24
+        "rank": 22
       },
       {
         "place_id": "place-nz-canterbury-the-hub-hornby-mall",
@@ -28029,36 +27974,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 25
-      },
-      {
-        "place_id": "place-nz-auckland-lynn-mall",
-        "name": "Lynn Mall",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "locality": "New Lynn",
-        "location_setting": "Shopping Centre",
-        "score": 27,
-        "screening_completeness": 50,
-        "components": {
-          "bailey_footprint_similarity": null,
-          "bailey_whitespace": 26,
-          "optical_market_validation": 29,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": null,
-          "population_growth_2021_2025_pct": null,
-          "age_45_plus_pct_2021": null,
-          "median_household_income_weekly_2021": null
-        },
-        "nearest_bailey_km": 5.2,
-        "optical_store_count": 1,
-        "retailers": [
-          "Oscar Wylee"
-        ],
-        "evidence_url": "",
-        "rank": 26
+        "rank": 23
       },
       {
         "place_id": "place-nz-auckland-vision-centre",
@@ -28087,14 +28003,14 @@
           "Independent / Other optical"
         ],
         "evidence_url": "",
-        "rank": 27
+        "rank": 24
       },
       {
         "place_id": "place-nz-auckland-glenfield-mall",
         "name": "Glenfield Mall",
         "country": "New Zealand",
         "state": "Auckland",
-        "locality": "Auckland",
+        "locality": "Glenfield",
         "location_setting": "Shopping Centre",
         "score": 25,
         "screening_completeness": 50,
@@ -28115,8 +28031,8 @@
         "retailers": [
           "Specsavers"
         ],
-        "evidence_url": "",
-        "rank": 28
+        "evidence_url": "https://glenfieldmall.co.nz/",
+        "rank": 25
       },
       {
         "place_id": "place-nz-waikato-te-awa-at-the-base",
@@ -28145,7 +28061,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.co.nz/stores/terapa",
-        "rank": 29
+        "rank": 26
       },
       {
         "place_id": "place-nz-canterbury-the-palms-shopping-centre",
@@ -28174,7 +28090,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 30
+        "rank": 27
       },
       {
         "place_id": "place-nz-auckland-ormiston-town-centre",
@@ -28202,8 +28118,8 @@
         "retailers": [
           "Specsavers"
         ],
-        "evidence_url": "",
-        "rank": 31
+        "evidence_url": "https://www.ormistontown.co.nz/",
+        "rank": 28
       },
       {
         "place_id": "place-nz-auckland-milford-centre",
@@ -28232,7 +28148,7 @@
           "OPSM"
         ],
         "evidence_url": "https://milfordcentre.co.nz/",
-        "rank": 32
+        "rank": 29
       }
     ]
   }

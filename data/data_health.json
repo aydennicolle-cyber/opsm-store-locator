@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-09-02T05:43:57+00:00",
+  "generated_at": "2026-09-02T05:51:32+00:00",
   "coverage_as_of": "2026-09-02",
   "certification_status": "Operational",
   "coverage_statement": "The network uses best-available public store data. Freshness, location setting and canonical place confidence are reported separately.",
@@ -14,13 +14,13 @@
     "usable_stores": 1126,
     "usable_named_network_stores": 1067,
     "current_named_network_stores": 1067,
-    "places": 1023,
-    "centres": 580,
+    "places": 1020,
+    "centres": 577,
     "corridors": 443
   },
   "changes_from_baseline": {
     "stores": -41,
-    "places": 629
+    "places": 626
   },
   "dimensions": {
     "source_freshness": 75.0,
@@ -82,7 +82,7 @@
     "Shopping Centre": 706
   },
   "place_types": {
-    "Shopping Centre": 580,
+    "Shopping Centre": 577,
     "High Street Corridor": 443
   },
   "sources": [
@@ -290,7 +290,7 @@
       "required": false,
       "snapshot": "data/property_intelligence.json",
       "completion_status": "partial",
-      "last_success": "2026-09-02T05:43:56.390489+00:00",
+      "last_success": "2026-09-02T05:51:32.643770+00:00",
       "age_days": 0,
       "max_age_days": 180,
       "available": true,
@@ -303,21 +303,21 @@
     "coverage_statement": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
     "portfolio_overlap_note": "Portfolio overlap is derived from public tenancy and property-group evidence; it is not proof of a private commercial relationship.",
     "dimensions": {
-      "research_coverage": 51.9,
+      "research_coverage": 53.0,
       "relationship_freshness": 99.9,
-      "centre_class_coverage": 51.2,
+      "centre_class_coverage": 52.3,
       "bailey_centre_research_coverage": 100.0,
       "bailey_centre_class_coverage": 100.0,
       "conflict_reconciliation": 100.0
     },
     "counts": {
-      "groups": 148,
-      "relationships": 1001,
-      "current_relationships": 1000,
+      "groups": 150,
+      "relationships": 1020,
+      "current_relationships": 1019,
       "stale_relationships": 1,
-      "shopping_centres": 580,
-      "researched_centres": 301,
-      "classed_centres": 297,
+      "shopping_centres": 577,
+      "researched_centres": 306,
+      "classed_centres": 302,
       "bailey_centres": 45,
       "researched_bailey_centres": 45,
       "classed_bailey_centres": 45,
@@ -1263,7 +1263,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-nz-auckland-lynn-mall",
+      "place_id": "place-nz-auckland-lynnmall-shopping-centre",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -1923,7 +1923,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-nz-manawatu-whanganui-the-plaza",
+      "place_id": "place-nz-manawatu-whanganui-the-plaza-palmerston-north",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -16113,7 +16113,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-nz-wellington-the-plaza",
+      "place_id": "place-nz-manawatu-whanganui-the-plaza-palmerston-north",
       "mapping_confidence": "High",
       "issues": ""
     },
