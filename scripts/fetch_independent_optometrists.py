@@ -60,8 +60,7 @@ NZ_REGIONS = [
     "West Coast",
 ]
 MAJOR_BRAND = re.compile(
-    r"\b(?:opsm|specsavers|bailey[\s&-]*(?:and[\s-]*)?nelson|oscar[\s-]*wylee|"
-    r"george[\s&-]*(?:and[\s-]*)?matilda|eyecare\s*plus|(?:the\s+)?optical\s+superstore)\b",
+    r"\b(?:opsm|specsavers|bailey[\s&-]*(?:and[\s-]*)?nelson|oscar[\s-]*wylee)\b",
     flags=re.IGNORECASE,
 )
 NON_COMPARABLE = re.compile(
@@ -72,6 +71,23 @@ NON_COMPARABLE = re.compile(
 
 def tidy(value: object) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip()
+
+
+def social_url(value: object, network: str) -> str:
+    """Return a public social URL without guessing an account from a store name."""
+    raw = tidy(value)
+    if not raw:
+        return ""
+    if raw.startswith(("https://", "http://")):
+        return raw
+    handle = raw.lstrip("@").strip("/")
+    if not handle or any(character.isspace() for character in handle):
+        return ""
+    domains = {
+        "instagram": "https://www.instagram.com/",
+        "facebook": "https://www.facebook.com/",
+    }
+    return f"{domains[network]}{handle}/"
 
 
 def overpass(query: str) -> dict:
@@ -296,6 +312,8 @@ def clean_element(
     )
     phone = tidy(tags.get("contact:phone") or tags.get("phone"))
     website = tidy(tags.get("contact:website") or tags.get("website"))
+    instagram = social_url(tags.get("contact:instagram") or tags.get("instagram"), "instagram")
+    facebook = social_url(tags.get("contact:facebook") or tags.get("facebook"), "facebook")
     return {
         "id": f"osm-{country[:2].lower()}-{element_type}-{element_id}",
         "name": name,
@@ -308,7 +326,11 @@ def clean_element(
         "phone": phone,
         "latitude": latitude,
         "longitude": longitude,
-        "official_url": website or source_url,
+        "official_url": website,
+        "website_url": website,
+        "instagram_url": instagram,
+        "facebook_url": facebook,
+        "directory_url": "",
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": source_url,
@@ -384,9 +406,8 @@ def validate(stores: list[dict]) -> None:
             raise ValueError(f"Invalid coordinates for {store['name']}: {latitude}, {longitude}")
 
 
-def write_outputs(stores: list[dict], queries: list[dict]) -> None:
+def write_outputs(stores: list[dict], queries: list[dict], fetched_at: str) -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    fetched_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     fields = [
         "id",
         "name",
@@ -400,6 +421,10 @@ def write_outputs(stores: list[dict], queries: list[dict]) -> None:
         "latitude",
         "longitude",
         "official_url",
+        "website_url",
+        "instagram_url",
+        "facebook_url",
+        "directory_url",
         "services",
         "audiology",
         "source_url",
@@ -447,10 +472,14 @@ def write_outputs(stores: list[dict], queries: list[dict]) -> None:
                 "license": "ODbL 1.0",
                 "fetched_at": fetched_at,
                 "store_count": len(stores),
+                "profile_link_counts": {
+                    "website": sum(bool(store["website_url"]) for store in stores),
+                    "instagram": sum(bool(store["instagram_url"]) for store in stores),
+                    "facebook": sum(bool(store["facebook_url"]) for store in stores),
+                },
                 "coverage": "Community-mapped shop=optician discovery records; non-exhaustive and subject to comparability review",
                 "excluded_major_brands": [
                     "OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee",
-                    "George & Matilda", "Eyecare Plus", "Optical Superstore",
                 ],
                 "excluded_non_comparable_patterns": ["sunglasses-only", "repair-only", "ophthalmology", "eye surgery", "laser eye"],
                 "queries": queries,
@@ -463,9 +492,19 @@ def write_outputs(stores: list[dict], queries: list[dict]) -> None:
 
 
 def main() -> None:
+    cached_snapshot = json.loads(SNAPSHOT_PATH.read_text(encoding="utf-8")) if SNAPSHOT_PATH.exists() else {}
+    using_saved_raw = (
+        os.environ.get("FORCE_REFRESH") != "1"
+        and all((OUTPUT_DIR / f"raw_source_{code}.json").exists() for code in ("au", "nz"))
+    )
     stores, queries = collect()
     validate(stores)
-    write_outputs(stores, queries)
+    fetched_at = (
+        tidy(cached_snapshot.get("fetched_at"))
+        if using_saved_raw and cached_snapshot.get("fetched_at")
+        else datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    )
+    write_outputs(stores, queries, fetched_at)
     by_country: dict[str, int] = {}
     for store in stores:
         by_country[store["country"]] = by_country.get(store["country"], 0) + 1

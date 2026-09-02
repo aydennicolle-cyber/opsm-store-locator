@@ -101,6 +101,10 @@
     "latitude",
     "longitude",
     "official_url",
+    "website_url",
+    "instagram_url",
+    "facebook_url",
+    "directory_url",
     "services",
     "audiology",
     "venue_name",
@@ -1611,6 +1615,13 @@
     const blockers = health.blocking_counts || {};
     const lowestDimension = Math.min(...Object.values(health.dimensions));
     const propertyHealth = health.property_intelligence || { dimensions: {}, counts: {} };
+    const independentStores = state.allStores.filter((store) => store.retailer === "Independent / Other optical");
+    const independentProfiles = {
+      websites: independentStores.filter((store) => store.website_url).length,
+      directories: independentStores.filter((store) => store.directory_url).length,
+      social: independentStores.filter((store) => store.instagram_url || store.facebook_url).length,
+      source_only: independentStores.filter((store) => !store.website_url && !store.directory_url && !store.instagram_url && !store.facebook_url).length,
+    };
     elements.viewContent.innerHTML = `
       <section class="health-overview ${health.certification_status === "Operational" ? "certified" : "in-progress"}">
         <div class="health-status"><span>${health.certification_status === "Operational" ? "Operational first draft" : escapeHtml(health.certification_status)}</span><strong>${lowestDimension.toFixed(1)}%</strong><small>lowest health dimension · as of ${escapeHtml(health.coverage_as_of)}</small></div>
@@ -1622,6 +1633,16 @@
         <div><span>Usable named stores</span><strong>${formatNumber(health.observed.usable_named_network_stores)}</strong><small>of ${formatNumber(health.observed.named_network_stores)}</small></div>
         <div><span>Centres and plazas</span><strong>${formatNumber(health.observed.centres)}</strong><small>canonical records</small></div>
         <div><span>High-street corridors</span><strong>${formatNumber(health.observed.corridors)}</strong><small>800 m indicative catchments</small></div>
+      </section>
+      <section class="health-overview property-health">
+        <div class="section-heading"><h2>Independent public profiles</h2><span>identity and discovery evidence</span></div>
+        <div class="compact-metrics">
+          <div><strong>${formatNumber(independentProfiles.websites)}</strong><span>business websites</span></div>
+          <div><strong>${formatNumber(independentProfiles.directories)}</strong><span>directory profiles</span></div>
+          <div><strong>${formatNumber(independentProfiles.social)}</strong><span>social profiles</span></div>
+          <div><strong>${formatNumber(independentProfiles.source_only)}</strong><span>source-only records</span></div>
+        </div>
+        <p>Only explicitly sourced profile links are shown. Missing links are not guessed from business names.</p>
       </section>
       <section class="health-overview property-health">
         <div class="section-heading"><h2>Property intelligence health</h2><span>separate from store-census health</span></div>
@@ -1877,6 +1898,36 @@
     });
   }
 
+  function storePublicLinksHtml(store) {
+    const links = [];
+    const seen = new Set();
+    const add = (url, label, icon, primary = false) => {
+      const value = String(url || "").trim();
+      if (!/^https?:\/\//i.test(value) || seen.has(value)) return;
+      seen.add(value);
+      links.push(`<a class="command-link ${primary ? "primary" : ""}" href="${escapeHtml(value)}" target="_blank" rel="noopener"><i data-lucide="${icon}"></i>${label}</a>`);
+    };
+    if (store.retailer !== "Independent / Other optical") {
+      add(store.official_url, "Official store", "external-link", true);
+      return links.join("");
+    }
+    const website = store.website_url || (
+      store.official_url && !/openstreetmap\.org|provision\.com\.au\/practice\//i.test(store.official_url)
+        ? store.official_url
+        : ""
+    );
+    add(website, "Website", "globe-2", true);
+    add(store.instagram_url, "Instagram", "instagram");
+    add(store.facebook_url, "Facebook", "facebook");
+    add(store.directory_url, "Directory listing", "contact");
+    if (/openstreetmap\.org/i.test(store.source_url || "")) {
+      add(store.source_url, "Map source", "map-pin");
+    } else {
+      add(store.source_url, "Source", "file-search");
+    }
+    return links.join("") || `<span class="empty-note">No verified public profile recorded</span>`;
+  }
+
   function openStoreDetail(store) {
     state.selectedStoreId = store.store_id;
     const config = BRAND_CONFIG[store.retailer];
@@ -1892,7 +1943,7 @@
         <span class="retailer-tag">${brandMarkHtml(store.retailer, "detail")}${escapeHtml(store.retailer)}</span>
         <h2>${escapeHtml(store.name)}</h2><address>${escapeHtml(store.full_address)}</address>
         <div class="link-row">${store.phone ? `<a class="command-link" href="tel:${escapeHtml(store.phone.replace(/[^+\d]/g, ""))}"><i data-lucide="phone"></i>Call</a>` : ""}
-          <a class="command-link primary" href="${escapeHtml(store.official_url)}" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Official store</a></div>
+          ${storePublicLinksHtml(store)}</div>
       </header>
       <section class="detail-section">
         <h3>Leasing profile</h3>
@@ -1915,6 +1966,7 @@
         </div>
         ${areaHtml(store)}
         <p class="empty-note">${escapeHtml(store.classification_basis)}</p>
+        ${store.retailer === "Independent / Other optical" ? `<p class="empty-note">Public profile links are identity and discovery evidence. Confirm current trading status directly before relying on them.</p>` : ""}
         <div class="service-list">${services.length ? services.map((service) => `<span>${escapeHtml(service)}</span>`).join("") : "<span>No services listed</span>"}</div>
         <div class="link-row"><button class="detail-action" id="compareFromDetail" type="button"><i data-lucide="ruler"></i>Add to store comparison</button></div>
       </section>

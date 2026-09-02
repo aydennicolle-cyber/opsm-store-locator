@@ -59,6 +59,10 @@ FIELDS = [
     "latitude",
     "longitude",
     "official_url",
+    "website_url",
+    "instagram_url",
+    "facebook_url",
+    "directory_url",
     "services",
     "audiology",
     "venue_name",
@@ -284,6 +288,10 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                 "latitude": float(row["latitude"]),
                 "longitude": float(row["longitude"]),
                 "official_url": "https://www.opsm.com.au/en/opsm-au/find-store",
+                "website_url": "",
+                "instagram_url": "",
+                "facebook_url": "",
+                "directory_url": "",
                 "services": services,
                 "audiology": str("audiology" in services.lower()).lower(),
                 "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
@@ -329,7 +337,13 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                     "phone": tidy(row.get("phone", "")),
                     "latitude": float(row["latitude"]),
                     "longitude": float(row["longitude"]),
-                    "official_url": tidy(row["official_url"]),
+                    "official_url": tidy(row.get("official_url", "")),
+                    "website_url": tidy(row.get("website_url", "")),
+                    "instagram_url": tidy(row.get("instagram_url", "")),
+                    "facebook_url": tidy(row.get("facebook_url", "")),
+                    "directory_url": tidy(row.get("directory_url", "")) or (
+                        tidy(row.get("official_url", "")) if folder == "provision" else ""
+                    ),
                     "services": tidy(row.get("services", "")),
                     "audiology": tidy(row.get("audiology", "false")).lower(),
                     "source_url": tidy(row.get("source_url", "")) or tidy(row["official_url"]),
@@ -355,6 +369,10 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                 "latitude": float(row["latitude"]),
                 "longitude": float(row["longitude"]),
                 "official_url": tidy(row["official_url"]),
+                "website_url": tidy(row.get("website_url", "")),
+                "instagram_url": tidy(row.get("instagram_url", "")),
+                "facebook_url": tidy(row.get("facebook_url", "")),
+                "directory_url": tidy(row.get("directory_url", "")),
                 "services": services,
                 "audiology": tidy(row.get("audiology", "false")).lower(),
                 "source_url": tidy(row["official_url"]),
@@ -377,6 +395,9 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
             item for item in by_id[canonical].get("affiliations", "").split("|") if item
         }
         by_id[canonical]["affiliations"] = "|".join(sorted(source_affiliations | canonical_affiliations))
+        for field in ("website_url", "instagram_url", "facebook_url"):
+            if not by_id[canonical].get(field) and by_id[source].get(field):
+                by_id[canonical][field] = by_id[source][field]
     return [store for store in stores if store["store_id"] not in remaps]
 
 
@@ -675,6 +696,15 @@ def validate(stores: list[dict]) -> None:
                 raise ValueError(f"Invalid coordinates for {store['store_id']}")
         if not store["source_url"] or not store["fetched_at"]:
             raise ValueError(f"Missing source metadata for {store['store_id']}")
+        for field in ("official_url", "website_url", "instagram_url", "facebook_url", "directory_url", "source_url"):
+            value = store.get(field, "")
+            if value and not re.match(r"^https?://", value, flags=re.IGNORECASE):
+                raise ValueError(f"Invalid public URL in {field} for {store['store_id']}")
+        if (
+            store["retailer"] == "Independent / Other optical"
+            and "openstreetmap.org" in store.get("official_url", "")
+        ):
+            raise ValueError(f"OpenStreetMap cannot be an official store page: {store['store_id']}")
 
 
 def network_summary(stores: list[dict]) -> dict:

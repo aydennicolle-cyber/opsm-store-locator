@@ -47,6 +47,10 @@ REQUIRED_FIELDS = {
     "latitude",
     "longitude",
     "official_url",
+    "website_url",
+    "instagram_url",
+    "facebook_url",
+    "directory_url",
     "services",
     "audiology",
     "venue_name",
@@ -156,6 +160,23 @@ class OpticalNetworkTests(unittest.TestCase):
         affiliated = [row for row in self.rows if "provision" in row["affiliations"].split("|")]
         self.assertGreater(len(affiliated), 300)
         self.assertTrue(all(row["country"] == "Australia" for row in affiliated))
+
+    def test_independent_public_profiles_are_explicit_and_safe(self) -> None:
+        independent = [
+            row for row in self.rows if row["retailer"] == "Independent / Other optical"
+        ]
+        self.assertGreater(sum(bool(row["website_url"]) for row in independent), 50)
+        self.assertGreater(sum(bool(row["instagram_url"]) for row in independent), 0)
+        self.assertGreater(sum(bool(row["facebook_url"]) for row in independent), 3)
+        for row in independent:
+            self.assertNotIn("openstreetmap.org", row["official_url"])
+            for field in (
+                "website_url", "instagram_url", "facebook_url", "directory_url", "source_url"
+            ):
+                if row[field]:
+                    self.assertTrue(row[field].startswith(("https://", "http://")))
+        provision = [row for row in independent if "provision" in row["affiliations"].split("|")]
+        self.assertTrue(all(row["directory_url"] for row in provision))
 
     def test_ids_states_coordinates_and_sources(self) -> None:
         ids = [row["store_id"] for row in self.rows]
