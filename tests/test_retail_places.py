@@ -209,6 +209,13 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(len(memberships), 4)
         self.assertTrue(all(row["location_setting"] == "High Street" for row in memberships))
 
+    def test_balgowlah_village_preserves_the_legacy_place_id_and_alias(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        balgowlah = places["place-au-nsw-balgowlah-shopping-centre"]
+        self.assertEqual(balgowlah["name"], "Balgowlah Village")
+        self.assertEqual(balgowlah["postcode"], "2093")
+        self.assertIn("Stockland Balgowlah", balgowlah["aliases"])
+
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, expected_name in {

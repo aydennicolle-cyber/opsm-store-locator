@@ -400,6 +400,55 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(greensborough["gla_sqm"], 70000)
         self.assertEqual(greensborough["tenancy_count"], 170)
 
+    def test_priority_act_and_nsw_centres_use_current_owner_and_manager_evidence(self) -> None:
+        expected = {
+            "place-au-act-marketplace-gungahlin": {
+                "centre_class": "Sub-regional",
+                "owners": set(),
+                "managers": {"Vinta Group"},
+                "arrangement": "In-house",
+                "tenancy_count": 74,
+            },
+            "place-au-act-south-point-shopping-centre": {
+                "centre_class": "Regional",
+                "owners": {"Leda Holdings"},
+                "managers": {"Leda Holdings"},
+                "arrangement": "In-house",
+                "gla_sqm": 76987,
+            },
+            "place-au-nsw-ashfield-mall": {
+                "centre_class": "Sub-regional",
+                "owners": {"Mintus Investments 4 Pty Ltd ATF The Retail Investment Trust 8"},
+                "managers": {"Mintus Pty Ltd"},
+                "arrangement": "In-house",
+                "annual_visits": 6400000,
+            },
+            "place-au-nsw-balgowlah-shopping-centre": {
+                "centre_class": "Neighbourhood",
+                "owners": {"Revelop"},
+                "managers": {"Revelop"},
+                "arrangement": "In-house",
+                "gla_sqm": 12800,
+            },
+            "place-au-nsw-lake-macquarie-square": {
+                "centre_class": "Sub-regional",
+                "owners": {"Revelop"},
+                "managers": {"Revelop"},
+                "arrangement": "In-house",
+                "gla_sqm": 24500,
+            },
+        }
+        for place_id, values in expected.items():
+            with self.subTest(place_id=place_id):
+                summary = self.payload["property_summaries"][place_id]
+                self.assertEqual(summary["centre_class"], values["centre_class"])
+                self.assertEqual(set(summary["owner_names"]), values["owners"])
+                self.assertEqual(set(summary["manager_names"]), values["managers"])
+                self.assertEqual(summary["leasing_arrangement"], values["arrangement"])
+                for key in ("tenancy_count", "gla_sqm", "annual_visits"):
+                    if key in values:
+                        self.assertEqual(summary[key], values[key])
+
     def test_research_queue_covers_every_unresolved_property_or_class(self) -> None:
         with (DATA / "property_research_queue.csv").open(newline="", encoding="utf-8") as handle:
             queue = list(csv.DictReader(handle))

@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T02:09:16.338561+00:00",
+  "generated_at": "2026-09-02T02:16:13.966713+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 71,
-    "relationship_count": 606,
-    "active_relationship_count": 604,
+    "group_count": 75,
+    "relationship_count": 625,
+    "active_relationship_count": 623,
     "shopping_centre_count": 587,
-    "researched_property_count": 198,
-    "classed_property_count": 188,
+    "researched_property_count": 203,
+    "classed_property_count": 193,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -1203,6 +1203,77 @@
         "Prime Retail Property",
         "Prime Retail"
       ]
+    },
+    {
+      "group_id": "group-vinta",
+      "canonical_name": "Vinta Group",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "PROPERTY_COMPANY",
+      "country_scope": "Australia and New Zealand",
+      "official_url": "https://www.vinta.com.au/",
+      "status": "Active",
+      "source_url": "https://www.vinta.com.au/properties",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Vinta Group",
+        "Vinta",
+        "Vinta Investment Management Pty Ltd"
+      ]
+    },
+    {
+      "group_id": "group-leda-holdings",
+      "canonical_name": "Leda Holdings",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "PROPERTY_COMPANY",
+      "country_scope": "Australia",
+      "official_url": "https://www.ledaholdings.com.au/",
+      "status": "Active",
+      "source_url": "https://www.ledaholdings.com.au/projects/south-point-shopping-centre",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Leda Holdings",
+        "Leda Holdings Pty Ltd"
+      ]
+    },
+    {
+      "group_id": "group-mintus",
+      "canonical_name": "Mintus Pty Ltd",
+      "parent_group_id": "",
+      "brand_name": "Mintus",
+      "group_type": "PROPERTY_COMPANY",
+      "country_scope": "Australia",
+      "official_url": "https://www.mintus.com.au/",
+      "status": "Active",
+      "source_url": "https://www.ashfieldmall.com.au/privacy-policy/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Mintus Pty Ltd",
+        "Mintus",
+        "MINTUS"
+      ]
+    },
+    {
+      "group_id": "group-mintus-ashfield-trust",
+      "canonical_name": "Mintus Investments 4 Pty Ltd ATF The Retail Investment Trust 8",
+      "parent_group_id": "group-mintus",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.mintus.com.au/",
+      "status": "Active",
+      "source_url": "https://www.ashfieldmall.com.au/privacy-policy/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Mintus Investments 4 Pty Ltd ATF The Retail Investment Trust 8",
+        "Mintus Investments 4 Pty Ltd",
+        "The Retail Investment Trust 8"
+      ]
     }
   ],
   "group_alias_index": {
@@ -1329,7 +1400,17 @@
     "onefiveoneproperty": "group-151-property",
     "151propertyptyltd": "group-151-property",
     "primeretailproperty": "group-prime-retail-property",
-    "primeretail": "group-prime-retail-property"
+    "primeretail": "group-prime-retail-property",
+    "vintagroup": "group-vinta",
+    "vinta": "group-vinta",
+    "vintainvestmentmanagementptyltd": "group-vinta",
+    "ledaholdings": "group-leda-holdings",
+    "ledaholdingsptyltd": "group-leda-holdings",
+    "mintusptyltd": "group-mintus",
+    "mintus": "group-mintus",
+    "mintusinvestments4ptyltdatftheretailinvestmenttrust8": "group-mintus-ashfield-trust",
+    "mintusinvestments4ptyltd": "group-mintus-ashfield-trust",
+    "theretailinvestmenttrust8": "group-mintus-ashfield-trust"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -11028,6 +11109,310 @@
       "confidence": "High",
       "public_note": "Prime Retail lists Greensborough Plaza as a current project and the official centre leasing material directs permanent leasing to its team",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vinta-marketplace-gungahlin-manager",
+      "place_id": "place-au-act-marketplace-gungahlin",
+      "group_id": "group-vinta",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vinta.com.au/properties",
+      "source_type": "Official current integrated property-group portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vinta lists Marketplace Gungahlin in its property portfolio and the current venue provides a direct leasing pathway; the legal owner is not asserted from this evidence",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vinta-marketplace-gungahlin-operator",
+      "place_id": "place-au-act-marketplace-gungahlin",
+      "group_id": "group-vinta",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vinta.com.au/properties",
+      "source_type": "Official current integrated property-group portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vinta lists Marketplace Gungahlin in its property portfolio and the current venue provides a direct leasing pathway; the legal owner is not asserted from this evidence",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vinta-marketplace-gungahlin-leasing_controller",
+      "place_id": "place-au-act-marketplace-gungahlin",
+      "group_id": "group-vinta",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vinta.com.au/properties",
+      "source_type": "Official current integrated property-group portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vinta lists Marketplace Gungahlin in its property portfolio and the current venue provides a direct leasing pathway; the legal owner is not asserted from this evidence",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-leda-south-point-owner",
+      "place_id": "place-au-act-south-point-shopping-centre",
+      "group_id": "group-leda-holdings",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ledaholdings.com.au/projects/south-point-shopping-centre",
+      "source_type": "Official current owner and manager project profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Leda identifies South.Point as owned and managed by the group and the venue publishes a direct Leda permanent leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-leda-south-point-manager",
+      "place_id": "place-au-act-south-point-shopping-centre",
+      "group_id": "group-leda-holdings",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ledaholdings.com.au/projects/south-point-shopping-centre",
+      "source_type": "Official current owner and manager project profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Leda identifies South.Point as owned and managed by the group and the venue publishes a direct Leda permanent leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-leda-south-point-operator",
+      "place_id": "place-au-act-south-point-shopping-centre",
+      "group_id": "group-leda-holdings",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ledaholdings.com.au/projects/south-point-shopping-centre",
+      "source_type": "Official current owner and manager project profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Leda identifies South.Point as owned and managed by the group and the venue publishes a direct Leda permanent leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-leda-south-point-leasing_controller",
+      "place_id": "place-au-act-south-point-shopping-centre",
+      "group_id": "group-leda-holdings",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ledaholdings.com.au/projects/south-point-shopping-centre",
+      "source_type": "Official current owner and manager project profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Leda identifies South.Point as owned and managed by the group and the venue publishes a direct Leda permanent leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mintus-trust-ashfield-mall-owner",
+      "place_id": "place-au-nsw-ashfield-mall",
+      "group_id": "group-mintus-ashfield-trust",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ashfieldmall.com.au/privacy-policy/",
+      "source_type": "Official current venue privacy and ownership statement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue privacy policy names Mintus Investments 4 Pty Ltd as trustee for The Retail Investment Trust 8 as the legal owner",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mintus-ashfield-mall-manager",
+      "place_id": "place-au-nsw-ashfield-mall",
+      "group_id": "group-mintus",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ashfieldmall.com.au/privacy-policy/",
+      "source_type": "Official current venue privacy management and leasing pages",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue privacy policy names Mintus Pty Ltd as operator and the official leasing page routes permanent and casual leasing through Mintus",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mintus-ashfield-mall-operator",
+      "place_id": "place-au-nsw-ashfield-mall",
+      "group_id": "group-mintus",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ashfieldmall.com.au/privacy-policy/",
+      "source_type": "Official current venue privacy management and leasing pages",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue privacy policy names Mintus Pty Ltd as operator and the official leasing page routes permanent and casual leasing through Mintus",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mintus-ashfield-mall-leasing_controller",
+      "place_id": "place-au-nsw-ashfield-mall",
+      "group_id": "group-mintus",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ashfieldmall.com.au/privacy-policy/",
+      "source_type": "Official current venue privacy management and leasing pages",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue privacy policy names Mintus Pty Ltd as operator and the official leasing page routes permanent and casual leasing through Mintus",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-revelop-balgowlah-village-owner",
+      "place_id": "place-au-nsw-balgowlah-shopping-centre",
+      "group_id": "group-revelop",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.balgowlahvillage.com/",
+      "source_type": "Official current venue ownership and management statement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that Balgowlah Village is proudly owned and managed by Revelop and directs permanent leasing to Revelop",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-revelop-balgowlah-village-manager",
+      "place_id": "place-au-nsw-balgowlah-shopping-centre",
+      "group_id": "group-revelop",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.balgowlahvillage.com/",
+      "source_type": "Official current venue ownership and management statement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that Balgowlah Village is proudly owned and managed by Revelop and directs permanent leasing to Revelop",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-revelop-balgowlah-village-operator",
+      "place_id": "place-au-nsw-balgowlah-shopping-centre",
+      "group_id": "group-revelop",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.balgowlahvillage.com/",
+      "source_type": "Official current venue ownership and management statement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that Balgowlah Village is proudly owned and managed by Revelop and directs permanent leasing to Revelop",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-revelop-balgowlah-village-leasing_controller",
+      "place_id": "place-au-nsw-balgowlah-shopping-centre",
+      "group_id": "group-revelop",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.balgowlahvillage.com/",
+      "source_type": "Official current venue ownership and management statement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that Balgowlah Village is proudly owned and managed by Revelop and directs permanent leasing to Revelop",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-revelop-lake-macquarie-square-owner",
+      "place_id": "place-au-nsw-lake-macquarie-square",
+      "group_id": "group-revelop",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.revelop.com.au/property/lake-macquarie-square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Revelop lists Lake Macquarie Square in its active portfolio with direct centre management and leasing contacts and the venue identifies Revelop as owner and manager",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-revelop-lake-macquarie-square-manager",
+      "place_id": "place-au-nsw-lake-macquarie-square",
+      "group_id": "group-revelop",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.revelop.com.au/property/lake-macquarie-square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Revelop lists Lake Macquarie Square in its active portfolio with direct centre management and leasing contacts and the venue identifies Revelop as owner and manager",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-revelop-lake-macquarie-square-operator",
+      "place_id": "place-au-nsw-lake-macquarie-square",
+      "group_id": "group-revelop",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.revelop.com.au/property/lake-macquarie-square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Revelop lists Lake Macquarie Square in its active portfolio with direct centre management and leasing contacts and the venue identifies Revelop as owner and manager",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-revelop-lake-macquarie-square-leasing_controller",
+      "place_id": "place-au-nsw-lake-macquarie-square",
+      "group_id": "group-revelop",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.revelop.com.au/property/lake-macquarie-square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Revelop lists Lake Macquarie Square in its active portfolio with direct centre management and leasing contacts and the venue identifies Revelop as owner and manager",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -16780,6 +17165,144 @@
       "public_note": "Prime Retail lists Greensborough Plaza as a current project and the official centre leasing material directs permanent leasing to its team",
       "match_status": "Matched",
       "matched_place_id": "place-au-vic-greensborough-plaza"
+    },
+    {
+      "portfolio_asset_id": "vinta-marketplace-gungahlin",
+      "group_id": "group-vinta",
+      "canonical_name": "Marketplace Gungahlin",
+      "country": "Australia",
+      "state": "ACT",
+      "aliases": "",
+      "preferred_place_id": "place-au-act-marketplace-gungahlin",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "74",
+      "annual_visits_m": "",
+      "source_url": "https://www.vinta.com.au/properties",
+      "source_type": "Official current integrated property-group portfolio",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Vinta lists Marketplace Gungahlin in its property portfolio and the current venue provides a direct leasing pathway; the legal owner is not asserted from this evidence",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-act-marketplace-gungahlin"
+    },
+    {
+      "portfolio_asset_id": "leda-south-point",
+      "group_id": "group-leda-holdings",
+      "canonical_name": "South.Point Tuggeranong",
+      "country": "Australia",
+      "state": "ACT",
+      "aliases": "South Point Shopping Centre|South.Point Shopping Centre",
+      "preferred_place_id": "place-au-act-south-point-shopping-centre",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "100",
+      "gla_sqm": "76987",
+      "tenancy_count": "150",
+      "annual_visits_m": "8.3",
+      "source_url": "https://www.ledaholdings.com.au/projects/south-point-shopping-centre",
+      "source_type": "Official current owner and manager project profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Leda identifies South.Point as owned and managed by the group and the venue publishes a direct Leda permanent leasing pathway",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-act-south-point-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "mintus-trust-ashfield-mall",
+      "group_id": "group-mintus-ashfield-trust",
+      "canonical_name": "Ashfield Mall",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-ashfield-mall",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "24977",
+      "tenancy_count": "84",
+      "annual_visits_m": "6.4",
+      "source_url": "https://www.ashfieldmall.com.au/privacy-policy/",
+      "source_type": "Official current venue privacy and ownership statement",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue privacy policy names Mintus Investments 4 Pty Ltd as trustee for The Retail Investment Trust 8 as the legal owner",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-ashfield-mall"
+    },
+    {
+      "portfolio_asset_id": "mintus-ashfield-mall",
+      "group_id": "group-mintus",
+      "canonical_name": "Ashfield Mall",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-ashfield-mall",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "24977",
+      "tenancy_count": "84",
+      "annual_visits_m": "6.4",
+      "source_url": "https://www.ashfieldmall.com.au/privacy-policy/",
+      "source_type": "Official current venue privacy management and leasing pages",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue privacy policy names Mintus Pty Ltd as operator and the official leasing page routes permanent and casual leasing through Mintus",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-ashfield-mall"
+    },
+    {
+      "portfolio_asset_id": "revelop-balgowlah-village",
+      "group_id": "group-revelop",
+      "canonical_name": "Balgowlah Village",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Stockland Balgowlah|Balgowlah Shopping Centre",
+      "preferred_place_id": "place-au-nsw-balgowlah-shopping-centre",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "100",
+      "gla_sqm": "12800",
+      "tenancy_count": "70",
+      "annual_visits_m": "3.5",
+      "source_url": "https://www.balgowlahvillage.com/",
+      "source_type": "Official current venue ownership and management statement",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue states that Balgowlah Village is proudly owned and managed by Revelop and directs permanent leasing to Revelop",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-balgowlah-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "revelop-lake-macquarie-square",
+      "group_id": "group-revelop",
+      "canonical_name": "Lake Macquarie Square",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-lake-macquarie-square",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "100",
+      "gla_sqm": "24500",
+      "tenancy_count": "70",
+      "annual_visits_m": "4",
+      "source_url": "https://www.revelop.com.au/property/lake-macquarie-square",
+      "source_type": "Official current owner and manager property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Revelop lists Lake Macquarie Square in its active portfolio with direct centre management and leasing contacts and the venue identifies Revelop as owner and manager",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-lake-macquarie-square"
     }
   ],
   "property_summaries": {
@@ -28279,32 +28802,40 @@
     },
     "place-au-act-marketplace-gungahlin": {
       "place_id": "place-au-act-marketplace-gungahlin",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-act-marketplace-gungahlin",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.marketplacegungahlin.com.au/leasing/",
+        "source_type": "Official current venue leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from the official four major anchors and more than 74 specialty stores; the centre does not publish a formal class"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-act-marketplace-gungahlin",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.vinta.com.au/properties",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Vinta's current portfolio and venue sources confirm management operations and direct leasing; the legal ownership vehicle remains unidentified"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-vinta-marketplace-gungahlin-manager",
+        "rel-portfolio-vinta-marketplace-gungahlin-operator",
+        "rel-portfolio-vinta-marketplace-gungahlin-leasing_controller"
+      ],
+      "group_ids": [
+        "group-vinta"
+      ],
       "owner_names": [],
-      "manager_names": [],
+      "manager_names": [
+        "Vinta Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -28353,39 +28884,53 @@
         "median_household_income": 1410,
         "age_45_plus_pct": 24.7,
         "retail_businesses": 57
-      }
+      },
+      "tenancy_count": 74,
+      "source_url": "https://www.vinta.com.au/properties",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-act-south-point-shopping-centre": {
       "place_id": "place-au-act-south-point-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-act-south-point-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Inferred",
+        "source_url": "https://southpointcanberra.com.au/leasing/",
+        "source_type": "Official current venue leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Regional scale inferred from the official 76987 square metres of GLA seven major anchors 150 specialty stores and 8.3 million annual visits"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-act-south-point-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.ledaholdings.com.au/projects/south-point-shopping-centre",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Leda's official property and venue leasing pages confirm ownership management operations and direct leasing control"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-leda-south-point-owner",
+        "rel-portfolio-leda-south-point-manager",
+        "rel-portfolio-leda-south-point-operator",
+        "rel-portfolio-leda-south-point-leasing_controller"
+      ],
+      "group_ids": [
+        "group-leda-holdings"
+      ],
+      "owner_names": [
+        "Leda Holdings"
+      ],
+      "manager_names": [
+        "Leda Holdings"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 16.41,
@@ -28442,7 +28987,12 @@
         "median_household_income": 1412,
         "age_45_plus_pct": 37.9,
         "retail_businesses": 24
-      }
+      },
+      "gla_sqm": 76987.0,
+      "tenancy_count": 150,
+      "annual_visits": 8300000.000000001,
+      "source_url": "https://www.ledaholdings.com.au/projects/south-point-shopping-centre",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-act-westfield-belconnen": {
       "place_id": "place-au-act-westfield-belconnen",
@@ -35655,35 +36205,47 @@
     },
     "place-au-nsw-ashfield-mall": {
       "place_id": "place-au-nsw-ashfield-mall",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-ashfield-mall",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.ashfieldmall.com.au/wp-content/uploads/2024/12/Ashfield-Mall-Leasing-2024.pdf",
+        "source_type": "Official current centre leasing brochure",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The official leasing brochure classifies Ashfield Mall as Sub-Regional under SCCA guidelines"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-ashfield-mall",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.ashfieldmall.com.au/privacy-policy/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The current venue privacy and leasing pages identify the legal owner Mintus operator and direct leasing control"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-mintus-trust-ashfield-mall-owner",
+        "rel-portfolio-mintus-ashfield-mall-manager",
+        "rel-portfolio-mintus-ashfield-mall-operator",
+        "rel-portfolio-mintus-ashfield-mall-leasing_controller"
+      ],
+      "group_ids": [
+        "group-mintus",
+        "group-mintus-ashfield-trust"
+      ],
+      "owner_names": [
+        "Mintus Investments 4 Pty Ltd ATF The Retail Investment Trust 8"
+      ],
+      "manager_names": [
+        "Mintus Pty Ltd"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 5.33,
@@ -35729,39 +36291,55 @@
         "median_household_income": 1231,
         "age_45_plus_pct": 40.6,
         "retail_businesses": 83
-      }
+      },
+      "gla_sqm": 24977.0,
+      "tenancy_count": 84,
+      "annual_visits": 6400000.0,
+      "source_url": "https://www.ashfieldmall.com.au/privacy-policy/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-balgowlah-shopping-centre": {
       "place_id": "place-au-nsw-balgowlah-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Neighbourhood",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-balgowlah-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Neighbourhood",
+        "classification_method": "Inferred",
+        "source_url": "https://www.revelop.com.au/property/balgowlah-shopping-centre",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Neighbourhood format inferred from the official Coles anchor 12800 square metres of NLA and more than 70 specialty stores; the owner does not publish a formal class"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-balgowlah-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.balgowlahvillage.com/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The current venue identifies Revelop as owner and manager and routes permanent leasing directly to Revelop"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-revelop-balgowlah-village-owner",
+        "rel-portfolio-revelop-balgowlah-village-manager",
+        "rel-portfolio-revelop-balgowlah-village-operator",
+        "rel-portfolio-revelop-balgowlah-village-leasing_controller"
+      ],
+      "group_ids": [
+        "group-revelop"
+      ],
+      "owner_names": [
+        "Revelop"
+      ],
+      "manager_names": [
+        "Revelop"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 2.15,
@@ -35807,7 +36385,12 @@
         "median_household_income": 1919,
         "age_45_plus_pct": 45.7,
         "retail_businesses": 130
-      }
+      },
+      "gla_sqm": 12800.0,
+      "tenancy_count": 70,
+      "annual_visits": 3500000.0,
+      "source_url": "https://www.balgowlahvillage.com/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-bankstown-central": {
       "place_id": "place-au-nsw-bankstown-central",
@@ -39495,35 +40078,46 @@
     },
     "place-au-nsw-lake-macquarie-square": {
       "place_id": "place-au-nsw-lake-macquarie-square",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-lake-macquarie-square",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.revelop.com.au/property/lake-macquarie-square",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Revelop explicitly describes Lake Macquarie Square as a sub-regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-lake-macquarie-square",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.revelop.com.au/property/lake-macquarie-square",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The current owner and venue sources identify Revelop ownership management operations and direct leasing control"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-revelop-lake-macquarie-square-owner",
+        "rel-portfolio-revelop-lake-macquarie-square-manager",
+        "rel-portfolio-revelop-lake-macquarie-square-operator",
+        "rel-portfolio-revelop-lake-macquarie-square-leasing_controller"
+      ],
+      "group_ids": [
+        "group-revelop"
+      ],
+      "owner_names": [
+        "Revelop"
+      ],
+      "manager_names": [
+        "Revelop"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 5.93,
@@ -39569,7 +40163,12 @@
         "median_household_income": 793,
         "age_45_plus_pct": 45.5,
         "retail_businesses": 22
-      }
+      },
+      "gla_sqm": 24500.0,
+      "tenancy_count": 70,
+      "annual_visits": 4000000.0,
+      "source_url": "https://www.revelop.com.au/property/lake-macquarie-square",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-lavington-square": {
       "place_id": "place-au-nsw-lavington-square",
@@ -110449,11 +111048,24 @@
     },
     "group-revelop": {
       "group_id": "group-revelop",
-      "property_count": 0,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
-      "asset_roles": {},
+      "asset_roles": {
+        "place-au-nsw-balgowlah-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ],
+        "place-au-nsw-lake-macquarie-square": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ]
+      },
       "white_space_property_ids": []
     },
     "group-elanor-investors": {
@@ -110955,6 +111567,65 @@
       "asset_roles": {
         "place-au-vic-greensborough-plaza": [
           "EXTERNAL_LEASING_AGENT"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-vinta": {
+      "group_id": "group-vinta",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-act-marketplace-gungahlin": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-leda-holdings": {
+      "group_id": "group-leda-holdings",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-act-south-point-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-mintus": {
+      "group_id": "group-mintus",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-ashfield-mall": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-mintus-ashfield-trust": {
+      "group_id": "group-mintus-ashfield-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-ashfield-mall": [
+          "OWNER"
         ]
       },
       "white_space_property_ids": []
@@ -118477,7 +119148,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -118491,10 +119162,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 8.52,
-          "group_ids": [],
+          "group_ids": [
+            "group-vinta"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -118526,7 +119199,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -118540,11 +119213,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 16.41,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-leda-holdings"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -122664,7 +123339,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -122678,11 +123353,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 5.33,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-mintus",
+            "group-mintus-ashfield-trust"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -122713,7 +123391,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Neighbourhood"
         }
       },
       "accessibility": {
@@ -122727,11 +123405,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 2.15,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-revelop"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -124657,7 +125337,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -124671,11 +125351,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 5.93,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-revelop"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
