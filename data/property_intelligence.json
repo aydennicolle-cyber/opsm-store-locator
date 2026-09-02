@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T02:33:37.514413+00:00",
+  "generated_at": "2026-09-02T02:38:01.303126+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 85,
-    "relationship_count": 664,
-    "active_relationship_count": 662,
+    "group_count": 89,
+    "relationship_count": 674,
+    "active_relationship_count": 672,
     "shopping_centre_count": 587,
-    "researched_property_count": 212,
-    "classed_property_count": 202,
+    "researched_property_count": 215,
+    "classed_property_count": 205,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -1448,6 +1448,75 @@
         "Mackersy Northlands Limited Partnership",
         "Mackersy Northlands LP"
       ]
+    },
+    {
+      "group_id": "group-hmc-capital",
+      "canonical_name": "HMC Capital",
+      "parent_group_id": "",
+      "brand_name": "HomeCo",
+      "group_type": "ASSET_MANAGER",
+      "country_scope": "Australia",
+      "official_url": "https://www.hmccapital.com.au/",
+      "status": "Active",
+      "source_url": "https://www.aer.gov.au/industry/registers/network-exemptions/trustee-hmc-lml-no-4-property-trust-roselands-shopping-centre-network-exemption",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "HMC Capital",
+        "HomeCo",
+        "HMC"
+      ]
+    },
+    {
+      "group_id": "group-hmc-lml-no4-property-trust",
+      "canonical_name": "HMC LML No. 4 Property Trust",
+      "parent_group_id": "group-hmc-capital",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.hmccapital.com.au/",
+      "status": "Active",
+      "source_url": "https://www.aer.gov.au/industry/registers/network-exemptions/trustee-hmc-lml-no-4-property-trust-roselands-shopping-centre-network-exemption",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "HMC LML No. 4 Property Trust",
+        "The Trustee for HMC LML (NO. 4) PROPERTY TRUST"
+      ]
+    },
+    {
+      "group_id": "group-jy-no6-trust",
+      "canonical_name": "JY No.6 Trust",
+      "parent_group_id": "group-jy-group",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.thejygroup.com/",
+      "status": "Active",
+      "source_url": "https://www.thejygroup.com/projects/sydney-roselands-shopping-centre/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "JY No.6 Trust",
+        "The Trustee for JY No.6 Trust"
+      ]
+    },
+    {
+      "group_id": "group-accord-retail-leasing",
+      "canonical_name": "Accord Retail Leasing",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "EXTERNAL_AGENCY",
+      "country_scope": "Australia",
+      "official_url": "https://accordretail.com.au/",
+      "status": "Active",
+      "source_url": "https://accordretail.com.au/shepparton-marketplace/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "Medium",
+      "aliases": [
+        "Accord Retail Leasing",
+        "Accord Retail"
+      ]
     }
   ],
   "group_alias_index": {
@@ -1607,7 +1676,16 @@
     "mackersyproperty": "group-mackersy-property",
     "mackersy": "group-mackersy-property",
     "mackersynorthlandslimitedpartnership": "group-mackersy-northlands-lp",
-    "mackersynorthlandslp": "group-mackersy-northlands-lp"
+    "mackersynorthlandslp": "group-mackersy-northlands-lp",
+    "hmccapital": "group-hmc-capital",
+    "homeco": "group-hmc-capital",
+    "hmc": "group-hmc-capital",
+    "hmclmlno4propertytrust": "group-hmc-lml-no4-property-trust",
+    "thetrusteeforhmclmlno4propertytrust": "group-hmc-lml-no4-property-trust",
+    "jyno6trust": "group-jy-no6-trust",
+    "thetrusteeforjyno6trust": "group-jy-no6-trust",
+    "accordretailleasing": "group-accord-retail-leasing",
+    "accordretail": "group-accord-retail-leasing"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -12234,6 +12312,166 @@
       "confidence": "High",
       "public_note": "Kiwi Property states that it manages Northlands on behalf of Mackersy Property and provides the leasing pathway",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-leda-morayfield-owner",
+      "place_id": "place-au-qld-morayfield-shopping-centre",
+      "group_id": "group-leda-holdings",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.morayfieldshoppingcentre.com.au/leasing/",
+      "source_type": "Official current venue leasing and group profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue identifies Morayfield among Leda's retained centres and routes permanent leasing and management through Leda; the exact legal ownership vehicle and percentage are not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-leda-morayfield-manager",
+      "place_id": "place-au-qld-morayfield-shopping-centre",
+      "group_id": "group-leda-holdings",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.morayfieldshoppingcentre.com.au/leasing/",
+      "source_type": "Official current venue leasing and group profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue identifies Morayfield among Leda's retained centres and routes permanent leasing and management through Leda; the exact legal ownership vehicle and percentage are not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-leda-morayfield-operator",
+      "place_id": "place-au-qld-morayfield-shopping-centre",
+      "group_id": "group-leda-holdings",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.morayfieldshoppingcentre.com.au/leasing/",
+      "source_type": "Official current venue leasing and group profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue identifies Morayfield among Leda's retained centres and routes permanent leasing and management through Leda; the exact legal ownership vehicle and percentage are not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-leda-morayfield-leasing_controller",
+      "place_id": "place-au-qld-morayfield-shopping-centre",
+      "group_id": "group-leda-holdings",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.morayfieldshoppingcentre.com.au/leasing/",
+      "source_type": "Official current venue leasing and group profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue identifies Morayfield among Leda's retained centres and routes permanent leasing and management through Leda; the exact legal ownership vehicle and percentage are not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-accord-shepparton-marketplace-external_leasing_agent",
+      "place_id": "place-au-vic-shepparton-marketplace",
+      "group_id": "group-accord-retail-leasing",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://accordretail.com.au/shepparton-marketplace/",
+      "source_type": "Official leasing agency appointment corroborated by current venue contact",
+      "last_verified_at": "2026-09-02",
+      "confidence": "Medium",
+      "public_note": "Accord states that it was appointed for centre leasing and the current venue continues to list the same leasing representative; current ownership and management remain unknown",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jy-no6-roselands-co_owner",
+      "place_id": "place-au-nsw-roselands-shopping-centre",
+      "group_id": "group-jy-no6-trust",
+      "role": "CO_OWNER",
+      "ownership_percentage": 50.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.thejygroup.com/projects/sydney-roselands-shopping-centre/",
+      "source_type": "Official current co-owner property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "JY Group identifies JY No.6 Trust as its 50 percent ownership vehicle for Roselands",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-hmc-lml-no4-roselands-co_owner",
+      "place_id": "place-au-nsw-roselands-shopping-centre",
+      "group_id": "group-hmc-lml-no4-property-trust",
+      "role": "CO_OWNER",
+      "ownership_percentage": 50.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.aer.gov.au/industry/registers/network-exemptions/trustee-hmc-lml-no-4-property-trust-roselands-shopping-centre-network-exemption",
+      "source_type": "Current Australian Energy Regulator property register",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current AER register identifies HMC LML No. 4 Property Trust and JY No.6 Trust for the Roselands site following Vicinity's divestment",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-hmc-roselands-manager-manager",
+      "place_id": "place-au-nsw-roselands-shopping-centre",
+      "group_id": "group-hmc-capital",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.thejygroup.com/why-invest-with-us/the-jy-formula/",
+      "source_type": "Official current co-owner operating-model profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "Medium",
+      "public_note": "JY Group identifies HomeCo as the institutional co-investor responsible for day-to-day management; this does not assert leasing control",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-hmc-roselands-manager-operator",
+      "place_id": "place-au-nsw-roselands-shopping-centre",
+      "group_id": "group-hmc-capital",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.thejygroup.com/why-invest-with-us/the-jy-formula/",
+      "source_type": "Official current co-owner operating-model profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "Medium",
+      "public_note": "JY Group identifies HomeCo as the institutional co-investor responsible for day-to-day management; this does not assert leasing control",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-roselands-external_leasing_agent",
+      "place_id": "place-au-nsw-roselands-shopping-centre",
+      "group_id": "group-jll",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://locationxjll.com.au/contacts/",
+      "source_type": "Official current JLL leasing portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "JLL's current leasing portfolio includes HomeCo Roselands; the public evidence does not establish JLL as the centre manager",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -18538,6 +18776,144 @@
       "public_note": "Kiwi Property states that it manages Northlands on behalf of Mackersy Property and provides the leasing pathway",
       "match_status": "Matched",
       "matched_place_id": "place-nz-canterbury-northlands-mall"
+    },
+    {
+      "portfolio_asset_id": "leda-morayfield",
+      "group_id": "group-leda-holdings",
+      "canonical_name": "Morayfield Shopping Centre",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Morayfield Centre",
+      "preferred_place_id": "place-au-qld-morayfield-shopping-centre",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "57000",
+      "tenancy_count": "155",
+      "annual_visits_m": "5.787496",
+      "source_url": "https://www.morayfieldshoppingcentre.com.au/leasing/",
+      "source_type": "Official current venue leasing and group profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The venue identifies Morayfield among Leda's retained centres and routes permanent leasing and management through Leda; the exact legal ownership vehicle and percentage are not published",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-morayfield-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "accord-shepparton-marketplace",
+      "group_id": "group-accord-retail-leasing",
+      "canonical_name": "Shepparton Marketplace",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "",
+      "preferred_place_id": "place-au-vic-shepparton-marketplace",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "43",
+      "annual_visits_m": "",
+      "source_url": "https://accordretail.com.au/shepparton-marketplace/",
+      "source_type": "Official leasing agency appointment corroborated by current venue contact",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "Medium",
+      "status": "ACTIVE",
+      "public_note": "Accord states that it was appointed for centre leasing and the current venue continues to list the same leasing representative; current ownership and management remain unknown",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-shepparton-marketplace"
+    },
+    {
+      "portfolio_asset_id": "jy-no6-roselands",
+      "group_id": "group-jy-no6-trust",
+      "canonical_name": "Roselands Shopping Centre",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "HomeCo Roselands|Roselands",
+      "preferred_place_id": "place-au-nsw-roselands-shopping-centre",
+      "roles": "CO_OWNER",
+      "ownership_percentage": "50",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.thejygroup.com/projects/sydney-roselands-shopping-centre/",
+      "source_type": "Official current co-owner property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "JY Group identifies JY No.6 Trust as its 50 percent ownership vehicle for Roselands",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-roselands-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "hmc-lml-no4-roselands",
+      "group_id": "group-hmc-lml-no4-property-trust",
+      "canonical_name": "Roselands Shopping Centre",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "HomeCo Roselands|Roselands",
+      "preferred_place_id": "place-au-nsw-roselands-shopping-centre",
+      "roles": "CO_OWNER",
+      "ownership_percentage": "50",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.aer.gov.au/industry/registers/network-exemptions/trustee-hmc-lml-no-4-property-trust-roselands-shopping-centre-network-exemption",
+      "source_type": "Current Australian Energy Regulator property register",
+      "source_date": "2025-03-26",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current AER register identifies HMC LML No. 4 Property Trust and JY No.6 Trust for the Roselands site following Vicinity's divestment",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-roselands-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "hmc-roselands-manager",
+      "group_id": "group-hmc-capital",
+      "canonical_name": "Roselands Shopping Centre",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "HomeCo Roselands|Roselands",
+      "preferred_place_id": "place-au-nsw-roselands-shopping-centre",
+      "roles": "MANAGER|OPERATOR",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.thejygroup.com/why-invest-with-us/the-jy-formula/",
+      "source_type": "Official current co-owner operating-model profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "Medium",
+      "status": "ACTIVE",
+      "public_note": "JY Group identifies HomeCo as the institutional co-investor responsible for day-to-day management; this does not assert leasing control",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-roselands-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "jll-roselands",
+      "group_id": "group-jll",
+      "canonical_name": "Roselands Shopping Centre",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "HomeCo Roselands|Roselands",
+      "preferred_place_id": "place-au-nsw-roselands-shopping-centre",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://locationxjll.com.au/contacts/",
+      "source_type": "Official current JLL leasing portfolio",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "JLL's current leasing portfolio includes HomeCo Roselands; the public evidence does not establish JLL as the centre manager",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-roselands-shopping-centre"
     }
   ],
   "property_summaries": {
@@ -44321,35 +44697,51 @@
     },
     "place-au-nsw-roselands-shopping-centre": {
       "place_id": "place-au-nsw-roselands-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-roselands-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.thejygroup.com/projects/sydney-roselands-shopping-centre/",
+        "source_type": "Official current co-owner property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "JY Group explicitly describes Roselands as a prominent regional shopping centre; Regional is the closest supported app classification"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-roselands-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.aer.gov.au/industry/registers/network-exemptions/trustee-hmc-lml-no-4-property-trust-roselands-shopping-centre-network-exemption",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current regulator and co-owner evidence confirms 50 percent HMC and 50 percent JY ownership following Vicinity's divestment plus HomeCo management and JLL external leasing"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-jy-no6-roselands-co_owner",
+        "rel-portfolio-hmc-lml-no4-roselands-co_owner",
+        "rel-portfolio-hmc-roselands-manager-manager",
+        "rel-portfolio-hmc-roselands-manager-operator",
+        "rel-portfolio-jll-roselands-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-hmc-capital",
+        "group-hmc-lml-no4-property-trust",
+        "group-jll",
+        "group-jy-no6-trust"
+      ],
+      "owner_names": [
+        "JY No.6 Trust",
+        "HMC LML No. 4 Property Trust"
+      ],
+      "manager_names": [
+        "HMC Capital"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 11.26,
@@ -57510,32 +57902,43 @@
     },
     "place-au-qld-morayfield-shopping-centre": {
       "place_id": "place-au-qld-morayfield-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-qld-morayfield-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.morayfieldshoppingcentre.com.au/leasing/",
+        "source_type": "Official current venue leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Regional format inferred from the official 57000 square metres of GLA five major tenants 150 specialty stores and broad Moreton Bay trade area; the source does not publish a formal class"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-qld-morayfield-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.morayfieldshoppingcentre.com.au/leasing/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Official venue and Leda sources confirm current Leda ownership management operations and direct leasing; the exact legal ownership vehicle and percentage remain unpublished"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-leda-morayfield-owner",
+        "rel-portfolio-leda-morayfield-manager",
+        "rel-portfolio-leda-morayfield-operator",
+        "rel-portfolio-leda-morayfield-leasing_controller"
+      ],
+      "group_ids": [
+        "group-leda-holdings"
+      ],
+      "owner_names": [
+        "Leda Holdings"
+      ],
+      "manager_names": [
+        "Leda Holdings"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -57612,7 +58015,12 @@
         "median_household_income": 772,
         "age_45_plus_pct": 36.2,
         "retail_businesses": 94
-      }
+      },
+      "gla_sqm": 57000.0,
+      "tenancy_count": 155,
+      "annual_visits": 5787496.0,
+      "source_url": "https://www.morayfieldshoppingcentre.com.au/leasing/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-qld-mackay-mt-pleasant-shopping-centre": {
       "place_id": "place-au-qld-mackay-mt-pleasant-shopping-centre",
@@ -88608,30 +89016,34 @@
     },
     "place-au-vic-shepparton-marketplace": {
       "place_id": "place-au-vic-shepparton-marketplace",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-vic-shepparton-marketplace",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://sheppartonmarketplace.com.au/",
+        "source_type": "Official current venue profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The official venue explicitly describes Shepparton Marketplace as a single-level sub-regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-vic-shepparton-marketplace",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://sheppartonmarketplace.com.au/contact/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Official venue evidence confirms a sub-regional centre and the current leasing contact corroborates Accord's published appointment; ownership and management remain unidentified"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-accord-shepparton-marketplace-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-accord-retail-leasing"
+      ],
       "owner_names": [],
       "manager_names": [],
       "has_bailey": false,
@@ -88682,7 +89094,10 @@
         "median_household_income": 734,
         "age_45_plus_pct": 40.7,
         "retail_businesses": 103
-      }
+      },
+      "tenancy_count": 43,
+      "source_url": "https://accordretail.com.au/shepparton-marketplace/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-vic-springvale-homemaker-centre": {
       "place_id": "place-au-vic-springvale-homemaker-centre",
@@ -112426,7 +112841,7 @@
     },
     "group-jll": {
       "group_id": "group-jll",
-      "property_count": 4,
+      "property_count": 5,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -112436,6 +112851,9 @@
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
+        ],
+        "place-au-nsw-roselands-shopping-centre": [
+          "EXTERNAL_LEASING_AGENT"
         ],
         "place-au-vic-greensborough-plaza": [
           "MANAGER",
@@ -113096,12 +113514,18 @@
     },
     "group-leda-holdings": {
       "group_id": "group-leda-holdings",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
         "place-au-act-south-point-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ],
+        "place-au-qld-morayfield-shopping-centre": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR",
@@ -113260,6 +113684,59 @@
       "asset_roles": {
         "place-nz-canterbury-northlands-mall": [
           "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-hmc-capital": {
+      "group_id": "group-hmc-capital",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-roselands-shopping-centre": [
+          "MANAGER",
+          "OPERATOR"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-hmc-lml-no4-property-trust": {
+      "group_id": "group-hmc-lml-no4-property-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-roselands-shopping-centre": [
+          "CO_OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-jy-no6-trust": {
+      "group_id": "group-jy-no6-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-roselands-shopping-centre": [
+          "CO_OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-accord-retail-leasing": {
+      "group_id": "group-accord-retail-leasing",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-vic-shepparton-marketplace": [
+          "EXTERNAL_LEASING_AGENT"
         ]
       },
       "white_space_property_ids": []
@@ -128439,7 +128916,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -128453,11 +128930,16 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 11.26,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-hmc-capital",
+            "group-hmc-lml-no4-property-trust",
+            "group-jll",
+            "group-jy-no6-trust"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -135100,7 +135582,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -135114,10 +135596,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 16.63,
-          "group_ids": [],
+          "group_ids": [
+            "group-leda-holdings"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -150794,7 +151278,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -150808,10 +151292,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 154.16,
-          "group_ids": [],
+          "group_ids": [
+            "group-accord-retail-leasing"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }

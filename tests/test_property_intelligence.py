@@ -540,6 +540,31 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(northlands["leasing_arrangement"], "In-house")
         self.assertEqual(northlands["tenancy_count"], 120)
 
+    def test_current_morayfield_shepparton_and_roselands_roles_are_not_flattened(self) -> None:
+        morayfield = self.payload["property_summaries"]["place-au-qld-morayfield-shopping-centre"]
+        self.assertEqual(morayfield["centre_class"], "Regional")
+        self.assertEqual(morayfield["owner_names"], ["Leda Holdings"])
+        self.assertEqual(morayfield["manager_names"], ["Leda Holdings"])
+        self.assertEqual(morayfield["leasing_arrangement"], "In-house")
+        self.assertEqual(morayfield["gla_sqm"], 57000)
+        self.assertEqual(morayfield["tenancy_count"], 155)
+
+        shepparton = self.payload["property_summaries"]["place-au-vic-shepparton-marketplace"]
+        self.assertEqual(shepparton["centre_class"], "Sub-regional")
+        self.assertEqual(shepparton["owner_names"], [])
+        self.assertEqual(shepparton["manager_names"], [])
+        self.assertEqual(shepparton["leasing_arrangement"], "External agency")
+        self.assertEqual(shepparton["tenancy_count"], 43)
+
+        roselands = self.payload["property_summaries"]["place-au-nsw-roselands-shopping-centre"]
+        self.assertEqual(roselands["centre_class"], "Regional")
+        self.assertEqual(set(roselands["owner_names"]), {
+            "HMC LML No. 4 Property Trust",
+            "JY No.6 Trust",
+        })
+        self.assertEqual(roselands["manager_names"], ["HMC Capital"])
+        self.assertEqual(roselands["leasing_arrangement"], "External agency")
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})
