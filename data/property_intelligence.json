@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T03:53:58.800643+00:00",
+  "generated_at": "2026-09-02T03:59:25.104855+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 130,
-    "relationship_count": 858,
-    "active_relationship_count": 856,
+    "group_count": 133,
+    "relationship_count": 871,
+    "active_relationship_count": 869,
     "shopping_centre_count": 584,
-    "researched_property_count": 260,
-    "classed_property_count": 250,
+    "researched_property_count": 263,
+    "classed_property_count": 254,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -2230,6 +2230,57 @@
         "Kyron Capital",
         "Kyron"
       ]
+    },
+    {
+      "group_id": "group-jy-no8-trust",
+      "canonical_name": "JY No.8 Trust",
+      "parent_group_id": "group-jy-group",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.thejygroup.com/projects/sydney-carlingford-court-shopping-centre/",
+      "status": "Active",
+      "source_url": "https://www.thejygroup.com/projects/sydney-carlingford-court-shopping-centre/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "JY No.8 Trust",
+        "The Trustee for JY No.8 Trust"
+      ]
+    },
+    {
+      "group_id": "group-hmc-lml-no5-property-trust",
+      "canonical_name": "HMC LML No. 5 Property Trust",
+      "parent_group_id": "group-hmc-capital",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.hmccapital.com.au/",
+      "status": "Active",
+      "source_url": "https://abr.business.gov.au/ABN/View?abn=47626901324",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "HMC LML No. 5 Property Trust",
+        "The Trustee for HMC LML (NO. 5) PROPERTY TRUST"
+      ]
+    },
+    {
+      "group_id": "group-qic-active-retail-property-fund",
+      "canonical_name": "QIC Active Retail Property Fund",
+      "parent_group_id": "group-qic",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.qic.com/Investment-Capabilities/Real-Estate",
+      "status": "Active",
+      "source_url": "https://bathurstcitycentre.qicre.com/conditions-of-entry/centre-conditions-of-entry",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "QIC Active Retail Property Fund",
+        "QIC ARPF"
+      ]
     }
   ],
   "group_alias_index": {
@@ -2490,7 +2541,13 @@
     "tweedmallfund": "group-tweed-mall-mixed-use-real-estate-fund",
     "warrawongplazafund": "group-warrawong-plaza-fund",
     "kyroncapital": "group-kyron-capital",
-    "kyron": "group-kyron-capital"
+    "kyron": "group-kyron-capital",
+    "jyno8trust": "group-jy-no8-trust",
+    "thetrusteeforjyno8trust": "group-jy-no8-trust",
+    "hmclmlno5propertytrust": "group-hmc-lml-no5-property-trust",
+    "thetrusteeforhmclmlno5propertytrust": "group-hmc-lml-no5-property-trust",
+    "qicactiveretailpropertyfund": "group-qic-active-retail-property-fund",
+    "qicarpf": "group-qic-active-retail-property-fund"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -5175,11 +5232,11 @@
       "valid_from": "",
       "valid_to": "",
       "status": "ACTIVE",
-      "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
-      "source_type": "Official current managed-portfolio report",
+      "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/bathurst-city-centre",
+      "source_type": "Official current property and venue profile",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
-      "public_note": "QIC Real Estate lists this asset in its current managed portfolio",
+      "public_note": "QIC publishes the current asset profile and its live venue routes centre management permanent leasing and casual leasing through the QIC platform",
       "derived_from": "official_portfolio_asset"
     },
     {
@@ -5191,11 +5248,27 @@
       "valid_from": "",
       "valid_to": "",
       "status": "ACTIVE",
-      "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
-      "source_type": "Official current managed-portfolio report",
+      "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/bathurst-city-centre",
+      "source_type": "Official current property and venue profile",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
-      "public_note": "QIC Real Estate lists this asset in its current managed portfolio",
+      "public_note": "QIC publishes the current asset profile and its live venue routes centre management permanent leasing and casual leasing through the QIC platform",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-qic-bathurst-city-centre-leasing_controller",
+      "place_id": "place-au-nsw-bathurst-city-centre",
+      "group_id": "group-qic",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/bathurst-city-centre",
+      "source_type": "Official current property and venue profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "QIC publishes the current asset profile and its live venue routes centre management permanent leasing and casual leasing through the QIC platform",
       "derived_from": "official_portfolio_asset"
     },
     {
@@ -16221,6 +16294,198 @@
       "confidence": "High",
       "public_note": "The current BNG venue provides its permanent leasing pathway and the group privacy statement identifies Orana Mall's operating entity and BNG-managed shopping-centre functions; beneficial ownership is not asserted",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-qic-arpf-bathurst-owner-owner",
+      "place_id": "place-au-nsw-bathurst-city-centre",
+      "group_id": "group-qic-active-retail-property-fund",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://bathurstcitycentre.qicre.com/conditions-of-entry/centre-conditions-of-entry",
+      "source_type": "Official current venue ownership statement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue conditions identify QIC Retail Pty Ltd as trustee for QIC Active Retail Property Fund and the sole stated owner of Bathurst City Centre",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jy-no8-carlingford-owner-co_owner",
+      "place_id": "place-au-nsw-carlingford-court",
+      "group_id": "group-jy-no8-trust",
+      "role": "CO_OWNER",
+      "ownership_percentage": 50.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.thejygroup.com/projects/sydney-carlingford-court-shopping-centre/",
+      "source_type": "Official current co-owner property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "JY Group identifies JY No.8 Trust as its 50 percent ownership vehicle and confirms HomeCo holds the other 50 percent interest",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-hmc-lml-no5-carlingford-owner-co_owner",
+      "place_id": "place-au-nsw-carlingford-court",
+      "group_id": "group-hmc-lml-no5-property-trust",
+      "role": "CO_OWNER",
+      "ownership_percentage": 50.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://abr.business.gov.au/ABN/View?abn=47626901324",
+      "source_type": "Current Australian Business Register corroborated by current HMC results",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The active HMC LML No. 5 Property Trust carries the Carlingford Court business name and current HMC reporting retains HomeCo Carlingford Court in its managed retail-fund portfolio",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-carlingford-management-manager",
+      "place_id": "place-au-nsw-carlingford-court",
+      "group_id": "group-vicinity",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/assets/sb/f/129601/x/7c9a8ff0dc/vicinity-centres-2025-modern-slavery-statement.pdf",
+      "source_type": "Official current managed-portfolio statement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity lists Carlingford Court as managed only after divesting its ownership interest; current leasing control is not inferred from management alone",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-carlingford-management-operator",
+      "place_id": "place-au-nsw-carlingford-court",
+      "group_id": "group-vicinity",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/assets/sb/f/129601/x/7c9a8ff0dc/vicinity-centres-2025-modern-slavery-statement.pdf",
+      "source_type": "Official current managed-portfolio statement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity lists Carlingford Court as managed only after divesting its ownership interest; current leasing control is not inferred from management alone",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-revelop-stanhope-village-owner",
+      "place_id": "place-au-nsw-stanhope-village-shopping-centre",
+      "group_id": "group-revelop",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.revelop.com.au/property/stanhope-village-shopping-centre-nsw",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Revelop's current portfolio and venue identify full ownership direct centre management and permanent leasing for Stanhope Village plus current public centre metrics",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-revelop-stanhope-village-manager",
+      "place_id": "place-au-nsw-stanhope-village-shopping-centre",
+      "group_id": "group-revelop",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.revelop.com.au/property/stanhope-village-shopping-centre-nsw",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Revelop's current portfolio and venue identify full ownership direct centre management and permanent leasing for Stanhope Village plus current public centre metrics",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-revelop-stanhope-village-operator",
+      "place_id": "place-au-nsw-stanhope-village-shopping-centre",
+      "group_id": "group-revelop",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.revelop.com.au/property/stanhope-village-shopping-centre-nsw",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Revelop's current portfolio and venue identify full ownership direct centre management and permanent leasing for Stanhope Village plus current public centre metrics",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-revelop-stanhope-village-leasing_controller",
+      "place_id": "place-au-nsw-stanhope-village-shopping-centre",
+      "group_id": "group-revelop",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.revelop.com.au/property/stanhope-village-shopping-centre-nsw",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Revelop's current portfolio and venue identify full ownership direct centre management and permanent leasing for Stanhope Village plus current public centre metrics",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-retpro-cessnock-village-manager",
+      "place_id": "place-au-nsw-cessnock-plaza-shopping-centre",
+      "group_id": "group-retpro",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://retprogroup.com.au/our-centres/cessnock-village/",
+      "source_type": "Official current manager and venue leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current MA Financial retail-services profile and venue route centre management permanent leasing and casual leasing through the same team; current beneficial ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-retpro-cessnock-village-operator",
+      "place_id": "place-au-nsw-cessnock-plaza-shopping-centre",
+      "group_id": "group-retpro",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://retprogroup.com.au/our-centres/cessnock-village/",
+      "source_type": "Official current manager and venue leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current MA Financial retail-services profile and venue route centre management permanent leasing and casual leasing through the same team; current beneficial ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-retpro-cessnock-village-leasing_controller",
+      "place_id": "place-au-nsw-cessnock-plaza-shopping-centre",
+      "group_id": "group-retpro",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://retprogroup.com.au/our-centres/cessnock-village/",
+      "source_type": "Official current manager and venue leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current MA Financial retail-services profile and venue route centre management permanent leasing and casual leasing through the same team; current beneficial ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -17612,18 +17877,18 @@
       "state": "NSW",
       "aliases": "",
       "preferred_place_id": "place-au-nsw-bathurst-city-centre",
-      "roles": "MANAGER|OPERATOR",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
       "ownership_percentage": "",
-      "gla_sqm": "",
-      "tenancy_count": "",
-      "annual_visits_m": "",
-      "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
-      "source_type": "Official current managed-portfolio report",
-      "source_date": "2025-06-30",
+      "gla_sqm": "12433",
+      "tenancy_count": "40",
+      "annual_visits_m": "2.2",
+      "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/bathurst-city-centre",
+      "source_type": "Official current property and venue profile",
+      "source_date": "2026-09-02",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "status": "ACTIVE",
-      "public_note": "QIC Real Estate lists this asset in its current managed portfolio",
+      "public_note": "QIC publishes the current asset profile and its live venue routes centre management permanent leasing and casual leasing through the QIC platform",
       "match_status": "Matched",
       "matched_place_id": "place-au-nsw-bathurst-city-centre"
     },
@@ -24848,6 +25113,144 @@
       "public_note": "The current BNG venue provides its permanent leasing pathway and the group privacy statement identifies Orana Mall's operating entity and BNG-managed shopping-centre functions; beneficial ownership is not asserted",
       "match_status": "Matched",
       "matched_place_id": "place-au-nsw-orana-mall-marketplace"
+    },
+    {
+      "portfolio_asset_id": "qic-arpf-bathurst-owner",
+      "group_id": "group-qic-active-retail-property-fund",
+      "canonical_name": "Bathurst City Centre",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-bathurst-city-centre",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "12433",
+      "tenancy_count": "40",
+      "annual_visits_m": "2.2",
+      "source_url": "https://bathurstcitycentre.qicre.com/conditions-of-entry/centre-conditions-of-entry",
+      "source_type": "Official current venue ownership statement",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue conditions identify QIC Retail Pty Ltd as trustee for QIC Active Retail Property Fund and the sole stated owner of Bathurst City Centre",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-bathurst-city-centre"
+    },
+    {
+      "portfolio_asset_id": "jy-no8-carlingford-owner",
+      "group_id": "group-jy-no8-trust",
+      "canonical_name": "Carlingford Court",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Carlingford Court Shopping Centre",
+      "preferred_place_id": "place-au-nsw-carlingford-court",
+      "roles": "CO_OWNER",
+      "ownership_percentage": "50",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.thejygroup.com/projects/sydney-carlingford-court-shopping-centre/",
+      "source_type": "Official current co-owner property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "JY Group identifies JY No.8 Trust as its 50 percent ownership vehicle and confirms HomeCo holds the other 50 percent interest",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-carlingford-court"
+    },
+    {
+      "portfolio_asset_id": "hmc-lml-no5-carlingford-owner",
+      "group_id": "group-hmc-lml-no5-property-trust",
+      "canonical_name": "HomeCo Carlingford Court",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Carlingford Court|Carlingford Court Shopping Centre",
+      "preferred_place_id": "place-au-nsw-carlingford-court",
+      "roles": "CO_OWNER",
+      "ownership_percentage": "50",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://abr.business.gov.au/ABN/View?abn=47626901324",
+      "source_type": "Current Australian Business Register corroborated by current HMC results",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The active HMC LML No. 5 Property Trust carries the Carlingford Court business name and current HMC reporting retains HomeCo Carlingford Court in its managed retail-fund portfolio",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-carlingford-court"
+    },
+    {
+      "portfolio_asset_id": "vicinity-carlingford-management",
+      "group_id": "group-vicinity",
+      "canonical_name": "Carlingford Court",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Carlingford Court Shopping Centre",
+      "preferred_place_id": "place-au-nsw-carlingford-court",
+      "roles": "MANAGER|OPERATOR",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.vicinity.com.au/assets/sb/f/129601/x/7c9a8ff0dc/vicinity-centres-2025-modern-slavery-statement.pdf",
+      "source_type": "Official current managed-portfolio statement",
+      "source_date": "2025-06-30",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Vicinity lists Carlingford Court as managed only after divesting its ownership interest; current leasing control is not inferred from management alone",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-carlingford-court"
+    },
+    {
+      "portfolio_asset_id": "revelop-stanhope-village",
+      "group_id": "group-revelop",
+      "canonical_name": "Stanhope Village",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Stanhope Village Shopping Centre",
+      "preferred_place_id": "place-au-nsw-stanhope-village-shopping-centre",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "100",
+      "gla_sqm": "19454",
+      "tenancy_count": "",
+      "annual_visits_m": "8",
+      "source_url": "https://www.revelop.com.au/property/stanhope-village-shopping-centre-nsw",
+      "source_type": "Official current owner manager and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Revelop's current portfolio and venue identify full ownership direct centre management and permanent leasing for Stanhope Village plus current public centre metrics",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-stanhope-village-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "retpro-cessnock-village",
+      "group_id": "group-retpro",
+      "canonical_name": "Cessnock Village",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Cessnock Plaza|Cessnock Plaza Shopping Centre",
+      "preferred_place_id": "place-au-nsw-cessnock-plaza-shopping-centre",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://retprogroup.com.au/our-centres/cessnock-village/",
+      "source_type": "Official current manager and venue leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current MA Financial retail-services profile and venue route centre management permanent leasing and casual leasing through the same team; current beneficial ownership is not asserted",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-cessnock-plaza-shopping-centre"
     }
   ],
   "property_summaries": {
@@ -44617,43 +45020,55 @@
     },
     "place-au-nsw-bathurst-city-centre": {
       "place_id": "place-au-nsw-bathurst-city-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-bathurst-city-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/bathurst-city-centre",
+        "source_type": "Official current owner and manager asset profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from 12433 square metres of GLA a full-line Woolworths and multiple mini-major anchors; the current profile does not publish a formal SCCA class label"
       },
-      "research_status": "Partial",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-bathurst-city-centre",
-        "research_status": "Partial",
-        "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
+        "research_status": "Verified",
+        "source_url": "https://bathurstcitycentre.qicre.com/conditions-of-entry/centre-conditions-of-entry",
         "last_verified_at": "2026-09-02",
         "confidence": "High",
-        "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
+        "public_note": "Current QIC owner manager asset and venue sources confirm the legal fund owner in-house management direct leasing public centre metrics address and a defensible inferred sub-regional class"
       },
-      "leasing_arrangement": "Unknown",
+      "leasing_arrangement": "In-house",
       "relationship_ids": [
         "rel-portfolio-qic-bathurst-city-centre-manager",
-        "rel-portfolio-qic-bathurst-city-centre-operator"
+        "rel-portfolio-qic-bathurst-city-centre-operator",
+        "rel-portfolio-qic-bathurst-city-centre-leasing_controller",
+        "rel-portfolio-qic-arpf-bathurst-owner-owner"
       ],
       "group_ids": [
-        "group-qic"
+        "group-qic",
+        "group-qic-active-retail-property-fund"
       ],
-      "owner_names": [],
+      "owner_names": [
+        "QIC Active Retail Property Fund"
+      ],
       "manager_names": [
         "QIC Real Estate"
       ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "PROPERTY_GROUP_OVERLAP",
+      "portfolio_overlap_status": "LEASING_CONTROLLER_OVERLAP",
       "portfolio_overlap_groups": [
+        {
+          "group_id": "group-qic",
+          "canonical_name": "QIC Real Estate",
+          "role": "LEASING_CONTROLLER",
+          "bailey_property_count": 4,
+          "bailey_store_count": 4
+        },
         {
           "group_id": "group-qic",
           "canonical_name": "QIC Real Estate",
@@ -44713,7 +45128,12 @@
         "median_household_income": 878,
         "age_45_plus_pct": 43.2,
         "retail_businesses": 78
-      }
+      },
+      "gla_sqm": 12433.0,
+      "tenancy_count": 40,
+      "annual_visits": 2200000.0,
+      "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/bathurst-city-centre",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-bondi-junction-westfield": {
       "place_id": "place-au-nsw-bondi-junction-westfield",
@@ -45120,37 +45540,66 @@
     },
     "place-au-nsw-carlingford-court": {
       "place_id": "place-au-nsw-carlingford-court",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-carlingford-court",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.thejygroup.com/projects/sydney-carlingford-court-shopping-centre/",
+        "source_type": "Official current co-owner property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "JY Group explicitly classifies Carlingford Court as a sub-regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-carlingford-court",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.thejygroup.com/projects/sydney-carlingford-court-shopping-centre/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current JY HMC regulator and Vicinity evidence confirms the two 50 percent ownership vehicles separate Vicinity management current address and confirmed sub-regional class; current leasing control remains unresolved"
       },
       "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "relationship_ids": [
+        "rel-portfolio-jy-no8-carlingford-owner-co_owner",
+        "rel-portfolio-hmc-lml-no5-carlingford-owner-co_owner",
+        "rel-portfolio-vicinity-carlingford-management-manager",
+        "rel-portfolio-vicinity-carlingford-management-operator"
+      ],
+      "group_ids": [
+        "group-hmc-lml-no5-property-trust",
+        "group-jy-no8-trust",
+        "group-vicinity"
+      ],
+      "owner_names": [
+        "JY No.8 Trust",
+        "HMC LML No. 5 Property Trust"
+      ],
+      "manager_names": [
+        "Vicinity Centres"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
+      "portfolio_overlap_status": "PROPERTY_GROUP_OVERLAP",
+      "portfolio_overlap_groups": [
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "MANAGER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "OPERATOR",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        }
+      ],
+      "portfolio_white_space": true,
       "nearest_bailey_km": 6.33,
       "competitor_context": {
         "by_retailer": {
@@ -45493,32 +45942,40 @@
     },
     "place-au-nsw-cessnock-plaza-shopping-centre": {
       "place_id": "place-au-nsw-cessnock-plaza-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Neighbourhood",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-cessnock-plaza-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Neighbourhood",
+        "classification_method": "Confirmed",
+        "source_url": "https://retprogroup.com.au/our-centres/cessnock-village/",
+        "source_type": "Official current manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "MA Financial's current retail-services profile explicitly classifies Cessnock Village as a neighbourhood shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-cessnock-plaza-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://retprogroup.com.au/our-centres/cessnock-village/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current MA Financial retail-services and venue sources confirm the Cessnock Village identity direct management leasing address and neighbourhood class; current beneficial ownership remains unpublished"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-retpro-cessnock-village-manager",
+        "rel-portfolio-retpro-cessnock-village-operator",
+        "rel-portfolio-retpro-cessnock-village-leasing_controller"
+      ],
+      "group_ids": [
+        "group-retpro"
+      ],
       "owner_names": [],
-      "manager_names": [],
+      "manager_names": [
+        "RetPro"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -52163,35 +52620,46 @@
     },
     "place-au-nsw-stanhope-village-shopping-centre": {
       "place_id": "place-au-nsw-stanhope-village-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-stanhope-village-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.revelop.com.au/mirvac-sells-stanhope-village-for-158m-in-off-market-deal",
+        "source_type": "Official owner acquisition and current portfolio profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Revelop explicitly classifies Stanhope Village as a sub-regional centre and continues to list it in the active portfolio"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-stanhope-village-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.revelop.com.au/property/stanhope-village-shopping-centre-nsw",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Revelop and venue sources confirm 100 percent owner-group control in-house management direct leasing address current public metrics and a confirmed sub-regional class"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-revelop-stanhope-village-owner",
+        "rel-portfolio-revelop-stanhope-village-manager",
+        "rel-portfolio-revelop-stanhope-village-operator",
+        "rel-portfolio-revelop-stanhope-village-leasing_controller"
+      ],
+      "group_ids": [
+        "group-revelop"
+      ],
+      "owner_names": [
+        "Revelop"
+      ],
+      "manager_names": [
+        "Revelop"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 8.06,
@@ -52226,7 +52694,11 @@
         "median_household_income": 1452,
         "age_45_plus_pct": 33.1,
         "retail_businesses": 80
-      }
+      },
+      "gla_sqm": 19454.0,
+      "annual_visits": 8000000.0,
+      "source_url": "https://www.revelop.com.au/property/stanhope-village-shopping-centre-nsw",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-forster-stockland": {
       "place_id": "place-au-nsw-forster-stockland",
@@ -118470,7 +118942,7 @@
     },
     "group-vicinity": {
       "group_id": "group-vicinity",
-      "property_count": 22,
+      "property_count": 23,
       "bailey_property_count": 5,
       "bailey_store_count": 5,
       "bailey_property_ids": [
@@ -118484,6 +118956,10 @@
         "place-au-nsw-bankstown-central": [
           "CO_OWNER",
           "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-nsw-carlingford-court": [
           "MANAGER",
           "OPERATOR"
         ],
@@ -118606,6 +119082,7 @@
       },
       "white_space_property_ids": [
         "place-au-nsw-bankstown-central",
+        "place-au-nsw-carlingford-court",
         "place-au-nsw-chatswood-chase",
         "place-au-nsw-nepean-village",
         "place-au-nsw-warriewood-square",
@@ -118821,6 +119298,7 @@
           "OPERATOR"
         ],
         "place-au-nsw-bathurst-city-centre": [
+          "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
         ],
@@ -119294,11 +119772,16 @@
     },
     "group-retpro": {
       "group_id": "group-retpro",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-cessnock-plaza-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-qld-sugarland-shoppingtown": [
           "LEASING_CONTROLLER",
           "MANAGER",
@@ -119899,7 +120382,7 @@
     },
     "group-revelop": {
       "group_id": "group-revelop",
-      "property_count": 2,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -119911,6 +120394,12 @@
           "OWNER"
         ],
         "place-au-nsw-lake-macquarie-square": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ],
+        "place-au-nsw-stanhope-village-shopping-centre": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR",
@@ -121314,6 +121803,45 @@
       "asset_roles": {
         "place-au-nsw-warrawong-plaza-shopping-centre": [
           "EXTERNAL_LEASING_AGENT"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-jy-no8-trust": {
+      "group_id": "group-jy-no8-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-carlingford-court": [
+          "CO_OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-hmc-lml-no5-property-trust": {
+      "group_id": "group-hmc-lml-no5-property-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-carlingford-court": [
+          "CO_OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-qic-active-retail-property-fund": {
+      "group_id": "group-qic-active-retail-property-fund",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-bathurst-city-centre": [
+          "OWNER"
         ]
       },
       "white_space_property_ids": []
@@ -133388,7 +133916,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -133406,9 +133934,10 @@
         "values": {
           "nearest_bailey_km": 136.47,
           "group_ids": [
-            "group-qic"
+            "group-qic",
+            "group-qic-active-retail-property-fund"
           ],
-          "overlap_status": "PROPERTY_GROUP_OVERLAP"
+          "overlap_status": "LEASING_CONTROLLER_OVERLAP"
         }
       }
     },
@@ -133579,7 +134108,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -133593,11 +134122,15 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 6.33,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-hmc-lml-no5-property-trust",
+            "group-jy-no8-trust",
+            "group-vicinity"
+          ],
+          "overlap_status": "PROPERTY_GROUP_OVERLAP"
         }
       }
     },
@@ -133775,7 +134308,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Neighbourhood"
         }
       },
       "accessibility": {
@@ -133789,10 +134322,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 23.49,
-          "group_ids": [],
+          "group_ids": [
+            "group-retpro"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -137155,7 +137690,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -137169,11 +137704,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 8.06,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-revelop"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },

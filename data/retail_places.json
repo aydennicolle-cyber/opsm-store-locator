@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T03:53:47+00:00",
+    "generated_at": "2026-09-02T03:59:13+00:00",
     "place_count": 1032,
     "centre_count": 584,
     "corridor_count": 448,
@@ -9866,8 +9866,8 @@
       "state": "NSW",
       "locality": "Bathurst",
       "suburb": "Bathurst",
-      "postcode": "",
-      "address": "",
+      "postcode": "2795",
+      "address": "210 Howick Street",
       "latitude": -33.41865,
       "longitude": 149.58176,
       "owner": "",
@@ -9879,12 +9879,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "",
-      "source_url": "",
-      "source_date": "",
+      "official_url": "https://bathurstcitycentre.qicre.com/",
+      "source_url": "https://bathurstcitycentre.qicre.com/conditions-of-entry/centre-conditions-of-entry",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "Current QIC owner manager and venue sources confirm Bathurst City Centre's identity address fund ownership active operation and direct leasing while the stable place ID is retained",
       "retailers": [
         "Specsavers"
       ],
@@ -9892,7 +9892,7 @@
       "has_bailey": false,
       "mapping_confidence": "High",
       "certification_status": "Best available",
-      "evidence_tier": "Derived"
+      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-nsw-bondi-junction-westfield",
@@ -10026,7 +10026,10 @@
       "centre_id": "place-au-nsw-carlingford-court",
       "name": "Carlingford Court",
       "canonical_name": "Carlingford Court",
-      "aliases": [],
+      "aliases": [
+        "Carlingford Court Shopping Centre",
+        "HomeCo Carlingford Court"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
@@ -10034,7 +10037,7 @@
       "locality": "Carlingford",
       "suburb": "Carlingford",
       "postcode": "2118",
-      "address": "Shop 204, Carlingford Court, Cnr Carlingford Road & Pennant Hill Road, Carlingford, NSW, 2118",
+      "address": "Corner Pennant Hills Road and Carlingford Road",
       "latitude": -33.77669,
       "longitude": 151.05203,
       "owner": "",
@@ -10046,12 +10049,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "https://www.specsavers.com.au/stores/carlingford",
-      "source_url": "https://www.specsavers.com.au/stores/carlingford",
+      "official_url": "https://www.carlingfordcourt.com.au/",
+      "source_url": "https://www.thejygroup.com/projects/sydney-carlingford-court-shopping-centre/",
       "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "High",
-      "source_basis": "Official address explicitly names Carlingford Court",
+      "source_basis": "Current co-owner HMC regulator and Vicinity evidence confirms Carlingford Court's identity address two ownership vehicles separate management and active status while the stable place ID is retained",
       "retailers": [
         "Specsavers"
       ],
@@ -10187,17 +10190,20 @@
     {
       "place_id": "place-au-nsw-cessnock-plaza-shopping-centre",
       "centre_id": "place-au-nsw-cessnock-plaza-shopping-centre",
-      "name": "Cessnock Plaza Shopping Centre",
-      "canonical_name": "Cessnock Plaza Shopping Centre",
-      "aliases": [],
+      "name": "Cessnock Village",
+      "canonical_name": "Cessnock Village",
+      "aliases": [
+        "Cessnock Plaza Shopping Centre",
+        "Cessnock Plaza"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
       "state": "NSW",
       "locality": "Cessnock",
       "suburb": "Cessnock",
-      "postcode": "",
-      "address": "",
+      "postcode": "2325",
+      "address": "1 Keene Street",
       "latitude": -32.834255,
       "longitude": 151.35481,
       "owner": "",
@@ -10209,12 +10215,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "",
-      "source_url": "",
-      "source_date": "",
+      "official_url": "https://cessnockvillage.com.au/",
+      "source_url": "https://retprogroup.com.au/our-centres/cessnock-village/",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "Current MA Financial retail-services and venue sources establish Cessnock Village as the current name and confirm its address management direct leasing and active status while the stable place ID is retained",
       "retailers": [
         "Specsavers"
       ],
@@ -10222,7 +10228,7 @@
       "has_bailey": false,
       "mapping_confidence": "High",
       "certification_status": "Best available",
-      "evidence_tier": "Derived"
+      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-nsw-charlestown-square",
@@ -12998,10 +13004,11 @@
     {
       "place_id": "place-au-nsw-stanhope-village-shopping-centre",
       "centre_id": "place-au-nsw-stanhope-village-shopping-centre",
-      "name": "Stanhope Village Shopping Centre",
-      "canonical_name": "Stanhope Village Shopping Centre",
+      "name": "Stanhope Village",
+      "canonical_name": "Stanhope Village",
       "aliases": [
-        "Stanhope Village"
+        "Stanhope Village",
+        "Stanhope Village Shopping Centre"
       ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
@@ -13009,8 +13016,8 @@
       "state": "NSW",
       "locality": "Stanhope Gardens",
       "suburb": "Stanhope Gardens",
-      "postcode": "",
-      "address": "",
+      "postcode": "2768",
+      "address": "2 Sentry Drive",
       "latitude": -33.71977,
       "longitude": 150.92029,
       "owner": "",
@@ -13023,11 +13030,11 @@
       "tenancy_count": "",
       "redevelopment_activity": "",
       "official_url": "https://www.stanhopevillage.com.au/",
-      "source_url": "https://www.stanhopevillage.com.au/",
-      "source_date": "",
+      "source_url": "https://www.revelop.com.au/property/stanhope-village-shopping-centre-nsw",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "Current Revelop and venue sources establish Stanhope Village as the current name and confirm its address full ownership management direct leasing and active status while the stable place ID is retained",
       "retailers": [
         "Specsavers"
       ],

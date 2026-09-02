@@ -1022,6 +1022,54 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(orana["leasing_arrangement"], "In-house")
         self.assertEqual(orana["gla_sqm"], 23683.41)
 
+    def test_current_bathurst_carlingford_cessnock_and_stanhope_roles_are_explicit(self) -> None:
+        groups = {group["group_id"]: group for group in self.groups}
+        self.assertEqual(groups["group-jy-no8-trust"]["parent_group_id"], "group-jy-group")
+        self.assertEqual(
+            groups["group-hmc-lml-no5-property-trust"]["parent_group_id"],
+            "group-hmc-capital",
+        )
+        self.assertEqual(
+            groups["group-qic-active-retail-property-fund"]["parent_group_id"],
+            "group-qic",
+        )
+
+        bathurst = self.payload["property_summaries"]["place-au-nsw-bathurst-city-centre"]
+        self.assertEqual(bathurst["research_status"], "Verified")
+        self.assertEqual(bathurst["centre_class"], "Sub-regional")
+        self.assertEqual(bathurst["owner_names"], ["QIC Active Retail Property Fund"])
+        self.assertEqual(bathurst["manager_names"], ["QIC Real Estate"])
+        self.assertEqual(bathurst["leasing_arrangement"], "In-house")
+        self.assertEqual(bathurst["gla_sqm"], 12433)
+        self.assertEqual(bathurst["tenancy_count"], 40)
+        self.assertEqual(bathurst["annual_visits"], 2200000)
+
+        carlingford = self.payload["property_summaries"]["place-au-nsw-carlingford-court"]
+        self.assertEqual(carlingford["research_status"], "Partial")
+        self.assertEqual(carlingford["centre_class"], "Sub-regional")
+        self.assertEqual(
+            carlingford["owner_names"],
+            ["JY No.8 Trust", "HMC LML No. 5 Property Trust"],
+        )
+        self.assertEqual(carlingford["manager_names"], ["Vicinity Centres"])
+        self.assertEqual(carlingford["leasing_arrangement"], "Unknown")
+
+        cessnock = self.payload["property_summaries"]["place-au-nsw-cessnock-plaza-shopping-centre"]
+        self.assertEqual(cessnock["research_status"], "Partial")
+        self.assertEqual(cessnock["centre_class"], "Neighbourhood")
+        self.assertEqual(cessnock["owner_names"], [])
+        self.assertEqual(cessnock["manager_names"], ["RetPro"])
+        self.assertEqual(cessnock["leasing_arrangement"], "In-house")
+
+        stanhope = self.payload["property_summaries"]["place-au-nsw-stanhope-village-shopping-centre"]
+        self.assertEqual(stanhope["research_status"], "Verified")
+        self.assertEqual(stanhope["centre_class"], "Sub-regional")
+        self.assertEqual(stanhope["owner_names"], ["Revelop"])
+        self.assertEqual(stanhope["manager_names"], ["Revelop"])
+        self.assertEqual(stanhope["leasing_arrangement"], "In-house")
+        self.assertEqual(stanhope["gla_sqm"], 19454)
+        self.assertEqual(stanhope["annual_visits"], 8000000)
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

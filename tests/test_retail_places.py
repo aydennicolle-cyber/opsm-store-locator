@@ -545,6 +545,52 @@ class RetailPlaceTests(unittest.TestCase):
             places["place-au-nsw-orana-mall-marketplace"]["aliases"],
         )
 
+    def test_current_bathurst_carlingford_cessnock_and_stanhope_names_are_canonical(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        expected = {
+            "place-au-nsw-bathurst-city-centre": (
+                "Bathurst City Centre",
+                "210 Howick Street",
+                "Bathurst",
+                "2795",
+            ),
+            "place-au-nsw-carlingford-court": (
+                "Carlingford Court",
+                "Corner Pennant Hills Road and Carlingford Road",
+                "Carlingford",
+                "2118",
+            ),
+            "place-au-nsw-cessnock-plaza-shopping-centre": (
+                "Cessnock Village",
+                "1 Keene Street",
+                "Cessnock",
+                "2325",
+            ),
+            "place-au-nsw-stanhope-village-shopping-centre": (
+                "Stanhope Village",
+                "2 Sentry Drive",
+                "Stanhope Gardens",
+                "2768",
+            ),
+        }
+        for place_id, (name, address, locality, postcode) in expected.items():
+            with self.subTest(place_id=place_id):
+                place = places[place_id]
+                self.assertEqual(place["name"], name)
+                self.assertEqual(place["address"], address)
+                self.assertEqual(place["locality"], locality)
+                self.assertEqual(place["postcode"], postcode)
+                self.assertEqual(place["location_setting"], "Shopping Centre")
+
+        self.assertIn(
+            "Cessnock Plaza Shopping Centre",
+            places["place-au-nsw-cessnock-plaza-shopping-centre"]["aliases"],
+        )
+        self.assertIn(
+            "Stanhope Village Shopping Centre",
+            places["place-au-nsw-stanhope-village-shopping-centre"]["aliases"],
+        )
+
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, expected_name in {
