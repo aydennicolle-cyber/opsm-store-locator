@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T05:22:54+00:00",
+    "generated_at": "2026-09-02T05:26:57+00:00",
     "benchmark": "All mapped Bailey Nelson stores, separated by country and location setting",
     "method": "Transparent lookalike screening rank; not a probability of store success",
     "weights": {
@@ -5408,7 +5408,7 @@
         "retailers": [
           "Specsavers"
         ],
-        "evidence_url": "https://www.specsavers.com.au/stores/herveybaypialba",
+        "evidence_url": "https://retail.centuria.com.au/retail-centre/pialba-place/",
         "rank": 151
       },
       {
@@ -7455,10 +7455,10 @@
       },
       {
         "place_id": "place-au-qld-castletown-shoppingworld",
-        "name": "Castletown Shoppingworld",
+        "name": "Castletown",
         "country": "Australia",
         "state": "QLD",
-        "locality": "Pimlico",
+        "locality": "Hyde Park",
         "location_setting": "Shopping Centre",
         "score": 50,
         "screening_completeness": 90,
@@ -7479,7 +7479,7 @@
         "retailers": [
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://castletown.com.au/",
         "rank": 223
       },
       {
@@ -9095,7 +9095,7 @@
       },
       {
         "place_id": "place-au-qld-nerang-town-centre",
-        "name": "Nerang Town Centre",
+        "name": "My Centre Nerang",
         "country": "Australia",
         "state": "QLD",
         "locality": "Nerang",

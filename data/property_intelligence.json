@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T05:23:02.936185+00:00",
+  "generated_at": "2026-09-02T05:27:04.790326+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 140,
-    "relationship_count": 956,
-    "active_relationship_count": 954,
+    "group_count": 142,
+    "relationship_count": 965,
+    "active_relationship_count": 963,
     "shopping_centre_count": 581,
-    "researched_property_count": 286,
-    "classed_property_count": 282,
+    "researched_property_count": 289,
+    "classed_property_count": 285,
     "conflict_count": 0,
     "development_asset_count": 1,
     "unmatched_active_portfolio_count": 0,
@@ -2406,6 +2406,40 @@
         "Super Highway Express Pty Ltd ATF Morris Property Trust",
         "Morris Property Trust"
       ]
+    },
+    {
+      "group_id": "group-pialba-place-trust",
+      "canonical_name": "Pialba Place Trust",
+      "parent_group_id": "group-centuria-capital",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://centuria.com.au/unlisted-property-funds/property-portfolio/?pg=2",
+      "status": "Active",
+      "source_url": "https://www.aer.gov.au/industry/registers/retail-exemptions/pialba-place-management-pty-ltd-atf-pialba-place-trust-pialba-place-shopping-centre-retail-exemption",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Pialba Place Trust",
+        "Pialba Place Management Pty Ltd ATF the Pialba Place Trust"
+      ]
+    },
+    {
+      "group_id": "group-handler-property",
+      "canonical_name": "Handler Property",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "EXTERNAL_AGENCY",
+      "country_scope": "Australia",
+      "official_url": "https://handler.com.au/",
+      "status": "Active",
+      "source_url": "https://handler.com.au/property/my-centre-nerang-57-station-st-nerang-qld-4211/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Handler Property",
+        "Handler Holdings Pty Ltd"
+      ]
     }
   ],
   "group_alias_index": {
@@ -2690,7 +2724,11 @@
     "mintusinvestmentsptyltdatftheretailinvestmenttrust5": "group-mintus-beenleigh-trust",
     "theretailinvestmenttrust5": "group-mintus-beenleigh-trust",
     "superhighwayexpressptyltdatfmorrispropertytrust": "group-morris-property-trust",
-    "morrispropertytrust": "group-morris-property-trust"
+    "morrispropertytrust": "group-morris-property-trust",
+    "pialbaplacetrust": "group-pialba-place-trust",
+    "pialbaplacemanagementptyltdatfthepialbaplacetrust": "group-pialba-place-trust",
+    "handlerproperty": "group-handler-property",
+    "handlerholdingsptyltd": "group-handler-property"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -3684,6 +3722,22 @@
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "public_note": "The current venue privacy statement identifies the property owner as Super Highway Express Pty Ltd as trustee for Morris Property Trust",
+      "derived_from": "curated_relationship"
+    },
+    {
+      "relationship_id": "rel-nerang-handler-leasing",
+      "place_id": "place-au-qld-nerang-town-centre",
+      "group_id": "group-handler-property",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://handler.com.au/property/my-centre-nerang-57-station-st-nerang-qld-4211/",
+      "source_type": "Official current agency listing corroborated by venue contact page",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current Handler listing and centre contact page identify Handler Property as the appointed retail leasing agency",
       "derived_from": "curated_relationship"
     },
     {
@@ -17975,6 +18029,134 @@
       "derived_from": "official_portfolio_asset"
     },
     {
+      "relationship_id": "rel-portfolio-pialba-place-owner-owner",
+      "place_id": "place-au-qld-pialba-place",
+      "group_id": "group-pialba-place-trust",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://centuria.com.au/unlisted-property-funds/property-portfolio/?pg=2",
+      "source_type": "Official current fund portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Centuria's current fund portfolio identifies Pialba Place Trust as the owning vehicle and reports current public GLA",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-centuria-pialba-place-manager",
+      "place_id": "place-au-qld-pialba-place",
+      "group_id": "group-centuria-capital",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://centuria.com.au/property-portfolio/pialba-place-shopping-centre-leasing/",
+      "source_type": "Official current manager and leasing property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Centuria publishes Pialba Place in its current retail portfolio and provides the direct permanent leasing pathway and current public metrics",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-centuria-pialba-place-operator",
+      "place_id": "place-au-qld-pialba-place",
+      "group_id": "group-centuria-capital",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://centuria.com.au/property-portfolio/pialba-place-shopping-centre-leasing/",
+      "source_type": "Official current manager and leasing property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Centuria publishes Pialba Place in its current retail portfolio and provides the direct permanent leasing pathway and current public metrics",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-centuria-pialba-place-leasing_controller",
+      "place_id": "place-au-qld-pialba-place",
+      "group_id": "group-centuria-capital",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://centuria.com.au/property-portfolio/pialba-place-shopping-centre-leasing/",
+      "source_type": "Official current manager and leasing property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Centuria publishes Pialba Place in its current retail portfolio and provides the direct permanent leasing pathway and current public metrics",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-castletown-owner",
+      "place_id": "place-au-qld-castletown-shoppingworld",
+      "group_id": "group-mcconaghy",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/castletown/",
+      "source_type": "Official current owner manager and asset profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy identifies Castletown as a purchased current asset in its portfolio formally classifies it as Sub Regional and links its in-house leasing channel; tenant count combines the published three majors four mini-majors and 119 specialties",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-castletown-manager",
+      "place_id": "place-au-qld-castletown-shoppingworld",
+      "group_id": "group-mcconaghy",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/castletown/",
+      "source_type": "Official current owner manager and asset profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy identifies Castletown as a purchased current asset in its portfolio formally classifies it as Sub Regional and links its in-house leasing channel; tenant count combines the published three majors four mini-majors and 119 specialties",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-castletown-operator",
+      "place_id": "place-au-qld-castletown-shoppingworld",
+      "group_id": "group-mcconaghy",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/castletown/",
+      "source_type": "Official current owner manager and asset profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy identifies Castletown as a purchased current asset in its portfolio formally classifies it as Sub Regional and links its in-house leasing channel; tenant count combines the published three majors four mini-majors and 119 specialties",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-castletown-leasing_controller",
+      "place_id": "place-au-qld-castletown-shoppingworld",
+      "group_id": "group-mcconaghy",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/castletown/",
+      "source_type": "Official current owner manager and asset profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy identifies Castletown as a purchased current asset in its portfolio formally classifies it as Sub Regional and links its in-house leasing channel; tenant count combines the published three majors four mini-majors and 119 specialties",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
       "relationship_id": "rel-portfolio-perron-galleria-co_owner",
       "place_id": "place-au-wa-morley-galleria",
       "group_id": "group-perron",
@@ -27283,6 +27465,75 @@
       "public_note": "The current venue identifies Mintus as operator and routes permanent leasing through the Mintus leasing manager",
       "match_status": "Matched",
       "matched_place_id": "place-au-qld-beenleigh-marketplace"
+    },
+    {
+      "portfolio_asset_id": "pialba-place-owner",
+      "group_id": "group-pialba-place-trust",
+      "canonical_name": "Pialba Place",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "",
+      "preferred_place_id": "place-au-qld-pialba-place",
+      "roles": "OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "15746",
+      "tenancy_count": "20",
+      "annual_visits_m": "",
+      "source_url": "https://centuria.com.au/unlisted-property-funds/property-portfolio/?pg=2",
+      "source_type": "Official current fund portfolio",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Centuria's current fund portfolio identifies Pialba Place Trust as the owning vehicle and reports current public GLA",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-pialba-place"
+    },
+    {
+      "portfolio_asset_id": "centuria-pialba-place",
+      "group_id": "group-centuria-capital",
+      "canonical_name": "Pialba Place",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "",
+      "preferred_place_id": "place-au-qld-pialba-place",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "15746",
+      "tenancy_count": "20",
+      "annual_visits_m": "",
+      "source_url": "https://centuria.com.au/property-portfolio/pialba-place-shopping-centre-leasing/",
+      "source_type": "Official current manager and leasing property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Centuria publishes Pialba Place in its current retail portfolio and provides the direct permanent leasing pathway and current public metrics",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-pialba-place"
+    },
+    {
+      "portfolio_asset_id": "mcconaghy-castletown",
+      "group_id": "group-mcconaghy",
+      "canonical_name": "Castletown",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Castletown Shoppingworld",
+      "preferred_place_id": "place-au-qld-castletown-shoppingworld",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "37544",
+      "tenancy_count": "126",
+      "annual_visits_m": "",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/castletown/",
+      "source_type": "Official current owner manager and asset profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "McConaghy identifies Castletown as a purchased current asset in its portfolio formally classifies it as Sub Regional and links its in-house leasing channel; tenant count combines the published three majors four mini-majors and 119 specialties",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-castletown-shoppingworld"
     },
     {
       "portfolio_asset_id": "perron-galleria",
@@ -65385,35 +65636,46 @@
     },
     "place-au-qld-castletown-shoppingworld": {
       "place_id": "place-au-qld-castletown-shoppingworld",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-qld-castletown-shoppingworld",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://mcconaghyproperties.com.au/our-centres/castletown/",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "McConaghy explicitly classifies Castletown as a Sub Regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-qld-castletown-shoppingworld",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://mcconaghyproperties.com.au/our-centres/castletown/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current McConaghy and venue sources confirm ownership management operation direct leasing address confirmed Sub Regional class public metrics and mapped Specsavers tenancy"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-mcconaghy-castletown-owner",
+        "rel-portfolio-mcconaghy-castletown-manager",
+        "rel-portfolio-mcconaghy-castletown-operator",
+        "rel-portfolio-mcconaghy-castletown-leasing_controller"
+      ],
+      "group_ids": [
+        "group-mcconaghy"
+      ],
+      "owner_names": [
+        "McConaghy Group"
+      ],
+      "manager_names": [
+        "McConaghy Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 1061.11,
@@ -65470,7 +65732,11 @@
         "median_household_income": 953,
         "age_45_plus_pct": 43.8,
         "retail_businesses": 102
-      }
+      },
+      "gla_sqm": 37544.0,
+      "tenancy_count": 126,
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/castletown/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-unknown-central-highlands-marketplace": {
       "place_id": "place-au-unknown-central-highlands-marketplace",
@@ -67693,6 +67959,77 @@
       "source_url": "https://www.retailfirst.com.au/leasing",
       "last_verified_at": "2026-09-02"
     },
+    "place-au-qld-nerang-town-centre": {
+      "place_id": "place-au-qld-nerang-town-centre",
+      "centre_class": "Neighbourhood",
+      "centre_class_method": "Inferred",
+      "centre_class_evidence": {
+        "place_id": "place-au-qld-nerang-town-centre",
+        "centre_class": "Neighbourhood",
+        "classification_method": "Inferred",
+        "source_url": "https://mycentrenerang.com.au/centre-info/",
+        "source_type": "Official current centre profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Neighbourhood class inferred from two full-line supermarkets and more than 30 convenience service medical fitness and specialty tenants; the source does not publish a formal class label"
+      },
+      "research_status": "Partial",
+      "research_evidence": {
+        "place_id": "place-au-qld-nerang-town-centre",
+        "research_status": "Partial",
+        "source_url": "https://handler.com.au/property/my-centre-nerang-57-station-st-nerang-qld-4211/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current centre and Handler sources confirm the address inferred neighbourhood format appointed external leasing agency and mapped Specsavers tenancy; ownership and property management remain explicitly unknown"
+      },
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-nerang-handler-leasing"
+      ],
+      "group_ids": [
+        "group-handler-property"
+      ],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 9.7,
+      "competitor_context": {
+        "by_retailer": {
+          "Specsavers": {
+            "in_centre": [
+              {
+                "store_id": "specsavers-3628",
+                "name": "Nerang",
+                "distance_km": 0.0
+              }
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": []
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 8.3,
+          "Bailey Nelson": 9.7,
+          "OPSM": 8.0,
+          "Oscar Wylee": 8.0,
+          "Specsavers": 0.0
+        },
+        "independent_2km_count": 0
+      },
+      "market": {
+        "sa2_code": "309061248",
+        "sa2_name": "Nerang - Mount Nathan",
+        "population_2025": 22560,
+        "population_growth_pct": 4.5,
+        "median_household_income": 945,
+        "age_45_plus_pct": 42.8,
+        "retail_businesses": 171
+      }
+    },
     "place-au-qld-nambour-plaza": {
       "place_id": "place-au-qld-nambour-plaza",
       "centre_class": "Unknown",
@@ -67774,73 +68111,6 @@
         "median_household_income": 866,
         "age_45_plus_pct": 44,
         "retail_businesses": 111
-      }
-    },
-    "place-au-qld-nerang-town-centre": {
-      "place_id": "place-au-qld-nerang-town-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-qld-nerang-town-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-qld-nerang-town-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 9.7,
-      "competitor_context": {
-        "by_retailer": {
-          "Specsavers": {
-            "in_centre": [
-              {
-                "store_id": "specsavers-3628",
-                "name": "Nerang",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 8.3,
-          "Bailey Nelson": 9.7,
-          "OPSM": 8.0,
-          "Oscar Wylee": 8.0,
-          "Specsavers": 0.0
-        },
-        "independent_2km_count": 0
-      },
-      "market": {
-        "sa2_code": "309061248",
-        "sa2_name": "Nerang - Mount Nathan",
-        "population_2025": 22560,
-        "population_growth_pct": 4.5,
-        "median_household_income": 945,
-        "age_45_plus_pct": 42.8,
-        "retail_businesses": 171
       }
     },
     "place-au-qld-noosa-civic-shopping-centre": {
@@ -68346,35 +68616,47 @@
     },
     "place-au-qld-pialba-place": {
       "place_id": "place-au-qld-pialba-place",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-qld-pialba-place",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://centuria.com.au/property-portfolio/pialba-place-shopping-centre-leasing/",
+        "source_type": "Official current manager and leasing property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional class inferred from the current Big W and Coles anchors plus specialty offer; the source describes the property as convenience based but does not publish a formal SCCA class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-qld-pialba-place",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://centuria.com.au/property-portfolio/pialba-place-shopping-centre-leasing/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Centuria fund venue and leasing sources confirm the owning trust management operation direct leasing address public metrics inferred class and mapped Specsavers tenancy"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-pialba-place-owner-owner",
+        "rel-portfolio-centuria-pialba-place-manager",
+        "rel-portfolio-centuria-pialba-place-operator",
+        "rel-portfolio-centuria-pialba-place-leasing_controller"
+      ],
+      "group_ids": [
+        "group-centuria-capital",
+        "group-pialba-place-trust"
+      ],
+      "owner_names": [
+        "Pialba Place Trust"
+      ],
+      "manager_names": [
+        "Centuria Capital Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 218.37,
@@ -68432,7 +68714,11 @@
         "median_household_income": 666,
         "age_45_plus_pct": 57.1,
         "retail_businesses": 107
-      }
+      },
+      "gla_sqm": 15746.0,
+      "tenancy_count": 20,
+      "source_url": "https://centuria.com.au/unlisted-property-funds/property-portfolio/?pg=2",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-qld-redbank-plaza": {
       "place_id": "place-au-qld-redbank-plaza",
@@ -122292,7 +122578,7 @@
     },
     "group-mcconaghy": {
       "group_id": "group-mcconaghy",
-      "property_count": 3,
+      "property_count": 4,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -122303,6 +122589,12 @@
           "OPERATOR"
         ],
         "place-au-nsw-lismore-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ],
+        "place-au-qld-castletown-shoppingworld": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR",
@@ -123408,11 +123700,16 @@
     },
     "group-centuria-capital": {
       "group_id": "group-centuria-capital",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-qld-pialba-place": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-wa-bunbury-centrepoint": [
           "MANAGER",
           "OPERATOR"
@@ -123897,6 +124194,32 @@
       "asset_roles": {
         "place-au-nt-oasis-shopping-centre": [
           "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-pialba-place-trust": {
+      "group_id": "group-pialba-place-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-pialba-place": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-handler-property": {
+      "group_id": "group-handler-property",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-nerang-town-centre": [
+          "EXTERNAL_LEASING_AGENT"
         ]
       },
       "white_space_property_ids": []
@@ -144958,7 +145281,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -144972,11 +145295,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 1061.11,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-mcconaghy"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -146072,6 +146397,57 @@
         }
       }
     },
+    "place-au-qld-nerang-town-centre": {
+      "schema_version": 1,
+      "place_id": "place-au-qld-nerang-town-centre",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "309061248",
+          "sa2_name": "Nerang - Mount Nathan",
+          "population_2025": 22560,
+          "population_growth_pct": 4.5,
+          "median_household_income": 945,
+          "age_45_plus_pct": 42.8,
+          "retail_businesses": 171
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-au-qld-nerang-town-centre.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "Shopping Centre",
+          "centre_class": "Neighbourhood"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Available",
+        "values": {
+          "nearest_bailey_km": 9.7,
+          "group_ids": [
+            "group-handler-property"
+          ],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
     "place-au-qld-nambour-plaza": {
       "schema_version": 1,
       "place_id": "place-au-qld-nambour-plaza",
@@ -146116,55 +146492,6 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 68.61,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
-    "place-au-qld-nerang-town-centre": {
-      "schema_version": 1,
-      "place_id": "place-au-qld-nerang-town-centre",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "309061248",
-          "sa2_name": "Nerang - Mount Nathan",
-          "population_2025": 22560,
-          "population_growth_pct": 4.5,
-          "median_household_income": 945,
-          "age_45_plus_pct": 42.8,
-          "retail_businesses": 171
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-qld-nerang-town-centre.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 9.7,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -146452,7 +146779,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -146466,11 +146793,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 218.37,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-centuria-capital",
+            "group-pialba-place-trust"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },

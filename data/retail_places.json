@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T05:22:54+00:00",
+    "generated_at": "2026-09-02T05:26:57+00:00",
     "place_count": 1024,
     "centre_count": 581,
     "corridor_count": 443,
@@ -17411,17 +17411,20 @@
     {
       "place_id": "place-au-qld-castletown-shoppingworld",
       "centre_id": "place-au-qld-castletown-shoppingworld",
-      "name": "Castletown Shoppingworld",
-      "canonical_name": "Castletown Shoppingworld",
-      "aliases": [],
+      "name": "Castletown",
+      "canonical_name": "Castletown",
+      "aliases": [
+        "Castletown Shoppingworld",
+        "Castletown Shopping Centre"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
       "state": "QLD",
-      "locality": "Pimlico",
-      "suburb": "Pimlico",
-      "postcode": "",
-      "address": "",
+      "locality": "Hyde Park",
+      "suburb": "Hyde Park",
+      "postcode": "4812",
+      "address": "Corner Woolcock Street and Kings Road",
       "latitude": -19.2718,
       "longitude": 146.7905,
       "owner": "",
@@ -17433,12 +17436,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "",
-      "source_url": "",
-      "source_date": "",
+      "official_url": "https://castletown.com.au/",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/castletown/",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "Current McConaghy and venue sources establish Castletown as the current centre name and confirm its address ownership management class public metrics leasing and Specsavers tenancy",
       "retailers": [
         "Specsavers"
       ],
@@ -17446,7 +17449,7 @@
       "has_bailey": false,
       "mapping_confidence": "High",
       "certification_status": "Best available",
-      "evidence_tier": "Derived"
+      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-unknown-central-highlands-marketplace",
@@ -18367,6 +18370,49 @@
       "evidence_tier": "Derived"
     },
     {
+      "place_id": "place-au-qld-nerang-town-centre",
+      "centre_id": "place-au-qld-nerang-town-centre",
+      "name": "My Centre Nerang",
+      "canonical_name": "My Centre Nerang",
+      "aliases": [
+        "My Centre Nerang",
+        "Nerang Town Centre"
+      ],
+      "place_type": "Shopping Centre",
+      "location_setting": "Shopping Centre",
+      "country": "Australia",
+      "state": "QLD",
+      "locality": "Nerang",
+      "suburb": "Nerang",
+      "postcode": "4211",
+      "address": "57 Station Street",
+      "latitude": -27.997887,
+      "longitude": 153.33832,
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": "",
+      "annual_visits": "",
+      "trade_area_population": "",
+      "anchors": [],
+      "tenancy_count": "",
+      "redevelopment_activity": "",
+      "official_url": "https://mycentrenerang.com.au/",
+      "source_url": "https://mycentrenerang.com.au/centre-info/",
+      "source_date": "2026-09-02",
+      "status": "Active",
+      "confidence": "Medium",
+      "source_basis": "Current centre and Handler sources establish My Centre Nerang as the current name and confirm its address retail format external leasing agency and Specsavers tenancy while ownership remains unknown",
+      "retailers": [
+        "Specsavers"
+      ],
+      "optical_store_count": 1,
+      "has_bailey": false,
+      "mapping_confidence": "High",
+      "certification_status": "Best available",
+      "evidence_tier": "Official"
+    },
+    {
       "place_id": "place-au-qld-nambour-plaza",
       "centre_id": "place-au-qld-nambour-plaza",
       "name": "Nambour Plaza",
@@ -18405,48 +18451,6 @@
       "mapping_confidence": "High",
       "certification_status": "Best available",
       "evidence_tier": "Derived"
-    },
-    {
-      "place_id": "place-au-qld-nerang-town-centre",
-      "centre_id": "place-au-qld-nerang-town-centre",
-      "name": "Nerang Town Centre",
-      "canonical_name": "Nerang Town Centre",
-      "aliases": [
-        "My Centre Nerang"
-      ],
-      "place_type": "Shopping Centre",
-      "location_setting": "Shopping Centre",
-      "country": "Australia",
-      "state": "QLD",
-      "locality": "Nerang",
-      "suburb": "Nerang",
-      "postcode": "",
-      "address": "",
-      "latitude": -27.997887,
-      "longitude": 153.33832,
-      "owner": "",
-      "manager": "",
-      "centre_type": "",
-      "gla_sqm": "",
-      "annual_visits": "",
-      "trade_area_population": "",
-      "anchors": [],
-      "tenancy_count": "",
-      "redevelopment_activity": "",
-      "official_url": "https://mycentrenerang.com.au/",
-      "source_url": "https://mycentrenerang.com.au/",
-      "source_date": "",
-      "status": "Active",
-      "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
-      "retailers": [
-        "Specsavers"
-      ],
-      "optical_store_count": 1,
-      "has_bailey": false,
-      "mapping_confidence": "High",
-      "certification_status": "Best available",
-      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-qld-noosa-civic-shopping-centre",
@@ -18664,7 +18668,9 @@
       "centre_id": "place-au-qld-pialba-place",
       "name": "Pialba Place",
       "canonical_name": "Pialba Place",
-      "aliases": [],
+      "aliases": [
+        "Pialba Place Shopping Centre"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
@@ -18672,7 +18678,7 @@
       "locality": "Pialba",
       "suburb": "Pialba",
       "postcode": "4655",
-      "address": "Shop 16, Pialba Place, Cnr Hunter St & Old Marybough Rd, Pialba, QLD, 4655",
+      "address": "30 Main Street",
       "latitude": -25.283688,
       "longitude": 152.83966,
       "owner": "",
@@ -18684,12 +18690,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "https://www.specsavers.com.au/stores/herveybaypialba",
-      "source_url": "https://www.specsavers.com.au/stores/herveybaypialba",
+      "official_url": "https://retail.centuria.com.au/retail-centre/pialba-place/",
+      "source_url": "https://centuria.com.au/property-portfolio/pialba-place-shopping-centre-leasing/",
       "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "High",
-      "source_basis": "Official address explicitly names Pialba Place",
+      "source_basis": "Current Centuria fund venue and leasing sources confirm the centre name address fund ownership management direct leasing public metrics and Specsavers tenancy",
       "retailers": [
         "Specsavers"
       ],

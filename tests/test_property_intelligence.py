@@ -1472,6 +1472,46 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(oasis["manager_names"], [])
         self.assertEqual(oasis["leasing_arrangement"], "Unknown")
 
+    def test_pialba_castletown_and_nerang_property_profiles_preserve_roles(self) -> None:
+        pialba = self.payload["property_summaries"]["place-au-qld-pialba-place"]
+        self.assertEqual(pialba["research_status"], "Verified")
+        self.assertEqual(pialba["centre_class"], "Sub-regional")
+        self.assertEqual(pialba["centre_class_method"], "Inferred")
+        self.assertEqual(pialba["owner_names"], ["Pialba Place Trust"])
+        self.assertEqual(pialba["manager_names"], ["Centuria Capital Group"])
+        self.assertEqual(pialba["leasing_arrangement"], "In-house")
+        self.assertEqual(pialba["gla_sqm"], 15746)
+        self.assertEqual(pialba["tenancy_count"], 20)
+
+        castletown = self.payload["property_summaries"][
+            "place-au-qld-castletown-shoppingworld"
+        ]
+        self.assertEqual(castletown["research_status"], "Verified")
+        self.assertEqual(castletown["centre_class"], "Sub-regional")
+        self.assertEqual(castletown["centre_class_method"], "Confirmed")
+        self.assertEqual(castletown["owner_names"], ["McConaghy Group"])
+        self.assertEqual(castletown["manager_names"], ["McConaghy Group"])
+        self.assertEqual(castletown["leasing_arrangement"], "In-house")
+        self.assertEqual(castletown["gla_sqm"], 37544)
+        self.assertEqual(castletown["tenancy_count"], 126)
+
+        nerang = self.payload["property_summaries"]["place-au-qld-nerang-town-centre"]
+        self.assertEqual(nerang["research_status"], "Partial")
+        self.assertEqual(nerang["centre_class"], "Neighbourhood")
+        self.assertEqual(nerang["centre_class_method"], "Inferred")
+        self.assertEqual(nerang["owner_names"], [])
+        self.assertEqual(nerang["manager_names"], [])
+        self.assertEqual(nerang["leasing_arrangement"], "External agency")
+        nerang_roles = {
+            (row["group_id"], row["role"])
+            for row in self.relationships
+            if row["place_id"] == "place-au-qld-nerang-town-centre"
+        }
+        self.assertEqual(
+            nerang_roles,
+            {("group-handler-property", "EXTERNAL_LEASING_AGENT")},
+        )
+
     def test_current_stockland_baringa_and_piccadilly_profiles_are_explicit(self) -> None:
         baringa = self.payload["property_summaries"][
             "place-au-qld-stockland-baringa-shopping-centre"
