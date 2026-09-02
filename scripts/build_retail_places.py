@@ -125,6 +125,14 @@ def apply_canonical_place_overrides(places: list[dict]) -> None:
         place["source_url"] = evidence_url
         place["source_date"] = verified_at
         place["source_basis"] = row.get("reason", "").strip() or "Evidence-backed current canonical place name"
+        setting = (row.get("location_setting") or "").strip()
+        if setting:
+            if setting not in {"Shopping Centre", "High Street", "Other"}:
+                raise ValueError(f"Invalid canonical place location setting: {place_id} -> {setting}")
+            place["location_setting"] = setting
+            place["place_type"] = "High Street Corridor" if setting == "High Street" else setting
+            if setting == "High Street":
+                place["catchment_radius_m"] = 800
         for field in ("state", "locality", "postcode", "address"):
             value = row.get(field, "").strip()
             if value:
@@ -583,14 +591,14 @@ def main() -> None:
             evidence_url = disagreement["url"]
             verified_at = disagreement["date"]
         elif store.get("venue_id") and store["venue_id"] in old_to_new:
-            setting = "Shopping Centre"
             place_id = old_to_new[store["venue_id"]]
+            setting = place_by_id[place_id]["location_setting"]
             confidence = "High" if store.get("classification_confidence") == "High" else "Medium"
-            basis = "Canonicalised from the store's named shopping-centre evidence"
+            basis = "Canonicalised from the store's named retail-place evidence"
         elif store["store_id"] in high_reviews and high_reviews[store["store_id"]]["candidate_venue_id"] in old_to_new:
             review = high_reviews[store["store_id"]]
-            setting = "Shopping Centre"
             place_id = old_to_new[review["candidate_venue_id"]]
+            setting = place_by_id[place_id]["location_setting"]
             confidence = "Medium"
             basis = review["evidence"]
         elif store.get("location_type") == "Other":

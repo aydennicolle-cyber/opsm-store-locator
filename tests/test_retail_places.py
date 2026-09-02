@@ -50,8 +50,15 @@ class RetailPlaceTests(unittest.TestCase):
     def test_canonical_ids_are_unique_and_typed(self) -> None:
         ids = [place["place_id"] for place in self.places]
         self.assertEqual(len(ids), len(set(ids)))
+        reclassified_stable_ids = {
+            row["place_id"]
+            for row in read_csv("place_canonical_overrides.csv")
+            if row.get("location_setting") == "High Street"
+        }
         for place in self.places:
             if place["location_setting"] == "Shopping Centre":
+                self.assertRegex(place["place_id"], r"^place-(au|nz)-[a-z0-9-]+$")
+            elif place["place_id"] in reclassified_stable_ids:
                 self.assertRegex(place["place_id"], r"^place-(au|nz)-[a-z0-9-]+$")
             else:
                 self.assertRegex(place["place_id"], r"^corridor-(au|nz)-[a-z0-9-]+$")
@@ -188,6 +195,19 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(places["place-au-wa-cockburn-gateway-shopping-centre"]["name"], "Cockburn Gateway")
         self.assertEqual(places["place-au-unknown-croydon-central"]["state"], "VIC")
         self.assertEqual(places["place-au-unknown-jesmond-central"]["state"], "NSW")
+
+    def test_rundle_mall_is_a_stable_high_street_precinct_not_a_single_centre(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        rundle = places["place-au-sa-rundle-mall"]
+        self.assertEqual(rundle["location_setting"], "High Street")
+        self.assertEqual(rundle["place_type"], "High Street Corridor")
+        self.assertEqual(rundle["postcode"], "5000")
+        memberships = [
+            row for row in self.memberships
+            if row["place_id"] == "place-au-sa-rundle-mall"
+        ]
+        self.assertEqual(len(memberships), 4)
+        self.assertTrue(all(row["location_setting"] == "High Street" for row in memberships))
 
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}

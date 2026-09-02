@@ -1926,9 +1926,9 @@
     }[role] || role;
   }
 
-  function overlapLabel(value) {
+  function overlapLabel(value, placeLabel = "centre") {
     return {
-      SAME_CENTRE: "Bailey Nelson in this centre",
+      SAME_CENTRE: `Bailey Nelson in this ${placeLabel}`,
       LEASING_CONTROLLER_OVERLAP: "Known BN leasing-controller portfolio overlap",
       PROPERTY_GROUP_OVERLAP: "Known BN property-group portfolio overlap",
       EXTERNAL_AGENCY_OVERLAP: "Known BN external-agency portfolio overlap",
@@ -1970,11 +1970,13 @@
 
   function competitorContextHtml(centre) {
     const context = centre.competitor_context?.by_retailer || {};
+    const placeLabel = centre.location_setting === "High Street" ? "CORRIDOR" : "CENTRE";
+    const placeLabelLower = placeLabel.toLowerCase();
     return `<div class="competitor-context">${BRAND_ORDER.map((brand) => {
       const values = context[brand] || { in_centre: [], nearby_unverified: [], catchment_2km: [] };
       return `<div><strong>${brandMarkHtml(brand, "compact")}${escapeHtml(brand)}</strong>
-        <span>${values.in_centre.length ? `${values.in_centre.length} IN CENTRE` : "Not mapped in centre"}</span>
-        ${values.nearby_unverified.length ? `<small>${values.nearby_unverified.length} NEARBY ≤250M — NOT VERIFIED IN CENTRE</small>` : ""}
+        <span>${values.in_centre.length ? `${values.in_centre.length} IN ${placeLabel}` : `Not mapped in ${placeLabelLower}`}</span>
+        ${values.nearby_unverified.length ? `<small>${values.nearby_unverified.length} NEARBY ≤250M — NOT VERIFIED IN ${placeLabel}</small>` : ""}
         ${values.catchment_2km.length ? `<small>${values.catchment_2km.length} elsewhere within 2 km straight-line catchment</small>` : ""}
       </div>`;
     }).join("")}</div>`;
@@ -2024,6 +2026,8 @@
       (item) => item.place_id === centre.place_id && Intel.activeRelationship(item)
     );
     const publicUrl = centre.official_url || centre.source_url || centre.public_url;
+    const isCorridor = centre.location_setting === "High Street";
+    const placeLabel = isCorridor ? "corridor" : "centre";
     elements.detailContent.innerHTML = `
       <header class="detail-header" style="--brand-color:#d29b27">
         <span class="retailer-tag">${centre.location_setting === "High Street" ? '<i data-lucide="route"></i>' : CENTRE_BAG_SVG}${escapeHtml(centre.place_type)}</span>
@@ -2040,15 +2044,15 @@
       </div></section>
       <section class="detail-section"><h3>Ownership, management and leasing</h3>${relationshipCardsHtml(relationships)}</section>
       <section class="detail-section portfolio-overlap"><h3>Bailey Nelson portfolio overlap</h3>
-        <strong>${escapeHtml(overlapLabel(centre.portfolio_overlap_status))}</strong>
+        <strong>${escapeHtml(overlapLabel(centre.portfolio_overlap_status, placeLabel))}</strong>
         <p>${centre.portfolio_overlap_groups?.length ? centre.portfolio_overlap_groups.map((item) => `${escapeHtml(item.canonical_name)} (${escapeHtml(relationshipRoleLabel(item.role))}): ${item.bailey_store_count} Bailey store${item.bailey_store_count === 1 ? "" : "s"} across ${item.bailey_property_count} propert${item.bailey_property_count === 1 ? "y" : "ies"}`).join("<br>") : "No evidenced public portfolio overlap is available."}</p>
         <small>Portfolio overlap is derived from public property and tenancy evidence. It is not proof of a private commercial relationship.</small>
       </section>
       <section class="detail-section"><h3>Optical competition context</h3>${competitorContextHtml(centre)}
         <div class="nearest-list">${stores.map((store) => nearRows([{ store, distance: 0 }], 1)).join("")}</div>
-        <p class="empty-note">IN CENTRE requires the same accepted canonical place ID. Distance alone never establishes membership.</p>
+        <p class="empty-note">IN ${isCorridor ? "CORRIDOR" : "CENTRE"} requires the same accepted canonical place ID. Distance alone never establishes membership.</p>
       </section>
-      <section class="detail-section"><h3>Public centre metrics</h3><div class="data-grid">
+      <section class="detail-section"><h3>Public ${isCorridor ? "place" : "centre"} metrics</h3><div class="data-grid">
         <div class="data-point"><span>Total GLA</span><strong>${centre.gla_sqm ? formatNumber(centre.gla_sqm, " sqm") : "Not published"}</strong></div>
         <div class="data-point"><span>Annual visits</span><strong>${formatNumber(centre.annual_visits)}</strong></div>
         <div class="data-point"><span>Retail tenancies</span><strong>${formatNumber(centre.tenancy_count)}</strong></div>

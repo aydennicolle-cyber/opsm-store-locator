@@ -378,6 +378,28 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(st_ives["manager_names"], [])
         self.assertEqual(st_ives["leasing_arrangement"], "Private landlord")
 
+    def test_ifm_and_greensborough_priority_centres_keep_unknown_owners_explicit(self) -> None:
+        for place_id, centre_class, gla_sqm, tenancy_count in (
+            ("place-au-nsw-wagga-wagga-marketplace", "Sub-regional", 24828, 59),
+            ("place-au-vic-bendigo-marketplace", "Sub-regional", 18552, 100),
+        ):
+            with self.subTest(place_id=place_id):
+                summary = self.payload["property_summaries"][place_id]
+                self.assertEqual(summary["centre_class"], centre_class)
+                self.assertEqual(summary["owner_names"], [])
+                self.assertEqual(summary["manager_names"], ["IFM Investors"])
+                self.assertEqual(summary["leasing_arrangement"], "In-house")
+                self.assertEqual(summary["gla_sqm"], gla_sqm)
+                self.assertEqual(summary["tenancy_count"], tenancy_count)
+
+        greensborough = self.payload["property_summaries"]["place-au-vic-greensborough-plaza"]
+        self.assertEqual(greensborough["centre_class"], "Regional")
+        self.assertEqual(greensborough["owner_names"], [])
+        self.assertEqual(set(greensborough["manager_names"]), {"151 Property", "JLL"})
+        self.assertEqual(greensborough["leasing_arrangement"], "External agency")
+        self.assertEqual(greensborough["gla_sqm"], 70000)
+        self.assertEqual(greensborough["tenancy_count"], 170)
+
     def test_research_queue_covers_every_unresolved_property_or_class(self) -> None:
         with (DATA / "property_research_queue.csv").open(newline="", encoding="utf-8") as handle:
             queue = list(csv.DictReader(handle))

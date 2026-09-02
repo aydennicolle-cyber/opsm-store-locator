@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T01:58:03.315137+00:00",
+  "generated_at": "2026-09-02T02:09:16.338561+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 69,
-    "relationship_count": 596,
-    "active_relationship_count": 594,
-    "shopping_centre_count": 588,
-    "researched_property_count": 195,
-    "classed_property_count": 185,
+    "group_count": 71,
+    "relationship_count": 606,
+    "active_relationship_count": 604,
+    "shopping_centre_count": 587,
+    "researched_property_count": 198,
+    "classed_property_count": 188,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -1168,6 +1168,41 @@
         "St Ives Shopping Village ownership",
         "St Ives Shopping Village"
       ]
+    },
+    {
+      "group_id": "group-151-property",
+      "canonical_name": "151 Property",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "ASSET_MANAGER",
+      "country_scope": "Australia and New Zealand",
+      "official_url": "https://151property.com.au/",
+      "status": "Active",
+      "source_url": "https://151property.com.au/our-properties/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "151 Property",
+        "OneFiveOne Property",
+        "151 Property Pty Ltd"
+      ]
+    },
+    {
+      "group_id": "group-prime-retail-property",
+      "canonical_name": "Prime Retail Property",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "EXTERNAL_AGENCY",
+      "country_scope": "Australia",
+      "official_url": "https://www.primeretail.com.au/",
+      "status": "Active",
+      "source_url": "https://www.primeretail.com.au/home",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Prime Retail Property",
+        "Prime Retail"
+      ]
     }
   ],
   "group_alias_index": {
@@ -1289,7 +1324,12 @@
     "stockwell": "group-stockwell",
     "stockwellretailmanagementptyltd": "group-stockwell",
     "stivesshoppingvillageownership": "group-st-ives-shopping-village-ownership",
-    "stivesshoppingvillage": "group-st-ives-shopping-village-ownership"
+    "stivesshoppingvillage": "group-st-ives-shopping-village-ownership",
+    "151property": "group-151-property",
+    "onefiveoneproperty": "group-151-property",
+    "151propertyptyltd": "group-151-property",
+    "primeretailproperty": "group-prime-retail-property",
+    "primeretail": "group-prime-retail-property"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -10828,6 +10868,166 @@
       "confidence": "High",
       "public_note": "The venue identifies itself as independently owned and operated and publishes direct permanent and casual leasing pathways; the public source does not name the legal owner",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ifm-wagga-wagga-marketplace-manager",
+      "place_id": "place-au-nsw-wagga-wagga-marketplace",
+      "group_id": "group-ifm-investors",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/wagga-wagga-marketplace",
+      "source_type": "Official current manager portfolio profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "IFM publishes the current asset profile and direct permanent leasing pathway; the 100 percent fund stake is recorded by IFM but the legal fund is not named publicly on the profile",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ifm-wagga-wagga-marketplace-operator",
+      "place_id": "place-au-nsw-wagga-wagga-marketplace",
+      "group_id": "group-ifm-investors",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/wagga-wagga-marketplace",
+      "source_type": "Official current manager portfolio profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "IFM publishes the current asset profile and direct permanent leasing pathway; the 100 percent fund stake is recorded by IFM but the legal fund is not named publicly on the profile",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ifm-wagga-wagga-marketplace-leasing_controller",
+      "place_id": "place-au-nsw-wagga-wagga-marketplace",
+      "group_id": "group-ifm-investors",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/wagga-wagga-marketplace",
+      "source_type": "Official current manager portfolio profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "IFM publishes the current asset profile and direct permanent leasing pathway; the 100 percent fund stake is recorded by IFM but the legal fund is not named publicly on the profile",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ifm-bendigo-marketplace-manager",
+      "place_id": "place-au-vic-bendigo-marketplace",
+      "group_id": "group-ifm-investors",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/bendigo-marketplace/",
+      "source_type": "Official current manager portfolio profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "IFM publishes the current asset profile and direct permanent leasing pathway; the 100 percent fund stake is recorded by IFM but the legal fund is not named publicly on the profile",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ifm-bendigo-marketplace-operator",
+      "place_id": "place-au-vic-bendigo-marketplace",
+      "group_id": "group-ifm-investors",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/bendigo-marketplace/",
+      "source_type": "Official current manager portfolio profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "IFM publishes the current asset profile and direct permanent leasing pathway; the 100 percent fund stake is recorded by IFM but the legal fund is not named publicly on the profile",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ifm-bendigo-marketplace-leasing_controller",
+      "place_id": "place-au-vic-bendigo-marketplace",
+      "group_id": "group-ifm-investors",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/bendigo-marketplace/",
+      "source_type": "Official current manager portfolio profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "IFM publishes the current asset profile and direct permanent leasing pathway; the 100 percent fund stake is recorded by IFM but the legal fund is not named publicly on the profile",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-151-greensborough-plaza-manager",
+      "place_id": "place-au-vic-greensborough-plaza",
+      "group_id": "group-151-property",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://151property.com.au/our-properties/",
+      "source_type": "Official current asset-manager portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "151 Property lists Greensborough Plaza in its actively managed portfolio; no legal owner is asserted from this evidence",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-greensborough-plaza-manager",
+      "place_id": "place-au-vic-greensborough-plaza",
+      "group_id": "group-jll",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.greensboroughplaza.com.au/privacy-policy/",
+      "source_type": "Official current centre privacy and management page",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current centre privacy page directs management and privacy matters to the JLL centre-management channel",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-greensborough-plaza-operator",
+      "place_id": "place-au-vic-greensborough-plaza",
+      "group_id": "group-jll",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.greensboroughplaza.com.au/privacy-policy/",
+      "source_type": "Official current centre privacy and management page",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current centre privacy page directs management and privacy matters to the JLL centre-management channel",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-prime-retail-greensborough-plaza-external_leasing_agent",
+      "place_id": "place-au-vic-greensborough-plaza",
+      "group_id": "group-prime-retail-property",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.primeretail.com.au/home",
+      "source_type": "Official current external leasing portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Prime Retail lists Greensborough Plaza as a current project and the official centre leasing material directs permanent leasing to its team",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -16465,6 +16665,121 @@
       "public_note": "The venue identifies itself as independently owned and operated and publishes direct permanent and casual leasing pathways; the public source does not name the legal owner",
       "match_status": "Matched",
       "matched_place_id": "place-au-nsw-st-ives-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "ifm-wagga-wagga-marketplace",
+      "group_id": "group-ifm-investors",
+      "canonical_name": "Wagga Wagga Marketplace",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-wagga-wagga-marketplace",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "24828",
+      "tenancy_count": "59",
+      "annual_visits_m": "",
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/wagga-wagga-marketplace",
+      "source_type": "Official current manager portfolio profile",
+      "source_date": "2026-06-30",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "IFM publishes the current asset profile and direct permanent leasing pathway; the 100 percent fund stake is recorded by IFM but the legal fund is not named publicly on the profile",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-wagga-wagga-marketplace"
+    },
+    {
+      "portfolio_asset_id": "ifm-bendigo-marketplace",
+      "group_id": "group-ifm-investors",
+      "canonical_name": "Bendigo Marketplace",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "",
+      "preferred_place_id": "place-au-vic-bendigo-marketplace",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "18552",
+      "tenancy_count": "100",
+      "annual_visits_m": "",
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/bendigo-marketplace/",
+      "source_type": "Official current manager portfolio profile",
+      "source_date": "2026-06-30",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "IFM publishes the current asset profile and direct permanent leasing pathway; the 100 percent fund stake is recorded by IFM but the legal fund is not named publicly on the profile",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-bendigo-marketplace"
+    },
+    {
+      "portfolio_asset_id": "151-greensborough-plaza",
+      "group_id": "group-151-property",
+      "canonical_name": "Greensborough Plaza",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "",
+      "preferred_place_id": "place-au-vic-greensborough-plaza",
+      "roles": "MANAGER",
+      "ownership_percentage": "",
+      "gla_sqm": "70000",
+      "tenancy_count": "170",
+      "annual_visits_m": "",
+      "source_url": "https://151property.com.au/our-properties/",
+      "source_type": "Official current asset-manager portfolio",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "151 Property lists Greensborough Plaza in its actively managed portfolio; no legal owner is asserted from this evidence",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-greensborough-plaza"
+    },
+    {
+      "portfolio_asset_id": "jll-greensborough-plaza",
+      "group_id": "group-jll",
+      "canonical_name": "Greensborough Plaza",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "",
+      "preferred_place_id": "place-au-vic-greensborough-plaza",
+      "roles": "MANAGER|OPERATOR",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.greensboroughplaza.com.au/privacy-policy/",
+      "source_type": "Official current centre privacy and management page",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current centre privacy page directs management and privacy matters to the JLL centre-management channel",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-greensborough-plaza"
+    },
+    {
+      "portfolio_asset_id": "prime-retail-greensborough-plaza",
+      "group_id": "group-prime-retail-property",
+      "canonical_name": "Greensborough Plaza",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "",
+      "preferred_place_id": "place-au-vic-greensborough-plaza",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.primeretail.com.au/home",
+      "source_type": "Official current external leasing portfolio",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Prime Retail lists Greensborough Plaza as a current project and the official centre leasing material directs permanent leasing to its team",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-greensborough-plaza"
     }
   ],
   "property_summaries": {
@@ -44777,32 +45092,40 @@
     },
     "place-au-nsw-wagga-wagga-marketplace": {
       "place_id": "place-au-nsw-wagga-wagga-marketplace",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-wagga-wagga-marketplace",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/wagga-wagga-marketplace",
+        "source_type": "Official current manager portfolio profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "IFM explicitly grades Wagga Wagga Marketplace as a Sub regional centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-wagga-wagga-marketplace",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/wagga-wagga-marketplace",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-ifm-wagga-wagga-marketplace-manager",
+        "rel-portfolio-ifm-wagga-wagga-marketplace-operator",
+        "rel-portfolio-ifm-wagga-wagga-marketplace-leasing_controller"
+      ],
+      "group_ids": [
+        "group-ifm-investors"
+      ],
       "owner_names": [],
-      "manager_names": [],
+      "manager_names": [
+        "IFM Investors"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -44862,7 +45185,11 @@
         "median_household_income": 917,
         "age_45_plus_pct": 40.5,
         "retail_businesses": 112
-      }
+      },
+      "gla_sqm": 24828.0,
+      "tenancy_count": 59,
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/wagga-wagga-marketplace",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-wallsend-village": {
       "place_id": "place-au-nsw-wallsend-village",
@@ -61635,6 +61962,146 @@
       },
       "market": {}
     },
+    "place-au-sa-rundle-mall": {
+      "place_id": "place-au-sa-rundle-mall",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "place-au-sa-rundle-mall",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "place-au-sa-rundle-mall",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 0.11,
+      "competitor_context": {
+        "by_retailer": {
+          "Independent / Other optical": {
+            "in_centre": [
+              {
+                "store_id": "independent-other-optical-osm-au-node-6389827386",
+                "name": "Opt Shop",
+                "distance_km": 0.22
+              }
+            ],
+            "nearby_unverified": [
+              {
+                "store_id": "independent-other-optical-osm-au-node-13067885816",
+                "name": "Aryoo Eyewear",
+                "distance_km": 0.11
+              },
+              {
+                "store_id": "independent-other-optical-osm-au-node-2402171927",
+                "name": "Ken Chenery",
+                "distance_km": 0.12
+              }
+            ],
+            "catchment_2km": [
+              {
+                "store_id": "independent-other-optical-osm-au-node-2415680869",
+                "name": "Optometrists on O'Connell",
+                "distance_km": 1.72
+              }
+            ]
+          },
+          "Bailey Nelson": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "bailey-nelson-adelaide-arcade",
+                "name": "Bailey Nelson Adelaide Arcade",
+                "distance_km": 0.11
+              }
+            ],
+            "catchment_2km": []
+          },
+          "OPSM": {
+            "in_centre": [
+              {
+                "store_id": "opsm-1376",
+                "name": "OPSM Adelaide Rundle Mall",
+                "distance_km": 0.06
+              }
+            ],
+            "nearby_unverified": [
+              {
+                "store_id": "opsm-1050",
+                "name": "OPSM Bagot House",
+                "distance_km": 0.17
+              }
+            ],
+            "catchment_2km": [
+              {
+                "store_id": "opsm-1058",
+                "name": "OPSM North Adelaide",
+                "distance_km": 1.87
+              }
+            ]
+          },
+          "Specsavers": {
+            "in_centre": [
+              {
+                "store_id": "specsavers-3208",
+                "name": "Adelaide - Rundle Mall",
+                "distance_km": 0.26
+              }
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": []
+          },
+          "Oscar Wylee": {
+            "in_centre": [
+              {
+                "store_id": "oscar-wylee-69",
+                "name": "Rundle Mall",
+                "distance_km": 0.22
+              }
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": []
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 0.11,
+          "Bailey Nelson": 0.11,
+          "OPSM": 0.06,
+          "Oscar Wylee": 0.22,
+          "Specsavers": 0.26
+        },
+        "independent_2km_count": 3
+      },
+      "market": {
+        "sa2_code": "401011001",
+        "sa2_name": "Adelaide",
+        "population_2025": 22657,
+        "population_growth_pct": 21.71,
+        "median_household_income": 1045,
+        "age_45_plus_pct": 28.6,
+        "retail_businesses": 523
+      }
+    },
     "corridor-au-sa-sa-the-parade": {
       "place_id": "corridor-au-sa-sa-the-parade",
       "centre_class": "Unknown",
@@ -63764,146 +64231,6 @@
         "median_household_income": 710,
         "age_45_plus_pct": 48.2,
         "retail_businesses": 66
-      }
-    },
-    "place-au-sa-rundle-mall": {
-      "place_id": "place-au-sa-rundle-mall",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-sa-rundle-mall",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-sa-rundle-mall",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 0.11,
-      "competitor_context": {
-        "by_retailer": {
-          "Independent / Other optical": {
-            "in_centre": [
-              {
-                "store_id": "independent-other-optical-osm-au-node-6389827386",
-                "name": "Opt Shop",
-                "distance_km": 0.22
-              }
-            ],
-            "nearby_unverified": [
-              {
-                "store_id": "independent-other-optical-osm-au-node-13067885816",
-                "name": "Aryoo Eyewear",
-                "distance_km": 0.11
-              },
-              {
-                "store_id": "independent-other-optical-osm-au-node-2402171927",
-                "name": "Ken Chenery",
-                "distance_km": 0.12
-              }
-            ],
-            "catchment_2km": [
-              {
-                "store_id": "independent-other-optical-osm-au-node-2415680869",
-                "name": "Optometrists on O'Connell",
-                "distance_km": 1.72
-              }
-            ]
-          },
-          "Bailey Nelson": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "bailey-nelson-adelaide-arcade",
-                "name": "Bailey Nelson Adelaide Arcade",
-                "distance_km": 0.11
-              }
-            ],
-            "catchment_2km": []
-          },
-          "OPSM": {
-            "in_centre": [
-              {
-                "store_id": "opsm-1376",
-                "name": "OPSM Adelaide Rundle Mall",
-                "distance_km": 0.06
-              }
-            ],
-            "nearby_unverified": [
-              {
-                "store_id": "opsm-1050",
-                "name": "OPSM Bagot House",
-                "distance_km": 0.17
-              }
-            ],
-            "catchment_2km": [
-              {
-                "store_id": "opsm-1058",
-                "name": "OPSM North Adelaide",
-                "distance_km": 1.87
-              }
-            ]
-          },
-          "Specsavers": {
-            "in_centre": [
-              {
-                "store_id": "specsavers-3208",
-                "name": "Adelaide - Rundle Mall",
-                "distance_km": 0.26
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "Oscar Wylee": {
-            "in_centre": [
-              {
-                "store_id": "oscar-wylee-69",
-                "name": "Rundle Mall",
-                "distance_km": 0.22
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 0.11,
-          "Bailey Nelson": 0.11,
-          "OPSM": 0.06,
-          "Oscar Wylee": 0.22,
-          "Specsavers": 0.26
-        },
-        "independent_2km_count": 3
-      },
-      "market": {
-        "sa2_code": "401011001",
-        "sa2_name": "Adelaide",
-        "population_2025": 22657,
-        "population_growth_pct": 21.71,
-        "median_household_income": 1045,
-        "age_45_plus_pct": 28.6,
-        "retail_businesses": 523
       }
     },
     "place-au-sa-seaford-central": {
@@ -80568,32 +80895,40 @@
     },
     "place-au-vic-bendigo-marketplace": {
       "place_id": "place-au-vic-bendigo-marketplace",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-vic-bendigo-marketplace",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/bendigo-marketplace/",
+        "source_type": "Official current manager portfolio profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "IFM explicitly grades Bendigo Marketplace as a Sub regional centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-vic-bendigo-marketplace",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/bendigo-marketplace/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-ifm-bendigo-marketplace-manager",
+        "rel-portfolio-ifm-bendigo-marketplace-operator",
+        "rel-portfolio-ifm-bendigo-marketplace-leasing_controller"
+      ],
+      "group_ids": [
+        "group-ifm-investors"
+      ],
       "owner_names": [],
-      "manager_names": [],
+      "manager_names": [
+        "IFM Investors"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -80675,7 +81010,11 @@
         "median_household_income": 877,
         "age_45_plus_pct": 44.4,
         "retail_businesses": 165
-      }
+      },
+      "gla_sqm": 18552.0,
+      "tenancy_count": 100,
+      "source_url": "https://www.ifminvestors.com/en-au/capabilities/real-estate/our-real-estate-portfolio/bendigo-marketplace/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-unknown-bentons-square": {
       "place_id": "place-au-unknown-bentons-square",
@@ -83530,32 +83869,44 @@
     },
     "place-au-vic-greensborough-plaza": {
       "place_id": "place-au-vic-greensborough-plaza",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-vic-greensborough-plaza",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.greensboroughplaza.com.au/leasing-2/",
+        "source_type": "Official current centre leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The official venue calls Greensborough Plaza Major Regional; Regional is the closest supported app classification"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-vic-greensborough-plaza",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://151property.com.au/our-properties/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-151-greensborough-plaza-manager",
+        "rel-portfolio-jll-greensborough-plaza-manager",
+        "rel-portfolio-jll-greensborough-plaza-operator",
+        "rel-portfolio-prime-retail-greensborough-plaza-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-151-property",
+        "group-jll",
+        "group-prime-retail-property"
+      ],
       "owner_names": [],
-      "manager_names": [],
+      "manager_names": [
+        "151 Property",
+        "JLL"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -83626,7 +83977,11 @@
         "median_household_income": 1215,
         "age_45_plus_pct": 45.2,
         "retail_businesses": 99
-      }
+      },
+      "gla_sqm": 70000.0,
+      "tenancy_count": 170,
+      "source_url": "https://151property.com.au/our-properties/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-vic-heidelberg-warringal-shopping-centre": {
       "place_id": "place-au-vic-heidelberg-warringal-shopping-centre",
@@ -109979,11 +110334,15 @@
     },
     "group-jll": {
       "group_id": "group-jll",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-vic-greensborough-plaza": [
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-wa-riverton-stockland": [
           "MANAGER"
         ]
@@ -110483,13 +110842,23 @@
     },
     "group-ifm-investors": {
       "group_id": "group-ifm-investors",
-      "property_count": 1,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-wagga-wagga-marketplace": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-qld-kawana-shoppingworld": [
           "CO_OWNER"
+        ],
+        "place-au-vic-bendigo-marketplace": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
         ]
       },
       "white_space_property_ids": []
@@ -110560,6 +110929,32 @@
           "LEASING_CONTROLLER",
           "OPERATOR",
           "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-151-property": {
+      "group_id": "group-151-property",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-vic-greensborough-plaza": [
+          "MANAGER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-prime-retail-property": {
+      "group_id": "group-prime-retail-property",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-vic-greensborough-plaza": [
+          "EXTERNAL_LEASING_AGENT"
         ]
       },
       "white_space_property_ids": []
@@ -126993,7 +127388,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -127007,10 +127402,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 154.66,
-          "group_ids": [],
+          "group_ids": [
+            "group-ifm-investors"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -135772,6 +136169,55 @@
         }
       }
     },
+    "place-au-sa-rundle-mall": {
+      "schema_version": 1,
+      "place_id": "place-au-sa-rundle-mall",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "401011001",
+          "sa2_name": "Adelaide",
+          "population_2025": 22657,
+          "population_growth_pct": 21.71,
+          "median_household_income": 1045,
+          "age_45_plus_pct": 28.6,
+          "retail_businesses": 523
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-au-sa-rundle-mall.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "High Street",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 0.11,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
     "corridor-au-sa-sa-the-parade": {
       "schema_version": 1,
       "place_id": "corridor-au-sa-sa-the-parade",
@@ -136936,55 +137382,6 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 189.93,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
-    "place-au-sa-rundle-mall": {
-      "schema_version": 1,
-      "place_id": "place-au-sa-rundle-mall",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "401011001",
-          "sa2_name": "Adelaide",
-          "population_2025": 22657,
-          "population_growth_pct": 21.71,
-          "median_household_income": 1045,
-          "age_45_plus_pct": 28.6,
-          "retail_businesses": 523
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-sa-rundle-mall.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 0.11,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -145289,7 +145686,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -145303,10 +145700,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 124.31,
-          "group_ids": [],
+          "group_ids": [
+            "group-ifm-investors"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -146851,7 +147250,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -146865,10 +147264,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 7.41,
-          "group_ids": [],
+          "group_ids": [
+            "group-151-property",
+            "group-jll",
+            "group-prime-retail-property"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
