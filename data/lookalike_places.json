@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T03:19:43+00:00",
+    "generated_at": "2026-09-02T03:27:02+00:00",
     "benchmark": "All mapped Bailey Nelson stores, separated by country and location setting",
     "method": "Transparent lookalike screening rank; not a probability of store success",
     "weights": {
@@ -4270,7 +4270,7 @@
       },
       {
         "place_id": "place-au-sa-whyalla-westland-shopping-centre",
-        "name": "Whyalla Westland Shopping Centre",
+        "name": "Westland Whyalla",
         "country": "Australia",
         "state": "SA",
         "locality": "Whyalla Norrie",
@@ -4295,7 +4295,7 @@
           "OPSM",
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://www.westlandsc.com.au/",
         "rank": 112
       },
       {
@@ -4782,7 +4782,7 @@
       },
       {
         "place_id": "place-au-qld-kingaroy-plaza",
-        "name": "Kingaroy Plaza",
+        "name": "Kingaroy Mall",
         "country": "Australia",
         "state": "QLD",
         "locality": "Kingaroy",
@@ -4807,7 +4807,7 @@
           "OPSM",
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://kingaroyshoppingworld.com.au/",
         "rank": 130
       },
       {
@@ -6615,7 +6615,7 @@
       },
       {
         "place_id": "place-au-nsw-lismore-shopping-centre",
-        "name": "Lismore Shopping Centre",
+        "name": "Lismore Square",
         "country": "Australia",
         "state": "NSW",
         "locality": "Lismore",
@@ -6640,7 +6640,7 @@
           "OPSM",
           "Specsavers"
         ],
-        "evidence_url": "https://www.lismoresquare.com.au/",
+        "evidence_url": "https://lismoresquare.com.au/",
         "rank": 194
       },
       {
@@ -6815,7 +6815,7 @@
           "OPSM",
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://www.brickworksmarketplace.com.au/",
         "rank": 200
       },
       {
@@ -14744,7 +14744,7 @@
           "OPSM",
           "Specsavers"
         ],
-        "evidence_url": "https://www.northcoteplaza.com/",
+        "evidence_url": "https://northcoteplaza.com/",
         "rank": 477
       },
       {
@@ -26662,6 +26662,36 @@
         "rank": 55
       },
       {
+        "place_id": "place-nz-wellington-cnr-cuba-mall-and-dixon-street",
+        "name": "Cuba Street / Cuba Mall",
+        "country": "New Zealand",
+        "state": "Wellington",
+        "locality": "Wellington",
+        "location_setting": "High Street",
+        "score": 27,
+        "screening_completeness": 60,
+        "components": {
+          "bailey_footprint_similarity": null,
+          "bailey_whitespace": 2,
+          "optical_market_validation": 58,
+          "accessibility_retail_context": 40
+        },
+        "market_features": {
+          "population_2025": null,
+          "population_growth_2021_2025_pct": null,
+          "age_45_plus_pct_2021": null,
+          "median_household_income_weekly_2021": null
+        },
+        "nearest_bailey_km": 0.4,
+        "optical_store_count": 2,
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ],
+        "evidence_url": "https://wellington.govt.nz/-/media/your-council/plans-policies-and-bylaws/district-plan/proposed-district-plan/reports/supplementary-documents/retail-and-market-assessment-november-2020.pdf",
+        "rank": 56
+      },
+      {
         "place_id": "corridor-nz-otago-dunedin-george-street",
         "name": "George Street",
         "country": "New Zealand",
@@ -26689,7 +26719,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.co.nz/stores/dunedin",
-        "rank": 56
+        "rank": 57
       },
       {
         "place_id": "corridor-nz-auckland-auckland-mokoia-road",
@@ -26718,7 +26748,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.highburyeye.co.nz/",
-        "rank": 57
+        "rank": 58
       },
       {
         "place_id": "corridor-nz-auckland-auckland-remuera-road",
@@ -26747,7 +26777,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.co.nz/find-store",
-        "rank": 58
+        "rank": 59
       },
       {
         "place_id": "corridor-nz-bay-of-plenty-tauranga-devonport-road",
@@ -26776,7 +26806,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.co.nz/stores/tauranga",
-        "rank": 59
+        "rank": 60
       },
       {
         "place_id": "corridor-nz-waikato-hamilton-east-grey-street",
@@ -26805,7 +26835,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.openstreetmap.org/node/2421501216",
-        "rank": 60
+        "rank": 61
       },
       {
         "place_id": "corridor-nz-auckland-royal-oak-manukau-road",
@@ -26834,7 +26864,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.co.nz/find-store",
-        "rank": 61
+        "rank": 62
       },
       {
         "place_id": "corridor-nz-waikato-frankton-lake-road",
@@ -26863,7 +26893,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.openstreetmap.org/way/290610593",
-        "rank": 62
+        "rank": 63
       },
       {
         "place_id": "corridor-nz-canterbury-papanui-main-north-road",
@@ -26892,7 +26922,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.co.nz/find-store",
-        "rank": 63
+        "rank": 64
       },
       {
         "place_id": "corridor-nz-waikato-hamilton-central-ward-street",
@@ -26921,7 +26951,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.openstreetmap.org/node/2374693867",
-        "rank": 64
+        "rank": 65
       },
       {
         "place_id": "corridor-nz-waikato-hamilton-bryce-street",
@@ -26950,7 +26980,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.co.nz/stores/hamiltoncbd",
-        "rank": 65
+        "rank": 66
       },
       {
         "place_id": "corridor-nz-waikato-hamilton-victoria-street",
@@ -26979,7 +27009,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.co.nz/find-store",
-        "rank": 66
+        "rank": 67
       },
       {
         "place_id": "corridor-nz-waikato-hamilton-wairere-drive",
@@ -27008,7 +27038,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.co.nz/find-store",
-        "rank": 67
+        "rank": 68
       },
       {
         "place_id": "corridor-nz-waikato-hamilton-barton-street",
@@ -27037,7 +27067,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "http://gates.net.nz/",
-        "rank": 68
+        "rank": 69
       },
       {
         "place_id": "corridor-nz-auckland-browns-bay-clyde-road",
@@ -27066,7 +27096,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.co.nz/find-store",
-        "rank": 69
+        "rank": 70
       },
       {
         "place_id": "corridor-nz-auckland-auckland-lunn-avenue",
@@ -27095,7 +27125,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.co.nz/stores/mtwellington",
-        "rank": 70
+        "rank": 71
       },
       {
         "place_id": "corridor-nz-canterbury-shirley-new-brighton-road",
@@ -27124,7 +27154,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.co.nz/find-store",
-        "rank": 71
+        "rank": 72
       },
       {
         "place_id": "corridor-nz-otago-dunedin-king-edward-street",
@@ -27153,7 +27183,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.co.nz/stores/south-dunedin",
-        "rank": 72
+        "rank": 73
       },
       {
         "place_id": "corridor-nz-auckland-auckland-mt-eden-road",
@@ -27182,7 +27212,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.co.nz/find-store",
-        "rank": 73
+        "rank": 74
       },
       {
         "place_id": "corridor-nz-auckland-auckland-stoddard-road",
@@ -27211,7 +27241,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.co.nz/stores/mtroskill",
-        "rank": 74
+        "rank": 75
       },
       {
         "place_id": "corridor-nz-canterbury-merrivale-papanui-road",
@@ -27240,7 +27270,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.co.nz/find-store",
-        "rank": 75
+        "rank": 76
       },
       {
         "place_id": "corridor-nz-auckland-auckland-queens-road",
@@ -27269,7 +27299,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.openstreetmap.org/node/12594285407",
-        "rank": 76
+        "rank": 77
       },
       {
         "place_id": "corridor-nz-auckland-auckland-jervois-road",
@@ -27298,7 +27328,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.openstreetmap.org/node/13822996704",
-        "rank": 77
+        "rank": 78
       },
       {
         "place_id": "corridor-nz-wellington-wellington-lambton-quay",
@@ -27327,7 +27357,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.co.nz/stores/wellingtonlambton",
-        "rank": 78
+        "rank": 79
       },
       {
         "place_id": "corridor-nz-auckland-auckland-anzac-street",
@@ -27356,7 +27386,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.co.nz/stores/takapuna",
-        "rank": 79
+        "rank": 80
       },
       {
         "place_id": "corridor-nz-wellington-lower-hutt-bunny-street",
@@ -27385,7 +27415,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.co.nz/find-store",
-        "rank": 80
+        "rank": 81
       },
       {
         "place_id": "corridor-nz-wellington-central-wellington-hunter-street",
@@ -27414,7 +27444,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.co.nz/find-store",
-        "rank": 81
+        "rank": 82
       },
       {
         "place_id": "corridor-nz-auckland-takapuna-hurstmere-road",
@@ -27443,7 +27473,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.co.nz/find-store",
-        "rank": 82
+        "rank": 83
       },
       {
         "place_id": "corridor-nz-canterbury-christchurch-kivers-lane",
@@ -27472,7 +27502,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.co.nz/find-store",
-        "rank": 83
+        "rank": 84
       },
       {
         "place_id": "corridor-nz-canterbury-christchurch-central-new-regent-street",
@@ -27501,7 +27531,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.openstreetmap.org/way/101162360",
-        "rank": 84
+        "rank": 85
       },
       {
         "place_id": "corridor-nz-auckland-auckland-cbd-queen-street",
@@ -27530,7 +27560,7 @@
           "Oscar Wylee"
         ],
         "evidence_url": "https://www.oscarwylee.co.nz/locations/optometrist-auckland-cbd.html",
-        "rank": 85
+        "rank": 86
       }
     ],
     "nz-shopping-centre": [
@@ -28354,36 +28384,6 @@
         "rank": 28
       },
       {
-        "place_id": "place-nz-wellington-cnr-cuba-mall-and-dixon-street",
-        "name": "Cnr Cuba Mall and Dixon Street",
-        "country": "New Zealand",
-        "state": "Wellington",
-        "locality": "Wellington",
-        "location_setting": "Shopping Centre",
-        "score": 24,
-        "screening_completeness": 50,
-        "components": {
-          "bailey_footprint_similarity": null,
-          "bailey_whitespace": 2,
-          "optical_market_validation": 58,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": null,
-          "population_growth_2021_2025_pct": null,
-          "age_45_plus_pct_2021": null,
-          "median_household_income_weekly_2021": null
-        },
-        "nearest_bailey_km": 0.4,
-        "optical_store_count": 2,
-        "retailers": [
-          "OPSM",
-          "Specsavers"
-        ],
-        "evidence_url": "",
-        "rank": 29
-      },
-      {
         "place_id": "place-nz-waikato-te-awa-at-the-base",
         "name": "Te Awa at The Base",
         "country": "New Zealand",
@@ -28410,7 +28410,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.co.nz/stores/terapa",
-        "rank": 30
+        "rank": 29
       },
       {
         "place_id": "place-nz-canterbury-the-palms-shopping-centre",
@@ -28439,7 +28439,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 31
+        "rank": 30
       },
       {
         "place_id": "place-nz-auckland-ormiston-town-centre",
@@ -28468,7 +28468,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 32
+        "rank": 31
       },
       {
         "place_id": "place-nz-auckland-milford-centre",
@@ -28497,7 +28497,7 @@
           "OPSM"
         ],
         "evidence_url": "https://milfordcentre.co.nz/",
-        "rank": 33
+        "rank": 32
       }
     ]
   }

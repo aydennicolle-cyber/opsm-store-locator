@@ -329,6 +329,50 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(len(memberships), 2)
         self.assertTrue(all(row["location_setting"] == "High Street" for row in memberships))
 
+    def test_current_lismore_kingaroy_and_sa_priority_names_preserve_stable_ids(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+
+        lismore = places["place-au-nsw-lismore-shopping-centre"]
+        self.assertEqual(lismore["name"], "Lismore Square")
+        self.assertIn("Lismore Shopping Centre", lismore["aliases"])
+        self.assertEqual(lismore["address"], "Corner Brewster and Uralba Streets")
+        self.assertEqual(lismore["postcode"], "2480")
+
+        kingaroy = places["place-au-qld-kingaroy-plaza"]
+        self.assertEqual(kingaroy["name"], "Kingaroy Mall")
+        self.assertIn("Kingaroy Shoppingworld", kingaroy["aliases"])
+        self.assertEqual(kingaroy["address"], "Corner Youngman and Alford Streets")
+        self.assertEqual(kingaroy["postcode"], "4610")
+
+        brickworks = places["place-au-sa-brickworks-marketplace"]
+        self.assertEqual(brickworks["address"], "38 South Road")
+        self.assertEqual(brickworks["postcode"], "5031")
+
+        westland = places["place-au-sa-whyalla-westland-shopping-centre"]
+        self.assertEqual(westland["name"], "Westland Whyalla")
+        self.assertIn("Westland Shopping Centre", westland["aliases"])
+        self.assertEqual(westland["address"], "McDouall Stuart Avenue")
+        self.assertEqual(westland["postcode"], "5608")
+
+        northcote = places["place-au-vic-northcote-plaza"]
+        self.assertEqual(northcote["address"], "25 Separation Street")
+        self.assertEqual(northcote["postcode"], "3070")
+
+    def test_cuba_mall_is_a_high_street_corridor_not_a_shopping_centre(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        cuba_mall = places["place-nz-wellington-cnr-cuba-mall-and-dixon-street"]
+        self.assertEqual(cuba_mall["name"], "Cuba Street / Cuba Mall")
+        self.assertEqual(cuba_mall["location_setting"], "High Street")
+        self.assertEqual(cuba_mall["place_type"], "High Street Corridor")
+        self.assertEqual(cuba_mall["address"], "83 Cuba Street")
+        self.assertEqual(cuba_mall["postcode"], "6011")
+        memberships = [
+            row for row in self.memberships
+            if row["place_id"] == "place-nz-wellington-cnr-cuba-mall-and-dixon-street"
+        ]
+        self.assertEqual(len(memberships), 2)
+        self.assertTrue(all(row["location_setting"] == "High Street" for row in memberships))
+
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, expected_name in {

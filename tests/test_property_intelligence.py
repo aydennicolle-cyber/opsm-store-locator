@@ -755,6 +755,56 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(bridge_mall["manager_names"], [])
         self.assertEqual(bridge_mall["leasing_arrangement"], "Unknown")
 
+    def test_mcconaghy_centres_use_current_names_roles_and_exact_metrics(self) -> None:
+        lismore = self.payload["property_summaries"]["place-au-nsw-lismore-shopping-centre"]
+        self.assertEqual(lismore["research_status"], "Verified")
+        self.assertEqual(lismore["centre_class"], "Sub-regional")
+        self.assertEqual(lismore["owner_names"], ["McConaghy Properties"])
+        self.assertEqual(lismore["manager_names"], ["McConaghy Properties"])
+        self.assertEqual(lismore["leasing_arrangement"], "In-house")
+        self.assertEqual(lismore["gla_sqm"], 29901)
+        self.assertEqual(lismore["tenancy_count"], 69)
+
+        kingaroy = self.payload["property_summaries"]["place-au-qld-kingaroy-plaza"]
+        self.assertEqual(kingaroy["research_status"], "Verified")
+        self.assertEqual(kingaroy["centre_class"], "Sub-regional")
+        self.assertEqual(kingaroy["owner_names"], ["McConaghy Properties"])
+        self.assertEqual(kingaroy["manager_names"], ["McConaghy Properties"])
+        self.assertEqual(kingaroy["leasing_arrangement"], "In-house")
+        self.assertEqual(kingaroy["gla_sqm"], 13005)
+        self.assertEqual(kingaroy["tenancy_count"], 45)
+
+    def test_current_sa_priority_roles_and_strata_unknowns_are_explicit(self) -> None:
+        brickworks = self.payload["property_summaries"]["place-au-sa-brickworks-marketplace"]
+        self.assertEqual(brickworks["research_status"], "Partial")
+        self.assertEqual(brickworks["centre_class"], "Sub-regional")
+        self.assertEqual(brickworks["owner_names"], ["Brickworks Marketplace Fund"])
+        self.assertEqual(brickworks["manager_names"], ["FRP Capital"])
+        self.assertEqual(brickworks["leasing_arrangement"], "In-house")
+        self.assertNotIn("gla_sqm", brickworks)
+        self.assertNotIn("tenancy_count", brickworks)
+
+        westland = self.payload["property_summaries"]["place-au-sa-whyalla-westland-shopping-centre"]
+        self.assertEqual(westland["research_status"], "Partial")
+        self.assertEqual(westland["centre_class"], "Sub-regional")
+        self.assertEqual(westland["owner_names"], ["Westlands Unit Trust"])
+        self.assertEqual(westland["manager_names"], ["PPI Funds Management"])
+        self.assertEqual(westland["leasing_arrangement"], "External agency")
+        self.assertEqual(westland["annual_visits"], 3000000)
+
+        northcote = self.payload["property_summaries"]["place-au-vic-northcote-plaza"]
+        self.assertEqual(northcote["research_status"], "Partial")
+        self.assertEqual(northcote["centre_class"], "Neighbourhood")
+        self.assertEqual(northcote["owner_names"], [])
+        self.assertEqual(northcote["manager_names"], [])
+        self.assertEqual(northcote["leasing_arrangement"], "Unknown")
+
+        cuba_mall = self.payload["property_summaries"]["place-nz-wellington-cnr-cuba-mall-and-dixon-street"]
+        self.assertEqual(cuba_mall["research_status"], "Verified unknown")
+        self.assertEqual(cuba_mall["owner_names"], [])
+        self.assertEqual(cuba_mall["manager_names"], [])
+        self.assertEqual(cuba_mall["leasing_arrangement"], "Unknown")
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})
