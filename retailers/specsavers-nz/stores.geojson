@@ -3,9 +3,9 @@
   "metadata": {
     "retailer": "Specsavers",
     "source": "https://www.specsavers.co.nz/stores/full-store-list",
-    "fetched_at": "2026-07-26T04:15:04.480Z",
-    "store_count": 62,
-    "collection_method": "Rendered official store pages; Schema.org structured data"
+    "fetched_at": "2026-09-01T23:21:29.969Z",
+    "store_count": 61,
+    "collection_method": "Official full store list reconciled; structured details retained for unchanged official URLs; removed URLs verified absent"
   },
   "features": [
     {
@@ -484,30 +484,6 @@
         "full_address": "Shop 69, LynnMall Shopping Centre, Memorial Drive, New Lynn, New Lynn, 0600",
         "phone": "09 826 3989",
         "official_url": "https://www.specsavers.co.nz/stores/newlynn",
-        "services": "Optometry; Audiology",
-        "audiology": "true"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.8718,
-          -36.91276
-        ]
-      },
-      "properties": {
-        "id": "3821",
-        "name": "Pakuranga Plaza",
-        "status": "Active",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "Pakuranga",
-        "postal_code": "2010",
-        "full_address": "Shop S137, Pakuranga Plaza, Cnr Ti Rakau Dr and Pakuranga Highway, Pakuranga, Pakuranga, 2010",
-        "phone": "09 577 1431",
-        "official_url": "https://www.specsavers.co.nz/stores/pakuranga",
         "services": "Optometry; Audiology",
         "audiology": "true"
       }

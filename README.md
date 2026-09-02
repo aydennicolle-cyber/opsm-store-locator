@@ -6,7 +6,7 @@ Live map:
 
 https://aydennicolle-cyber.github.io/opsm-store-locator/
 
-Current validated network:
+Historical baseline captured in July 2026 (not a current completeness target):
 
 - OPSM: 392 stores
 - Specsavers: 461 stores
@@ -14,6 +14,10 @@ Current validated network:
 - Oscar Wylee: 131 stores
 - Independent / Other optical: 425 community-mapped locations
 - Combined: 1,491 locations (1,269 Australia; 222 New Zealand)
+
+The working first draft now separates store usability, source freshness, location setting and canonical place mapping. As of 2 September 2026 it contains 1,450 observed stores, including 1,067 usable named-network stores, plus 588 canonical centres/plazas and 443 high-street corridors. All 1,067 named-network stores have an accepted location setting and place mapping, with no promoted mapping reviews outstanding. The 6,192 unpromoted map records remain background discovery leads rather than consultant review work.
+
+These counts are generated, not hard-coded. `data/data_health.json` reports each health dimension separately and keeps 6,192 unpromoted discovery leads informational. This first draft remains on `bailey-opportunity-v2`; the published live map above is not updated until deployment is explicitly approved.
 
 The independent/other layer is sourced from OpenStreetMap `shop=optician` records. It is useful competitive coverage but is non-exhaustive, may include regional groups, and is switched off by default in the two-country view.
 
@@ -29,8 +33,8 @@ Other retailer maps remain separate from the optical analysis:
 ## Leasing Views
 
 - **Network:** filter by country, region and retailer; preserve proximity analysis, same-centre checks, pair comparison and CSV export.
-- **Centres:** search reviewed centre entities and inspect public ownership, management, GLA, visitation, trade-area and redevelopment data where sourced.
-- **Opportunity:** drop candidate sites, apply brand profiles and compare transparent component scores.
+- **Places:** search shopping centres, plazas and high-street corridors by name, geography, canonical property group, leasing arrangement, centre class, portfolio overlap, retailer presence and mapping confidence; inspect every mapped optical tenant and its public relationship evidence.
+- **Opportunity:** rank Bailey-free places separately by country and location setting using footprint similarity, whitespace, optical validation and public retail context. Optional Bailey performance CSVs are read only in browser memory.
 - **Trends:** review source dates, archived store snapshots and detected openings, closures or relocations.
 - **Compare:** hold three or more public candidate sites in a fixed comparison tray.
 
@@ -40,7 +44,8 @@ The public map also provides:
 - Competitor saturation, reviewed centre and optional OpenStreetMap health, transport and parking layers.
 - 1 km, 3 km, 5 km and 10 km catchment summaries using intersecting SA2-centroid estimates.
 - A white-space score using market demand, competitive white space, centre strength, accessibility, network fit and format fit.
-- Renormalised scoring when components are unavailable, with results marked unreliable below 70% coverage.
+- Transparent lookalike components and screening completeness; Bailey-free places below 60% completeness remain browsable but sort below sufficiently evidenced places.
+- Browser-local mapping corrections with public-safe CSV import/export. Corrections never enter share URLs or a server.
 - Saved local views and sanitised share URLs that preserve public filters, candidates and map position.
 - A printable client brief and filtered public CSV.
 - View nearest stores by brand, ten nearest stores and competitor counts within 500 m, 1 km, 2 km, 5 km and 10 km.
@@ -56,7 +61,18 @@ The combined schema is published in:
 - `data/optical_stores.meta.json`
 - `data/sa2_market.geojson`
 - `data/store_market_links.json`
-- `data/centres.json`
+- `data/retail_places.json`
+- `data/store_place_memberships.csv`
+- `data/place_id_remaps.csv`
+- `data/place_review.csv`
+- `data/lookalike_places.json`
+- `data/property_intelligence.json`
+- `data/property_groups.csv`
+- `data/property_group_aliases.csv`
+- `data/asset_relationships.csv`
+- `data/property_attributes.csv`
+- `data/property_research_status.csv`
+- `data/data_health.json`
 - `data/brand_profiles.json`
 - `data/network_events.json`
 - `data/history/YYYY-MM-DD.json`
@@ -64,7 +80,7 @@ The combined schema is published in:
 - `data/centre_store_memberships.csv`
 - `data/centre_recognition_review.csv`
 
-Verified shopping-centre identities are kept in `data/shopping_centres.csv`. A store is joined to one of those centres only when a reviewed, public source is recorded in `data/centre_store_memberships.csv`. Other classification corrections are kept in `data/location_overrides.csv`.
+Legacy centre outputs remain for compatibility. The application now reads the canonical `retail_places.json` and `store_place_memberships.csv` outputs. Shopping-centre membership uses explicit retailer/tenant naming, exact address evidence or reviewed public overrides; proximity creates candidates but never establishes membership by itself. High streets are grouped by normalized street and locality with 800 m indicative comparison catchments.
 
 Low-confidence and unclassified stores are listed in `data/classification_review.csv`. `data/centre_recognition_review.csv` is a broader centre audit covering possible missed centres, missing venue names and duplicate centre IDs.
 
@@ -120,6 +136,9 @@ Rebuild the combined network after refreshing any retailer:
 python3 scripts/build_optical_network.py
 python3 scripts/audit_centre_recognition.py
 python3 scripts/build_market_intelligence.py
+python3 scripts/build_retail_places.py
+python3 scripts/build_property_intelligence.py
+python3 scripts/build_data_health.py
 ```
 
 The market-intelligence build uses official ABS Data by Region workbooks and SA2 boundaries for Australia, refreshes public centre profiles, and archives the successful trans-Tasman network snapshot. New Zealand stores retain explicit Stats NZ coverage status and are never joined to Australian market data.
@@ -129,9 +148,19 @@ Run the complete public checks:
 ```bash
 python3 -m unittest discover -s tests -v
 node tests/test_intelligence.js
+python3 scripts/scan_public_privacy.py
 ```
 
 Each importer validates source counts, unique IDs, required fields and country coordinate bounds. A failed or incomplete refresh stops before replacing the last good snapshot. Review `data/network_events.json` before publishing changes.
+
+Discover named shopping centres, markets and retail precinct leads without automatically publishing them:
+
+```bash
+python3 scripts/discover_retail_places.py
+python3 scripts/build_data_health.py
+```
+
+Discovery candidates remain excluded from analytics until a source-backed disposition is recorded.
 
 Independent/other optical records are © OpenStreetMap contributors and are available under the [Open Database License](https://www.openstreetmap.org/copyright).
 

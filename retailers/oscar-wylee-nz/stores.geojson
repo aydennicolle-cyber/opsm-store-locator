@@ -6,7 +6,7 @@
       "New Zealand"
     ],
     "source_url": "https://www.oscarwylee.co.nz/locations/",
-    "fetched_at": "2026-07-26T04:03:57.996Z",
+    "fetched_at": "2026-09-01T07:45:57.558Z",
     "store_count": 9
   },
   "features": [
@@ -26,7 +26,7 @@
         "state": "Auckland",
         "city": "Albany",
         "postal_code": "0632",
-        "full_address": "Westfield Albany, Shop S229, 219 Don McKinnon Drive, Albany, Auckland 0632",
+        "full_address": "Westfield Albany, Shop S229, 219 Don McKinnon Drive, Albany Auckland 0632",
         "phone": "09 281 0674",
         "official_url": "https://www.oscarwylee.co.nz/locations/optometrist-albany.html",
         "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
@@ -63,8 +63,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          174.8817606,
-          -36.991585
+          174.88176059999998,
+          -36.99158499999999
         ]
       },
       "properties": {
@@ -74,33 +74,9 @@
         "state": "Auckland",
         "city": "Manukau",
         "postal_code": "2104",
-        "full_address": "Westfield Manukau City, Shop S-041, 1 Leyton Way, Manukau City Centre, Auckland 2104",
+        "full_address": "Westfield Manukau City, Shop S-041, 1 Leyton Way, Manukau City Centre Auckland 2104",
         "phone": "(09) 217 6391",
         "official_url": "https://www.oscarwylee.co.nz/locations/optometrist-manukau.html",
-        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
-        "audiology": "false",
-        "status": "Active"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.73083761506345,
-          -36.882475279931676
-        ]
-      },
-      "properties": {
-        "name": "Oscar Wylee Westfield St Lukes",
-        "id": "stlukes",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "Mount Albert",
-        "postal_code": "1025",
-        "full_address": "Westfield St Lukes, Level 1, 80 St Lukes Road, Mount Albert, Auckland 1025",
-        "phone": "09 280 1877",
-        "official_url": "https://www.oscarwylee.co.nz/locations/stlukes.html",
         "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
         "audiology": "false",
         "status": "Active"
@@ -146,9 +122,33 @@
         "state": "Canterbury",
         "city": "Papanui",
         "postal_code": "8052",
-        "full_address": "Northlands Mall, Shop 070, 55 Main North Road, Papanui, Christchurch 8052",
+        "full_address": "Northlands Mall, Shop 070, 55 Main North Road, Papanui Christchurch 8052",
         "phone": "(03) 926 0069",
         "official_url": "https://www.oscarwylee.co.nz/locations/optometrist-northlands.html",
+        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
+        "audiology": "false",
+        "status": "Active"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.5974143,
+          -43.5310053
+        ]
+      },
+      "properties": {
+        "name": "Oscar Wylee Westfield Riccarton",
+        "id": "optometrist-riccarton",
+        "country": "New Zealand",
+        "state": "Canterbury",
+        "city": "Riccarton",
+        "postal_code": "8041",
+        "full_address": "Westfield Riccarton, Shop S007, 129 Riccarton Road, Riccarton, Christchurch 8041",
+        "phone": "",
+        "official_url": "https://www.oscarwylee.co.nz/locations/optometrist-riccarton.html",
         "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
         "audiology": "false",
         "status": "Active"
@@ -194,7 +194,7 @@
         "state": "Wellington",
         "city": "Lower Hutt",
         "postal_code": "5011",
-        "full_address": "Queensgate Shopping Centre, Shop 128, Cnr Queens Drive and Bunny Street, Lower Hutt, Wellington 5011",
+        "full_address": "Queensgate Shopping Centre, Shop 128, Cnr Queens Drive and, Bunny Street, Lower Hutt Central Wellington 5011",
         "phone": "04 280 0058",
         "official_url": "https://www.oscarwylee.co.nz/locations/optometrist-queensgate.html",
         "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",

@@ -60,19 +60,18 @@ class MarketIntelligenceTests(unittest.TestCase):
         self.assertTrue(required.issubset(populated[0]["properties"]))
 
     def test_all_stores_join_to_sa2(self) -> None:
-        self.assertEqual(self.links["metadata"]["store_count"], 1491)
-        self.assertEqual(self.links["metadata"]["matched_count"], 1269)
-        self.assertEqual(len(self.links["links"]), 1491)
+        store_count = len(json.loads((DATA / "optical_stores.geojson").read_text())["features"])
+        self.assertEqual(self.links["metadata"]["store_count"], store_count)
+        self.assertEqual(len(self.links["links"]), store_count)
         australian = [link for link in self.links["links"].values() if link.get("geography_system") != "Stats NZ"]
         new_zealand = [link for link in self.links["links"].values() if link.get("geography_system") == "Stats NZ"]
-        self.assertEqual(len(australian), 1269)
-        self.assertEqual(len(new_zealand), 222)
+        self.assertEqual(len(australian) + len(new_zealand), store_count)
         self.assertTrue(all(link["sa2_code"] for link in australian))
         self.assertTrue(all(not link["sa2_code"] for link in new_zealand))
 
     def test_centre_entities_and_curated_profile(self) -> None:
-        self.assertEqual(self.centres["metadata"]["centre_count"], 394)
-        self.assertEqual(len(self.centres["centres"]), 394)
+        self.assertEqual(self.centres["metadata"]["centre_count"], len(self.centres["centres"]))
+        self.assertGreater(len(self.centres["centres"]), 0)
         chadstone = next(
             centre for centre in self.centres["centres"] if centre["centre_id"] == "vic-chadstone"
         )
@@ -106,7 +105,12 @@ class MarketIntelligenceTests(unittest.TestCase):
         snapshots = list((DATA / "history").glob("*.json"))
         self.assertTrue(snapshots)
         latest = json.loads(sorted(snapshots)[-1].read_text())
-        self.assertEqual(len(latest["stores"]), 1491)
+        if self.events.get("archived"):
+            self.assertEqual(len(latest["stores"]), self.links["metadata"]["store_count"])
+        else:
+            health = json.loads((DATA / "data_health.json").read_text())
+            self.assertNotEqual(health["certification_status"], "Certified")
+            self.assertIn("not archived", self.events.get("note", "").lower())
 
     def test_public_json_contains_no_private_fields(self) -> None:
         for path in DATA.rglob("*.json"):

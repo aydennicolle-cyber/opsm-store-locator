@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="assets/styles.css?v=20260726c" />
+    <link rel="stylesheet" href="assets/styles.css?v=20260902d" />
   </head>
   <body>
     <header class="app-header">
@@ -23,10 +23,11 @@
       </div>
       <nav class="task-nav" aria-label="Leasing intelligence views">
         <button class="active" type="button" data-view="network"><i data-lucide="map"></i><span>Network</span></button>
-        <button type="button" data-view="centres"><i data-lucide="building-2"></i><span>Centres</span></button>
+        <button type="button" data-view="centres"><i data-lucide="building-2"></i><span>Places</span></button>
         <button type="button" data-view="opportunity"><i data-lucide="scan-search"></i><span>Opportunity</span></button>
         <button type="button" data-view="trends"><i data-lucide="chart-no-axes-combined"></i><span>Trends</span></button>
         <button type="button" data-view="compare"><i data-lucide="columns-3"></i><span>Compare</span></button>
+        <button type="button" data-view="health"><i data-lucide="shield-check"></i><span>Data Health</span></button>
       </nav>
       <div class="header-actions">
         <span class="public-badge"><i data-lucide="globe-2"></i>Public intelligence</span>
@@ -44,8 +45,8 @@
           <p id="viewSubtitle">Filter, inspect and compare the trans-Tasman optical network.</p>
         </header>
         <section class="network-strip" aria-label="Visible network totals">
-          <strong id="visibleTotal">1,066</strong>
-          <span>locations visible</span>
+          <strong id="visibleTotal">1,067</strong>
+          <span id="visibleTotalLabel">locations visible</span>
           <span class="freshness" id="freshnessLabel">Loading official sources</span>
         </section>
         <div class="view-content" id="viewContent"></div>
@@ -73,7 +74,7 @@
               <path d="M3 6h18"></path>
               <path d="M16 10a4 4 0 0 1-8 0"></path>
             </svg>
-            Shopping centres
+            Retail places
           </span></label>
           <div class="layer-rule"></div>
           <label><input type="checkbox" data-layer="health" /><span><i data-lucide="cross"></i>Health retailers</span></label>
@@ -111,7 +112,7 @@
         <div class="loading-state" id="loadingState">
           <span class="loading-mark"></span>
           <strong>Building leasing intelligence</strong>
-          <span>Stores, centres and public market indicators</span>
+          <span>Stores, retail places and public market indicators</span>
         </div>
         <div class="toast" id="toast" hidden role="status"></div>
       </section>
@@ -131,7 +132,7 @@
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
-    <script src="assets/intelligence.js?v=20260726c"></script>
-    <script src="assets/app.js?v=20260726c"></script>
+    <script src="assets/intelligence.js?v=20260902j"></script>
+    <script src="assets/app.js?v=20260902j"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "source_url": "https://www.opsm.co.nz/AjaxStoreLocatorSearch?storeId=10152&radius=5000&latitude=-41.2866&longitude=174.7756",
-  "fetched_at": "2026-07-26T03:51:36+00:00",
+  "fetched_at": "2026-09-01T07:42:29+00:00",
   "store_count": 57,
   "collection_method": "Official OPSM store-locator endpoint",
   "payload": {
@@ -144,7 +144,7 @@
           },
           {
             "name": "StoreBoss",
-            "value": "1604storemailbox@luxottica.com.au"
+            "value": "true"
           },
           {
             "name": "StoreBoris",
@@ -152,7 +152,7 @@
           },
           {
             "name": "StoreEmail",
-            "value": "Te Aro"
+            "value": "1604storemailbox@luxottica.com.au"
           },
           {
             "name": "StoreKids",
@@ -1061,11 +1061,11 @@
             "value": "false"
           },
           {
-            "name": "StoreDryEye",
+            "name": "StoreAudio",
             "value": "false"
           },
           {
-            "name": "StoreAudio",
+            "name": "StoreDryEye",
             "value": "false"
           }
         ],
@@ -1620,7 +1620,7 @@
           },
           {
             "name": "StoreBoss",
-            "value": "1620storemailbox@luxottica.com.au"
+            "value": "true"
           },
           {
             "name": "StoreBoris",
@@ -1628,7 +1628,7 @@
           },
           {
             "name": "StoreEmail",
-            "value": "Christchurch Central"
+            "value": "1620storemailbox@luxottica.com.au"
           },
           {
             "name": "StoreKids",
@@ -2358,15 +2358,15 @@
           },
           {
             "name": "StoreBoss",
-            "value": "2 taurikura drive"
+            "value": "true"
           },
           {
             "name": "StoreBoris",
-            "value": "1412storemailbox@luxottica.com.au"
+            "value": "true"
           },
           {
             "name": "StoreEmail",
-            "value": "Tauranga Crossing"
+            "value": "1412storemailbox@luxottica.com.au"
           },
           {
             "name": "StoreKids",
@@ -2374,7 +2374,7 @@
           },
           {
             "name": "StoreAudio",
-            "value": "true"
+            "value": "false"
           },
           {
             "name": "StoreDryEye",
@@ -2858,9 +2858,9 @@
             "country": "NZ",
             "address3": "",
             "address2": "",
-            "city": "Botany Downs",
-            "address1": "Town Centre Dr",
-            "postalCode": "2013",
+            "city": "East Tamaki",
+            "address1": "588 Botany Town Centre",
+            "postalCode": "2016",
             "stateOrProvinceName": "AKL"
           },
           "distance": {
@@ -3169,11 +3169,11 @@
             "value": "false"
           },
           {
-            "name": "StoreAudio",
+            "name": "StoreDryEye",
             "value": "false"
           },
           {
-            "name": "StoreDryEye",
+            "name": "StoreAudio",
             "value": "false"
           }
         ],
@@ -3790,11 +3790,11 @@
           },
           {
             "name": "StoreEmail",
-            "value": "16-20 St. Heliers Bay Road"
+            "value": "1683storemailbox@luxottica.com.au"
           },
           {
             "name": "StoreBoss",
-            "value": "1683storemailbox@luxottica.com.au"
+            "value": "true"
           },
           {
             "name": "StoreKids",
@@ -4032,27 +4032,27 @@
           },
           {
             "name": "StoreBoss",
-            "value": "auckland 0620"
-          },
-          {
-            "name": "StoreBoris",
-            "value": "1684storemailbox@luxottica.com.au"
-          },
-          {
-            "name": "StoreEmail",
-            "value": "24 Milford Road"
-          },
-          {
-            "name": "StoreKids",
-            "value": "false"
-          },
-          {
-            "name": "StoreAudio",
             "value": "true"
           },
           {
-            "name": "StoreDryEye",
+            "name": "StoreBoris",
+            "value": "true"
+          },
+          {
+            "name": "StoreEmail",
+            "value": "1684storemailbox@luxottica.com.au"
+          },
+          {
+            "name": "StoreKids",
+            "value": "true"
+          },
+          {
+            "name": "StoreAudio",
             "value": "false"
+          },
+          {
+            "name": "StoreDryEye",
+            "value": "true"
           }
         ],
         "uniqueID": "1684"
@@ -7631,11 +7631,11 @@
             "value": "false"
           },
           {
-            "name": "StoreDryEye",
+            "name": "StoreAudio",
             "value": "false"
           },
           {
-            "name": "StoreAudio",
+            "name": "StoreDryEye",
             "value": "false"
           }
         ],
@@ -9146,7 +9146,7 @@
           },
           {
             "name": "StoreHours",
-            "value": "09:00;17:30;09:00;17:30;09:00;17:30;09:00;17:30;09:00;17:30;09:00;16:00;10:00;16:00"
+            "value": "09:00;17:30;09:00;17:30;09:00;17:30;09:00;18:00;09:00;17:30;09:00;16:00;closed"
           },
           {
             "name": "StoreBoss",
@@ -9232,11 +9232,11 @@
           },
           {
             "name": "StoreBoss",
-            "value": "true"
+            "value": "false"
           },
           {
             "name": "StoreBoris",
-            "value": "true"
+            "value": "false"
           },
           {
             "name": "StoreEmail",
@@ -9244,7 +9244,7 @@
           },
           {
             "name": "StoreKids",
-            "value": "false"
+            "value": "true"
           },
           {
             "name": "StoreAudio",
@@ -9313,11 +9313,11 @@
             "value": "1"
           },
           {
-            "name": "StoreBoss",
+            "name": "StoreBoris",
             "value": "true"
           },
           {
-            "name": "StoreBoris",
+            "name": "StoreBoss",
             "value": "true"
           },
           {
@@ -9806,7 +9806,7 @@
           },
           {
             "name": "StoreBoss",
-            "value": "1321storemailbox@luxottica.com.au"
+            "value": "true"
           },
           {
             "name": "StoreBoris",
@@ -9814,7 +9814,7 @@
           },
           {
             "name": "StoreEmail",
-            "value": "-"
+            "value": "1321storemailbox@luxottica.com.au"
           },
           {
             "name": "StoreKids",
@@ -9822,7 +9822,7 @@
           },
           {
             "name": "StoreAudio",
-            "value": "false"
+            "value": "true"
           },
           {
             "name": "StoreDryEye",
@@ -10072,7 +10072,11 @@
           },
           {
             "name": "StoreDryEye",
-            "value": "false"
+            "value": "true"
+          },
+          {
+            "name": "StoreEyeTest",
+            "value": "true"
           }
         ],
         "uniqueID": "1056"
@@ -10191,7 +10195,7 @@
         ],
         "attribute": [
           {
-            "name": "StoreDRSAvailable",
+            "name": "StoreOnlineScheduling",
             "value": "1"
           },
           {
@@ -10203,6 +10207,10 @@
             "value": "4614"
           },
           {
+            "name": "StoreDRSAvailable",
+            "value": "1"
+          },
+          {
             "name": "StoreOCTAvailable",
             "value": "1"
           },
@@ -10211,12 +10219,8 @@
             "value": "1"
           },
           {
-            "name": "StoreOnlineScheduling",
-            "value": "1"
-          },
-          {
             "name": "StoreBoss",
-            "value": "4614storemailbox@luxottica.com.au"
+            "value": "false"
           },
           {
             "name": "StoreBoris",
@@ -10224,11 +10228,11 @@
           },
           {
             "name": "StoreEmail",
-            "value": "352 Oran Park Dr. Oran Park NSW 2570"
+            "value": "4614storemailbox@luxottica.com.au"
           },
           {
             "name": "StoreKids",
-            "value": "false"
+            "value": "true"
           },
           {
             "name": "StoreAudio",
@@ -11364,11 +11368,11 @@
           },
           {
             "name": "StoreBoss",
-            "value": "true"
+            "value": "false"
           },
           {
             "name": "StoreBoris",
-            "value": "true"
+            "value": "false"
           },
           {
             "name": "StoreEmail",
@@ -18047,11 +18051,11 @@
             "value": "1"
           },
           {
-            "name": "StoreUWDRSAvailable",
+            "name": "StoreOCTAvailable",
             "value": "1"
           },
           {
-            "name": "StoreOCTAvailable",
+            "name": "StoreUWDRSAvailable",
             "value": "1"
           },
           {
@@ -18375,11 +18379,11 @@
             "value": "1149"
           },
           {
-            "name": "StoreDRSAvailable",
+            "name": "StoreOCTAvailable",
             "value": "1"
           },
           {
-            "name": "StoreOCTAvailable",
+            "name": "StoreDRSAvailable",
             "value": "1"
           },
           {
@@ -18535,12 +18539,12 @@
             "value": "1148"
           },
           {
-            "name": "StoreOCTAvailable",
-            "value": "0"
-          },
-          {
             "name": "StoreDRSAvailable",
             "value": "1"
+          },
+          {
+            "name": "StoreOCTAvailable",
+            "value": "0"
           },
           {
             "name": "StoreUWDRSAvailable",
@@ -19048,11 +19052,11 @@
           },
           {
             "name": "StoreBoss",
-            "value": "true"
+            "value": "false"
           },
           {
             "name": "StoreBoris",
-            "value": "true"
+            "value": "false"
           },
           {
             "name": "StoreEmail",
@@ -19068,6 +19072,10 @@
           },
           {
             "name": "StoreDryEye",
+            "value": "true"
+          },
+          {
+            "name": "StoreEyeTest",
             "value": "true"
           }
         ],
@@ -22128,7 +22136,7 @@
           },
           "telephone": {
             "phone": "03 9744 5000",
-            "fax": "(02) 9899 2234"
+            "fax": "(03) 9740 6072"
           }
         },
         "description": [
@@ -22823,11 +22831,11 @@
             "value": "7008storemailbox@luxottica.com.au"
           },
           {
-            "name": "StoreBoris",
+            "name": "StoreBoss",
             "value": "false"
           },
           {
-            "name": "StoreBoss",
+            "name": "StoreBoris",
             "value": "false"
           },
           {
@@ -24304,7 +24312,7 @@
           },
           {
             "name": "StoreEmail",
-            "value": "2961\ufffdstoremailbox@luxottica.com.au"
+            "value": "2961?storemailbox@luxottica.com.au"
           },
           {
             "name": "StoreKids",
@@ -25017,12 +25025,12 @@
             "value": "1"
           },
           {
-            "name": "StoreOCTAvailable",
-            "value": "0"
-          },
-          {
             "name": "StoreUWDRSAvailable",
             "value": "1"
+          },
+          {
+            "name": "StoreOCTAvailable",
+            "value": "0"
           },
           {
             "name": "StoreOnlineScheduling",
@@ -25440,7 +25448,7 @@
           },
           {
             "name": "StoreHours",
-            "value": "08:30;17:30;08:30;17:30;08:30;17:00;08:30;17:30;08:30;18:00;09:00;17:00;09:00;17:00"
+            "value": "08:30;17:30;08:30;17:30;08:30;17:30;08:30;17:30;08:30;17:30;09:00;17:00;09:00;17:00"
           },
           {
             "name": "StoreBoss",
@@ -26501,11 +26509,11 @@
             "value": "0"
           },
           {
-            "name": "StoreOnlineScheduling",
+            "name": "StoreUWDRSAvailable",
             "value": "1"
           },
           {
-            "name": "StoreUWDRSAvailable",
+            "name": "StoreOnlineScheduling",
             "value": "1"
           },
           {
@@ -26658,7 +26666,7 @@
           },
           {
             "name": "StoreBoss",
-            "value": "2958storemailbox@luxottica.com.au"
+            "value": "true"
           },
           {
             "name": "StoreDRSAvailable",
@@ -26682,7 +26690,7 @@
           },
           {
             "name": "StoreEmail",
-            "value": "Fairfield Central Shopping Centre"
+            "value": "2958storemailbox@luxottica.com.au"
           },
           {
             "name": "StoreKids",
@@ -27099,11 +27107,11 @@
             "value": "false"
           },
           {
-            "name": "StoreAudio",
+            "name": "StoreDryEye",
             "value": "false"
           },
           {
-            "name": "StoreDryEye",
+            "name": "StoreAudio",
             "value": "false"
           }
         ],
@@ -27248,11 +27256,11 @@
           },
           {
             "name": "StoreBoss",
-            "value": "true"
+            "value": "false"
           },
           {
             "name": "StoreBoris",
-            "value": "true"
+            "value": "false"
           },
           {
             "name": "StoreEmail",
@@ -27321,11 +27329,11 @@
             "value": "1"
           },
           {
-            "name": "StoreUWDRSAvailable",
+            "name": "StoreOnlineScheduling",
             "value": "1"
           },
           {
-            "name": "StoreOnlineScheduling",
+            "name": "StoreUWDRSAvailable",
             "value": "1"
           },
           {

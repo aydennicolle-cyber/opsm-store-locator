@@ -58,6 +58,10 @@ REGION_NAMES = {
     "WAI": "Waikato",
     "WLG": "Wellington",
 }
+SOURCE_REGION_CORRECTIONS = {
+    # The locator currently emits AKL for this Bay of Plenty postcode/locality.
+    "2830": "Bay of Plenty",
+}
 
 
 def fetch_json() -> dict:
@@ -72,6 +76,7 @@ def fetch_json() -> dict:
 def normalise(store: dict) -> dict:
     cleaned = clean_store(store)
     cleaned["state"] = REGION_NAMES.get(cleaned["state"], cleaned["state"])
+    cleaned["state"] = SOURCE_REGION_CORRECTIONS.get(str(cleaned.get("sap_id") or ""), cleaned["state"])
     cleaned.update(
         {
             "country": "New Zealand",

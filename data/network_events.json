@@ -1,37 +1,9 @@
 {
-  "baseline_date": "2026-07-23",
-  "current_snapshot_date": "2026-07-26",
+  "baseline_date": "2026-07-26",
+  "current_snapshot_date": "2026-09-01",
   "event_count": 0,
   "events": [],
-  "coverage_baselines_added": [
-    {
-      "retailer": "Bailey Nelson",
-      "country": "New Zealand"
-    },
-    {
-      "retailer": "Independent / Other optical",
-      "country": "Australia"
-    },
-    {
-      "retailer": "Independent / Other optical",
-      "country": "New Zealand"
-    },
-    {
-      "retailer": "OPSM",
-      "country": "New Zealand"
-    },
-    {
-      "retailer": "Oscar Wylee",
-      "country": "Australia"
-    },
-    {
-      "retailer": "Oscar Wylee",
-      "country": "New Zealand"
-    },
-    {
-      "retailer": "Specsavers",
-      "country": "New Zealand"
-    }
-  ],
-  "note": "New retailer or country coverage was added as a baseline, not counted as store openings."
+  "coverage_baselines_added": [],
+  "archived": false,
+  "note": "Snapshot not archived because the current census has not passed data-health certification."
 }

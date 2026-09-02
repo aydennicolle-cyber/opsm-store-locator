@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "source": "https://www.opsm.com.au/AjaxStoreLocatorSearch?storeId=10151&radius=5000&latitude=-25.2744&longitude=133.7751",
-    "fetched_at": "2026-07-23T00:26:21+00:00",
+    "fetched_at": "2026-09-01T07:42:23+00:00",
     "country_filter": "AU",
     "store_count": 335
   },
@@ -704,7 +704,7 @@
         "country": "AU",
         "phone": "(02) 9634 6157",
         "fax": "(02) 9899 2234",
-        "services": "Dry Eye, Kids Vision Centre, Return",
+        "services": "Audiology, Dry Eye, Kids Vision Centre, Collect & Return",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-21:00; Fri: 09:00-17:30; Sat: 08:30-17:00; Sun: 09:00-17:00",
         "full_address": "341 CASTLE TOWERS SHOPPING CENTRE, Castle Hill, NSW, 2154"
       }
@@ -1136,7 +1136,7 @@
         "country": "AU",
         "phone": "(02) 9477 3439",
         "fax": "(02) 9476 4447",
-        "services": "Collect & Return",
+        "services": "Kids Vision Centre",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-21:00; Fri: 09:00-17:30; Sat: 09:00-17:00; Sun: 10:00-17:00",
         "full_address": "236 Pacific Hwy, Hornsby, NSW, 2077"
       }
@@ -1676,7 +1676,7 @@
         "country": "AU",
         "phone": "(02) 4648 2742",
         "fax": "(02) 4648 2745",
-        "services": "Collect & Return",
+        "services": "Dry Eye, Collect & Return",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-21:00; Fri: 09:00-17:30; Sat: 09:00-17:00; Sun: 10:00-16:00",
         "full_address": "326 Camden Valley Way, Narellan, NSW, 2567"
       }
@@ -1811,7 +1811,7 @@
         "country": "AU",
         "phone": "(02) 4744 3831",
         "fax": "(02) 4744 3832",
-        "services": "",
+        "services": "Kids Vision Centre",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-21:00; Fri: 09:00-17:30; Sat: 09:00-17:00; Sun: 10:00-16:00",
         "full_address": "351 Oran Park Dr., Oran Park, NSW, 2570"
       }
@@ -1973,7 +1973,7 @@
         "country": "AU",
         "phone": "(02) 4721 8477",
         "fax": "(02) 4732 1014",
-        "services": "Dry Eye, Collect & Return",
+        "services": "Dry Eye",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-21:00; Fri: 09:00-17:30; Sat: 09:00-17:00; Sun: 10:00-17:00",
         "full_address": "585 High St, Penrith, NSW, 2750"
       }
@@ -2757,7 +2757,7 @@
         "phone": "(02) 8865 8346",
         "fax": "(02) 8865 8349",
         "services": "Collect & Return",
-        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 09:00-16:00; Sun: 10:00-16:00",
+        "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-18:00; Fri: 09:00-17:30; Sat: 09:00-16:00; Sun: closed",
         "full_address": "24 Kokera St, Wallsend, NSW, 2287"
       }
     },
@@ -3431,7 +3431,7 @@
         "country": "AU",
         "phone": "(07) 4038 2555",
         "fax": "(07) 4038 2811",
-        "services": "Collect & Return",
+        "services": "",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-20:00; Fri: 09:00-17:30; Sat: 09:00-16:00; Sun: 10:00-15:00",
         "full_address": "Captain Cook Hwy &amp; Kennedy Hwy, Cairns, QLD, 4878"
       }
@@ -3809,7 +3809,7 @@
         "country": "AU",
         "phone": "(07) 4735 8721",
         "fax": "(07) 4735 8759",
-        "services": "Return",
+        "services": "Collect & Return",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-19:00; Fri: 09:00-17:30; Sat: 09:00-16:00; Sun: closed",
         "full_address": "2/30 Lakeside Dr, Idalia, QLD, 4811"
       }
@@ -4836,7 +4836,7 @@
         "phone": "(08) 8305 1000",
         "fax": "08 8232 6541",
         "services": "Collect & Return",
-        "hours": "Mon: 08:30-17:30; Tue: 08:30-17:30; Wed: 08:30-17:00; Thu: 08:30-17:30; Fri: 08:30-18:00; Sat: 09:00-17:00; Sun: 09:00-17:00",
+        "hours": "Mon: 08:30-17:30; Tue: 08:30-17:30; Wed: 08:30-17:30; Thu: 08:30-17:30; Fri: 08:30-17:30; Sat: 09:00-17:00; Sun: 09:00-17:00",
         "full_address": "198 North Terrace, Adelaide, SA, 5000"
       }
     },
@@ -6509,7 +6509,7 @@
         "country": "AU",
         "phone": "(03) 9848 3299",
         "fax": "(03) 9840 1456",
-        "services": "Dry Eye, Collect & Return",
+        "services": "Dry Eye",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-17:30; Sun: 10:00-17:00",
         "full_address": "619 Doncaster Rd, Doncaster, VIC, 3108"
       }
@@ -7372,7 +7372,7 @@
         "postal_code": "3429",
         "country": "AU",
         "phone": "03 9744 5000",
-        "fax": "(02) 9899 2234",
+        "fax": "(03) 9740 6072",
         "services": "",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-19:00; Fri: 09:00-17:30; Sat: 09:00-17:00; Sun: closed",
         "full_address": "2 Evans Street Sunbury Square Shopping Centre, Sunbury, VIC, 3429"
@@ -7913,7 +7913,7 @@
         "country": "AU",
         "phone": "(08) 6149 5427",
         "fax": "(08) 6149 5428",
-        "services": "Audiology",
+        "services": "Kids Vision Centre, Collect & Return",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 09:00-17:00; Sun: closed",
         "full_address": "Prince St, Busselton, WA, 6280"
       }
@@ -8480,7 +8480,7 @@
         "country": "AU",
         "phone": "(08) 9419 1056",
         "fax": "(08) 9419 3869",
-        "services": "Dry Eye, Kids Vision Centre",
+        "services": "Audiology, Dry Eye",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-19:00; Fri: 09:00-17:30; Sat: 09:00-17:00; Sun: 11:00-17:00",
         "full_address": "4 Chisham Ave, Kwinana, WA, 6167"
       }

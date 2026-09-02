@@ -1,6 +1,6 @@
 {
   "source_url": "https://baileynelson.com.au/pages/optometrist-near-me",
-  "fetched_at": "2026-07-23T01:01:27+00:00",
+  "fetched_at": "2026-09-01T07:42:35+00:00",
   "list_count": 68,
   "store_count": 68,
   "stores": [
@@ -569,7 +569,7 @@
         "email": "bondi@baileynelson.com.au",
         "address": {
           "@type": "PostalAddress",
-          "extendedAddress": "Shop 6",
+          "extendedAddress": "Shop 5",
           "streetAddress": "157 Curlewis Street",
           "addressLocality": "Bondi Beach",
           "addressRegion": "NSW",
@@ -1875,14 +1875,14 @@
         "@context": "https://schema.org",
         "@type": "Optician",
         "@id": "https://baileynelson.com.au/pages/optometrist-carousel#localbusiness",
-        "name": "Bailey Nelson Carousel",
+        "name": "Bailey Nelson Carousel - NEW LOCATION",
         "url": "https://baileynelson.com.au/pages/optometrist-carousel",
-        "image": "https://images.prismic.io/baileynelson/ZrKL-kaF0TcGIu8s_Carousel.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/uUcdYrA-Hls9Rqtv_Bailey-Nelson-Carousel-WA-Store.jpg?auto=format,compress",
         "telephone": "+61861499476",
         "email": "carousel@baileynelson.com.au",
         "address": {
           "@type": "PostalAddress",
-          "extendedAddress": "Shop 1251",
+          "extendedAddress": "Shop 1049",
           "streetAddress": "1382 Albany Hwy",
           "addressLocality": "Cannington",
           "addressRegion": "WA",
@@ -1987,11 +1987,17 @@
         "@id": "https://baileynelson.com.au/pages/optometrist-castle-towers#localbusiness",
         "name": "Bailey Nelson Castle Towers",
         "url": "https://baileynelson.com.au/pages/optometrist-castle-towers",
-        "image": "https://images.prismic.io/baileynelson/ZrJzZUaF0TcGIu0r_CastleTowers.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/i_FD1K_L1M-5y3zS_CT_TEMP.jpeg?auto=format,compress",
         "telephone": "+61283571354",
         "email": "castletowers@baileynelson.com.au",
         "address": {
-          "@type": "PostalAddress"
+          "@type": "PostalAddress",
+          "extendedAddress": "Shop 389",
+          "streetAddress": "6-14 Castle St",
+          "addressLocality": "Castle Hill",
+          "addressRegion": "NSW",
+          "postalCode": "2154",
+          "addressCountry": "AU"
         },
         "parentOrganization": {
           "@type": "Organization",
@@ -4383,110 +4389,6 @@
       }
     },
     {
-      "source_url": "https://baileynelson.com.au/pages/optometrist-hornsby",
-      "resolved_page_url": "https://baileynelson.com.au/pages/optometrist-hornsby",
-      "map_url": "https://maps.app.goo.gl/Ru3X9K69nEe7wgA29",
-      "resolved_map_url": "https://www.google.com/maps/place/Bailey+Nelson+Optometrist+-+Hornsby/@-33.7043001,151.0997034,15z/data=!4m6!3m5!1s0x6b12a70710d4d9d3:0x98525d1a2e3b08d8!8m2!3d-33.7043001!4d151.0997034!16s%2Fg%2F11ry9sh2lc?sa=X&ved=1t:2428&ictx=111&coh=219816&entry=tts&g_ep=EgoyMDI0MDgwNC4wKgBIAVAD",
-      "coordinate_source": "Official Google Maps link",
-      "structured_data": {
-        "@context": "https://schema.org",
-        "@type": "Optician",
-        "@id": "https://baileynelson.com.au/pages/optometrist-hornsby#localbusiness",
-        "name": "Bailey Nelson Hornsby",
-        "url": "https://baileynelson.com.au/pages/optometrist-hornsby",
-        "image": "https://images.prismic.io/baileynelson/ZrJzd0aF0TcGIu0t_Hornsby.jpg?auto=format,compress",
-        "telephone": "+61283571353",
-        "email": "hornsby@baileynelson.com.au",
-        "address": {
-          "@type": "PostalAddress"
-        },
-        "parentOrganization": {
-          "@type": "Organization",
-          "name": "Bailey Nelson",
-          "url": "https://baileynelson.com.au"
-        },
-        "makesOffer": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Optometry Services"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Bulk-Billed Eye Tests"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Private Eye Tests from $65"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Contact Lens Eye Tests"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Visual Fields Testing"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Ultra-wide retinal imaging"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Optical & Sunglass styling"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Free frame adjustments"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Prescription glasses"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Sunglasses"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Contact lenses"
-            }
-          }
-        ]
-      }
-    },
-    {
       "source_url": "https://baileynelson.com.au/pages/optometrist-indooroopilly",
       "resolved_page_url": "https://baileynelson.com.au/pages/optometrist-indooroopilly",
       "map_url": "https://maps.app.goo.gl/rAzh8Qi7Qrd8eBwUA",
@@ -4831,7 +4733,13 @@
         "telephone": "+61290008062",
         "email": "macquarie@baileynelson.com.au",
         "address": {
-          "@type": "PostalAddress"
+          "@type": "PostalAddress",
+          "extendedAddress": "Level 1, Shop 13A, Macquarie Centre",
+          "streetAddress": "Corner of Herring Road & Waterloo Road",
+          "addressLocality": "North Ryde",
+          "addressRegion": "NSW",
+          "postalCode": "2113",
+          "addressCountry": "AU"
         },
         "parentOrganization": {
           "@type": "Organization",
@@ -5488,6 +5396,115 @@
           "addressLocality": "Moonee Ponds",
           "addressRegion": "VIC",
           "postalCode": "3039",
+          "addressCountry": "AU"
+        },
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Bailey Nelson",
+          "url": "https://baileynelson.com.au"
+        },
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optometry Services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Bulk-Billed Eye Tests"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Private Eye Tests from $65"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Contact Lens Eye Tests"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Visual Fields Testing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ultra-wide retinal imaging"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optical & Sunglass styling"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Free frame adjustments"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Prescription glasses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Sunglasses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Contact lenses"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_url": "https://baileynelson.com.au/pages/optometrist-mornington",
+      "resolved_page_url": "https://baileynelson.com.au/pages/optometrist-mornington",
+      "map_url": "",
+      "resolved_map_url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=au&limit=1&q=170+Main+St%2C+Mornington%2C+VIC%2C+3931",
+      "coordinate_source": "OpenStreetMap Nominatim address fallback",
+      "structured_data": {
+        "@context": "https://schema.org",
+        "@type": "Optician",
+        "@id": "https://baileynelson.com.au/pages/optometrist-mornington#localbusiness",
+        "name": "Bailey Nelson Mornington",
+        "url": "https://baileynelson.com.au/pages/optometrist-mornington",
+        "image": "https://images.prismic.io/baileynelson/Zt-6GRoQrfVKl4Sv_24-BN-NSO-WebAssets-Comingsoon.jpg?auto=format,compress",
+        "telephone": "+61399625523",
+        "email": "mornington@baileynelson.com.au",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "170 Main St",
+          "addressLocality": "Mornington",
+          "addressRegion": "VIC",
+          "postalCode": "3931",
           "addressCountry": "AU"
         },
         "parentOrganization": {

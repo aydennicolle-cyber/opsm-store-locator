@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "coverage_statement": "Coverage is measured against the declared public sources and their latest successful refresh, not against an unknowable absolute universe.",
+  "freshness_policy_days": {
+    "named_network": 30,
+    "community_or_secondary": 90,
+    "property_relationship": 180
+  },
+  "sources": [
+    {"id":"opsm-au","label":"OPSM Australia official locator","category":"named_network","scope":"Australia","method":"Official public locator endpoint","required":true,"snapshot":"retailers/opsm/source_snapshot.json"},
+    {"id":"opsm-nz","label":"OPSM New Zealand official locator","category":"named_network","scope":"New Zealand","method":"Official public locator endpoint","required":true,"snapshot":"retailers/opsm-nz/source_snapshot.json"},
+    {"id":"specsavers-au","label":"Specsavers Australia official pages","category":"named_network","scope":"Australia","method":"Rendered official store pages","required":true,"snapshot":"retailers/specsavers/source_snapshot.json"},
+    {"id":"specsavers-nz","label":"Specsavers New Zealand official pages","category":"named_network","scope":"New Zealand","method":"Rendered official store pages","required":true,"snapshot":"retailers/specsavers-nz/source_snapshot.json"},
+    {"id":"bailey-nelson-au","label":"Bailey Nelson Australia official pages","category":"named_network","scope":"Australia","method":"Official store list and structured pages","required":true,"snapshot":"retailers/bailey-nelson/source_snapshot.json"},
+    {"id":"bailey-nelson-nz","label":"Bailey Nelson New Zealand official pages","category":"named_network","scope":"New Zealand","method":"Official store list and structured pages","required":true,"snapshot":"retailers/bailey-nelson-nz/source_snapshot.json"},
+    {"id":"oscar-wylee-au","label":"Oscar Wylee Australia official pages","category":"named_network","scope":"Australia","method":"Official store pages","required":true,"snapshot":"retailers/oscar-wylee/source_snapshot.json"},
+    {"id":"oscar-wylee-nz","label":"Oscar Wylee New Zealand official pages","category":"named_network","scope":"New Zealand","method":"Official store pages","required":true,"snapshot":"retailers/oscar-wylee-nz/source_snapshot.json"},
+    {"id":"osm-opticians","label":"OpenStreetMap shop=optician","category":"community_or_secondary","scope":"Australia and New Zealand","method":"Overpass recall-first discovery","required":true,"snapshot":"retailers/independent-other/source_snapshot.json"},
+    {"id":"retail-place-census","label":"Shopping-centre and named retail-precinct census","category":"community_or_secondary","scope":"Australia and New Zealand","method":"Official venue directories, owner portfolios, public datasets and recall-first discovery sources","required":true,"snapshot":"data/discovery/retail_place_discovery_run.json","completion_status":"partial"},
+    {"id":"centre-tenant-reconciliation","label":"Centre and precinct optical tenant directories","category":"community_or_secondary","scope":"Australia and New Zealand","method":"Reverse discovery from official tenant directories","required":true,"snapshot":"data/discovery_candidates.csv","completion_status":"partial"},
+    {"id":"regional-independent-discovery","label":"Regional group and independent storefront discovery","category":"community_or_secondary","scope":"Australia and New Zealand","method":"Official business sites and public listings used as leads","required":true,"snapshot":"data/discovery_candidates.csv","completion_status":"partial"},
+    {"id":"property-portfolios","label":"Property ownership, management and leasing portfolios","category":"property_relationship","scope":"Major Australian and New Zealand shopping-centre groups","method":"Bounded official portfolio, property, annual-report and public leasing evidence","required":false,"snapshot":"data/property_intelligence.json","completion_status":"partial"}
+  ]
+}

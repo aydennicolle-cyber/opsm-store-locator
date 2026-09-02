@@ -1,9 +1,9 @@
 {
   "source_url": "https://www.specsavers.co.nz/stores/full-store-list",
-  "fetched_at": "2026-07-26T04:15:04.480Z",
-  "list_count": 62,
-  "store_count": 62,
-  "collection_method": "Rendered official store pages; Schema.org structured data",
+  "fetched_at": "2026-09-01T23:21:29.969Z",
+  "list_count": 61,
+  "store_count": 61,
+  "collection_method": "Official full store list reconciled; structured details retained for unchanged official URLs; removed URLs verified absent",
   "country": "New Zealand",
   "stores": [
     {
@@ -2145,84 +2145,6 @@
         ],
         "telephone": "09 265 2240",
         "url": "ormiston"
-      }
-    },
-    {
-      "ok": true,
-      "list_name": "Pakuranga Plaza",
-      "official_url": "https://www.specsavers.co.nz/stores/pakuranga",
-      "data": {
-        "@context": "https://schema.org",
-        "@id": "3821",
-        "@type": "Optician",
-        "additionalProperty": [
-          {
-            "@type": "PropertyValue",
-            "name": "bookAppointmentUrl",
-            "value": "/book/pakuranga/appointment-type"
-          },
-          {
-            "@type": "PropertyValue",
-            "name": "hasOptical",
-            "value": true
-          },
-          {
-            "@type": "PropertyValue",
-            "name": "hasAudiology",
-            "value": true
-          },
-          {
-            "@type": "PropertyValue",
-            "name": "formattedAddress",
-            "value": "Shop S137, Pakuranga Plaza, Cnr Ti Rakau Dr and Pakuranga Highway, Pakuranga, Pakuranga, 2010"
-          }
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "NZ",
-          "addressLocality": "Pakuranga",
-          "postalCode": "2010",
-          "streetAddress": "Shop S137, Pakuranga Plaza, Cnr Ti Rakau Dr and Pakuranga Highway, Pakuranga"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -36.91276,
-          "longitude": 174.8718
-        },
-        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
-        "name": "Pakuranga Plaza",
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "closes": "18:00",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Saturday"
-            ],
-            "opens": "09:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "closes": "19:00",
-            "dayOfWeek": [
-              "Thursday",
-              "Friday"
-            ],
-            "opens": "09:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "closes": "17:00",
-            "dayOfWeek": [
-              "Sunday"
-            ],
-            "opens": "10:00"
-          }
-        ],
-        "telephone": "09 577 1431",
-        "url": "pakuranga"
       }
     },
     {
@@ -4806,5 +4728,12 @@
         "url": "timaru"
       }
     }
+  ],
+  "list_verified_at": "2026-09-01T23:21:29.969Z",
+  "detail_refresh_status": "incremental",
+  "retained_detail_count": 61,
+  "new_detail_count": 0,
+  "removed_official_urls": [
+    "https://www.specsavers.co.nz/stores/pakuranga"
   ]
 }

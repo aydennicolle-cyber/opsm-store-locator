@@ -9,8 +9,8 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const RETAILER_DIR = path.join(ROOT, "retailers", "oscar-wylee-nz");
 const LIST_URL = "https://www.oscarwylee.co.nz/locations/";
-const CHROME_PATH =
-  process.env.CHROME_PATH || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
+const CHROME_PATH = process.env.CHROME_PATH || (process.platform === "darwin" ? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" : "");
+const BROWSER_OPTIONS = CHROME_PATH ? { executablePath: CHROME_PATH } : { channel: "chrome" };
 const KNOWN_ADDRESSES = {
   "https://www.oscarwylee.co.nz/locations/optometrist-auckland-cbd.html":
     "Shop S9, 163 Queen Street, Auckland CBD, Auckland 1010",
@@ -90,6 +90,7 @@ const LOCALITIES = {
   "optometrist-wellington-central.html": "Wellington",
   "optometrist-albany.html": "Albany",
   "stlukes.html": "Mount Albert",
+  "optometrist-riccarton.html": "Riccarton",
 };
 const REGIONS = {
   "optometrist-auckland-cbd.html": "Auckland",
@@ -101,6 +102,7 @@ const REGIONS = {
   "optometrist-wellington-central.html": "Wellington",
   "optometrist-albany.html": "Auckland",
   "stlukes.html": "Auckland",
+  "optometrist-riccarton.html": "Canterbury",
 };
 const FIELDS = [
   "name",
@@ -176,7 +178,7 @@ async function collectStore(page, link) {
 
 async function main() {
   const browser = await chromium.launch({
-    executablePath: CHROME_PATH,
+    ...BROWSER_OPTIONS,
     headless: process.env.HEADLESS === "1",
   });
   try {

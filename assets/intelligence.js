@@ -103,6 +103,82 @@
     );
   }
 
+  function projectedRing(point, ring) {
+    const longitudeScale = Math.cos((point.latitude * Math.PI) / 180) * 111.32;
+    return ring.map(([longitude, latitude]) => [
+      (longitude - point.longitude) * longitudeScale,
+      (latitude - point.latitude) * 111.32,
+    ]);
+  }
+
+  function polygonArea(ring) {
+    if (!ring || ring.length < 3) return 0;
+    let area = 0;
+    for (let index = 0; index < ring.length; index += 1) {
+      const current = ring[index];
+      const next = ring[(index + 1) % ring.length];
+      area += current[0] * next[1] - next[0] * current[1];
+    }
+    return Math.abs(area) / 2;
+  }
+
+  function clipToConvexPolygon(subject, clip) {
+    let output = subject.slice();
+    const cross = (first, second, third) =>
+      (second[0] - first[0]) * (third[1] - first[1]) -
+      (second[1] - first[1]) * (third[0] - first[0]);
+    const intersection = (start, end, clipStart, clipEnd) => {
+      const subjectX = end[0] - start[0];
+      const subjectY = end[1] - start[1];
+      const clipX = clipEnd[0] - clipStart[0];
+      const clipY = clipEnd[1] - clipStart[1];
+      const denominator = subjectX * clipY - subjectY * clipX;
+      if (Math.abs(denominator) < 1e-12) return end;
+      const t = ((clipStart[0] - start[0]) * clipY - (clipStart[1] - start[1]) * clipX) / denominator;
+      return [start[0] + t * subjectX, start[1] + t * subjectY];
+    };
+    for (let edge = 0; edge < clip.length && output.length; edge += 1) {
+      const clipStart = clip[edge];
+      const clipEnd = clip[(edge + 1) % clip.length];
+      const input = output;
+      output = [];
+      let start = input[input.length - 1];
+      for (const end of input) {
+        const endInside = cross(clipStart, clipEnd, end) >= -1e-10;
+        const startInside = cross(clipStart, clipEnd, start) >= -1e-10;
+        if (endInside) {
+          if (!startInside) output.push(intersection(start, end, clipStart, clipEnd));
+          output.push(end);
+        } else if (startInside) {
+          output.push(intersection(start, end, clipStart, clipEnd));
+        }
+        start = end;
+      }
+    }
+    return output;
+  }
+
+  function geometryOverlapFraction(point, geometry, radiusKm) {
+    if (!geometry || radiusKm <= 0 || !geometryIntersectsRadius(point, geometry, radiusKm)) return 0;
+    const circle = Array.from({ length: 64 }, (_, index) => {
+      const angle = (index / 64) * Math.PI * 2;
+      return [Math.cos(angle) * radiusKm, Math.sin(angle) * radiusKm];
+    });
+    const polygons = geometry.type === "Polygon" ? [geometry.coordinates] : geometry.coordinates;
+    let totalArea = 0;
+    let overlapArea = 0;
+    polygons.forEach((polygon) => {
+      polygon.forEach((ring, index) => {
+        const projected = projectedRing(point, ring);
+        const sign = index === 0 ? 1 : -1;
+        totalArea += sign * polygonArea(projected);
+        overlapArea += sign * polygonArea(clipToConvexPolygon(projected, circle));
+      });
+    });
+    if (totalArea <= 0) return 0;
+    return Math.max(0, Math.min(1, overlapArea / totalArea));
+  }
+
   function averageAvailable(parts) {
     const available = parts.filter((part) => number(part.value) !== null);
     if (!available.length) return null;
@@ -163,6 +239,7 @@
       targetAreaMin,
       targetAreaMax,
       amenitySummary,
+      placeId,
     } = input;
     const distances = stores
       .map((store) => ({ store, distance: haversine(point, store) }))
@@ -173,18 +250,25 @@
     const nearestCompetitor = competitors[0]?.distance ?? 10;
     const competitionCountScore = Math.max(0, 100 - withinFive.length * 8);
     const competitionDistanceScore = Math.min(100, nearestCompetitor * 20);
-    const competitiveWhiteSpace = competitionCountScore * 0.6 + competitionDistanceScore * 0.4;
+    const competitiveWhiteSpace = stores.length
+      ? competitionCountScore * 0.6 + competitionDistanceScore * 0.4
+      : null;
 
     const sameBrand = targetRetailer
       ? distances.filter((entry) => entry.store.retailer === targetRetailer)
       : distances;
     const nearestNetwork = sameBrand[0]?.distance;
-    const networkFit = Number.isFinite(nearestNetwork) ? Math.min(100, nearestNetwork * 10) : 100;
+    const networkFit = stores.length
+      ? (Number.isFinite(nearestNetwork) ? Math.min(100, nearestNetwork * 10) : 100)
+      : null;
 
     const nearbyCentres = centres
       .map((centre) => ({ centre, distance: haversine(point, centre) }))
       .sort((a, b) => a.distance - b.distance);
-    const centre = nearbyCentres.find((entry) => entry.distance <= 0.75) || null;
+    const centre = placeId
+      ? nearbyCentres.find((entry) => entry.centre.centre_id === placeId) || null
+      : null;
+    const nearbyCentreLead = nearbyCentres.find((entry) => entry.distance <= 0.75) || null;
     let centreStrength = null;
     if (centre) {
       const profileParts = [
@@ -217,10 +301,10 @@
     };
     const componentValues = {
       market_demand: marketDemandScore(market, markets),
-      competitive_white_space: Math.round(competitiveWhiteSpace),
+      competitive_white_space: competitiveWhiteSpace === null ? null : Math.round(competitiveWhiteSpace),
       centre_strength: centreStrength === null ? null : Math.round(centreStrength),
       accessibility,
-      network_fit: Math.round(networkFit),
+      network_fit: networkFit === null ? null : Math.round(networkFit),
       format_fit: formatFit,
     };
     const availableKeys = Object.keys(componentValues).filter((key) => number(componentValues[key]) !== null);
@@ -236,6 +320,7 @@
       components: componentValues,
       weights,
       nearestCentre: centre,
+      nearbyCentreLead,
       nearestStore: distances[0] || null,
       competitorCountFiveKm: withinFive.length,
       nearestCompetitorKm: nearestCompetitor,
@@ -243,27 +328,113 @@
   }
 
   function catchmentSummary(point, radiusKm, markets) {
-    const included = markets.filter((feature) => geometryIntersectsRadius(point, feature.geometry, radiusKm));
+    const included = markets
+      .map((feature) => ({ feature, fraction: geometryOverlapFraction(point, feature.geometry, radiusKm) }))
+      .filter((entry) => entry.fraction > 0);
     const population = included.reduce(
-      (sum, feature) => sum + (number(feature.properties.population_2025) || 0),
+      (sum, entry) => sum + (number(entry.feature.properties.population_2025) || 0) * entry.fraction,
       0
     );
     const weighted = (field) => {
-      if (!population) return null;
-      const numerator = included.reduce((sum, feature) => {
-        const value = number(feature.properties[field]);
-        const weight = number(feature.properties.population_2025);
-        return sum + (value === null || weight === null ? 0 : value * weight);
+      let denominator = 0;
+      const numerator = included.reduce((sum, entry) => {
+        const value = number(entry.feature.properties[field]);
+        const populationValue = number(entry.feature.properties.population_2025);
+        if (value === null || populationValue === null) return sum;
+        const weight = populationValue * entry.fraction;
+        denominator += weight;
+        return sum + value * weight;
       }, 0);
-      return numerator / population;
+      return denominator ? numerator / denominator : null;
     };
     return {
       radiusKm,
       sa2Count: included.length,
-      population,
+      population: Math.round(population),
       age45PlusPct: weighted("age_45_plus_pct_2021"),
       medianHouseholdIncomeWeekly: weighted("median_household_income_weekly_2021"),
+      apportionmentMethod: "SA2 area-overlap apportionment",
     };
+  }
+
+  function activeRelationship(relationship, asOf = new Date()) {
+    if (relationship.status !== "ACTIVE") return false;
+    const stamp = asOf instanceof Date ? asOf.toISOString().slice(0, 10) : String(asOf || "");
+    return (!relationship.valid_from || relationship.valid_from <= stamp) &&
+      (!relationship.valid_to || relationship.valid_to >= stamp);
+  }
+
+  function deriveLeasingArrangement(relationships, groups = []) {
+    const groupById = new Map(groups.map((group) => [group.group_id, group]));
+    const active = (relationships || []).filter((item) => activeRelationship(item));
+    if (active.some((item) => item.role === "EXTERNAL_LEASING_AGENT")) return "External agency";
+    const controllers = new Set(active.filter((item) => item.role === "LEASING_CONTROLLER").map((item) => item.group_id));
+    const operating = new Set(
+      active
+        .filter((item) => ["OWNER", "CO_OWNER", "MANAGER", "OPERATOR"].includes(item.role))
+        .map((item) => item.group_id)
+    );
+    if ([...controllers].some((groupId) => operating.has(groupId))) return "In-house";
+    if ([...controllers].some((groupId) => groupById.get(groupId)?.group_type === "PRIVATE_LANDLORD")) {
+      return "Private landlord";
+    }
+    return "Unknown";
+  }
+
+  function portfolioOverlapStatus(input) {
+    if (input.hasBailey) return "SAME_CENTRE";
+    const groupPortfolio = input.groupPortfolio || {};
+    const candidates = (input.relationships || [])
+      .filter((item) => activeRelationship(item))
+      .filter((item) => Number(groupPortfolio[item.group_id]?.bailey_property_count || 0) > 0);
+    if (candidates.some((item) => item.role === "LEASING_CONTROLLER")) return "LEASING_CONTROLLER_OVERLAP";
+    if (candidates.some((item) => ["OWNER", "CO_OWNER", "MANAGER", "OPERATOR"].includes(item.role))) {
+      return "PROPERTY_GROUP_OVERLAP";
+    }
+    if (candidates.some((item) => item.role === "EXTERNAL_LEASING_AGENT")) return "EXTERNAL_AGENCY_OVERLAP";
+    if (["Verified", "Verified unknown"].includes(input.researchStatus)) return "NO_KNOWN_OVERLAP";
+    return "UNKNOWN";
+  }
+
+  function effectivePropertyRelationships(generated, corrections) {
+    const effective = new Map((generated || []).map((item) => [item.relationship_id, { ...item }]));
+    (corrections || [])
+      .filter((item) => item.correction_type === "ASSET_RELATIONSHIP")
+      .forEach((correction) => {
+        if (correction.action === "REMOVE") effective.delete(correction.record_id);
+        else if (correction.action === "UPSERT" && correction.record_id) {
+          effective.set(correction.record_id, {
+            ...(effective.get(correction.record_id) || {}),
+            relationship_id: correction.record_id,
+            place_id: correction.place_id,
+            group_id: correction.group_id,
+            role: correction.role,
+            ownership_percentage: number(correction.ownership_percentage),
+            status: "ACTIVE",
+            source_url: correction.source_url || "",
+            last_verified_at: correction.verified_at || "",
+            confidence: correction.confidence || "Medium",
+            public_note: correction.public_note || "",
+            manual_override: true,
+          });
+        }
+      });
+    return [...effective.values()];
+  }
+
+  function competitorPropertyContext(place, stores) {
+    const byRetailer = {};
+    (stores || []).forEach((store) => {
+      if (!Number.isFinite(Number(store.latitude)) || !Number.isFinite(Number(store.longitude))) return;
+      const retailer = store.retailer || "Unknown";
+      byRetailer[retailer] ||= { in_centre: [], nearby_unverified: [], catchment_2km: [] };
+      const distance = haversine(place, store);
+      const item = { store_id: store.store_id, name: store.name, distance_km: Math.round(distance * 100) / 100 };
+      if (store.place_id && store.place_id === place.place_id) byRetailer[retailer].in_centre.push(item);
+      else if (distance <= 0.25) byRetailer[retailer].nearby_unverified.push(item);
+      else if (distance <= 2) byRetailer[retailer].catchment_2km.push(item);
+    });
+    return { by_retailer: byRetailer };
   }
 
   function sanitiseShareState(state) {
@@ -275,6 +446,21 @@
         state: state.filters?.state || "",
         location: state.filters?.location || "",
         search: state.filters?.search || "",
+      },
+      place_filters: {
+        search: state.placeFilters?.search || "",
+        country: state.placeFilters?.country || "",
+        type: state.placeFilters?.type || "",
+        bailey: state.placeFilters?.bailey || "",
+        retailers: Array.from(state.placeFilters?.retailers || []),
+        confidence: state.placeFilters?.confidence || "",
+        group_id: state.placeFilters?.group_id || "",
+        arrangement: state.placeFilters?.arrangement || "",
+        overlap: state.placeFilters?.overlap || "",
+        centre_class: state.placeFilters?.centre_class || "",
+        min_income: number(state.placeFilters?.min_income),
+        min_bailey_distance: number(state.placeFilters?.min_bailey_distance),
+        sort: state.placeFilters?.sort || "name",
       },
       map: {
         latitude: number(state.map?.latitude),
@@ -288,6 +474,7 @@
         longitude: number(candidate.longitude),
         area_sqm: number(candidate.area_sqm),
         profile_id: candidate.profile_id || "generic-optical",
+        place_id: candidate.place_id || "",
       })),
     };
   }
@@ -299,10 +486,16 @@
     pointInGeometry,
     findMarketFeature,
     geometryIntersectsRadius,
+    geometryOverlapFraction,
     marketDemandScore,
     formatFitScore,
     candidateScore,
     catchmentSummary,
+    activeRelationship,
+    deriveLeasingArrangement,
+    portfolioOverlapStatus,
+    effectivePropertyRelationships,
+    competitorPropertyContext,
     sanitiseShareState,
   };
 });

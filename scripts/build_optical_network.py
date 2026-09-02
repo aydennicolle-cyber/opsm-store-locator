@@ -6,6 +6,7 @@ from __future__ import annotations
 import csv
 import html
 import json
+import os
 import re
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -481,23 +482,53 @@ def validate(stores: list[dict]) -> None:
     if len(ids) != len(set(ids)):
         duplicates = [item for item, count in Counter(ids).items() if count > 1]
         raise ValueError(f"Duplicate store IDs: {duplicates[:10]}")
-    independent_count = int(
-        json.loads(
-            (ROOT / "retailers" / "independent-other" / "source_snapshot.json").read_text(
-                encoding="utf-8"
-            )
-        )["store_count"]
-    )
-    expected = {
-        "OPSM": 392,
-        "Specsavers": 461,
-        "Bailey Nelson": 82,
-        "Oscar Wylee": 131,
-        "Independent / Other optical": independent_count,
-    }
     counts = Counter(store["retailer"] for store in stores)
-    if dict(counts) != expected:
-        raise ValueError(f"Unexpected retailer counts: {dict(counts)}")
+    required_retailers = {"OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee", "Independent / Other optical"}
+    if set(counts) != required_retailers or any(counts[retailer] == 0 for retailer in required_retailers):
+        raise ValueError(f"Missing required retailer scope: {dict(counts)}")
+    source_counts = Counter()
+    for retailer, folder in (
+        ("OPSM", "opsm"),
+        ("OPSM", "opsm-nz"),
+        ("Specsavers", "specsavers"),
+        ("Specsavers", "specsavers-nz"),
+        ("Bailey Nelson", "bailey-nelson"),
+        ("Bailey Nelson", "bailey-nelson-nz"),
+        ("Oscar Wylee", "oscar-wylee"),
+        ("Oscar Wylee", "oscar-wylee-nz"),
+        ("Independent / Other optical", "independent-other"),
+    ):
+        source_counts[retailer] += len(read_csv(ROOT / "retailers" / folder / "stores.csv"))
+    if counts != source_counts:
+        raise ValueError(f"Combined counts do not reconcile to source files: combined={dict(counts)} source={dict(source_counts)}")
+    history_paths = sorted((DATA_DIR / "history").glob("*.json"))
+    if (OUTPUT_CSV.exists() or history_paths) and os.environ.get("ALLOW_NETWORK_REDUCTION") != "1":
+        # Compare with the latest generated network when one exists. An older
+        # archived snapshot may pre-date a separately reviewed source-scope
+        # correction; it should not block every later no-change rebuild.
+        if OUTPUT_CSV.exists():
+            prior_scopes = Counter(
+                (store["retailer"], store.get("country", "Australia"))
+                for store in read_csv(OUTPUT_CSV)
+            )
+            baseline_label = "latest generated network"
+        else:
+            previous = json.loads(history_paths[-1].read_text(encoding="utf-8")).get("stores", {})
+            prior_scopes = Counter(
+                (store["retailer"], store.get("country", "Australia")) for store in previous.values()
+            )
+            baseline_label = "latest archived network"
+        current_scopes = Counter((store["retailer"], store["country"]) for store in stores)
+        reductions = {
+            f"{retailer} / {country}": (prior_count, current_scopes[(retailer, country)])
+            for (retailer, country), prior_count in prior_scopes.items()
+            if current_scopes[(retailer, country)] < prior_count * 0.95
+        }
+        if reductions:
+            raise ValueError(
+                f"Unexplained network reduction from the {baseline_label} exceeds 5%: {reductions}. "
+                "Review the source result and set ALLOW_NETWORK_REDUCTION=1 only after explicit approval."
+            )
     for store in stores:
         if store["country"] not in {"Australia", "New Zealand"}:
             raise ValueError(f"Invalid country for {store['store_id']}: {store['country']}")

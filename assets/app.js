@@ -54,13 +54,13 @@
     },
     centres: {
       eyebrow: "Landlord intelligence",
-      title: "Centres",
-      subtitle: "Review optical tenancy overlap and sourced centre metrics.",
+      title: "Places",
+      subtitle: "Browse centres, plazas and high-street corridors with mapped optical tenants.",
     },
     opportunity: {
-      eyebrow: "Site strategy",
+      eyebrow: "Lookalike screening",
       title: "Opportunity",
-      subtitle: "Drop, score and shortlist prospective leasing locations.",
+      subtitle: "Find centres and corridors that resemble Bailey Nelson's current footprint.",
     },
     trends: {
       eyebrow: "Network movement",
@@ -71,6 +71,11 @@
       eyebrow: "Decision support",
       title: "Compare",
       subtitle: "Place shortlisted candidates side by side with transparent evidence.",
+    },
+    health: {
+      eyebrow: "Census certification",
+      title: "Data Health",
+      subtitle: "Source freshness, completeness, classification and discovery reconciliation.",
     },
   };
   const STORE_RADII = [0.5, 1, 2, 5, 10];
@@ -98,8 +103,9 @@
     "services",
     "audiology",
     "venue_name",
-    "venue_id",
-    "location_type",
+    "place_id",
+    "location_setting",
+    "mapping_confidence",
     "classification_confidence",
     "classification_basis",
     "store_area_sqm",
@@ -117,6 +123,7 @@
     viewTitle: document.getElementById("viewTitle"),
     viewSubtitle: document.getElementById("viewSubtitle"),
     visibleTotal: document.getElementById("visibleTotal"),
+    visibleTotalLabel: document.getElementById("visibleTotalLabel"),
     freshness: document.getElementById("freshnessLabel"),
     detailPanel: document.getElementById("detailPanel"),
     detailContent: document.getElementById("detailContent"),
@@ -147,6 +154,19 @@
     storeLinks: {},
     events: {},
     profiles: [],
+    dataHealth: null,
+    propertyIntelligence: null,
+    propertyGroups: [],
+    propertyRelationships: [],
+    basePropertyRelationships: [],
+    propertySummaries: {},
+    groupPortfolios: {},
+    propertyCorrections: [],
+    localPropertyGroups: [],
+    lookalikes: { metadata: {}, rankings: {}, bailey_benchmarks: [] },
+    performanceBenchmark: null,
+    consultantCorrections: [],
+    localPlaces: [],
     selectedStoreId: "",
     selectedCentreId: "",
     selectedCandidateId: "",
@@ -171,6 +191,12 @@
       target_min_sqm: "",
       target_max_sqm: "",
     },
+    opportunityFilters: { country: "Australia", setting: "Shopping Centre" },
+    placeFilters: {
+      search: "", country: "", type: "", bailey: "", retailers: new Set(), confidence: "",
+      group_id: "", arrangement: "", overlap: "", centre_class: "", min_income: "",
+      min_bailey_distance: "", sort: "name",
+    },
     activeLayers: new Set(["centres"]),
     amenityMarkers: [],
     amenitySummary: null,
@@ -185,6 +211,10 @@
   let saturationLayer = null;
   let amenityRequestController = null;
   let toastTimer = null;
+  const CORRECTION_STORAGE_KEY = "bailey-leasing-place-corrections-v2";
+  const LOCAL_PLACE_STORAGE_KEY = "bailey-leasing-local-places-v1";
+  const PROPERTY_CORRECTION_STORAGE_KEY = "bailey-leasing-property-corrections-v1";
+  const LOCAL_PROPERTY_GROUP_STORAGE_KEY = "bailey-leasing-local-property-groups-v1";
 
   const map = L.map("map", { zoomControl: false, preferCanvas: true }).setView(
     AUSTRALIA_VIEW.center,
@@ -292,6 +322,8 @@
         retailer: store.retailer,
         storeId: store.store_id,
         title: store.name,
+        baseLatitude: store.latitude,
+        baseLongitude: store.longitude,
       });
       marker.on("click", () => selectStore(store.store_id, false));
       marker.bindTooltip(
@@ -306,34 +338,94 @@
     centreLayer.clearLayers();
     centreMarkerById.clear();
     state.centres.forEach((centre) => {
+      if (!Number.isFinite(Number(centre.latitude)) || !Number.isFinite(Number(centre.longitude))) return;
+      const isCorridor = centre.location_setting === "High Street";
       const marker = L.marker([centre.latitude, centre.longitude], {
         icon: L.divIcon({
           className: "",
-          html: `<div class="centre-pin">${CENTRE_BAG_SVG}</div>`,
+          html: `<div class="centre-pin ${isCorridor ? "corridor-pin" : ""}">${
+            isCorridor ? '<i data-lucide="route"></i>' : CENTRE_BAG_SVG
+          }</div>`,
           iconSize: [26, 26],
           iconAnchor: [13, 13],
         }),
         title: centre.name,
+        baseLatitude: Number(centre.latitude),
+        baseLongitude: Number(centre.longitude),
+        placeId: centre.place_id,
+        zIndexOffset: 900,
       });
       marker.bindTooltip(
-        `<strong>${escapeHtml(centre.name)}</strong><br>${centre.optical_store_count} mapped optical ${centre.optical_store_count === 1 ? "store" : "stores"}`,
+        `<strong>${escapeHtml(centre.name)}</strong><br>${escapeHtml(centre.place_type)} · ${centre.optical_store_count} mapped optical ${centre.optical_store_count === 1 ? "store" : "stores"}`,
         { direction: "top", offset: [0, -8] }
       );
       marker.on("click", () => openCentreDetail(centre));
       marker.addTo(centreLayer);
-      centreMarkerById.set(centre.centre_id, marker);
+      centreMarkerById.set(centre.place_id, marker);
+    });
+    refreshIcons();
+    repositionCloseZoomMarkers();
+  }
+
+  function resetMarkerPosition(marker) {
+    if (!Number.isFinite(marker?.options?.baseLatitude) || !Number.isFinite(marker?.options?.baseLongitude)) return;
+    marker.setLatLng([marker.options.baseLatitude, marker.options.baseLongitude]);
+  }
+
+  function repositionCloseZoomMarkers() {
+    markerById.forEach(resetMarkerPosition);
+    centreMarkerById.forEach(resetMarkerPosition);
+    if (map.getZoom() < 16) return;
+
+    const groupedStores = new Map();
+    state.filteredStores.forEach((store) => {
+      const key = store.place_id || `${Number(store.latitude).toFixed(5)}:${Number(store.longitude).toFixed(5)}`;
+      if (!groupedStores.has(key)) groupedStores.set(key, []);
+      groupedStores.get(key).push(store);
+    });
+    groupedStores.forEach((stores) => {
+      if (stores.length < 2) return;
+      const centre = state.centres.find((place) => place.place_id === stores[0].place_id);
+      const anchor = centre
+        ? L.latLng(Number(centre.latitude), Number(centre.longitude))
+        : L.latLng(
+            stores.reduce((sum, store) => sum + Number(store.latitude), 0) / stores.length,
+            stores.reduce((sum, store) => sum + Number(store.longitude), 0) / stores.length
+          );
+      const point = map.latLngToLayerPoint(anchor);
+      const radius = stores.length > 4 ? 50 : 38;
+      stores
+        .slice()
+        .sort((left, right) => left.store_id.localeCompare(right.store_id))
+        .forEach((store, index) => {
+          const angle = -Math.PI / 2 + (Math.PI * 2 * index) / stores.length;
+          const offset = L.point(Math.cos(angle) * radius, Math.sin(angle) * radius);
+          markerById.get(store.store_id)?.setLatLng(map.layerPointToLatLng(point.add(offset)));
+        });
+    });
+
+    centreMarkerById.forEach((marker, placeId) => {
+      if (!centreLayer.hasLayer(marker)) return;
+      const place = state.centres.find((item) => item.place_id === placeId);
+      const base = L.latLng(marker.options.baseLatitude, marker.options.baseLongitude);
+      const point = map.latLngToLayerPoint(base);
+      const mappedStoreCount = state.filteredStores.filter((store) => store.place_id === placeId).length;
+      const distance = mappedStoreCount > 4 ? 110 : mappedStoreCount > 1 ? 90 : 58;
+      const offset = place?.location_setting === "High Street" ? L.point(distance, 0) : L.point(-distance, 0);
+      marker.setLatLng(map.layerPointToLatLng(point.add(offset)));
     });
   }
 
   function updateCentreMarkersForFilters() {
-    const visibleVenueIds = new Set(
-      state.filteredStores.map((store) => store.venue_id).filter(Boolean)
-    );
+    const visibleVenueIds = state.view === "centres"
+      ? new Set(filteredPlaces().map((place) => place.place_id))
+      : new Set(state.filteredStores.map((store) => store.place_id).filter(Boolean));
     centreLayer.clearLayers();
     visibleVenueIds.forEach((venueId) => {
       const marker = centreMarkerById.get(venueId);
       if (marker) centreLayer.addLayer(marker);
     });
+    window.requestAnimationFrame(repositionCloseZoomMarkers);
   }
 
   function createCandidateMarker(candidate) {
@@ -354,6 +446,7 @@
   function setView(view) {
     if (!VIEW_CONFIG[view]) return;
     state.view = view;
+    document.body.dataset.activeView = view;
     document.querySelectorAll("[data-view]").forEach((button) => {
       button.classList.toggle("active", button.dataset.view === view);
     });
@@ -361,7 +454,15 @@
     elements.viewEyebrow.textContent = config.eyebrow;
     elements.viewTitle.textContent = config.title;
     elements.viewSubtitle.textContent = config.subtitle;
+    if (view === "health" && state.dataHealth) {
+      elements.visibleTotal.textContent = Number(state.dataHealth.observed.stores).toLocaleString("en-AU");
+      elements.visibleTotalLabel.textContent = "stores observed in census";
+    } else {
+      elements.visibleTotal.textContent = state.filteredStores.length.toLocaleString("en-AU");
+      elements.visibleTotalLabel.textContent = "locations visible";
+    }
     renderView();
+    updateCentreMarkersForFilters();
     updateShareUrl(false);
   }
 
@@ -370,7 +471,8 @@
     else if (state.view === "centres") renderCentresView();
     else if (state.view === "opportunity") renderOpportunityView();
     else if (state.view === "trends") renderTrendsView();
-    else renderCompareView();
+    else if (state.view === "compare") renderCompareView();
+    else renderDataHealthView();
     refreshIcons();
   }
 
@@ -418,8 +520,8 @@
             state.filters.state,
             "All states / regions"
           )}</select></label>
-          <label><span>Location</span><select id="locationSelect">${filterOptions(
-            ["Shopping Centre", "Main Street / Street-front", "Other", "Unclassified"],
+          <label><span>Location setting</span><select id="locationSelect">${filterOptions(
+            ["Shopping Centre", "High Street", "Other", "Uncertain"],
             state.filters.location,
             "All locations"
           )}</select></label>
@@ -543,67 +645,155 @@
     storeClusters.clearLayers();
     state.filteredStores.forEach((store) => storeClusters.addLayer(markerById.get(store.store_id)));
     updateCentreMarkersForFilters();
-    elements.visibleTotal.textContent = state.filteredStores.length.toLocaleString("en-AU");
+    if (state.view !== "health") {
+      elements.visibleTotal.textContent = state.filteredStores.length.toLocaleString("en-AU");
+      elements.visibleTotalLabel.textContent = "locations visible";
+    }
     if (render && state.view === "network") renderNetworkView();
     updateSaturationLayer();
     updateShareUrl(false);
+    window.requestAnimationFrame(repositionCloseZoomMarkers);
   }
 
   function renderCentresView() {
-    const enriched = state.centres.filter((centre) => centre.confidence === "High").length;
+    const centres = state.centres.filter((place) => place.location_setting === "Shopping Centre").length;
+    const corridors = state.centres.filter((place) => place.location_setting === "High Street").length;
     elements.viewContent.innerHTML = `
       <section class="filters">
-        <label class="search-field"><i data-lucide="search"></i><span class="sr-only">Search centres</span>
-          <input id="centreSearch" type="search" value="${escapeHtml(state.filters.search)}" placeholder="Centre, owner or suburb" />
+        <label class="search-field"><i data-lucide="search"></i><span class="sr-only">Search retail places</span>
+          <input id="centreSearch" type="search" value="${escapeHtml(state.placeFilters.search)}" placeholder="Centre, corridor, suburb, owner or manager" />
         </label>
+        <div class="select-grid place-filter-grid">
+          <label><span>Country</span><select id="placeCountry">${filterOptions(["Australia", "New Zealand"], state.placeFilters.country, "All countries")}</select></label>
+          <label><span>Place type</span><select id="placeType">${filterOptions(["Shopping Centre", "High Street Corridor"], state.placeFilters.type, "Centres + corridors")}</select></label>
+          <label><span>Bailey Nelson</span><select id="placeBailey">${filterOptions(["Present", "Absent"], state.placeFilters.bailey, "Present or absent")}</select></label>
+          <label><span>Confidence</span><select id="placeConfidence">${filterOptions(["High", "Medium", "Uncertain"], state.placeFilters.confidence, "Any confidence")}</select></label>
+          <label><span>Property group</span><select id="placeGroup"><option value="">All property groups</option>${state.propertyGroups
+            .filter((group) => Number(state.groupPortfolios[group.group_id]?.property_count || 0))
+            .sort((a, b) => a.canonical_name.localeCompare(b.canonical_name))
+            .map((group) => `<option value="${escapeHtml(group.group_id)}" ${state.placeFilters.group_id === group.group_id ? "selected" : ""}>${escapeHtml(group.canonical_name)}</option>`).join("")}</select></label>
+          <label><span>Leasing arrangement</span><select id="placeArrangement">${filterOptions(["In-house", "External agency", "Private landlord", "Unknown"], state.placeFilters.arrangement, "Any arrangement")}</select></label>
+          <label><span>Portfolio overlap</span><select id="placeOverlap">${filterOptions(["SAME_CENTRE", "LEASING_CONTROLLER_OVERLAP", "PROPERTY_GROUP_OVERLAP", "EXTERNAL_AGENCY_OVERLAP", "NO_KNOWN_OVERLAP", "UNKNOWN"], state.placeFilters.overlap, "Any overlap status")}</select></label>
+          <label><span>Centre class</span><select id="placeCentreClass">${filterOptions(["Super Regional", "Regional", "Sub-regional", "Neighbourhood", "CBD / Mixed-use", "Outlet", "Large Format", "Other", "Unknown"], state.placeFilters.centre_class, "Any centre class")}</select></label>
+          <label><span>Minimum weekly income</span><input id="placeMinIncome" type="number" min="0" step="100" value="${escapeHtml(state.placeFilters.min_income)}" placeholder="No minimum" /></label>
+          <label><span>Minimum nearest BN (km)</span><input id="placeMinBailey" type="number" min="0" step="1" value="${escapeHtml(state.placeFilters.min_bailey_distance)}" placeholder="No minimum" /></label>
+          <label><span>Sort results</span><select id="placeSort">${filterOptions(["name", "optical_tenants", "household_income", "nearest_bailey", "portfolio_white_space"], state.placeFilters.sort, "Sort by")}</select></label>
+        </div>
+        <fieldset class="place-retailer-filter"><legend>Require every selected retailer</legend>${BRAND_ORDER.slice(0, 4).map((brand) => `<label><input type="checkbox" value="${escapeHtml(brand)}" ${state.placeFilters.retailers.has(brand) ? "checked" : ""} />${brandMarkHtml(brand, "compact")}<span>${escapeHtml(brand)}</span></label>`).join("")}</fieldset>
+        <div class="button-row place-actions">
+          <button class="secondary-command" id="exportCorrections" type="button"><i data-lucide="download"></i>Export local corrections (${state.consultantCorrections.length})</button>
+          <button class="secondary-command" id="importCorrections" type="button"><i data-lucide="upload"></i>Import corrections CSV</button>
+          <input id="correctionFile" type="file" accept=".csv,text/csv" hidden />
+          <button class="secondary-command" id="exportPropertyCorrections" type="button"><i data-lucide="building-2"></i>Export property corrections (${state.propertyCorrections.length + state.localPropertyGroups.length})</button>
+          <button class="secondary-command" id="importPropertyCorrections" type="button"><i data-lucide="file-up"></i>Import property corrections</button>
+          <input id="propertyCorrectionFile" type="file" accept=".csv,text/csv" hidden />
+        </div>
         <div class="compact-metrics">
-          <div><strong>${state.centres.length}</strong><span>reviewed venues</span></div>
-          <div><strong>${state.centres.filter((centre) => centre.retailers.length > 1).length}</strong><span>multi-brand</span></div>
-          <div><strong>${enriched}</strong><span>fully enriched</span></div>
+          <div><strong>${centres}</strong><span>centres and plazas</span></div>
+          <div><strong>${corridors}</strong><span>high-street corridors</span></div>
+          <div><strong>${state.centres.filter((place) => place.has_bailey).length}</strong><span>with Bailey Nelson</span></div>
         </div>
       </section>
       <section class="result-section">
-        <div class="section-heading"><h2>Centre profiles</h2><span id="centreResultCount"></span></div>
+        <div class="section-heading"><h2>Retail place profiles</h2><span id="centreResultCount"></span></div>
         <div class="centre-list" id="centreList"></div>
       </section>`;
     renderCentreResults();
     document.getElementById("centreSearch").addEventListener("input", (event) => {
-      state.filters.search = event.target.value;
+      state.placeFilters.search = event.target.value;
       renderCentreResults();
     });
+    [["placeCountry", "country"], ["placeType", "type"], ["placeBailey", "bailey"], ["placeConfidence", "confidence"], ["placeGroup", "group_id"], ["placeArrangement", "arrangement"], ["placeOverlap", "overlap"], ["placeCentreClass", "centre_class"], ["placeSort", "sort"]].forEach(([id, key]) => {
+      document.getElementById(id).addEventListener("change", (event) => {
+        state.placeFilters[key] = event.target.value;
+        renderCentreResults();
+      });
+    });
+    [["placeMinIncome", "min_income"], ["placeMinBailey", "min_bailey_distance"]].forEach(([id, key]) => {
+      document.getElementById(id).addEventListener("input", (event) => {
+        state.placeFilters[key] = event.target.value;
+        renderCentreResults();
+      });
+    });
+    document.querySelectorAll('.place-retailer-filter input[type="checkbox"]').forEach((input) => {
+      input.addEventListener("change", () => {
+        if (input.checked) state.placeFilters.retailers.add(input.value);
+        else state.placeFilters.retailers.delete(input.value);
+        renderCentreResults();
+      });
+    });
+    document.getElementById("exportCorrections").addEventListener("click", exportConsultantCorrections);
+    document.getElementById("importCorrections").addEventListener("click", () => document.getElementById("correctionFile").click());
+    document.getElementById("correctionFile").addEventListener("change", (event) => {
+      if (event.target.files[0]) importConsultantCorrections(event.target.files[0]);
+    });
+    document.getElementById("exportPropertyCorrections").addEventListener("click", exportPropertyCorrections);
+    document.getElementById("importPropertyCorrections").addEventListener("click", () => document.getElementById("propertyCorrectionFile").click());
+    document.getElementById("propertyCorrectionFile").addEventListener("change", (event) => {
+      if (event.target.files[0]) importPropertyCorrections(event.target.files[0]);
+    });
     document.getElementById("centreList").addEventListener("click", (event) => {
-      const row = event.target.closest("[data-centre-id]");
+      const row = event.target.closest("[data-place-id]");
       if (!row) return;
-      const centre = state.centres.find((item) => item.centre_id === row.dataset.centreId);
+      const centre = state.centres.find((item) => item.place_id === row.dataset.placeId);
       openCentreDetail(centre);
       map.setView([centre.latitude, centre.longitude], 15);
     });
   }
 
+  function filteredPlaces() {
+    const query = state.placeFilters.search.trim().toLowerCase();
+    return state.centres.filter((place) => {
+      const groupNames = (place.group_ids || []).map((groupId) => propertyGroup(groupId)?.canonical_name || "").join(" ");
+      const haystack = `${place.name} ${(place.aliases || []).join(" ")} ${place.locality} ${place.suburb} ${place.state} ${place.owner} ${place.manager} ${groupNames}`.toLowerCase();
+      const income = Number(place.market?.median_household_income || place.market?.median_household_income_weekly_2021 || 0);
+      const nearestBailey = Number(place.nearest_bailey_km);
+      return (
+        (!query || haystack.includes(query)) &&
+        (!state.placeFilters.country || place.country === state.placeFilters.country) &&
+        (!state.placeFilters.type || place.place_type === state.placeFilters.type) &&
+        (!state.placeFilters.bailey || (state.placeFilters.bailey === "Present") === Boolean(place.has_bailey)) &&
+        ([...state.placeFilters.retailers].every((retailer) => (place.retailers || []).includes(retailer))) &&
+        (!state.placeFilters.confidence || place.mapping_confidence === state.placeFilters.confidence || place.confidence === state.placeFilters.confidence) &&
+        (!state.placeFilters.group_id || (place.group_ids || []).includes(state.placeFilters.group_id)) &&
+        (!state.placeFilters.arrangement || place.leasing_arrangement === state.placeFilters.arrangement) &&
+        (!state.placeFilters.overlap || place.portfolio_overlap_status === state.placeFilters.overlap) &&
+        (!state.placeFilters.centre_class || place.centre_class === state.placeFilters.centre_class) &&
+        (!Number(state.placeFilters.min_income) || income >= Number(state.placeFilters.min_income)) &&
+        (!Number(state.placeFilters.min_bailey_distance) || (Number.isFinite(nearestBailey) && nearestBailey >= Number(state.placeFilters.min_bailey_distance)))
+      );
+    });
+  }
+
   function renderCentreResults() {
-    const query = state.filters.search.trim().toLowerCase();
-    const centres = state.centres
-      .filter(
-        (centre) =>
-          !query || `${centre.name} ${centre.suburb} ${centre.state} ${centre.manager}`.toLowerCase().includes(query)
-      )
-      .sort((a, b) => b.optical_store_count - a.optical_store_count || a.name.localeCompare(b.name));
+    const sorters = {
+      name: (a, b) => a.name.localeCompare(b.name),
+      optical_tenants: (a, b) => Number(b.optical_store_count) - Number(a.optical_store_count) || a.name.localeCompare(b.name),
+      household_income: (a, b) => Number(b.market?.median_household_income || b.market?.median_household_income_weekly_2021 || 0) - Number(a.market?.median_household_income || a.market?.median_household_income_weekly_2021 || 0) || a.name.localeCompare(b.name),
+      nearest_bailey: (a, b) => Number(b.nearest_bailey_km || -1) - Number(a.nearest_bailey_km || -1) || a.name.localeCompare(b.name),
+      portfolio_white_space: (a, b) => Number(b.portfolio_white_space) - Number(a.portfolio_white_space) || Number(b.optical_store_count) - Number(a.optical_store_count) || a.name.localeCompare(b.name),
+    };
+    const centres = filteredPlaces().sort(sorters[state.placeFilters.sort] || sorters.name);
     const count = document.getElementById("centreResultCount");
     const list = document.getElementById("centreList");
     if (!count || !list) return;
     count.textContent = `${centres.length.toLocaleString("en-AU")} results`;
+    elements.visibleTotal.textContent = centres.length.toLocaleString("en-AU");
+    elements.visibleTotalLabel.textContent = "retail places visible";
+    updateCentreMarkersForFilters();
     list.innerHTML = centres
-      .slice(0, 160)
+      .slice(0, 300)
       .map(
-        (centre) => `<button class="centre-row" data-centre-id="${escapeHtml(centre.centre_id)}">
-          <span class="centre-row-icon">${CENTRE_BAG_SVG}</span>
+        (centre) => `<button class="centre-row" data-place-id="${escapeHtml(centre.place_id)}">
+          <span class="centre-row-icon ${centre.location_setting === "High Street" ? "corridor" : ""}">${centre.location_setting === "High Street" ? '<i data-lucide="route"></i>' : CENTRE_BAG_SVG}</span>
           <span><strong>${escapeHtml(centre.name)}</strong><small>${escapeHtml(
-          `${centre.suburb}, ${centre.state}`
+          `${centre.locality || centre.suburb || "Locality unrecorded"}${centre.state ? `, ${centre.state}` : ""} · ${centre.place_type}`
         )}</small></span>
-          <span><strong>${centre.optical_store_count}</strong><small>${centre.retailers.length} brands</small></span>
+          <span><strong>${centre.optical_store_count}</strong><small>${centre.retailers.length} brands${centre.has_bailey ? " · BN" : ""}${centre.portfolio_white_space ? " · portfolio white space" : ""}</small></span>
         </button>`
       )
       .join("");
+    refreshIcons();
   }
 
   function profileOptions() {
@@ -616,9 +806,120 @@
       .join("");
   }
 
+  function lookalikeKey() {
+    const country = state.opportunityFilters.country === "Australia" ? "au" : "nz";
+    const setting = state.opportunityFilters.setting === "Shopping Centre" ? "shopping-centre" : "high-street";
+    return `${country}-${setting}`;
+  }
+
+  function selectedPerformanceBenchmarks() {
+    if (!state.performanceBenchmark) return [];
+    const selected = new Set(state.performanceBenchmark.store_ids);
+    return (state.lookalikes.bailey_benchmarks || []).filter(
+      (row) => selected.has(row.store_id) && row.country === state.opportunityFilters.country && row.location_setting === state.opportunityFilters.setting
+    );
+  }
+
+  function medianValue(values) {
+    const ordered = values.filter(Number.isFinite).sort((a, b) => a - b);
+    if (!ordered.length) return null;
+    const middle = Math.floor(ordered.length / 2);
+    return ordered.length % 2 ? ordered[middle] : (ordered[middle - 1] + ordered[middle]) / 2;
+  }
+
+  function performanceAdjustedLookalikes() {
+    const rows = (state.lookalikes.rankings?.[lookalikeKey()] || []).map((row) => ({ ...row, components: { ...row.components } }));
+    const benchmarks = selectedPerformanceBenchmarks();
+    if (!state.performanceBenchmark || benchmarks.length < 2) return rows;
+    const fields = ["population_2025", "population_growth_2021_2025_pct", "age_45_plus_pct_2021", "median_household_income_weekly_2021"];
+    rows.forEach((row) => {
+      const similarities = fields.map((field) => {
+        const value = Number(row.market_features?.[field]);
+        const target = medianValue(benchmarks.map((benchmark) => Number(benchmark.market_features?.[field])));
+        if (!Number.isFinite(value) || !Number.isFinite(target)) return null;
+        return Math.max(0, 100 - (Math.abs(value - target) / Math.max(Math.abs(target), 1)) * 100);
+      }).filter(Number.isFinite);
+      if (similarities.length) row.components.bailey_footprint_similarity = Math.round(similarities.reduce((sum, value) => sum + value, 0) / similarities.length);
+      const weights = { bailey_footprint_similarity: 40, bailey_whitespace: 30, optical_market_validation: 20, accessibility_retail_context: 10 };
+      const available = Object.keys(weights).filter((key) => {
+        const value = row.components[key];
+        return value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value));
+      });
+      row.screening_completeness = available.reduce((sum, key) => sum + weights[key], 0);
+      row.score = row.screening_completeness
+        ? Math.round(available.reduce((sum, key) => sum + Number(row.components[key]) * weights[key], 0) / row.screening_completeness)
+        : null;
+    });
+    rows.sort((a, b) => (a.screening_completeness < 60) - (b.screening_completeness < 60) || (b.score || 0) - (a.score || 0) || a.name.localeCompare(b.name));
+    rows.forEach((row, index) => { row.rank = index + 1; });
+    return rows;
+  }
+
+  function lookalikeRowHtml(row) {
+    const components = row.components || {};
+    return `<button class="lookalike-row" data-place-id="${escapeHtml(row.place_id)}">
+      <span class="rank-number">${row.rank}</span>
+      <span><strong>${escapeHtml(row.name)}</strong><small>${escapeHtml(`${row.locality || "Locality not recorded"}${row.state ? `, ${row.state}` : ""}`)}</small></span>
+      <span class="lookalike-score"><strong>${row.score ?? "—"}</strong><small>lookalike</small></span>
+      <span><strong>${row.screening_completeness}%</strong><small>complete</small></span>
+      <span class="component-mini"><small>Footprint ${components.bailey_footprint_similarity ?? "—"} · Whitespace ${components.bailey_whitespace ?? "—"} · Optical ${components.optical_market_validation ?? "—"} · Context ${components.accessibility_retail_context ?? "—"}</small></span>
+    </button>`;
+  }
+
+  async function importPerformanceBenchmark(file) {
+    const rows = parseCsv(await file.text());
+    if (!rows.length || !("store_id" in rows[0] || "store_name" in rows[0]) || !("rank" in rows[0] || "performance_score" in rows[0])) {
+      showToast("Performance CSV needs store_id or store_name, plus rank or performance_score", "warning");
+      return;
+    }
+    const bailey = state.allStores.filter((store) => store.retailer === "Bailey Nelson");
+    const normalize = (value) => String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    const matched = [];
+    const unmatched = [];
+    rows.forEach((row, index) => {
+      const store = bailey.find((item) => row.store_id && item.store_id === row.store_id) || bailey.find((item) => row.store_name && normalize(item.name) === normalize(row.store_name));
+      if (!store) unmatched.push(row.store_id || row.store_name || `row ${index + 2}`);
+      else matched.push({ store_id: store.store_id, rank: row.rank === "" ? NaN : Number(row.rank), score: row.performance_score === "" ? NaN : Number(row.performance_score), index });
+    });
+    const uniqueMatched = [...new Map(matched.map((row) => [row.store_id, row])).values()];
+    if (uniqueMatched.length < 5) {
+      state.performanceBenchmark = null;
+      showToast(`Only ${uniqueMatched.length} Bailey stores matched; using all Bailey stores`, "warning");
+      renderOpportunityView();
+      return;
+    }
+    const usesRank = uniqueMatched.some((row) => Number.isFinite(row.rank));
+    uniqueMatched.sort((a, b) => usesRank ? (Number.isFinite(a.rank) ? a.rank : 999999) - (Number.isFinite(b.rank) ? b.rank : 999999) : (Number.isFinite(b.score) ? b.score : -Infinity) - (Number.isFinite(a.score) ? a.score : -Infinity));
+    state.performanceBenchmark = { store_ids: uniqueMatched.map((row) => row.store_id).slice(0, 10), matched: uniqueMatched.length, unmatched };
+    renderOpportunityView();
+    showToast(`Using the best ${state.performanceBenchmark.store_ids.length} matched Bailey stores in memory`);
+  }
+
   function renderOpportunityView() {
+    const rows = performanceAdjustedLookalikes();
+    const benchmarkLabel = state.performanceBenchmark
+      ? `Top ${state.performanceBenchmark.store_ids.length} imported Bailey matches · ${state.performanceBenchmark.unmatched.length} unmatched rows`
+      : "All current Bailey Nelson stores in this country and setting";
     elements.viewContent.innerHTML = `
-      <section class="opportunity-form">
+      <section class="experimental-banner"><i data-lucide="scan-search"></i><div><strong>Lookalike screening rank</strong><span>Transparent leasing screen, not a probability of store success. Stale sources and missing evidence remain visible in completeness.</span></div></section>
+      <section class="opportunity-form ranking-controls">
+        <div class="select-grid">
+          <label><span>Country</span><select id="lookalikeCountry">${filterOptions(["Australia", "New Zealand"], state.opportunityFilters.country, "Country")}</select></label>
+          <label><span>Location setting</span><select id="lookalikeSetting">${filterOptions(["Shopping Centre", "High Street"], state.opportunityFilters.setting, "Setting")}</select></label>
+        </div>
+        <div class="performance-import">
+          <span><strong>Bailey benchmark</strong><small>${escapeHtml(benchmarkLabel)}</small></span>
+          <button class="secondary-command" id="performanceImportButton" type="button"><i data-lucide="upload"></i>Load performance CSV</button>
+          ${state.performanceBenchmark ? '<button class="secondary-command" id="performanceClearButton" type="button">Use all Bailey stores</button>' : ""}
+          <input id="performanceFile" type="file" accept=".csv,text/csv" hidden />
+        </div>
+        <p class="form-note">The CSV is read locally in memory and is never uploaded, stored, logged, exported or added to a share URL.</p>
+      </section>
+      <section class="result-section lookalike-section">
+        <div class="section-heading"><h2>${escapeHtml(`${state.opportunityFilters.country} · ${state.opportunityFilters.setting}`)}</h2><span>${rows.length} Bailey-free places</span></div>
+        <div class="lookalike-list" id="lookalikeList">${rows.length ? rows.slice(0, 150).map(lookalikeRowHtml).join("") : '<div class="empty-state"><strong>No ranked places in this segment</strong><span>Choose another country or setting.</span></div>'}</div>
+      </section>
+      <details class="manual-screening"><summary>Screen a manual candidate point</summary><section class="opportunity-form">
         <label><span>Brand profile</span><select id="profileSelect">${profileOptions()}</select></label>
         <label><span>Candidate name</span><input id="candidateName" value="${escapeHtml(
           state.opportunityForm.name
@@ -635,7 +936,7 @@
           )}" placeholder="Unset" /><b>sqm</b></div></label>
         </div>
         <button class="primary-command" id="dropSiteButton" type="button"><i data-lucide="map-pin-plus"></i>Drop candidate on map</button>
-        <p class="form-note">Scores use available public market data and visible network evidence. Unavailable components reduce coverage rather than being guessed.</p>
+        <p class="form-note">The index is a transparent heuristic, not a probability of store success. Unavailable components reduce screening completeness rather than being guessed.</p>
       </section>
       <section class="result-section">
         <div class="section-heading"><h2>Shortlist</h2><span>${state.candidates.length} sites</span></div>
@@ -644,7 +945,7 @@
             ? state.candidates.map(candidateListRow).join("")
             : '<div class="empty-state"><i data-lucide="map-pin-plus"></i><strong>No candidates yet</strong><span>Drop a site to begin a scored comparison.</span></div>'
         }</div>
-      </section>`;
+      </section></details>`;
     bindOpportunityForm();
   }
 
@@ -658,6 +959,29 @@
   }
 
   function bindOpportunityForm() {
+    document.getElementById("lookalikeCountry").addEventListener("change", (event) => {
+      state.opportunityFilters.country = event.target.value;
+      renderOpportunityView();
+    });
+    document.getElementById("lookalikeSetting").addEventListener("change", (event) => {
+      state.opportunityFilters.setting = event.target.value;
+      renderOpportunityView();
+    });
+    document.getElementById("performanceImportButton").addEventListener("click", () => document.getElementById("performanceFile").click());
+    document.getElementById("performanceFile").addEventListener("change", (event) => {
+      if (event.target.files[0]) importPerformanceBenchmark(event.target.files[0]);
+    });
+    document.getElementById("performanceClearButton")?.addEventListener("click", () => {
+      state.performanceBenchmark = null;
+      renderOpportunityView();
+    });
+    document.getElementById("lookalikeList").addEventListener("click", (event) => {
+      const row = event.target.closest("[data-place-id]");
+      if (!row) return;
+      const place = state.centres.find((item) => item.place_id === row.dataset.placeId);
+      openCentreDetail(place);
+      if (place) map.setView([place.latitude, place.longitude], 14);
+    });
     [
       ["profileSelect", "profile_id"],
       ["candidateName", "name"],
@@ -755,11 +1079,536 @@
     renderCandidateDock();
   }
 
+  function parseCsv(text) {
+    const rows = [];
+    let row = [];
+    let value = "";
+    let quoted = false;
+    for (let index = 0; index < text.length; index += 1) {
+      const character = text[index];
+      if (character === '"' && quoted && text[index + 1] === '"') {
+        value += '"';
+        index += 1;
+      } else if (character === '"') quoted = !quoted;
+      else if (character === "," && !quoted) {
+        row.push(value.trim());
+        value = "";
+      } else if ((character === "\n" || character === "\r") && !quoted) {
+        if (character === "\r" && text[index + 1] === "\n") index += 1;
+        row.push(value.trim());
+        if (row.some(Boolean)) rows.push(row);
+        row = [];
+        value = "";
+      } else value += character;
+    }
+    row.push(value.trim());
+    if (row.some(Boolean)) rows.push(row);
+    if (!rows.length) return [];
+    const headers = rows.shift().map((header) => header.trim().toLowerCase());
+    return rows.map((cells) => Object.fromEntries(headers.map((header, index) => [header, cells[index] || ""])));
+  }
+
+  function csvEscape(value) {
+    const text = String(value ?? "");
+    return /[",\n\r]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+  }
+
+  function downloadText(filename, text, type = "text/csv;charset=utf-8") {
+    const url = URL.createObjectURL(new Blob([text], { type }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    link.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function loadConsultantCorrections() {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(CORRECTION_STORAGE_KEY) || "[]");
+      state.consultantCorrections = Array.isArray(parsed) ? parsed : [];
+    } catch (_error) {
+      state.consultantCorrections = [];
+    }
+  }
+
+  function placeSlug(value) {
+    return String(value || "")
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+  }
+
+  function loadLocalPlaces() {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(LOCAL_PLACE_STORAGE_KEY) || "[]");
+      state.localPlaces = Array.isArray(parsed) ? parsed : [];
+    } catch (_error) {
+      state.localPlaces = [];
+    }
+    state.localPlaces.forEach((place) => {
+      if (!state.centres.some((item) => item.place_id === place.place_id)) state.centres.push(place);
+    });
+  }
+
+  function persistLocalPlaces() {
+    localStorage.setItem(LOCAL_PLACE_STORAGE_KEY, JSON.stringify(state.localPlaces));
+  }
+
+  function createLocalPlace(store, fields, preferredId = "") {
+    const name = String(fields.name || "").trim();
+    const setting = fields.location_setting;
+    if (!name || !["Shopping Centre", "High Street"].includes(setting)) return null;
+    const code = store.country === "New Zealand" ? "nz" : "au";
+    const baseId = setting === "Shopping Centre"
+      ? `place-${code}-${placeSlug(store.state || "unknown")}-${placeSlug(name)}`
+      : `corridor-${code}-${placeSlug(store.state || "unknown")}-${placeSlug(store.suburb || store.state || "unknown")}-${placeSlug(name)}`;
+    let placeId = preferredId || baseId;
+    const existing = state.centres.find((place) => place.place_id === placeId);
+    if (existing && existing.name.toLowerCase() === name.toLowerCase()) return existing;
+    if (existing) placeId = `${baseId}-local-${placeSlug(store.store_id)}`;
+    const place = {
+      place_id: placeId,
+      centre_id: placeId,
+      name,
+      canonical_name: name,
+      aliases: [],
+      place_type: setting === "Shopping Centre" ? "Shopping Centre" : "High Street Corridor",
+      location_setting: setting,
+      country: store.country,
+      state: store.state,
+      locality: store.suburb,
+      suburb: store.suburb,
+      postcode: store.postcode,
+      address: fields.address || store.full_address,
+      latitude: Number(store.latitude),
+      longitude: Number(store.longitude),
+      owner: String(fields.owner || "").trim(),
+      manager: String(fields.manager || "").trim(),
+      centre_type: "",
+      gla_sqm: "",
+      annual_visits: "",
+      trade_area_population: "",
+      anchors: [],
+      tenancy_count: "",
+      redevelopment_activity: "",
+      official_url: String(fields.official_url || "").trim(),
+      source_url: String(fields.official_url || "").trim(),
+      source_date: new Date().toISOString().slice(0, 10),
+      status: "Active",
+      confidence: fields.official_url ? "High" : "Medium",
+      mapping_confidence: fields.official_url ? "High" : "Medium",
+      source_basis: "Locally created from a consultant public-data correction",
+      retailers: [],
+      optical_store_count: 0,
+      has_bailey: false,
+      certification_status: "Local correction",
+      evidence_tier: fields.official_url ? "Public URL" : "Consultant review",
+      local_created: true,
+    };
+    state.localPlaces.push(place);
+    state.centres.push(place);
+    persistLocalPlaces();
+    return place;
+  }
+
+  function applyConsultantCorrections() {
+    state.consultantCorrections.forEach((correction) => {
+      const store = state.allStores.find((item) => item.store_id === correction.store_id);
+      if (!store) return;
+      store.place_id = correction.place_id || "";
+      store.location_setting = correction.location_setting || "Uncertain";
+      store.mapping_confidence = correction.mapping_confidence || "Uncertain";
+      store.mapping_evidence_url = correction.evidence_url || "";
+      store.consultant_public_note = correction.public_note || "";
+      store.local_mapping_override = true;
+      const place = state.centres.find((item) => item.place_id === store.place_id);
+      store.venue_id = store.place_id;
+      store.venue_name = place?.name || "";
+      store.location_type = store.location_setting;
+    });
+    state.centres.forEach((place) => {
+      const mapped = state.allStores.filter((store) => store.place_id === place.place_id);
+      place.retailers = [...new Set(mapped.map((store) => store.retailer))].sort();
+      place.optical_store_count = mapped.length;
+      place.has_bailey = mapped.some((store) => store.retailer === "Bailey Nelson");
+    });
+  }
+
+  function loadPropertyCorrections() {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(PROPERTY_CORRECTION_STORAGE_KEY) || "[]");
+      state.propertyCorrections = Array.isArray(parsed) ? parsed : [];
+    } catch (_error) {
+      state.propertyCorrections = [];
+    }
+    try {
+      const parsed = JSON.parse(localStorage.getItem(LOCAL_PROPERTY_GROUP_STORAGE_KEY) || "[]");
+      state.localPropertyGroups = Array.isArray(parsed) ? parsed : [];
+    } catch (_error) {
+      state.localPropertyGroups = [];
+    }
+  }
+
+  function propertyGroup(groupId) {
+    return state.propertyGroups.find((group) => group.group_id === groupId) || null;
+  }
+
+  function applyPropertyCorrections() {
+    const generatedGroups = state.propertyIntelligence?.groups || [];
+    state.propertyGroups = generatedGroups.concat(
+      state.localPropertyGroups.filter((local) => !generatedGroups.some((group) => group.group_id === local.group_id))
+    );
+    state.propertyRelationships = Intel.effectivePropertyRelationships(
+      state.basePropertyRelationships,
+      state.propertyCorrections
+    );
+    const active = state.propertyRelationships.filter((item) => Intel.activeRelationship(item));
+    const baileyByPlace = new Map();
+    state.allStores
+      .filter((store) => store.retailer === "Bailey Nelson" && store.place_id)
+      .forEach((store) => {
+        const values = baileyByPlace.get(store.place_id) || [];
+        values.push(store.store_id);
+        baileyByPlace.set(store.place_id, values);
+      });
+    const portfolios = {};
+    state.propertyGroups.forEach((group) => {
+      const relationships = active.filter((item) => item.group_id === group.group_id);
+      const propertyIds = [...new Set(relationships.map((item) => item.place_id))];
+      const baileyPropertyIds = propertyIds.filter((placeId) => baileyByPlace.has(placeId));
+      portfolios[group.group_id] = {
+        group_id: group.group_id,
+        property_count: propertyIds.length,
+        bailey_property_count: baileyPropertyIds.length,
+        bailey_store_count: baileyPropertyIds.reduce((sum, placeId) => sum + baileyByPlace.get(placeId).length, 0),
+        property_ids: propertyIds,
+        bailey_property_ids: baileyPropertyIds,
+        white_space_property_ids: [],
+      };
+    });
+    state.groupPortfolios = portfolios;
+
+    const attributeOverrides = new Map(
+      state.propertyCorrections
+        .filter((item) => item.correction_type === "PROPERTY_ATTRIBUTE" && item.action === "UPSERT")
+        .map((item) => [item.place_id, item])
+    );
+    state.centres.forEach((place) => {
+      const base = state.propertyIntelligence?.property_summaries?.[place.place_id] || {};
+      const relationships = active.filter((item) => item.place_id === place.place_id);
+      const override = attributeOverrides.get(place.place_id);
+      const hasBailey = Boolean(place.has_bailey || baileyByPlace.has(place.place_id));
+      const researchStatus = base.research_status || (relationships.length ? "Partial" : "Not researched");
+      const overlapStatus = Intel.portfolioOverlapStatus({
+        hasBailey,
+        relationships,
+        groupPortfolio: portfolios,
+        researchStatus,
+      });
+      const overlapGroups = relationships
+        .filter((item) => Number(portfolios[item.group_id]?.bailey_property_count || 0) > 0)
+        .map((item) => ({
+          group_id: item.group_id,
+          canonical_name: propertyGroup(item.group_id)?.canonical_name || item.group_id,
+          role: item.role,
+          bailey_property_count: portfolios[item.group_id].bailey_property_count,
+          bailey_store_count: portfolios[item.group_id].bailey_store_count,
+        }));
+      const uniqueOverlap = overlapGroups.filter(
+        (item, index, array) => array.findIndex((other) => other.group_id === item.group_id && other.role === item.role) === index
+      );
+      const whiteSpace = !hasBailey && [
+        "LEASING_CONTROLLER_OVERLAP", "PROPERTY_GROUP_OVERLAP", "EXTERNAL_AGENCY_OVERLAP",
+      ].includes(overlapStatus);
+      uniqueOverlap.forEach((item) => {
+        if (whiteSpace) portfolios[item.group_id].white_space_property_ids.push(place.place_id);
+      });
+      const competition = Intel.competitorPropertyContext(place, state.allStores);
+      const ownerNames = relationships
+        .filter((item) => ["OWNER", "CO_OWNER"].includes(item.role))
+        .map((item) => propertyGroup(item.group_id)?.canonical_name || item.group_id);
+      const managerNames = relationships
+        .filter((item) => item.role === "MANAGER")
+        .map((item) => propertyGroup(item.group_id)?.canonical_name || item.group_id);
+      const nearestBailey = state.allStores
+        .filter((store) => store.retailer === "Bailey Nelson")
+        .map((store) => Intel.haversine(place, store))
+        .sort((a, b) => a - b)[0];
+      const summary = {
+        ...base,
+        place_id: place.place_id,
+        centre_class: override?.centre_class || base.centre_class || "Unknown",
+        centre_class_method: override?.classification_method || base.centre_class_method || "",
+        centre_class_evidence: override || base.centre_class_evidence || {},
+        research_status: researchStatus,
+        leasing_arrangement: Intel.deriveLeasingArrangement(relationships, state.propertyGroups),
+        relationship_ids: relationships.map((item) => item.relationship_id),
+        group_ids: [...new Set(relationships.map((item) => item.group_id))],
+        owner_names: [...new Set(ownerNames)],
+        manager_names: [...new Set(managerNames)],
+        has_bailey: hasBailey,
+        bailey_store_count: baileyByPlace.get(place.place_id)?.length || 0,
+        portfolio_overlap_status: overlapStatus,
+        portfolio_overlap_groups: uniqueOverlap,
+        portfolio_white_space: whiteSpace,
+        nearest_bailey_km: Number.isFinite(nearestBailey) ? nearestBailey : null,
+        competitor_context: competition,
+      };
+      state.propertySummaries[place.place_id] = summary;
+      Object.assign(place, summary);
+      place.owner = summary.owner_names.join(", ") || place.owner || "";
+      place.manager = summary.manager_names.join(", ") || place.manager || "";
+    });
+  }
+
+  function persistPropertyCorrection(correction) {
+    const key = correction.record_id || `${correction.correction_type}-${correction.place_id}`;
+    const index = state.propertyCorrections.findIndex(
+      (item) => (item.record_id || `${item.correction_type}-${item.place_id}`) === key
+    );
+    if (index >= 0) state.propertyCorrections[index] = correction;
+    else state.propertyCorrections.push(correction);
+    localStorage.setItem(PROPERTY_CORRECTION_STORAGE_KEY, JSON.stringify(state.propertyCorrections));
+    applyPropertyCorrections();
+  }
+
+  function containsPrivatePropertyData(row) {
+    const prohibitedHeaders = [
+      "rent", "sales", "revenue", "turnover", "profit", "margin", "lease_term", "lease_expiry",
+      "negotiation", "private_contact", "email", "phone", "telephone",
+    ];
+    if (Object.keys(row).some((header) => prohibitedHeaders.some((word) => header.toLowerCase().includes(word)))) return true;
+    const text = `${row.public_note || ""} ${row.canonical_name || ""}`;
+    return /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(text) || /(?:\+\d{1,3}[\s-]?)?(?:\(?\d{2,4}\)?[\s-])\d{3,4}[\s-]\d{3,4}/.test(text);
+  }
+
+  function exportPropertyCorrections() {
+    const fields = [
+      "correction_type", "action", "record_id", "place_id", "group_id", "canonical_name", "brand_name",
+      "parent_group_id", "group_type", "aliases", "role", "ownership_percentage", "centre_class",
+      "classification_method", "confidence", "source_url", "public_note", "verified_at",
+    ];
+    const rows = state.propertyCorrections.concat(
+      state.localPropertyGroups.map((group) => ({
+        correction_type: "PROPERTY_GROUP", action: "UPSERT", record_id: group.group_id, ...group,
+        aliases: (group.aliases || []).join("|"), verified_at: group.last_verified_at,
+      }))
+    );
+    const csv = [fields.join(",")].concat(rows.map((row) => fields.map((field) => csvEscape(row[field])).join(",")));
+    downloadText("bailey-leasing-public-property-corrections.csv", `${csv.join("\n")}\n`);
+    showToast(`Exported ${rows.length} public property corrections`);
+  }
+
+  async function importPropertyCorrections(file) {
+    const rows = parseCsv(await file.text());
+    if (rows.some(containsPrivatePropertyData)) {
+      showToast("Import blocked: property corrections cannot contain contacts or private commercial data", "warning");
+      return;
+    }
+    const validTypes = new Set(["PROPERTY_GROUP", "ASSET_RELATIONSHIP", "PROPERTY_ATTRIBUTE"]);
+    const validActions = new Set(["UPSERT", "REMOVE"]);
+    const validRoles = new Set(["OWNER", "CO_OWNER", "MANAGER", "OPERATOR", "LEASING_CONTROLLER", "EXTERNAL_LEASING_AGENT"]);
+    let imported = 0;
+    rows.forEach((row) => {
+      if (!validTypes.has(row.correction_type) || !validActions.has(row.action)) return;
+      if (row.correction_type === "PROPERTY_GROUP") {
+        if (!row.record_id || !row.canonical_name) return;
+        const group = {
+          group_id: row.record_id,
+          canonical_name: row.canonical_name,
+          brand_name: row.brand_name || "",
+          parent_group_id: row.parent_group_id || "",
+          group_type: row.group_type || "OTHER",
+          aliases: (row.aliases || "").split("|").filter(Boolean),
+          official_url: row.source_url || "",
+          source_url: row.source_url || "",
+          last_verified_at: row.verified_at || new Date().toISOString().slice(0, 10),
+          confidence: row.confidence || "Medium",
+          status: "Active",
+          local_created: true,
+        };
+        const index = state.localPropertyGroups.findIndex((item) => item.group_id === group.group_id);
+        if (index >= 0) state.localPropertyGroups[index] = group;
+        else state.localPropertyGroups.push(group);
+        imported += 1;
+        return;
+      }
+      if (!row.place_id || !state.centres.some((place) => place.place_id === row.place_id)) return;
+      if (row.correction_type === "ASSET_RELATIONSHIP" && (!row.record_id || !validRoles.has(row.role))) return;
+      persistPropertyCorrection({ ...row, confidence: row.confidence || "Medium" });
+      imported += 1;
+    });
+    localStorage.setItem(LOCAL_PROPERTY_GROUP_STORAGE_KEY, JSON.stringify(state.localPropertyGroups));
+    applyPropertyCorrections();
+    renderView();
+    showToast(`Imported ${imported} valid public property corrections`);
+  }
+
+  function persistConsultantCorrection(correction) {
+    const index = state.consultantCorrections.findIndex((item) => item.store_id === correction.store_id);
+    if (index >= 0) state.consultantCorrections[index] = correction;
+    else state.consultantCorrections.push(correction);
+    localStorage.setItem(CORRECTION_STORAGE_KEY, JSON.stringify(state.consultantCorrections));
+    applyConsultantCorrections();
+  }
+
+  function exportConsultantCorrections() {
+    const fields = [
+      "store_id", "previous_place_id", "place_id", "location_setting", "mapping_confidence", "evidence_url",
+      "public_note", "verified_at", "new_place_name", "new_place_type", "new_place_owner", "new_place_manager",
+      "new_place_official_url", "new_place_address",
+    ];
+    const rows = [fields.join(",")].concat(
+      state.consultantCorrections.map((correction) => {
+        const place = state.localPlaces.find((item) => item.place_id === correction.place_id);
+        const row = place
+          ? {
+              ...correction,
+              new_place_name: place.name,
+              new_place_type: place.place_type,
+              new_place_owner: place.owner,
+              new_place_manager: place.manager,
+              new_place_official_url: place.official_url,
+              new_place_address: place.address,
+            }
+          : correction;
+        return fields.map((field) => csvEscape(row[field])).join(",");
+      })
+    );
+    downloadText("bailey-leasing-public-place-corrections.csv", `${rows.join("\n")}\n`);
+    showToast(`Exported ${state.consultantCorrections.length} public corrections`);
+  }
+
+  async function importConsultantCorrections(file) {
+    const rows = parseCsv(await file.text());
+    const prohibited = ["rent", "sales", "revenue", "profit", "lease_term", "negotiation", "private_contact"];
+    const headers = rows.length ? Object.keys(rows[0]) : [];
+    if (headers.some((header) => prohibited.some((word) => header.includes(word)))) {
+      showToast("Import blocked: this public format cannot contain private commercial fields", "warning");
+      return;
+    }
+    const validSettings = new Set(["Shopping Centre", "High Street", "Other", "Uncertain"]);
+    let imported = 0;
+    rows.forEach((row) => {
+      const store = state.allStores.find((item) => item.store_id === row.store_id);
+      if (!store || !validSettings.has(row.location_setting)) return;
+      let placeId = row.place_id || "";
+      if (placeId && !state.centres.some((place) => place.place_id === placeId) && row.new_place_name) {
+        const place = createLocalPlace(
+          store,
+          {
+            name: row.new_place_name,
+            location_setting: row.location_setting,
+            owner: row.new_place_owner,
+            manager: row.new_place_manager,
+            official_url: row.new_place_official_url,
+            address: row.new_place_address,
+          },
+          placeId
+        );
+        placeId = place?.place_id || "";
+      }
+      if (placeId && !state.centres.some((place) => place.place_id === placeId)) return;
+      persistConsultantCorrection({
+        store_id: row.store_id,
+        previous_place_id: row.previous_place_id || "",
+        place_id: placeId,
+        location_setting: row.location_setting,
+        mapping_confidence: row.mapping_confidence || "Medium",
+        evidence_url: row.evidence_url || "",
+        public_note: row.public_note || "",
+        verified_at: row.verified_at || new Date().toISOString().slice(0, 10),
+      });
+      imported += 1;
+    });
+    createCentreMarkers();
+    applyFilters(false);
+    renderView();
+    showToast(`Imported ${imported} valid public corrections`);
+  }
+
+  function healthDimensionLabel(key) {
+    return {
+      source_freshness: "Source freshness",
+      usable_store_coverage: "Usable store coverage",
+      location_setting_coverage: "Location setting coverage",
+      place_mapping_coverage: "Place mapping coverage",
+      review_reconciliation: "Promoted review reconciliation",
+      research_coverage: "Property research coverage",
+      relationship_freshness: "Property relationship freshness",
+      centre_class_coverage: "Centre class coverage",
+      bailey_centre_research_coverage: "Bailey centre research coverage",
+      bailey_centre_class_coverage: "Bailey centre class coverage",
+      conflict_reconciliation: "Property conflict reconciliation",
+    }[key] || key;
+  }
+
+  function renderDataHealthView() {
+    const health = state.dataHealth;
+    if (!health) {
+      elements.viewContent.innerHTML = '<div class="empty-state"><i data-lucide="shield-alert"></i><strong>Data health unavailable</strong><span>Run the certification build to generate the health report.</span></div>';
+      return;
+    }
+    const sources = health.sources || [];
+    const blockers = health.blocking_counts || {};
+    const lowestDimension = Math.min(...Object.values(health.dimensions));
+    const propertyHealth = health.property_intelligence || { dimensions: {}, counts: {} };
+    elements.viewContent.innerHTML = `
+      <section class="health-overview ${health.certification_status === "Operational" ? "certified" : "in-progress"}">
+        <div class="health-status"><span>${health.certification_status === "Operational" ? "Operational first draft" : escapeHtml(health.certification_status)}</span><strong>${lowestDimension.toFixed(1)}%</strong><small>lowest health dimension · as of ${escapeHtml(health.coverage_as_of)}</small></div>
+        <div class="health-dimensions">${Object.entries(health.dimensions).map(([key, value]) => `<div><span>${escapeHtml(healthDimensionLabel(key))}</span><strong>${Number(value).toFixed(1)}%</strong><i><b style="width:${Number(value)}%"></b></i></div>`).join("")}</div>
+        <p>${escapeHtml(health.coverage_statement)}</p>
+      </section>
+      <section class="health-counts">
+        <div><span>Observed stores</span><strong>${formatNumber(health.observed.stores)}</strong><small>${health.changes_from_baseline.stores >= 0 ? "+" : ""}${health.changes_from_baseline.stores} vs baseline</small></div>
+        <div><span>Usable named stores</span><strong>${formatNumber(health.observed.usable_named_network_stores)}</strong><small>of ${formatNumber(health.observed.named_network_stores)}</small></div>
+        <div><span>Centres and plazas</span><strong>${formatNumber(health.observed.centres)}</strong><small>canonical records</small></div>
+        <div><span>High-street corridors</span><strong>${formatNumber(health.observed.corridors)}</strong><small>800 m indicative catchments</small></div>
+      </section>
+      <section class="health-overview property-health">
+        <div class="section-heading"><h2>Property intelligence health</h2><span>separate from store-census health</span></div>
+        <div class="health-dimensions">${Object.entries(propertyHealth.dimensions || {}).map(([key, value]) => `<div><span>${escapeHtml(healthDimensionLabel(key))}</span><strong>${Number(value).toFixed(1)}%</strong><i><b style="width:${Number(value)}%"></b></i></div>`).join("")}</div>
+        <div class="compact-metrics">
+          <div><strong>${formatNumber(propertyHealth.counts?.groups || 0)}</strong><span>canonical groups</span></div>
+          <div><strong>${formatNumber(propertyHealth.counts?.relationships || 0)}</strong><span>public relationships</span></div>
+          <div><strong>${formatNumber(propertyHealth.counts?.researched_centres || 0)}</strong><span>centres researched</span></div>
+          <div><strong>${formatNumber(propertyHealth.counts?.researched_bailey_centres || 0)}/${formatNumber(propertyHealth.counts?.bailey_centres || 0)}</strong><span>Bailey centres researched</span></div>
+          <div><strong>${formatNumber(propertyHealth.counts?.classed_bailey_centres || 0)}/${formatNumber(propertyHealth.counts?.bailey_centres || 0)}</strong><span>Bailey centres classed</span></div>
+          <div><strong>${formatNumber(propertyHealth.counts?.conflicts || 0)}</strong><span>relationship conflicts</span></div>
+        </div>
+        <p>${escapeHtml(propertyHealth.coverage_statement || "Property relationship coverage is reported separately.")}</p>
+        <p class="empty-note">${escapeHtml(propertyHealth.portfolio_overlap_note || "")}</p>
+      </section>
+      <section class="health-blockers">
+        <h2>Promoted review exceptions</h2>
+        ${Object.entries(blockers).map(([key, value]) => `<div class="${Number(value) ? "blocking" : "clear"}"><span>${escapeHtml(key.replaceAll("_", " "))}</span><strong>${formatNumber(value)}</strong></div>`).join("")}
+        ${Object.entries(health.informational_counts || {}).map(([key, value]) => `<div class="clear"><span>${escapeHtml(key.replaceAll("_", " "))} · informational only</span><strong>${formatNumber(value)}</strong></div>`).join("")}
+      </section>
+      <section class="health-review-list">
+        <div class="section-heading"><h2>Consultant mapping review</h2><span>${(health.unresolved_mapping_reviews || []).length} stores</span></div>
+        ${(health.unresolved_mapping_reviews || []).map((review) => `<button class="health-review-row" data-health-store-id="${escapeHtml(review.store_id)}"><span><strong>${escapeHtml(review.store_name)}</strong><small>${escapeHtml(`${review.retailer} · ${review.state} · ${review.reason}`)}</small></span><i data-lucide="chevron-right"></i></button>`).join("")}
+      </section>
+      <section class="health-sources">
+        <div class="section-heading"><h2>Declared sources</h2><span>${sources.filter((source) => source.status === "current").length}/${sources.length} current</span></div>
+        <div class="health-source-list">${sources.map((source) => `<div><span class="source-state ${escapeHtml(source.status)}">${escapeHtml(source.status)}</span><span><strong>${escapeHtml(source.label)}</strong><small>${escapeHtml(source.scope)} · ${source.last_success ? formatDate(source.last_success) : "no successful refresh"}</small></span><b>${source.age_days === null ? "—" : `${source.age_days}d`}</b></div>`).join("")}</div>
+      </section>`;
+    elements.viewContent.querySelectorAll("[data-health-store-id]").forEach((button) => {
+      button.addEventListener("click", () => {
+        state.filters.location = "Uncertain";
+        setView("network");
+        applyFilters();
+        selectStore(button.dataset.healthStoreId, true);
+      });
+    });
+  }
+
   function candidateComparisonTable(candidates) {
     const models = candidates.map((candidate) => ({ candidate, model: scoreCandidate(candidate) }));
     const rows = [
-      ["Score", (item) => item.model.score ?? "-"],
-      ["Coverage", (item) => `${item.model.coverage}%`],
+      ["Screening index", (item) => item.model.score ?? "-"],
+      ["Completeness", (item) => `${item.model.coverage}%`],
       ["Market demand", (item) => componentValue(item.model, "market_demand")],
       ["White space", (item) => componentValue(item.model, "competitive_white_space")],
       ["Centre strength", (item) => componentValue(item.model, "centre_strength")],
@@ -786,15 +1635,16 @@
       : "Not scored";
   }
 
-  function distanceEntries(point, excludeId = "") {
+  function distanceEntries(point, excludeId = "", certifiedOnly = false) {
     return state.allStores
       .filter((store) => store.store_id !== excludeId)
+      .filter((store) => !certifiedOnly || store.eligible_for_analytics)
       .map((store) => ({ store, distance: Intel.haversine(point, store) }))
       .sort((a, b) => a.distance - b.distance || a.store.store_id.localeCompare(b.store.store_id));
   }
 
-  function proximityModel(point, baseStore = null) {
-    const distances = distanceEntries(point, baseStore?.store_id || "");
+  function proximityModel(point, baseStore = null, certifiedOnly = false) {
+    const distances = distanceEntries(point, baseStore?.store_id || "", certifiedOnly);
     const nearestByBrand = Object.fromEntries(
       BRAND_ORDER.map((brand) => [brand, distances.find((entry) => entry.store.retailer === brand) || null])
     );
@@ -811,12 +1661,13 @@
       };
     });
     const sameCentre =
-      baseStore && baseStore.venue_id
+      baseStore && baseStore.place_id
         ? state.allStores.filter(
             (store) =>
+              (!certifiedOnly || store.eligible_for_analytics) &&
               store.store_id !== baseStore.store_id &&
               store.retailer !== baseStore.retailer &&
-              store.venue_id === baseStore.venue_id
+              store.place_id === baseStore.place_id
           )
         : [];
     return { distances, nearestByBrand, radiusCounts, sameCentre };
@@ -871,6 +1722,103 @@
     )}</small></div>`;
   }
 
+  function correctionEditorHtml(store) {
+    const placeOptions = state.centres
+      .filter((place) => place.country === store.country)
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map((place) => `<option value="${escapeHtml(place.place_id)}" data-setting="${escapeHtml(place.location_setting)}" ${place.place_id === store.place_id ? "selected" : ""}>${escapeHtml(`${place.name} · ${place.locality || place.state || place.place_type}`)}</option>`)
+      .join("");
+    return `<section class="detail-section correction-editor">
+      <h3>Consultant mapping correction</h3>
+      <p class="empty-note"><strong>Canonical place</strong> simply means the one shared record for a real centre or street. Choose it if it exists, or create it here if it does not. Saved only in this browser until you export the public correction CSV.</p>
+      <div class="correction-grid">
+        <label><span>Location setting</span><select id="correctionSetting">${["Shopping Centre", "High Street", "Other", "Uncertain"].map((value) => `<option ${value === store.location_setting ? "selected" : ""}>${value}</option>`).join("")}</select></label>
+        <label><span>Confidence</span><select id="correctionConfidence">${["High", "Medium", "Uncertain"].map((value) => `<option ${value === store.mapping_confidence ? "selected" : ""}>${value}</option>`).join("")}</select></label>
+        <label class="correction-place-search"><span>Find a centre or corridor</span><input id="correctionPlaceSearch" type="search" placeholder="Type Taree, Silverdale…" /></label>
+        <label class="correction-place-select"><span>Canonical place</span><select id="correctionPlace"><option value="">No mapped place</option><option value="__new__">＋ Create a missing place…</option>${placeOptions}</select></label>
+        <div class="new-place-fields" id="newPlaceFields" hidden>
+          <p>Create a public place record. The centre owner/manager is the property organisation—not the optometry franchisee.</p>
+          <label><span>Centre or corridor name</span><input id="newPlaceName" value="" placeholder="e.g. Taree Central" /></label>
+          <label><span>Owner (optional)</span><input id="newPlaceOwner" value="" placeholder="Legal property owner" /></label>
+          <label><span>Manager (optional)</span><input id="newPlaceManager" value="" placeholder="Property/centre manager" /></label>
+          <label><span>Official public URL (optional)</span><input id="newPlaceUrl" type="url" value="" placeholder="https://…" /></label>
+        </div>
+        <label><span>Public evidence URL</span><input id="correctionEvidence" type="url" value="${escapeHtml(store.mapping_evidence_url || "")}" placeholder="https://…" /></label>
+        <label class="correction-note"><span>Public-data note</span><textarea id="correctionNote" rows="2" placeholder="Public correction rationale only">${escapeHtml(store.consultant_public_note || "")}</textarea></label>
+      </div>
+      <button class="secondary-command" id="saveMappingCorrection" type="button"><i data-lucide="save"></i>Save local correction</button>
+    </section>`;
+  }
+
+  function bindCorrectionEditor(store) {
+    const settingInput = document.getElementById("correctionSetting");
+    const placeInput = document.getElementById("correctionPlace");
+    const searchInput = document.getElementById("correctionPlaceSearch");
+    const newFields = document.getElementById("newPlaceFields");
+    const updatePlaceChoices = () => {
+      const setting = settingInput.value;
+      const query = searchInput.value.trim().toLowerCase();
+      const needsPlace = ["Shopping Centre", "High Street"].includes(setting);
+      searchInput.closest("label").hidden = !needsPlace;
+      placeInput.closest("label").hidden = !needsPlace;
+      [...placeInput.options].forEach((option) => {
+        if (!option.dataset.setting) return;
+        option.hidden = option.dataset.setting !== setting || Boolean(query && !option.textContent.toLowerCase().includes(query));
+      });
+      if (placeInput.selectedOptions[0]?.dataset.setting && placeInput.selectedOptions[0].dataset.setting !== setting) {
+        placeInput.value = "";
+      }
+      if (!needsPlace) placeInput.value = "";
+      newFields.hidden = !needsPlace || placeInput.value !== "__new__";
+    };
+    settingInput.addEventListener("change", updatePlaceChoices);
+    placeInput.addEventListener("change", updatePlaceChoices);
+    searchInput.addEventListener("input", updatePlaceChoices);
+    updatePlaceChoices();
+    document.getElementById("saveMappingCorrection")?.addEventListener("click", () => {
+      const setting = settingInput.value;
+      let placeId = placeInput.value;
+      const publicNote = document.getElementById("correctionNote").value.trim();
+      if (/\b(rent|sales|revenue|profit|lease terms?|negotiation|phone|email|contact)\b/i.test(publicNote)) {
+        showToast("Keep this note public: private commercial or contact data is not allowed", "warning");
+        return;
+      }
+      if (placeId === "__new__") {
+        const newName = document.getElementById("newPlaceName").value.trim();
+        if (!newName) {
+          showToast("Enter the centre or corridor name", "warning");
+          return;
+        }
+        const newPlace = createLocalPlace(store, {
+          name: newName,
+          location_setting: setting,
+          owner: document.getElementById("newPlaceOwner").value,
+          manager: document.getElementById("newPlaceManager").value,
+          official_url: document.getElementById("newPlaceUrl").value,
+        });
+        placeId = newPlace?.place_id || "";
+      }
+      if (["Shopping Centre", "High Street"].includes(setting) && !placeId) {
+        showToast("Choose an existing place or create the missing one", "warning");
+        return;
+      }
+      persistConsultantCorrection({
+        store_id: store.store_id,
+        previous_place_id: store.original_place_id || "",
+        place_id: placeId,
+        location_setting: setting,
+        mapping_confidence: document.getElementById("correctionConfidence").value,
+        evidence_url: document.getElementById("correctionEvidence").value.trim(),
+        public_note: publicNote,
+        verified_at: new Date().toISOString().slice(0, 10),
+      });
+      createCentreMarkers();
+      applyFilters(false);
+      openStoreDetail(store);
+      showToast("Local mapping correction saved");
+    });
+  }
+
   function openStoreDetail(store) {
     state.selectedStoreId = store.store_id;
     const config = BRAND_CONFIG[store.retailer];
@@ -891,12 +1839,14 @@
       <section class="detail-section">
         <h3>Leasing profile</h3>
         <div class="data-grid">
-          <div class="data-point"><span>Location type</span><strong>${escapeHtml(store.location_type)}</strong></div>
-          <div class="data-point"><span>Classification</span><strong><span class="confidence">${escapeHtml(
-            store.classification_confidence
+          <div class="data-point"><span>Location setting</span><strong>${escapeHtml(store.location_setting)}</strong></div>
+          <div class="data-point"><span>Mapping confidence</span><strong><span class="confidence">${escapeHtml(
+            store.mapping_confidence
           )}</span></strong></div>
-          <div class="data-point"><span>Venue</span><strong>${escapeHtml(store.venue_name || "Not confirmed")}</strong></div>
+          <div class="data-point"><span>Canonical place</span><strong>${escapeHtml(store.venue_name || "Not mapped")}</strong></div>
           <div class="data-point"><span>Status</span><strong>${escapeHtml(store.status)}</strong></div>
+          <div class="data-point"><span>Network usability</span><strong><span class="confidence ${store.usable_for_network ? "" : "uncertified"}">${store.usable_for_network ? "Usable" : "Background only"}</span></strong></div>
+          <div class="data-point"><span>Source freshness</span><strong>${store.current_source ? "Current" : "Warning shown"}</strong></div>
           <div class="data-point"><span>Country</span><strong>${escapeHtml(store.country)}</strong></div>
           <div class="data-point"><span>State / region</span><strong>${escapeHtml(store.state)}</strong></div>
         </div>
@@ -905,6 +1855,8 @@
         <div class="service-list">${services.length ? services.map((service) => `<span>${escapeHtml(service)}</span>`).join("") : "<span>No services listed</span>"}</div>
         <div class="link-row"><button class="detail-action" id="compareFromDetail" type="button"><i data-lucide="ruler"></i>Add to store comparison</button></div>
       </section>
+      ${store.current_source ? "" : `<section class="detail-section certification-warning"><h3>Freshness warning</h3><p>This last-known store remains usable in network analysis, but its official source is outside the current freshness target.</p></section>`}
+      ${correctionEditorHtml(store)}
       ${
         market
           ? marketEvidenceHtml(market.properties)
@@ -938,6 +1890,7 @@
       setStoreCompareMode(true);
       addCompareStore(store);
     });
+    bindCorrectionEditor(store);
     bindNearRows();
   }
 
@@ -966,52 +1919,252 @@
     </section>`;
   }
 
+  function relationshipRoleLabel(role) {
+    return {
+      OWNER: "Owner", CO_OWNER: "Co-owner", MANAGER: "Manager", OPERATOR: "Operator",
+      LEASING_CONTROLLER: "Leasing controller", EXTERNAL_LEASING_AGENT: "External leasing agency",
+    }[role] || role;
+  }
+
+  function overlapLabel(value) {
+    return {
+      SAME_CENTRE: "Bailey Nelson in this centre",
+      LEASING_CONTROLLER_OVERLAP: "Known BN leasing-controller portfolio overlap",
+      PROPERTY_GROUP_OVERLAP: "Known BN property-group portfolio overlap",
+      EXTERNAL_AGENCY_OVERLAP: "Known BN external-agency portfolio overlap",
+      NO_KNOWN_OVERLAP: "No known overlap after verified research",
+      UNKNOWN: "Unknown — property research is incomplete",
+    }[value] || value || "Unknown";
+  }
+
+  function relationshipCardsHtml(relationships) {
+    if (!relationships.length) return '<p class="empty-note">No public ownership, management or leasing relationship has been confirmed.</p>';
+    return `<div class="relationship-list">${relationships.map((relationship) => {
+      const group = propertyGroup(relationship.group_id);
+      return `<article class="relationship-card">
+        <div><span>${escapeHtml(relationshipRoleLabel(relationship.role))}</span>
+          <a href="#property-group=${encodeURIComponent(relationship.group_id)}" class="text-button" data-property-group-id="${escapeHtml(relationship.group_id)}"><strong>${escapeHtml(group?.canonical_name || relationship.group_id)}</strong></a>
+          ${relationship.ownership_percentage !== null && relationship.ownership_percentage !== "" ? `<b>${escapeHtml(relationship.ownership_percentage)}%</b>` : ""}
+        </div>
+        <small>${escapeHtml(relationship.confidence || "Unknown")} confidence · verified ${escapeHtml(formatDate(relationship.last_verified_at))}</small>
+        <p>${escapeHtml(relationship.public_note || relationship.source_type || "Public property evidence")}</p>
+        <div class="link-row"><a href="${escapeHtml(relationship.source_url)}" target="_blank" rel="noopener">Source</a>
+          <button type="button" class="text-button" data-edit-property-relationship="${escapeHtml(relationship.relationship_id)}">Edit</button>
+          <button type="button" class="text-button danger" data-remove-property-relationship="${escapeHtml(relationship.relationship_id)}">Remove locally</button></div>
+        ${groupPortfolioInlineHtml(relationship.group_id)}
+      </article>`;
+    }).join("")}</div>`;
+  }
+
+  function groupPortfolioInlineHtml(groupId) {
+    const portfolio = state.groupPortfolios[groupId] || {};
+    const group = propertyGroup(groupId);
+    const ids = portfolio.property_ids || Object.keys(state.propertyIntelligence?.group_portfolios?.[groupId]?.asset_roles || {});
+    const places = ids.map((placeId) => state.centres.find((item) => item.place_id === placeId)).filter(Boolean)
+      .sort((a, b) => a.name.localeCompare(b.name));
+    if (!places.length) return "";
+    return `<details class="inline-portfolio"><summary>View ${escapeHtml(group?.canonical_name || groupId)} matched portfolio (${places.length})</summary>
+      <div>${places.map((place) => `<button type="button" data-group-place-id="${escapeHtml(place.place_id)}"><span>${escapeHtml(place.name)}</span><b>${place.has_bailey ? "BN present" : place.portfolio_white_space ? "white space" : "BN absent"}</b></button>`).join("")}</div>
+    </details>`;
+  }
+
+  function competitorContextHtml(centre) {
+    const context = centre.competitor_context?.by_retailer || {};
+    return `<div class="competitor-context">${BRAND_ORDER.map((brand) => {
+      const values = context[brand] || { in_centre: [], nearby_unverified: [], catchment_2km: [] };
+      return `<div><strong>${brandMarkHtml(brand, "compact")}${escapeHtml(brand)}</strong>
+        <span>${values.in_centre.length ? `${values.in_centre.length} IN CENTRE` : "Not mapped in centre"}</span>
+        ${values.nearby_unverified.length ? `<small>${values.nearby_unverified.length} NEARBY ≤250M — NOT VERIFIED IN CENTRE</small>` : ""}
+        ${values.catchment_2km.length ? `<small>${values.catchment_2km.length} elsewhere within 2 km straight-line catchment</small>` : ""}
+      </div>`;
+    }).join("")}</div>`;
+  }
+
+  function propertyCorrectionEditorHtml(centre, relationships) {
+    const groupOptions = state.propertyGroups.slice().sort((a, b) => a.canonical_name.localeCompare(b.canonical_name))
+      .map((group) => `<option value="${escapeHtml(group.group_id)}">${escapeHtml(group.canonical_name)}</option>`).join("");
+    return `<section class="detail-section property-editor"><h3>Local public-data correction</h3>
+      <p class="empty-note">Saved only in this browser. Export the CSV to share it; private contacts and commercial terms are prohibited.</p>
+      <form id="centreClassCorrectionForm" class="correction-grid">
+        <label><span>Centre class</span><select name="centre_class">${filterOptions(["Super Regional", "Regional", "Sub-regional", "Neighbourhood", "CBD / Mixed-use", "Outlet", "Large Format", "Other", "Unknown"], centre.centre_class || "Unknown", "Class")}</select></label>
+        <label><span>Method</span><select name="classification_method">${filterOptions(["Confirmed", "Inferred", "Manual"], centre.centre_class_method || "Manual", "Method")}</select></label>
+        <label><span>Confidence</span><select name="confidence">${filterOptions(["High", "Medium", "Low"], "Medium", "Confidence")}</select></label>
+        <label class="wide"><span>Public evidence URL</span><input name="source_url" type="url" value="${escapeHtml(centre.centre_class_evidence?.source_url || "")}" placeholder="https://…" /></label>
+        <button class="detail-action" type="submit">Save centre class</button>
+      </form>
+      <form id="relationshipCorrectionForm" class="correction-grid">
+        <input name="record_id" type="hidden" />
+        <label><span>Role</span><select name="role">${filterOptions(["OWNER", "CO_OWNER", "MANAGER", "OPERATOR", "LEASING_CONTROLLER", "EXTERNAL_LEASING_AGENT"], "", "Choose role")}</select></label>
+        <label><span>Canonical group</span><select name="group_id"><option value="">Choose group</option>${groupOptions}</select></label>
+        <label><span>Ownership % (owners only)</span><input name="ownership_percentage" type="number" min="0.01" max="100" step="0.01" /></label>
+        <label><span>Confidence</span><select name="confidence">${filterOptions(["High", "Medium", "Low"], "Medium", "Confidence")}</select></label>
+        <label class="wide"><span>Public evidence URL</span><input name="source_url" type="url" required placeholder="https://…" /></label>
+        <label class="wide"><span>Public note</span><input name="public_note" maxlength="240" placeholder="Public evidence only; no contacts or commercial terms" /></label>
+        <button class="detail-action" type="submit">Add or update relationship</button>
+        <button class="detail-action" id="resetRelationshipForm" type="button">Clear edit</button>
+      </form>
+      <details><summary>Add a canonical public group</summary>
+        <form id="newPropertyGroupForm" class="correction-grid">
+          <label><span>Canonical name</span><input name="canonical_name" required /></label>
+          <label><span>Brand name</span><input name="brand_name" /></label>
+          <label><span>Group type</span><select name="group_type">${filterOptions(["PROPERTY_COMPANY", "INVESTMENT_VEHICLE", "ASSET_MANAGER", "CENTRE_OPERATOR", "EXTERNAL_AGENCY", "PRIVATE_LANDLORD", "OTHER"], "OTHER", "Type")}</select></label>
+          <label><span>Aliases (separate with |)</span><input name="aliases" /></label>
+          <label class="wide"><span>Official public URL</span><input name="source_url" type="url" required /></label>
+          <button class="detail-action" type="submit">Create local canonical group</button>
+        </form>
+      </details>
+    </section>`;
+  }
+
   function openCentreDetail(centre) {
-    state.selectedCentreId = centre.centre_id;
-    const stores = state.allStores.filter((store) => store.venue_id === centre.centre_id);
+    if (!centre) return;
+    state.selectedCentreId = centre.place_id;
+    const stores = state.allStores.filter((store) => store.place_id === centre.place_id);
+    const relationships = state.propertyRelationships.filter(
+      (item) => item.place_id === centre.place_id && Intel.activeRelationship(item)
+    );
+    const publicUrl = centre.official_url || centre.source_url || centre.public_url;
     elements.detailContent.innerHTML = `
       <header class="detail-header" style="--brand-color:#d29b27">
-        <span class="retailer-tag">${CENTRE_BAG_SVG}Centre profile</span>
-        <h2>${escapeHtml(centre.name)}</h2><address>${escapeHtml(`${centre.suburb}, ${centre.state}`)}</address>
-        ${centre.public_url ? `<div class="link-row"><a class="command-link primary" href="${escapeHtml(
-          centre.public_url
-        )}" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Public centre source</a></div>` : ""}
+        <span class="retailer-tag">${centre.location_setting === "High Street" ? '<i data-lucide="route"></i>' : CENTRE_BAG_SVG}${escapeHtml(centre.place_type)}</span>
+        <h2>${escapeHtml(centre.name)}</h2><address>${escapeHtml(centre.address || `${centre.locality || centre.suburb}, ${centre.state}`)}</address>
+        ${publicUrl ? `<div class="link-row"><a class="command-link primary" href="${escapeHtml(publicUrl)}" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Public place source</a></div>` : ""}
       </header>
-      <section class="detail-section"><h3>Ownership and scale</h3>
-        <div class="data-grid">
-          <div class="data-point"><span>Owner</span><strong>${escapeHtml(centre.owner || "Not published")}</strong></div>
-          <div class="data-point"><span>Manager</span><strong>${escapeHtml(centre.manager || "Not confirmed")}</strong></div>
-          <div class="data-point"><span>Centre type</span><strong>${escapeHtml(centre.centre_type || "Not classified")}</strong></div>
-          <div class="data-point"><span>Confidence</span><strong><span class="confidence">${escapeHtml(
-            centre.confidence
-          )}</span></strong></div>
-          <div class="data-point"><span>Total GLA</span><strong>${centre.gla_sqm ? formatNumber(centre.gla_sqm, " sqm") : "Not published"}</strong></div>
-          <div class="data-point"><span>Annual visits</span><strong>${formatNumber(centre.annual_visits)}</strong></div>
-          <div class="data-point"><span>Trade area population</span><strong>${formatNumber(
-            centre.trade_area_population
-          )}</strong></div>
-          <div class="data-point"><span>Tenancies</span><strong>${formatNumber(centre.tenancy_count)}</strong></div>
-        </div>
+      <section class="detail-section"><h3>Property profile</h3><div class="data-grid">
+        <div class="data-point"><span>Location setting</span><strong>${escapeHtml(centre.location_setting)}</strong></div>
+        <div class="data-point"><span>Centre class</span><strong>${escapeHtml(centre.centre_class || "Unknown")}</strong><small>${escapeHtml(centre.centre_class_method || "Not confirmed")}</small></div>
+        <div class="data-point"><span>Research status</span><strong>${escapeHtml(centre.research_status || "Not researched")}</strong></div>
+        <div class="data-point"><span>Leasing arrangement</span><strong>${escapeHtml(centre.leasing_arrangement || "Unknown")}</strong></div>
+        <div class="data-point"><span>Canonical property ID</span><strong>${escapeHtml(centre.place_id)}</strong></div>
+        <div class="data-point"><span>Mapping confidence</span><strong>${escapeHtml(centre.mapping_confidence || centre.confidence)}</strong></div>
+      </div></section>
+      <section class="detail-section"><h3>Ownership, management and leasing</h3>${relationshipCardsHtml(relationships)}</section>
+      <section class="detail-section portfolio-overlap"><h3>Bailey Nelson portfolio overlap</h3>
+        <strong>${escapeHtml(overlapLabel(centre.portfolio_overlap_status))}</strong>
+        <p>${centre.portfolio_overlap_groups?.length ? centre.portfolio_overlap_groups.map((item) => `${escapeHtml(item.canonical_name)} (${escapeHtml(relationshipRoleLabel(item.role))}): ${item.bailey_store_count} Bailey store${item.bailey_store_count === 1 ? "" : "s"} across ${item.bailey_property_count} propert${item.bailey_property_count === 1 ? "y" : "ies"}`).join("<br>") : "No evidenced public portfolio overlap is available."}</p>
+        <small>Portfolio overlap is derived from public property and tenancy evidence. It is not proof of a private commercial relationship.</small>
       </section>
-      <section class="detail-section"><h3>Optical representation</h3>
-        <div class="brand-presence">${BRAND_ORDER.map(
-          (brand) =>
-            `<span class="${stores.some((store) => store.retailer === brand) ? "present" : ""}">${brandMarkHtml(
-              brand,
-              "compact"
-            )}<b>${escapeHtml(brand)}</b></span>`
-        ).join("")}</div>
+      <section class="detail-section"><h3>Optical competition context</h3>${competitorContextHtml(centre)}
         <div class="nearest-list">${stores.map((store) => nearRows([{ store, distance: 0 }], 1)).join("")}</div>
+        <p class="empty-note">IN CENTRE requires the same accepted canonical place ID. Distance alone never establishes membership.</p>
       </section>
-      <section class="detail-section"><h3>Anchors and activity</h3>
-        <p>${centre.anchors.length ? escapeHtml(centre.anchors.join(", ")) : "Anchor mix not yet recorded."}</p>
-        <p class="empty-note">${escapeHtml(centre.redevelopment_activity || "No sourced redevelopment note.")}</p>
-      </section>
-      <section class="detail-section source-block"><i data-lucide="database"></i><div><strong>${escapeHtml(
-        centre.source_basis
-      )}</strong><span>${centre.metrics_date ? `Metrics dated ${escapeHtml(formatDate(centre.metrics_date))}` : "Centre metrics remain incomplete"}</span></div></section>`;
+      <section class="detail-section"><h3>Public centre metrics</h3><div class="data-grid">
+        <div class="data-point"><span>Total GLA</span><strong>${centre.gla_sqm ? formatNumber(centre.gla_sqm, " sqm") : "Not published"}</strong></div>
+        <div class="data-point"><span>Annual visits</span><strong>${formatNumber(centre.annual_visits)}</strong></div>
+        <div class="data-point"><span>Retail tenancies</span><strong>${formatNumber(centre.tenancy_count)}</strong></div>
+        <div class="data-point"><span>Trade area population</span><strong>${formatNumber(centre.trade_area_population)}</strong></div>
+        <div class="data-point"><span>Nearest Bailey Nelson</span><strong>${Number.isFinite(Number(centre.nearest_bailey_km)) ? Intel.formatDistance(Number(centre.nearest_bailey_km)) : "Unknown"}</strong></div>
+      </div></section>
+      ${propertyCorrectionEditorHtml(centre, relationships)}
+      <section class="detail-section source-block"><i data-lucide="database"></i><div><strong>${escapeHtml(centre.source_basis || "Best available public place record")}</strong><span>${centre.source_date ? `Place evidence dated ${escapeHtml(formatDate(centre.source_date))}` : "Public metrics remain incomplete"}</span></div></section>`;
     openDetailPanel();
     bindNearRows();
+    bindPropertyDetail(centre, relationships);
+  }
+
+  function bindPropertyDetail(centre, relationships) {
+    elements.detailContent.querySelectorAll("[data-property-group-id]").forEach((button) => {
+      button.addEventListener("click", () => openPropertyGroupDetail(button.dataset.propertyGroupId));
+    });
+    const relationshipForm = document.getElementById("relationshipCorrectionForm");
+    elements.detailContent.querySelectorAll("[data-edit-property-relationship]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const relationship = relationships.find((item) => item.relationship_id === button.dataset.editPropertyRelationship);
+        if (!relationship || !relationshipForm) return;
+        Object.entries({
+          record_id: relationship.relationship_id, role: relationship.role, group_id: relationship.group_id,
+          ownership_percentage: relationship.ownership_percentage ?? "", confidence: relationship.confidence,
+          source_url: relationship.source_url, public_note: relationship.public_note || "",
+        }).forEach(([key, value]) => { relationshipForm.elements[key].value = value; });
+        relationshipForm.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    });
+    elements.detailContent.querySelectorAll("[data-remove-property-relationship]").forEach((button) => {
+      button.addEventListener("click", () => {
+        persistPropertyCorrection({
+          correction_type: "ASSET_RELATIONSHIP", action: "REMOVE",
+          record_id: button.dataset.removePropertyRelationship, place_id: centre.place_id,
+          verified_at: new Date().toISOString().slice(0, 10),
+        });
+        openCentreDetail(state.centres.find((item) => item.place_id === centre.place_id));
+      });
+    });
+    document.getElementById("centreClassCorrectionForm")?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const fields = Object.fromEntries(new FormData(event.currentTarget));
+      if (containsPrivatePropertyData(fields)) return showToast("Correction blocked: public property data only", "warning");
+      persistPropertyCorrection({
+        correction_type: "PROPERTY_ATTRIBUTE", action: "UPSERT", record_id: `attribute-${centre.place_id}`,
+        place_id: centre.place_id, centre_class: fields.centre_class, classification_method: fields.classification_method,
+        confidence: fields.confidence, source_url: fields.source_url, public_note: "Local public centre-class correction",
+        verified_at: new Date().toISOString().slice(0, 10),
+      });
+      showToast("Centre class saved locally");
+      openCentreDetail(state.centres.find((item) => item.place_id === centre.place_id));
+    });
+    relationshipForm?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const fields = Object.fromEntries(new FormData(event.currentTarget));
+      if (!fields.role || !fields.group_id || !fields.source_url) return showToast("Choose a role and group and add a public evidence URL", "warning");
+      if (containsPrivatePropertyData(fields)) return showToast("Correction blocked: public property data only", "warning");
+      const recordId = fields.record_id || `local-rel-${placeSlug(centre.place_id)}-${placeSlug(fields.group_id)}-${fields.role.toLowerCase()}-${Date.now().toString(36)}`;
+      persistPropertyCorrection({
+        correction_type: "ASSET_RELATIONSHIP", action: "UPSERT", record_id: recordId,
+        place_id: centre.place_id, group_id: fields.group_id, role: fields.role,
+        ownership_percentage: fields.ownership_percentage, confidence: fields.confidence,
+        source_url: fields.source_url, public_note: fields.public_note,
+        verified_at: new Date().toISOString().slice(0, 10),
+      });
+      showToast("Property relationship saved locally");
+      openCentreDetail(state.centres.find((item) => item.place_id === centre.place_id));
+    });
+    document.getElementById("resetRelationshipForm")?.addEventListener("click", () => relationshipForm?.reset());
+    document.getElementById("newPropertyGroupForm")?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const fields = Object.fromEntries(new FormData(event.currentTarget));
+      if (containsPrivatePropertyData(fields)) return showToast("Group blocked: public property data only", "warning");
+      const groupId = `group-local-${placeSlug(fields.canonical_name)}`;
+      if (state.propertyGroups.some((group) => group.group_id === groupId)) return showToast("That canonical group already exists", "warning");
+      state.localPropertyGroups.push({
+        group_id: groupId, canonical_name: fields.canonical_name, brand_name: fields.brand_name || "",
+        parent_group_id: "", group_type: fields.group_type, aliases: (fields.aliases || "").split("|").map((item) => item.trim()).filter(Boolean),
+        official_url: fields.source_url, source_url: fields.source_url, last_verified_at: new Date().toISOString().slice(0, 10),
+        confidence: "Medium", status: "Active", local_created: true,
+      });
+      localStorage.setItem(LOCAL_PROPERTY_GROUP_STORAGE_KEY, JSON.stringify(state.localPropertyGroups));
+      applyPropertyCorrections();
+      showToast("Canonical group created locally");
+      openCentreDetail(state.centres.find((item) => item.place_id === centre.place_id));
+    });
+  }
+
+  function openPropertyGroupDetail(groupId) {
+    const group = propertyGroup(groupId);
+    if (!group) return;
+    const portfolio = state.groupPortfolios[groupId] || {};
+    const relationships = state.propertyRelationships.filter((item) => item.group_id === groupId && Intel.activeRelationship(item));
+    const assetRows = [...new Set(relationships.map((item) => item.place_id))].map((placeId) => {
+      const place = state.centres.find((item) => item.place_id === placeId);
+      const roles = relationships.filter((item) => item.place_id === placeId).map((item) => relationshipRoleLabel(item.role));
+      return { place, roles };
+    }).filter((item) => item.place);
+    elements.detailContent.innerHTML = `<header class="detail-header" style="--brand-color:#775d9b">
+      <span class="retailer-tag"><i data-lucide="landmark"></i>Property group</span><h2>${escapeHtml(group.canonical_name)}</h2>
+      <address>${escapeHtml(group.group_type.replaceAll("_", " "))}${group.parent_group_id ? ` · Parent: ${escapeHtml(propertyGroup(group.parent_group_id)?.canonical_name || group.parent_group_id)}` : ""}</address>
+      <div class="link-row"><a class="command-link primary" href="${escapeHtml(group.official_url || group.source_url)}" target="_blank" rel="noopener">Official public source</a></div>
+    </header>
+    <section class="detail-section"><h3>Portfolio overlap</h3><div class="data-grid">
+      <div class="data-point"><span>Matched properties</span><strong>${formatNumber(portfolio.property_count || 0)}</strong></div>
+      <div class="data-point"><span>Bailey properties</span><strong>${formatNumber(portfolio.bailey_property_count || 0)}</strong></div>
+      <div class="data-point"><span>Mapped Bailey stores</span><strong>${formatNumber(portfolio.bailey_store_count || 0)}</strong></div>
+      <div class="data-point"><span>Bailey-free overlap assets</span><strong>${formatNumber(portfolio.white_space_property_ids?.length || 0)}</strong></div>
+    </div><p class="empty-note">Aliases: ${escapeHtml((group.aliases || []).join(", ") || "None recorded")}</p></section>
+    <section class="detail-section"><h3>Complete matched public portfolio</h3><div class="group-portfolio-list">${assetRows.length ? assetRows.sort((a, b) => a.place.name.localeCompare(b.place.name)).map((item) => `<button data-group-place-id="${escapeHtml(item.place.place_id)}"><span><strong>${escapeHtml(item.place.name)}</strong><small>${escapeHtml(item.roles.join(", "))}</small></span><b>${item.place.has_bailey ? "BN present" : item.place.portfolio_white_space ? "white space" : "BN absent"}</b></button>`).join("") : '<p class="empty-note">No matched public assets yet.</p>'}</div></section>
+    <section class="detail-section source-block"><i data-lucide="shield-check"></i><div><strong>${escapeHtml(group.confidence || "Unknown")} confidence group identity</strong><span>Verified ${escapeHtml(formatDate(group.last_verified_at))}</span></div></section>`;
+    openDetailPanel();
+    elements.detailContent.querySelectorAll("[data-group-place-id]").forEach((button) => {
+      button.addEventListener("click", () => openCentreDetail(state.centres.find((item) => item.place_id === button.dataset.groupPlaceId)));
+    });
   }
 
   function marketForStore(store) {
@@ -1036,9 +2189,10 @@
   }
 
   function scoreCandidate(candidate) {
+    const certifiedStores = state.allStores.filter((store) => store.eligible_for_analytics);
     return Intel.candidateScore({
       point: candidate,
-      stores: state.allStores,
+      stores: certifiedStores,
       markets: state.markets,
       market: marketForPoint(candidate),
       centres: state.centres,
@@ -1047,6 +2201,7 @@
       targetAreaMin: candidate.target_min_sqm,
       targetAreaMax: candidate.target_max_sqm,
       amenitySummary: candidate.amenity_summary || null,
+      placeId: candidate.place_id || "",
     });
   }
 
@@ -1054,7 +2209,7 @@
     state.selectedCandidateId = candidate.id;
     const model = scoreCandidate(candidate);
     const market = marketForPoint(candidate);
-    const proximity = proximityModel(candidate);
+    const proximity = proximityModel(candidate, null, true);
     const catchments = CATCHMENT_RADII.map((radius) => Intel.catchmentSummary(candidate, radius, state.markets));
     drawCandidateCatchments(candidate);
     elements.detailContent.innerHTML = `
@@ -1066,11 +2221,11 @@
       </header>
       <section class="score-section">
         <div class="score-ring ${model.reliable ? "" : "low-coverage"}" style="--score:${model.score || 0}">
-          <strong>${model.score ?? "-"}</strong><span>site score</span>
+          <strong>${model.score ?? "-"}</strong><span>screening index</span>
         </div>
-        <div><strong>${model.coverage}% evidence coverage</strong>
-          <p>${model.reliable ? "Score meets the 70% evidence threshold." : "Directional only. Add area or local amenity evidence before ranking."}</p>
-          <span class="confidence">${model.reliable ? "Reliable comparison" : "Low coverage"}</span>
+        <div><strong>${model.coverage}% screening completeness</strong>
+          <p>${model.reliable ? "The index meets the 70% completeness threshold." : "Directional only. Required evidence is unavailable."}</p>
+          <span class="confidence">${model.reliable ? "Screening complete" : "Low completeness"}</span>
         </div>
       </section>
       <section class="detail-section"><h3>Score components</h3>${scoreComponentsHtml(model)}</section>
@@ -1084,13 +2239,16 @@
               : "Not configured"
           }</strong></div>
           <div class="data-point"><span>Nearest centre</span><strong>${escapeHtml(
-            model.nearestCentre?.centre.name || "No reviewed centre within 750 m"
+            model.nearestCentre?.centre.name || "No verified place selected"
+          )}</strong></div>
+          <div class="data-point"><span>Nearby centre lead</span><strong>${escapeHtml(
+            model.nearbyCentreLead?.centre.name || "None within 750 m"
           )}</strong></div>
         </div>
       </section>
       ${market ? marketEvidenceHtml(market.properties) : ""}
       <section class="detail-section"><h3>Catchment estimates</h3>${catchmentTableHtml(catchments)}
-        <p class="empty-note">Population uses whole SA2 areas intersecting each straight-line radius, so edge catchments can be overstated. It is not a drive-time or customer-origin trade area.</p>
+        <p class="empty-note">Population is apportioned by the share of each SA2 polygon inside the straight-line radius. It assumes population is evenly distributed within each SA2 and is not a drive-time or customer-origin trade area.</p>
       </section>
       <section class="detail-section"><h3>Nearest brand locations</h3><div class="proximity-summary">${nearestBrandHtml(
         proximity
@@ -1228,14 +2386,6 @@
   }
 
   function dropCandidate(latlng) {
-    const point = { latitude: latlng.lat, longitude: latlng.lng };
-    const amenitySummary = state.amenityMarkers.reduce(
-      (summary, marker) => {
-        if (Intel.haversine(point, marker) <= 1) summary[marker.kind] += 1;
-        return summary;
-      },
-      { health: 0, transport: 0, parking: 0 }
-    );
     const candidate = {
       id: `candidate-${Date.now().toString(36)}`,
       name: state.opportunityForm.name.trim() || `Candidate ${state.candidates.length + 1}`,
@@ -1245,7 +2395,8 @@
       target_min_sqm: state.opportunityForm.target_min_sqm || "",
       target_max_sqm: state.opportunityForm.target_max_sqm || "",
       profile_id: state.opportunityForm.profile_id || "generic-optical",
-      amenity_summary: state.amenityMarkers.length ? amenitySummary : null,
+      amenity_summary: null,
+      amenity_evidence: { status: "pending", radius_km: 1, source: "OpenStreetMap Overpass" },
       created_at: new Date().toISOString(),
     };
     state.candidates.push(candidate);
@@ -1254,6 +2405,7 @@
     elements.candidateDock.hidden = false;
     renderCandidateDock();
     openCandidateDetail(candidate);
+    refreshCandidateAmenities(candidate);
     if (state.view === "opportunity" || state.view === "compare") renderView();
     updateShareUrl(false);
   }
@@ -1471,6 +2623,59 @@
     }
   }
 
+  async function refreshCandidateAmenities(candidate) {
+    const radiusMetres = 1000;
+    const query = `[out:json][timeout:18];(nwr["amenity"~"pharmacy|clinic|hospital|doctors"](around:${radiusMetres},${candidate.latitude},${candidate.longitude});nwr["healthcare"](around:${radiusMetres},${candidate.latitude},${candidate.longitude});nwr["public_transport"](around:${radiusMetres},${candidate.latitude},${candidate.longitude});nwr["railway"~"station|tram_stop|halt"](around:${radiusMetres},${candidate.latitude},${candidate.longitude});nwr["highway"="bus_stop"](around:${radiusMetres},${candidate.latitude},${candidate.longitude});nwr["amenity"="parking"](around:${radiusMetres},${candidate.latitude},${candidate.longitude}););out center 500;`;
+    try {
+      const response = await fetch("https://overpass-api.de/api/interpreter", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+        body: `data=${encodeURIComponent(query)}`,
+      });
+      if (!response.ok) throw new Error(`OpenStreetMap returned ${response.status}`);
+      const payload = await response.json();
+      const summary = { health: 0, transport: 0, parking: 0 };
+      const seen = new Set();
+      payload.elements.forEach((item) => {
+        const tags = item.tags || {};
+        const kind = tags.amenity === "parking"
+          ? "parking"
+          : tags.public_transport || tags.railway || tags.highway === "bus_stop"
+            ? "transport"
+            : "health";
+        const key = `${item.type}-${item.id}-${kind}`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          summary[kind] += 1;
+        }
+      });
+      candidate.amenity_summary = summary;
+      candidate.amenity_evidence = {
+        status: "current",
+        radius_km: 1,
+        source: "OpenStreetMap Overpass",
+        queried_at: new Date().toISOString(),
+      };
+      renderCandidateDock();
+      if (state.view === "opportunity" || state.view === "compare") renderView();
+      if (state.selectedCandidateId === candidate.id && elements.detailPanel.classList.contains("open")) {
+        openCandidateDetail(candidate);
+      }
+    } catch (error) {
+      candidate.amenity_summary = null;
+      candidate.amenity_evidence = {
+        status: "failed",
+        radius_km: 1,
+        source: "OpenStreetMap Overpass",
+        queried_at: new Date().toISOString(),
+        error: String(error.message || error),
+      };
+      if (state.selectedCandidateId === candidate.id && elements.detailPanel.classList.contains("open")) {
+        openCandidateDetail(candidate);
+      }
+    }
+  }
+
   function generateReport(candidate = null) {
     const target =
       candidate ||
@@ -1483,7 +2688,7 @@
     const model = scoreCandidate(target);
     const market = marketForPoint(target)?.properties || {};
     const catchments = CATCHMENT_RADII.map((radius) => Intel.catchmentSummary(target, radius, state.markets));
-    const proximity = proximityModel(target);
+    const proximity = proximityModel(target, null, true);
     document.getElementById("reportDate").textContent = formatDate(new Date().toISOString());
     elements.reportContent.innerHTML = `
       <section class="report-lead"><div><p>Candidate</p><h3>${escapeHtml(target.name)}</h3><span>${escapeHtml(
@@ -1507,7 +2712,8 @@
       <section><h3>Risks and gaps</h3><ul>
         <li>${model.reliable ? "Evidence coverage meets the ranking threshold." : "Evidence coverage is below the 70% ranking threshold."}</li>
         <li>${target.area_sqm ? "Available area has been supplied for format testing." : "Available tenancy area has not been supplied."}</li>
-        <li>${model.nearestCentre ? `Nearest reviewed centre is ${escapeHtml(model.nearestCentre.centre.name)}.` : "No reviewed shopping centre is recorded within 750 metres."}</li>
+        <li>${model.nearestCentre ? `Verified place is ${escapeHtml(model.nearestCentre.centre.name)}.` : "No verified centre membership is attached to this candidate."}</li>
+        <li>${model.nearbyCentreLead ? `${escapeHtml(model.nearbyCentreLead.centre.name)} is nearby and requires evidence before centre strength can apply.` : "No reviewed shopping-centre lead is recorded within 750 metres."}</li>
         <li>Driving time, pedestrian barriers, rent and lease terms are outside this public assessment.</li>
       </ul></section>
       <section><h3>Sources</h3><p>Australian Bureau of Statistics Data by Region 2011–25, Stats NZ regional boundaries, official retailer locators, OpenStreetMap contributors, reviewed venue IDs and public landlord profiles where available. Every source retains its own reference date and coverage label.</p></section>`;
@@ -1521,6 +2727,7 @@
     return Intel.sanitiseShareState({
       view: state.view,
       filters: state.filters,
+      placeFilters: state.placeFilters,
       map: { latitude: center.lat, longitude: center.lng, zoom: map.getZoom() },
       candidates: state.candidates,
     });
@@ -1580,6 +2787,23 @@
       state.filters.location = payload.filters.location || "";
       state.filters.search = payload.filters.search || "";
     }
+    if (payload.place_filters) {
+      state.placeFilters.search = payload.place_filters.search || "";
+      state.placeFilters.country = payload.place_filters.country || "";
+      state.placeFilters.type = payload.place_filters.type || "";
+      state.placeFilters.bailey = payload.place_filters.bailey || "";
+      state.placeFilters.retailers = new Set(
+        (payload.place_filters.retailers || []).filter((retailer) => BRAND_ORDER.includes(retailer))
+      );
+      state.placeFilters.confidence = payload.place_filters.confidence || "";
+      state.placeFilters.group_id = payload.place_filters.group_id || "";
+      state.placeFilters.arrangement = payload.place_filters.arrangement || "";
+      state.placeFilters.overlap = payload.place_filters.overlap || "";
+      state.placeFilters.centre_class = payload.place_filters.centre_class || "";
+      state.placeFilters.min_income = payload.place_filters.min_income ?? "";
+      state.placeFilters.min_bailey_distance = payload.place_filters.min_bailey_distance ?? "";
+      state.placeFilters.sort = payload.place_filters.sort || "name";
+    }
     (payload.candidates || []).forEach((candidate, index) => {
       if (!Number.isFinite(candidate.latitude) || !Number.isFinite(candidate.longitude)) return;
       const restored = {
@@ -1601,25 +2825,11 @@
     }
   }
 
-  function csvEscape(value) {
-    const text = String(value ?? "");
-    return /[",\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
-  }
-
   function downloadFilteredCsv() {
     const rows = [PUBLIC_STORE_FIELDS.join(",")].concat(
       state.filteredStores.map((store) => PUBLIC_STORE_FIELDS.map((field) => csvEscape(store[field])).join(","))
     );
-    const blob = new Blob([`${rows.join("\n")}\n`], { type: "text/csv;charset=utf-8" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = `optical-stores-filtered-${new Date().toISOString().slice(0, 10)}.csv`;
-    document.body.appendChild(link);
-    link.click();
-    window.setTimeout(() => {
-      URL.revokeObjectURL(link.href);
-      link.remove();
-    }, 1000);
+    downloadText(`optical-stores-filtered-${new Date().toISOString().slice(0, 10)}.csv`, `${rows.join("\n")}\n`);
   }
 
   function resetAll() {
@@ -1658,6 +2868,16 @@
       button.addEventListener("click", () => setView(button.dataset.view))
     );
     document.getElementById("panelClose").addEventListener("click", closeDetail);
+    elements.detailContent.addEventListener("click", (event) => {
+      const groupButton = event.target.closest("[data-property-group-id]");
+      if (groupButton) openPropertyGroupDetail(groupButton.dataset.propertyGroupId);
+      const placeButton = event.target.closest("[data-group-place-id]");
+      if (placeButton) openCentreDetail(state.centres.find((item) => item.place_id === placeButton.dataset.groupPlaceId));
+    });
+    window.addEventListener("hashchange", () => {
+      const match = window.location.hash.match(/^#property-group=(.+)$/);
+      if (match) openPropertyGroupDetail(decodeURIComponent(match[1]));
+    });
     document.getElementById("resetButton").addEventListener("click", resetAll);
     document.getElementById("layersButton").addEventListener("click", () => {
       elements.layerPanel.hidden = !elements.layerPanel.hidden;
@@ -1698,8 +2918,14 @@
     map.on("click", (event) => {
       if (state.candidateDropMode) dropCandidate(event.latlng);
     });
+    map.on("zoomstart", () => {
+      markerById.forEach(resetMarkerPosition);
+      centreMarkerById.forEach(resetMarkerPosition);
+    });
+    map.on("zoomend", repositionCloseZoomMarkers);
     map.on("moveend", () => {
       if (["health", "transport", "parking"].some((layer) => state.activeLayers.has(layer))) loadAmenities();
+      repositionCloseZoomMarkers();
       updateShareUrl(false);
     });
     window.addEventListener("resize", () => map.invalidateSize());
@@ -1713,13 +2939,16 @@
 
   async function initialise() {
     try {
-      const [stores, markets, centres, links, events, profiles] = await Promise.all([
+      const [stores, markets, places, links, events, profiles, dataHealth, lookalikes, propertyIntelligence] = await Promise.all([
         loadJson("data/optical_stores.geojson"),
         loadJson("data/sa2_market.geojson"),
-        loadJson("data/centres.json"),
+        loadJson("data/retail_places.json"),
         loadJson("data/store_market_links.json"),
         loadJson("data/network_events.json"),
         loadJson("data/brand_profiles.json"),
+        loadJson("data/data_health.json"),
+        loadJson("data/lookalike_places.json"),
+        loadJson("data/property_intelligence.json"),
       ]);
       state.metadata = stores.metadata || {};
       state.allStores = stores.features.map((feature) => ({
@@ -1731,10 +2960,41 @@
         throw new Error("Store data count does not match metadata");
       }
       state.markets = markets.features;
-      state.centres = centres.centres;
+      state.centres = places.places;
+      loadLocalPlaces();
       state.storeLinks = links.links;
       state.events = events;
       state.profiles = profiles.profiles;
+      state.dataHealth = dataHealth;
+      state.lookalikes = lookalikes;
+      state.propertyIntelligence = propertyIntelligence;
+      state.propertyGroups = propertyIntelligence.groups || [];
+      state.basePropertyRelationships = propertyIntelligence.relationships || [];
+      state.propertyRelationships = state.basePropertyRelationships.slice();
+      state.propertySummaries = propertyIntelligence.property_summaries || {};
+      state.groupPortfolios = propertyIntelligence.group_portfolios || {};
+      state.allStores.forEach((store) => {
+        const certification = dataHealth.store_certification?.[store.store_id] || {};
+        store.operational_status = certification.operational_status || "Limited";
+        store.usable_for_network = certification.usable_for_network === "true";
+        store.current_source = certification.current_source === "true";
+        store.eligible_for_analytics = certification.eligible_for_analytics === "true";
+        store.eligible_for_place_analytics = certification.eligible_for_place_analytics === "true";
+        store.certification_issues = certification.issues || "Certification record missing";
+        store.location_setting = certification.location_setting || "Uncertain";
+        store.place_id = certification.place_id || "";
+        store.mapping_confidence = certification.mapping_confidence || "Uncertain";
+        store.original_place_id = store.place_id;
+        store.mapping_evidence_url = store.source_url || store.official_url || "";
+        const place = state.centres.find((item) => item.place_id === store.place_id);
+        store.venue_id = store.place_id;
+        store.venue_name = place?.name || "";
+        store.location_type = store.location_setting;
+      });
+      loadConsultantCorrections();
+      applyConsultantCorrections();
+      loadPropertyCorrections();
+      applyPropertyCorrections();
       createStoreMarkers();
       createCentreMarkers();
       bindGlobalEvents();

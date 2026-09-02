@@ -1,23 +1,23 @@
 {
   "name": "Australia and New Zealand Optical Retail Network",
-  "store_count": 1491,
+  "store_count": 1450,
   "source_freshness": {
-    "OPSM Australia": "2026-07-23T00:26:21+00:00",
-    "Specsavers Australia": "2026-07-23T00:53:33.174Z",
-    "Bailey Nelson Australia": "2026-07-23T01:01:27+00:00",
-    "Oscar Wylee Australia": "2026-07-26T03:48:56+00:00",
-    "Specsavers New Zealand": "2026-07-26T04:15:04.480Z",
-    "Oscar Wylee New Zealand": "2026-07-26T04:03:57.996Z",
-    "OPSM New Zealand": "2026-07-26T03:51:36+00:00",
-    "Bailey Nelson New Zealand": "2026-07-26T04:50:33+00:00",
-    "Independent / Other optical": "2026-07-26T04:42:28.467247Z"
+    "OPSM Australia": "2026-09-01T07:42:23+00:00",
+    "Specsavers Australia": "2026-09-01T23:21:29.969Z",
+    "Bailey Nelson Australia": "2026-09-01T07:42:35+00:00",
+    "Oscar Wylee Australia": "2026-09-01T07:43:15+00:00",
+    "Specsavers New Zealand": "2026-09-01T23:21:29.969Z",
+    "Oscar Wylee New Zealand": "2026-09-01T07:45:57.558Z",
+    "OPSM New Zealand": "2026-09-01T07:42:29+00:00",
+    "Bailey Nelson New Zealand": "2026-09-01T07:43:01+00:00",
+    "Independent / Other optical": "2026-09-01T07:48:20.085579Z"
   },
   "retailer_counts": {
     "Bailey Nelson": 82,
-    "Independent / Other optical": 425,
+    "Independent / Other optical": 383,
     "OPSM": 392,
     "Oscar Wylee": 131,
-    "Specsavers": 461
+    "Specsavers": 462
   },
   "classification_types": [
     "Shopping Centre",
@@ -26,47 +26,47 @@
     "Unclassified"
   ],
   "network_summary": {
-    "total": 1491,
+    "total": 1450,
     "by_retailer": {
       "Bailey Nelson": 82,
-      "Independent / Other optical": 425,
+      "Independent / Other optical": 383,
       "OPSM": 392,
       "Oscar Wylee": 131,
-      "Specsavers": 461
+      "Specsavers": 462
     },
     "by_country": {
-      "Australia": 1269,
-      "New Zealand": 222
+      "Australia": 1244,
+      "New Zealand": 206
     },
     "by_state": {
-      "ACT": 26,
-      "Auckland": 84,
-      "Bay of Plenty": 10,
-      "Canterbury": 22,
+      "ACT": 23,
+      "Auckland": 70,
+      "Bay of Plenty": 11,
+      "Canterbury": 21,
       "Gisborne": 4,
       "Hawke's Bay": 10,
       "Manawatu-Whanganui": 8,
       "Marlborough": 1,
-      "NSW": 357,
+      "NSW": 351,
       "NT": 12,
       "Nelson": 7,
       "Northland": 5,
-      "Otago": 8,
-      "QLD": 236,
-      "SA": 94,
+      "Otago": 9,
+      "QLD": 229,
+      "SA": 93,
       "Southland": 4,
-      "TAS": 39,
-      "Taranaki": 5,
+      "TAS": 37,
+      "Taranaki": 4,
       "Tasman": 2,
-      "VIC": 357,
-      "WA": 148,
-      "Waikato": 23,
-      "Wellington": 29
+      "VIC": 356,
+      "WA": 143,
+      "Waikato": 22,
+      "Wellington": 28
     },
     "by_location_type": {
-      "Main Street / Street-front": 573,
-      "Shopping Centre": 595,
-      "Unclassified": 323
+      "Main Street / Street-front": 575,
+      "Shopping Centre": 593,
+      "Unclassified": 282
     },
     "multi_brand_venues": [
       {
@@ -107,6 +107,7 @@
         "venue_name": "Botany Town Centre",
         "retailers": [
           "Bailey Nelson",
+          "OPSM",
           "Specsavers"
         ]
       },
@@ -115,7 +116,6 @@
         "venue_name": "St Lukes Westfield",
         "retailers": [
           "Bailey Nelson",
-          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -138,6 +138,14 @@
       {
         "venue_id": "canterbury-northlands",
         "venue_name": "Northlands Mall",
+        "retailers": [
+          "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "canterbury-riccarton-westfield",
+        "venue_name": "Westfield Riccarton",
         "retailers": [
           "Oscar Wylee",
           "Specsavers"
@@ -239,7 +247,6 @@
         "venue_id": "nsw-hornsby-westfield",
         "venue_name": "Hornsby Westfield",
         "retailers": [
-          "Bailey Nelson",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -372,6 +379,14 @@
         "retailers": [
           "Bailey Nelson",
           "OPSM",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "nt-casuarina-square",
+        "venue_name": "Casuarina Square",
+        "retailers": [
+          "Oscar Wylee",
           "Specsavers"
         ]
       },
@@ -818,6 +833,6 @@
         ]
       }
     ],
-    "single_brand_venue_count": 304
+    "single_brand_venue_count": 299
   }
 }

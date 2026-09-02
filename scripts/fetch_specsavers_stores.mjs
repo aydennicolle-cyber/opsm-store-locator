@@ -14,7 +14,8 @@ const SNAPSHOT_PATH = path.join(RETAILER_DIR, "source_snapshot.json");
 const LIST_URL = IS_NZ
   ? "https://www.specsavers.co.nz/stores/full-store-list"
   : "https://www.specsavers.com.au/stores/full-store-list";
-const CHROME_PATH = process.env.CHROME_PATH || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
+const CHROME_PATH = process.env.CHROME_PATH || (process.platform === "darwin" ? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" : "");
+const BROWSER_OPTIONS = CHROME_PATH ? { executablePath: CHROME_PATH } : { channel: "chrome" };
 const WORKERS = Math.max(1, Math.min(4, Number(process.env.SPECSAVERS_WORKERS || 4)));
 
 async function collectStore(page, item) {
@@ -38,13 +39,14 @@ async function collectStore(page, item) {
 
 async function main() {
   const browser = await chromium.launch({
-    executablePath: CHROME_PATH,
+    ...BROWSER_OPTIONS,
     headless: process.env.HEADLESS === "1",
   });
   try {
     const context = await browser.newContext({ locale: IS_NZ ? "en-NZ" : "en-AU" });
     const listPage = await context.newPage();
     await listPage.goto(LIST_URL, { waitUntil: "domcontentloaded", timeout: 60000 });
+    await listPage.locator('a[href*="/stores/"]').first().waitFor({ state: "attached", timeout: 30000 });
     const links = await listPage.locator('a[href*="/stores/"]').evaluateAll((anchors) =>
       Array.from(
         new Map(

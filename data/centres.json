@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "centre_count": 394,
+    "centre_count": 391,
     "enriched_count": 2,
-    "generated_at": "2026-07-26T04:52:32.066220+00:00"
+    "generated_at": "2026-09-01T23:23:53.126632+00:00"
   },
   "centres": [
     {
@@ -151,13 +151,14 @@
       "country": "New Zealand",
       "state": "Auckland",
       "suburb": "Auckland",
-      "latitude": -36.932383,
-      "longitude": 174.913224,
+      "latitude": -36.932845,
+      "longitude": 174.913149,
       "retailers": [
         "Bailey Nelson",
+        "OPSM",
         "Specsavers"
       ],
-      "optical_store_count": 2,
+      "optical_store_count": 3,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -228,33 +229,6 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "auckland-dr-town",
-      "name": "Town Centre Dr",
-      "country": "New Zealand",
-      "state": "Auckland",
-      "suburb": "Botany Downs",
-      "latitude": -36.93377,
-      "longitude": 174.913,
-      "retailers": [
-        "OPSM"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "",
-      "metrics_date": "",
-      "confidence": "Base",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
       "centre_id": "auckland-glenfield",
       "name": "Glenfield Mall",
       "country": "New Zealand",
@@ -287,14 +261,13 @@
       "country": "New Zealand",
       "state": "Auckland",
       "suburb": "Auckland",
-      "latitude": -36.882905,
-      "longitude": 174.732406,
+      "latitude": -36.883119,
+      "longitude": 174.73319,
       "retailers": [
         "Bailey Nelson",
-        "Oscar Wylee",
         "Specsavers"
       ],
-      "optical_store_count": 3,
+      "optical_store_count": 2,
       "owner": "",
       "manager": "Scentre Group",
       "centre_type": "",
@@ -481,33 +454,6 @@
       "suburb": "Flat Bush",
       "latitude": -36.964375,
       "longitude": 174.91454,
-      "retailers": [
-        "Specsavers"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "",
-      "metrics_date": "",
-      "confidence": "Base",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
-      "centre_id": "auckland-pakuranga-plaza",
-      "name": "Pakuranga Plaza",
-      "country": "New Zealand",
-      "state": "Auckland",
-      "suburb": "Pakuranga",
-      "latitude": -36.91276,
-      "longitude": 174.8718,
       "retailers": [
         "Specsavers"
       ],
@@ -724,12 +670,13 @@
       "country": "New Zealand",
       "state": "Canterbury",
       "suburb": "Christchurch",
-      "latitude": -43.530746,
-      "longitude": 172.59802,
+      "latitude": -43.530876,
+      "longitude": 172.597717,
       "retailers": [
+        "Oscar Wylee",
         "Specsavers"
       ],
-      "optical_store_count": 1,
+      "optical_store_count": 2,
       "owner": "",
       "manager": "Scentre Group",
       "centre_type": "",
@@ -2467,14 +2414,13 @@
       "country": "Australia",
       "state": "NSW",
       "suburb": "Hornsby",
-      "latitude": -33.704131,
-      "longitude": 151.099776,
+      "latitude": -33.704047,
+      "longitude": 151.099812,
       "retailers": [
-        "Bailey Nelson",
         "Oscar Wylee",
         "Specsavers"
       ],
-      "optical_store_count": 3,
+      "optical_store_count": 2,
       "owner": "",
       "manager": "Scentre Group",
       "centre_type": "",
@@ -3973,12 +3919,13 @@
       "country": "Australia",
       "state": "NT",
       "suburb": "Casuarina",
-      "latitude": -12.372933,
-      "longitude": 130.880954,
+      "latitude": -12.373874,
+      "longitude": 130.881327,
       "retailers": [
-        "Oscar Wylee"
+        "Oscar Wylee",
+        "Specsavers"
       ],
-      "optical_store_count": 1,
+      "optical_store_count": 2,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -8949,33 +8896,6 @@
       "suburb": "",
       "latitude": -37.812991,
       "longitude": 145.081603,
-      "retailers": [
-        "Independent / Other optical"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "",
-      "metrics_date": "",
-      "confidence": "Base",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
-      "centre_id": "vic-pall",
-      "name": "Pall Mall",
-      "country": "Australia",
-      "state": "VIC",
-      "suburb": "Bendigo",
-      "latitude": -36.759229,
-      "longitude": 144.2802,
       "retailers": [
         "Independent / Other optical"
       ],

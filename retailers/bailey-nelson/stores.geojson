@@ -3,7 +3,7 @@
   "metadata": {
     "retailer": "Bailey Nelson",
     "source": "https://baileynelson.com.au/pages/optometrist-near-me",
-    "fetched_at": "2026-07-23T01:01:27+00:00",
+    "fetched_at": "2026-09-01T07:42:35+00:00",
     "store_count": 68
   },
   "features": [
@@ -198,7 +198,7 @@
         "state": "NSW",
         "city": "Castle Hill",
         "postal_code": "2154",
-        "full_address": "Shop 389, 6-14 Castle St, Castle Hill, NSW, 2154",
+        "full_address": "6-14 Castle St, Castle Hill, NSW, 2154",
         "phone": "+61283571354",
         "official_url": "https://baileynelson.com.au/pages/optometrist-castle-towers",
         "services": "Optometry Services; Bulk-Billed Eye Tests; Private Eye Tests from $65; Contact Lens Eye Tests; Visual Fields Testing; Ultra-wide retinal imaging; Optical & Sunglass styling; Free frame adjustments",
@@ -304,31 +304,6 @@
         "services": "Optometry Services; Bulk-Billed Eye Tests; Private Eye Tests from $65; Contact Lens Eye Tests; Visual Fields Testing; Ultra-wide retinal imaging; Optical & Sunglass styling; Free frame adjustments",
         "audiology": "false",
         "map_url": "https://www.google.com/maps/place/Bailey+Nelson+-+Erina+Fair/@-33.4376971,151.3938847,18z/data=!4m6!3m5!1s0x6ab0cf148353c3a3:0x1f0640285fb29034!8m2!3d-33.4376053!4d151.3927555!16s%2Fg%2F11yk3rgyq0?entry=tts&g_ep=EgoyMDI1MTAyNi4wIPu8ASoASAFQAw%3D%3D&skid=9dbc2460-2887-449f-93ae-1e185e364a29",
-        "coordinate_source": "Official Google Maps link"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          151.0997034,
-          -33.7043001
-        ]
-      },
-      "properties": {
-        "id": "hornsby",
-        "name": "Bailey Nelson Hornsby",
-        "status": "Active",
-        "state": "NSW",
-        "city": "Hornsby",
-        "postal_code": "2077",
-        "full_address": "Shop 2023, Westfield Hornsby, Hornsby, NSW, 2077",
-        "phone": "+61283571353",
-        "official_url": "https://baileynelson.com.au/pages/optometrist-hornsby",
-        "services": "Optometry Services; Bulk-Billed Eye Tests; Private Eye Tests from $65; Contact Lens Eye Tests; Visual Fields Testing; Ultra-wide retinal imaging; Optical & Sunglass styling; Free frame adjustments",
-        "audiology": "false",
-        "map_url": "https://www.google.com/maps/place/Bailey+Nelson+Optometrist+-+Hornsby/@-33.7043001,151.0997034,15z/data=!4m6!3m5!1s0x6b12a70710d4d9d3:0x98525d1a2e3b08d8!8m2!3d-33.7043001!4d151.0997034!16s%2Fg%2F11ry9sh2lc?sa=X&ved=1t:2428&ictx=111&coh=219816&entry=tts&g_ep=EgoyMDI0MDgwNC4wKgBIAVAD",
         "coordinate_source": "Official Google Maps link"
       }
     },
@@ -473,7 +448,7 @@
         "state": "NSW",
         "city": "North Ryde",
         "postal_code": "2113",
-        "full_address": "Level 1, Shop 13A, Macquarie Centre, Corner of Herring Road & Waterloo Road, North Ryde, NSW, 2113",
+        "full_address": "Corner of Herring Road & Waterloo Road, North Ryde, NSW, 2113",
         "phone": "+61290008062",
         "official_url": "https://baileynelson.com.au/pages/optometrist-macquarie",
         "services": "Optometry Services; Bulk-Billed Eye Tests; Private Eye Tests from $65; Contact Lens Eye Tests; Visual Fields Testing; Ultra-wide retinal imaging; Optical & Sunglass styling; Free frame adjustments",
@@ -1387,6 +1362,31 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          145.0400858,
+          -38.2212485
+        ]
+      },
+      "properties": {
+        "id": "mornington",
+        "name": "Bailey Nelson Mornington",
+        "status": "Active",
+        "state": "VIC",
+        "city": "Mornington",
+        "postal_code": "3931",
+        "full_address": "170 Main St, Mornington, VIC, 3931",
+        "phone": "+61399625523",
+        "official_url": "https://baileynelson.com.au/pages/optometrist-mornington",
+        "services": "Optometry Services; Bulk-Billed Eye Tests; Private Eye Tests from $65; Contact Lens Eye Tests; Visual Fields Testing; Ultra-wide retinal imaging; Optical & Sunglass styling; Free frame adjustments",
+        "audiology": "false",
+        "map_url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=au&limit=1&q=170+Main+St%2C+Mornington%2C+VIC%2C+3931",
+        "coordinate_source": "OpenStreetMap Nominatim address fallback"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           144.3450903,
           -38.1565918
         ]
@@ -1593,7 +1593,7 @@
       },
       "properties": {
         "id": "carousel",
-        "name": "Bailey Nelson Carousel",
+        "name": "Bailey Nelson Carousel - NEW LOCATION",
         "status": "Active",
         "state": "WA",
         "city": "Cannington",

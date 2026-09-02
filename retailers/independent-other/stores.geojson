@@ -5,8 +5,8 @@
     "source": "OpenStreetMap contributors",
     "source_url": "https://www.openstreetmap.org/copyright",
     "license": "ODbL 1.0",
-    "fetched_at": "2026-07-26T04:42:28.467247Z",
-    "store_count": 425,
+    "fetched_at": "2026-09-01T07:48:20.085579Z",
+    "store_count": 383,
     "coverage": "Community-mapped and non-exhaustive"
   },
   "features": [
@@ -59,32 +59,6 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/11974077342",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          149.0670096,
-          -35.2380522
-        ]
-      },
-      "properties": {
-        "id": "osm-au-way-1286482174",
-        "name": "Bupa Optical",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "ACT",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Benjamin Way, Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/way/1286482174",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/way/1286482174",
         "source_confidence": "Community-mapped"
       }
     },
@@ -163,58 +137,6 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/1896332017",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          149.1787286,
-          -35.337255
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-11515612728",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "ACT",
-        "city": "",
-        "postal_code": "",
-        "full_address": "337 Canberra Avenue, Australia",
-        "phone": "+61 2 6280 4828",
-        "official_url": "https://www.sunglasshut.com/au",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/11515612728",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          149.0661554,
-          -35.2383969
-        ]
-      },
-      "properties": {
-        "id": "osm-au-way-1286521488",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "ACT",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Benjamin Way, Australia",
-        "phone": "+61 2 6253 1746",
-        "official_url": "https://www.sunglasshut.com/au",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/way/1286521488",
         "source_confidence": "Community-mapped"
       }
     },
@@ -717,32 +639,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          151.2255679,
-          -33.8713691
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-2755159686",
-        "name": "George & Matilda Eyecare for Optique",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://georgeandmatilda.com.au/stores/george-and-matilda-eyecare-for-optique-potts-point/",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/2755159686",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           151.2434838,
           -33.8772797
         ]
@@ -761,6 +657,32 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/11751506894",
+        "source_confidence": "Community-mapped"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.2255679,
+          -33.8713691
+        ]
+      },
+      "properties": {
+        "id": "osm-au-node-2755159686",
+        "name": "George & Matilda Eyecare for Optique",
+        "status": "Mapped",
+        "country": "Australia",
+        "state": "NSW",
+        "city": "",
+        "postal_code": "",
+        "full_address": "Australia",
+        "phone": "",
+        "official_url": "https://georgeandmatilda.com.au/stores/george-and-matilda-eyecare-for-optique-potts-point/",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "source_url": "https://www.openstreetmap.org/node/2755159686",
         "source_confidence": "Community-mapped"
       }
     },
@@ -1523,136 +1445,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          151.1791742,
-          -33.934491
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-9574172353",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/9574172353",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/9574172353",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          151.2068044,
-          -33.8705199
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-9892744772",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/9892744772",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/9892744772",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          151.1791034,
-          -33.9320754
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-9903309098",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/9903309098",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/9903309098",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          152.9094629,
-          -31.4296582
-        ]
-      },
-      "properties": {
-        "id": "osm-au-way-1021343513",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/way/1021343513",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/way/1021343513",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          151.7112057,
-          -32.9422024
-        ]
-      },
-      "properties": {
-        "id": "osm-au-way-496432073",
-        "name": "Sunglasses Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/way/496432073",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/way/496432073",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           151.0070179,
           -33.812843
         ]
@@ -1783,32 +1575,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          151.2076306,
-          -33.8721489
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-6461153274",
-        "name": "The Optical Co",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/6461153274",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/6461153274",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           153.3978416,
           -28.3265354
         ]
@@ -1827,6 +1593,32 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/11059373801",
+        "source_confidence": "Community-mapped"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.2076306,
+          -33.8721489
+        ]
+      },
+      "properties": {
+        "id": "osm-au-node-6461153274",
+        "name": "The Optical Co",
+        "status": "Mapped",
+        "country": "Australia",
+        "state": "NSW",
+        "city": "",
+        "postal_code": "",
+        "full_address": "Australia",
+        "phone": "",
+        "official_url": "https://www.openstreetmap.org/node/6461153274",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "source_url": "https://www.openstreetmap.org/node/6461153274",
         "source_confidence": "Community-mapped"
       }
     },
@@ -1991,8 +1783,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          151.1000673,
-          -33.7038137
+          151.1000669,
+          -33.7038165
         ]
       },
       "properties": {
@@ -2243,32 +2035,6 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/way/1250385845",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          130.8801835,
-          -12.3757657
-        ]
-      },
-      "properties": {
-        "id": "osm-au-way-1250385927",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NT",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/way/1250385927",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/way/1250385927",
         "source_confidence": "Community-mapped"
       }
     },
@@ -3083,58 +2849,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          152.349098,
-          -24.8658168
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-3616959028",
-        "name": "Optical Superstore",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/3616959028",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/3616959028",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          153.0870308,
-          -26.6517292
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-9406577080",
-        "name": "Optical Superstore",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/9406577080",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/9406577080",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           153.028975,
           -27.1942502
         ]
@@ -3213,13 +2927,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          153.1197932,
-          -27.3860777
+          145.7533825,
+          -16.9338926
         ]
       },
       "properties": {
-        "id": "osm-au-node-11817688821",
-        "name": "Optique",
+        "id": "osm-au-node-14091699299",
+        "name": "Optical Superstore",
         "status": "Mapped",
         "country": "Australia",
         "state": "QLD",
@@ -3227,10 +2941,10 @@
         "postal_code": "",
         "full_address": "Australia",
         "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/11817688821",
+        "official_url": "https://www.openstreetmap.org/node/14091699299",
         "services": "Optical / optician listing",
         "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/11817688821",
+        "source_url": "https://www.openstreetmap.org/node/14091699299",
         "source_confidence": "Community-mapped"
       }
     },
@@ -3239,13 +2953,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          153.1903291,
-          -27.5246857
+          152.349098,
+          -24.8658168
         ]
       },
       "properties": {
-        "id": "osm-au-node-10566668357",
-        "name": "Oscar-Wylee",
+        "id": "osm-au-node-3616959028",
+        "name": "Optical Superstore",
         "status": "Mapped",
         "country": "Australia",
         "state": "QLD",
@@ -3253,10 +2967,36 @@
         "postal_code": "",
         "full_address": "Australia",
         "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/10566668357",
+        "official_url": "https://www.openstreetmap.org/node/3616959028",
         "services": "Optical / optician listing",
         "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/10566668357",
+        "source_url": "https://www.openstreetmap.org/node/3616959028",
+        "source_confidence": "Community-mapped"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0870308,
+          -26.6517292
+        ]
+      },
+      "properties": {
+        "id": "osm-au-node-9406577080",
+        "name": "Optical Superstore",
+        "status": "Mapped",
+        "country": "Australia",
+        "state": "QLD",
+        "city": "",
+        "postal_code": "",
+        "full_address": "Australia",
+        "phone": "",
+        "official_url": "https://www.openstreetmap.org/node/9406577080",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "source_url": "https://www.openstreetmap.org/node/9406577080",
         "source_confidence": "Community-mapped"
       }
     },
@@ -3317,162 +3057,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          153.0167288,
-          -27.2410159
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-10272780385",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/10272780385",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/10272780385",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          153.1208124,
-          -27.3837783
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-11817571986",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/11817571986",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/11817571986",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          153.0843377,
-          -27.5639968
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-12709184935",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/12709184935",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/12709184935",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          153.11021,
-          -27.4035383
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-13273376917",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/13273376917",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/13273376917",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          153.0904016,
-          -26.3868974
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-13720134461",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/13720134461",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/13720134461",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          152.9727863,
-          -27.500778
-        ]
-      },
-      "properties": {
-        "id": "osm-au-way-1257125856",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/way/1257125856",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/way/1257125856",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           152.7582933,
           -27.6081169
         ]
@@ -3525,32 +3109,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          146.762051,
-          -19.2979068
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-5590821334",
-        "name": "The Optical Superstore",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/5590821334",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/5590821334",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           153.1905165,
           -27.5249777
         ]
@@ -3569,6 +3127,32 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/10566668350",
+        "source_confidence": "Community-mapped"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.762051,
+          -19.2979068
+        ]
+      },
+      "properties": {
+        "id": "osm-au-node-5590821334",
+        "name": "The Optical Superstore",
+        "status": "Mapped",
+        "country": "Australia",
+        "state": "QLD",
+        "city": "",
+        "postal_code": "",
+        "full_address": "Australia",
+        "phone": "",
+        "official_url": "https://www.openstreetmap.org/node/5590821334",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "source_url": "https://www.openstreetmap.org/node/5590821334",
         "source_confidence": "Community-mapped"
       }
     },
@@ -4097,32 +3681,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          138.6021842,
-          -34.9229984
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-3813309558",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "SA",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/3813309558",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/3813309558",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           138.5466883,
           -35.0179889
         ]
@@ -4513,58 +4071,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          147.3267349,
-          -42.8829809
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-10657495414",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "TAS",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/10657495414",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/10657495414",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          147.3266267,
-          -42.8829288
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-11296486466",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "TAS",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/11296486466",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/11296486466",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           147.0617806,
           -42.7811602
         ]
@@ -4799,32 +4305,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          144.9633914,
-          -37.8113252
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-12175749083",
-        "name": "Bailey And Nelson",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/12175749083",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/12175749083",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           142.1618395,
           -34.1841549
         ]
@@ -4929,6 +4409,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          145.0918238,
+          -37.7658978
+        ]
+      },
+      "properties": {
+        "id": "osm-au-way-1550521169",
+        "name": "Bulleen Eyecare",
+        "status": "Mapped",
+        "country": "Australia",
+        "state": "VIC",
+        "city": "",
+        "postal_code": "",
+        "full_address": "Australia",
+        "phone": "",
+        "official_url": "https://www.openstreetmap.org/way/1550521169",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "source_url": "https://www.openstreetmap.org/way/1550521169",
+        "source_confidence": "Community-mapped"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           144.9594299,
           -37.6875166
         ]
@@ -5025,6 +4531,32 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/4060966864",
+        "source_confidence": "Community-mapped"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.1127807,
+          -37.7732982
+        ]
+      },
+      "properties": {
+        "id": "osm-au-node-12418114627",
+        "name": "Complete Optical",
+        "status": "Mapped",
+        "country": "Australia",
+        "state": "VIC",
+        "city": "",
+        "postal_code": "",
+        "full_address": "325 Manningham Road, Australia",
+        "phone": "",
+        "official_url": "https://www.openstreetmap.org/node/12418114627",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "source_url": "https://www.openstreetmap.org/node/12418114627",
         "source_confidence": "Community-mapped"
       }
     },
@@ -5423,6 +4955,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          144.9897716,
+          -37.7887699
+        ]
+      },
+      "properties": {
+        "id": "osm-au-node-10705975016",
+        "name": "Eyecare Plus",
+        "status": "Mapped",
+        "country": "Australia",
+        "state": "VIC",
+        "city": "",
+        "postal_code": "3068",
+        "full_address": "302 Queens Parade, 3068, Australia",
+        "phone": "",
+        "official_url": "https://www.eyecareplus.com.au/",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "source_url": "https://www.openstreetmap.org/node/10705975016",
+        "source_confidence": "Community-mapped"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           145.0739169,
           -37.9674419
         ]
@@ -5467,32 +5025,6 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/6065622279",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          144.9897716,
-          -37.7887699
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-10705975016",
-        "name": "Eyecare Plus",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "city": "",
-        "postal_code": "3068",
-        "full_address": "302 Queens Parade, 3068, Australia",
-        "phone": "",
-        "official_url": "https://www.eyecareplus.com.au/",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/10705975016",
         "source_confidence": "Community-mapped"
       }
     },
@@ -5597,6 +5129,32 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/way/1031541532",
+        "source_confidence": "Community-mapped"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.5941891,
+          -38.60607
+        ]
+      },
+      "properties": {
+        "id": "osm-au-way-992371055",
+        "name": "Eyes and Optics",
+        "status": "Mapped",
+        "country": "Australia",
+        "state": "VIC",
+        "city": "",
+        "postal_code": "",
+        "full_address": "55 Graham Street, Australia",
+        "phone": "",
+        "official_url": "https://www.openstreetmap.org/way/992371055",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "source_url": "https://www.openstreetmap.org/way/992371055",
         "source_confidence": "Community-mapped"
       }
     },
@@ -5839,8 +5397,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          142.022636,
-          -37.743933
+          142.0227471,
+          -37.7438564
         ]
       },
       "properties": {
@@ -6255,32 +5813,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          145.5941891,
-          -38.60607
-        ]
-      },
-      "properties": {
-        "id": "osm-au-way-992371055",
-        "name": "Malcom Gin Eyes and Optics",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "city": "",
-        "postal_code": "",
-        "full_address": "55 Graham Street, Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/way/992371055",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/way/992371055",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           144.9622022,
           -37.812611
         ]
@@ -6449,7 +5981,7 @@
         "state": "VIC",
         "city": "",
         "postal_code": "",
-        "full_address": "Australia",
+        "full_address": "94 Tanti Avenue, Australia",
         "phone": "",
         "official_url": "https://www.openstreetmap.org/way/1343917840",
         "services": "Optical / optician listing",
@@ -7061,110 +6593,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          144.9654181,
-          -37.8137513
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-2147384822",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/2147384822",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/2147384822",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.0706616,
-          -37.6512134
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-10164703799",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/10164703799",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/10164703799",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.0837173,
-          -37.8848383
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-10235192811",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/10235192811",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/10235192811",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          142.1600022,
-          -34.1853828
-        ]
-      },
-      "properties": {
-        "id": "osm-au-way-688579897",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/way/688579897",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/way/688579897",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           145.2523666,
           -37.9281374
         ]
@@ -7313,6 +6741,32 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/4636803851",
+        "source_confidence": "Community-mapped"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9009929,
+          -37.8000731
+        ]
+      },
+      "properties": {
+        "id": "osm-au-node-2470687143",
+        "name": "VisionPro",
+        "status": "Mapped",
+        "country": "Australia",
+        "state": "VIC",
+        "city": "",
+        "postal_code": "3011",
+        "full_address": "119 Hopkins Street, 3011, Australia",
+        "phone": "",
+        "official_url": "https://www.openstreetmap.org/node/2470687143",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "source_url": "https://www.openstreetmap.org/node/2470687143",
         "source_confidence": "Community-mapped"
       }
     },
@@ -7625,32 +7079,6 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/7824897822",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          144.2802004,
-          -36.7592291
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-7830781834",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "city": "Bendigo",
-        "postal_code": "3550",
-        "full_address": "38 Pall Mall, Bendigo, 3550, Australia",
-        "phone": "",
-        "official_url": "https://stores.sunglasshut.com/au/vic/bendigo/38-pall-mall.html",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/7830781834",
         "source_confidence": "Community-mapped"
       }
     },
@@ -8413,32 +7841,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          117.8817377,
-          -35.0186287
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-6976079758",
-        "name": "Laubman & Pank",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "WA",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/6976079758",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/6976079758",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           115.7780425,
           -31.8764606
         ]
@@ -8457,6 +7859,32 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/11397913897",
+        "source_confidence": "Community-mapped"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.8817377,
+          -35.0186287
+        ]
+      },
+      "properties": {
+        "id": "osm-au-node-6976079758",
+        "name": "Laubman & Pank",
+        "status": "Mapped",
+        "country": "Australia",
+        "state": "WA",
+        "city": "",
+        "postal_code": "",
+        "full_address": "Australia",
+        "phone": "",
+        "official_url": "https://www.openstreetmap.org/node/6976079758",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "source_url": "https://www.openstreetmap.org/node/6976079758",
         "source_confidence": "Community-mapped"
       }
     },
@@ -8639,136 +8067,6 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/4197216402",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          115.858433,
-          -31.9529043
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-11002722550",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "WA",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/11002722550",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/11002722550",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          115.7794241,
-          -31.9823487
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-11017216485",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "WA",
-        "city": "",
-        "postal_code": "",
-        "full_address": "23 St Quentin Avenue, Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/11017216485",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/11017216485",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          115.7793913,
-          -31.8767553
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-11391375776",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "WA",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/11391375776",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/11391375776",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          115.8360251,
-          -32.0341449
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-12894322776",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "WA",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/12894322776",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/12894322776",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          115.7473789,
-          -32.0543376
-        ]
-      },
-      "properties": {
-        "id": "osm-au-node-11323033233",
-        "name": "Sunglass Shack",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "WA",
-        "city": "",
-        "postal_code": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/11323033233",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/11323033233",
         "source_confidence": "Community-mapped"
       }
     },
@@ -8998,8 +8296,8 @@
         "city": "",
         "postal_code": "",
         "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.campbelloptom.co.nz/",
+        "phone": "+64 9 846 0775",
+        "official_url": "https://campbelloptom.co.nz",
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/7009136867",
@@ -9115,32 +8413,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          174.7761616,
-          -36.8719113
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-node-8336121672",
-        "name": "Lentes & Marcos",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.lentesandmarcos.com/",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/8336121672",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           174.7441506,
           -36.8470839
         ]
@@ -9219,6 +8491,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          174.857297,
+          -36.8505378
+        ]
+      },
+      "properties": {
+        "id": "osm-ne-node-14086659006",
+        "name": "Mortimer Hirst - eyecare & eyewear",
+        "status": "Mapped",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "",
+        "postal_code": "",
+        "full_address": "T\u0101maki Drive, New Zealand",
+        "phone": "",
+        "official_url": "https://www.openstreetmap.org/node/14086659006",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "source_url": "https://www.openstreetmap.org/node/14086659006",
+        "source_confidence": "Community-mapped"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           174.7442485,
           -36.8478075
         ]
@@ -9263,292 +8561,6 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/11204116311",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.8549926,
-          -36.8996248
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-node-12594285406",
-        "name": "Prism Eyewear Glasses Repair",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "",
-        "postal_code": "",
-        "full_address": "6A/100 Queens Road, New Zealand",
-        "phone": "+64 9 948 8080",
-        "official_url": "https://www.openstreetmap.org/node/12594285406",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/12594285406",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.7769396,
-          -36.8705892
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-node-8401396740",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://stores.sunglasshut.com/nz",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/8401396740",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.6850486,
-          -36.9082919
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-node-10041479610",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/10041479610",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/10041479610",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.9136955,
-          -36.932365
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-node-10236459112",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/10236459112",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/10236459112",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.7338927,
-          -36.8829795
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-node-11353225629",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/11353225629",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/11353225629",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.7910994,
-          -37.0064855
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-node-11532475213",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/11532475213",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/11532475213",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.7826884,
-          -37.0059291
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-node-12395441724",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/12395441724",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/12395441724",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.7088753,
-          -36.7287675
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-way-778743692",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/way/778743692",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/way/778743692",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.8810736,
-          -36.9916006
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-way-985468086",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/way/985468086",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/way/985468086",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.8023041,
-          -36.9961796
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-way-1317815554",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/way/1317815554",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/way/1317815554",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.709278,
-          -36.7286931
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-way-778743678",
-        "name": "Sunglass Style",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/way/778743678",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/way/778743678",
         "source_confidence": "Community-mapped"
       }
     },
@@ -9791,32 +8803,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          172.6091868,
-          -43.4934767
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-way-1183598539",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Canterbury",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.sunglasshut.com/nz",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/way/1183598539",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           172.6385792,
           -43.5294059
         ]
@@ -9835,32 +8821,6 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/way/101162360",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          172.6374809,
-          -43.5333516
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-node-13283799533",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Canterbury",
-        "city": "Christchurch Central",
-        "postal_code": "8011",
-        "full_address": "166 Cashel Street, Christchurch Central, 8011, New Zealand",
-        "phone": "+64 3 374 6641",
-        "official_url": "https://stores.sunglasshut.com/nz/nz-south/christchurch/166-cashel-st-the-crossing",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/13283799533",
         "source_confidence": "Community-mapped"
       }
     },
@@ -10363,6 +9323,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          170.5022018,
+          -45.8754059
+        ]
+      },
+      "properties": {
+        "id": "osm-ne-node-14071539647",
+        "name": "Peter Dick Optometrists",
+        "status": "Mapped",
+        "country": "New Zealand",
+        "state": "Otago",
+        "city": "",
+        "postal_code": "",
+        "full_address": "New Zealand",
+        "phone": "",
+        "official_url": "https://www.openstreetmap.org/node/14071539647",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "source_url": "https://www.openstreetmap.org/node/14071539647",
+        "source_confidence": "Community-mapped"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           168.3518932,
           -46.410606
         ]
@@ -10407,32 +9393,6 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/5625853837",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.0734969,
-          -39.0565356
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-node-11462329547",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Taranaki",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/11462329547",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/11462329547",
         "source_confidence": "Community-mapped"
       }
     },
@@ -10615,32 +9575,6 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/2879410946",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          175.2790792,
-          -37.750709
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-node-13900821066",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Waikato",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/13900821066",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/13900821066",
         "source_confidence": "Community-mapped"
       }
     },
@@ -10901,32 +9835,6 @@
         "services": "Optical / optician listing",
         "audiology": "false",
         "source_url": "https://www.openstreetmap.org/node/7290149264",
-        "source_confidence": "Community-mapped"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.8112981,
-          -41.3294013
-        ]
-      },
-      "properties": {
-        "id": "osm-ne-node-10302916265",
-        "name": "Sunglass Hut",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Wellington",
-        "city": "",
-        "postal_code": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "https://www.openstreetmap.org/node/10302916265",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "source_url": "https://www.openstreetmap.org/node/10302916265",
         "source_confidence": "Community-mapped"
       }
     },

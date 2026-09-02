@@ -1,9 +1,9 @@
 {
   "source_url": "https://www.specsavers.com.au/stores/full-store-list",
-  "fetched_at": "2026-07-23T00:53:33.174Z",
-  "list_count": 399,
-  "store_count": 399,
-  "collection_method": "Rendered official store pages; Schema.org structured data",
+  "fetched_at": "2026-09-01T23:21:29.969Z",
+  "list_count": 401,
+  "store_count": 401,
+  "collection_method": "Official full store list reconciled; structured data captured for new records; structured details retained for unchanged official URLs",
   "stores": [
     {
       "ok": true,
@@ -6649,6 +6649,92 @@
     },
     {
       "ok": true,
+      "list_name": "Casuarina",
+      "official_url": "https://www.specsavers.com.au/stores/casuarina",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3689",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/casuarina/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "Shop GD262, Casuarina Square, 247 Trower Road, Casuarina, NT, 0810"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "AU",
+          "addressLocality": "Casuarina",
+          "addressRegion": "NT",
+          "postalCode": "0810",
+          "streetAddress": "Shop GD262, Casuarina Square, 247 Trower Road"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -12.374815,
+          "longitude": 130.8817
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Casuarina",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "18:00",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": [
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:00",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "15:00",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00"
+          }
+        ],
+        "telephone": "(08) 7935 6110",
+        "url": "casuarina"
+      }
+    },
+    {
+      "ok": true,
       "list_name": "Casula",
       "official_url": "https://www.specsavers.com.au/stores/casula",
       "data": {
@@ -13087,6 +13173,77 @@
         ],
         "telephone": "(08) 9534 7755",
         "url": "hallshead"
+      }
+    },
+    {
+      "ok": true,
+      "list_name": "Hamilton (VIC)",
+      "official_url": "https://www.specsavers.com.au/stores/hamilton",
+      "data": {
+        "@context": "https://schema.org",
+        "@id": "3694",
+        "@type": "Optician",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "bookAppointmentUrl",
+            "value": "/book/hamilton/appointment-type"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasOptical",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "hasAudiology",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "formattedAddress",
+            "value": "147 Gray Street, Hamilton, VIC, 3300"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "AU",
+          "addressLocality": "Hamilton",
+          "addressRegion": "VIC",
+          "postalCode": "3300",
+          "streetAddress": "147 Gray Street"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.742992,
+          "longitude": 142.0243
+        },
+        "image": "https://a.mktgcdn.com/p/azhfTDLZ29m3lxUsEaZz8JbvWdm35eAkBjMSSbJRA4A/500x500.jpg",
+        "name": "Hamilton (VIC)",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "17:30",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "closes": "13:00",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "09:00"
+          }
+        ],
+        "telephone": "(03) 4518 9888",
+        "url": "hamilton"
       }
     },
     {
@@ -34248,5 +34405,9 @@
         "url": "yokine"
       }
     }
-  ]
+  ],
+  "list_verified_at": "2026-09-01T23:21:29.969Z",
+  "detail_refresh_status": "incremental",
+  "retained_detail_count": 399,
+  "new_detail_count": 2
 }

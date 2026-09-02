@@ -6,7 +6,7 @@
       "New Zealand"
     ],
     "source_url": "https://www.opsm.co.nz/AjaxStoreLocatorSearch?storeId=10152&radius=5000&latitude=-41.2866&longitude=174.7756",
-    "fetched_at": "2026-07-26T03:51:36+00:00",
+    "fetched_at": "2026-09-01T07:42:29+00:00",
     "store_count": 57
   },
   "features": [
@@ -145,32 +145,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          174.913,
-          -36.93377
-        ]
-      },
-      "properties": {
-        "name": "OPSM Botany Downs",
-        "sap_id": "1630",
-        "identifier": "OPSM Botany Downs_1630",
-        "country": "New Zealand",
-        "state": "Auckland",
-        "city": "Botany Downs",
-        "postal_code": "2013",
-        "full_address": "Town Centre Dr, Botany Downs, AKL, 2013",
-        "phone": "(09) 271 0361",
-        "services": "Kids Vision Centre, Collect & Return",
-        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-18:00; Sun: 10:00-18:00",
-        "official_url": "https://www.opsm.co.nz/find-store",
-        "status": "Active",
-        "audiology": "false"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           174.74809,
           -36.71594
         ]
@@ -187,6 +161,32 @@
         "phone": "(09) 478 6453",
         "services": "Kids Vision Centre, Collect & Return",
         "hours": "Mon: closed; Tue: 17:30-09:00; Wed: 17:30-09:00; Thu: 17:30-09:00; Fri: 17:30-09:00; Sat: 17:30-closed; Sun: closed",
+        "official_url": "https://www.opsm.co.nz/find-store",
+        "status": "Active",
+        "audiology": "false"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.913,
+          -36.93377
+        ]
+      },
+      "properties": {
+        "name": "OPSM Botany Downs",
+        "sap_id": "1630",
+        "identifier": "OPSM Botany Downs_1630",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "city": "East Tamaki",
+        "postal_code": "2016",
+        "full_address": "588 Botany Town Centre, East Tamaki, AKL, 2016",
+        "phone": "(09) 271 0361",
+        "services": "Kids Vision Centre, Collect & Return",
+        "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-21:00; Fri: 09:00-21:00; Sat: 09:00-18:00; Sun: 10:00-18:00",
         "official_url": "https://www.opsm.co.nz/find-store",
         "status": "Active",
         "audiology": "false"
@@ -289,11 +289,11 @@
         "postal_code": "0620",
         "full_address": "SHOP WH04B, 24 MILFORD RD, Milford, AKL, 0620",
         "phone": "(09) 489 8070",
-        "services": "Audiology",
+        "services": "Dry Eye, Kids Vision Centre, Collect & Return",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 10:00-17:00; Sun: closed",
         "official_url": "https://www.opsm.co.nz/find-store",
         "status": "Active",
-        "audiology": "true"
+        "audiology": "false"
       }
     },
     {
@@ -523,7 +523,7 @@
         "postal_code": "1071",
         "full_address": "16-20 St Heliers Bay Rd, St Heliers, AKL, 1071",
         "phone": "(09) 575 5568",
-        "services": "Return",
+        "services": "Collect & Return",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 09:00-17:30; Sun: closed",
         "official_url": "https://www.opsm.co.nz/find-store",
         "status": "Active",
@@ -570,7 +570,7 @@
         "sap_id": "2830",
         "identifier": "Whakatane Optometrist by OPSM_2830",
         "country": "New Zealand",
-        "state": "Auckland",
+        "state": "Bay of Plenty",
         "city": "Whakatane",
         "postal_code": "3120",
         "full_address": "185 The Strand, Whakatane, AKL, 3120",
@@ -653,11 +653,11 @@
         "postal_code": "3110",
         "full_address": "2 Taurikura Drive, Tauranga, BOP, 3110",
         "phone": "(07) 578 7703",
-        "services": "Audiology",
+        "services": "Collect & Return",
         "hours": "Mon: 09:00-18:00; Tue: 09:00-18:00; Wed: 09:00-18:00; Thu: 09:00-20:00; Fri: 09:00-18:00; Sat: 09:00-18:00; Sun: 09:00-18:00",
         "official_url": "https://www.opsm.co.nz/find-store",
         "status": "Active",
-        "audiology": "true"
+        "audiology": "false"
       }
     },
     {
@@ -705,7 +705,7 @@
         "postal_code": "8011",
         "full_address": "The Crossing, Kivers Ln, Christchurch, CHC, 8011",
         "phone": "(03) 379 6307",
-        "services": "Return",
+        "services": "Collect & Return",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 09:00-17:00; Sun: 10:00-17:00",
         "official_url": "https://www.opsm.co.nz/find-store",
         "status": "Active",
@@ -1459,7 +1459,7 @@
         "postal_code": "6011",
         "full_address": "80 Cuba St, Te Aro, WLG, 6011",
         "phone": "(04) 473 3000",
-        "services": "Return",
+        "services": "Collect & Return",
         "hours": "Mon: 09:00-17:30; Tue: 09:00-17:30; Wed: 09:00-17:30; Thu: 09:00-17:30; Fri: 09:00-17:30; Sat: 09:00-17:30; Sun: closed",
         "official_url": "https://www.opsm.co.nz/find-store",
         "status": "Active",

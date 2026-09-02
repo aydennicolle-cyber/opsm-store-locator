@@ -60,7 +60,11 @@ NZ_REGIONS = [
     "West Coast",
 ]
 MAJOR_BRAND = re.compile(
-    r"\b(?:opsm|specsavers|bailey\s+nelson|oscar\s+wylee)\b",
+    r"\b(?:opsm|specsavers|bailey[\s&-]*(?:and[\s-]*)?nelson|oscar[\s-]*wylee)\b",
+    flags=re.IGNORECASE,
+)
+NON_COMPARABLE = re.compile(
+    r"\b(?:sunglass(?:es)?\s+(?:hut|style|shack)|eyewear\s+glasses\s+repair|ophthalmolog|eye\s+surgery|laser\s+eye)\b",
     flags=re.IGNORECASE,
 )
 
@@ -267,7 +271,7 @@ def clean_element(
 ) -> dict | None:
     tags = element.get("tags", {})
     name = tidy(tags.get("name") or tags.get("brand"))
-    if not name or MAJOR_BRAND.search(name):
+    if not name or MAJOR_BRAND.search(name) or NON_COMPARABLE.search(name):
         return None
     latitude, longitude = element_coordinates(element)
     if country == "Australia" and not (-44.5 <= latitude <= -9 and 112 <= longitude <= 154.5):
@@ -336,7 +340,26 @@ def collect() -> tuple[list[dict], list[dict]]:
             )
             if store:
                 stores[store["id"]] = store
-    rows = sorted(stores.values(), key=lambda row: (row["country"], row["state"], row["city"], row["name"]))
+    candidates = sorted(stores.values(), key=lambda row: (row["country"], row["state"], row["name"], row["id"]))
+    rows = []
+    for candidate in candidates:
+        normalised_name = re.sub(r"[^a-z0-9]+", "", candidate["name"].lower())
+        duplicate = next(
+            (
+                row
+                for row in rows
+                if row["country"] == candidate["country"]
+                and row["state"] == candidate["state"]
+                and re.sub(r"[^a-z0-9]+", "", row["name"].lower()) == normalised_name
+                and abs(float(row["latitude"]) - float(candidate["latitude"])) <= 0.00045
+                and abs(float(row["longitude"]) - float(candidate["longitude"])) <= 0.00055
+            ),
+            None,
+        )
+        if duplicate:
+            continue
+        rows.append(candidate)
+    rows.sort(key=lambda row: (row["country"], row["state"], row["city"], row["name"]))
     return rows, queries
 
 
@@ -423,8 +446,9 @@ def write_outputs(stores: list[dict], queries: list[dict]) -> None:
                 "license": "ODbL 1.0",
                 "fetched_at": fetched_at,
                 "store_count": len(stores),
-                "coverage": "Community-mapped shop=optician records; non-exhaustive",
+                "coverage": "Community-mapped shop=optician discovery records; non-exhaustive and subject to comparability review",
                 "excluded_major_brands": ["OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee"],
+                "excluded_non_comparable_patterns": ["sunglasses-only", "repair-only", "ophthalmology", "eye surgery", "laser eye"],
                 "queries": queries,
             },
             indent=2,

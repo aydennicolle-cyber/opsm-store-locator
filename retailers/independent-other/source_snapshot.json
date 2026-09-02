@@ -2,23 +2,30 @@
   "source": "OpenStreetMap contributors",
   "source_url": "https://www.openstreetmap.org/copyright",
   "license": "ODbL 1.0",
-  "fetched_at": "2026-07-26T04:42:28.467247Z",
-  "store_count": 425,
-  "coverage": "Community-mapped shop=optician records; non-exhaustive",
+  "fetched_at": "2026-09-01T07:48:20.085579Z",
+  "store_count": 383,
+  "coverage": "Community-mapped shop=optician discovery records; non-exhaustive and subject to comparability review",
   "excluded_major_brands": [
     "OPSM",
     "Specsavers",
     "Bailey Nelson",
     "Oscar Wylee"
   ],
+  "excluded_non_comparable_patterns": [
+    "sunglasses-only",
+    "repair-only",
+    "ophthalmology",
+    "eye surgery",
+    "laser eye"
+  ],
   "queries": [
     {
       "country": "Australia",
-      "elements": 559
+      "elements": 566
     },
     {
       "country": "New Zealand",
-      "elements": 149
+      "elements": 151
     }
   ]
 }

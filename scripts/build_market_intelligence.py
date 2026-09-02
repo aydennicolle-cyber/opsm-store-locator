@@ -458,6 +458,20 @@ def build_history(stores: list[dict]) -> dict:
         for store in stores
     }
     prior_paths = [path for path in sorted(HISTORY_DIR.glob("*.json")) if path != snapshot_path]
+    health_path = DATA_DIR / "data_health.json"
+    health = json.loads(health_path.read_text(encoding="utf-8")) if health_path.exists() else {}
+    if health.get("certification_status") != "Certified" and os.environ.get("ALLOW_UNCERTIFIED_SNAPSHOT") != "1":
+        latest_path = sorted(HISTORY_DIR.glob("*.json"))[-1] if list(HISTORY_DIR.glob("*.json")) else None
+        baseline_date = json.loads(latest_path.read_text(encoding="utf-8"))["snapshot_date"] if latest_path else snapshot_date
+        return {
+            "baseline_date": baseline_date,
+            "current_snapshot_date": snapshot_date,
+            "event_count": 0,
+            "events": [],
+            "coverage_baselines_added": [],
+            "archived": False,
+            "note": "Snapshot not archived because the current census has not passed data-health certification.",
+        }
     events = []
     coverage_baselines_added = []
     baseline_date = snapshot_date
@@ -581,7 +595,10 @@ def main() -> None:
     print(f"Wrote {len(features)} SA2 market features to {SA2_OUTPUT}")
     print(f"Matched {sum(bool(link['sa2_code']) for link in links.values())}/{len(stores)} stores to SA2")
     print(f"Wrote {len(centres)} reviewed centre entities")
-    print(f"Archived network snapshot with {history['event_count']} change events")
+    if history.get("archived", True):
+        print(f"Archived network snapshot with {history['event_count']} change events")
+    else:
+        print("Network snapshot was not archived because census certification is incomplete")
 
 
 if __name__ == "__main__":

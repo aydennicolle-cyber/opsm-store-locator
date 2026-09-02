@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "store_count": 1491,
-    "matched_count": 1269,
+    "store_count": 1450,
+    "matched_count": 1244,
     "source_release_date": "2026-05-26"
   },
   "links": {
@@ -11,11 +11,6 @@
       "match_confidence": "High"
     },
     "independent-other-optical-osm-au-node-11974077342": {
-      "sa2_code": "801011002",
-      "sa2_name": "Belconnen",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-way-1286482174": {
       "sa2_code": "801011002",
       "sa2_name": "Belconnen",
       "match_confidence": "High"
@@ -33,16 +28,6 @@
     "independent-other-optical-osm-au-node-1896332017": {
       "sa2_code": "801081098",
       "sa2_name": "Weston",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-11515612728": {
-      "sa2_code": "801031113",
-      "sa2_name": "Canberra East",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-way-1286521488": {
-      "sa2_code": "801011002",
-      "sa2_name": "Belconnen",
       "match_confidence": "High"
     },
     "bailey-nelson-belconnen": {
@@ -170,13 +155,6 @@
       "geography_system": "Stats NZ",
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
-    "independent-other-optical-osm-ne-node-8336121672": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
     "independent-other-optical-osm-ne-node-13822996704": {
       "sa2_code": "",
       "sa2_name": "",
@@ -198,6 +176,13 @@
       "geography_system": "Stats NZ",
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
+    "independent-other-optical-osm-ne-node-14086659006": {
+      "sa2_code": "",
+      "sa2_name": "",
+      "match_confidence": "Not available",
+      "geography_system": "Stats NZ",
+      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
+    },
     "independent-other-optical-osm-ne-node-5466762097": {
       "sa2_code": "",
       "sa2_name": "",
@@ -206,83 +191,6 @@
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
     "independent-other-optical-osm-ne-node-11204116311": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
-    "independent-other-optical-osm-ne-node-12594285406": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
-    "independent-other-optical-osm-ne-node-8401396740": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
-    "independent-other-optical-osm-ne-node-10041479610": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
-    "independent-other-optical-osm-ne-node-10236459112": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
-    "independent-other-optical-osm-ne-node-11353225629": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
-    "independent-other-optical-osm-ne-node-11532475213": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
-    "independent-other-optical-osm-ne-node-12395441724": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
-    "independent-other-optical-osm-ne-way-778743692": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
-    "independent-other-optical-osm-ne-way-985468086": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
-    "independent-other-optical-osm-ne-way-1317815554": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
-    "independent-other-optical-osm-ne-way-778743678": {
       "sa2_code": "",
       "sa2_name": "",
       "match_confidence": "Not available",
@@ -541,13 +449,6 @@
       "geography_system": "Stats NZ",
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
-    "opsm-nz-1630": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
     "opsm-nz-1692": {
       "sa2_code": "",
       "sa2_name": "",
@@ -556,6 +457,13 @@
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
     "bailey-nelson-nz-optometrist-botany": {
+      "sa2_code": "",
+      "sa2_name": "",
+      "match_confidence": "Not available",
+      "geography_system": "Stats NZ",
+      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
+    },
+    "opsm-nz-1630": {
       "sa2_code": "",
       "sa2_name": "",
       "match_confidence": "Not available",
@@ -618,13 +526,6 @@
       "geography_system": "Stats NZ",
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
-    "oscar-wylee-nz-stlukes": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
     "specsavers-nz-3825": {
       "sa2_code": "",
       "sa2_name": "",
@@ -661,13 +562,6 @@
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
     "opsm-nz-1646": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
-    "specsavers-nz-3821": {
       "sa2_code": "",
       "sa2_name": "",
       "match_confidence": "Not available",
@@ -800,13 +694,6 @@
       "geography_system": "Stats NZ",
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
-    "independent-other-optical-osm-ne-way-1183598539": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
     "specsavers-nz-3864": {
       "sa2_code": "",
       "sa2_name": "",
@@ -877,13 +764,6 @@
       "geography_system": "Stats NZ",
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
-    "independent-other-optical-osm-ne-node-13283799533": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
     "opsm-nz-2949": {
       "sa2_code": "",
       "sa2_name": "",
@@ -927,6 +807,13 @@
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
     "opsm-nz-1593": {
+      "sa2_code": "",
+      "sa2_name": "",
+      "match_confidence": "Not available",
+      "geography_system": "Stats NZ",
+      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
+    },
+    "oscar-wylee-nz-optometrist-riccarton": {
       "sa2_code": "",
       "sa2_name": "",
       "match_confidence": "Not available",
@@ -1203,14 +1090,14 @@
       "sa2_name": "Belrose",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-node-2755159686": {
-      "sa2_code": "117031333",
-      "sa2_name": "Potts Point - Woolloomooloo",
-      "match_confidence": "High"
-    },
     "independent-other-optical-osm-au-node-11751506894": {
       "sa2_code": "118011650",
       "sa2_name": "Double Bay - Darling Point",
+      "match_confidence": "High"
+    },
+    "independent-other-optical-osm-au-node-2755159686": {
+      "sa2_code": "117031333",
+      "sa2_name": "Potts Point - Woolloomooloo",
       "match_confidence": "High"
     },
     "independent-other-optical-osm-au-node-9894830475": {
@@ -1358,31 +1245,6 @@
       "sa2_name": "Cronulla - Kurnell - Bundeena",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-node-9574172353": {
-      "sa2_code": "117011325",
-      "sa2_name": "Sydney Airport",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-9892744772": {
-      "sa2_code": "117031644",
-      "sa2_name": "Sydney (North) - Millers Point",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-9903309098": {
-      "sa2_code": "117011325",
-      "sa2_name": "Sydney Airport",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-way-1021343513": {
-      "sa2_code": "108041164",
-      "sa2_name": "Port Macquarie - West",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-way-496432073": {
-      "sa2_code": "111031222",
-      "sa2_name": "Adamstown - Kotara",
-      "match_confidence": "High"
-    },
     "independent-other-optical-osm-au-node-10624370751": {
       "sa2_code": "125041717",
       "sa2_name": "Parramatta - North",
@@ -1408,14 +1270,14 @@
       "sa2_name": "Liverpool - East",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-node-6461153274": {
-      "sa2_code": "117031644",
-      "sa2_name": "Sydney (North) - Millers Point",
-      "match_confidence": "High"
-    },
     "independent-other-optical-osm-au-node-11059373801": {
       "sa2_code": "112031251",
       "sa2_name": "Murwillumbah",
+      "match_confidence": "High"
+    },
+    "independent-other-optical-osm-au-node-6461153274": {
+      "sa2_code": "117031644",
+      "sa2_name": "Sydney (North) - Millers Point",
       "match_confidence": "High"
     },
     "independent-other-optical-osm-au-way-1019628539": {
@@ -1976,11 +1838,6 @@
     "specsavers-3586": {
       "sa2_code": "127011596",
       "sa2_name": "Hoxton Park - Carnes Hill - Horningsea Park",
-      "match_confidence": "High"
-    },
-    "bailey-nelson-hornsby": {
-      "sa2_code": "121021578",
-      "sa2_name": "Hornsby - West",
       "match_confidence": "High"
     },
     "opsm-1102": {
@@ -2908,17 +2765,17 @@
       "sa2_name": "Brinkin - Nakara",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-way-1250385927": {
-      "sa2_code": "701021013",
-      "sa2_name": "Brinkin - Nakara",
-      "match_confidence": "High"
-    },
     "opsm-1582": {
       "sa2_code": "702011045",
       "sa2_name": "Charles",
       "match_confidence": "High"
     },
     "oscar-wylee-115": {
+      "sa2_code": "701021013",
+      "sa2_name": "Brinkin - Nakara",
+      "match_confidence": "High"
+    },
+    "specsavers-3689": {
       "sa2_code": "701021013",
       "sa2_name": "Brinkin - Nakara",
       "match_confidence": "High"
@@ -3045,6 +2902,13 @@
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
     "independent-other-optical-osm-ne-node-10864300613": {
+      "sa2_code": "",
+      "sa2_name": "",
+      "match_confidence": "Not available",
+      "geography_system": "Stats NZ",
+      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
+    },
+    "independent-other-optical-osm-ne-node-14071539647": {
       "sa2_code": "",
       "sa2_name": "",
       "match_confidence": "Not available",
@@ -3248,16 +3112,6 @@
       "sa2_name": "Yeronga",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-node-3616959028": {
-      "sa2_code": "319011495",
-      "sa2_name": "Bundaberg",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-9406577080": {
-      "sa2_code": "316031427",
-      "sa2_name": "Maroochydore - Kuluin",
-      "match_confidence": "High"
-    },
     "independent-other-optical-osm-au-node-10698432114": {
       "sa2_code": "313041373",
       "sa2_name": "Deception Bay",
@@ -3273,14 +3127,19 @@
       "sa2_name": "Elanora",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-node-11817688821": {
-      "sa2_code": "302031036",
-      "sa2_name": "Brisbane Airport",
+    "independent-other-optical-osm-au-node-14091699299": {
+      "sa2_code": "306021154",
+      "sa2_name": "Westcourt - Bungalow",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-node-10566668357": {
-      "sa2_code": "301011004",
-      "sa2_name": "Capalaba",
+    "independent-other-optical-osm-au-node-3616959028": {
+      "sa2_code": "319011495",
+      "sa2_name": "Bundaberg",
+      "match_confidence": "High"
+    },
+    "independent-other-optical-osm-au-node-9406577080": {
+      "sa2_code": "316031427",
+      "sa2_name": "Maroochydore - Kuluin",
       "match_confidence": "High"
     },
     "independent-other-optical-osm-au-node-3612643660": {
@@ -3293,36 +3152,6 @@
       "sa2_name": "Bundaberg",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-node-10272780385": {
-      "sa2_code": "314021579",
-      "sa2_name": "North Lakes",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-11817571986": {
-      "sa2_code": "302031036",
-      "sa2_name": "Brisbane Airport",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-12709184935": {
-      "sa2_code": "303031065",
-      "sa2_name": "Upper Mount Gravatt",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-13273376917": {
-      "sa2_code": "302031036",
-      "sa2_name": "Brisbane Airport",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-13720134461": {
-      "sa2_code": "316051434",
-      "sa2_name": "Noosa Heads",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-way-1257125856": {
-      "sa2_code": "304031094",
-      "sa2_name": "Indooroopilly",
-      "match_confidence": "High"
-    },
     "independent-other-optical-osm-au-node-12254014860": {
       "sa2_code": "310031286",
       "sa2_name": "Ipswich - Central",
@@ -3333,14 +3162,14 @@
       "sa2_name": "Beenleigh",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-node-5590821334": {
-      "sa2_code": "318021467",
-      "sa2_name": "Aitkenvale",
-      "match_confidence": "High"
-    },
     "independent-other-optical-osm-au-node-10566668350": {
       "sa2_code": "301011004",
       "sa2_name": "Capalaba",
+      "match_confidence": "High"
+    },
+    "independent-other-optical-osm-au-node-5590821334": {
+      "sa2_code": "318021467",
+      "sa2_name": "Aitkenvale",
       "match_confidence": "High"
     },
     "independent-other-optical-osm-au-node-10272461271": {
@@ -4333,11 +4162,6 @@
       "sa2_name": "Loxton",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-node-3813309558": {
-      "sa2_code": "401011001",
-      "sa2_name": "Adelaide",
-      "match_confidence": "High"
-    },
     "independent-other-optical-osm-au-node-4837914521": {
       "sa2_code": "403021064",
       "sa2_name": "Warradale",
@@ -4816,16 +4640,6 @@
       "sa2_name": "Wynyard",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-node-10657495414": {
-      "sa2_code": "601051027",
-      "sa2_name": "Hobart",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-11296486466": {
-      "sa2_code": "601051027",
-      "sa2_name": "Hobart",
-      "match_confidence": "High"
-    },
     "independent-other-optical-osm-au-node-3919500461": {
       "sa2_code": "601031020",
       "sa2_name": "New Norfolk",
@@ -4966,13 +4780,6 @@
       "sa2_name": "Wynyard",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-ne-node-11462329547": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
     "independent-other-optical-osm-ne-node-4584902658": {
       "sa2_code": "",
       "sa2_name": "",
@@ -5030,11 +4837,6 @@
       "sa2_name": "Surrey Hills (East) - Mont Albert",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-node-12175749083": {
-      "sa2_code": "206041504",
-      "sa2_name": "Melbourne CBD - North",
-      "match_confidence": "High"
-    },
     "independent-other-optical-osm-au-node-6457257749": {
       "sa2_code": "215021469",
       "sa2_name": "Mildura - North",
@@ -5055,6 +4857,11 @@
       "sa2_name": "Brighton (Vic.)",
       "match_confidence": "High"
     },
+    "independent-other-optical-osm-au-way-1550521169": {
+      "sa2_code": "207021156",
+      "sa2_name": "Bulleen",
+      "match_confidence": "High"
+    },
     "independent-other-optical-osm-au-node-3953229690": {
       "sa2_code": "210051243",
       "sa2_name": "Campbellfield - Coolaroo",
@@ -5073,6 +4880,11 @@
     "independent-other-optical-osm-au-node-4060966864": {
       "sa2_code": "209011198",
       "sa2_name": "Heidelberg - Rosanna",
+      "match_confidence": "High"
+    },
+    "independent-other-optical-osm-au-node-12418114627": {
+      "sa2_code": "207021157",
+      "sa2_name": "Doncaster",
       "match_confidence": "High"
     },
     "independent-other-optical-osm-au-way-637166859": {
@@ -5150,6 +4962,11 @@
       "sa2_name": "Springvale",
       "match_confidence": "High"
     },
+    "independent-other-optical-osm-au-node-10705975016": {
+      "sa2_code": "206071143",
+      "sa2_name": "Fitzroy North",
+      "match_confidence": "High"
+    },
     "independent-other-optical-osm-au-node-4066348932": {
       "sa2_code": "208031188",
       "sa2_name": "Highett (East) - Cheltenham ",
@@ -5158,11 +4975,6 @@
     "independent-other-optical-osm-au-node-6065622279": {
       "sa2_code": "212051326",
       "sa2_name": "Oakleigh - Huntingdale",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-10705975016": {
-      "sa2_code": "206071143",
-      "sa2_name": "Fitzroy North",
       "match_confidence": "High"
     },
     "independent-other-optical-osm-au-node-5242024739": {
@@ -5183,6 +4995,11 @@
     "independent-other-optical-osm-au-way-1031541532": {
       "sa2_code": "208011169",
       "sa2_name": "Brighton (Vic.)",
+      "match_confidence": "High"
+    },
+    "independent-other-optical-osm-au-way-992371055": {
+      "sa2_code": "205031093",
+      "sa2_name": "Wonthaggi - Inverloch",
       "match_confidence": "High"
     },
     "independent-other-optical-osm-au-node-1055773701": {
@@ -5308,11 +5125,6 @@
     "independent-other-optical-osm-au-node-6004987383": {
       "sa2_code": "213031348",
       "sa2_name": "Footscray",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-way-992371055": {
-      "sa2_code": "205031093",
-      "sa2_name": "Wonthaggi - Inverloch",
       "match_confidence": "High"
     },
     "independent-other-optical-osm-au-node-2322537658": {
@@ -5465,26 +5277,6 @@
       "sa2_name": "Ballarat",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-node-2147384822": {
-      "sa2_code": "206041503",
-      "sa2_name": "Melbourne CBD - East",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-10164703799": {
-      "sa2_code": "209041220",
-      "sa2_name": "Mill Park - North",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-10235192811": {
-      "sa2_code": "208041195",
-      "sa2_name": "Malvern East",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-way-688579897": {
-      "sa2_code": "215021469",
-      "sa2_name": "Mildura - North",
-      "match_confidence": "High"
-    },
     "independent-other-optical-osm-au-node-10222713631": {
       "sa2_code": "211011256",
       "sa2_name": "Rowville - Central",
@@ -5513,6 +5305,11 @@
     "independent-other-optical-osm-au-node-4636803851": {
       "sa2_code": "209021523",
       "sa2_name": "Reservoir - North East",
+      "match_confidence": "High"
+    },
+    "independent-other-optical-osm-au-node-2470687143": {
+      "sa2_code": "213031348",
+      "sa2_name": "Footscray",
       "match_confidence": "High"
     },
     "independent-other-optical-osm-au-node-6829200458": {
@@ -5641,11 +5438,6 @@
       "match_confidence": "High"
     },
     "independent-other-optical-osm-au-node-7824897822": {
-      "sa2_code": "202011018",
-      "sa2_name": "Bendigo",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-7830781834": {
       "sa2_code": "202011018",
       "sa2_name": "Bendigo",
       "match_confidence": "High"
@@ -6110,6 +5902,11 @@
       "sa2_name": "Greensborough",
       "match_confidence": "High"
     },
+    "specsavers-3694": {
+      "sa2_code": "217011421",
+      "sa2_name": "Hamilton (Vic.)",
+      "match_confidence": "High"
+    },
     "specsavers-3691": {
       "sa2_code": "214021379",
       "sa2_name": "Hastings - Somers",
@@ -6328,6 +6125,11 @@
     "independent-other-optical-osm-au-node-2124843984": {
       "sa2_code": "208031193",
       "sa2_name": "Mordialloc - Parkdale",
+      "match_confidence": "High"
+    },
+    "bailey-nelson-mornington": {
+      "sa2_code": "214021592",
+      "sa2_name": "Mornington - West",
       "match_confidence": "High"
     },
     "opsm-1148": {
@@ -6825,14 +6627,14 @@
       "sa2_name": "Balcatta - Hamersley",
       "match_confidence": "High"
     },
-    "independent-other-optical-osm-au-node-6976079758": {
-      "sa2_code": "509011225",
-      "sa2_name": "Albany",
-      "match_confidence": "High"
-    },
     "independent-other-optical-osm-au-node-11397913897": {
       "sa2_code": "505021089",
       "sa2_name": "Karrinyup - Gwelup - Carine",
+      "match_confidence": "High"
+    },
+    "independent-other-optical-osm-au-node-6976079758": {
+      "sa2_code": "509011225",
+      "sa2_name": "Albany",
       "match_confidence": "High"
     },
     "independent-other-optical-osm-au-node-12841444736": {
@@ -6868,31 +6670,6 @@
     "independent-other-optical-osm-au-node-4197216402": {
       "sa2_code": "503021040",
       "sa2_name": "North Perth",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-11002722550": {
-      "sa2_code": "503021297",
-      "sa2_name": "Perth (West) - Northbridge",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-11017216485": {
-      "sa2_code": "503011031",
-      "sa2_name": "Claremont (WA)",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-11391375776": {
-      "sa2_code": "505021089",
-      "sa2_name": "Karrinyup - Gwelup - Carine",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-12894322776": {
-      "sa2_code": "507041178",
-      "sa2_name": "Booragoon",
-      "match_confidence": "High"
-    },
-    "independent-other-optical-osm-au-node-11323033233": {
-      "sa2_code": "507021165",
-      "sa2_name": "Fremantle",
       "match_confidence": "High"
     },
     "independent-other-optical-osm-au-node-11397913900": {
@@ -7568,13 +7345,6 @@
       "geography_system": "Stats NZ",
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
-    "independent-other-optical-osm-ne-node-13900821066": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
     "independent-other-optical-osm-ne-node-2875412806": {
       "sa2_code": "",
       "sa2_name": "",
@@ -7716,13 +7486,6 @@
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
     "independent-other-optical-osm-ne-node-7290149264": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
-    "independent-other-optical-osm-ne-node-10302916265": {
       "sa2_code": "",
       "sa2_name": "",
       "match_confidence": "Not available",
