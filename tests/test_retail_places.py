@@ -459,6 +459,52 @@ class RetailPlaceTests(unittest.TestCase):
             places["place-au-nsw-grove-square"]["aliases"],
         )
 
+    def test_current_homeco_north_rocks_and_lidcombe_names_replace_stale_labels(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        expected = {
+            "place-au-nsw-glenmore-park-town-centre": (
+                "HomeCo Glenmore Park Town Centre",
+                "1 Town Terrace",
+                "Glenmore Park",
+                "2745",
+            ),
+            "place-au-nsw-menai-marketplace-shopping-centre": (
+                "HomeCo Menai Marketplace",
+                "152-194 Allison Crescent",
+                "Menai",
+                "2234",
+            ),
+            "place-au-nsw-north-rocks-shopping-centre": (
+                "North Rocks Shopping Centre",
+                "328-336 North Rocks Road",
+                "North Rocks",
+                "2151",
+            ),
+            "place-au-nsw-lidcombe-shopping-centre": (
+                "Lidcombe Shopping Centre",
+                "92 Parramatta Road",
+                "Lidcombe",
+                "2141",
+            ),
+        }
+        for place_id, (name, address, locality, postcode) in expected.items():
+            with self.subTest(place_id=place_id):
+                place = places[place_id]
+                self.assertEqual(place["name"], name)
+                self.assertEqual(place["address"], address)
+                self.assertEqual(place["locality"], locality)
+                self.assertEqual(place["postcode"], postcode)
+                self.assertEqual(place["location_setting"], "Shopping Centre")
+
+        self.assertIn(
+            "Westfield North Rocks",
+            places["place-au-nsw-north-rocks-shopping-centre"]["aliases"],
+        )
+        self.assertIn(
+            "Lidcombe Power Centre",
+            places["place-au-nsw-lidcombe-shopping-centre"]["aliases"],
+        )
+
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, expected_name in {

@@ -947,6 +947,46 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(grove["leasing_arrangement"], "In-house")
         self.assertEqual(grove["tenancy_count"], 83)
 
+    def test_current_homeco_north_rocks_and_lidcombe_batch_preserves_known_unknowns(self) -> None:
+        groups = {group["group_id"]: group for group in self.groups}
+        self.assertEqual(groups["group-homeco-daily-needs-reit"]["brand_name"], "HDN")
+        self.assertEqual(
+            groups["group-hmc-last-mile-logistics-property-trust-1"]["parent_group_id"],
+            "group-hmc-capital",
+        )
+
+        glenmore = self.payload["property_summaries"]["place-au-nsw-glenmore-park-town-centre"]
+        self.assertEqual(glenmore["research_status"], "Verified")
+        self.assertEqual(glenmore["centre_class"], "Neighbourhood")
+        self.assertEqual(glenmore["owner_names"], ["HomeCo Daily Needs REIT"])
+        self.assertEqual(glenmore["manager_names"], ["HMC Capital"])
+        self.assertEqual(glenmore["leasing_arrangement"], "External agency")
+        self.assertEqual(glenmore["gla_sqm"], 19793)
+
+        menai = self.payload["property_summaries"]["place-au-nsw-menai-marketplace-shopping-centre"]
+        self.assertEqual(menai["research_status"], "Verified")
+        self.assertEqual(menai["centre_class"], "Sub-regional")
+        self.assertEqual(menai["owner_names"], ["HMC Last Mile Logistics Property Trust 1"])
+        self.assertEqual(menai["manager_names"], ["HMC Capital"])
+        self.assertEqual(menai["leasing_arrangement"], "External agency")
+        self.assertEqual(menai["gla_sqm"], 17041)
+
+        north_rocks = self.payload["property_summaries"]["place-au-nsw-north-rocks-shopping-centre"]
+        self.assertEqual(north_rocks["research_status"], "Partial")
+        self.assertEqual(north_rocks["centre_class"], "Sub-regional")
+        self.assertEqual(north_rocks["owner_names"], [])
+        self.assertEqual(north_rocks["manager_names"], [])
+        self.assertEqual(north_rocks["leasing_arrangement"], "External agency")
+        self.assertEqual(north_rocks["group_ids"], ["group-jll"])
+
+        lidcombe = self.payload["property_summaries"]["place-au-nsw-lidcombe-shopping-centre"]
+        self.assertEqual(lidcombe["research_status"], "Partial")
+        self.assertEqual(lidcombe["centre_class"], "Sub-regional")
+        self.assertEqual(lidcombe["owner_names"], ["Lidcombe Property Holdings Unit Trust"])
+        self.assertEqual(lidcombe["manager_names"], [])
+        self.assertEqual(lidcombe["leasing_arrangement"], "External agency")
+        self.assertIn("group-jll", lidcombe["group_ids"])
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

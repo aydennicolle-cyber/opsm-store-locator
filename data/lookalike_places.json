@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T03:44:38+00:00",
+    "generated_at": "2026-09-02T03:49:42+00:00",
     "benchmark": "All mapped Bailey Nelson stores, separated by country and location setting",
     "method": "Transparent lookalike screening rank; not a probability of store success",
     "weights": {
@@ -3547,35 +3547,6 @@
         "rank": 86
       },
       {
-        "place_id": "place-au-nsw-glenmore-park-town-centre",
-        "name": "Glenmore Park Town Centre",
-        "country": "Australia",
-        "state": "NSW",
-        "locality": "Glenmore Park",
-        "location_setting": "Shopping Centre",
-        "score": 61,
-        "screening_completeness": 90,
-        "components": {
-          "bailey_footprint_similarity": 48,
-          "bailey_whitespace": 100,
-          "optical_market_validation": 29,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": 21415.0,
-          "population_growth_2021_2025_pct": 1.21,
-          "age_45_plus_pct_2021": 35.7,
-          "median_household_income_weekly_2021": 1318.0
-        },
-        "nearest_bailey_km": 31.9,
-        "optical_store_count": 1,
-        "retailers": [
-          "Specsavers"
-        ],
-        "evidence_url": "https://glenmoreparktowncentre.com.au/",
-        "rank": 87
-      },
-      {
         "place_id": "place-au-wa-halls-head-central",
         "name": "Halls Head Central",
         "country": "Australia",
@@ -3602,6 +3573,35 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.com.au/stores/hallshead",
+        "rank": 87
+      },
+      {
+        "place_id": "place-au-nsw-glenmore-park-town-centre",
+        "name": "HomeCo Glenmore Park Town Centre",
+        "country": "Australia",
+        "state": "NSW",
+        "locality": "Glenmore Park",
+        "location_setting": "Shopping Centre",
+        "score": 61,
+        "screening_completeness": 90,
+        "components": {
+          "bailey_footprint_similarity": 48,
+          "bailey_whitespace": 100,
+          "optical_market_validation": 29,
+          "accessibility_retail_context": null
+        },
+        "market_features": {
+          "population_2025": 21415.0,
+          "population_growth_2021_2025_pct": 1.21,
+          "age_45_plus_pct_2021": 35.7,
+          "median_household_income_weekly_2021": 1318.0
+        },
+        "nearest_bailey_km": 31.9,
+        "optical_store_count": 1,
+        "retailers": [
+          "Specsavers"
+        ],
+        "evidence_url": "https://glenmoreparktowncentre.com.au/",
         "rank": 88
       },
       {
@@ -9062,7 +9062,7 @@
         "retailers": [
           "Specsavers"
         ],
-        "evidence_url": "http://www.lidcombeshopping.com.au/",
+        "evidence_url": "https://www.lidcombeshoppingcentre.com.au/",
         "rank": 278
       },
       {
@@ -11074,6 +11074,35 @@
         "rank": 348
       },
       {
+        "place_id": "place-au-nsw-menai-marketplace-shopping-centre",
+        "name": "HomeCo Menai Marketplace",
+        "country": "Australia",
+        "state": "NSW",
+        "locality": "Menai",
+        "location_setting": "Shopping Centre",
+        "score": 36,
+        "screening_completeness": 90,
+        "components": {
+          "bailey_footprint_similarity": 35,
+          "bailey_whitespace": 41,
+          "optical_market_validation": 29,
+          "accessibility_retail_context": null
+        },
+        "market_features": {
+          "population_2025": 20917.0,
+          "population_growth_2021_2025_pct": -0.45,
+          "age_45_plus_pct_2021": 44.6,
+          "median_household_income_weekly_2021": 1432.0
+        },
+        "nearest_bailey_km": 8.2,
+        "optical_store_count": 1,
+        "retailers": [
+          "Specsavers"
+        ],
+        "evidence_url": "https://home-co.com.au/menai",
+        "rank": 349
+      },
+      {
         "place_id": "place-au-unknown-kellyville-village",
         "name": "Kellyville Village",
         "country": "Australia",
@@ -11098,35 +11127,6 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "http://ispt.net.au/properties/kellyville-village/",
-        "rank": 349
-      },
-      {
-        "place_id": "place-au-nsw-menai-marketplace-shopping-centre",
-        "name": "Menai Marketplace Shopping Centre",
-        "country": "Australia",
-        "state": "NSW",
-        "locality": "Menai",
-        "location_setting": "Shopping Centre",
-        "score": 36,
-        "screening_completeness": 90,
-        "components": {
-          "bailey_footprint_similarity": 35,
-          "bailey_whitespace": 41,
-          "optical_market_validation": 29,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": 20917.0,
-          "population_growth_2021_2025_pct": -0.45,
-          "age_45_plus_pct_2021": 44.6,
-          "median_household_income_weekly_2021": 1432.0
-        },
-        "nearest_bailey_km": 8.2,
-        "optical_store_count": 1,
-        "retailers": [
-          "Specsavers"
-        ],
-        "evidence_url": "",
         "rank": 350
       },
       {
@@ -14977,7 +14977,7 @@
         "retailers": [
           "Specsavers"
         ],
-        "evidence_url": "https://www.westfield.com.au/northrocks",
+        "evidence_url": "https://www.northrockscentre.com.au/",
         "rank": 485
       },
       {
