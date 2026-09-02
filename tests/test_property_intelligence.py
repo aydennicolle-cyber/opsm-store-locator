@@ -1153,6 +1153,66 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(riverside["leasing_arrangement"], "In-house")
         self.assertEqual(riverside["gla_sqm"], 22787)
 
+    def test_current_hyperdome_and_sunshine_plaza_property_structures_are_explicit(self) -> None:
+        groups = {group["group_id"]: group for group in self.groups}
+        self.assertEqual(
+            groups["group-ma-hyperdome-town-centre-fund"]["parent_group_id"],
+            "group-ma-financial",
+        )
+
+        hyperdome = self.payload["property_summaries"]["place-au-qld-logan-hyperdome"]
+        self.assertEqual(hyperdome["research_status"], "Verified")
+        self.assertEqual(hyperdome["centre_class"], "Regional")
+        self.assertEqual(hyperdome["centre_class_method"], "Inferred")
+        self.assertEqual(hyperdome["owner_names"], ["MA Hyperdome Town Centre Fund"])
+        self.assertEqual(hyperdome["manager_names"], ["MA Financial"])
+        self.assertEqual(hyperdome["leasing_arrangement"], "External agency")
+        self.assertEqual(hyperdome["gla_sqm"], 72374)
+        self.assertEqual(hyperdome["tenancy_count"], 180)
+        self.assertEqual(hyperdome["annual_visits"], 9200000)
+
+        hyperdome_roles = {
+            (row["group_id"], row["role"])
+            for row in self.relationships
+            if row["place_id"] == "place-au-qld-logan-hyperdome"
+        }
+        self.assertTrue(
+            {
+                ("group-ma-hyperdome-town-centre-fund", "OWNER"),
+                ("group-ma-financial", "MANAGER"),
+                ("group-ma-financial", "OPERATOR"),
+                ("group-qic", "LEASING_CONTROLLER"),
+                ("group-qic", "EXTERNAL_LEASING_AGENT"),
+            }.issubset(hyperdome_roles)
+        )
+
+        sunshine = self.payload["property_summaries"]["place-au-qld-sunshine-plaza"]
+        self.assertEqual(sunshine["research_status"], "Verified")
+        self.assertEqual(sunshine["centre_class"], "Super Regional")
+        self.assertEqual(sunshine["centre_class_method"], "Confirmed")
+        self.assertEqual(
+            sunshine["owner_names"],
+            ["GPT Group", "GPT Wholesale Shopping Centre Fund"],
+        )
+        self.assertEqual(sunshine["manager_names"], ["GPT Group"])
+        self.assertEqual(sunshine["leasing_arrangement"], "In-house")
+        self.assertEqual(sunshine["gla_sqm"], 106600)
+
+        sunshine_roles = {
+            (row["group_id"], row["role"])
+            for row in self.relationships
+            if row["place_id"] == "place-au-qld-sunshine-plaza"
+        }
+        self.assertTrue(
+            {
+                ("group-gpt", "CO_OWNER"),
+                ("group-gpt-wholesale-shopping-centre-fund", "CO_OWNER"),
+                ("group-gpt", "MANAGER"),
+                ("group-gpt", "OPERATOR"),
+                ("group-gpt", "LEASING_CONTROLLER"),
+            }.issubset(sunshine_roles)
+        )
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

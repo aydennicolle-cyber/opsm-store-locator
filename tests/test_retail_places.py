@@ -464,6 +464,42 @@ class RetailPlaceTests(unittest.TestCase):
                     store_ids,
                 )
 
+    def test_hyperdome_and_sunshine_plaza_duplicates_are_consolidated(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        self.assertNotIn("place-au-qld-hyperdome-loganholme", places)
+        self.assertNotIn("place-au-qld-maroochydore-sunshine-plaza", places)
+
+        hyperdome = places["place-au-qld-logan-hyperdome"]
+        self.assertEqual(hyperdome["name"], "Hyperdome")
+        self.assertEqual(hyperdome["address"], "Corner Pacific Highway and Bryants Road")
+        self.assertEqual(hyperdome["postcode"], "4129")
+
+        sunshine = places["place-au-qld-sunshine-plaza"]
+        self.assertEqual(sunshine["name"], "Sunshine Plaza")
+        self.assertEqual(sunshine["address"], "154-164 Horton Parade")
+        self.assertEqual(sunshine["postcode"], "4558")
+
+        expected_members = {
+            "place-au-qld-logan-hyperdome": {"opsm-1562", "oscar-wylee-27", "specsavers-3302"},
+            "place-au-qld-sunshine-plaza": {"opsm-1263", "oscar-wylee-51", "specsavers-3201"},
+        }
+        for place_id, store_ids in expected_members.items():
+            with self.subTest(place_id=place_id):
+                rows = [row for row in self.memberships if row["place_id"] == place_id]
+                self.assertEqual({row["store_id"] for row in rows}, store_ids)
+                self.assertTrue(all(row["location_setting"] == "Shopping Centre" for row in rows))
+                self.assertTrue(all(row["mapping_confidence"] == "High" for row in rows))
+
+        remaps = {row["previous_place_id"]: row["canonical_place_id"] for row in read_csv("place_id_remaps.csv")}
+        self.assertEqual(
+            remaps["place-au-qld-hyperdome-loganholme"],
+            "place-au-qld-logan-hyperdome",
+        )
+        self.assertEqual(
+            remaps["place-au-qld-maroochydore-sunshine-plaza"],
+            "place-au-qld-sunshine-plaza",
+        )
+
     def test_current_charter_hall_nsw_batch_has_complete_public_addresses(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         expected = {

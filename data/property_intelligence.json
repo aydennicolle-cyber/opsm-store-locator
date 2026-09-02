@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T04:13:00.733581+00:00",
+  "generated_at": "2026-09-02T04:22:59.990758+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 136,
-    "relationship_count": 901,
-    "active_relationship_count": 899,
-    "shopping_centre_count": 582,
-    "researched_property_count": 270,
-    "classed_property_count": 261,
+    "group_count": 137,
+    "relationship_count": 909,
+    "active_relationship_count": 907,
+    "shopping_centre_count": 580,
+    "researched_property_count": 271,
+    "classed_property_count": 263,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -2334,6 +2334,24 @@
         "The Trustee for Riverside Plaza Syndicate",
         "Riverside Plaza Fund"
       ]
+    },
+    {
+      "group_id": "group-ma-hyperdome-town-centre-fund",
+      "canonical_name": "MA Hyperdome Town Centre Fund",
+      "parent_group_id": "group-ma-financial",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://mafinancial.com/insights/hyperdome-town-centre-secured-in-major-south-east-queensland-retail-play",
+      "status": "Active",
+      "source_url": "https://www.aer.gov.au/industry/registers/retail-exemptions/trustee-ma-hyperdome-town-centre-fund-loganholme-shopping-village-retail-exemption",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "MA Hyperdome Town Centre Fund",
+        "The Trustee for MA Hyperdome Town Centre Fund",
+        "MA Hyperdome Fund"
+      ]
     }
   ],
   "group_alias_index": {
@@ -2608,7 +2626,10 @@
     "raptisinvestments": "group-raptis-investments",
     "riversideplazasyndicate": "group-riverside-plaza-syndicate",
     "thetrusteeforriversideplazasyndicate": "group-riverside-plaza-syndicate",
-    "riversideplazafund": "group-riverside-plaza-syndicate"
+    "riversideplazafund": "group-riverside-plaza-syndicate",
+    "mahyperdometowncentrefund": "group-ma-hyperdome-town-centre-fund",
+    "thetrusteeformahyperdometowncentrefund": "group-ma-hyperdome-town-centre-fund",
+    "mahyperdomefund": "group-ma-hyperdome-town-centre-fund"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -4997,35 +5018,35 @@
       "derived_from": "official_portfolio_asset"
     },
     {
-      "relationship_id": "rel-portfolio-qic-hyperdome-manager",
+      "relationship_id": "rel-portfolio-qic-hyperdome-leasing-leasing_controller",
       "place_id": "place-au-qld-logan-hyperdome",
       "group_id": "group-qic",
-      "role": "MANAGER",
+      "role": "LEASING_CONTROLLER",
       "ownership_percentage": null,
       "valid_from": "",
       "valid_to": "",
       "status": "ACTIVE",
-      "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
-      "source_type": "Official current managed-portfolio report",
+      "source_url": "https://www.qicre.com/Properties/Hyperdome",
+      "source_type": "Official current owner and leasing property profile",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
-      "public_note": "QIC Real Estate lists this asset in its current managed portfolio",
+      "public_note": "QIC's current property profile states that Hyperdome is owned by MA Financial and leased by QIC",
       "derived_from": "official_portfolio_asset"
     },
     {
-      "relationship_id": "rel-portfolio-qic-hyperdome-operator",
+      "relationship_id": "rel-portfolio-qic-hyperdome-leasing-external_leasing_agent",
       "place_id": "place-au-qld-logan-hyperdome",
       "group_id": "group-qic",
-      "role": "OPERATOR",
+      "role": "EXTERNAL_LEASING_AGENT",
       "ownership_percentage": null,
       "valid_from": "",
       "valid_to": "",
       "status": "ACTIVE",
-      "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
-      "source_type": "Official current managed-portfolio report",
+      "source_url": "https://www.qicre.com/Properties/Hyperdome",
+      "source_type": "Official current owner and leasing property profile",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
-      "public_note": "QIC Real Estate lists this asset in its current managed portfolio",
+      "public_note": "QIC's current property profile states that Hyperdome is owned by MA Financial and leased by QIC",
       "derived_from": "official_portfolio_asset"
     },
     {
@@ -17027,6 +17048,134 @@
       "confidence": "High",
       "public_note": "RetPro's current portfolio provides centre management and the direct permanent leasing pathway for Riverside Plaza",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ma-hyperdome-town-centre-fund-owner-owner",
+      "place_id": "place-au-qld-logan-hyperdome",
+      "group_id": "group-ma-hyperdome-town-centre-fund",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mafinancial.com/insights/hyperdome-town-centre-secured-in-major-south-east-queensland-retail-play",
+      "source_type": "Official current acquisition and managed-fund announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "MA Financial acquired Hyperdome through a single-asset managed fund that is identified in the current public register as the MA Hyperdome Town Centre Fund",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ma-financial-hyperdome-management-manager",
+      "place_id": "place-au-qld-logan-hyperdome",
+      "group_id": "group-ma-financial",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mafinancial.com/insights/hyperdome-town-centre-secured-in-major-south-east-queensland-retail-play",
+      "source_type": "Official current acquisition and management announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "MA Financial states it takes responsibility for property and development management while retaining QIC for selected roles",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ma-financial-hyperdome-management-operator",
+      "place_id": "place-au-qld-logan-hyperdome",
+      "group_id": "group-ma-financial",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mafinancial.com/insights/hyperdome-town-centre-secured-in-major-south-east-queensland-retail-play",
+      "source_type": "Official current acquisition and management announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "MA Financial states it takes responsibility for property and development management while retaining QIC for selected roles",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-gpt-sunshine-plaza-owner-co_owner",
+      "place_id": "place-au-qld-sunshine-plaza",
+      "group_id": "group-gpt",
+      "role": "CO_OWNER",
+      "ownership_percentage": 50.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.gpt.com.au/property/retail/sunshine-plaza",
+      "source_type": "Official current owner and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "GPT's current property profile reports its 50 percent ownership and the centre's current size",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-gwscf-sunshine-plaza-owner-co_owner",
+      "place_id": "place-au-qld-sunshine-plaza",
+      "group_id": "group-gpt-wholesale-shopping-centre-fund",
+      "role": "CO_OWNER",
+      "ownership_percentage": 50.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.cliffordchance.com/news/news/2026/08/clifford-chance-advises-the-gpt-wholesale-shopping-centre-fund-o.html",
+      "source_type": "Authoritative transaction settlement confirmation",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "GWSCF's transaction adviser confirms settlement of the fund's 50 percent Sunshine Plaza interest",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-gpt-sunshine-plaza-management-manager",
+      "place_id": "place-au-qld-sunshine-plaza",
+      "group_id": "group-gpt",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://announcements.asx.com.au/asxpdf/20260615/pdf/070mf95tp2zwhw.pdf",
+      "source_type": "Official current owner transaction and management announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "GPT continues to provide property leasing and development management services for Sunshine Plaza",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-gpt-sunshine-plaza-management-operator",
+      "place_id": "place-au-qld-sunshine-plaza",
+      "group_id": "group-gpt",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://announcements.asx.com.au/asxpdf/20260615/pdf/070mf95tp2zwhw.pdf",
+      "source_type": "Official current owner transaction and management announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "GPT continues to provide property leasing and development management services for Sunshine Plaza",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-gpt-sunshine-plaza-management-leasing_controller",
+      "place_id": "place-au-qld-sunshine-plaza",
+      "group_id": "group-gpt",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://announcements.asx.com.au/asxpdf/20260615/pdf/070mf95tp2zwhw.pdf",
+      "source_type": "Official current owner transaction and management announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "GPT continues to provide property leasing and development management services for Sunshine Plaza",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -18089,25 +18238,25 @@
       "matched_place_id": "place-au-vic-watergardens-town-centre"
     },
     {
-      "portfolio_asset_id": "qic-hyperdome",
+      "portfolio_asset_id": "qic-hyperdome-leasing",
       "group_id": "group-qic",
       "canonical_name": "Hyperdome",
       "country": "Australia",
       "state": "QLD",
-      "aliases": "Logan Hyperdome",
+      "aliases": "Logan Hyperdome|Hyperdome Loganholme",
       "preferred_place_id": "place-au-qld-logan-hyperdome",
-      "roles": "MANAGER|OPERATOR",
+      "roles": "LEASING_CONTROLLER|EXTERNAL_LEASING_AGENT",
       "ownership_percentage": "",
-      "gla_sqm": "",
-      "tenancy_count": "",
-      "annual_visits_m": "",
-      "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
-      "source_type": "Official current managed-portfolio report",
-      "source_date": "2025-06-30",
+      "gla_sqm": "72374",
+      "tenancy_count": "180",
+      "annual_visits_m": "9.2",
+      "source_url": "https://www.qicre.com/Properties/Hyperdome",
+      "source_type": "Official current owner and leasing property profile",
+      "source_date": "2026-09-02",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "status": "ACTIVE",
-      "public_note": "QIC Real Estate lists this asset in its current managed portfolio",
+      "public_note": "QIC's current property profile states that Hyperdome is owned by MA Financial and leased by QIC",
       "match_status": "Matched",
       "matched_place_id": "place-au-qld-logan-hyperdome"
     },
@@ -26114,6 +26263,121 @@
       "public_note": "RetPro's current portfolio provides centre management and the direct permanent leasing pathway for Riverside Plaza",
       "match_status": "Matched",
       "matched_place_id": "place-au-nsw-riverside-plaza-queanbeyan"
+    },
+    {
+      "portfolio_asset_id": "ma-hyperdome-town-centre-fund-owner",
+      "group_id": "group-ma-hyperdome-town-centre-fund",
+      "canonical_name": "Hyperdome",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Logan Hyperdome|Hyperdome Loganholme",
+      "preferred_place_id": "place-au-qld-logan-hyperdome",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "72374",
+      "tenancy_count": "180",
+      "annual_visits_m": "9.2",
+      "source_url": "https://mafinancial.com/insights/hyperdome-town-centre-secured-in-major-south-east-queensland-retail-play",
+      "source_type": "Official current acquisition and managed-fund announcement",
+      "source_date": "2025-11-24",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "MA Financial acquired Hyperdome through a single-asset managed fund that is identified in the current public register as the MA Hyperdome Town Centre Fund",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-logan-hyperdome"
+    },
+    {
+      "portfolio_asset_id": "ma-financial-hyperdome-management",
+      "group_id": "group-ma-financial",
+      "canonical_name": "Hyperdome",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Logan Hyperdome|Hyperdome Loganholme",
+      "preferred_place_id": "place-au-qld-logan-hyperdome",
+      "roles": "MANAGER|OPERATOR",
+      "ownership_percentage": "",
+      "gla_sqm": "72374",
+      "tenancy_count": "180",
+      "annual_visits_m": "9.2",
+      "source_url": "https://mafinancial.com/insights/hyperdome-town-centre-secured-in-major-south-east-queensland-retail-play",
+      "source_type": "Official current acquisition and management announcement",
+      "source_date": "2025-11-24",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "MA Financial states it takes responsibility for property and development management while retaining QIC for selected roles",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-logan-hyperdome"
+    },
+    {
+      "portfolio_asset_id": "gpt-sunshine-plaza-owner",
+      "group_id": "group-gpt",
+      "canonical_name": "Sunshine Plaza",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Maroochydore Sunshine Plaza",
+      "preferred_place_id": "place-au-qld-sunshine-plaza",
+      "roles": "CO_OWNER",
+      "ownership_percentage": "50",
+      "gla_sqm": "106600",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.gpt.com.au/property/retail/sunshine-plaza",
+      "source_type": "Official current owner and property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "GPT's current property profile reports its 50 percent ownership and the centre's current size",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-sunshine-plaza"
+    },
+    {
+      "portfolio_asset_id": "gwscf-sunshine-plaza-owner",
+      "group_id": "group-gpt-wholesale-shopping-centre-fund",
+      "canonical_name": "Sunshine Plaza",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Maroochydore Sunshine Plaza",
+      "preferred_place_id": "place-au-qld-sunshine-plaza",
+      "roles": "CO_OWNER",
+      "ownership_percentage": "50",
+      "gla_sqm": "106600",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.cliffordchance.com/news/news/2026/08/clifford-chance-advises-the-gpt-wholesale-shopping-centre-fund-o.html",
+      "source_type": "Authoritative transaction settlement confirmation",
+      "source_date": "2026-08-04",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "GWSCF's transaction adviser confirms settlement of the fund's 50 percent Sunshine Plaza interest",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-sunshine-plaza"
+    },
+    {
+      "portfolio_asset_id": "gpt-sunshine-plaza-management",
+      "group_id": "group-gpt",
+      "canonical_name": "Sunshine Plaza",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Maroochydore Sunshine Plaza",
+      "preferred_place_id": "place-au-qld-sunshine-plaza",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "106600",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://announcements.asx.com.au/asxpdf/20260615/pdf/070mf95tp2zwhw.pdf",
+      "source_type": "Official current owner transaction and management announcement",
+      "source_date": "2026-06-15",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "GPT continues to provide property leasing and development management services for Sunshine Plaza",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-sunshine-plaza"
     }
   ],
   "property_summaries": {
@@ -58590,106 +58854,6 @@
         "retail_businesses": 121
       }
     },
-    "corridor-au-qld-maroochydore-horton-parade": {
-      "place_id": "corridor-au-qld-maroochydore-horton-parade",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "corridor-au-qld-maroochydore-horton-parade",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "corridor-au-qld-maroochydore-horton-parade",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 65.61,
-      "competitor_context": {
-        "by_retailer": {
-          "Independent / Other optical": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "independent-other-optical-osm-au-node-9406577080",
-                "name": "Optical Superstore",
-                "distance_km": 0.31
-              }
-            ]
-          },
-          "OPSM": {
-            "in_centre": [
-              {
-                "store_id": "opsm-1263",
-                "name": "OPSM Maroochydore",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "Oscar Wylee": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "oscar-wylee-51",
-                "name": "Sunshine Plaza",
-                "distance_km": 0.08
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "specsavers-3201",
-                "name": "Maroochydore Sunshine Plaza",
-                "distance_km": 0.16
-              }
-            ],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 0.31,
-          "Bailey Nelson": 65.61,
-          "OPSM": 0.0,
-          "Oscar Wylee": 0.08,
-          "Specsavers": 0.16
-        },
-        "independent_2km_count": 1
-      },
-      "market": {
-        "sa2_code": "316031427",
-        "sa2_name": "Maroochydore - Kuluin",
-        "population_2025": 25797,
-        "population_growth_pct": 9.1,
-        "median_household_income": 942,
-        "age_45_plus_pct": 50.9,
-        "retail_businesses": 215
-      }
-    },
     "corridor-au-qld-emerald-hospital-road": {
       "place_id": "corridor-au-qld-emerald-hospital-road",
       "centre_class": "Unknown",
@@ -60593,87 +60757,6 @@
         "age_45_plus_pct": 42.2,
         "retail_businesses": 56
       }
-    },
-    "corridor-au-qld-shailer-park-pacific-highway": {
-      "place_id": "corridor-au-qld-shailer-park-pacific-highway",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "corridor-au-qld-shailer-park-pacific-highway",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "corridor-au-qld-shailer-park-pacific-highway",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 13.78,
-      "competitor_context": {
-        "by_retailer": {
-          "Oscar Wylee": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "oscar-wylee-27",
-                "name": "Hyperdome Loganholme",
-                "distance_km": 0.43
-              }
-            ]
-          },
-          "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "specsavers-3302",
-                "name": "Logan Hyperdome",
-                "distance_km": 0.24
-              }
-            ],
-            "catchment_2km": []
-          },
-          "OPSM": {
-            "in_centre": [
-              {
-                "store_id": "opsm-1562",
-                "name": "OPSM Loganholme",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 7.13,
-          "Bailey Nelson": 13.78,
-          "OPSM": 0.0,
-          "Oscar Wylee": 0.43,
-          "Specsavers": 0.24
-        },
-        "independent_2km_count": 0
-      },
-      "market": {}
     },
     "corridor-au-qld-buddina-point-cartwright-drive": {
       "place_id": "corridor-au-qld-buddina-point-cartwright-drive",
@@ -64669,40 +64752,69 @@
         "retail_businesses": 56
       }
     },
-    "place-au-qld-hyperdome-loganholme": {
-      "place_id": "place-au-qld-hyperdome-loganholme",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+    "place-au-qld-logan-hyperdome": {
+      "place_id": "place-au-qld-logan-hyperdome",
+      "centre_class": "Regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
-        "place_id": "place-au-qld-hyperdome-loganholme",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "place_id": "place-au-qld-logan-hyperdome",
+        "centre_class": "Regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.qicre.com/Properties/Hyperdome",
+        "source_type": "Official current owner and leasing property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Regional format inferred from the current 72374 square metre GLA 180-store count and multi-anchor offer; the current profile does not publish a formal SCCA class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
-        "place_id": "place-au-qld-hyperdome-loganholme",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "place_id": "place-au-qld-logan-hyperdome",
+        "research_status": "Verified",
+        "source_url": "https://www.qicre.com/Properties/Hyperdome",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current QIC MA Financial venue and public-register sources confirm the owning fund MA Financial management QIC leasing address public metrics and all three mapped optical tenancies; centre class is a documented inference"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-qic-hyperdome-leasing-leasing_controller",
+        "rel-portfolio-qic-hyperdome-leasing-external_leasing_agent",
+        "rel-portfolio-ma-hyperdome-town-centre-fund-owner-owner",
+        "rel-portfolio-ma-financial-hyperdome-management-manager",
+        "rel-portfolio-ma-financial-hyperdome-management-operator"
+      ],
+      "group_ids": [
+        "group-ma-financial",
+        "group-ma-hyperdome-town-centre-fund",
+        "group-qic"
+      ],
+      "owner_names": [
+        "MA Hyperdome Town Centre Fund"
+      ],
+      "manager_names": [
+        "MA Financial"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 13.35,
+      "portfolio_overlap_status": "LEASING_CONTROLLER_OVERLAP",
+      "portfolio_overlap_groups": [
+        {
+          "group_id": "group-qic",
+          "canonical_name": "QIC Real Estate",
+          "role": "LEASING_CONTROLLER",
+          "bailey_property_count": 4,
+          "bailey_store_count": 4
+        },
+        {
+          "group_id": "group-qic",
+          "canonical_name": "QIC Real Estate",
+          "role": "EXTERNAL_LEASING_AGENT",
+          "bailey_property_count": 4,
+          "bailey_store_count": 4
+        }
+      ],
+      "portfolio_white_space": true,
+      "nearest_bailey_km": 13.54,
       "competitor_context": {
         "by_retailer": {
           "Oscar Wylee": {
@@ -64710,45 +64822,50 @@
               {
                 "store_id": "oscar-wylee-27",
                 "name": "Hyperdome Loganholme",
-                "distance_km": 0.0
+                "distance_km": 0.2
               }
             ],
             "nearby_unverified": [],
             "catchment_2km": []
           },
           "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [
+            "in_centre": [
               {
                 "store_id": "specsavers-3302",
                 "name": "Logan Hyperdome",
-                "distance_km": 0.2
+                "distance_km": 0.0
               }
             ],
+            "nearby_unverified": [],
             "catchment_2km": []
           },
           "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
+            "in_centre": [
               {
                 "store_id": "opsm-1562",
                 "name": "OPSM Loganholme",
-                "distance_km": 0.43
+                "distance_km": 0.24
               }
-            ]
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": []
           }
         },
         "nearest_by_retailer_km": {
-          "Independent / Other optical": 7.54,
-          "Bailey Nelson": 13.35,
-          "OPSM": 0.43,
-          "Oscar Wylee": 0.0,
-          "Specsavers": 0.2
+          "Independent / Other optical": 7.36,
+          "Bailey Nelson": 13.54,
+          "OPSM": 0.24,
+          "Oscar Wylee": 0.2,
+          "Specsavers": 0.0
         },
         "independent_2km_count": 0
       },
-      "market": {}
+      "market": {},
+      "gla_sqm": 72374.0,
+      "tenancy_count": 180,
+      "annual_visits": 9200000.0,
+      "source_url": "https://www.qicre.com/Properties/Hyperdome",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-qld-indooroopilly": {
       "place_id": "place-au-qld-indooroopilly",
@@ -65276,109 +65393,6 @@
       "source_url": "https://mcconaghyproperties.com.au/our-centres/kingaroy-shoppingworld/",
       "last_verified_at": "2026-09-02"
     },
-    "place-au-qld-logan-hyperdome": {
-      "place_id": "place-au-qld-logan-hyperdome",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-qld-logan-hyperdome",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Partial",
-      "research_evidence": {
-        "place_id": "place-au-qld-logan-hyperdome",
-        "research_status": "Partial",
-        "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
-        "last_verified_at": "2026-09-02",
-        "confidence": "High",
-        "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [
-        "rel-portfolio-qic-hyperdome-manager",
-        "rel-portfolio-qic-hyperdome-operator"
-      ],
-      "group_ids": [
-        "group-qic"
-      ],
-      "owner_names": [],
-      "manager_names": [
-        "QIC Real Estate"
-      ],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "PROPERTY_GROUP_OVERLAP",
-      "portfolio_overlap_groups": [
-        {
-          "group_id": "group-qic",
-          "canonical_name": "QIC Real Estate",
-          "role": "MANAGER",
-          "bailey_property_count": 4,
-          "bailey_store_count": 4
-        },
-        {
-          "group_id": "group-qic",
-          "canonical_name": "QIC Real Estate",
-          "role": "OPERATOR",
-          "bailey_property_count": 4,
-          "bailey_store_count": 4
-        }
-      ],
-      "portfolio_white_space": true,
-      "nearest_bailey_km": 13.54,
-      "competitor_context": {
-        "by_retailer": {
-          "Oscar Wylee": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "oscar-wylee-27",
-                "name": "Hyperdome Loganholme",
-                "distance_km": 0.2
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [
-              {
-                "store_id": "specsavers-3302",
-                "name": "Logan Hyperdome",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "opsm-1562",
-                "name": "OPSM Loganholme",
-                "distance_km": 0.24
-              }
-            ],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 7.36,
-          "Bailey Nelson": 13.54,
-          "OPSM": 0.24,
-          "Oscar Wylee": 0.2,
-          "Specsavers": 0.0
-        },
-        "independent_2km_count": 0
-      },
-      "market": {}
-    },
     "place-au-qld-market-square-deception-bay": {
       "place_id": "place-au-qld-market-square-deception-bay",
       "centre_class": "Unknown",
@@ -65444,106 +65458,6 @@
         "median_household_income": 764,
         "age_45_plus_pct": 45.8,
         "retail_businesses": 78
-      }
-    },
-    "place-au-qld-maroochydore-sunshine-plaza": {
-      "place_id": "place-au-qld-maroochydore-sunshine-plaza",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-qld-maroochydore-sunshine-plaza",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-qld-maroochydore-sunshine-plaza",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 65.71,
-      "competitor_context": {
-        "by_retailer": {
-          "Independent / Other optical": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "independent-other-optical-osm-au-node-9406577080",
-                "name": "Optical Superstore",
-                "distance_km": 0.28
-              }
-            ]
-          },
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "opsm-1263",
-                "name": "OPSM Maroochydore",
-                "distance_km": 0.16
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Oscar Wylee": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "oscar-wylee-51",
-                "name": "Sunshine Plaza",
-                "distance_km": 0.18
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [
-              {
-                "store_id": "specsavers-3201",
-                "name": "Maroochydore Sunshine Plaza",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 0.28,
-          "Bailey Nelson": 65.71,
-          "OPSM": 0.16,
-          "Oscar Wylee": 0.18,
-          "Specsavers": 0.0
-        },
-        "independent_2km_count": 1
-      },
-      "market": {
-        "sa2_code": "316031427",
-        "sa2_name": "Maroochydore - Kuluin",
-        "population_2025": 25797,
-        "population_growth_pct": 9.1,
-        "median_household_income": 942,
-        "age_45_plus_pct": 50.9,
-        "retail_businesses": 215
       }
     },
     "place-au-qld-morayfield-shopping-centre": {
@@ -68341,37 +68255,87 @@
     },
     "place-au-qld-sunshine-plaza": {
       "place_id": "place-au-qld-sunshine-plaza",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Super Regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-qld-sunshine-plaza",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Super Regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://announcements.asx.com.au/asxpdf/20260615/pdf/070mf95tp2zwhw.pdf",
+        "source_type": "Official current owner transaction announcement",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "GPT's current transaction announcement explicitly classifies Sunshine Plaza as a super-regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-qld-sunshine-plaza",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://announcements.asx.com.au/asxpdf/20260615/pdf/070mf95tp2zwhw.pdf",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current GPT venue owner transaction and settlement sources confirm equal GPT and GWSCF ownership GPT management and leasing address official super-regional class public metrics and all three mapped optical tenancies"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-gpt-sunshine-plaza-owner-co_owner",
+        "rel-portfolio-gwscf-sunshine-plaza-owner-co_owner",
+        "rel-portfolio-gpt-sunshine-plaza-management-manager",
+        "rel-portfolio-gpt-sunshine-plaza-management-operator",
+        "rel-portfolio-gpt-sunshine-plaza-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-gpt",
+        "group-gpt-wholesale-shopping-centre-fund"
+      ],
+      "owner_names": [
+        "GPT Group",
+        "GPT Wholesale Shopping Centre Fund"
+      ],
+      "manager_names": [
+        "GPT Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
+      "portfolio_overlap_status": "LEASING_CONTROLLER_OVERLAP",
+      "portfolio_overlap_groups": [
+        {
+          "group_id": "group-gpt",
+          "canonical_name": "GPT Group",
+          "role": "LEASING_CONTROLLER",
+          "bailey_property_count": 4,
+          "bailey_store_count": 4
+        },
+        {
+          "group_id": "group-gpt",
+          "canonical_name": "GPT Group",
+          "role": "CO_OWNER",
+          "bailey_property_count": 4,
+          "bailey_store_count": 4
+        },
+        {
+          "group_id": "group-gpt",
+          "canonical_name": "GPT Group",
+          "role": "MANAGER",
+          "bailey_property_count": 4,
+          "bailey_store_count": 4
+        },
+        {
+          "group_id": "group-gpt",
+          "canonical_name": "GPT Group",
+          "role": "OPERATOR",
+          "bailey_property_count": 4,
+          "bailey_store_count": 4
+        },
+        {
+          "group_id": "group-gpt-wholesale-shopping-centre-fund",
+          "canonical_name": "GPT Wholesale Shopping Centre Fund",
+          "role": "CO_OWNER",
+          "bailey_property_count": 1,
+          "bailey_store_count": 1
+        }
+      ],
+      "portfolio_white_space": true,
       "nearest_bailey_km": 65.55,
       "competitor_context": {
         "by_retailer": {
@@ -68387,14 +68351,14 @@
             ]
           },
           "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [
+            "in_centre": [
               {
                 "store_id": "opsm-1263",
                 "name": "OPSM Maroochydore",
                 "distance_km": 0.08
               }
             ],
+            "nearby_unverified": [],
             "catchment_2km": []
           },
           "Oscar Wylee": {
@@ -68409,14 +68373,14 @@
             "catchment_2km": []
           },
           "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [
+            "in_centre": [
               {
                 "store_id": "specsavers-3201",
                 "name": "Maroochydore Sunshine Plaza",
                 "distance_km": 0.18
               }
             ],
+            "nearby_unverified": [],
             "catchment_2km": []
           }
         },
@@ -68437,7 +68401,10 @@
         "median_household_income": 942,
         "age_45_plus_pct": 50.9,
         "retail_businesses": 215
-      }
+      },
+      "gla_sqm": 106600.0,
+      "source_url": "https://www.gpt.com.au/property/retail/sunshine-plaza",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-qld-taigum-square": {
       "place_id": "place-au-qld-taigum-square",
@@ -119780,7 +119747,7 @@
     },
     "group-gpt": {
       "group_id": "group-gpt",
-      "property_count": 15,
+      "property_count": 16,
       "bailey_property_count": 4,
       "bailey_store_count": 4,
       "bailey_property_ids": [
@@ -119829,6 +119796,12 @@
           "MANAGER",
           "OPERATOR"
         ],
+        "place-au-qld-sunshine-plaza": [
+          "CO_OWNER",
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-vic-chirnside-park-shopping-centre": [
           "LEASING_CONTROLLER",
           "MANAGER",
@@ -119874,6 +119847,7 @@
         "place-au-nsw-marrickville-metro",
         "place-au-nsw-rouse-hill-town-centre",
         "place-au-nsw-westfield-penrith",
+        "place-au-qld-sunshine-plaza",
         "place-au-vic-chirnside-park-shopping-centre",
         "place-au-vic-keysborough-parkmore-shopping-centre",
         "place-au-wa-belmont-forum",
@@ -119883,7 +119857,7 @@
     },
     "group-gpt-wholesale-shopping-centre-fund": {
       "group_id": "group-gpt-wholesale-shopping-centre-fund",
-      "property_count": 5,
+      "property_count": 6,
       "bailey_property_count": 1,
       "bailey_store_count": 1,
       "bailey_property_ids": [
@@ -119894,6 +119868,9 @@
           "CO_OWNER"
         ],
         "place-au-nsw-rouse-hill-town-centre": [
+          "CO_OWNER"
+        ],
+        "place-au-qld-sunshine-plaza": [
           "CO_OWNER"
         ],
         "place-au-vic-chirnside-park-shopping-centre": [
@@ -119909,6 +119886,7 @@
       "white_space_property_ids": [
         "place-au-nsw-macarthur-square",
         "place-au-nsw-rouse-hill-town-centre",
+        "place-au-qld-sunshine-plaza",
         "place-au-vic-chirnside-park-shopping-centre",
         "place-au-vic-keysborough-parkmore-shopping-centre"
       ]
@@ -119988,8 +119966,8 @@
           "OPERATOR"
         ],
         "place-au-qld-logan-hyperdome": [
-          "MANAGER",
-          "OPERATOR"
+          "EXTERNAL_LEASING_AGENT",
+          "LEASING_CONTROLLER"
         ],
         "place-au-qld-robina-town-centre-dr": [
           "MANAGER",
@@ -120425,13 +120403,17 @@
     },
     "group-ma-financial": {
       "group_id": "group-ma-financial",
-      "property_count": 2,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
         "place-au-nsw-top-ryde-city-shopping-centre": [
           "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-qld-logan-hyperdome": [
           "MANAGER",
           "OPERATOR"
         ],
@@ -122600,6 +122582,19 @@
       "bailey_property_ids": [],
       "asset_roles": {
         "place-au-nsw-riverside-plaza-queanbeyan": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-ma-hyperdome-town-centre-fund": {
+      "group_id": "group-ma-hyperdome-town-centre-fund",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-logan-hyperdome": [
           "OWNER"
         ]
       },
@@ -140776,55 +140771,6 @@
         }
       }
     },
-    "corridor-au-qld-maroochydore-horton-parade": {
-      "schema_version": 1,
-      "place_id": "corridor-au-qld-maroochydore-horton-parade",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "316031427",
-          "sa2_name": "Maroochydore - Kuluin",
-          "population_2025": 25797,
-          "population_growth_pct": 9.1,
-          "median_household_income": 942,
-          "age_45_plus_pct": 50.9,
-          "retail_businesses": 215
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.corridor-au-qld-maroochydore-horton-parade.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "High Street",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 65.61,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
     "corridor-au-qld-emerald-hospital-road": {
       "schema_version": 1,
       "place_id": "corridor-au-qld-emerald-hospital-road",
@@ -141792,47 +141738,6 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 1.89,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
-    "corridor-au-qld-shailer-park-pacific-highway": {
-      "schema_version": 1,
-      "place_id": "corridor-au-qld-shailer-park-pacific-highway",
-      "demographic": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.corridor-au-qld-shailer-park-pacific-highway.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "High Street",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 13.78,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -143957,16 +143862,16 @@
         }
       }
     },
-    "place-au-qld-hyperdome-loganholme": {
+    "place-au-qld-logan-hyperdome": {
       "schema_version": 1,
-      "place_id": "place-au-qld-hyperdome-loganholme",
+      "place_id": "place-au-qld-logan-hyperdome",
       "demographic": {
         "availability": "Unavailable",
         "values": {}
       },
       "competition": {
         "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-qld-hyperdome-loganholme.competitor_context",
+        "evidence_pointer": "property_summaries.place-au-qld-logan-hyperdome.competitor_context",
         "values": {
           "in_centre_rule": "accepted shared canonical place_id",
           "nearby_rule": "straight-line distance only; never centre membership"
@@ -143976,7 +143881,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -143990,11 +143895,15 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
-          "nearest_bailey_km": 13.35,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "nearest_bailey_km": 13.54,
+          "group_ids": [
+            "group-ma-financial",
+            "group-ma-hyperdome-town-centre-fund",
+            "group-qic"
+          ],
+          "overlap_status": "LEASING_CONTROLLER_OVERLAP"
         }
       }
     },
@@ -144254,49 +144163,6 @@
         }
       }
     },
-    "place-au-qld-logan-hyperdome": {
-      "schema_version": 1,
-      "place_id": "place-au-qld-logan-hyperdome",
-      "demographic": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-qld-logan-hyperdome.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Available",
-        "values": {
-          "nearest_bailey_km": 13.54,
-          "group_ids": [
-            "group-qic"
-          ],
-          "overlap_status": "PROPERTY_GROUP_OVERLAP"
-        }
-      }
-    },
     "place-au-qld-market-square-deception-bay": {
       "schema_version": 1,
       "place_id": "place-au-qld-market-square-deception-bay",
@@ -144341,55 +144207,6 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 5.36,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
-    "place-au-qld-maroochydore-sunshine-plaza": {
-      "schema_version": 1,
-      "place_id": "place-au-qld-maroochydore-sunshine-plaza",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "316031427",
-          "sa2_name": "Maroochydore - Kuluin",
-          "population_2025": 25797,
-          "population_growth_pct": 9.1,
-          "median_household_income": 942,
-          "age_45_plus_pct": 50.9,
-          "retail_businesses": 215
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-qld-maroochydore-sunshine-plaza.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 65.71,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -145812,7 +145629,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Super Regional"
         }
       },
       "accessibility": {
@@ -145826,11 +145643,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 65.55,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-gpt",
+            "group-gpt-wholesale-shopping-centre-fund"
+          ],
+          "overlap_status": "LEASING_CONTROLLER_OVERLAP"
         }
       }
     },
