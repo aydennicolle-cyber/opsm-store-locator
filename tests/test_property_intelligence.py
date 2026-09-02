@@ -465,6 +465,27 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual({row["place_id"] for row in queue}, unresolved)
         self.assertTrue(all(row["priority"] in {"P1", "P2", "P3", "P4"} for row in queue))
 
+    def test_leichhardt_and_charter_hall_batch_preserves_unknown_and_direct_owners(self) -> None:
+        leichhardt = self.payload["property_summaries"]["place-au-nsw-leichhardt-marketplace"]
+        self.assertEqual(leichhardt["centre_class"], "Sub-regional")
+        self.assertEqual(leichhardt["owner_names"], [])
+        self.assertEqual(leichhardt["manager_names"], ["JLL"])
+        self.assertEqual(leichhardt["leasing_arrangement"], "External agency")
+
+        expected = {
+            "place-au-nsw-dubbo-square": ("Charter Hall Retail REIT", 12806, 37),
+            "place-au-nsw-bateau-bay-square": ("Retail Partnership No.2", 29839, 71),
+        }
+        for place_id, (owner, gla_sqm, tenancy_count) in expected.items():
+            with self.subTest(place_id=place_id):
+                summary = self.payload["property_summaries"][place_id]
+                self.assertEqual(summary["centre_class"], "Sub-regional")
+                self.assertEqual(summary["owner_names"], [owner])
+                self.assertEqual(summary["manager_names"], ["Charter Hall"])
+                self.assertEqual(summary["leasing_arrangement"], "In-house")
+                self.assertEqual(summary["gla_sqm"], gla_sqm)
+                self.assertEqual(summary["tenancy_count"], tenancy_count)
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

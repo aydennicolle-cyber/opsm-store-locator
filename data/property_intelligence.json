@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T02:16:13.966713+00:00",
+  "generated_at": "2026-09-02T02:20:58.013463+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 75,
-    "relationship_count": 625,
-    "active_relationship_count": 623,
+    "group_count": 76,
+    "relationship_count": 637,
+    "active_relationship_count": 635,
     "shopping_centre_count": 587,
-    "researched_property_count": 203,
-    "classed_property_count": 193,
+    "researched_property_count": 206,
+    "classed_property_count": 196,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -1274,6 +1274,24 @@
         "Mintus Investments 4 Pty Ltd",
         "The Retail Investment Trust 8"
       ]
+    },
+    {
+      "group_id": "group-charter-hall-rp2",
+      "canonical_name": "Retail Partnership No.2",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.charterhall.com.au/investor-centre/unlisted-direct-property-funds/retail-partnership-no2-%28rp2%29",
+      "status": "Active",
+      "source_url": "https://www.charterhall.com.au/investor-centre/unlisted-direct-property-funds/retail-partnership-no2-%28rp2%29",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Retail Partnership No.2",
+        "RP2",
+        "Retail Partnership No2"
+      ]
     }
   ],
   "group_alias_index": {
@@ -1410,7 +1428,9 @@
     "mintus": "group-mintus",
     "mintusinvestments4ptyltdatftheretailinvestmenttrust8": "group-mintus-ashfield-trust",
     "mintusinvestments4ptyltd": "group-mintus-ashfield-trust",
-    "theretailinvestmenttrust8": "group-mintus-ashfield-trust"
+    "theretailinvestmenttrust8": "group-mintus-ashfield-trust",
+    "retailpartnershipno2": "group-charter-hall-rp2",
+    "rp2": "group-charter-hall-rp2"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -11413,6 +11433,198 @@
       "confidence": "High",
       "public_note": "Revelop lists Lake Macquarie Square in its active portfolio with direct centre management and leasing contacts and the venue identifies Revelop as owner and manager",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-marketplace-leichhardt-manager",
+      "place_id": "place-au-nsw-leichhardt-marketplace",
+      "group_id": "group-jll",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.marketplaceleichhardt.com.au/centre-info/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue identifies JLL as centre manager and directs permanent and casual leasing to JLL; the current owners are not named publicly",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-marketplace-leichhardt-operator",
+      "place_id": "place-au-nsw-leichhardt-marketplace",
+      "group_id": "group-jll",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.marketplaceleichhardt.com.au/centre-info/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue identifies JLL as centre manager and directs permanent and casual leasing to JLL; the current owners are not named publicly",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-marketplace-leichhardt-leasing_controller",
+      "place_id": "place-au-nsw-leichhardt-marketplace",
+      "group_id": "group-jll",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.marketplaceleichhardt.com.au/centre-info/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue identifies JLL as centre manager and directs permanent and casual leasing to JLL; the current owners are not named publicly",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-marketplace-leichhardt-external_leasing_agent",
+      "place_id": "place-au-nsw-leichhardt-marketplace",
+      "group_id": "group-jll",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.marketplaceleichhardt.com.au/centre-info/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue identifies JLL as centre manager and directs permanent and casual leasing to JLL; the current owners are not named publicly",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-cqr-dubbo-square-owner",
+      "place_id": "place-au-nsw-dubbo-square",
+      "group_id": "group-charter-hall-retail-reit",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Dubbo-Square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall reports 100 percent ownership by CQR",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-dubbo-square-manager",
+      "place_id": "place-au-nsw-dubbo-square",
+      "group_id": "group-charter-hall",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Dubbo-Square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-dubbo-square-operator",
+      "place_id": "place-au-nsw-dubbo-square",
+      "group_id": "group-charter-hall",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Dubbo-Square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-dubbo-square-leasing_controller",
+      "place_id": "place-au-nsw-dubbo-square",
+      "group_id": "group-charter-hall",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Dubbo-Square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-rp2-bateau-bay-square-owner",
+      "place_id": "place-au-nsw-bateau-bay-square",
+      "group_id": "group-charter-hall-rp2",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/bateau-bay-square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall reports 100 percent direct ownership by Retail Partnership No.2",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-bateau-bay-square-manager",
+      "place_id": "place-au-nsw-bateau-bay-square",
+      "group_id": "group-charter-hall",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/bateau-bay-square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-bateau-bay-square-operator",
+      "place_id": "place-au-nsw-bateau-bay-square",
+      "group_id": "group-charter-hall",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/bateau-bay-square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-bateau-bay-square-leasing_controller",
+      "place_id": "place-au-nsw-bateau-bay-square",
+      "group_id": "group-charter-hall",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/bateau-bay-square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -17303,6 +17515,121 @@
       "public_note": "Revelop lists Lake Macquarie Square in its active portfolio with direct centre management and leasing contacts and the venue identifies Revelop as owner and manager",
       "match_status": "Matched",
       "matched_place_id": "place-au-nsw-lake-macquarie-square"
+    },
+    {
+      "portfolio_asset_id": "jll-marketplace-leichhardt",
+      "group_id": "group-jll",
+      "canonical_name": "MarketPlace Leichhardt",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Marketplace Leichhardt",
+      "preferred_place_id": "place-au-nsw-leichhardt-marketplace",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER|EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.marketplaceleichhardt.com.au/centre-info/",
+      "source_type": "Official current venue management and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The venue identifies JLL as centre manager and directs permanent and casual leasing to JLL; the current owners are not named publicly",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-leichhardt-marketplace"
+    },
+    {
+      "portfolio_asset_id": "cqr-dubbo-square",
+      "group_id": "group-charter-hall-retail-reit",
+      "canonical_name": "Dubbo Square",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-dubbo-square",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "12806",
+      "tenancy_count": "37",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Dubbo-Square",
+      "source_type": "Official current owner and manager property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall reports 100 percent ownership by CQR",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-dubbo-square"
+    },
+    {
+      "portfolio_asset_id": "charter-hall-dubbo-square",
+      "group_id": "group-charter-hall",
+      "canonical_name": "Dubbo Square",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-dubbo-square",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "12806",
+      "tenancy_count": "37",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Dubbo-Square",
+      "source_type": "Official current owner and manager property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-dubbo-square"
+    },
+    {
+      "portfolio_asset_id": "rp2-bateau-bay-square",
+      "group_id": "group-charter-hall-rp2",
+      "canonical_name": "Bateau Bay Square",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-bateau-bay-square",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "29839",
+      "tenancy_count": "71",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/bateau-bay-square",
+      "source_type": "Official current owner and manager property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall reports 100 percent direct ownership by Retail Partnership No.2",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-bateau-bay-square"
+    },
+    {
+      "portfolio_asset_id": "charter-hall-bateau-bay-square",
+      "group_id": "group-charter-hall",
+      "canonical_name": "Bateau Bay Square",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-bateau-bay-square",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "29839",
+      "tenancy_count": "71",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/bateau-bay-square",
+      "source_type": "Official current owner and manager property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-bateau-bay-square"
     }
   ],
   "property_summaries": {
@@ -36608,35 +36935,47 @@
     },
     "place-au-nsw-bateau-bay-square": {
       "place_id": "place-au-nsw-bateau-bay-square",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-bateau-bay-square",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/bateau-bay-square",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from the official Kmart and supermarket anchors 29839 square metres of NLA and 71 specialty stores"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-bateau-bay-square",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/bateau-bay-square",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Charter Hall confirms 100 percent RP2 ownership current management and direct permanent leasing control"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-rp2-bateau-bay-square-owner",
+        "rel-portfolio-charter-hall-bateau-bay-square-manager",
+        "rel-portfolio-charter-hall-bateau-bay-square-operator",
+        "rel-portfolio-charter-hall-bateau-bay-square-leasing_controller"
+      ],
+      "group_ids": [
+        "group-charter-hall",
+        "group-charter-hall-rp2"
+      ],
+      "owner_names": [
+        "Retail Partnership No.2"
+      ],
+      "manager_names": [
+        "Charter Hall"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 10.34,
@@ -36682,7 +37021,11 @@
         "median_household_income": 925,
         "age_45_plus_pct": 45.1,
         "retail_businesses": 72
-      }
+      },
+      "gla_sqm": 29839.0,
+      "tenancy_count": 71,
+      "source_url": "https://www.charterhall.com.au/property/property-detail/bateau-bay-square",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-bathurst-city-centre": {
       "place_id": "place-au-nsw-bathurst-city-centre",
@@ -38758,35 +39101,47 @@
     },
     "place-au-nsw-dubbo-square": {
       "place_id": "place-au-nsw-dubbo-square",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-dubbo-square",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Dubbo-Square",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from the official Kmart and Coles anchors 12806 square metres of NLA and 37 specialty stores"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-dubbo-square",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Dubbo-Square",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Charter Hall confirms 100 percent CQR ownership current management and direct permanent leasing control"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-cqr-dubbo-square-owner",
+        "rel-portfolio-charter-hall-dubbo-square-manager",
+        "rel-portfolio-charter-hall-dubbo-square-operator",
+        "rel-portfolio-charter-hall-dubbo-square-leasing_controller"
+      ],
+      "group_ids": [
+        "group-charter-hall",
+        "group-charter-hall-retail-reit"
+      ],
+      "owner_names": [
+        "Charter Hall Retail REIT"
+      ],
+      "manager_names": [
+        "Charter Hall"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 278.34,
@@ -38824,7 +39179,11 @@
         },
         "independent_2km_count": 0
       },
-      "market": {}
+      "market": {},
+      "gla_sqm": 12806.0,
+      "tenancy_count": 37,
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Dubbo-Square",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-erina-fair": {
       "place_id": "place-au-nsw-erina-fair",
@@ -40263,32 +40622,41 @@
     },
     "place-au-nsw-leichhardt-marketplace": {
       "place_id": "place-au-nsw-leichhardt-marketplace",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-leichhardt-marketplace",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.marketplaceleichhardt.com.au/about/",
+        "source_type": "Official current venue profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The official venue explicitly describes MarketPlace Leichhardt as a sub-regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-leichhardt-marketplace",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.marketplaceleichhardt.com.au/about/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Official venue pages confirm JLL management operations and leasing control; the current legal owners are not named publicly"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-jll-marketplace-leichhardt-manager",
+        "rel-portfolio-jll-marketplace-leichhardt-operator",
+        "rel-portfolio-jll-marketplace-leichhardt-leasing_controller",
+        "rel-portfolio-jll-marketplace-leichhardt-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-jll"
+      ],
       "owner_names": [],
-      "manager_names": [],
+      "manager_names": [
+        "JLL"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -110497,11 +110865,21 @@
     },
     "group-charter-hall": {
       "group_id": "group-charter-hall",
-      "property_count": 1,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-bateau-bay-square": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-nsw-dubbo-square": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-nsw-orange-central-square": [
           "LEASING_CONTROLLER",
           "MANAGER",
@@ -110933,11 +111311,17 @@
     },
     "group-jll": {
       "group_id": "group-jll",
-      "property_count": 2,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-leichhardt-marketplace": [
+          "EXTERNAL_LEASING_AGENT",
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-vic-greensborough-plaza": [
           "MANAGER",
           "OPERATOR"
@@ -111441,11 +111825,14 @@
     },
     "group-charter-hall-retail-reit": {
       "group_id": "group-charter-hall-retail-reit",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-dubbo-square": [
+          "OWNER"
+        ],
         "place-au-nsw-orange-central-square": [
           "OWNER"
         ]
@@ -111625,6 +112012,19 @@
       "bailey_property_ids": [],
       "asset_roles": {
         "place-au-nsw-ashfield-mall": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-charter-hall-rp2": {
+      "group_id": "group-charter-hall-rp2",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-bateau-bay-square": [
           "OWNER"
         ]
       },
@@ -123543,7 +123943,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -123557,11 +123957,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 10.34,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-charter-hall",
+            "group-charter-hall-rp2"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -124599,7 +125002,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -124613,11 +125016,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 278.34,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-charter-hall",
+            "group-charter-hall-retail-reit"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -125431,7 +125837,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -125445,10 +125851,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 3.13,
-          "group_ids": [],
+          "group_ids": [
+            "group-jll"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
