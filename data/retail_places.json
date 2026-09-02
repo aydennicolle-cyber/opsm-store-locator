@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T01:47:54+00:00",
+    "generated_at": "2026-09-02T01:52:20+00:00",
     "place_count": 1031,
     "centre_count": 588,
     "corridor_count": 443,
@@ -9939,17 +9939,19 @@
     {
       "place_id": "place-au-nsw-broadway-shopping-centre",
       "centre_id": "place-au-nsw-broadway-shopping-centre",
-      "name": "Broadway Shopping Centre",
-      "canonical_name": "Broadway Shopping Centre",
-      "aliases": [],
+      "name": "Broadway Sydney",
+      "canonical_name": "Broadway Sydney",
+      "aliases": [
+        "Broadway Shopping Centre"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
       "state": "NSW",
-      "locality": "Ultimo",
-      "suburb": "Ultimo",
-      "postcode": "",
-      "address": "",
+      "locality": "Glebe",
+      "suburb": "Glebe",
+      "postcode": "2037",
+      "address": "1 Bay Street",
       "latitude": -33.882332,
       "longitude": 151.193879,
       "owner": "",
@@ -9961,12 +9963,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "https://www.specsavers.com.au/stores/broadway",
-      "source_url": "https://www.specsavers.com.au/stores/broadway",
-      "source_date": "",
+      "official_url": "https://www.broadwaysydney.com.au/",
+      "source_url": "https://www.mirvac.com/investor-centre/property-portfolio/retail/broadway-sydney",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "High",
-      "source_basis": "Official address identifies the Broadway tenancy beside Coles",
+      "source_basis": "Mirvac's current portfolio confirms Broadway Sydney as the official centre name while the stable place ID is retained",
       "retailers": [
         "Oscar Wylee",
         "Specsavers"

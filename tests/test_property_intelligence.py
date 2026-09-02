@@ -320,6 +320,42 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(orange["manager_names"], ["Charter Hall"])
         self.assertEqual(orange["leasing_arrangement"], "In-house")
 
+    def test_current_mirvac_portfolio_batch_preserves_current_co_owners(self) -> None:
+        assets = [
+            row for row in self.payload["portfolio_assets"]
+            if row["group_id"] == "group-mirvac"
+        ]
+        self.assertEqual(len(assets), 6)
+        self.assertTrue(all(row["match_status"] == "Matched" for row in assets))
+        self.assertEqual(self.payload["group_portfolios"]["group-mirvac"]["property_count"], 6)
+
+        expected = {
+            "place-au-nsw-broadway-shopping-centre": (
+                "Regional", {"Mirvac", "Perron Group"}, 53011, 149
+            ),
+            "place-au-qld-kawana-shoppingworld": (
+                "Sub-regional", {"Mirvac", "IFM Investors"}, 45656, 141
+            ),
+            "place-au-qld-orion-springfield-central": (
+                "Regional", {"Mirvac"}, 73597, 186
+            ),
+            "place-au-nsw-greenwood-plaza": (
+                "CBD / Mixed-use", {"Mirvac", "CapitaLand Integrated Commercial Trust"}, 9019, 90
+            ),
+            "place-au-vic-moonee-ponds-central": (
+                "Sub-regional", {"Mirvac"}, 19251, 62
+            ),
+        }
+        for place_id, (centre_class, owners, gla_sqm, tenancy_count) in expected.items():
+            with self.subTest(place_id=place_id):
+                summary = self.payload["property_summaries"][place_id]
+                self.assertEqual(summary["centre_class"], centre_class)
+                self.assertEqual(set(summary["owner_names"]), owners)
+                self.assertEqual(summary["manager_names"], ["Mirvac"])
+                self.assertEqual(summary["leasing_arrangement"], "In-house")
+                self.assertEqual(summary["gla_sqm"], gla_sqm)
+                self.assertEqual(summary["tenancy_count"], tenancy_count)
+
     def test_research_queue_covers_every_unresolved_property_or_class(self) -> None:
         with (DATA / "property_research_queue.csv").open(newline="", encoding="utf-8") as handle:
             queue = list(csv.DictReader(handle))

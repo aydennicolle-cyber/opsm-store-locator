@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T01:47:54+00:00",
+    "generated_at": "2026-09-02T01:52:20+00:00",
     "benchmark": "All mapped Bailey Nelson stores, separated by country and location setting",
     "method": "Transparent lookalike screening rank; not a probability of store success",
     "weights": {
@@ -15103,10 +15103,10 @@
       },
       {
         "place_id": "place-au-nsw-broadway-shopping-centre",
-        "name": "Broadway Shopping Centre",
+        "name": "Broadway Sydney",
         "country": "Australia",
         "state": "NSW",
-        "locality": "Ultimo",
+        "locality": "Glebe",
         "location_setting": "Shopping Centre",
         "score": 24,
         "screening_completeness": 50,
@@ -15128,7 +15128,7 @@
           "Oscar Wylee",
           "Specsavers"
         ],
-        "evidence_url": "https://www.specsavers.com.au/stores/broadway",
+        "evidence_url": "https://www.broadwaysydney.com.au/",
         "rank": 490
       },
       {
