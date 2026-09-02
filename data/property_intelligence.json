@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T02:26:48.565746+00:00",
+  "generated_at": "2026-09-02T02:33:37.514413+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 77,
-    "relationship_count": 648,
-    "active_relationship_count": 646,
+    "group_count": 85,
+    "relationship_count": 664,
+    "active_relationship_count": 662,
     "shopping_centre_count": 587,
-    "researched_property_count": 209,
-    "classed_property_count": 199,
+    "researched_property_count": 212,
+    "classed_property_count": 202,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -1311,6 +1311,143 @@
         "BNG",
         "H.A. Bachrach (Nom) Pty Ltd"
       ]
+    },
+    {
+      "group_id": "group-assembly-funds-management",
+      "canonical_name": "Assembly Funds Management",
+      "parent_group_id": "",
+      "brand_name": "AFM",
+      "group_type": "ASSET_MANAGER",
+      "country_scope": "Australia",
+      "official_url": "https://assemblyfm.com.au/",
+      "status": "Active",
+      "source_url": "https://assemblyfm.com.au/products/afm-woodgrove-trust-awt/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Assembly Funds Management",
+        "AFM",
+        "Assembly"
+      ]
+    },
+    {
+      "group_id": "group-pgim-real-estate",
+      "canonical_name": "PGIM Real Estate",
+      "parent_group_id": "",
+      "brand_name": "PGIM",
+      "group_type": "ASSET_MANAGER",
+      "country_scope": "Australia and New Zealand",
+      "official_url": "https://www.pgim.com/real-estate/",
+      "status": "Active",
+      "source_url": "https://www.pgim.com/au/en/borrower/about/newsroom/press-releases/PGIM-and-AFM-to-acquire-A248M-south-west-Sydney-retail-seed-asset-for-new-partnership",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "PGIM Real Estate",
+        "PGIM"
+      ]
+    },
+    {
+      "group_id": "group-woodgrove-property-trust",
+      "canonical_name": "Woodgrove Property Trust",
+      "parent_group_id": "group-assembly-funds-management",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://woodgroveshoppingcentre.com.au/",
+      "status": "Active",
+      "source_url": "https://woodgroveshoppingcentre.com.au/wp-content/uploads/2026/03/Competition-Terms-Conditions_Scavenger-Hunt.pdf",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Woodgrove Property Trust",
+        "Woodgrove Property Pty Ltd ATF Woodgrove Property Trust"
+      ]
+    },
+    {
+      "group_id": "group-adpf1-woodgrove-property-trust",
+      "canonical_name": "ADPF1 Woodgrove Property Trust",
+      "parent_group_id": "group-assembly-funds-management",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://assemblyfm.com.au/",
+      "status": "Active",
+      "source_url": "https://woodgroveshoppingcentre.com.au/wp-content/uploads/2026/03/Competition-Terms-Conditions_Scavenger-Hunt.pdf",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "ADPF1 Woodgrove Property Trust",
+        "Woodgrove Mid Pty Ltd ATF ADPF1 Woodgrove Property Trust"
+      ]
+    },
+    {
+      "group_id": "group-adpf2-woodgrove-property-trust",
+      "canonical_name": "ADPF2 Woodgrove Property Trust",
+      "parent_group_id": "group-assembly-funds-management",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://assemblyfm.com.au/",
+      "status": "Active",
+      "source_url": "https://woodgroveshoppingcentre.com.au/wp-content/uploads/2026/03/Competition-Terms-Conditions_Scavenger-Hunt.pdf",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "ADPF2 Woodgrove Property Trust",
+        "ADPF2 Woodgrove Property Pty Ltd ATF ADPF2 Woodgrove Property Trust"
+      ]
+    },
+    {
+      "group_id": "group-asia-core-woodgrove-trust",
+      "canonical_name": "Asia Core Woodgrove Trust",
+      "parent_group_id": "group-pgim-real-estate",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.pgim.com/real-estate/",
+      "status": "Active",
+      "source_url": "https://woodgroveshoppingcentre.com.au/wp-content/uploads/2026/03/Competition-Terms-Conditions_Scavenger-Hunt.pdf",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Asia Core Woodgrove Trust",
+        "The Trust Company (Australia) Limited ATF Asia Core Woodgrove Trust"
+      ]
+    },
+    {
+      "group_id": "group-mackersy-property",
+      "canonical_name": "Mackersy Property",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "ASSET_MANAGER",
+      "country_scope": "New Zealand",
+      "official_url": "https://www.mackersyproperty.co.nz/",
+      "status": "Active",
+      "source_url": "https://www.mackersyproperty.co.nz/uploads/files/Caruso-How-To-Guide_How-do-I-take-up-a-new-offer_UPDATED-APR24.pdf",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Mackersy Property",
+        "Mackersy"
+      ]
+    },
+    {
+      "group_id": "group-mackersy-northlands-lp",
+      "canonical_name": "Mackersy Northlands Limited Partnership",
+      "parent_group_id": "group-mackersy-property",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "New Zealand",
+      "official_url": "https://www.mackersyproperty.co.nz/",
+      "status": "Active",
+      "source_url": "https://www.mackersyproperty.co.nz/uploads/files/Caruso-How-To-Guide_How-do-I-take-up-a-new-offer_UPDATED-APR24.pdf",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Mackersy Northlands Limited Partnership",
+        "Mackersy Northlands LP"
+      ]
     }
   ],
   "group_alias_index": {
@@ -1453,7 +1590,24 @@
     "bachrachnaumburgergroup": "group-bachrach-naumburger",
     "bngproperty": "group-bachrach-naumburger",
     "bng": "group-bachrach-naumburger",
-    "habachrachnomptyltd": "group-bachrach-naumburger"
+    "habachrachnomptyltd": "group-bachrach-naumburger",
+    "assemblyfundsmanagement": "group-assembly-funds-management",
+    "afm": "group-assembly-funds-management",
+    "assembly": "group-assembly-funds-management",
+    "pgimrealestate": "group-pgim-real-estate",
+    "pgim": "group-pgim-real-estate",
+    "woodgrovepropertytrust": "group-woodgrove-property-trust",
+    "woodgrovepropertyptyltdatfwoodgrovepropertytrust": "group-woodgrove-property-trust",
+    "adpf1woodgrovepropertytrust": "group-adpf1-woodgrove-property-trust",
+    "woodgrovemidptyltdatfadpf1woodgrovepropertytrust": "group-adpf1-woodgrove-property-trust",
+    "adpf2woodgrovepropertytrust": "group-adpf2-woodgrove-property-trust",
+    "adpf2woodgrovepropertyptyltdatfadpf2woodgrovepropertytrust": "group-adpf2-woodgrove-property-trust",
+    "asiacorewoodgrovetrust": "group-asia-core-woodgrove-trust",
+    "thetrustcompanyaustralialimitedatfasiacorewoodgrovetrust": "group-asia-core-woodgrove-trust",
+    "mackersyproperty": "group-mackersy-property",
+    "mackersy": "group-mackersy-property",
+    "mackersynorthlandslimitedpartnership": "group-mackersy-northlands-lp",
+    "mackersynorthlandslp": "group-mackersy-northlands-lp"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -11824,6 +11978,262 @@
       "confidence": "High",
       "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-woodgrove-property-trust-owner-co_owner",
+      "place_id": "place-au-vic-woodgrove-shopping-centre",
+      "group_id": "group-woodgrove-property-trust",
+      "role": "CO_OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://woodgroveshoppingcentre.com.au/wp-content/uploads/2026/03/Competition-Terms-Conditions_Scavenger-Hunt.pdf",
+      "source_type": "Official current venue legal terms",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current venue legal terms identify Woodgrove Property Pty Ltd as trustee for Woodgrove Property Trust among the centre owners; the ownership percentage is not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-adpf1-woodgrove-owner-co_owner",
+      "place_id": "place-au-vic-woodgrove-shopping-centre",
+      "group_id": "group-adpf1-woodgrove-property-trust",
+      "role": "CO_OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://woodgroveshoppingcentre.com.au/wp-content/uploads/2026/03/Competition-Terms-Conditions_Scavenger-Hunt.pdf",
+      "source_type": "Official current venue legal terms",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current venue legal terms identify Woodgrove Mid Pty Ltd as trustee for ADPF1 Woodgrove Property Trust among the centre owners; the ownership percentage is not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-adpf2-woodgrove-owner-co_owner",
+      "place_id": "place-au-vic-woodgrove-shopping-centre",
+      "group_id": "group-adpf2-woodgrove-property-trust",
+      "role": "CO_OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://woodgroveshoppingcentre.com.au/wp-content/uploads/2026/03/Competition-Terms-Conditions_Scavenger-Hunt.pdf",
+      "source_type": "Official current venue legal terms",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current venue legal terms identify ADPF2 Woodgrove Property Pty Ltd as trustee for ADPF2 Woodgrove Property Trust among the centre owners; the ownership percentage is not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-asia-core-woodgrove-owner-co_owner",
+      "place_id": "place-au-vic-woodgrove-shopping-centre",
+      "group_id": "group-asia-core-woodgrove-trust",
+      "role": "CO_OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://woodgroveshoppingcentre.com.au/wp-content/uploads/2026/03/Competition-Terms-Conditions_Scavenger-Hunt.pdf",
+      "source_type": "Official current venue legal terms",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current venue legal terms identify The Trust Company Australia Limited as trustee for Asia Core Woodgrove Trust among the centre owners; the ownership percentage is not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-assembly-woodgrove-manager",
+      "place_id": "place-au-vic-woodgrove-shopping-centre",
+      "group_id": "group-assembly-funds-management",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://woodgroveshoppingcentre.com.au/leasing/",
+      "source_type": "Official current venue and asset manager leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Assembly manages the retail asset and handles permanent leasing; AFM's current fund profile reports the centre scale",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-assembly-woodgrove-operator",
+      "place_id": "place-au-vic-woodgrove-shopping-centre",
+      "group_id": "group-assembly-funds-management",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://woodgroveshoppingcentre.com.au/leasing/",
+      "source_type": "Official current venue and asset manager leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Assembly manages the retail asset and handles permanent leasing; AFM's current fund profile reports the centre scale",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-assembly-woodgrove-leasing_controller",
+      "place_id": "place-au-vic-woodgrove-shopping-centre",
+      "group_id": "group-assembly-funds-management",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://woodgroveshoppingcentre.com.au/leasing/",
+      "source_type": "Official current venue and asset manager leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Assembly manages the retail asset and handles permanent leasing; AFM's current fund profile reports the centre scale",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-woodgrove-pop-up-external_leasing_agent",
+      "place_id": "place-au-vic-woodgrove-shopping-centre",
+      "group_id": "group-jll",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://woodgroveshoppingcentre.com.au/leasing/",
+      "source_type": "Official current venue leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "JLL handles pop-up leasing while permanent leasing remains with Assembly Funds Management",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-kiwi-lynnmall-owner",
+      "place_id": "place-nz-auckland-lynnmall-shopping-centre",
+      "group_id": "group-kiwi-property",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.kiwiproperty.com/properties/lynnmall",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Kiwi Property reports full ownership and provides the current centre management and leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-kiwi-lynnmall-manager",
+      "place_id": "place-nz-auckland-lynnmall-shopping-centre",
+      "group_id": "group-kiwi-property",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.kiwiproperty.com/properties/lynnmall",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Kiwi Property reports full ownership and provides the current centre management and leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-kiwi-lynnmall-operator",
+      "place_id": "place-nz-auckland-lynnmall-shopping-centre",
+      "group_id": "group-kiwi-property",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.kiwiproperty.com/properties/lynnmall",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Kiwi Property reports full ownership and provides the current centre management and leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-kiwi-lynnmall-leasing_controller",
+      "place_id": "place-nz-auckland-lynnmall-shopping-centre",
+      "group_id": "group-kiwi-property",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.kiwiproperty.com/properties/lynnmall",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Kiwi Property reports full ownership and provides the current centre management and leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mackersy-northlands-owner-owner",
+      "place_id": "place-nz-canterbury-northlands-mall",
+      "group_id": "group-mackersy-northlands-lp",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.mackersyproperty.co.nz/uploads/files/Caruso-How-To-Guide_How-do-I-take-up-a-new-offer_UPDATED-APR24.pdf",
+      "source_type": "Official property fund document",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Mackersy's official investor documentation identifies the single-asset Northlands Limited Partnership; the ownership percentage is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-kiwi-northlands-manager-manager",
+      "place_id": "place-nz-canterbury-northlands-mall",
+      "group_id": "group-kiwi-property",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.kiwiproperty.com/properties/managed/northlands",
+      "source_type": "Official current manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Kiwi Property states that it manages Northlands on behalf of Mackersy Property and provides the leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-kiwi-northlands-manager-operator",
+      "place_id": "place-nz-canterbury-northlands-mall",
+      "group_id": "group-kiwi-property",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.kiwiproperty.com/properties/managed/northlands",
+      "source_type": "Official current manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Kiwi Property states that it manages Northlands on behalf of Mackersy Property and provides the leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-kiwi-northlands-manager-leasing_controller",
+      "place_id": "place-nz-canterbury-northlands-mall",
+      "group_id": "group-kiwi-property",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.kiwiproperty.com/properties/managed/northlands",
+      "source_type": "Official current manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Kiwi Property states that it manages Northlands on behalf of Mackersy Property and provides the leasing pathway",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -17921,6 +18331,213 @@
       "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
       "match_status": "Matched",
       "matched_place_id": "place-au-nsw-singleton-square"
+    },
+    {
+      "portfolio_asset_id": "woodgrove-property-trust-owner",
+      "group_id": "group-woodgrove-property-trust",
+      "canonical_name": "Woodgrove Shopping Centre",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "Woodgrove",
+      "preferred_place_id": "place-au-vic-woodgrove-shopping-centre",
+      "roles": "CO_OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://woodgroveshoppingcentre.com.au/wp-content/uploads/2026/03/Competition-Terms-Conditions_Scavenger-Hunt.pdf",
+      "source_type": "Official current venue legal terms",
+      "source_date": "2026-03-01",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Current venue legal terms identify Woodgrove Property Pty Ltd as trustee for Woodgrove Property Trust among the centre owners; the ownership percentage is not published",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-woodgrove-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "adpf1-woodgrove-owner",
+      "group_id": "group-adpf1-woodgrove-property-trust",
+      "canonical_name": "Woodgrove Shopping Centre",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "Woodgrove",
+      "preferred_place_id": "place-au-vic-woodgrove-shopping-centre",
+      "roles": "CO_OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://woodgroveshoppingcentre.com.au/wp-content/uploads/2026/03/Competition-Terms-Conditions_Scavenger-Hunt.pdf",
+      "source_type": "Official current venue legal terms",
+      "source_date": "2026-03-01",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Current venue legal terms identify Woodgrove Mid Pty Ltd as trustee for ADPF1 Woodgrove Property Trust among the centre owners; the ownership percentage is not published",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-woodgrove-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "adpf2-woodgrove-owner",
+      "group_id": "group-adpf2-woodgrove-property-trust",
+      "canonical_name": "Woodgrove Shopping Centre",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "Woodgrove",
+      "preferred_place_id": "place-au-vic-woodgrove-shopping-centre",
+      "roles": "CO_OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://woodgroveshoppingcentre.com.au/wp-content/uploads/2026/03/Competition-Terms-Conditions_Scavenger-Hunt.pdf",
+      "source_type": "Official current venue legal terms",
+      "source_date": "2026-03-01",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Current venue legal terms identify ADPF2 Woodgrove Property Pty Ltd as trustee for ADPF2 Woodgrove Property Trust among the centre owners; the ownership percentage is not published",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-woodgrove-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "asia-core-woodgrove-owner",
+      "group_id": "group-asia-core-woodgrove-trust",
+      "canonical_name": "Woodgrove Shopping Centre",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "Woodgrove",
+      "preferred_place_id": "place-au-vic-woodgrove-shopping-centre",
+      "roles": "CO_OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://woodgroveshoppingcentre.com.au/wp-content/uploads/2026/03/Competition-Terms-Conditions_Scavenger-Hunt.pdf",
+      "source_type": "Official current venue legal terms",
+      "source_date": "2026-03-01",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Current venue legal terms identify The Trust Company Australia Limited as trustee for Asia Core Woodgrove Trust among the centre owners; the ownership percentage is not published",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-woodgrove-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "assembly-woodgrove",
+      "group_id": "group-assembly-funds-management",
+      "canonical_name": "Woodgrove Shopping Centre",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "Woodgrove",
+      "preferred_place_id": "place-au-vic-woodgrove-shopping-centre",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "55000",
+      "tenancy_count": "128",
+      "annual_visits_m": "",
+      "source_url": "https://woodgroveshoppingcentre.com.au/leasing/",
+      "source_type": "Official current venue and asset manager leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Assembly manages the retail asset and handles permanent leasing; AFM's current fund profile reports the centre scale",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-woodgrove-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "jll-woodgrove-pop-up",
+      "group_id": "group-jll",
+      "canonical_name": "Woodgrove Shopping Centre",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "Woodgrove",
+      "preferred_place_id": "place-au-vic-woodgrove-shopping-centre",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://woodgroveshoppingcentre.com.au/leasing/",
+      "source_type": "Official current venue leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "JLL handles pop-up leasing while permanent leasing remains with Assembly Funds Management",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-woodgrove-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "kiwi-lynnmall",
+      "group_id": "group-kiwi-property",
+      "canonical_name": "LynnMall Shopping Centre",
+      "country": "New Zealand",
+      "state": "Auckland",
+      "aliases": "LynnMall",
+      "preferred_place_id": "place-nz-auckland-lynnmall-shopping-centre",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "100",
+      "gla_sqm": "36776",
+      "tenancy_count": "127",
+      "annual_visits_m": "",
+      "source_url": "https://www.kiwiproperty.com/properties/lynnmall",
+      "source_type": "Official current owner manager and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Kiwi Property reports full ownership and provides the current centre management and leasing pathway",
+      "match_status": "Matched",
+      "matched_place_id": "place-nz-auckland-lynnmall-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "mackersy-northlands-owner",
+      "group_id": "group-mackersy-northlands-lp",
+      "canonical_name": "Northlands Mall",
+      "country": "New Zealand",
+      "state": "Canterbury",
+      "aliases": "Northlands Shopping Centre|Northlands",
+      "preferred_place_id": "place-nz-canterbury-northlands-mall",
+      "roles": "OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.mackersyproperty.co.nz/uploads/files/Caruso-How-To-Guide_How-do-I-take-up-a-new-offer_UPDATED-APR24.pdf",
+      "source_type": "Official property fund document",
+      "source_date": "2024-04-01",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Mackersy's official investor documentation identifies the single-asset Northlands Limited Partnership; the ownership percentage is not asserted",
+      "match_status": "Matched",
+      "matched_place_id": "place-nz-canterbury-northlands-mall"
+    },
+    {
+      "portfolio_asset_id": "kiwi-northlands-manager",
+      "group_id": "group-kiwi-property",
+      "canonical_name": "Northlands Mall",
+      "country": "New Zealand",
+      "state": "Canterbury",
+      "aliases": "Northlands Shopping Centre|Northlands",
+      "preferred_place_id": "place-nz-canterbury-northlands-mall",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "120",
+      "annual_visits_m": "",
+      "source_url": "https://www.kiwiproperty.com/properties/managed/northlands",
+      "source_type": "Official current manager and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Kiwi Property states that it manages Northlands on behalf of Mackersy Property and provides the leasing pathway",
+      "match_status": "Matched",
+      "matched_place_id": "place-nz-canterbury-northlands-mall"
     }
   ],
   "property_summaries": {
@@ -90586,35 +91203,58 @@
     },
     "place-au-vic-woodgrove-shopping-centre": {
       "place_id": "place-au-vic-woodgrove-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-vic-woodgrove-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Inferred",
+        "source_url": "https://assemblyfm.com.au/products/afm-woodgrove-trust-awt/",
+        "source_type": "Official current asset manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Regional format inferred from the official 55000 square metre centre with eight mini majors and 128 specialty tenants; the source does not publish a formal class"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-vic-woodgrove-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://woodgroveshoppingcentre.com.au/wp-content/uploads/2026/03/Competition-Terms-Conditions_Scavenger-Hunt.pdf",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue legal terms identify all four ownership vehicles and official leasing sources establish Assembly permanent leasing plus JLL pop-up leasing; ownership percentages remain unpublished"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-woodgrove-property-trust-owner-co_owner",
+        "rel-portfolio-adpf1-woodgrove-owner-co_owner",
+        "rel-portfolio-adpf2-woodgrove-owner-co_owner",
+        "rel-portfolio-asia-core-woodgrove-owner-co_owner",
+        "rel-portfolio-assembly-woodgrove-manager",
+        "rel-portfolio-assembly-woodgrove-operator",
+        "rel-portfolio-assembly-woodgrove-leasing_controller",
+        "rel-portfolio-jll-woodgrove-pop-up-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-adpf1-woodgrove-property-trust",
+        "group-adpf2-woodgrove-property-trust",
+        "group-asia-core-woodgrove-trust",
+        "group-assembly-funds-management",
+        "group-jll",
+        "group-woodgrove-property-trust"
+      ],
+      "owner_names": [
+        "Woodgrove Property Trust",
+        "ADPF1 Woodgrove Property Trust",
+        "ADPF2 Woodgrove Property Trust",
+        "Asia Core Woodgrove Trust"
+      ],
+      "manager_names": [
+        "Assembly Funds Management"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 30.16,
@@ -90671,7 +91311,11 @@
         "median_household_income": 926,
         "age_45_plus_pct": 30.2,
         "retail_businesses": 81
-      }
+      },
+      "gla_sqm": 55000.0,
+      "tenancy_count": 128,
+      "source_url": "https://woodgroveshoppingcentre.com.au/leasing/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-vic-wyndham-village-shopping-centre": {
       "place_id": "place-au-vic-wyndham-village-shopping-centre",
@@ -101505,37 +102149,77 @@
     },
     "place-nz-auckland-lynnmall-shopping-centre": {
       "place_id": "place-nz-auckland-lynnmall-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-nz-auckland-lynnmall-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.kiwiproperty.com/properties/lynnmall",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Kiwi Property explicitly classifies LynnMall as Regional"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-nz-auckland-lynnmall-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.kiwiproperty.com/properties/lynnmall",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Kiwi Property confirms full ownership current operations direct leasing and a Regional centre classification"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-kiwi-lynnmall-owner",
+        "rel-portfolio-kiwi-lynnmall-manager",
+        "rel-portfolio-kiwi-lynnmall-operator",
+        "rel-portfolio-kiwi-lynnmall-leasing_controller"
+      ],
+      "group_ids": [
+        "group-kiwi-property"
+      ],
+      "owner_names": [
+        "Kiwi Property"
+      ],
+      "manager_names": [
+        "Kiwi Property"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
+      "portfolio_overlap_status": "LEASING_CONTROLLER_OVERLAP",
+      "portfolio_overlap_groups": [
+        {
+          "group_id": "group-kiwi-property",
+          "canonical_name": "Kiwi Property",
+          "role": "LEASING_CONTROLLER",
+          "bailey_property_count": 1,
+          "bailey_store_count": 1
+        },
+        {
+          "group_id": "group-kiwi-property",
+          "canonical_name": "Kiwi Property",
+          "role": "OWNER",
+          "bailey_property_count": 1,
+          "bailey_store_count": 1
+        },
+        {
+          "group_id": "group-kiwi-property",
+          "canonical_name": "Kiwi Property",
+          "role": "MANAGER",
+          "bailey_property_count": 1,
+          "bailey_store_count": 1
+        },
+        {
+          "group_id": "group-kiwi-property",
+          "canonical_name": "Kiwi Property",
+          "role": "OPERATOR",
+          "bailey_property_count": 1,
+          "bailey_store_count": 1
+        }
+      ],
+      "portfolio_white_space": true,
       "nearest_bailey_km": 5.02,
       "competitor_context": {
         "by_retailer": {
@@ -101593,7 +102277,11 @@
         },
         "independent_2km_count": 1
       },
-      "market": {}
+      "market": {},
+      "gla_sqm": 36776.0,
+      "tenancy_count": 127,
+      "source_url": "https://www.kiwiproperty.com/properties/lynnmall",
+      "last_verified_at": "2026-09-02"
     },
     "place-nz-auckland-manukau-city-centre": {
       "place_id": "place-nz-auckland-manukau-city-centre",
@@ -104202,37 +104890,71 @@
     },
     "place-nz-canterbury-northlands-mall": {
       "place_id": "place-nz-canterbury-northlands-mall",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-nz-canterbury-northlands-mall",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.kiwiproperty.com/properties/managed/northlands",
+        "source_type": "Official current manager and leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Regional format inferred from the official description as one of New Zealand's largest enclosed shopping centres with four major tenants and 120 stores"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-nz-canterbury-northlands-mall",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.kiwiproperty.com/properties/managed/northlands",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Kiwi Property confirms Mackersy ownership current Kiwi management and direct leasing; Mackersy's official fund document identifies the single-asset ownership vehicle"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-mackersy-northlands-owner-owner",
+        "rel-portfolio-kiwi-northlands-manager-manager",
+        "rel-portfolio-kiwi-northlands-manager-operator",
+        "rel-portfolio-kiwi-northlands-manager-leasing_controller"
+      ],
+      "group_ids": [
+        "group-kiwi-property",
+        "group-mackersy-northlands-lp"
+      ],
+      "owner_names": [
+        "Mackersy Northlands Limited Partnership"
+      ],
+      "manager_names": [
+        "Kiwi Property"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
+      "portfolio_overlap_status": "LEASING_CONTROLLER_OVERLAP",
+      "portfolio_overlap_groups": [
+        {
+          "group_id": "group-kiwi-property",
+          "canonical_name": "Kiwi Property",
+          "role": "LEASING_CONTROLLER",
+          "bailey_property_count": 1,
+          "bailey_store_count": 1
+        },
+        {
+          "group_id": "group-kiwi-property",
+          "canonical_name": "Kiwi Property",
+          "role": "MANAGER",
+          "bailey_property_count": 1,
+          "bailey_store_count": 1
+        },
+        {
+          "group_id": "group-kiwi-property",
+          "canonical_name": "Kiwi Property",
+          "role": "OPERATOR",
+          "bailey_property_count": 1,
+          "bailey_store_count": 1
+        }
+      ],
+      "portfolio_white_space": true,
       "nearest_bailey_km": 4.3,
       "competitor_context": {
         "by_retailer": {
@@ -104279,7 +105001,10 @@
         },
         "independent_2km_count": 0
       },
-      "market": {}
+      "market": {},
+      "tenancy_count": 120,
+      "source_url": "https://www.kiwiproperty.com/properties/managed/northlands",
+      "last_verified_at": "2026-09-02"
     },
     "place-nz-canterbury-riccarton-westfield": {
       "place_id": "place-nz-canterbury-riccarton-westfield",
@@ -111383,19 +112108,33 @@
     },
     "group-kiwi-property": {
       "group_id": "group-kiwi-property",
-      "property_count": 1,
+      "property_count": 3,
       "bailey_property_count": 1,
       "bailey_store_count": 1,
       "bailey_property_ids": [
         "place-nz-auckland-sylvia-park-mall"
       ],
       "asset_roles": {
+        "place-nz-auckland-lynnmall-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ],
         "place-nz-auckland-sylvia-park-mall": [
           "OPERATOR",
           "OWNER"
+        ],
+        "place-nz-canterbury-northlands-mall": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
         ]
       },
-      "white_space_property_ids": []
+      "white_space_property_ids": [
+        "place-nz-auckland-lynnmall-shopping-centre",
+        "place-nz-canterbury-northlands-mall"
+      ]
     },
     "group-stride": {
       "group_id": "group-stride",
@@ -111687,7 +112426,7 @@
     },
     "group-jll": {
       "group_id": "group-jll",
-      "property_count": 3,
+      "property_count": 4,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -111701,6 +112440,9 @@
         "place-au-vic-greensborough-plaza": [
           "MANAGER",
           "OPERATOR"
+        ],
+        "place-au-vic-woodgrove-shopping-centre": [
+          "EXTERNAL_LEASING_AGENT"
         ],
         "place-au-wa-riverton-stockland": [
           "MANAGER"
@@ -112420,6 +113162,104 @@
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-assembly-funds-management": {
+      "group_id": "group-assembly-funds-management",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-vic-woodgrove-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-pgim-real-estate": {
+      "group_id": "group-pgim-real-estate",
+      "property_count": 0,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {},
+      "white_space_property_ids": []
+    },
+    "group-woodgrove-property-trust": {
+      "group_id": "group-woodgrove-property-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-vic-woodgrove-shopping-centre": [
+          "CO_OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-adpf1-woodgrove-property-trust": {
+      "group_id": "group-adpf1-woodgrove-property-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-vic-woodgrove-shopping-centre": [
+          "CO_OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-adpf2-woodgrove-property-trust": {
+      "group_id": "group-adpf2-woodgrove-property-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-vic-woodgrove-shopping-centre": [
+          "CO_OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-asia-core-woodgrove-trust": {
+      "group_id": "group-asia-core-woodgrove-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-vic-woodgrove-shopping-centre": [
+          "CO_OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-mackersy-property": {
+      "group_id": "group-mackersy-property",
+      "property_count": 0,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {},
+      "white_space_property_ids": []
+    },
+    "group-mackersy-northlands-lp": {
+      "group_id": "group-mackersy-northlands-lp",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-nz-canterbury-northlands-mall": [
+          "OWNER"
         ]
       },
       "white_space_property_ids": []
@@ -151185,7 +152025,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -151199,11 +152039,18 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 30.16,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-adpf1-woodgrove-property-trust",
+            "group-adpf2-woodgrove-property-trust",
+            "group-asia-core-woodgrove-trust",
+            "group-assembly-funds-management",
+            "group-jll",
+            "group-woodgrove-property-trust"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -157026,7 +157873,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -157040,11 +157887,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 5.02,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-kiwi-property"
+          ],
+          "overlap_status": "LEASING_CONTROLLER_OVERLAP"
         }
       }
     },
@@ -158398,7 +159247,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -158412,11 +159261,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 4.3,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-kiwi-property",
+            "group-mackersy-northlands-lp"
+          ],
+          "overlap_status": "LEASING_CONTROLLER_OVERLAP"
         }
       }
     },

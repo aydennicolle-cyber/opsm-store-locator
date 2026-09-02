@@ -511,6 +511,35 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(singleton["gla_sqm"], 20646)
         self.assertEqual(singleton["tenancy_count"], 48)
 
+    def test_woodgrove_and_new_zealand_batch_preserves_complex_relationships(self) -> None:
+        woodgrove = self.payload["property_summaries"]["place-au-vic-woodgrove-shopping-centre"]
+        self.assertEqual(woodgrove["centre_class"], "Regional")
+        self.assertEqual(set(woodgrove["owner_names"]), {
+            "Woodgrove Property Trust",
+            "ADPF1 Woodgrove Property Trust",
+            "ADPF2 Woodgrove Property Trust",
+            "Asia Core Woodgrove Trust",
+        })
+        self.assertEqual(woodgrove["manager_names"], ["Assembly Funds Management"])
+        self.assertEqual(woodgrove["leasing_arrangement"], "External agency")
+        self.assertEqual(woodgrove["gla_sqm"], 55000)
+        self.assertEqual(woodgrove["tenancy_count"], 128)
+
+        lynnmall = self.payload["property_summaries"]["place-nz-auckland-lynnmall-shopping-centre"]
+        self.assertEqual(lynnmall["centre_class"], "Regional")
+        self.assertEqual(lynnmall["owner_names"], ["Kiwi Property"])
+        self.assertEqual(lynnmall["manager_names"], ["Kiwi Property"])
+        self.assertEqual(lynnmall["leasing_arrangement"], "In-house")
+        self.assertEqual(lynnmall["gla_sqm"], 36776)
+        self.assertEqual(lynnmall["tenancy_count"], 127)
+
+        northlands = self.payload["property_summaries"]["place-nz-canterbury-northlands-mall"]
+        self.assertEqual(northlands["centre_class"], "Regional")
+        self.assertEqual(northlands["owner_names"], ["Mackersy Northlands Limited Partnership"])
+        self.assertEqual(northlands["manager_names"], ["Kiwi Property"])
+        self.assertEqual(northlands["leasing_arrangement"], "In-house")
+        self.assertEqual(northlands["tenancy_count"], 120)
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})
