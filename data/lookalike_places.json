@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T01:41:59+00:00",
+    "generated_at": "2026-09-02T01:47:54+00:00",
     "benchmark": "All mapped Bailey Nelson stores, separated by country and location setting",
     "method": "Transparent lookalike screening rank; not a probability of store success",
     "weights": {
@@ -1312,7 +1312,7 @@
       },
       {
         "place_id": "place-au-qld-cairns-shopping-centre",
-        "name": "Cairns Shopping Centre",
+        "name": "Cairns Central",
         "country": "Australia",
         "state": "QLD",
         "locality": "Cairns City",
@@ -1338,7 +1338,7 @@
           "Oscar Wylee",
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://cairnscentral.com.au/",
         "rank": 9
       },
       {
@@ -1708,36 +1708,6 @@
         "rank": 22
       },
       {
-        "place_id": "place-au-qld-townsville-willows-shopping-centre",
-        "name": "Townsville Willows Shopping Centre",
-        "country": "Australia",
-        "state": "QLD",
-        "locality": "Thuringowa Central",
-        "location_setting": "Shopping Centre",
-        "score": 72,
-        "screening_completeness": 90,
-        "components": {
-          "bailey_footprint_similarity": 58,
-          "bailey_whitespace": 100,
-          "optical_market_validation": 58,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": 15115.0,
-          "population_growth_2021_2025_pct": -0.79,
-          "age_45_plus_pct_2021": 39.3,
-          "median_household_income_weekly_2021": 1125.0
-        },
-        "nearest_bailey_km": 1060.1,
-        "optical_store_count": 2,
-        "retailers": [
-          "OPSM",
-          "Specsavers"
-        ],
-        "evidence_url": "",
-        "rank": 23
-      },
-      {
         "place_id": "place-au-wa-warnbro-centre",
         "name": "Warnbro Centre",
         "country": "Australia",
@@ -1766,6 +1736,36 @@
           "Specsavers"
         ],
         "evidence_url": "https://regiongroup.au/portfolio/",
+        "rank": 23
+      },
+      {
+        "place_id": "place-au-qld-townsville-willows-shopping-centre",
+        "name": "Willows Shopping Centre",
+        "country": "Australia",
+        "state": "QLD",
+        "locality": "Thuringowa Central",
+        "location_setting": "Shopping Centre",
+        "score": 72,
+        "screening_completeness": 90,
+        "components": {
+          "bailey_footprint_similarity": 58,
+          "bailey_whitespace": 100,
+          "optical_market_validation": 58,
+          "accessibility_retail_context": null
+        },
+        "market_features": {
+          "population_2025": 15115.0,
+          "population_growth_2021_2025_pct": -0.79,
+          "age_45_plus_pct_2021": 39.3,
+          "median_household_income_weekly_2021": 1125.0
+        },
+        "nearest_bailey_km": 1060.1,
+        "optical_store_count": 2,
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ],
+        "evidence_url": "https://willowsshoppingcentre.com.au/",
         "rank": 24
       },
       {
@@ -3107,10 +3107,10 @@
       },
       {
         "place_id": "place-au-qld-mackay-mt-pleasant-shopping-centre",
-        "name": "Mackay Mt Pleasant Shopping Centre",
+        "name": "Mount Pleasant Centre",
         "country": "Australia",
         "state": "QLD",
-        "locality": "North Mackay",
+        "locality": "Mount Pleasant",
         "location_setting": "Shopping Centre",
         "score": 63,
         "screening_completeness": 90,
@@ -3132,7 +3132,7 @@
           "OPSM",
           "Specsavers"
         ],
-        "evidence_url": "www.mountpleasantshopping.com.au/",
+        "evidence_url": "https://www.mountpleasantcentre.com.au/",
         "rank": 72
       },
       {
@@ -4010,7 +4010,7 @@
       },
       {
         "place_id": "place-au-wa-midland-gate-shopping-centre",
-        "name": "Midland Gate Shopping Centre",
+        "name": "Midland Gate",
         "country": "Australia",
         "state": "WA",
         "locality": "Midland",
@@ -4036,7 +4036,7 @@
           "Oscar Wylee",
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://www.midlandgatesc.com.au/",
         "rank": 103
       },
       {
@@ -4529,7 +4529,7 @@
       },
       {
         "place_id": "place-au-nsw-nowra-plaza",
-        "name": "Nowra Plaza",
+        "name": "Nowra Centre Plaza",
         "country": "Australia",
         "state": "NSW",
         "locality": "Nowra",
@@ -4553,7 +4553,7 @@
         "retailers": [
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://www.nowracentreplaza.com.au/",
         "rank": 121
       },
       {
@@ -7045,7 +7045,7 @@
       },
       {
         "place_id": "place-au-nsw-settlement-city-shopping-centre",
-        "name": "Settlement City Shopping Centre",
+        "name": "Settlement City",
         "country": "Australia",
         "state": "NSW",
         "locality": "Port Macquarie",
@@ -7069,7 +7069,7 @@
         "retailers": [
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://settlementcity.com.au/",
         "rank": 209
       },
       {
@@ -7874,37 +7874,6 @@
         "rank": 237
       },
       {
-        "place_id": "place-au-nsw-tweed-city-shopping-centre",
-        "name": "TWEED CITY SHOPPING CENTRE",
-        "country": "Australia",
-        "state": "NSW",
-        "locality": "Tweed Heads South",
-        "location_setting": "Shopping Centre",
-        "score": 48,
-        "screening_completeness": 90,
-        "components": {
-          "bailey_footprint_similarity": 6,
-          "bailey_whitespace": 78,
-          "optical_market_validation": 87,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": 8637.0,
-          "population_growth_2021_2025_pct": 2.63,
-          "age_45_plus_pct_2021": 59.1,
-          "median_household_income_weekly_2021": 663.0
-        },
-        "nearest_bailey_km": 15.5,
-        "optical_store_count": 3,
-        "retailers": [
-          "OPSM",
-          "Oscar Wylee",
-          "Specsavers"
-        ],
-        "evidence_url": "https://www.tweedcity.com.au/",
-        "rank": 238
-      },
-      {
         "place_id": "place-au-nsw-the-belmore-centre",
         "name": "The Belmore Centre",
         "country": "Australia",
@@ -7931,6 +7900,37 @@
           "Specsavers"
         ],
         "evidence_url": "",
+        "rank": 238
+      },
+      {
+        "place_id": "place-au-nsw-tweed-city-shopping-centre",
+        "name": "Tweed City",
+        "country": "Australia",
+        "state": "NSW",
+        "locality": "Tweed Heads South",
+        "location_setting": "Shopping Centre",
+        "score": 48,
+        "screening_completeness": 90,
+        "components": {
+          "bailey_footprint_similarity": 6,
+          "bailey_whitespace": 78,
+          "optical_market_validation": 87,
+          "accessibility_retail_context": null
+        },
+        "market_features": {
+          "population_2025": 8637.0,
+          "population_growth_2021_2025_pct": 2.63,
+          "age_45_plus_pct_2021": 59.1,
+          "median_household_income_weekly_2021": 663.0
+        },
+        "nearest_bailey_km": 15.5,
+        "optical_store_count": 3,
+        "retailers": [
+          "OPSM",
+          "Oscar Wylee",
+          "Specsavers"
+        ],
+        "evidence_url": "https://www.tweedcity.com.au/",
         "rank": 239
       },
       {
@@ -8542,36 +8542,6 @@
         "rank": 260
       },
       {
-        "place_id": "place-au-wa-mirrabooka-square-shopping-centre",
-        "name": "Mirrabooka Square Shopping Centre",
-        "country": "Australia",
-        "state": "WA",
-        "locality": "Mirrabooka",
-        "location_setting": "Shopping Centre",
-        "score": 46,
-        "screening_completeness": 90,
-        "components": {
-          "bailey_footprint_similarity": 39,
-          "bailey_whitespace": 47,
-          "optical_market_validation": 58,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": 12840.0,
-          "population_growth_2021_2025_pct": 4.43,
-          "age_45_plus_pct_2021": 49.9,
-          "median_household_income_weekly_2021": 1070.0
-        },
-        "nearest_bailey_km": 9.4,
-        "optical_store_count": 2,
-        "retailers": [
-          "OPSM",
-          "Specsavers"
-        ],
-        "evidence_url": "",
-        "rank": 261
-      },
-      {
         "place_id": "place-au-sa-pirie-plaza",
         "name": "Pirie Plaza",
         "country": "Australia",
@@ -8598,7 +8568,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 262
+        "rank": 261
       },
       {
         "place_id": "place-au-wa-riverton-stockland",
@@ -8628,7 +8598,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://rivertonforum.com.au/",
-        "rank": 263
+        "rank": 262
       },
       {
         "place_id": "place-au-unknown-st-ives-shopping-centre",
@@ -8655,7 +8625,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://stivesgoodna.com.au/",
-        "rank": 264
+        "rank": 263
       },
       {
         "place_id": "place-au-nsw-st-ives-shopping-centre",
@@ -8686,6 +8656,36 @@
           "Specsavers"
         ],
         "evidence_url": "",
+        "rank": 264
+      },
+      {
+        "place_id": "place-au-wa-mirrabooka-square-shopping-centre",
+        "name": "The Square Mirrabooka",
+        "country": "Australia",
+        "state": "WA",
+        "locality": "Mirrabooka",
+        "location_setting": "Shopping Centre",
+        "score": 46,
+        "screening_completeness": 90,
+        "components": {
+          "bailey_footprint_similarity": 39,
+          "bailey_whitespace": 47,
+          "optical_market_validation": 58,
+          "accessibility_retail_context": null
+        },
+        "market_features": {
+          "population_2025": 12840.0,
+          "population_growth_2021_2025_pct": 4.43,
+          "age_45_plus_pct_2021": 49.9,
+          "median_household_income_weekly_2021": 1070.0
+        },
+        "nearest_bailey_km": 9.4,
+        "optical_store_count": 2,
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ],
+        "evidence_url": "https://www.thesquaremirrabooka.com.au/",
         "rank": 265
       },
       {
@@ -13873,7 +13873,7 @@
       },
       {
         "place_id": "place-au-nsw-figtree-grove-shopping-centre",
-        "name": "Figtree Grove Shopping Centre",
+        "name": "Figtree Grove",
         "country": "Australia",
         "state": "NSW",
         "locality": "Figtree",
@@ -13897,7 +13897,7 @@
         "retailers": [
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://figtreegrove.com.au/",
         "rank": 448
       },
       {
@@ -14109,7 +14109,7 @@
       },
       {
         "place_id": "place-au-nsw-rhodes-waterside-shopping-centre",
-        "name": "Rhodes Waterside Shopping Centre",
+        "name": "Rhodes Waterside",
         "country": "Australia",
         "state": "NSW",
         "locality": "Rhodes",

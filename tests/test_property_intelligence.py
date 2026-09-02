@@ -258,6 +258,68 @@ class PropertyIntelligenceTests(unittest.TestCase):
         for place_id in yfg_owned:
             self.assertIn("YFG Shopping Centres", self.payload["property_summaries"][place_id]["owner_names"])
 
+    def test_priority_nsw_centres_keep_distinct_property_roles(self) -> None:
+        rhodes_id = "place-au-nsw-rhodes-waterside-shopping-centre"
+        narellan_id = "place-au-nsw-narellan-town-centre"
+        tweed_id = "place-au-nsw-tweed-city-shopping-centre"
+
+        rhodes = self.payload["property_summaries"][rhodes_id]
+        self.assertEqual(rhodes["centre_class"], "Regional")
+        self.assertEqual(set(rhodes["owner_names"]), {"Mirvac", "Perron Group"})
+        self.assertEqual(rhodes["manager_names"], ["Mirvac"])
+        self.assertEqual(rhodes["leasing_arrangement"], "In-house")
+        self.assertEqual(rhodes["gla_sqm"], 35239)
+
+        narellan = self.payload["property_summaries"][narellan_id]
+        self.assertEqual(narellan["centre_class"], "Regional")
+        self.assertEqual(set(narellan["owner_names"]), {"Vitocco Enterprises", "Greenfields"})
+        self.assertEqual(narellan["manager_names"], ["Dart West Retail"])
+        self.assertEqual(narellan["tenancy_count"], 220)
+
+        tweed = self.payload["property_summaries"][tweed_id]
+        self.assertEqual(tweed["centre_class"], "Sub-regional")
+        self.assertEqual(tweed["manager_names"], ["Lendlease"])
+        self.assertEqual(tweed["leasing_arrangement"], "External agency")
+        tweed_roles = {
+            (row["group_id"], row["role"])
+            for row in self.relationships
+            if row["place_id"] == tweed_id
+        }
+        self.assertIn(("group-lendlease", "OPERATOR"), tweed_roles)
+        self.assertIn(("group-one-retail", "EXTERNAL_LEASING_AGENT"), tweed_roles)
+
+    def test_current_fawkner_portfolio_batch_is_filterable_and_classed(self) -> None:
+        assets = [
+            row for row in self.payload["portfolio_assets"]
+            if row["group_id"] == "group-fawkner"
+        ]
+        self.assertEqual(len(assets), 12)
+        self.assertTrue(all(row["match_status"] == "Matched" for row in assets))
+        self.assertEqual(self.payload["group_portfolios"]["group-fawkner"]["property_count"], 12)
+
+        expected = {
+            "place-au-qld-cairns-shopping-centre": ("Regional", 51972, 172),
+            "place-au-wa-midland-gate-shopping-centre": ("Regional", 68964, 203),
+            "place-au-qld-townsville-willows-shopping-centre": ("Sub-regional", 44507, 149),
+            "place-au-wa-mirrabooka-square-shopping-centre": ("Sub-regional", 42555, 139),
+            "place-au-nsw-figtree-grove-shopping-centre": ("Sub-regional", 21984, 90),
+            "place-au-nsw-settlement-city-shopping-centre": ("Sub-regional", 19554, 70),
+        }
+        for place_id, (centre_class, gla_sqm, tenancy_count) in expected.items():
+            with self.subTest(place_id=place_id):
+                summary = self.payload["property_summaries"][place_id]
+                self.assertEqual(summary["centre_class"], centre_class)
+                self.assertIn("Fawkner Property", summary["manager_names"])
+                self.assertEqual(summary["leasing_arrangement"], "In-house")
+                self.assertEqual(summary["gla_sqm"], gla_sqm)
+                self.assertEqual(summary["tenancy_count"], tenancy_count)
+
+        orange = self.payload["property_summaries"]["place-au-nsw-orange-central-square"]
+        self.assertEqual(orange["centre_class"], "CBD / Mixed-use")
+        self.assertEqual(orange["owner_names"], ["Charter Hall Retail REIT"])
+        self.assertEqual(orange["manager_names"], ["Charter Hall"])
+        self.assertEqual(orange["leasing_arrangement"], "In-house")
+
     def test_research_queue_covers_every_unresolved_property_or_class(self) -> None:
         with (DATA / "property_research_queue.csv").open(newline="", encoding="utf-8") as handle:
             queue = list(csv.DictReader(handle))
