@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T03:06:58+00:00",
+    "generated_at": "2026-09-02T03:12:15+00:00",
     "benchmark": "All mapped Bailey Nelson stores, separated by country and location setting",
     "method": "Transparent lookalike screening rank; not a probability of store success",
     "weights": {
@@ -3286,36 +3286,6 @@
         "rank": 77
       },
       {
-        "place_id": "place-au-wa-bunbury-centrepoint",
-        "name": "Bunbury Centrepoint",
-        "country": "Australia",
-        "state": "WA",
-        "locality": "Bunbury",
-        "location_setting": "Shopping Centre",
-        "score": 62,
-        "screening_completeness": 90,
-        "components": {
-          "bailey_footprint_similarity": 35,
-          "bailey_whitespace": 100,
-          "optical_market_validation": 58,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": 13623.0,
-          "population_growth_2021_2025_pct": 3.1,
-          "age_45_plus_pct_2021": 51.3,
-          "median_household_income_weekly_2021": 1053.0
-        },
-        "nearest_bailey_km": 141.7,
-        "optical_store_count": 2,
-        "retailers": [
-          "OPSM",
-          "Specsavers"
-        ],
-        "evidence_url": "",
-        "rank": 78
-      },
-      {
         "place_id": "place-au-unknown-canelands-central",
         "name": "Canelands Central",
         "country": "Australia",
@@ -3340,7 +3310,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.canelandcentral.com.au/",
-        "rank": 79
+        "rank": 78
       },
       {
         "place_id": "place-au-nsw-casula-mall",
@@ -3369,6 +3339,36 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.casulamall.com.au/",
+        "rank": 79
+      },
+      {
+        "place_id": "place-au-wa-bunbury-centrepoint",
+        "name": "Centuria Bunbury Centrepoint",
+        "country": "Australia",
+        "state": "WA",
+        "locality": "Bunbury",
+        "location_setting": "Shopping Centre",
+        "score": 62,
+        "screening_completeness": 90,
+        "components": {
+          "bailey_footprint_similarity": 35,
+          "bailey_whitespace": 100,
+          "optical_market_validation": 58,
+          "accessibility_retail_context": null
+        },
+        "market_features": {
+          "population_2025": 13623.0,
+          "population_growth_2021_2025_pct": 3.1,
+          "age_45_plus_pct_2021": 51.3,
+          "median_household_income_weekly_2021": 1053.0
+        },
+        "nearest_bailey_km": 141.7,
+        "optical_store_count": 2,
+        "retailers": [
+          "OPSM",
+          "Specsavers"
+        ],
+        "evidence_url": "https://retail.centuria.com.au/retail-centre/centuria-bunbury-centrepoint/",
         "rank": 80
       },
       {
@@ -8200,7 +8200,7 @@
       },
       {
         "place_id": "place-au-wa-maddington-centro-shopping-centre",
-        "name": "Maddington Centro Shopping Centre",
+        "name": "Maddington Central",
         "country": "Australia",
         "state": "WA",
         "locality": "Maddington",
@@ -8225,7 +8225,7 @@
           "OPSM",
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://maddingtoncentral.com.au/",
         "rank": 249
       },
       {

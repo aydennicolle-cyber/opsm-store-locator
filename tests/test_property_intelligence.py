@@ -676,6 +676,40 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertNotIn("gla_sqm", winston_hills)
         self.assertNotIn("tenancy_count", winston_hills)
 
+    def test_current_bunbury_livingston_and_maddington_roles_are_explicit(self) -> None:
+        bunbury = self.payload["property_summaries"]["place-au-wa-bunbury-centrepoint"]
+        self.assertEqual(bunbury["centre_class"], "Sub-regional")
+        self.assertEqual(bunbury["research_status"], "Verified")
+        self.assertEqual(
+            bunbury["owner_names"],
+            ["Bunbury Centrepoint Shopping Centre Investment Trust"],
+        )
+        self.assertEqual(
+            set(bunbury["manager_names"]),
+            {"Centuria Capital Group", "Cygnet West"},
+        )
+        self.assertEqual(bunbury["leasing_arrangement"], "External agency")
+        self.assertEqual(bunbury["gla_sqm"], 16813)
+        self.assertEqual(bunbury["tenancy_count"], 32)
+
+        livingston = self.payload["property_summaries"]["place-au-wa-livingston-marketplace"]
+        self.assertEqual(livingston["centre_class"], "Sub-regional")
+        self.assertEqual(livingston["research_status"], "Verified")
+        self.assertEqual(livingston["owner_names"], ["Vicinity Centres"])
+        self.assertEqual(livingston["manager_names"], ["Vicinity Centres"])
+        self.assertEqual(livingston["leasing_arrangement"], "In-house")
+        self.assertEqual(livingston["gla_sqm"], 15592)
+        self.assertEqual(livingston["tenancy_count"], 47)
+        self.assertEqual(livingston["annual_visits"], 2900000)
+
+        maddington = self.payload["property_summaries"]["place-au-wa-maddington-centro-shopping-centre"]
+        self.assertEqual(maddington["centre_class"], "Sub-regional")
+        self.assertEqual(maddington["research_status"], "Partial")
+        self.assertEqual(maddington["owner_names"], ["Realside Property"])
+        self.assertEqual(maddington["manager_names"], ["Sirona Urban"])
+        self.assertEqual(maddington["leasing_arrangement"], "In-house")
+        self.assertEqual(maddington["gla_sqm"], 27661)
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

@@ -268,6 +268,26 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(winston_hills["address"], "180-192 Caroline Chisholm Drive")
         self.assertEqual(winston_hills["postcode"], "2153")
 
+    def test_current_wa_priority_centre_names_and_addresses_are_publicly_resolved(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+
+        bunbury = places["place-au-wa-bunbury-centrepoint"]
+        self.assertEqual(bunbury["name"], "Centuria Bunbury Centrepoint")
+        self.assertIn("Bunbury Centrepoint", bunbury["aliases"])
+        self.assertEqual(bunbury["address"], "60 Blair Street")
+        self.assertEqual(bunbury["postcode"], "6230")
+
+        livingston = places["place-au-wa-livingston-marketplace"]
+        self.assertEqual(livingston["name"], "Livingston Marketplace")
+        self.assertEqual(livingston["address"], "Corner Ranford and Nicholson Roads")
+        self.assertEqual(livingston["postcode"], "6155")
+
+        maddington = places["place-au-wa-maddington-centro-shopping-centre"]
+        self.assertEqual(maddington["name"], "Maddington Central")
+        self.assertIn("Maddington Centro Shopping Centre", maddington["aliases"])
+        self.assertEqual(maddington["address"], "Corner Burslem Drive and Attfield Street")
+        self.assertEqual(maddington["postcode"], "6109")
+
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, expected_name in {
