@@ -1785,6 +1785,82 @@ class PropertyIntelligenceTests(unittest.TestCase):
             places["place-nz-manawatu-whanganui-the-plaza-palmerston-north"]["optical_store_count"], 3,
         )
 
+    def test_next_new_zealand_centres_use_current_property_evidence(self) -> None:
+        expected = {
+            "place-nz-auckland-manukau-city-centre": (
+                "Partial", "Large Format", "Confirmed", ["Property Income Fund"],
+                [], "Unknown", 39372, 44,
+            ),
+            "place-nz-auckland-milford-centre": (
+                "Partial", "Sub-regional", "Inferred",
+                ["New Zealand Retail Property Group"],
+                ["New Zealand Retail Property Group"], "Unknown", 14051, 71,
+            ),
+            "place-nz-wellington-north-city-shopping-centre": (
+                "Verified", "Regional", "Confirmed", ["DiMauro Group"],
+                ["DiMauro Group"], "External agency", None, 80,
+            ),
+            "place-nz-canterbury-the-palms-shopping-centre": (
+                "Verified", "Regional", "Inferred", ["DiMauro Group"],
+                ["DiMauro Group"], "External agency", 34795, 98,
+            ),
+            "place-nz-canterbury-the-hub-hornby-mall": (
+                "Partial", "Sub-regional", "Inferred", [], ["Colliers"],
+                "External agency", None, 60,
+            ),
+            "place-nz-auckland-westcity-waitakere-shopping-centre": (
+                "Partial", "Regional", "Confirmed", [], [], "Unknown", None, None,
+            ),
+        }
+        for place_id, values in expected.items():
+            with self.subTest(place_id=place_id):
+                summary = self.payload["property_summaries"][place_id]
+                self.assertEqual(summary["research_status"], values[0])
+                self.assertEqual(summary["centre_class"], values[1])
+                self.assertEqual(summary["centre_class_method"], values[2])
+                self.assertEqual(summary["owner_names"], values[3])
+                self.assertEqual(summary["manager_names"], values[4])
+                self.assertEqual(summary["leasing_arrangement"], values[5])
+                self.assertEqual(summary.get("gla_sqm"), values[6])
+                self.assertEqual(summary.get("tenancy_count"), values[7])
+
+        expected_roles = {
+            "place-nz-wellington-north-city-shopping-centre": {
+                ("group-dimauro", "OWNER"),
+                ("group-dimauro", "MANAGER"),
+                ("group-dimauro", "OPERATOR"),
+                ("group-savills", "EXTERNAL_LEASING_AGENT"),
+            },
+            "place-nz-canterbury-the-palms-shopping-centre": {
+                ("group-dimauro", "OWNER"),
+                ("group-dimauro", "MANAGER"),
+                ("group-dimauro", "OPERATOR"),
+                ("group-savills", "EXTERNAL_LEASING_AGENT"),
+            },
+            "place-nz-canterbury-the-hub-hornby-mall": {
+                ("group-colliers", "MANAGER"),
+                ("group-colliers", "OPERATOR"),
+                ("group-colliers", "EXTERNAL_LEASING_AGENT"),
+            },
+        }
+        for place_id, roles in expected_roles.items():
+            actual = {
+                (row["group_id"], row["role"])
+                for row in self.relationships if row["place_id"] == place_id
+            }
+            self.assertEqual(actual, roles)
+
+        places = {place["place_id"]: place for place in self.places}
+        self.assertEqual(
+            places["place-nz-auckland-manukau-city-centre"]["name"],
+            "Manukau Supa Centa",
+        )
+        self.assertIn("place-nz-auckland-manukau-westfield", places)
+        group_ids = {group["group_id"] for group in self.payload["groups"]}
+        self.assertTrue({
+            "group-willis-bond", "group-property-income-fund", "group-dimauro",
+        }.issubset(group_ids))
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T05:51:32.643770+00:00",
+  "generated_at": "2026-09-02T06:00:15.866204+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 150,
-    "relationship_count": 1022,
-    "active_relationship_count": 1020,
+    "group_count": 153,
+    "relationship_count": 1036,
+    "active_relationship_count": 1034,
     "shopping_centre_count": 577,
-    "researched_property_count": 306,
-    "classed_property_count": 302,
+    "researched_property_count": 312,
+    "classed_property_count": 308,
     "conflict_count": 0,
     "development_asset_count": 1,
     "unmatched_active_portfolio_count": 0,
@@ -2578,6 +2578,57 @@
         "Todd Property Group",
         "Todd Property"
       ]
+    },
+    {
+      "group_id": "group-willis-bond",
+      "canonical_name": "Willis Bond",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "ASSET_MANAGER",
+      "country_scope": "New Zealand",
+      "official_url": "https://www.willisbond.co.nz/",
+      "status": "Active",
+      "source_url": "https://www.willisbond.co.nz/manukau-supa-centa",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Willis Bond",
+        "Willis Bond & Co"
+      ]
+    },
+    {
+      "group_id": "group-property-income-fund",
+      "canonical_name": "Property Income Fund",
+      "parent_group_id": "group-willis-bond",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "New Zealand",
+      "official_url": "https://www.propertyincomefund.co.nz/",
+      "status": "Active",
+      "source_url": "https://www.propertyincomefund.co.nz/portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Property Income Fund",
+        "PIF"
+      ]
+    },
+    {
+      "group_id": "group-dimauro",
+      "canonical_name": "DiMauro Group",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "PROPERTY_COMPANY",
+      "country_scope": "Australia and New Zealand",
+      "official_url": "https://www.dimaurogroup.com.au/",
+      "status": "Active",
+      "source_url": "https://www.dimaurogroup.com.au/our-properties/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "DiMauro Group",
+        "Di Mauro Group"
+      ]
     }
   ],
   "group_alias_index": {
@@ -2884,7 +2935,12 @@
     "nzrpg": "group-nzrpg",
     "nzretailpropertygroup": "group-nzrpg",
     "toddpropertygroup": "group-todd-property",
-    "toddproperty": "group-todd-property"
+    "toddproperty": "group-todd-property",
+    "willisbond": "group-willis-bond",
+    "willisbondco": "group-willis-bond",
+    "propertyincomefund": "group-property-income-fund",
+    "pif": "group-property-income-fund",
+    "dimaurogroup": "group-dimauro"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -19239,6 +19295,230 @@
       "confidence": "High",
       "public_note": "Vicinity's current property profile identifies Perron Investments Pty Ltd as the 50 percent co-owner",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-pif-manukau-supa-centa-owner",
+      "place_id": "place-nz-auckland-manukau-city-centre",
+      "group_id": "group-property-income-fund",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.propertyincomefund.co.nz/portfolio",
+      "source_type": "Official current fund portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Property Income Fund reports acquiring Manukau Supa Centa in June 2025 and publishes its current large-format scale; no ownership percentage is inferred",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-nzrpg-milford-centre-owner",
+      "place_id": "place-nz-auckland-milford-centre",
+      "group_id": "group-nzrpg",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://nzrpg.co.nz/portfolio/milford/",
+      "source_type": "Official current owner portfolio and venue disclaimer",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "NZRPG states that it has owned Milford since 2006 and the current venue disclaimer says the site is owned and managed by NZRPG",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-nzrpg-milford-centre-manager",
+      "place_id": "place-nz-auckland-milford-centre",
+      "group_id": "group-nzrpg",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://nzrpg.co.nz/portfolio/milford/",
+      "source_type": "Official current owner portfolio and venue disclaimer",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "NZRPG states that it has owned Milford since 2006 and the current venue disclaimer says the site is owned and managed by NZRPG",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-dimauro-north-city-owner",
+      "place_id": "place-nz-wellington-north-city-shopping-centre",
+      "group_id": "group-dimauro",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.dimaurogroup.com.au/our-properties/north-city-shopping-centre/",
+      "source_type": "Official current owner portfolio and venue profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "DiMauro lists North City in its current property portfolio and describes it as a fully enclosed three-level regional shopping centre with more than 80 stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-dimauro-north-city-manager",
+      "place_id": "place-nz-wellington-north-city-shopping-centre",
+      "group_id": "group-dimauro",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.dimaurogroup.com.au/our-properties/north-city-shopping-centre/",
+      "source_type": "Official current owner portfolio and venue profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "DiMauro lists North City in its current property portfolio and describes it as a fully enclosed three-level regional shopping centre with more than 80 stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-dimauro-north-city-operator",
+      "place_id": "place-nz-wellington-north-city-shopping-centre",
+      "group_id": "group-dimauro",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.dimaurogroup.com.au/our-properties/north-city-shopping-centre/",
+      "source_type": "Official current owner portfolio and venue profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "DiMauro lists North City in its current property portfolio and describes it as a fully enclosed three-level regional shopping centre with more than 80 stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-savills-north-city-leasing-external_leasing_agent",
+      "place_id": "place-nz-wellington-north-city-shopping-centre",
+      "group_id": "group-savills",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://search.savills.com/ca/en/property-detail/nzl0cm045292l",
+      "source_type": "Official current agency appointment",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Savills publishes a current North City leasing listing as exclusive agent",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-dimauro-the-palms-owner",
+      "place_id": "place-nz-canterbury-the-palms-shopping-centre",
+      "group_id": "group-dimauro",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.dimaurogroup.com.au/our-properties/the-palms-shopping-centre/",
+      "source_type": "Official current owner portfolio and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "DiMauro lists The Palms in its current portfolio and publishes its scale and store count",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-dimauro-the-palms-manager",
+      "place_id": "place-nz-canterbury-the-palms-shopping-centre",
+      "group_id": "group-dimauro",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.dimaurogroup.com.au/our-properties/the-palms-shopping-centre/",
+      "source_type": "Official current owner portfolio and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "DiMauro lists The Palms in its current portfolio and publishes its scale and store count",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-dimauro-the-palms-operator",
+      "place_id": "place-nz-canterbury-the-palms-shopping-centre",
+      "group_id": "group-dimauro",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.dimaurogroup.com.au/our-properties/the-palms-shopping-centre/",
+      "source_type": "Official current owner portfolio and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "DiMauro lists The Palms in its current portfolio and publishes its scale and store count",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-savills-the-palms-leasing-external_leasing_agent",
+      "place_id": "place-nz-canterbury-the-palms-shopping-centre",
+      "group_id": "group-savills",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://thepalms.co.nz/leasing/",
+      "source_type": "Official current venue leasing appointment",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue leasing page directs permanent leasing enquiries to Savills",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-colliers-hub-hornby-manager",
+      "place_id": "place-nz-canterbury-the-hub-hornby-mall",
+      "group_id": "group-colliers",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://thehubhornby.co.nz/terms-conditions/",
+      "source_type": "Official current venue management statement and leasing page",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies itself as a Colliers managed property and publishes a direct leasing pathway; beneficial ownership remains unknown",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-colliers-hub-hornby-operator",
+      "place_id": "place-nz-canterbury-the-hub-hornby-mall",
+      "group_id": "group-colliers",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://thehubhornby.co.nz/terms-conditions/",
+      "source_type": "Official current venue management statement and leasing page",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies itself as a Colliers managed property and publishes a direct leasing pathway; beneficial ownership remains unknown",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-colliers-hub-hornby-external_leasing_agent",
+      "place_id": "place-nz-canterbury-the-hub-hornby-mall",
+      "group_id": "group-colliers",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://thehubhornby.co.nz/terms-conditions/",
+      "source_type": "Official current venue management statement and leasing page",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies itself as a Colliers managed property and publishes a direct leasing pathway; beneficial ownership remains unknown",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -29246,6 +29526,167 @@
       "public_note": "Vicinity's current property profile identifies Perron Investments Pty Ltd as the 50 percent co-owner",
       "match_status": "Matched",
       "matched_place_id": "place-au-wa-morley-galleria"
+    },
+    {
+      "portfolio_asset_id": "pif-manukau-supa-centa",
+      "group_id": "group-property-income-fund",
+      "canonical_name": "Manukau Supa Centa",
+      "country": "New Zealand",
+      "state": "Auckland",
+      "aliases": "Manukau City Centre",
+      "preferred_place_id": "place-nz-auckland-manukau-city-centre",
+      "roles": "OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "39372",
+      "tenancy_count": "44",
+      "annual_visits_m": "",
+      "source_url": "https://www.propertyincomefund.co.nz/portfolio",
+      "source_type": "Official current fund portfolio",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Property Income Fund reports acquiring Manukau Supa Centa in June 2025 and publishes its current large-format scale; no ownership percentage is inferred",
+      "match_status": "Matched",
+      "matched_place_id": "place-nz-auckland-manukau-city-centre"
+    },
+    {
+      "portfolio_asset_id": "nzrpg-milford-centre",
+      "group_id": "group-nzrpg",
+      "canonical_name": "Milford Centre",
+      "country": "New Zealand",
+      "state": "Auckland",
+      "aliases": "",
+      "preferred_place_id": "place-nz-auckland-milford-centre",
+      "roles": "OWNER|MANAGER",
+      "ownership_percentage": "",
+      "gla_sqm": "14051",
+      "tenancy_count": "71",
+      "annual_visits_m": "",
+      "source_url": "https://nzrpg.co.nz/portfolio/milford/",
+      "source_type": "Official current owner portfolio and venue disclaimer",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "NZRPG states that it has owned Milford since 2006 and the current venue disclaimer says the site is owned and managed by NZRPG",
+      "match_status": "Matched",
+      "matched_place_id": "place-nz-auckland-milford-centre"
+    },
+    {
+      "portfolio_asset_id": "dimauro-north-city",
+      "group_id": "group-dimauro",
+      "canonical_name": "North City Shopping Centre",
+      "country": "New Zealand",
+      "state": "Wellington",
+      "aliases": "North City",
+      "preferred_place_id": "place-nz-wellington-north-city-shopping-centre",
+      "roles": "OWNER|MANAGER|OPERATOR",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "80",
+      "annual_visits_m": "",
+      "source_url": "https://www.dimaurogroup.com.au/our-properties/north-city-shopping-centre/",
+      "source_type": "Official current owner portfolio and venue profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "DiMauro lists North City in its current property portfolio and describes it as a fully enclosed three-level regional shopping centre with more than 80 stores",
+      "match_status": "Matched",
+      "matched_place_id": "place-nz-wellington-north-city-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "savills-north-city-leasing",
+      "group_id": "group-savills",
+      "canonical_name": "North City Shopping Centre",
+      "country": "New Zealand",
+      "state": "Wellington",
+      "aliases": "North City",
+      "preferred_place_id": "place-nz-wellington-north-city-shopping-centre",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://search.savills.com/ca/en/property-detail/nzl0cm045292l",
+      "source_type": "Official current agency appointment",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Savills publishes a current North City leasing listing as exclusive agent",
+      "match_status": "Matched",
+      "matched_place_id": "place-nz-wellington-north-city-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "dimauro-the-palms",
+      "group_id": "group-dimauro",
+      "canonical_name": "The Palms Shopping Centre",
+      "country": "New Zealand",
+      "state": "Canterbury",
+      "aliases": "The Palms",
+      "preferred_place_id": "place-nz-canterbury-the-palms-shopping-centre",
+      "roles": "OWNER|MANAGER|OPERATOR",
+      "ownership_percentage": "",
+      "gla_sqm": "34795",
+      "tenancy_count": "98",
+      "annual_visits_m": "",
+      "source_url": "https://www.dimaurogroup.com.au/our-properties/the-palms-shopping-centre/",
+      "source_type": "Official current owner portfolio and property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "DiMauro lists The Palms in its current portfolio and publishes its scale and store count",
+      "match_status": "Matched",
+      "matched_place_id": "place-nz-canterbury-the-palms-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "savills-the-palms-leasing",
+      "group_id": "group-savills",
+      "canonical_name": "The Palms Shopping Centre",
+      "country": "New Zealand",
+      "state": "Canterbury",
+      "aliases": "The Palms",
+      "preferred_place_id": "place-nz-canterbury-the-palms-shopping-centre",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://thepalms.co.nz/leasing/",
+      "source_type": "Official current venue leasing appointment",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue leasing page directs permanent leasing enquiries to Savills",
+      "match_status": "Matched",
+      "matched_place_id": "place-nz-canterbury-the-palms-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "colliers-hub-hornby",
+      "group_id": "group-colliers",
+      "canonical_name": "The Hub Hornby",
+      "country": "New Zealand",
+      "state": "Canterbury",
+      "aliases": "The Hub Hornby Mall",
+      "preferred_place_id": "place-nz-canterbury-the-hub-hornby-mall",
+      "roles": "MANAGER|OPERATOR|EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "60",
+      "annual_visits_m": "",
+      "source_url": "https://thehubhornby.co.nz/terms-conditions/",
+      "source_type": "Official current venue management statement and leasing page",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue identifies itself as a Colliers managed property and publishes a direct leasing pathway; beneficial ownership remains unknown",
+      "match_status": "Matched",
+      "matched_place_id": "place-nz-canterbury-the-hub-hornby-mall"
     }
   ],
   "property_summaries": {
@@ -113712,31 +114153,37 @@
     },
     "place-nz-auckland-manukau-city-centre": {
       "place_id": "place-nz-auckland-manukau-city-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Large Format",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-nz-auckland-manukau-city-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Large Format",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.propertyincomefund.co.nz/portfolio",
+        "source_type": "Official current fund portfolio",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Property Income Fund explicitly describes Manukau Supa Centa as a large-format retail centre and publishes 39372 square metres across 44 tenants"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-nz-auckland-manukau-city-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.propertyincomefund.co.nz/portfolio",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current fund venue and property sources confirm ownership identity address large-format class public metrics and mapped Specsavers tenancy; centre management and leasing control remain explicitly unknown"
       },
       "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
+      "relationship_ids": [
+        "rel-portfolio-pif-manukau-supa-centa-owner"
+      ],
+      "group_ids": [
+        "group-property-income-fund"
+      ],
+      "owner_names": [
+        "Property Income Fund"
+      ],
       "manager_names": [],
       "has_bailey": false,
       "bailey_store_count": 0,
@@ -113795,7 +114242,11 @@
         },
         "independent_2km_count": 0
       },
-      "market": {}
+      "market": {},
+      "gla_sqm": 39372.0,
+      "tenancy_count": 44,
+      "source_url": "https://www.propertyincomefund.co.nz/portfolio",
+      "last_verified_at": "2026-09-02"
     },
     "place-nz-auckland-manukau-westfield": {
       "place_id": "place-nz-auckland-manukau-westfield",
@@ -113913,32 +114364,41 @@
     },
     "place-nz-auckland-milford-centre": {
       "place_id": "place-nz-auckland-milford-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-nz-auckland-milford-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://nzrpg.co.nz/portfolio/milford/",
+        "source_type": "Official current owner portfolio",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from the 14051 square metre enclosed centre and 71-tenancy offer; the source does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-nz-auckland-milford-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://nzrpg.co.nz/portfolio/milford/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current NZRPG portfolio and venue sources confirm ownership management address inferred class public scale and mapped OPSM tenancy; leasing control remains explicitly unknown"
       },
       "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "relationship_ids": [
+        "rel-portfolio-nzrpg-milford-centre-owner",
+        "rel-portfolio-nzrpg-milford-centre-manager"
+      ],
+      "group_ids": [
+        "group-nzrpg"
+      ],
+      "owner_names": [
+        "New Zealand Retail Property Group"
+      ],
+      "manager_names": [
+        "New Zealand Retail Property Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -114007,7 +114467,11 @@
         },
         "independent_2km_count": 3
       },
-      "market": {}
+      "market": {},
+      "gla_sqm": 14051.0,
+      "tenancy_count": 71,
+      "source_url": "https://nzrpg.co.nz/portfolio/milford/",
+      "last_verified_at": "2026-09-02"
     },
     "place-nz-auckland-newmarket-westfield": {
       "place_id": "place-nz-auckland-newmarket-westfield",
@@ -114776,26 +115240,26 @@
     },
     "place-nz-auckland-westcity-waitakere-shopping-centre": {
       "place_id": "place-nz-auckland-westcity-waitakere-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-nz-auckland-westcity-waitakere-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.west-city.co.nz/about/leasing-commercial/",
+        "source_type": "Official current venue leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The current venue leasing profile explicitly describes WestCity as a regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-nz-auckland-westcity-waitakere-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.west-city.co.nz/about/leasing-commercial/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue sources confirm address formal regional class public scale and mapped optical tenancies; ownership management and controlling entity remain explicitly unknown"
       },
       "leasing_arrangement": "Unknown",
       "relationship_ids": [],
@@ -116617,32 +117081,40 @@
     },
     "place-nz-canterbury-the-hub-hornby-mall": {
       "place_id": "place-nz-canterbury-the-hub-hornby-mall",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-nz-canterbury-the-hub-hornby-mall",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://thehubhornby.co.nz/store-category/banking-mobile/",
+        "source_type": "Official current venue directory",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from more than 60 stores and the Farmers and Pak'nSave anchor mix; the source does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-nz-canterbury-the-hub-hornby-mall",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://thehubhornby.co.nz/terms-conditions/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue and Colliers sources confirm management operation leasing pathway address inferred class public scale and mapped Specsavers tenancy; beneficial ownership remains explicitly unknown"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-colliers-hub-hornby-manager",
+        "rel-portfolio-colliers-hub-hornby-operator",
+        "rel-portfolio-colliers-hub-hornby-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-colliers"
+      ],
       "owner_names": [],
-      "manager_names": [],
+      "manager_names": [
+        "Colliers"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -116683,39 +117155,54 @@
         },
         "independent_2km_count": 0
       },
-      "market": {}
+      "market": {},
+      "tenancy_count": 60,
+      "source_url": "https://thehubhornby.co.nz/terms-conditions/",
+      "last_verified_at": "2026-09-02"
     },
     "place-nz-canterbury-the-palms-shopping-centre": {
       "place_id": "place-nz-canterbury-the-palms-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-nz-canterbury-the-palms-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.dimaurogroup.com.au/our-properties/the-palms-shopping-centre/",
+        "source_type": "Official current owner portfolio",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Regional format inferred from the 34795 square metre centre 98-store offer and department-store supermarket and cinema anchor mix; the source does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-nz-canterbury-the-palms-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.dimaurogroup.com.au/our-properties/the-palms-shopping-centre/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current DiMauro and venue sources confirm ownership management external leasing address inferred class public scale and mapped Specsavers tenancy"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-dimauro-the-palms-owner",
+        "rel-portfolio-dimauro-the-palms-manager",
+        "rel-portfolio-dimauro-the-palms-operator",
+        "rel-portfolio-savills-the-palms-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-dimauro",
+        "group-savills"
+      ],
+      "owner_names": [
+        "DiMauro Group"
+      ],
+      "manager_names": [
+        "DiMauro Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 3.88,
@@ -116753,7 +117240,11 @@
         },
         "independent_2km_count": 0
       },
-      "market": {}
+      "market": {},
+      "gla_sqm": 34795.0,
+      "tenancy_count": 98,
+      "source_url": "https://www.dimaurogroup.com.au/our-properties/the-palms-shopping-centre/",
+      "last_verified_at": "2026-09-02"
     },
     "corridor-nz-gisborne-gisborne-gladstone-road": {
       "place_id": "corridor-nz-gisborne-gisborne-gladstone-road",
@@ -122228,35 +122719,47 @@
     },
     "place-nz-wellington-north-city-shopping-centre": {
       "place_id": "place-nz-wellington-north-city-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-nz-wellington-north-city-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.dimaurogroup.com.au/our-properties/north-city-shopping-centre/",
+        "source_type": "Official current owner portfolio",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "DiMauro explicitly describes North City as a fully enclosed three-level regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-nz-wellington-north-city-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.dimaurogroup.com.au/our-properties/north-city-shopping-centre/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current DiMauro venue and Savills sources confirm ownership management external leasing address formal regional class public scale and mapped Specsavers tenancy"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-dimauro-north-city-owner",
+        "rel-portfolio-dimauro-north-city-manager",
+        "rel-portfolio-dimauro-north-city-operator",
+        "rel-portfolio-savills-north-city-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-dimauro",
+        "group-savills"
+      ],
+      "owner_names": [
+        "DiMauro Group"
+      ],
+      "manager_names": [
+        "DiMauro Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 9.77,
@@ -122294,7 +122797,10 @@
         },
         "independent_2km_count": 0
       },
-      "market": {}
+      "market": {},
+      "tenancy_count": 80,
+      "source_url": "https://www.dimaurogroup.com.au/our-properties/north-city-shopping-centre/",
+      "last_verified_at": "2026-09-02"
     },
     "place-nz-wellington-queensgate-shopping-centre": {
       "place_id": "place-nz-wellington-queensgate-shopping-centre",
@@ -124027,7 +124533,7 @@
     },
     "group-colliers": {
       "group_id": "group-colliers",
-      "property_count": 2,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -124037,6 +124543,11 @@
           "OPERATOR"
         ],
         "place-nz-auckland-ormiston-town-centre": [
+          "EXTERNAL_LEASING_AGENT",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-nz-canterbury-the-hub-hornby-mall": [
           "EXTERNAL_LEASING_AGENT",
           "MANAGER",
           "OPERATOR"
@@ -124153,12 +124664,18 @@
     },
     "group-savills": {
       "group_id": "group-savills",
-      "property_count": 1,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
         "place-au-sa-whyalla-westland-shopping-centre": [
+          "EXTERNAL_LEASING_AGENT"
+        ],
+        "place-nz-canterbury-the-palms-shopping-centre": [
+          "EXTERNAL_LEASING_AGENT"
+        ],
+        "place-nz-wellington-north-city-shopping-centre": [
           "EXTERNAL_LEASING_AGENT"
         ]
       },
@@ -125995,11 +126512,15 @@
     },
     "group-nzrpg": {
       "group_id": "group-nzrpg",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-nz-auckland-milford-centre": [
+          "MANAGER",
+          "OWNER"
+        ],
         "place-nz-manawatu-whanganui-the-plaza-palmerston-north": [
           "MANAGER",
           "OPERATOR",
@@ -126016,6 +126537,48 @@
       "bailey_property_ids": [],
       "asset_roles": {
         "place-nz-auckland-ormiston-town-centre": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-willis-bond": {
+      "group_id": "group-willis-bond",
+      "property_count": 0,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {},
+      "white_space_property_ids": []
+    },
+    "group-property-income-fund": {
+      "group_id": "group-property-income-fund",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-nz-auckland-manukau-city-centre": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-dimauro": {
+      "group_id": "group-dimauro",
+      "property_count": 2,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-nz-canterbury-the-palms-shopping-centre": [
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ],
+        "place-nz-wellington-north-city-shopping-centre": [
+          "MANAGER",
+          "OPERATOR",
           "OWNER"
         ]
       },
@@ -170533,7 +171096,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Large Format"
         }
       },
       "accessibility": {
@@ -170547,10 +171110,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 8.52,
-          "group_ids": [],
+          "group_ids": [
+            "group-property-income-fund"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -170617,7 +171182,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -170631,10 +171196,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 2.1,
-          "group_ids": [],
+          "group_ids": [
+            "group-nzrpg"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -171001,7 +171568,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -171957,7 +172524,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -171971,10 +172538,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 6.18,
-          "group_ids": [],
+          "group_ids": [
+            "group-colliers"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -171998,7 +172567,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -172012,11 +172581,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 3.88,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-dimauro",
+            "group-savills"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -174632,7 +175204,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -174646,11 +175218,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 9.77,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-dimauro",
+            "group-savills"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
