@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T05:26:57+00:00",
+    "generated_at": "2026-09-02T05:34:12+00:00",
     "place_count": 1024,
     "centre_count": 581,
     "corridor_count": 443,
@@ -10860,15 +10860,17 @@
       "centre_id": "place-au-nsw-griffith-central-shopping-centre",
       "name": "Griffith Central Shopping Centre",
       "canonical_name": "Griffith Central Shopping Centre",
-      "aliases": [],
+      "aliases": [
+        "Griffith Central"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
       "state": "NSW",
       "locality": "Griffith",
       "suburb": "Griffith",
-      "postcode": "",
-      "address": "",
+      "postcode": "2680",
+      "address": "10-12 Yambil Street",
       "latitude": -34.290394,
       "longitude": 146.05164,
       "owner": "",
@@ -10880,12 +10882,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "",
-      "source_url": "",
-      "source_date": "",
+      "official_url": "https://griffithcentral.com.au/",
+      "source_url": "https://griffithcentral.com.au/under-new-management/",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "The current official centre announcement confirms First Asset Management as managing agent and leasing controller plus the centre address Target anchor and Specsavers tenancy while ownership remains unknown",
       "retailers": [
         "Specsavers"
       ],
@@ -10893,7 +10895,7 @@
       "has_bailey": false,
       "mapping_confidence": "High",
       "certification_status": "Best available",
-      "evidence_tier": "Derived"
+      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-nsw-grove-square",
@@ -12948,17 +12950,19 @@
     {
       "place_id": "place-au-nsw-st-marys-village-shopping-centre",
       "centre_id": "place-au-nsw-st-marys-village-shopping-centre",
-      "name": "St Marys Village Shopping Centre",
-      "canonical_name": "St Marys Village Shopping Centre",
-      "aliases": [],
+      "name": "St Marys Village",
+      "canonical_name": "St Marys Village",
+      "aliases": [
+        "St Marys Village Shopping Centre"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
       "state": "NSW",
       "locality": "St Marys",
       "suburb": "St Marys",
-      "postcode": "",
-      "address": "",
+      "postcode": "2760",
+      "address": "10 Charles Hackett Drive",
       "latitude": -33.76669,
       "longitude": 150.77034,
       "owner": "",
@@ -12970,12 +12974,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "",
-      "source_url": "",
-      "source_date": "",
+      "official_url": "https://www.stmarysvillage.com.au/",
+      "source_url": "https://www.stmarysvillage.com.au/centre-info/about",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "Current venue and Mirvac leasing sources confirm the centre name address current retail format active Specsavers tenancy and external leasing channel while ownership and property management remain unknown",
       "retailers": [
         "Specsavers"
       ],
@@ -12983,7 +12987,7 @@
       "has_bailey": false,
       "mapping_confidence": "High",
       "certification_status": "Best available",
-      "evidence_tier": "Derived"
+      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-nsw-stanhope-village-shopping-centre",
@@ -13742,17 +13746,20 @@
     {
       "place_id": "place-au-nsw-warilla-grove-shopping-centre",
       "centre_id": "place-au-nsw-warilla-grove-shopping-centre",
-      "name": "Warilla Grove Shopping Centre",
-      "canonical_name": "Warilla Grove Shopping Centre",
-      "aliases": [],
+      "name": "Warilla Grove",
+      "canonical_name": "Warilla Grove",
+      "aliases": [
+        "Warilla Grove Shopping Centre",
+        "HomeCo Warilla Grove"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
       "state": "NSW",
       "locality": "Warilla",
       "suburb": "Warilla",
-      "postcode": "",
-      "address": "",
+      "postcode": "2528",
+      "address": "43-57 Shellharbour Road",
       "latitude": -34.546833,
       "longitude": 150.86299,
       "owner": "",
@@ -13764,12 +13771,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "",
-      "source_url": "",
-      "source_date": "",
+      "official_url": "https://www.warillagrove.com.au/",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "Current HomeCo Daily Needs REIT reporting confirms acquisition identity daily-needs format and public metrics while the venue and retailer sources confirm the address and Specsavers tenancy",
       "retailers": [
         "Specsavers"
       ],
@@ -13777,7 +13784,7 @@
       "has_bailey": false,
       "mapping_confidence": "High",
       "certification_status": "Best available",
-      "evidence_tier": "Derived"
+      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-nsw-warrawong-plaza-shopping-centre",
@@ -18796,15 +18803,17 @@
       "centre_id": "place-au-qld-rose-city-shoppingworld",
       "name": "Rose City Shoppingworld",
       "canonical_name": "Rose City Shoppingworld",
-      "aliases": [],
+      "aliases": [
+        "Rose City Centre"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
       "state": "QLD",
       "locality": "Warwick",
       "suburb": "Warwick",
-      "postcode": "",
-      "address": "",
+      "postcode": "4370",
+      "address": "81 Palmerin Street",
       "latitude": -28.215103,
       "longitude": 152.03166,
       "owner": "",
@@ -18816,12 +18825,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "",
-      "source_url": "",
-      "source_date": "",
+      "official_url": "https://www.rosecityshopping.com.au/",
+      "source_url": "https://www.mcconaghygroup.com/shopping_centres/rose-city-shoppingworld/",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "Current McConaghy and venue sources confirm the centre name address management direct leasing retail format public metrics and Specsavers tenancy while beneficial ownership remains unknown",
       "retailers": [
         "Specsavers"
       ],
@@ -18829,7 +18838,7 @@
       "has_bailey": false,
       "mapping_confidence": "High",
       "certification_status": "Best available",
-      "evidence_tier": "Derived"
+      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-qld-runaway-bay-shopping-village",
@@ -19706,15 +19715,17 @@
       "centre_id": "place-au-qld-toowoomba-plaza",
       "name": "Toowoomba Plaza",
       "canonical_name": "Toowoomba Plaza",
-      "aliases": [],
+      "aliases": [
+        "Toowoomba Plaza Shopping Centre"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
       "state": "QLD",
       "locality": "Kearneys Spring",
       "suburb": "Kearneys Spring",
-      "postcode": "",
-      "address": "",
+      "postcode": "4350",
+      "address": "878 Ruthven Street",
       "latitude": -27.59454,
       "longitude": 151.949,
       "owner": "",
@@ -19726,12 +19737,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "",
-      "source_url": "",
-      "source_date": "",
+      "official_url": "https://toowoombaplaza.com.au/",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/toowoomba-plaza/",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "Current McConaghy and venue sources confirm the centre name address owning fund management direct leasing formal class public metrics and Specsavers tenancy",
       "retailers": [
         "Specsavers"
       ],
@@ -19739,7 +19750,7 @@
       "has_bailey": false,
       "mapping_confidence": "High",
       "certification_status": "Best available",
-      "evidence_tier": "Derived"
+      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-qld-stockland-townsville",
@@ -20006,7 +20017,9 @@
       "centre_id": "place-au-qld-westlands-plaza",
       "name": "Westlands Plaza",
       "canonical_name": "Westlands Plaza",
-      "aliases": [],
+      "aliases": [
+        "Westlands Plaza Shopping Centre"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
@@ -20027,11 +20040,11 @@
       "tenancy_count": "",
       "redevelopment_activity": "",
       "official_url": "https://westlandsplaza.com.au/",
-      "source_url": "https://westlandsplaza.com.au/",
-      "source_date": "2026-09-01",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/westlands-plaza/",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Official website corroborates an OpenStreetMap shopping-centre feature",
+      "source_basis": "Current McConaghy and venue sources confirm the centre name address ownership management direct leasing formal class public metrics and current optical directory",
       "retailers": [],
       "optical_store_count": 0,
       "has_bailey": false,

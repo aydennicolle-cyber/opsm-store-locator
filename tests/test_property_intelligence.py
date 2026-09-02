@@ -335,9 +335,15 @@ class PropertyIntelligenceTests(unittest.TestCase):
             row for row in self.payload["portfolio_assets"]
             if row["group_id"] == "group-mirvac"
         ]
-        self.assertEqual(len(assets), 6)
+        self.assertEqual(len(assets), 7)
         self.assertTrue(all(row["match_status"] == "Matched" for row in assets))
-        self.assertEqual(self.payload["group_portfolios"]["group-mirvac"]["property_count"], 6)
+        self.assertEqual(self.payload["group_portfolios"]["group-mirvac"]["property_count"], 7)
+        st_marys = self.payload["property_summaries"][
+            "place-au-nsw-st-marys-village-shopping-centre"
+        ]
+        self.assertEqual(st_marys["owner_names"], [])
+        self.assertEqual(st_marys["manager_names"], [])
+        self.assertEqual(st_marys["leasing_arrangement"], "External agency")
 
         expected = {
             "place-au-nsw-broadway-shopping-centre": (
@@ -1539,6 +1545,65 @@ class PropertyIntelligenceTests(unittest.TestCase):
         review_ids = {item["review_id"] for item in self.payload["review_items"]}
         self.assertNotIn("review-portfolio-stockland-fy26-baringa", review_ids)
         self.assertNotIn("review-portfolio-stockland-fy26-piccadilly", review_ids)
+
+    def test_major_network_release_batch_preserves_known_and_unknown_roles(self) -> None:
+        expected = {
+            "place-au-qld-toowoomba-plaza": {
+                "status": "Verified", "centre_class": "Sub-regional", "method": "Confirmed",
+                "owners": ["McConaghy Retail Property Fund"], "managers": ["McConaghy Group"],
+                "arrangement": "In-house", "gla": 13104, "tenants": 26,
+            },
+            "place-au-qld-westlands-plaza": {
+                "status": "Verified", "centre_class": "Sub-regional", "method": "Confirmed",
+                "owners": ["McConaghy Group"], "managers": ["McConaghy Group"],
+                "arrangement": "In-house", "gla": 4908, "tenants": 13,
+            },
+            "place-au-qld-rose-city-shoppingworld": {
+                "status": "Partial", "centre_class": "Sub-regional", "method": "Inferred",
+                "owners": [], "managers": ["McConaghy Group"],
+                "arrangement": "In-house", "gla": None, "tenants": 65,
+            },
+            "place-au-nsw-griffith-central-shopping-centre": {
+                "status": "Partial", "centre_class": "Sub-regional", "method": "Inferred",
+                "owners": [], "managers": ["First Asset Management"],
+                "arrangement": "External agency", "gla": None, "tenants": None,
+            },
+            "place-au-nsw-st-marys-village-shopping-centre": {
+                "status": "Partial", "centre_class": "Sub-regional", "method": "Inferred",
+                "owners": [], "managers": [], "arrangement": "External agency",
+                "gla": None, "tenants": None,
+            },
+            "place-au-nsw-warilla-grove-shopping-centre": {
+                "status": "Partial", "centre_class": "Neighbourhood", "method": "Inferred",
+                "owners": ["HomeCo Daily Needs REIT"], "managers": ["HMC Capital"],
+                "arrangement": "Unknown", "gla": 11416, "tenants": 58,
+            },
+        }
+        for place_id, values in expected.items():
+            with self.subTest(place_id=place_id):
+                summary = self.payload["property_summaries"][place_id]
+                self.assertEqual(summary["research_status"], values["status"])
+                self.assertEqual(summary["centre_class"], values["centre_class"])
+                self.assertEqual(summary["centre_class_method"], values["method"])
+                self.assertEqual(summary["owner_names"], values["owners"])
+                self.assertEqual(summary["manager_names"], values["managers"])
+                self.assertEqual(summary["leasing_arrangement"], values["arrangement"])
+                self.assertEqual(summary.get("gla_sqm"), values["gla"])
+                self.assertEqual(summary.get("tenancy_count"), values["tenants"])
+
+        warilla = self.payload["property_summaries"][
+            "place-au-nsw-warilla-grove-shopping-centre"
+        ]
+        self.assertEqual(warilla["annual_visits"], 5800000)
+        self.assertEqual(
+            self.payload["property_summaries"]["place-au-qld-rose-city-shoppingworld"]["annual_visits"],
+            3100000,
+        )
+        places = {place["place_id"]: place for place in self.places}
+        self.assertEqual(places["place-au-qld-toowoomba-plaza"]["address"], "878 Ruthven Street")
+        self.assertEqual(places["place-au-qld-westlands-plaza"]["address"], "51-67 Wyndham Street")
+        self.assertEqual(places["place-au-nsw-st-marys-village-shopping-centre"]["name"], "St Marys Village")
+        self.assertEqual(places["place-au-nsw-warilla-grove-shopping-centre"]["name"], "Warilla Grove")
 
     def test_newly_open_stockland_centres_are_canonical_and_reconciled(self) -> None:
         expected = {

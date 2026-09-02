@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T05:27:04.790326+00:00",
+  "generated_at": "2026-09-02T05:34:20.982968+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 142,
-    "relationship_count": 965,
-    "active_relationship_count": 963,
+    "group_count": 144,
+    "relationship_count": 983,
+    "active_relationship_count": 981,
     "shopping_centre_count": 581,
-    "researched_property_count": 289,
-    "classed_property_count": 285,
+    "researched_property_count": 295,
+    "classed_property_count": 291,
     "conflict_count": 0,
     "development_asset_count": 1,
     "unmatched_active_portfolio_count": 0,
@@ -2286,6 +2286,40 @@
       ]
     },
     {
+      "group_id": "group-mcconaghy-retail-property-fund",
+      "canonical_name": "McConaghy Retail Property Fund",
+      "parent_group_id": "group-mcconaghy",
+      "brand_name": "MRP Fund",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://mcconaghyproperties.com.au/mcconaghy-retail-property-fund/",
+      "status": "Active",
+      "source_url": "https://mcconaghyproperties.com.au/mcconaghy-retail-property-fund/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "McConaghy Retail Property Fund",
+        "MRP Fund"
+      ]
+    },
+    {
+      "group_id": "group-first-asset-management",
+      "canonical_name": "First Asset Management",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "ASSET_MANAGER",
+      "country_scope": "Australia",
+      "official_url": "https://firstassetmanagement.com.au/",
+      "status": "Active",
+      "source_url": "https://griffithcentral.com.au/under-new-management/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "First Asset Management",
+        "FAM"
+      ]
+    },
+    {
       "group_id": "group-charter-hall-prime-retail-fund",
       "canonical_name": "Charter Hall Prime Retail Fund",
       "parent_group_id": "group-charter-hall",
@@ -2708,6 +2742,10 @@
     "thetrusteeforhmclmlno5propertytrust": "group-hmc-lml-no5-property-trust",
     "qicactiveretailpropertyfund": "group-qic-active-retail-property-fund",
     "qicarpf": "group-qic-active-retail-property-fund",
+    "mcconaghyretailpropertyfund": "group-mcconaghy-retail-property-fund",
+    "mrpfund": "group-mcconaghy-retail-property-fund",
+    "firstassetmanagement": "group-first-asset-management",
+    "fam": "group-first-asset-management",
     "charterhallprimeretailfund": "group-charter-hall-prime-retail-fund",
     "cprf": "group-charter-hall-prime-retail-fund",
     "charterhallprimeretailfundcprf": "group-charter-hall-prime-retail-fund",
@@ -18157,6 +18195,294 @@
       "derived_from": "official_portfolio_asset"
     },
     {
+      "relationship_id": "rel-portfolio-mrp-toowoomba-plaza-owner-owner",
+      "place_id": "place-au-qld-toowoomba-plaza",
+      "group_id": "group-mcconaghy-retail-property-fund",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mcconaghyproperties.com.au/mcconaghy-retail-property-fund/",
+      "source_type": "Official current investment-fund and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy identifies Toowoomba Plaza as an initial investment of the active MRP Fund; tenant count combines the published two majors and 24 specialty stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-toowoomba-plaza-manager",
+      "place_id": "place-au-qld-toowoomba-plaza",
+      "group_id": "group-mcconaghy",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/toowoomba-plaza/",
+      "source_type": "Official current manager property and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy's current profile formally classifies the centre publishes its metrics and links its in-house leasing channel",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-toowoomba-plaza-operator",
+      "place_id": "place-au-qld-toowoomba-plaza",
+      "group_id": "group-mcconaghy",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/toowoomba-plaza/",
+      "source_type": "Official current manager property and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy's current profile formally classifies the centre publishes its metrics and links its in-house leasing channel",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-toowoomba-plaza-leasing_controller",
+      "place_id": "place-au-qld-toowoomba-plaza",
+      "group_id": "group-mcconaghy",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/toowoomba-plaza/",
+      "source_type": "Official current manager property and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy's current profile formally classifies the centre publishes its metrics and links its in-house leasing channel",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-westlands-plaza-owner",
+      "place_id": "place-au-qld-westlands-plaza",
+      "group_id": "group-mcconaghy",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/westlands-plaza/",
+      "source_type": "Official current owner manager property and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy identifies Westlands Plaza as a purchased current asset formally classifies it and links its in-house leasing channel; tenant count combines Woolworths and 12 specialties",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-westlands-plaza-manager",
+      "place_id": "place-au-qld-westlands-plaza",
+      "group_id": "group-mcconaghy",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/westlands-plaza/",
+      "source_type": "Official current owner manager property and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy identifies Westlands Plaza as a purchased current asset formally classifies it and links its in-house leasing channel; tenant count combines Woolworths and 12 specialties",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-westlands-plaza-operator",
+      "place_id": "place-au-qld-westlands-plaza",
+      "group_id": "group-mcconaghy",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/westlands-plaza/",
+      "source_type": "Official current owner manager property and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy identifies Westlands Plaza as a purchased current asset formally classifies it and links its in-house leasing channel; tenant count combines Woolworths and 12 specialties",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-westlands-plaza-leasing_controller",
+      "place_id": "place-au-qld-westlands-plaza",
+      "group_id": "group-mcconaghy",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/westlands-plaza/",
+      "source_type": "Official current owner manager property and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy identifies Westlands Plaza as a purchased current asset formally classifies it and links its in-house leasing channel; tenant count combines Woolworths and 12 specialties",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-rose-city-management-manager",
+      "place_id": "place-au-qld-rose-city-shoppingworld",
+      "group_id": "group-mcconaghy",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.mcconaghygroup.com/shopping_centres/rose-city-shoppingworld/",
+      "source_type": "Official current centre-management portfolio and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy's current portfolio and venue sources establish management and direct leasing plus 65 stores and 3.1 million annual visits; beneficial ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-rose-city-management-operator",
+      "place_id": "place-au-qld-rose-city-shoppingworld",
+      "group_id": "group-mcconaghy",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.mcconaghygroup.com/shopping_centres/rose-city-shoppingworld/",
+      "source_type": "Official current centre-management portfolio and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy's current portfolio and venue sources establish management and direct leasing plus 65 stores and 3.1 million annual visits; beneficial ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-rose-city-management-leasing_controller",
+      "place_id": "place-au-qld-rose-city-shoppingworld",
+      "group_id": "group-mcconaghy",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.mcconaghygroup.com/shopping_centres/rose-city-shoppingworld/",
+      "source_type": "Official current centre-management portfolio and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "McConaghy's current portfolio and venue sources establish management and direct leasing plus 65 stores and 3.1 million annual visits; beneficial ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-first-asset-griffith-central-manager",
+      "place_id": "place-au-nsw-griffith-central-shopping-centre",
+      "group_id": "group-first-asset-management",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://griffithcentral.com.au/under-new-management/",
+      "source_type": "Official current managing-agent appointment and leasing announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The centre's current announcement appoints First Asset Management as managing agent to lead day-to-day management and the strategic leasing program; ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-first-asset-griffith-central-operator",
+      "place_id": "place-au-nsw-griffith-central-shopping-centre",
+      "group_id": "group-first-asset-management",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://griffithcentral.com.au/under-new-management/",
+      "source_type": "Official current managing-agent appointment and leasing announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The centre's current announcement appoints First Asset Management as managing agent to lead day-to-day management and the strategic leasing program; ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-first-asset-griffith-central-external_leasing_agent",
+      "place_id": "place-au-nsw-griffith-central-shopping-centre",
+      "group_id": "group-first-asset-management",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://griffithcentral.com.au/under-new-management/",
+      "source_type": "Official current managing-agent appointment and leasing announcement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The centre's current announcement appoints First Asset Management as managing agent to lead day-to-day management and the strategic leasing program; ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mirvac-st-marys-village-leasing-external_leasing_agent",
+      "place_id": "place-au-nsw-st-marys-village-shopping-centre",
+      "group_id": "group-mirvac",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.mirvacretail.com.au/centres/-/media/b6cb681353d2407c9ee1325d82812c91.ashx",
+      "source_type": "Current official leasing brochure",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current public brochure identifies Mirvac Leasing as the leasing channel; this does not assert Mirvac ownership or property management",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-hdn-warilla-grove-owner-owner",
+      "place_id": "place-au-nsw-warilla-grove-shopping-centre",
+      "group_id": "group-homeco-daily-needs-reit",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "source_type": "Official current listed-fund results",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "HDN's current results confirm the August 2025 acquisition and report current GLA portfolio metrics and daily-needs format",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-hmc-warilla-grove-management-manager",
+      "place_id": "place-au-nsw-warilla-grove-shopping-centre",
+      "group_id": "group-hmc-capital",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "source_type": "Official current listed-fund and asset-manager results",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "HMC manages the HomeCo Daily Needs REIT portfolio and its current results include Warilla Grove; current leasing control is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-hmc-warilla-grove-management-operator",
+      "place_id": "place-au-nsw-warilla-grove-shopping-centre",
+      "group_id": "group-hmc-capital",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "source_type": "Official current listed-fund and asset-manager results",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "HMC manages the HomeCo Daily Needs REIT portfolio and its current results include Warilla Grove; current leasing control is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
       "relationship_id": "rel-portfolio-perron-galleria-co_owner",
       "place_id": "place-au-wa-morley-galleria",
       "group_id": "group-perron",
@@ -27534,6 +27860,190 @@
       "public_note": "McConaghy identifies Castletown as a purchased current asset in its portfolio formally classifies it as Sub Regional and links its in-house leasing channel; tenant count combines the published three majors four mini-majors and 119 specialties",
       "match_status": "Matched",
       "matched_place_id": "place-au-qld-castletown-shoppingworld"
+    },
+    {
+      "portfolio_asset_id": "mrp-toowoomba-plaza-owner",
+      "group_id": "group-mcconaghy-retail-property-fund",
+      "canonical_name": "Toowoomba Plaza",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Toowoomba Plaza Shopping Centre",
+      "preferred_place_id": "place-au-qld-toowoomba-plaza",
+      "roles": "OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "13104",
+      "tenancy_count": "26",
+      "annual_visits_m": "",
+      "source_url": "https://mcconaghyproperties.com.au/mcconaghy-retail-property-fund/",
+      "source_type": "Official current investment-fund and property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "McConaghy identifies Toowoomba Plaza as an initial investment of the active MRP Fund; tenant count combines the published two majors and 24 specialty stores",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-toowoomba-plaza"
+    },
+    {
+      "portfolio_asset_id": "mcconaghy-toowoomba-plaza",
+      "group_id": "group-mcconaghy",
+      "canonical_name": "Toowoomba Plaza",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Toowoomba Plaza Shopping Centre",
+      "preferred_place_id": "place-au-qld-toowoomba-plaza",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "13104",
+      "tenancy_count": "26",
+      "annual_visits_m": "",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/toowoomba-plaza/",
+      "source_type": "Official current manager property and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "McConaghy's current profile formally classifies the centre publishes its metrics and links its in-house leasing channel",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-toowoomba-plaza"
+    },
+    {
+      "portfolio_asset_id": "mcconaghy-westlands-plaza",
+      "group_id": "group-mcconaghy",
+      "canonical_name": "Westlands Plaza",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Westlands Plaza Shopping Centre",
+      "preferred_place_id": "place-au-qld-westlands-plaza",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "4908",
+      "tenancy_count": "13",
+      "annual_visits_m": "",
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/westlands-plaza/",
+      "source_type": "Official current owner manager property and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "McConaghy identifies Westlands Plaza as a purchased current asset formally classifies it and links its in-house leasing channel; tenant count combines Woolworths and 12 specialties",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-westlands-plaza"
+    },
+    {
+      "portfolio_asset_id": "mcconaghy-rose-city-management",
+      "group_id": "group-mcconaghy",
+      "canonical_name": "Rose City Shoppingworld",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Rose City Centre",
+      "preferred_place_id": "place-au-qld-rose-city-shoppingworld",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "65",
+      "annual_visits_m": "3.1",
+      "source_url": "https://www.mcconaghygroup.com/shopping_centres/rose-city-shoppingworld/",
+      "source_type": "Official current centre-management portfolio and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "McConaghy's current portfolio and venue sources establish management and direct leasing plus 65 stores and 3.1 million annual visits; beneficial ownership is not asserted",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-rose-city-shoppingworld"
+    },
+    {
+      "portfolio_asset_id": "first-asset-griffith-central",
+      "group_id": "group-first-asset-management",
+      "canonical_name": "Griffith Central Shopping Centre",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Griffith Central",
+      "preferred_place_id": "place-au-nsw-griffith-central-shopping-centre",
+      "roles": "MANAGER|OPERATOR|EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "1.25",
+      "source_url": "https://griffithcentral.com.au/under-new-management/",
+      "source_type": "Official current managing-agent appointment and leasing announcement",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The centre's current announcement appoints First Asset Management as managing agent to lead day-to-day management and the strategic leasing program; ownership is not asserted",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-griffith-central-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "mirvac-st-marys-village-leasing",
+      "group_id": "group-mirvac",
+      "canonical_name": "St Marys Village",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "St Marys Village Shopping Centre",
+      "preferred_place_id": "place-au-nsw-st-marys-village-shopping-centre",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.mirvacretail.com.au/centres/-/media/b6cb681353d2407c9ee1325d82812c91.ashx",
+      "source_type": "Current official leasing brochure",
+      "source_date": "2026-05-01",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current public brochure identifies Mirvac Leasing as the leasing channel; this does not assert Mirvac ownership or property management",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-st-marys-village-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "hdn-warilla-grove-owner",
+      "group_id": "group-homeco-daily-needs-reit",
+      "canonical_name": "Warilla Grove",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Warilla Grove Shopping Centre|HomeCo Warilla Grove",
+      "preferred_place_id": "place-au-nsw-warilla-grove-shopping-centre",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "11416",
+      "tenancy_count": "58",
+      "annual_visits_m": "5.8",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "source_type": "Official current listed-fund results",
+      "source_date": "2025-12-31",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "HDN's current results confirm the August 2025 acquisition and report current GLA portfolio metrics and daily-needs format",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-warilla-grove-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "hmc-warilla-grove-management",
+      "group_id": "group-hmc-capital",
+      "canonical_name": "Warilla Grove",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Warilla Grove Shopping Centre|HomeCo Warilla Grove",
+      "preferred_place_id": "place-au-nsw-warilla-grove-shopping-centre",
+      "roles": "MANAGER|OPERATOR",
+      "ownership_percentage": "",
+      "gla_sqm": "11416",
+      "tenancy_count": "58",
+      "annual_visits_m": "5.8",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "source_type": "Official current listed-fund and asset-manager results",
+      "source_date": "2025-12-31",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "HMC manages the HomeCo Daily Needs REIT portfolio and its current results include Warilla Grove; current leasing control is not asserted",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-warilla-grove-shopping-centre"
     },
     {
       "portfolio_asset_id": "perron-galleria",
@@ -49893,32 +50403,40 @@
     },
     "place-au-nsw-griffith-central-shopping-centre": {
       "place_id": "place-au-nsw-griffith-central-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-griffith-central-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://griffithcentral.com.au/under-new-management/",
+        "source_type": "Official current centre management and leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional class inferred from the Target-anchored regional centre and mixed national chain and local specialty offer; the source does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-griffith-central-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://griffithcentral.com.au/under-new-management/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current official centre sources confirm First Asset Management management operation and leasing address inferred class public visits and mapped Specsavers tenancy; beneficial ownership remains explicitly unknown"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-first-asset-griffith-central-manager",
+        "rel-portfolio-first-asset-griffith-central-operator",
+        "rel-portfolio-first-asset-griffith-central-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-first-asset-management"
+      ],
       "owner_names": [],
-      "manager_names": [],
+      "manager_names": [
+        "First Asset Management"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -49967,7 +50485,10 @@
         "median_household_income": 1012,
         "age_45_plus_pct": 38.9,
         "retail_businesses": 145
-      }
+      },
+      "annual_visits": 1250000.0,
+      "source_url": "https://griffithcentral.com.au/under-new-management/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-grove-square": {
       "place_id": "place-au-nsw-grove-square",
@@ -54967,30 +55488,34 @@
     },
     "place-au-nsw-st-marys-village-shopping-centre": {
       "place_id": "place-au-nsw-st-marys-village-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-st-marys-village-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.stmarysvillage.com.au/",
+        "source_type": "Official current centre profile and directory",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional class inferred from Kmart and Woolworths anchors plus more than 35 specialty stores; the source does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-st-marys-village-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.stmarysvillage.com.au/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue and Mirvac sources confirm address inferred class active tenant directory and external leasing channel; ownership and property management remain explicitly unknown"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-mirvac-st-marys-village-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-mirvac"
+      ],
       "owner_names": [],
       "manager_names": [],
       "has_bailey": false,
@@ -57092,32 +57617,43 @@
     },
     "place-au-nsw-warilla-grove-shopping-centre": {
       "place_id": "place-au-nsw-warilla-grove-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Neighbourhood",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-warilla-grove-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Neighbourhood",
+        "classification_method": "Inferred",
+        "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+        "source_type": "Official current listed-fund asset profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Neighbourhood class inferred from HDN's description of a double-supermarket-anchored daily-needs centre; the source does not publish a formal SCCA class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-warilla-grove-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current HDN and venue sources confirm ownership HMC management address inferred class public metrics and mapped Specsavers tenancy; leasing control remains explicitly unknown"
       },
       "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "relationship_ids": [
+        "rel-portfolio-hdn-warilla-grove-owner-owner",
+        "rel-portfolio-hmc-warilla-grove-management-manager",
+        "rel-portfolio-hmc-warilla-grove-management-operator"
+      ],
+      "group_ids": [
+        "group-hmc-capital",
+        "group-homeco-daily-needs-reit"
+      ],
+      "owner_names": [
+        "HomeCo Daily Needs REIT"
+      ],
+      "manager_names": [
+        "HMC Capital"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -57155,7 +57691,12 @@
         "median_household_income": 755,
         "age_45_plus_pct": 47.3,
         "retail_businesses": 56
-      }
+      },
+      "gla_sqm": 11416.0,
+      "tenancy_count": 58,
+      "annual_visits": 5800000.0,
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-warrawong-plaza-shopping-centre": {
       "place_id": "place-au-nsw-warrawong-plaza-shopping-centre",
@@ -68929,32 +69470,40 @@
     },
     "place-au-qld-rose-city-shoppingworld": {
       "place_id": "place-au-qld-rose-city-shoppingworld",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-qld-rose-city-shoppingworld",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.mcconaghygroup.com/shopping_centres/rose-city-shoppingworld/",
+        "source_type": "Official current manager portfolio profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional class inferred from Woolworths Coles and Big W anchors plus 65 stores; the source does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-qld-rose-city-shoppingworld",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.mcconaghygroup.com/shopping_centres/rose-city-shoppingworld/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current McConaghy and venue sources confirm management operation direct leasing address inferred class public metrics and mapped Specsavers tenancy; beneficial ownership remains explicitly unknown"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-mcconaghy-rose-city-management-manager",
+        "rel-portfolio-mcconaghy-rose-city-management-operator",
+        "rel-portfolio-mcconaghy-rose-city-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-mcconaghy"
+      ],
       "owner_names": [],
-      "manager_names": [],
+      "manager_names": [
+        "McConaghy Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -69003,7 +69552,11 @@
         "median_household_income": 741,
         "age_45_plus_pct": 49,
         "retail_businesses": 99
-      }
+      },
+      "tenancy_count": 65,
+      "annual_visits": 3100000.0,
+      "source_url": "https://www.mcconaghygroup.com/shopping_centres/rose-city-shoppingworld/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-qld-runaway-bay-shopping-village": {
       "place_id": "place-au-qld-runaway-bay-shopping-village",
@@ -71229,35 +71782,47 @@
     },
     "place-au-qld-toowoomba-plaza": {
       "place_id": "place-au-qld-toowoomba-plaza",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-qld-toowoomba-plaza",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://mcconaghyproperties.com.au/our-centres/toowoomba-plaza/",
+        "source_type": "Official current owner-manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "McConaghy explicitly classifies Toowoomba Plaza as a Sub Regional centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-qld-toowoomba-plaza",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://mcconaghyproperties.com.au/our-centres/toowoomba-plaza/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current McConaghy fund property and venue sources confirm the owning fund management operation direct leasing address formal class public metrics and mapped Specsavers tenancy"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-mrp-toowoomba-plaza-owner-owner",
+        "rel-portfolio-mcconaghy-toowoomba-plaza-manager",
+        "rel-portfolio-mcconaghy-toowoomba-plaza-operator",
+        "rel-portfolio-mcconaghy-toowoomba-plaza-leasing_controller"
+      ],
+      "group_ids": [
+        "group-mcconaghy",
+        "group-mcconaghy-retail-property-fund"
+      ],
+      "owner_names": [
+        "McConaghy Retail Property Fund"
+      ],
+      "manager_names": [
+        "McConaghy Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 3.69,
@@ -71292,7 +71857,11 @@
         "median_household_income": 886,
         "age_45_plus_pct": 35.1,
         "retail_businesses": 49
-      }
+      },
+      "gla_sqm": 13104.0,
+      "tenancy_count": 26,
+      "source_url": "https://mcconaghyproperties.com.au/mcconaghy-retail-property-fund/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-qld-stockland-townsville": {
       "place_id": "place-au-qld-stockland-townsville",
@@ -72047,35 +72616,46 @@
     },
     "place-au-qld-westlands-plaza": {
       "place_id": "place-au-qld-westlands-plaza",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-qld-westlands-plaza",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://mcconaghyproperties.com.au/our-centres/westlands-plaza/",
+        "source_type": "Official current owner-manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "McConaghy explicitly classifies Westlands Plaza as a Sub Regional centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-qld-westlands-plaza",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://mcconaghyproperties.com.au/our-centres/westlands-plaza/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current McConaghy and venue sources confirm ownership management operation direct leasing address formal class public metrics and current optical directory"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-mcconaghy-westlands-plaza-owner",
+        "rel-portfolio-mcconaghy-westlands-plaza-manager",
+        "rel-portfolio-mcconaghy-westlands-plaza-operator",
+        "rel-portfolio-mcconaghy-westlands-plaza-leasing_controller"
+      ],
+      "group_ids": [
+        "group-mcconaghy"
+      ],
+      "owner_names": [
+        "McConaghy Group"
+      ],
+      "manager_names": [
+        "McConaghy Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 331.56,
@@ -72098,7 +72678,11 @@
         "median_household_income": 1110,
         "age_45_plus_pct": 36.4,
         "retail_businesses": 45
-      }
+      },
+      "gla_sqm": 4908.0,
+      "tenancy_count": 13,
+      "source_url": "https://mcconaghyproperties.com.au/our-centres/westlands-plaza/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-qld-whitsunday-plaza": {
       "place_id": "place-au-qld-whitsunday-plaza",
@@ -121662,7 +122246,7 @@
     },
     "group-mirvac": {
       "group_id": "group-mirvac",
-      "property_count": 6,
+      "property_count": 7,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -121684,6 +122268,9 @@
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
+        ],
+        "place-au-nsw-st-marys-village-shopping-centre": [
+          "EXTERNAL_LEASING_AGENT"
         ],
         "place-au-qld-kawana-shoppingworld": [
           "CO_OWNER",
@@ -122578,7 +123165,7 @@
     },
     "group-mcconaghy": {
       "group_id": "group-mcconaghy",
-      "property_count": 4,
+      "property_count": 7,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -122601,6 +123188,22 @@
           "OWNER"
         ],
         "place-au-qld-kingaroy-plaza": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ],
+        "place-au-qld-rose-city-shoppingworld": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-qld-toowoomba-plaza": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-qld-westlands-plaza": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR",
@@ -123407,7 +124010,7 @@
     },
     "group-hmc-capital": {
       "group_id": "group-hmc-capital",
-      "property_count": 4,
+      "property_count": 5,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -123425,6 +124028,10 @@
           "OPERATOR"
         ],
         "place-au-nsw-roselands-shopping-centre": [
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-nsw-warilla-grove-shopping-centre": [
           "MANAGER",
           "OPERATOR"
         ]
@@ -123987,12 +124594,15 @@
     },
     "group-homeco-daily-needs-reit": {
       "group_id": "group-homeco-daily-needs-reit",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
         "place-au-nsw-glenmore-park-town-centre": [
+          "OWNER"
+        ],
+        "place-au-nsw-warilla-grove-shopping-centre": [
           "OWNER"
         ]
       },
@@ -124098,6 +124708,34 @@
       "asset_roles": {
         "place-au-nsw-bathurst-city-centre": [
           "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-mcconaghy-retail-property-fund": {
+      "group_id": "group-mcconaghy-retail-property-fund",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-toowoomba-plaza": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-first-asset-management": {
+      "group_id": "group-first-asset-management",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-griffith-central-shopping-centre": [
+          "EXTERNAL_LEASING_AGENT",
+          "MANAGER",
+          "OPERATOR"
         ]
       },
       "white_space_property_ids": []
@@ -137489,7 +138127,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -137503,10 +138141,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 294.74,
-          "group_ids": [],
+          "group_ids": [
+            "group-first-asset-management"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -140003,7 +140643,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -140017,10 +140657,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 22.22,
-          "group_ids": [],
+          "group_ids": [
+            "group-mirvac"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -140945,7 +141587,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Neighbourhood"
         }
       },
       "accessibility": {
@@ -140959,10 +141601,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 60.9,
-          "group_ids": [],
+          "group_ids": [
+            "group-hmc-capital",
+            "group-homeco-daily-needs-reit"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -146933,7 +147578,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -146947,10 +147592,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 73.14,
-          "group_ids": [],
+          "group_ids": [
+            "group-mcconaghy"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -148024,7 +148671,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -148038,11 +148685,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 3.69,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-mcconaghy",
+            "group-mcconaghy-retail-property-fund"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -148372,7 +149022,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -148386,11 +149036,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 331.56,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-mcconaghy"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
