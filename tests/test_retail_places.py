@@ -373,6 +373,51 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(len(memberships), 2)
         self.assertTrue(all(row["location_setting"] == "High Street" for row in memberships))
 
+    def test_salamander_deepwater_and_crown_memberships_follow_current_public_evidence(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+
+        salamander = places["place-au-nsw-salamander-shopping-centre"]
+        self.assertEqual(salamander["name"], "Salamander Bay Square")
+        self.assertEqual(salamander["address"], "2 Town Centre Circuit")
+        self.assertNotIn("place-au-nsw-town-centre-circuit", places)
+        salamander_memberships = [
+            row for row in self.memberships
+            if row["place_id"] == "place-au-nsw-salamander-shopping-centre"
+        ]
+        self.assertEqual(
+            {row["store_id"] for row in salamander_memberships},
+            {"opsm-1375", "specsavers-3563"},
+        )
+
+        deepwater = places["place-au-nsw-deepwater-plaza-centre"]
+        self.assertEqual(deepwater["name"], "Deepwater Plaza")
+        self.assertEqual(deepwater["postcode"], "2256")
+        deepwater_memberships = [
+            row for row in self.memberships
+            if row["place_id"] == "place-au-nsw-deepwater-plaza-centre"
+        ]
+        self.assertEqual(
+            {row["store_id"] for row in deepwater_memberships},
+            {"opsm-1311", "specsavers-3538"},
+        )
+        self.assertTrue(all(row["location_setting"] == "Shopping Centre" for row in deepwater_memberships))
+
+        crown = places["place-au-nsw-crown-st-mall"]
+        self.assertEqual(crown["name"], "Crown Street Mall")
+        self.assertEqual(crown["location_setting"], "High Street")
+        self.assertEqual(crown["place_type"], "High Street Corridor")
+        crown_memberships = [
+            row for row in self.memberships
+            if row["place_id"] == "place-au-nsw-crown-st-mall"
+        ]
+        self.assertEqual({row["store_id"] for row in crown_memberships}, {"specsavers-3456"})
+        self.assertTrue(all(row["location_setting"] == "High Street" for row in crown_memberships))
+
+        rockdale = places["place-au-nsw-rockdale-plaza-drive"]
+        self.assertEqual(rockdale["name"], "Rockdale Plaza")
+        self.assertEqual(rockdale["address"], "1 Rockdale Plaza Drive")
+        self.assertEqual(rockdale["postcode"], "2216")
+
     def test_current_charter_hall_nsw_batch_has_complete_public_addresses(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         expected = {

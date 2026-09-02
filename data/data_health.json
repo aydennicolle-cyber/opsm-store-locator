@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-09-02T04:00:14+00:00",
+  "generated_at": "2026-09-02T04:06:54+00:00",
   "coverage_as_of": "2026-09-02",
   "certification_status": "Operational",
   "coverage_statement": "The network uses best-available public store data. Freshness, location setting and canonical place confidence are reported separately.",
@@ -14,13 +14,13 @@
     "usable_stores": 1126,
     "usable_named_network_stores": 1067,
     "current_named_network_stores": 1067,
-    "places": 1032,
-    "centres": 584,
+    "places": 1030,
+    "centres": 582,
     "corridors": 448
   },
   "changes_from_baseline": {
     "stores": -41,
-    "places": 638
+    "places": 636
   },
   "dimensions": {
     "source_freshness": 75.0,
@@ -82,7 +82,7 @@
     "Shopping Centre": 701
   },
   "place_types": {
-    "Shopping Centre": 584,
+    "Shopping Centre": 582,
     "High Street Corridor": 448
   },
   "sources": [
@@ -290,7 +290,7 @@
       "required": false,
       "snapshot": "data/property_intelligence.json",
       "completion_status": "partial",
-      "last_success": "2026-09-02T03:59:25.104855+00:00",
+      "last_success": "2026-09-02T04:06:03.453482+00:00",
       "age_days": 0,
       "max_age_days": 180,
       "available": true,
@@ -303,21 +303,21 @@
     "coverage_statement": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
     "portfolio_overlap_note": "Portfolio overlap is derived from public tenancy and property-group evidence; it is not proof of a private commercial relationship.",
     "dimensions": {
-      "research_coverage": 45.0,
+      "research_coverage": 45.7,
       "relationship_freshness": 99.9,
-      "centre_class_coverage": 43.5,
+      "centre_class_coverage": 44.2,
       "bailey_centre_research_coverage": 100.0,
       "bailey_centre_class_coverage": 100.0,
       "conflict_reconciliation": 100.0
     },
     "counts": {
-      "groups": 133,
-      "relationships": 869,
-      "current_relationships": 868,
+      "groups": 135,
+      "relationships": 884,
+      "current_relationships": 883,
       "stale_relationships": 1,
-      "shopping_centres": 584,
-      "researched_centres": 263,
-      "classed_centres": 254,
+      "shopping_centres": 582,
+      "researched_centres": 266,
+      "classed_centres": 257,
       "bailey_centres": 45,
       "researched_bailey_centres": 45,
       "classed_bailey_centres": 45,
@@ -5133,7 +5133,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-nsw-town-centre-circuit",
+      "place_id": "place-au-nsw-salamander-shopping-centre",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -5781,7 +5781,7 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
+      "location_setting": "High Street",
       "place_id": "place-au-nsw-crown-st-mall",
       "mapping_confidence": "High",
       "issues": ""
@@ -5792,9 +5792,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-woy-woy-railway-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-deepwater-plaza-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3538": {

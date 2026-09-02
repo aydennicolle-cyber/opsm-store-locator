@@ -1070,6 +1070,49 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(stanhope["gla_sqm"], 19454)
         self.assertEqual(stanhope["annual_visits"], 8000000)
 
+    def test_current_salamander_rockdale_deepwater_and_crown_roles_are_explicit(self) -> None:
+        groups = {group["group_id"]: group for group in self.groups}
+        self.assertEqual(
+            groups["group-charter-hall-prime-retail-fund"]["parent_group_id"],
+            "group-charter-hall",
+        )
+        self.assertEqual(groups["group-charter-hall-prime-retail-fund"]["brand_name"], "CPRF")
+        self.assertEqual(groups["group-raptis-investments"]["group_type"], "PROPERTY_COMPANY")
+
+        salamander = self.payload["property_summaries"]["place-au-nsw-salamander-shopping-centre"]
+        self.assertEqual(salamander["research_status"], "Verified")
+        self.assertEqual(salamander["centre_class"], "Sub-regional")
+        self.assertEqual(
+            salamander["owner_names"],
+            ["Charter Hall Retail REIT", "Charter Hall Prime Retail Fund"],
+        )
+        self.assertEqual(salamander["manager_names"], ["Charter Hall"])
+        self.assertEqual(salamander["leasing_arrangement"], "External agency")
+        self.assertEqual(salamander["gla_sqm"], 23875)
+        self.assertIn("group-jll", salamander["group_ids"])
+
+        rockdale = self.payload["property_summaries"]["place-au-nsw-rockdale-plaza-drive"]
+        self.assertEqual(rockdale["research_status"], "Verified")
+        self.assertEqual(rockdale["centre_class"], "Sub-regional")
+        self.assertEqual(rockdale["owner_names"], ["Charter Hall Convenience Retail Fund"])
+        self.assertEqual(rockdale["manager_names"], ["Charter Hall"])
+        self.assertEqual(rockdale["leasing_arrangement"], "External agency")
+        self.assertEqual(rockdale["gla_sqm"], 21608)
+
+        deepwater = self.payload["property_summaries"]["place-au-nsw-deepwater-plaza-centre"]
+        self.assertEqual(deepwater["research_status"], "Verified")
+        self.assertEqual(deepwater["centre_class"], "Sub-regional")
+        self.assertEqual(deepwater["owner_names"], ["Raptis Investments Pty Ltd"])
+        self.assertEqual(deepwater["manager_names"], ["Raptis Investments Pty Ltd"])
+        self.assertEqual(deepwater["leasing_arrangement"], "In-house")
+
+        crown = self.payload["property_summaries"]["place-au-nsw-crown-st-mall"]
+        self.assertEqual(crown["research_status"], "Verified unknown")
+        self.assertEqual(crown["centre_class"], "Unknown")
+        self.assertEqual(crown["owner_names"], [])
+        self.assertEqual(crown["manager_names"], [])
+        self.assertEqual(crown["leasing_arrangement"], "Unknown")
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})
