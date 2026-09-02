@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-09-02T04:29:44+00:00",
+  "generated_at": "2026-09-02T04:41:11+00:00",
   "coverage_as_of": "2026-09-02",
   "certification_status": "Operational",
   "coverage_statement": "The network uses best-available public store data. Freshness, location setting and canonical place confidence are reported separately.",
@@ -14,13 +14,13 @@
     "usable_stores": 1126,
     "usable_named_network_stores": 1067,
     "current_named_network_stores": 1067,
-    "places": 1018,
-    "centres": 575,
+    "places": 1022,
+    "centres": 579,
     "corridors": 443
   },
   "changes_from_baseline": {
     "stores": -41,
-    "places": 624
+    "places": 628
   },
   "dimensions": {
     "source_freshness": 75.0,
@@ -82,7 +82,7 @@
     "Shopping Centre": 706
   },
   "place_types": {
-    "Shopping Centre": 575,
+    "Shopping Centre": 579,
     "High Street Corridor": 443
   },
   "sources": [
@@ -290,7 +290,7 @@
       "required": false,
       "snapshot": "data/property_intelligence.json",
       "completion_status": "partial",
-      "last_success": "2026-09-02T04:28:49.342689+00:00",
+      "last_success": "2026-09-02T04:41:08.006128+00:00",
       "age_days": 0,
       "max_age_days": 180,
       "available": true,
@@ -303,26 +303,26 @@
     "coverage_statement": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
     "portfolio_overlap_note": "Portfolio overlap is derived from public tenancy and property-group evidence; it is not proof of a private commercial relationship.",
     "dimensions": {
-      "research_coverage": 47.3,
+      "research_coverage": 47.7,
       "relationship_freshness": 99.9,
-      "centre_class_coverage": 45.9,
+      "centre_class_coverage": 46.3,
       "bailey_centre_research_coverage": 100.0,
       "bailey_centre_class_coverage": 100.0,
       "conflict_reconciliation": 100.0
     },
     "counts": {
       "groups": 137,
-      "relationships": 913,
-      "current_relationships": 912,
+      "relationships": 926,
+      "current_relationships": 925,
       "stale_relationships": 1,
-      "shopping_centres": 575,
-      "researched_centres": 272,
-      "classed_centres": 264,
+      "shopping_centres": 579,
+      "researched_centres": 276,
+      "classed_centres": 268,
       "bailey_centres": 45,
       "researched_bailey_centres": 45,
       "classed_bailey_centres": 45,
       "conflicts": 0,
-      "review_items": 12
+      "review_items": 7
     },
     "freshness_policy_days": {
       "ownership_management": 180,

@@ -1266,6 +1266,64 @@ class PropertyIntelligenceTests(unittest.TestCase):
             }.issubset(galleria_roles)
         )
 
+    def test_current_qic_everyday_assets_and_coomera_identity_are_explicit(self) -> None:
+        coomera = self.payload["property_summaries"]["place-au-qld-westfield-coomera"]
+        self.assertEqual(coomera["research_status"], "Partial")
+        self.assertEqual(coomera["centre_class"], "Regional")
+        self.assertEqual(coomera["centre_class_method"], "Inferred")
+        self.assertEqual(coomera["owner_names"], ["Scentre Group", "QIC Real Estate"])
+        self.assertEqual(coomera["leasing_arrangement"], "Unknown")
+        self.assertEqual(coomera["gla_sqm"], 57900)
+        coomera_roles = {
+            (row["group_id"], row["role"], row.get("ownership_percentage"))
+            for row in self.relationships
+            if row["place_id"] == "place-au-qld-westfield-coomera"
+        }
+        self.assertIn(("group-scentre", "CO_OWNER", 50.0), coomera_roles)
+        self.assertIn(("group-qic", "CO_OWNER", 50.0), coomera_roles)
+
+        expected = {
+            "place-au-qld-big-top-shopping-centre": (
+                "Neighbourhood", "Inferred", 12226, 18, 2400000
+            ),
+            "place-au-qld-forest-lake-shopping-centre": (
+                "Sub-regional", "Inferred", 21450, 55, 4900000
+            ),
+            "place-au-qld-the-village-upper-mount-gravatt": (
+                "Neighbourhood", "Inferred", 6887, 24, 1100000
+            ),
+            "place-au-nsw-pittwater-place": (
+                "Neighbourhood", "Confirmed", 8135, 26, 2900000
+            ),
+        }
+        for place_id, (centre_class, method, gla, tenancies, visits) in expected.items():
+            with self.subTest(place_id=place_id):
+                summary = self.payload["property_summaries"][place_id]
+                self.assertEqual(summary["research_status"], "Partial")
+                self.assertEqual(summary["centre_class"], centre_class)
+                self.assertEqual(summary["centre_class_method"], method)
+                self.assertEqual(summary["owner_names"], [])
+                self.assertEqual(summary["manager_names"], ["QIC Real Estate"])
+                self.assertEqual(summary["leasing_arrangement"], "In-house")
+                self.assertEqual(summary["gla_sqm"], gla)
+                self.assertEqual(summary["tenancy_count"], tenancies)
+                self.assertEqual(summary["annual_visits"], visits)
+                roles = {
+                    (row["group_id"], row["role"])
+                    for row in self.relationships
+                    if row["place_id"] == place_id
+                }
+                self.assertTrue(
+                    {
+                        ("group-qic", "MANAGER"),
+                        ("group-qic", "OPERATOR"),
+                        ("group-qic", "LEASING_CONTROLLER"),
+                    }.issubset(roles)
+                )
+
+        review_ids = {item["review_id"] for item in self.payload["review_items"]}
+        self.assertFalse(any(review_id.startswith("review-portfolio-qic-") for review_id in review_ids))
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

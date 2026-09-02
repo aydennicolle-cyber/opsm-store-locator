@@ -783,13 +783,43 @@ class RetailPlaceTests(unittest.TestCase):
 
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
-        for place_id, expected_name in {
-            "place-au-nsw-wallsend-village": "Wallsend Village",
-            "place-au-qld-the-station-oxley": "The Station Oxley",
+        for place_id, (expected_name, expected_address, expected_postcode) in {
+            "place-au-nsw-wallsend-village": (
+                "Wallsend Village",
+                "24 Kokera Street",
+                "2287",
+            ),
+            "place-au-qld-the-station-oxley": (
+                "The Station Oxley",
+                "157 Oxley Station Road",
+                "4075",
+            ),
+            "place-au-qld-big-top-shopping-centre": (
+                "Big Top Shopping Centre",
+                "12-20 Ocean Street",
+                "4558",
+            ),
+            "place-au-qld-forest-lake-shopping-centre": (
+                "Forest Lake Shopping Centre",
+                "235 Forest Lake Boulevard",
+                "4078",
+            ),
+            "place-au-qld-the-village-upper-mount-gravatt": (
+                "The Village Upper Mount Gravatt",
+                "1932 Logan Road",
+                "4122",
+            ),
+            "place-au-nsw-pittwater-place": (
+                "Pittwater Place",
+                "10 Park Street",
+                "2103",
+            ),
         }.items():
             with self.subTest(place_id=place_id):
                 place = places[place_id]
                 self.assertEqual(place["name"], expected_name)
+                self.assertEqual(place["address"], expected_address)
+                self.assertEqual(place["postcode"], expected_postcode)
                 self.assertEqual(place["optical_store_count"], 0)
                 self.assertEqual(place["confidence"], "High")
                 self.assertTrue(place["official_url"].startswith("https://"))
