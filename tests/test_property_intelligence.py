@@ -987,6 +987,41 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(lidcombe["leasing_arrangement"], "External agency")
         self.assertIn("group-jll", lidcombe["group_ids"])
 
+    def test_current_tweed_warrawong_and_orana_batch_preserves_distinct_roles(self) -> None:
+        groups = {group["group_id"]: group for group in self.groups}
+        self.assertEqual(
+            groups["group-tweed-mall-mixed-use-real-estate-fund"]["parent_group_id"],
+            "group-elanor-investors",
+        )
+        self.assertEqual(
+            groups["group-warrawong-plaza-fund"]["parent_group_id"],
+            "group-elanor-investors",
+        )
+
+        tweed = self.payload["property_summaries"]["place-au-nsw-tweed-mall"]
+        self.assertEqual(tweed["research_status"], "Verified")
+        self.assertEqual(tweed["centre_class"], "Sub-regional")
+        self.assertEqual(tweed["owner_names"], ["Tweed Mall Mixed-Use Real Estate Fund"])
+        self.assertEqual(tweed["manager_names"], ["JLL"])
+        self.assertEqual(tweed["leasing_arrangement"], "External agency")
+        self.assertEqual(tweed["gla_sqm"], 23324)
+
+        warrawong = self.payload["property_summaries"]["place-au-nsw-warrawong-plaza-shopping-centre"]
+        self.assertEqual(warrawong["research_status"], "Partial")
+        self.assertEqual(warrawong["centre_class"], "Sub-regional")
+        self.assertEqual(warrawong["owner_names"], ["Warrawong Plaza Fund"])
+        self.assertEqual(warrawong["manager_names"], [])
+        self.assertEqual(warrawong["leasing_arrangement"], "External agency")
+        self.assertIn("group-kyron-capital", warrawong["group_ids"])
+
+        orana = self.payload["property_summaries"]["place-au-nsw-orana-mall-marketplace"]
+        self.assertEqual(orana["research_status"], "Partial")
+        self.assertEqual(orana["centre_class"], "Sub-regional")
+        self.assertEqual(orana["owner_names"], [])
+        self.assertEqual(orana["manager_names"], ["Bachrach Naumburger Group"])
+        self.assertEqual(orana["leasing_arrangement"], "In-house")
+        self.assertEqual(orana["gla_sqm"], 23683.41)
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

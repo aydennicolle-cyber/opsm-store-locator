@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T03:49:50.374750+00:00",
+  "generated_at": "2026-09-02T03:53:58.800643+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 127,
-    "relationship_count": 848,
-    "active_relationship_count": 846,
+    "group_count": 130,
+    "relationship_count": 858,
+    "active_relationship_count": 856,
     "shopping_centre_count": 584,
-    "researched_property_count": 257,
-    "classed_property_count": 247,
+    "researched_property_count": 260,
+    "classed_property_count": 250,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -2180,6 +2180,56 @@
         "Lidcombe Property Holdings Pty Limited ATF Lidcombe Property Holdings Unit Trust",
         "The Trustee for Lidcombe Property Holdings Unit Trust"
       ]
+    },
+    {
+      "group_id": "group-tweed-mall-mixed-use-real-estate-fund",
+      "canonical_name": "Tweed Mall Mixed-Use Real Estate Fund",
+      "parent_group_id": "group-elanor-investors",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.elanorinvestors.com/investors/managed-fund/tweed-mall-fund",
+      "status": "Active",
+      "source_url": "https://www.elanorinvestors.com/investors/managed-fund/tweed-mall-fund",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Tweed Mall Mixed-Use Real Estate Fund",
+        "Tweed Mall Fund"
+      ]
+    },
+    {
+      "group_id": "group-warrawong-plaza-fund",
+      "canonical_name": "Warrawong Plaza Fund",
+      "parent_group_id": "group-elanor-investors",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.elanorinvestors.com/investors/managed-fund/warrawong-plaza-fund",
+      "status": "Active",
+      "source_url": "https://www.elanorinvestors.com/investors/managed-fund/warrawong-plaza-fund",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Warrawong Plaza Fund"
+      ]
+    },
+    {
+      "group_id": "group-kyron-capital",
+      "canonical_name": "Kyron Capital",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "EXTERNAL_AGENCY",
+      "country_scope": "Australia",
+      "official_url": "https://www.kyroncapital.com/",
+      "status": "Active",
+      "source_url": "https://warrawongplaza.com.au/leasing",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Kyron Capital",
+        "Kyron"
+      ]
     }
   ],
   "group_alias_index": {
@@ -2435,7 +2485,12 @@
     "hmclmlpropertytrust1": "group-hmc-last-mile-logistics-property-trust-1",
     "lidcombepropertyholdingsunittrust": "group-lidcombe-property-holdings-unit-trust",
     "lidcombepropertyholdingsptylimitedatflidcombepropertyholdingsunittrust": "group-lidcombe-property-holdings-unit-trust",
-    "thetrusteeforlidcombepropertyholdingsunittrust": "group-lidcombe-property-holdings-unit-trust"
+    "thetrusteeforlidcombepropertyholdingsunittrust": "group-lidcombe-property-holdings-unit-trust",
+    "tweedmallmixeduserealestatefund": "group-tweed-mall-mixed-use-real-estate-fund",
+    "tweedmallfund": "group-tweed-mall-mixed-use-real-estate-fund",
+    "warrawongplazafund": "group-warrawong-plaza-fund",
+    "kyroncapital": "group-kyron-capital",
+    "kyron": "group-kyron-capital"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -16006,6 +16061,166 @@
       "confidence": "High",
       "public_note": "JLL's current leasing portfolio explicitly lists Lidcombe Shopping Centre; the current property manager is not asserted from leasing evidence alone",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-tweed-mall-fund-owner-owner",
+      "place_id": "place-au-nsw-tweed-mall",
+      "group_id": "group-tweed-mall-mixed-use-real-estate-fund",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.elanorinvestors.com/investors/managed-fund/tweed-mall-fund",
+      "source_type": "Official current managed-fund and asset profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Elanor's current fund page identifies Tweed Mall as the fund's single asset and its current asset profile reports the public centre metrics",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-elanor-tweed-mall-management-operator",
+      "place_id": "place-au-nsw-tweed-mall",
+      "group_id": "group-elanor-investors",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.tweedmall.com.au/contact/",
+      "source_type": "Official current venue leasing appointment",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue directs permanent leasing through Elanor while the fund remains the centre owner",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-elanor-tweed-mall-management-leasing_controller",
+      "place_id": "place-au-nsw-tweed-mall",
+      "group_id": "group-elanor-investors",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.tweedmall.com.au/contact/",
+      "source_type": "Official current venue leasing appointment",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue directs permanent leasing through Elanor while the fund remains the centre owner",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-tweed-mall-management-manager",
+      "place_id": "place-au-nsw-tweed-mall",
+      "group_id": "group-jll",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.tweedmall.com.au/casual-mall-leasing/",
+      "source_type": "Official current venue management and casual-leasing appointment",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies its centre management and casual mall leasing functions as JLL appointments",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-tweed-mall-management-external_leasing_agent",
+      "place_id": "place-au-nsw-tweed-mall",
+      "group_id": "group-jll",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.tweedmall.com.au/casual-mall-leasing/",
+      "source_type": "Official current venue management and casual-leasing appointment",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies its centre management and casual mall leasing functions as JLL appointments",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-warrawong-plaza-fund-owner-owner",
+      "place_id": "place-au-nsw-warrawong-plaza-shopping-centre",
+      "group_id": "group-warrawong-plaza-fund",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.elanorinvestors.com/investors/managed-fund/warrawong-plaza-fund",
+      "source_type": "Official current managed-fund and asset profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Elanor's current fund page and 2025 portfolio notice identify Warrawong Plaza Fund as owner of the fund's single retained shopping-centre asset",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-kyron-warrawong-leasing-external_leasing_agent",
+      "place_id": "place-au-nsw-warrawong-plaza-shopping-centre",
+      "group_id": "group-kyron-capital",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://warrawongplaza.com.au/leasing",
+      "source_type": "Official current venue leasing appointment",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Warrawong Plaza's current leasing page appoints Kyron Capital for retail leasing; current centre management is not inferred from that appointment",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-bng-orana-mall-management-manager",
+      "place_id": "place-au-nsw-orana-mall-marketplace",
+      "group_id": "group-bachrach-naumburger",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.oranamall.com.au/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current BNG venue provides its permanent leasing pathway and the group privacy statement identifies Orana Mall's operating entity and BNG-managed shopping-centre functions; beneficial ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-bng-orana-mall-management-operator",
+      "place_id": "place-au-nsw-orana-mall-marketplace",
+      "group_id": "group-bachrach-naumburger",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.oranamall.com.au/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current BNG venue provides its permanent leasing pathway and the group privacy statement identifies Orana Mall's operating entity and BNG-managed shopping-centre functions; beneficial ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-bng-orana-mall-management-leasing_controller",
+      "place_id": "place-au-nsw-orana-mall-marketplace",
+      "group_id": "group-bachrach-naumburger",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.oranamall.com.au/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current BNG venue provides its permanent leasing pathway and the group privacy statement identifies Orana Mall's operating entity and BNG-managed shopping-centre functions; beneficial ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -24495,6 +24710,144 @@
       "public_note": "JLL's current leasing portfolio explicitly lists Lidcombe Shopping Centre; the current property manager is not asserted from leasing evidence alone",
       "match_status": "Matched",
       "matched_place_id": "place-au-nsw-lidcombe-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "tweed-mall-fund-owner",
+      "group_id": "group-tweed-mall-mixed-use-real-estate-fund",
+      "canonical_name": "Tweed Mall",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-tweed-mall",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "23324",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.elanorinvestors.com/investors/managed-fund/tweed-mall-fund",
+      "source_type": "Official current managed-fund and asset profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Elanor's current fund page identifies Tweed Mall as the fund's single asset and its current asset profile reports the public centre metrics",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-tweed-mall"
+    },
+    {
+      "portfolio_asset_id": "elanor-tweed-mall-management",
+      "group_id": "group-elanor-investors",
+      "canonical_name": "Tweed Mall",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-tweed-mall",
+      "roles": "OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "23324",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.tweedmall.com.au/contact/",
+      "source_type": "Official current venue leasing appointment",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue directs permanent leasing through Elanor while the fund remains the centre owner",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-tweed-mall"
+    },
+    {
+      "portfolio_asset_id": "jll-tweed-mall-management",
+      "group_id": "group-jll",
+      "canonical_name": "Tweed Mall",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-tweed-mall",
+      "roles": "MANAGER|EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.tweedmall.com.au/casual-mall-leasing/",
+      "source_type": "Official current venue management and casual-leasing appointment",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue identifies its centre management and casual mall leasing functions as JLL appointments",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-tweed-mall"
+    },
+    {
+      "portfolio_asset_id": "warrawong-plaza-fund-owner",
+      "group_id": "group-warrawong-plaza-fund",
+      "canonical_name": "Warrawong Plaza Shopping Centre",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Warrawong Plaza",
+      "preferred_place_id": "place-au-nsw-warrawong-plaza-shopping-centre",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "42968",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.elanorinvestors.com/investors/managed-fund/warrawong-plaza-fund",
+      "source_type": "Official current managed-fund and asset profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Elanor's current fund page and 2025 portfolio notice identify Warrawong Plaza Fund as owner of the fund's single retained shopping-centre asset",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-warrawong-plaza-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "kyron-warrawong-leasing",
+      "group_id": "group-kyron-capital",
+      "canonical_name": "Warrawong Plaza Shopping Centre",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Warrawong Plaza",
+      "preferred_place_id": "place-au-nsw-warrawong-plaza-shopping-centre",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "42968",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://warrawongplaza.com.au/leasing",
+      "source_type": "Official current venue leasing appointment",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Warrawong Plaza's current leasing page appoints Kyron Capital for retail leasing; current centre management is not inferred from that appointment",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-warrawong-plaza-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "bng-orana-mall-management",
+      "group_id": "group-bachrach-naumburger",
+      "canonical_name": "Orana Mall",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Orana Mall Marketplace",
+      "preferred_place_id": "place-au-nsw-orana-mall-marketplace",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "23683.41",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.oranamall.com.au/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current BNG venue provides its permanent leasing pathway and the group privacy statement identifies Orana Mall's operating entity and BNG-managed shopping-centre functions; beneficial ownership is not asserted",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-orana-mall-marketplace"
     }
   ],
   "property_summaries": {
@@ -49755,32 +50108,40 @@
     },
     "place-au-nsw-orana-mall-marketplace": {
       "place_id": "place-au-nsw-orana-mall-marketplace",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-orana-mall-marketplace",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.oranamall.com.au/wp-content/uploads/2024/12/Permanent-Leasing-Document_JAN-2025.pdf",
+        "source_type": "Official venue leasing fact sheet",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from 23683.41 square metres of gross lettable area plus Big W Woolworths JB Hi-Fi Home and 70 specialty stores; the venue does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-orana-mall-marketplace",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.oranamall.com.au/leasing/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue and BNG evidence confirm in-house management operations direct leasing address and a defensible inferred sub-regional class; beneficial ownership remains unpublished"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-bng-orana-mall-management-manager",
+        "rel-portfolio-bng-orana-mall-management-operator",
+        "rel-portfolio-bng-orana-mall-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-bachrach-naumburger"
+      ],
       "owner_names": [],
-      "manager_names": [],
+      "manager_names": [
+        "Bachrach Naumburger Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -49818,7 +50179,10 @@
         "median_household_income": 1062,
         "age_45_plus_pct": 37.4,
         "retail_businesses": 120
-      }
+      },
+      "gla_sqm": 23683.41,
+      "source_url": "https://www.oranamall.com.au/leasing/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-orange-central-square": {
       "place_id": "place-au-nsw-orange-central-square",
@@ -53277,35 +53641,49 @@
     },
     "place-au-nsw-tweed-mall": {
       "place_id": "place-au-nsw-tweed-mall",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-tweed-mall",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.elanorinvestors.com/investments/asset/tweed-mall",
+        "source_type": "Official current owner asset profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Elanor's current asset profile explicitly classifies Tweed Mall as a sub-regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-tweed-mall",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.elanorinvestors.com/investors/managed-fund/tweed-mall-fund",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current fund asset and venue sources confirm 100 percent fund ownership Elanor permanent leasing JLL centre management and casual leasing plus a confirmed sub-regional class"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-tweed-mall-fund-owner-owner",
+        "rel-portfolio-elanor-tweed-mall-management-operator",
+        "rel-portfolio-elanor-tweed-mall-management-leasing_controller",
+        "rel-portfolio-jll-tweed-mall-management-manager",
+        "rel-portfolio-jll-tweed-mall-management-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-elanor-investors",
+        "group-jll",
+        "group-tweed-mall-mixed-use-real-estate-fund"
+      ],
+      "owner_names": [
+        "Tweed Mall Mixed-Use Real Estate Fund"
+      ],
+      "manager_names": [
+        "JLL"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 12.96,
@@ -53332,7 +53710,10 @@
         },
         "independent_2km_count": 0
       },
-      "market": {}
+      "market": {},
+      "gla_sqm": 23324.0,
+      "source_url": "https://www.elanorinvestors.com/investors/managed-fund/tweed-mall-fund",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-ulladulla-shopping-centre": {
       "place_id": "place-au-nsw-ulladulla-shopping-centre",
@@ -53674,31 +54055,39 @@
     },
     "place-au-nsw-warrawong-plaza-shopping-centre": {
       "place_id": "place-au-nsw-warrawong-plaza-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-warrawong-plaza-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.elanorinvestors.com/investments/asset/warrawong-plaza-shopping-centre",
+        "source_type": "Official current owner asset profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Elanor's current asset profile explicitly classifies Warrawong Plaza as a sub-regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-warrawong-plaza-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.elanorinvestors.com/investors/managed-fund/warrawong-plaza-fund",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current fund asset and venue sources confirm 100 percent fund ownership Kyron retail leasing and a confirmed sub-regional class; current centre management remains unresolved"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-warrawong-plaza-fund-owner-owner",
+        "rel-portfolio-kyron-warrawong-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-kyron-capital",
+        "group-warrawong-plaza-fund"
+      ],
+      "owner_names": [
+        "Warrawong Plaza Fund"
+      ],
       "manager_names": [],
       "has_bailey": false,
       "bailey_store_count": 0,
@@ -53737,7 +54126,10 @@
         "median_household_income": 712,
         "age_45_plus_pct": 46,
         "retail_businesses": 78
-      }
+      },
+      "gla_sqm": 42968.0,
+      "source_url": "https://www.elanorinvestors.com/investors/managed-fund/warrawong-plaza-fund",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-warriewood-square": {
       "place_id": "place-au-nsw-warriewood-square",
@@ -119312,7 +119704,7 @@
     },
     "group-jll": {
       "group_id": "group-jll",
-      "property_count": 19,
+      "property_count": 20,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -119349,6 +119741,10 @@
         ],
         "place-au-nsw-roselands-shopping-centre": [
           "EXTERNAL_LEASING_AGENT"
+        ],
+        "place-au-nsw-tweed-mall": [
+          "EXTERNAL_LEASING_AGENT",
+          "MANAGER"
         ],
         "place-au-qld-cairns-smithfield-centre": [
           "EXTERNAL_LEASING_AGENT"
@@ -119525,11 +119921,16 @@
     },
     "group-elanor-investors": {
       "group_id": "group-elanor-investors",
-      "property_count": 0,
+      "property_count": 1,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
-      "asset_roles": {},
+      "asset_roles": {
+        "place-au-nsw-tweed-mall": [
+          "LEASING_CONTROLLER",
+          "OPERATOR"
+        ]
+      },
       "white_space_property_ids": []
     },
     "group-riverton-forum-fund": {
@@ -120151,11 +120552,16 @@
     },
     "group-bachrach-naumburger": {
       "group_id": "group-bachrach-naumburger",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-orana-mall-marketplace": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-nsw-park-beach-plaza": [
           "LEASING_CONTROLLER",
           "MANAGER",
@@ -120869,6 +121275,45 @@
       "asset_roles": {
         "place-au-nsw-lidcombe-shopping-centre": [
           "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-tweed-mall-mixed-use-real-estate-fund": {
+      "group_id": "group-tweed-mall-mixed-use-real-estate-fund",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-tweed-mall": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-warrawong-plaza-fund": {
+      "group_id": "group-warrawong-plaza-fund",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-warrawong-plaza-shopping-centre": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-kyron-capital": {
+      "group_id": "group-kyron-capital",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-warrawong-plaza-shopping-centre": [
+          "EXTERNAL_LEASING_AGENT"
         ]
       },
       "white_space_property_ids": []
@@ -135672,7 +136117,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -135686,10 +136131,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 275.59,
-          "group_ids": [],
+          "group_ids": [
+            "group-bachrach-naumburger"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -137340,7 +137787,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -137354,11 +137801,15 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 12.96,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-elanor-investors",
+            "group-jll",
+            "group-tweed-mall-mixed-use-real-estate-fund"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -137591,7 +138042,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -137605,10 +138056,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 53.72,
-          "group_ids": [],
+          "group_ids": [
+            "group-kyron-capital",
+            "group-warrawong-plaza-fund"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }

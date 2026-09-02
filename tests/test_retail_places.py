@@ -505,6 +505,46 @@ class RetailPlaceTests(unittest.TestCase):
             places["place-au-nsw-lidcombe-shopping-centre"]["aliases"],
         )
 
+    def test_current_tweed_warrawong_and_orana_names_preserve_stable_ids(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        expected = {
+            "place-au-nsw-tweed-mall": (
+                "Tweed Mall",
+                "Corner Wharf and Bay Streets",
+                "Tweed Heads",
+                "2485",
+            ),
+            "place-au-nsw-warrawong-plaza-shopping-centre": (
+                "Warrawong Plaza",
+                "Corner King Street and Northcote Drive",
+                "Warrawong",
+                "2502",
+            ),
+            "place-au-nsw-orana-mall-marketplace": (
+                "Orana Mall",
+                "Corner Wheelers Lane and Mitchell Highway",
+                "Dubbo",
+                "2830",
+            ),
+        }
+        for place_id, (name, address, locality, postcode) in expected.items():
+            with self.subTest(place_id=place_id):
+                place = places[place_id]
+                self.assertEqual(place["name"], name)
+                self.assertEqual(place["address"], address)
+                self.assertEqual(place["locality"], locality)
+                self.assertEqual(place["postcode"], postcode)
+                self.assertEqual(place["location_setting"], "Shopping Centre")
+
+        self.assertIn(
+            "Warrawong Plaza Shopping Centre",
+            places["place-au-nsw-warrawong-plaza-shopping-centre"]["aliases"],
+        )
+        self.assertIn(
+            "Orana Mall Marketplace",
+            places["place-au-nsw-orana-mall-marketplace"]["aliases"],
+        )
+
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, expected_name in {
