@@ -1213,6 +1213,59 @@ class PropertyIntelligenceTests(unittest.TestCase):
             }.issubset(sunshine_roles)
         )
 
+    def test_current_bayside_cranbourne_elizabeth_and_galleria_profiles_are_explicit(self) -> None:
+        bayside = self.payload["property_summaries"]["place-au-vic-frankston-bayside-centre"]
+        self.assertEqual(bayside["research_status"], "Verified")
+        self.assertEqual(bayside["centre_class"], "Regional")
+        self.assertEqual(bayside["owner_names"], ["Vicinity Centres"])
+        self.assertEqual(bayside["manager_names"], ["Vicinity Centres"])
+        self.assertEqual(bayside["leasing_arrangement"], "In-house")
+        self.assertEqual(bayside["gla_sqm"], 90435)
+        self.assertEqual(bayside["annual_visits"], 11400000)
+
+        cranbourne = self.payload["property_summaries"][
+            "place-au-vic-cranbourne-park-shopping-centre-sp107"
+        ]
+        self.assertEqual(cranbourne["research_status"], "Verified")
+        self.assertEqual(cranbourne["centre_class"], "Regional")
+        self.assertEqual(cranbourne["owner_names"], ["IP Generation", "Vicinity Centres"])
+        self.assertEqual(cranbourne["manager_names"], ["Vicinity Centres"])
+        self.assertEqual(cranbourne["leasing_arrangement"], "In-house")
+        self.assertEqual(cranbourne["gla_sqm"], 46200)
+        self.assertEqual(cranbourne["annual_visits"], 6300000)
+
+        elizabeth = self.payload["property_summaries"]["place-au-sa-elizabeth-shopping-centre"]
+        self.assertEqual(elizabeth["research_status"], "Partial")
+        self.assertEqual(elizabeth["centre_class"], "Regional")
+        self.assertEqual(elizabeth["owner_names"], ["Vicinity Centres"])
+        self.assertEqual(elizabeth["manager_names"], ["Vicinity Centres"])
+        self.assertEqual(elizabeth["leasing_arrangement"], "In-house")
+        self.assertEqual(elizabeth["gla_sqm"], 79981)
+        self.assertEqual(elizabeth["annual_visits"], 7000000)
+
+        galleria = self.payload["property_summaries"]["place-au-wa-morley-galleria"]
+        self.assertEqual(galleria["research_status"], "Verified")
+        self.assertEqual(galleria["centre_class"], "Regional")
+        self.assertEqual(galleria["owner_names"], ["Vicinity Centres", "Perron Group"])
+        self.assertEqual(galleria["manager_names"], ["Vicinity Centres"])
+        self.assertEqual(galleria["leasing_arrangement"], "In-house")
+        self.assertEqual(galleria["gla_sqm"], 75359)
+
+        galleria_roles = {
+            (row["group_id"], row["role"])
+            for row in self.relationships
+            if row["place_id"] == "place-au-wa-morley-galleria"
+        }
+        self.assertTrue(
+            {
+                ("group-vicinity", "CO_OWNER"),
+                ("group-perron", "CO_OWNER"),
+                ("group-vicinity", "MANAGER"),
+                ("group-vicinity", "OPERATOR"),
+                ("group-vicinity", "LEASING_CONTROLLER"),
+            }.issubset(galleria_roles)
+        )
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T04:22:59.990758+00:00",
+  "generated_at": "2026-09-02T04:28:49.342689+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
     "group_count": 137,
-    "relationship_count": 909,
-    "active_relationship_count": 907,
-    "shopping_centre_count": 580,
-    "researched_property_count": 271,
-    "classed_property_count": 263,
+    "relationship_count": 915,
+    "active_relationship_count": 913,
+    "shopping_centre_count": 575,
+    "researched_property_count": 272,
+    "classed_property_count": 264,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -942,7 +942,8 @@
       "confidence": "High",
       "aliases": [
         "Perron Group",
-        "Perron"
+        "Perron",
+        "Perron Investments Pty Ltd"
       ]
     },
     {
@@ -2445,6 +2446,7 @@
     "unisuperlimited": "group-unisuper",
     "perrongroup": "group-perron",
     "perron": "group-perron",
+    "perroninvestmentsptyltd": "group-perron",
     "retailfirst": "group-retail-first",
     "thefirstgroup": "group-retail-first",
     "retailfirstptyltd": "group-retail-first",
@@ -5459,10 +5461,10 @@
       "valid_to": "",
       "status": "ACTIVE",
       "source_url": "https://www.vicinity.com.au/pages/portfolio/our-properties/bayside",
-      "source_type": "Official property profile",
+      "source_type": "Official current owner and manager property profile",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
-      "public_note": "Vicinity reports a 100 percent ownership interest and current centre facts",
+      "public_note": "Vicinity reports full ownership current centre facts and provides the direct management and leasing pathway",
       "derived_from": "official_portfolio_asset"
     },
     {
@@ -5475,10 +5477,10 @@
       "valid_to": "",
       "status": "ACTIVE",
       "source_url": "https://www.vicinity.com.au/pages/portfolio/our-properties/bayside",
-      "source_type": "Official property profile",
+      "source_type": "Official current owner and manager property profile",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
-      "public_note": "Vicinity reports a 100 percent ownership interest and current centre facts",
+      "public_note": "Vicinity reports full ownership current centre facts and provides the direct management and leasing pathway",
       "derived_from": "official_portfolio_asset"
     },
     {
@@ -5491,10 +5493,26 @@
       "valid_to": "",
       "status": "ACTIVE",
       "source_url": "https://www.vicinity.com.au/pages/portfolio/our-properties/bayside",
-      "source_type": "Official property profile",
+      "source_type": "Official current owner and manager property profile",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
-      "public_note": "Vicinity reports a 100 percent ownership interest and current centre facts",
+      "public_note": "Vicinity reports full ownership current centre facts and provides the direct management and leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-bayside-leasing_controller",
+      "place_id": "place-au-vic-frankston-bayside-centre",
+      "group_id": "group-vicinity",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/pages/portfolio/our-properties/bayside",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity reports full ownership current centre facts and provides the direct management and leasing pathway",
       "derived_from": "official_portfolio_asset"
     },
     {
@@ -17176,6 +17194,86 @@
       "confidence": "High",
       "public_note": "GPT continues to provide property leasing and development management services for Sunshine Plaza",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-galleria-co_owner",
+      "place_id": "place-au-wa-morley-galleria",
+      "group_id": "group-vicinity",
+      "role": "CO_OWNER",
+      "ownership_percentage": 50.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/galleria",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity reports a 50 percent interest current centre facts direct management and leasing for Galleria",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-galleria-manager",
+      "place_id": "place-au-wa-morley-galleria",
+      "group_id": "group-vicinity",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/galleria",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity reports a 50 percent interest current centre facts direct management and leasing for Galleria",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-galleria-operator",
+      "place_id": "place-au-wa-morley-galleria",
+      "group_id": "group-vicinity",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/galleria",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity reports a 50 percent interest current centre facts direct management and leasing for Galleria",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-galleria-leasing_controller",
+      "place_id": "place-au-wa-morley-galleria",
+      "group_id": "group-vicinity",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/galleria",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity reports a 50 percent interest current centre facts direct management and leasing for Galleria",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-perron-galleria-co_owner",
+      "place_id": "place-au-wa-morley-galleria",
+      "group_id": "group-perron",
+      "role": "CO_OWNER",
+      "ownership_percentage": 50.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/galleria",
+      "source_type": "Official current co-owner property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity's current property profile identifies Perron Investments Pty Ltd as the 50 percent co-owner",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -18657,20 +18755,20 @@
       "canonical_name": "Bayside",
       "country": "Australia",
       "state": "VIC",
-      "aliases": "Frankston Bayside Centre",
+      "aliases": "Frankston Bayside Centre|Bayside Centre|Bayside Shopping Centre",
       "preferred_place_id": "place-au-vic-frankston-bayside-centre",
-      "roles": "OWNER|MANAGER|OPERATOR",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
       "ownership_percentage": "100",
       "gla_sqm": "90435",
       "tenancy_count": "",
-      "annual_visits_m": "",
+      "annual_visits_m": "11.4",
       "source_url": "https://www.vicinity.com.au/pages/portfolio/our-properties/bayside",
-      "source_type": "Official property profile",
+      "source_type": "Official current owner and manager property profile",
       "source_date": "2025-12-31",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "status": "ACTIVE",
-      "public_note": "Vicinity reports a 100 percent ownership interest and current centre facts",
+      "public_note": "Vicinity reports full ownership current centre facts and provides the direct management and leasing pathway",
       "match_status": "Matched",
       "matched_place_id": "place-au-vic-frankston-bayside-centre"
     },
@@ -26378,6 +26476,52 @@
       "public_note": "GPT continues to provide property leasing and development management services for Sunshine Plaza",
       "match_status": "Matched",
       "matched_place_id": "place-au-qld-sunshine-plaza"
+    },
+    {
+      "portfolio_asset_id": "vicinity-galleria",
+      "group_id": "group-vicinity",
+      "canonical_name": "Galleria",
+      "country": "Australia",
+      "state": "WA",
+      "aliases": "Morley Galleria|Galleria Shopping Centre|Morley Galleria Ground Floor",
+      "preferred_place_id": "place-au-wa-morley-galleria",
+      "roles": "CO_OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "50",
+      "gla_sqm": "75359",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/galleria",
+      "source_type": "Official current owner and manager property profile",
+      "source_date": "2025-12-31",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Vicinity reports a 50 percent interest current centre facts direct management and leasing for Galleria",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-wa-morley-galleria"
+    },
+    {
+      "portfolio_asset_id": "perron-galleria",
+      "group_id": "group-perron",
+      "canonical_name": "Galleria",
+      "country": "Australia",
+      "state": "WA",
+      "aliases": "Morley Galleria|Galleria Shopping Centre|Morley Galleria Ground Floor",
+      "preferred_place_id": "place-au-wa-morley-galleria",
+      "roles": "CO_OWNER",
+      "ownership_percentage": "50",
+      "gla_sqm": "75359",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/galleria",
+      "source_type": "Official current co-owner property profile",
+      "source_date": "2025-12-31",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Vicinity's current property profile identifies Perron Investments Pty Ltd as the 50 percent co-owner",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-wa-morley-galleria"
     }
   ],
   "property_summaries": {
@@ -73117,87 +73261,6 @@
         "retail_businesses": 24
       }
     },
-    "place-au-sa-elizabeth-city-centre": {
-      "place_id": "place-au-sa-elizabeth-city-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-sa-elizabeth-city-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-sa-elizabeth-city-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 20.87,
-      "competitor_context": {
-        "by_retailer": {
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "opsm-1155",
-                "name": "OPSM Elizabeth",
-                "distance_km": 0.18
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Oscar Wylee": {
-            "in_centre": [
-              {
-                "store_id": "oscar-wylee-113",
-                "name": "Elizabeth City Centre",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "specsavers-3351",
-                "name": "Elizabeth S/C",
-                "distance_km": 0.13
-              }
-            ],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 12.73,
-          "Bailey Nelson": 20.87,
-          "OPSM": 0.18,
-          "Oscar Wylee": 0.0,
-          "Specsavers": 0.13
-        },
-        "independent_2km_count": 0
-      },
-      "market": {}
-    },
     "place-au-sa-elizabeth-shopping-centre": {
       "place_id": "place-au-sa-elizabeth-shopping-centre",
       "centre_class": "Regional",
@@ -73216,10 +73279,10 @@
       "research_evidence": {
         "place_id": "place-au-sa-elizabeth-shopping-centre",
         "research_status": "Partial",
-        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/elizabeth-city-centre",
+        "source_url": "https://www.vicinity.com.au/pages/portfolio/our-properties/elizabeth-city-centre",
         "last_verified_at": "2026-09-02",
         "confidence": "High",
-        "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
+        "public_note": "Current Vicinity and venue sources confirm Vicinity's 50 percent interest management direct leasing address Regional class public metrics and all three mapped optical tenants; the other 50 percent owner is published only as a private investor"
       },
       "leasing_arrangement": "In-house",
       "relationship_ids": [
@@ -73286,14 +73349,14 @@
             "catchment_2km": []
           },
           "Oscar Wylee": {
-            "in_centre": [],
-            "nearby_unverified": [
+            "in_centre": [
               {
                 "store_id": "oscar-wylee-113",
                 "name": "Elizabeth City Centre",
                 "distance_km": 0.13
               }
             ],
+            "nearby_unverified": [],
             "catchment_2km": []
           },
           "Specsavers": {
@@ -86631,128 +86694,6 @@
         "retail_businesses": 141
       }
     },
-    "corridor-au-vic-frankston-olsen-street": {
-      "place_id": "corridor-au-vic-frankston-olsen-street",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "corridor-au-vic-frankston-olsen-street",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "corridor-au-vic-frankston-olsen-street",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 0.2,
-      "competitor_context": {
-        "by_retailer": {
-          "Independent / Other optical": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "independent-other-optical-osm-au-node-6059974385",
-                "name": "Spectacle Warehouse",
-                "distance_km": 0.18
-              }
-            ],
-            "catchment_2km": [
-              {
-                "store_id": "independent-other-optical-osm-au-way-172654057",
-                "name": "Beach Optical",
-                "distance_km": 1.96
-              }
-            ]
-          },
-          "Bailey Nelson": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "bailey-nelson-bayside-frankston",
-                "name": "Bailey Nelson Frankston",
-                "distance_km": 0.2
-              }
-            ],
-            "catchment_2km": []
-          },
-          "OPSM": {
-            "in_centre": [
-              {
-                "store_id": "opsm-1087",
-                "name": "OPSM Frankston",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "Oscar Wylee": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "oscar-wylee-150",
-                "name": "Frankston Bayside Centre",
-                "distance_km": 0.25
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "specsavers-3221",
-                "name": "Frankston",
-                "distance_km": 0.23
-              },
-              {
-                "store_id": "specsavers-3565",
-                "name": "Frankston Bayside",
-                "distance_km": 0.06
-              }
-            ],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 0.18,
-          "Bailey Nelson": 0.2,
-          "OPSM": 0.0,
-          "Oscar Wylee": 0.25,
-          "Specsavers": 0.06
-        },
-        "independent_2km_count": 2
-      },
-      "market": {
-        "sa2_code": "214011371",
-        "sa2_name": "Frankston",
-        "population_2025": 25043,
-        "population_growth_pct": 4.74,
-        "median_household_income": 952,
-        "age_45_plus_pct": 42.2,
-        "retail_businesses": 172
-      }
-    },
     "corridor-au-vic-pakenham-pakenham-retail-core": {
       "place_id": "corridor-au-vic-pakenham-pakenham-retail-core",
       "centre_class": "Unknown",
@@ -90760,84 +90701,129 @@
       },
       "market": {}
     },
-    "place-au-vic-bayside-centre": {
-      "place_id": "place-au-vic-bayside-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+    "place-au-vic-frankston-bayside-centre": {
+      "place_id": "place-au-vic-frankston-bayside-centre",
+      "centre_class": "Regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
-        "place_id": "place-au-vic-bayside-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "place_id": "place-au-vic-frankston-bayside-centre",
+        "centre_class": "Regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.vicinity.com.au/pages/portfolio/our-properties/bayside",
+        "source_type": "Official property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Vicinity classifies Bayside as Regional under SCCA guidelines"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
-        "place_id": "place-au-vic-bayside-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "place_id": "place-au-vic-frankston-bayside-centre",
+        "research_status": "Verified",
+        "source_url": "https://www.vicinity.com.au/pages/portfolio/our-properties/bayside",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Vicinity and venue sources confirm full ownership direct management leasing address Regional class public metrics Bailey Nelson and all three mapped named-network competitors inside Bayside"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-vicinity-bayside-owner",
+        "rel-portfolio-vicinity-bayside-manager",
+        "rel-portfolio-vicinity-bayside-operator",
+        "rel-portfolio-vicinity-bayside-leasing_controller"
+      ],
+      "group_ids": [
+        "group-vicinity"
+      ],
+      "owner_names": [
+        "Vicinity Centres"
+      ],
+      "manager_names": [
+        "Vicinity Centres"
+      ],
+      "has_bailey": true,
+      "bailey_store_count": 1,
+      "portfolio_overlap_status": "SAME_CENTRE",
+      "portfolio_overlap_groups": [
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "LEASING_CONTROLLER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "OWNER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "MANAGER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "OPERATOR",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        }
+      ],
       "portfolio_white_space": false,
-      "nearest_bailey_km": 0.2,
+      "nearest_bailey_km": 0.06,
       "competitor_context": {
         "by_retailer": {
           "Independent / Other optical": {
             "in_centre": [],
-            "nearby_unverified": [
+            "nearby_unverified": [],
+            "catchment_2km": [
               {
                 "store_id": "independent-other-optical-osm-au-node-6059974385",
                 "name": "Spectacle Warehouse",
-                "distance_km": 0.2
+                "distance_km": 0.42
+              },
+              {
+                "store_id": "independent-other-optical-osm-au-way-172654057",
+                "name": "Beach Optical",
+                "distance_km": 1.98
               }
-            ],
-            "catchment_2km": []
+            ]
           },
           "Bailey Nelson": {
-            "in_centre": [],
-            "nearby_unverified": [
+            "in_centre": [
               {
                 "store_id": "bailey-nelson-bayside-frankston",
                 "name": "Bailey Nelson Frankston",
-                "distance_km": 0.2
-              }
-            ],
-            "catchment_2km": []
-          },
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "opsm-1087",
-                "name": "OPSM Frankston",
                 "distance_km": 0.06
               }
             ],
+            "nearby_unverified": [],
+            "catchment_2km": []
+          },
+          "OPSM": {
+            "in_centre": [
+              {
+                "store_id": "opsm-1087",
+                "name": "OPSM Frankston",
+                "distance_km": 0.25
+              }
+            ],
+            "nearby_unverified": [],
             "catchment_2km": []
           },
           "Oscar Wylee": {
-            "in_centre": [],
-            "nearby_unverified": [
+            "in_centre": [
               {
                 "store_id": "oscar-wylee-150",
                 "name": "Frankston Bayside Centre",
-                "distance_km": 0.24
+                "distance_km": 0.0
               }
             ],
+            "nearby_unverified": [],
             "catchment_2km": []
           },
           "Specsavers": {
@@ -90845,27 +90831,27 @@
               {
                 "store_id": "specsavers-3565",
                 "name": "Frankston Bayside",
-                "distance_km": 0.0
+                "distance_km": 0.24
               }
             ],
-            "nearby_unverified": [
+            "nearby_unverified": [],
+            "catchment_2km": [
               {
                 "store_id": "specsavers-3221",
                 "name": "Frankston",
-                "distance_km": 0.21
+                "distance_km": 0.46
               }
-            ],
-            "catchment_2km": []
+            ]
           }
         },
         "nearest_by_retailer_km": {
-          "Independent / Other optical": 0.2,
-          "Bailey Nelson": 0.2,
-          "OPSM": 0.06,
-          "Oscar Wylee": 0.24,
-          "Specsavers": 0.0
+          "Independent / Other optical": 0.42,
+          "Bailey Nelson": 0.06,
+          "OPSM": 0.25,
+          "Oscar Wylee": 0.0,
+          "Specsavers": 0.24
         },
-        "independent_2km_count": 1
+        "independent_2km_count": 2
       },
       "market": {
         "sa2_code": "214011371",
@@ -90875,7 +90861,11 @@
         "median_household_income": 952,
         "age_45_plus_pct": 42.2,
         "retail_businesses": 172
-      }
+      },
+      "gla_sqm": 90435.0,
+      "annual_visits": 11400000.0,
+      "source_url": "https://www.vicinity.com.au/pages/portfolio/our-properties/bayside",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-vic-belmont-shopping-centre": {
       "place_id": "place-au-vic-belmont-shopping-centre",
@@ -92692,14 +92682,14 @@
         "confidence": "High",
         "public_note": "Vicinity explicitly classifies Cranbourne Park as Regional"
       },
-      "research_status": "Partial",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-vic-cranbourne-park-shopping-centre-sp107",
-        "research_status": "Partial",
+        "research_status": "Verified",
         "source_url": "https://www.vicinity.com.au/portfolio/our-properties/cranbourne-park",
         "last_verified_at": "2026-09-02",
         "confidence": "High",
-        "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
+        "public_note": "Current Vicinity and venue sources confirm equal Vicinity and IP Generation ownership Vicinity management direct leasing address Regional class public metrics and all three mapped optical tenants"
       },
       "leasing_arrangement": "In-house",
       "relationship_ids": [
@@ -92791,14 +92781,14 @@
             "catchment_2km": []
           },
           "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [
+            "in_centre": [
               {
                 "store_id": "specsavers-3425",
                 "name": "Cranbourne Park",
                 "distance_km": 0.17
               }
             ],
+            "nearby_unverified": [],
             "catchment_2km": []
           }
         },
@@ -92824,106 +92814,6 @@
       "annual_visits": 6300000.0,
       "source_url": "https://www.vicinity.com.au/portfolio/our-properties/cranbourne-park",
       "last_verified_at": "2026-09-02"
-    },
-    "place-au-vic-cranbourne-park-shopping-centre": {
-      "place_id": "place-au-vic-cranbourne-park-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-vic-cranbourne-park-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-vic-cranbourne-park-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 10.16,
-      "competitor_context": {
-        "by_retailer": {
-          "Independent / Other optical": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "independent-other-optical-osm-au-way-637166859",
-                "name": "Cranbourne Vision Care",
-                "distance_km": 0.32
-              }
-            ]
-          },
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "opsm-1290",
-                "name": "OPSM Cranbourne",
-                "distance_km": 0.18
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Oscar Wylee": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "oscar-wylee-86",
-                "name": "Cranbourne Park",
-                "distance_km": 0.17
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [
-              {
-                "store_id": "specsavers-3425",
-                "name": "Cranbourne Park",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 0.32,
-          "Bailey Nelson": 10.16,
-          "OPSM": 0.18,
-          "Oscar Wylee": 0.17,
-          "Specsavers": 0.0
-        },
-        "independent_2km_count": 1
-      },
-      "market": {
-        "sa2_code": "212031300",
-        "sa2_name": "Cranbourne",
-        "population_2025": 22708,
-        "population_growth_pct": 5.22,
-        "median_household_income": 895,
-        "age_45_plus_pct": 35.3,
-        "retail_businesses": 125
-      }
     },
     "place-au-unknown-croydon-central": {
       "place_id": "place-au-unknown-croydon-central",
@@ -93756,163 +93646,6 @@
       "gla_sqm": 59825.0,
       "tenancy_count": 111,
       "source_url": "https://haben.com.au/properties/forest-hill-chase",
-      "last_verified_at": "2026-09-02"
-    },
-    "place-au-vic-frankston-bayside-centre": {
-      "place_id": "place-au-vic-frankston-bayside-centre",
-      "centre_class": "Regional",
-      "centre_class_method": "Confirmed",
-      "centre_class_evidence": {
-        "place_id": "place-au-vic-frankston-bayside-centre",
-        "centre_class": "Regional",
-        "classification_method": "Confirmed",
-        "source_url": "https://www.vicinity.com.au/pages/portfolio/our-properties/bayside",
-        "source_type": "Official property profile",
-        "last_verified_at": "2026-09-02",
-        "confidence": "High",
-        "public_note": "Vicinity classifies Bayside as Regional under SCCA guidelines"
-      },
-      "research_status": "Partial",
-      "research_evidence": {
-        "place_id": "place-au-vic-frankston-bayside-centre",
-        "research_status": "Partial",
-        "source_url": "https://www.vicinity.com.au/pages/portfolio/our-properties/bayside",
-        "last_verified_at": "2026-09-02",
-        "confidence": "High",
-        "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [
-        "rel-portfolio-vicinity-bayside-owner",
-        "rel-portfolio-vicinity-bayside-manager",
-        "rel-portfolio-vicinity-bayside-operator"
-      ],
-      "group_ids": [
-        "group-vicinity"
-      ],
-      "owner_names": [
-        "Vicinity Centres"
-      ],
-      "manager_names": [
-        "Vicinity Centres"
-      ],
-      "has_bailey": true,
-      "bailey_store_count": 1,
-      "portfolio_overlap_status": "SAME_CENTRE",
-      "portfolio_overlap_groups": [
-        {
-          "group_id": "group-vicinity",
-          "canonical_name": "Vicinity Centres",
-          "role": "OWNER",
-          "bailey_property_count": 5,
-          "bailey_store_count": 5
-        },
-        {
-          "group_id": "group-vicinity",
-          "canonical_name": "Vicinity Centres",
-          "role": "MANAGER",
-          "bailey_property_count": 5,
-          "bailey_store_count": 5
-        },
-        {
-          "group_id": "group-vicinity",
-          "canonical_name": "Vicinity Centres",
-          "role": "OPERATOR",
-          "bailey_property_count": 5,
-          "bailey_store_count": 5
-        }
-      ],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 0.06,
-      "competitor_context": {
-        "by_retailer": {
-          "Independent / Other optical": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "independent-other-optical-osm-au-node-6059974385",
-                "name": "Spectacle Warehouse",
-                "distance_km": 0.42
-              },
-              {
-                "store_id": "independent-other-optical-osm-au-way-172654057",
-                "name": "Beach Optical",
-                "distance_km": 1.98
-              }
-            ]
-          },
-          "Bailey Nelson": {
-            "in_centre": [
-              {
-                "store_id": "bailey-nelson-bayside-frankston",
-                "name": "Bailey Nelson Frankston",
-                "distance_km": 0.06
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "opsm-1087",
-                "name": "OPSM Frankston",
-                "distance_km": 0.25
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Oscar Wylee": {
-            "in_centre": [
-              {
-                "store_id": "oscar-wylee-150",
-                "name": "Frankston Bayside Centre",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "specsavers-3565",
-                "name": "Frankston Bayside",
-                "distance_km": 0.24
-              }
-            ],
-            "catchment_2km": [
-              {
-                "store_id": "specsavers-3221",
-                "name": "Frankston",
-                "distance_km": 0.46
-              }
-            ]
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 0.42,
-          "Bailey Nelson": 0.06,
-          "OPSM": 0.25,
-          "Oscar Wylee": 0.0,
-          "Specsavers": 0.24
-        },
-        "independent_2km_count": 2
-      },
-      "market": {
-        "sa2_code": "214011371",
-        "sa2_name": "Frankston",
-        "population_2025": 25043,
-        "population_growth_pct": 4.74,
-        "median_household_income": 952,
-        "age_45_plus_pct": 42.2,
-        "retail_businesses": 172
-      },
-      "gla_sqm": 90435.0,
-      "source_url": "https://www.vicinity.com.au/pages/portfolio/our-properties/bayside",
       "last_verified_at": "2026-09-02"
     },
     "place-au-vic-gateway-plaza": {
@@ -104355,51 +104088,94 @@
         "retail_businesses": 45
       }
     },
-    "place-au-wa-galleria-shopping-centre": {
-      "place_id": "place-au-wa-galleria-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+    "place-au-wa-morley-galleria": {
+      "place_id": "place-au-wa-morley-galleria",
+      "centre_class": "Regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
-        "place_id": "place-au-wa-galleria-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "place_id": "place-au-wa-morley-galleria",
+        "centre_class": "Regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/galleria",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Vicinity explicitly classifies Galleria as a Major Regional centre which is represented by the Regional schema category"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
-        "place_id": "place-au-wa-galleria-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "place_id": "place-au-wa-morley-galleria",
+        "research_status": "Verified",
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/galleria",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Vicinity and venue sources confirm equal Vicinity and Perron ownership Vicinity management direct leasing address Major Regional class public metrics and all three mapped optical tenants"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-vicinity-galleria-co_owner",
+        "rel-portfolio-vicinity-galleria-manager",
+        "rel-portfolio-vicinity-galleria-operator",
+        "rel-portfolio-vicinity-galleria-leasing_controller",
+        "rel-portfolio-perron-galleria-co_owner"
+      ],
+      "group_ids": [
+        "group-perron",
+        "group-vicinity"
+      ],
+      "owner_names": [
+        "Vicinity Centres",
+        "Perron Group"
+      ],
+      "manager_names": [
+        "Vicinity Centres"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 7.63,
+      "portfolio_overlap_status": "LEASING_CONTROLLER_OVERLAP",
+      "portfolio_overlap_groups": [
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "LEASING_CONTROLLER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "CO_OWNER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "MANAGER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "OPERATOR",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        }
+      ],
+      "portfolio_white_space": true,
+      "nearest_bailey_km": 7.42,
       "competitor_context": {
         "by_retailer": {
           "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [
+            "in_centre": [
               {
                 "store_id": "opsm-1198",
                 "name": "OPSM Morley Galleria",
-                "distance_km": 0.24
+                "distance_km": 0.0
               }
             ],
+            "nearby_unverified": [],
             "catchment_2km": []
           },
           "Oscar Wylee": {
@@ -104407,30 +104183,30 @@
               {
                 "store_id": "oscar-wylee-77",
                 "name": "Galleria Shopping Centre",
-                "distance_km": 0.0
+                "distance_km": 0.24
               }
             ],
             "nearby_unverified": [],
             "catchment_2km": []
           },
           "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
+            "in_centre": [
               {
                 "store_id": "specsavers-3554",
                 "name": "Morley Galleria Ground Floor",
-                "distance_km": 0.36
+                "distance_km": 0.15
               }
-            ]
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": []
           }
         },
         "nearest_by_retailer_km": {
-          "Independent / Other optical": 5.53,
-          "Bailey Nelson": 7.63,
-          "OPSM": 0.24,
-          "Oscar Wylee": 0.0,
-          "Specsavers": 0.36
+          "Independent / Other optical": 5.35,
+          "Bailey Nelson": 7.42,
+          "OPSM": 0.0,
+          "Oscar Wylee": 0.24,
+          "Specsavers": 0.15
         },
         "independent_2km_count": 0
       },
@@ -104442,7 +104218,10 @@
         "median_household_income": 982,
         "age_45_plus_pct": 41.8,
         "retail_businesses": 144
-      }
+      },
+      "gla_sqm": 75359.0,
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/galleria",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-wa-halls-head-central": {
       "place_id": "place-au-wa-halls-head-central",
@@ -105894,184 +105673,6 @@
       "tenancy_count": 203,
       "source_url": "https://www.fawknerproperty.com.au/portfolio/midland-gate",
       "last_verified_at": "2026-09-02"
-    },
-    "place-au-wa-morley-galleria": {
-      "place_id": "place-au-wa-morley-galleria",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-wa-morley-galleria",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-wa-morley-galleria",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 7.42,
-      "competitor_context": {
-        "by_retailer": {
-          "OPSM": {
-            "in_centre": [
-              {
-                "store_id": "opsm-1198",
-                "name": "OPSM Morley Galleria",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "Oscar Wylee": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "oscar-wylee-77",
-                "name": "Galleria Shopping Centre",
-                "distance_km": 0.24
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "specsavers-3554",
-                "name": "Morley Galleria Ground Floor",
-                "distance_km": 0.15
-              }
-            ],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 5.35,
-          "Bailey Nelson": 7.42,
-          "OPSM": 0.0,
-          "Oscar Wylee": 0.24,
-          "Specsavers": 0.15
-        },
-        "independent_2km_count": 0
-      },
-      "market": {
-        "sa2_code": "504011047",
-        "sa2_name": "Morley",
-        "population_2025": 25432,
-        "population_growth_pct": 7.95,
-        "median_household_income": 982,
-        "age_45_plus_pct": 41.8,
-        "retail_businesses": 144
-      }
-    },
-    "place-au-wa-morley-galleria-ground-floor": {
-      "place_id": "place-au-wa-morley-galleria-ground-floor",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-wa-morley-galleria-ground-floor",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-wa-morley-galleria-ground-floor",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 7.38,
-      "competitor_context": {
-        "by_retailer": {
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "opsm-1198",
-                "name": "OPSM Morley Galleria",
-                "distance_km": 0.15
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Oscar Wylee": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "oscar-wylee-77",
-                "name": "Galleria Shopping Centre",
-                "distance_km": 0.36
-              }
-            ]
-          },
-          "Specsavers": {
-            "in_centre": [
-              {
-                "store_id": "specsavers-3554",
-                "name": "Morley Galleria Ground Floor",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 5.35,
-          "Bailey Nelson": 7.38,
-          "OPSM": 0.15,
-          "Oscar Wylee": 0.36,
-          "Specsavers": 0.0
-        },
-        "independent_2km_count": 0
-      },
-      "market": {
-        "sa2_code": "504011047",
-        "sa2_name": "Morley",
-        "population_2025": 25432,
-        "population_growth_pct": 7.95,
-        "median_household_income": 982,
-        "age_45_plus_pct": 41.8,
-        "retail_businesses": 144
-      }
     },
     "place-au-wa-murray-st-mall": {
       "place_id": "place-au-wa-murray-st-mall",
@@ -119579,7 +119180,7 @@
     },
     "group-vicinity": {
       "group_id": "group-vicinity",
-      "property_count": 24,
+      "property_count": 25,
       "bailey_property_count": 5,
       "bailey_store_count": 5,
       "bailey_property_ids": [
@@ -119672,6 +119273,7 @@
           "OPERATOR"
         ],
         "place-au-vic-frankston-bayside-centre": [
+          "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR",
           "OWNER"
@@ -119716,6 +119318,12 @@
           "MANAGER",
           "OPERATOR"
         ],
+        "place-au-wa-morley-galleria": [
+          "CO_OWNER",
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-wa-rockingham-centre": [
           "CO_OWNER",
           "LEASING_CONTROLLER",
@@ -119742,6 +119350,7 @@
         "place-au-wa-joondalup-lakeside-s-city",
         "place-au-wa-livingston-marketplace",
         "place-au-wa-mandurah-forum",
+        "place-au-wa-morley-galleria",
         "place-au-wa-rockingham-centre"
       ]
     },
@@ -121294,7 +120903,7 @@
     },
     "group-perron": {
       "group_id": "group-perron",
-      "property_count": 4,
+      "property_count": 5,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -121309,6 +120918,9 @@
           "CO_OWNER"
         ],
         "place-au-wa-cockburn-gateway-shopping-centre": [
+          "CO_OWNER"
+        ],
+        "place-au-wa-morley-galleria": [
           "CO_OWNER"
         ]
       },
@@ -148193,47 +147805,6 @@
         }
       }
     },
-    "place-au-sa-elizabeth-city-centre": {
-      "schema_version": 1,
-      "place_id": "place-au-sa-elizabeth-city-centre",
-      "demographic": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-sa-elizabeth-city-centre.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 20.87,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
     "place-au-sa-elizabeth-shopping-centre": {
       "schema_version": 1,
       "place_id": "place-au-sa-elizabeth-shopping-centre",
@@ -155194,55 +154765,6 @@
         }
       }
     },
-    "corridor-au-vic-frankston-olsen-street": {
-      "schema_version": 1,
-      "place_id": "corridor-au-vic-frankston-olsen-street",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "214011371",
-          "sa2_name": "Frankston",
-          "population_2025": 25043,
-          "population_growth_pct": 4.74,
-          "median_household_income": 952,
-          "age_45_plus_pct": 42.2,
-          "retail_businesses": 172
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.corridor-au-vic-frankston-olsen-street.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "High Street",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 0.2,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
     "corridor-au-vic-pakenham-pakenham-retail-core": {
       "schema_version": 1,
       "place_id": "corridor-au-vic-pakenham-pakenham-retail-core",
@@ -157059,9 +156581,9 @@
         }
       }
     },
-    "place-au-vic-bayside-centre": {
+    "place-au-vic-frankston-bayside-centre": {
       "schema_version": 1,
-      "place_id": "place-au-vic-bayside-centre",
+      "place_id": "place-au-vic-frankston-bayside-centre",
       "demographic": {
         "availability": "Available",
         "values": {
@@ -157076,7 +156598,7 @@
       },
       "competition": {
         "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-vic-bayside-centre.competitor_context",
+        "evidence_pointer": "property_summaries.place-au-vic-frankston-bayside-centre.competitor_context",
         "values": {
           "in_centre_rule": "accepted shared canonical place_id",
           "nearby_rule": "straight-line distance only; never centre membership"
@@ -157086,7 +156608,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -157100,11 +156622,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
-          "nearest_bailey_km": 0.2,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "nearest_bailey_km": 0.06,
+          "group_ids": [
+            "group-vicinity"
+          ],
+          "overlap_status": "SAME_CENTRE"
         }
       }
     },
@@ -158150,55 +157674,6 @@
         }
       }
     },
-    "place-au-vic-cranbourne-park-shopping-centre": {
-      "schema_version": 1,
-      "place_id": "place-au-vic-cranbourne-park-shopping-centre",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "212031300",
-          "sa2_name": "Cranbourne",
-          "population_2025": 22708,
-          "population_growth_pct": 5.22,
-          "median_household_income": 895,
-          "age_45_plus_pct": 35.3,
-          "retail_businesses": 125
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-vic-cranbourne-park-shopping-centre.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 10.16,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
     "place-au-unknown-croydon-central": {
       "schema_version": 1,
       "place_id": "place-au-unknown-croydon-central",
@@ -158628,57 +158103,6 @@
             "group-haben"
           ],
           "overlap_status": "UNKNOWN"
-        }
-      }
-    },
-    "place-au-vic-frankston-bayside-centre": {
-      "schema_version": 1,
-      "place_id": "place-au-vic-frankston-bayside-centre",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "214011371",
-          "sa2_name": "Frankston",
-          "population_2025": 25043,
-          "population_growth_pct": 4.74,
-          "median_household_income": 952,
-          "age_45_plus_pct": 42.2,
-          "retail_businesses": 172
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-vic-frankston-bayside-centre.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Regional"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Available",
-        "values": {
-          "nearest_bailey_km": 0.06,
-          "group_ids": [
-            "group-vicinity"
-          ],
-          "overlap_status": "SAME_CENTRE"
         }
       }
     },
@@ -164060,9 +163484,9 @@
         }
       }
     },
-    "place-au-wa-galleria-shopping-centre": {
+    "place-au-wa-morley-galleria": {
       "schema_version": 1,
-      "place_id": "place-au-wa-galleria-shopping-centre",
+      "place_id": "place-au-wa-morley-galleria",
       "demographic": {
         "availability": "Available",
         "values": {
@@ -164077,7 +163501,7 @@
       },
       "competition": {
         "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-wa-galleria-shopping-centre.competitor_context",
+        "evidence_pointer": "property_summaries.place-au-wa-morley-galleria.competitor_context",
         "values": {
           "in_centre_rule": "accepted shared canonical place_id",
           "nearby_rule": "straight-line distance only; never centre membership"
@@ -164087,7 +163511,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -164101,11 +163525,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
-          "nearest_bailey_km": 7.63,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "nearest_bailey_km": 7.42,
+          "group_ids": [
+            "group-perron",
+            "group-vicinity"
+          ],
+          "overlap_status": "LEASING_CONTROLLER_OVERLAP"
         }
       }
     },
@@ -164804,104 +164231,6 @@
             "group-fawkner"
           ],
           "overlap_status": "LEASING_CONTROLLER_OVERLAP"
-        }
-      }
-    },
-    "place-au-wa-morley-galleria": {
-      "schema_version": 1,
-      "place_id": "place-au-wa-morley-galleria",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "504011047",
-          "sa2_name": "Morley",
-          "population_2025": 25432,
-          "population_growth_pct": 7.95,
-          "median_household_income": 982,
-          "age_45_plus_pct": 41.8,
-          "retail_businesses": 144
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-wa-morley-galleria.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 7.42,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
-    "place-au-wa-morley-galleria-ground-floor": {
-      "schema_version": 1,
-      "place_id": "place-au-wa-morley-galleria-ground-floor",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "504011047",
-          "sa2_name": "Morley",
-          "population_2025": 25432,
-          "population_growth_pct": 7.95,
-          "median_household_income": 982,
-          "age_45_plus_pct": 41.8,
-          "retail_businesses": 144
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-wa-morley-galleria-ground-floor.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 7.38,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
         }
       }
     },

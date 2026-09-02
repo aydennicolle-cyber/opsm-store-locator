@@ -500,6 +500,69 @@ class RetailPlaceTests(unittest.TestCase):
             "place-au-qld-sunshine-plaza",
         )
 
+    def test_bayside_cranbourne_elizabeth_and_galleria_duplicates_are_consolidated(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        removed_ids = {
+            "place-au-vic-bayside-centre",
+            "place-au-vic-cranbourne-park-shopping-centre",
+            "place-au-sa-elizabeth-city-centre",
+            "place-au-wa-galleria-shopping-centre",
+            "place-au-wa-morley-galleria-ground-floor",
+        }
+        self.assertTrue(removed_ids.isdisjoint(places))
+
+        expected_places = {
+            "place-au-vic-frankston-bayside-centre": ("Bayside", "28 Beach Street", "3199"),
+            "place-au-vic-cranbourne-park-shopping-centre-sp107": (
+                "Cranbourne Park", "High Street", "3977"
+            ),
+            "place-au-sa-elizabeth-shopping-centre": (
+                "Elizabeth City Centre", "50 Elizabeth Way", "5112"
+            ),
+            "place-au-wa-morley-galleria": (
+                "Galleria", "Corner Collier and Walter Roads", "6062"
+            ),
+        }
+        for place_id, (name, address, postcode) in expected_places.items():
+            with self.subTest(place_id=place_id):
+                place = places[place_id]
+                self.assertEqual(place["name"], name)
+                self.assertEqual(place["address"], address)
+                self.assertEqual(place["postcode"], postcode)
+
+        expected_members = {
+            "place-au-vic-frankston-bayside-centre": {
+                "bailey-nelson-bayside-frankston", "opsm-1087", "oscar-wylee-150", "specsavers-3565"
+            },
+            "place-au-vic-cranbourne-park-shopping-centre-sp107": {
+                "opsm-1290", "oscar-wylee-86", "specsavers-3425"
+            },
+            "place-au-sa-elizabeth-shopping-centre": {
+                "opsm-1155", "oscar-wylee-113", "specsavers-3351"
+            },
+            "place-au-wa-morley-galleria": {
+                "opsm-1198", "oscar-wylee-77", "specsavers-3554"
+            },
+        }
+        for place_id, store_ids in expected_members.items():
+            with self.subTest(place_id=place_id):
+                rows = [row for row in self.memberships if row["place_id"] == place_id]
+                self.assertEqual({row["store_id"] for row in rows}, store_ids)
+                self.assertTrue(all(row["mapping_confidence"] == "High" for row in rows))
+
+        remaps = {row["previous_place_id"]: row["canonical_place_id"] for row in read_csv("place_id_remaps.csv")}
+        expected_remaps = {
+            "place-au-vic-bayside-centre": "place-au-vic-frankston-bayside-centre",
+            "place-au-vic-cranbourne-park-shopping-centre": (
+                "place-au-vic-cranbourne-park-shopping-centre-sp107"
+            ),
+            "place-au-sa-elizabeth-city-centre": "place-au-sa-elizabeth-shopping-centre",
+            "place-au-wa-galleria-shopping-centre": "place-au-wa-morley-galleria",
+            "place-au-wa-morley-galleria-ground-floor": "place-au-wa-morley-galleria",
+        }
+        for previous, canonical in expected_remaps.items():
+            self.assertEqual(remaps[previous], canonical)
+
     def test_current_charter_hall_nsw_batch_has_complete_public_addresses(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         expected = {
