@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T04:06:03.453482+00:00",
+  "generated_at": "2026-09-02T04:13:00.733581+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 135,
-    "relationship_count": 886,
-    "active_relationship_count": 884,
+    "group_count": 136,
+    "relationship_count": 901,
+    "active_relationship_count": 899,
     "shopping_centre_count": 582,
-    "researched_property_count": 266,
-    "classed_property_count": 257,
+    "researched_property_count": 270,
+    "classed_property_count": 261,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -221,13 +221,13 @@
     {
       "group_id": "group-ip-generation",
       "canonical_name": "IP Generation",
-      "parent_group_id": "",
+      "parent_group_id": "group-ma-financial",
       "brand_name": "",
       "group_type": "ASSET_MANAGER",
       "country_scope": "Australia",
-      "official_url": "https://ipgeneration.com.au/",
+      "official_url": "https://www.ipgeneration.com.au/",
       "status": "Active",
-      "source_url": "https://ipgeneration.com.au/",
+      "source_url": "https://www.ipgeneration.com.au/about/",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "aliases": [
@@ -659,21 +659,21 @@
     },
     {
       "group_id": "group-mcconaghy",
-      "canonical_name": "McConaghy Properties",
+      "canonical_name": "McConaghy Group",
       "parent_group_id": "",
       "brand_name": "",
       "group_type": "PROPERTY_COMPANY",
       "country_scope": "Australia",
-      "official_url": "https://mcconaghyproperties.com.au/",
+      "official_url": "https://www.mcconaghygroup.com/",
       "status": "Active",
-      "source_url": "https://mcconaghyproperties.com.au/our-business/manage/",
+      "source_url": "https://www.mcconaghygroup.com/about-mcconaghy-group/",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "aliases": [
-        "McConaghy Properties",
+        "McConaghy Group",
         "McConaghy Retail Pty Ltd",
         "McConaghy Retail",
-        "McConaghy Group"
+        "McConaghy Properties"
       ]
     },
     {
@@ -2316,6 +2316,24 @@
         "Raptis Investments Pty Ltd",
         "Raptis Investments"
       ]
+    },
+    {
+      "group_id": "group-riverside-plaza-syndicate",
+      "canonical_name": "Riverside Plaza Syndicate",
+      "parent_group_id": "group-elanor-investors",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.elanorinvestors.com/investors/managed-fund/riverside-plaza-syndicate",
+      "status": "Active",
+      "source_url": "https://www.elanorinvestors.com/investors/managed-fund/riverside-plaza-syndicate",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Riverside Plaza Syndicate",
+        "The Trustee for Riverside Plaza Syndicate",
+        "Riverside Plaza Fund"
+      ]
     }
   ],
   "group_alias_index": {
@@ -2376,10 +2394,10 @@
     "barfootthompsoncommercial": "group-barfoot-commercial",
     "brisbaneairportcorporation": "group-brisbane-airport",
     "centapropertygroup": "group-centa-property",
-    "mcconaghyproperties": "group-mcconaghy",
+    "mcconaghygroup": "group-mcconaghy",
     "mcconaghyretailptyltd": "group-mcconaghy",
     "mcconaghyretail": "group-mcconaghy",
-    "mcconaghygroup": "group-mcconaghy",
+    "mcconaghyproperties": "group-mcconaghy",
     "purepropertymanagement": "group-pure-property",
     "revelop": "group-revelop",
     "elanorinvestorsgroup": "group-elanor-investors",
@@ -2587,7 +2605,10 @@
     "cprf": "group-charter-hall-prime-retail-fund",
     "charterhallprimeretailfundcprf": "group-charter-hall-prime-retail-fund",
     "raptisinvestmentsptyltd": "group-raptis-investments",
-    "raptisinvestments": "group-raptis-investments"
+    "raptisinvestments": "group-raptis-investments",
+    "riversideplazasyndicate": "group-riverside-plaza-syndicate",
+    "thetrusteeforriversideplazasyndicate": "group-riverside-plaza-syndicate",
+    "riversideplazafund": "group-riverside-plaza-syndicate"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -16766,6 +16787,246 @@
       "confidence": "High",
       "public_note": "The venue privacy policy identifies Raptis Investments as owner the centre information identifies it as manager and the current venue provides the direct permanent leasing pathway",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ipg-glendale-city-centre-owner-owner",
+      "place_id": "place-au-nsw-glendale-stockland-shopping-centre",
+      "group_id": "group-ip-generation",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.ipgeneration.com.au/assets",
+      "source_type": "Official current owner-manager portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "IP Generation's current portfolio confirms its acquisition and continued ownership of Glendale City Centre formerly Stockland Glendale",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-retpro-glendale-city-centre-management-manager",
+      "place_id": "place-au-nsw-glendale-stockland-shopping-centre",
+      "group_id": "group-retpro",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://retprogroup.com.au/our-centres/glendale-city-centre/",
+      "source_type": "Official current centre-management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "RetPro's current portfolio provides centre management and the direct permanent leasing pathway for Glendale City Centre",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-retpro-glendale-city-centre-management-operator",
+      "place_id": "place-au-nsw-glendale-stockland-shopping-centre",
+      "group_id": "group-retpro",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://retprogroup.com.au/our-centres/glendale-city-centre/",
+      "source_type": "Official current centre-management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "RetPro's current portfolio provides centre management and the direct permanent leasing pathway for Glendale City Centre",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-retpro-glendale-city-centre-management-leasing_controller",
+      "place_id": "place-au-nsw-glendale-stockland-shopping-centre",
+      "group_id": "group-retpro",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://retprogroup.com.au/our-centres/glendale-city-centre/",
+      "source_type": "Official current centre-management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "RetPro's current portfolio provides centre management and the direct permanent leasing pathway for Glendale City Centre",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-grafton-shoppingworld-management-manager",
+      "place_id": "place-au-nsw-grafton-shoppingworld",
+      "group_id": "group-mcconaghy",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.graftonshoppingworld.com.au/centre-info/about-us",
+      "source_type": "Official current venue and manager portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies McConaghy Shopping Centres as manager and routes permanent and casual leasing through McConaghy Group; current beneficial ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-grafton-shoppingworld-management-operator",
+      "place_id": "place-au-nsw-grafton-shoppingworld",
+      "group_id": "group-mcconaghy",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.graftonshoppingworld.com.au/centre-info/about-us",
+      "source_type": "Official current venue and manager portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies McConaghy Shopping Centres as manager and routes permanent and casual leasing through McConaghy Group; current beneficial ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mcconaghy-grafton-shoppingworld-management-leasing_controller",
+      "place_id": "place-au-nsw-grafton-shoppingworld",
+      "group_id": "group-mcconaghy",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.graftonshoppingworld.com.au/centre-info/about-us",
+      "source_type": "Official current venue and manager portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies McConaghy Shopping Centres as manager and routes permanent and casual leasing through McConaghy Group; current beneficial ownership is not asserted",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-lake-haven-centre-owner",
+      "place_id": "place-au-nsw-lake-haven-shopping-centre",
+      "group_id": "group-vicinity",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/lake-haven-centre",
+      "source_type": "Official current owner manager and leasing property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity's current property profile reports 100 percent ownership direct management leasing a 43205 square metre GLA and 5.7 million annual visits",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-lake-haven-centre-manager",
+      "place_id": "place-au-nsw-lake-haven-shopping-centre",
+      "group_id": "group-vicinity",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/lake-haven-centre",
+      "source_type": "Official current owner manager and leasing property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity's current property profile reports 100 percent ownership direct management leasing a 43205 square metre GLA and 5.7 million annual visits",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-lake-haven-centre-operator",
+      "place_id": "place-au-nsw-lake-haven-shopping-centre",
+      "group_id": "group-vicinity",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/lake-haven-centre",
+      "source_type": "Official current owner manager and leasing property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity's current property profile reports 100 percent ownership direct management leasing a 43205 square metre GLA and 5.7 million annual visits",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-lake-haven-centre-leasing_controller",
+      "place_id": "place-au-nsw-lake-haven-shopping-centre",
+      "group_id": "group-vicinity",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/lake-haven-centre",
+      "source_type": "Official current owner manager and leasing property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity's current property profile reports 100 percent ownership direct management leasing a 43205 square metre GLA and 5.7 million annual visits",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-riverside-plaza-syndicate-owner-owner",
+      "place_id": "place-au-nsw-riverside-plaza-queanbeyan",
+      "group_id": "group-riverside-plaza-syndicate",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.elanorinvestors.com/investors/managed-fund/riverside-plaza-syndicate",
+      "source_type": "Official current managed-fund and asset profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Elanor's current fund and asset profiles identify Riverside Plaza Syndicate as the single-asset owning fund and report the centre's current net lettable area",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-retpro-riverside-plaza-management-manager",
+      "place_id": "place-au-nsw-riverside-plaza-queanbeyan",
+      "group_id": "group-retpro",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://retprogroup.com.au/our-centres/riverside-plaza/",
+      "source_type": "Official current centre-management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "RetPro's current portfolio provides centre management and the direct permanent leasing pathway for Riverside Plaza",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-retpro-riverside-plaza-management-operator",
+      "place_id": "place-au-nsw-riverside-plaza-queanbeyan",
+      "group_id": "group-retpro",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://retprogroup.com.au/our-centres/riverside-plaza/",
+      "source_type": "Official current centre-management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "RetPro's current portfolio provides centre management and the direct permanent leasing pathway for Riverside Plaza",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-retpro-riverside-plaza-management-leasing_controller",
+      "place_id": "place-au-nsw-riverside-plaza-queanbeyan",
+      "group_id": "group-retpro",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://retprogroup.com.au/our-centres/riverside-plaza/",
+      "source_type": "Official current centre-management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "RetPro's current portfolio provides centre management and the direct permanent leasing pathway for Riverside Plaza",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -25715,6 +25976,144 @@
       "public_note": "The venue privacy policy identifies Raptis Investments as owner the centre information identifies it as manager and the current venue provides the direct permanent leasing pathway",
       "match_status": "Matched",
       "matched_place_id": "place-au-nsw-deepwater-plaza-centre"
+    },
+    {
+      "portfolio_asset_id": "ipg-glendale-city-centre-owner",
+      "group_id": "group-ip-generation",
+      "canonical_name": "Glendale City Centre",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Glendale Stockland Shopping Centre|Stockland Glendale",
+      "preferred_place_id": "place-au-nsw-glendale-stockland-shopping-centre",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.ipgeneration.com.au/assets",
+      "source_type": "Official current owner-manager portfolio",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "IP Generation's current portfolio confirms its acquisition and continued ownership of Glendale City Centre formerly Stockland Glendale",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-glendale-stockland-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "retpro-glendale-city-centre-management",
+      "group_id": "group-retpro",
+      "canonical_name": "Glendale City Centre",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Glendale Stockland Shopping Centre|Stockland Glendale",
+      "preferred_place_id": "place-au-nsw-glendale-stockland-shopping-centre",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://retprogroup.com.au/our-centres/glendale-city-centre/",
+      "source_type": "Official current centre-management and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "RetPro's current portfolio provides centre management and the direct permanent leasing pathway for Glendale City Centre",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-glendale-stockland-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "mcconaghy-grafton-shoppingworld-management",
+      "group_id": "group-mcconaghy",
+      "canonical_name": "Grafton Shoppingworld",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-grafton-shoppingworld",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.graftonshoppingworld.com.au/centre-info/about-us",
+      "source_type": "Official current venue and manager portfolio",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue identifies McConaghy Shopping Centres as manager and routes permanent and casual leasing through McConaghy Group; current beneficial ownership is not asserted",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-grafton-shoppingworld"
+    },
+    {
+      "portfolio_asset_id": "vicinity-lake-haven-centre",
+      "group_id": "group-vicinity",
+      "canonical_name": "Lake Haven Centre",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Lake Haven Shopping Centre",
+      "preferred_place_id": "place-au-nsw-lake-haven-shopping-centre",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "100",
+      "gla_sqm": "43205",
+      "tenancy_count": "",
+      "annual_visits_m": "5.7",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/lake-haven-centre",
+      "source_type": "Official current owner manager and leasing property profile",
+      "source_date": "2025-12-31",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Vicinity's current property profile reports 100 percent ownership direct management leasing a 43205 square metre GLA and 5.7 million annual visits",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-lake-haven-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "riverside-plaza-syndicate-owner",
+      "group_id": "group-riverside-plaza-syndicate",
+      "canonical_name": "Riverside Plaza",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Riverside Plaza Queanbeyan|Riverside Plaza Shopping Centre",
+      "preferred_place_id": "place-au-nsw-riverside-plaza-queanbeyan",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "22787",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.elanorinvestors.com/investors/managed-fund/riverside-plaza-syndicate",
+      "source_type": "Official current managed-fund and asset profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Elanor's current fund and asset profiles identify Riverside Plaza Syndicate as the single-asset owning fund and report the centre's current net lettable area",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-riverside-plaza-queanbeyan"
+    },
+    {
+      "portfolio_asset_id": "retpro-riverside-plaza-management",
+      "group_id": "group-retpro",
+      "canonical_name": "Riverside Plaza",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Riverside Plaza Queanbeyan|Riverside Plaza Shopping Centre",
+      "preferred_place_id": "place-au-nsw-riverside-plaza-queanbeyan",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "22787",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://retprogroup.com.au/our-centres/riverside-plaza/",
+      "source_type": "Official current centre-management and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "RetPro's current portfolio provides centre management and the direct permanent leasing pathway for Riverside Plaza",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-riverside-plaza-queanbeyan"
     }
   ],
   "property_summaries": {
@@ -41547,84 +41946,6 @@
         "retail_businesses": 75
       }
     },
-    "corridor-au-nsw-lake-haven-lake-haven-drive": {
-      "place_id": "corridor-au-nsw-lake-haven-lake-haven-drive",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "corridor-au-nsw-lake-haven-lake-haven-drive",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "corridor-au-nsw-lake-haven-lake-haven-drive",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 24.13,
-      "competitor_context": {
-        "by_retailer": {
-          "OPSM": {
-            "in_centre": [
-              {
-                "store_id": "opsm-1320",
-                "name": "OPSM Lake Haven",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "specsavers-3511",
-                "name": "Lake Haven",
-                "distance_km": 0.17
-              }
-            ],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 8.9,
-          "Bailey Nelson": 24.13,
-          "OPSM": 0.0,
-          "Oscar Wylee": 11.32,
-          "Specsavers": 0.17
-        },
-        "independent_2km_count": 0
-      },
-      "market": {
-        "sa2_code": "102021048",
-        "sa2_name": "Gorokan - Kanwal - Charmhaven",
-        "population_2025": 22880,
-        "population_growth_pct": 1.29,
-        "median_household_income": 795,
-        "age_45_plus_pct": 47.4,
-        "retail_businesses": 61
-      }
-    },
     "corridor-au-nsw-laurieton-laurie-street": {
       "place_id": "corridor-au-nsw-laurieton-laurie-street",
       "centre_class": "Unknown",
@@ -42518,101 +42839,6 @@
         "median_household_income": 2086,
         "age_45_plus_pct": 39,
         "retail_businesses": 193
-      }
-    },
-    "corridor-au-nsw-queanbeyan-monaro-street": {
-      "place_id": "corridor-au-nsw-queanbeyan-monaro-street",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "corridor-au-nsw-queanbeyan-monaro-street",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "corridor-au-nsw-queanbeyan-monaro-street",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 12.25,
-      "competitor_context": {
-        "by_retailer": {
-          "Independent / Other optical": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "independent-other-optical-osm-au-node-4678091420",
-                "name": "Eyecare on Q",
-                "distance_km": 0.14
-              }
-            ],
-            "catchment_2km": []
-          },
-          "OPSM": {
-            "in_centre": [
-              {
-                "store_id": "opsm-1384",
-                "name": "OPSM Queanbeyan",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [
-              {
-                "store_id": "opsm-2943",
-                "name": "Jason Harley Bega by OPSM",
-                "distance_km": 0.0
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "specsavers-3574",
-                "name": "Queanbeyan - Riverside",
-                "distance_km": 0.17
-              }
-            ],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 0.14,
-          "Bailey Nelson": 12.25,
-          "OPSM": 0.0,
-          "Oscar Wylee": 12.28,
-          "Specsavers": 0.17
-        },
-        "independent_2km_count": 1
-      },
-      "market": {
-        "sa2_code": "101021009",
-        "sa2_name": "Queanbeyan",
-        "population_2025": 11251,
-        "population_growth_pct": -1.09,
-        "median_household_income": 1206,
-        "age_45_plus_pct": 38.8,
-        "retail_businesses": 52
       }
     },
     "corridor-au-nsw-nsw-murwillumbah-street": {
@@ -47963,35 +48189,47 @@
     },
     "place-au-nsw-glendale-stockland-shopping-centre": {
       "place_id": "place-au-nsw-glendale-stockland-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-glendale-stockland-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://retprogroup.com.au/our-centres/glendale-city-centre/",
+        "source_type": "Official current centre-management and leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from the double-supermarket double-discount-department-store cinema and more than 75 specialty-store mix; the current profile does not publish a formal SCCA class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-glendale-stockland-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.ipgeneration.com.au/assets",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current IP Generation MA Financial RetPro and venue sources confirm the Glendale City Centre identity IP Generation ownership RetPro management direct leasing address active optical tenancy and a defensible inferred sub-regional class"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-ipg-glendale-city-centre-owner-owner",
+        "rel-portfolio-retpro-glendale-city-centre-management-manager",
+        "rel-portfolio-retpro-glendale-city-centre-management-operator",
+        "rel-portfolio-retpro-glendale-city-centre-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-ip-generation",
+        "group-retpro"
+      ],
+      "owner_names": [
+        "IP Generation"
+      ],
+      "manager_names": [
+        "RetPro"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 6.45,
@@ -48030,32 +48268,40 @@
     },
     "place-au-nsw-grafton-shoppingworld": {
       "place_id": "place-au-nsw-grafton-shoppingworld",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-grafton-shoppingworld",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.mcconaghygroup.com/shopping_centres/grafton-shoppingworld/",
+        "source_type": "Official current manager and venue profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from more than 32000 square metres of retail plus the Woolworths Big W Target and extensive specialty mix; the current profile does not publish a formal SCCA class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-grafton-shoppingworld",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.graftonshoppingworld.com.au/centre-info/about-us",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue and McConaghy sources confirm Grafton Shoppingworld's identity address McConaghy management direct leasing active optical tenancy and a defensible inferred sub-regional class; current beneficial ownership remains unpublished"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-mcconaghy-grafton-shoppingworld-management-manager",
+        "rel-portfolio-mcconaghy-grafton-shoppingworld-management-operator",
+        "rel-portfolio-mcconaghy-grafton-shoppingworld-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-mcconaghy"
+      ],
       "owner_names": [],
-      "manager_names": [],
+      "manager_names": [
+        "McConaghy Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -49127,49 +49373,89 @@
     },
     "place-au-nsw-lake-haven-shopping-centre": {
       "place_id": "place-au-nsw-lake-haven-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-lake-haven-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/lake-haven-centre",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Vicinity explicitly classifies Lake Haven Centre as a Sub Regional shopping centre under SCCA guidelines"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-lake-haven-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/lake-haven-centre",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Vicinity property and venue sources confirm 100 percent ownership direct management leasing address class current public metrics and both mapped optical tenancies"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-vicinity-lake-haven-centre-owner",
+        "rel-portfolio-vicinity-lake-haven-centre-manager",
+        "rel-portfolio-vicinity-lake-haven-centre-operator",
+        "rel-portfolio-vicinity-lake-haven-centre-leasing_controller"
+      ],
+      "group_ids": [
+        "group-vicinity"
+      ],
+      "owner_names": [
+        "Vicinity Centres"
+      ],
+      "manager_names": [
+        "Vicinity Centres"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
+      "portfolio_overlap_status": "LEASING_CONTROLLER_OVERLAP",
+      "portfolio_overlap_groups": [
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "LEASING_CONTROLLER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "OWNER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "MANAGER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "OPERATOR",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        }
+      ],
+      "portfolio_white_space": true,
       "nearest_bailey_km": 24.24,
       "competitor_context": {
         "by_retailer": {
           "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [
+            "in_centre": [
               {
                 "store_id": "opsm-1320",
                 "name": "OPSM Lake Haven",
                 "distance_km": 0.17
               }
             ],
+            "nearby_unverified": [],
             "catchment_2km": []
           },
           "Specsavers": {
@@ -49201,7 +49487,11 @@
         "median_household_income": 795,
         "age_45_plus_pct": 47.4,
         "retail_businesses": 61
-      }
+      },
+      "gla_sqm": 43205.0,
+      "annual_visits": 5700000.0,
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/lake-haven-centre",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-lake-macquarie-square": {
       "place_id": "place-au-nsw-lake-macquarie-square",
@@ -49576,10 +49866,10 @@
         "group-mcconaghy"
       ],
       "owner_names": [
-        "McConaghy Properties"
+        "McConaghy Group"
       ],
       "manager_names": [
-        "McConaghy Properties"
+        "McConaghy Group"
       ],
       "has_bailey": false,
       "bailey_store_count": 0,
@@ -51707,35 +51997,47 @@
     },
     "place-au-nsw-riverside-plaza-queanbeyan": {
       "place_id": "place-au-nsw-riverside-plaza-queanbeyan",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-riverside-plaza-queanbeyan",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://retprogroup.com.au/our-centres/riverside-plaza/",
+        "source_type": "Official current centre-management and leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "RetPro explicitly classifies Riverside Plaza as a two-level sub-regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-riverside-plaza-queanbeyan",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.elanorinvestors.com/investors/managed-fund/riverside-plaza-syndicate",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Elanor RetPro venue and business-register sources confirm the single-asset owning syndicate RetPro management direct leasing address class public metrics and both mapped optical tenancies"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-riverside-plaza-syndicate-owner-owner",
+        "rel-portfolio-retpro-riverside-plaza-management-manager",
+        "rel-portfolio-retpro-riverside-plaza-management-operator",
+        "rel-portfolio-retpro-riverside-plaza-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-retpro",
+        "group-riverside-plaza-syndicate"
+      ],
+      "owner_names": [
+        "Riverside Plaza Syndicate"
+      ],
+      "manager_names": [
+        "RetPro"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 12.36,
@@ -51753,16 +52055,17 @@
             ]
           },
           "OPSM": {
-            "in_centre": [],
+            "in_centre": [
+              {
+                "store_id": "opsm-1384",
+                "name": "OPSM Queanbeyan",
+                "distance_km": 0.17
+              }
+            ],
             "nearby_unverified": [
               {
                 "store_id": "opsm-2943",
                 "name": "Jason Harley Bega by OPSM",
-                "distance_km": 0.17
-              },
-              {
-                "store_id": "opsm-1384",
-                "name": "OPSM Queanbeyan",
                 "distance_km": 0.17
               }
             ],
@@ -51797,7 +52100,10 @@
         "median_household_income": 1206,
         "age_45_plus_pct": 38.8,
         "retail_businesses": 52
-      }
+      },
+      "gla_sqm": 22787.0,
+      "source_url": "https://www.elanorinvestors.com/investors/managed-fund/riverside-plaza-syndicate",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-rockdale-plaza-drive": {
       "place_id": "place-au-nsw-rockdale-plaza-drive",
@@ -64911,10 +65217,10 @@
         "group-mcconaghy"
       ],
       "owner_names": [
-        "McConaghy Properties"
+        "McConaghy Group"
       ],
       "manager_names": [
-        "McConaghy Properties"
+        "McConaghy Group"
       ],
       "has_bailey": false,
       "bailey_store_count": 0,
@@ -119306,7 +119612,7 @@
     },
     "group-vicinity": {
       "group_id": "group-vicinity",
-      "property_count": 23,
+      "property_count": 24,
       "bailey_property_count": 5,
       "bailey_store_count": 5,
       "bailey_property_ids": [
@@ -119328,6 +119634,12 @@
           "OPERATOR"
         ],
         "place-au-nsw-chatswood-chase": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ],
+        "place-au-nsw-lake-haven-shopping-centre": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR",
@@ -119448,6 +119760,7 @@
         "place-au-nsw-bankstown-central",
         "place-au-nsw-carlingford-court",
         "place-au-nsw-chatswood-chase",
+        "place-au-nsw-lake-haven-shopping-centre",
         "place-au-nsw-nepean-village",
         "place-au-nsw-warriewood-square",
         "place-au-qld-browns-plains-grand-plaza-shopping-centre",
@@ -120130,11 +120443,14 @@
     },
     "group-ip-generation": {
       "group_id": "group-ip-generation",
-      "property_count": 2,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-glendale-stockland-shopping-centre": [
+          "OWNER"
+        ],
         "place-au-vic-cranbourne-park-shopping-centre-sp107": [
           "CO_OWNER"
         ],
@@ -120146,12 +120462,22 @@
     },
     "group-retpro": {
       "group_id": "group-retpro",
-      "property_count": 2,
+      "property_count": 4,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
         "place-au-nsw-cessnock-plaza-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-nsw-glendale-stockland-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-nsw-riverside-plaza-queanbeyan": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
@@ -120731,11 +121057,16 @@
     },
     "group-mcconaghy": {
       "group_id": "group-mcconaghy",
-      "property_count": 2,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-grafton-shoppingworld": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-nsw-lismore-shopping-centre": [
           "LEASING_CONTROLLER",
           "MANAGER",
@@ -122256,6 +122587,19 @@
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR",
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-riverside-plaza-syndicate": {
+      "group_id": "group-riverside-plaza-syndicate",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-riverside-plaza-queanbeyan": [
           "OWNER"
         ]
       },
@@ -132088,55 +132432,6 @@
         }
       }
     },
-    "corridor-au-nsw-lake-haven-lake-haven-drive": {
-      "schema_version": 1,
-      "place_id": "corridor-au-nsw-lake-haven-lake-haven-drive",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "102021048",
-          "sa2_name": "Gorokan - Kanwal - Charmhaven",
-          "population_2025": 22880,
-          "population_growth_pct": 1.29,
-          "median_household_income": 795,
-          "age_45_plus_pct": 47.4,
-          "retail_businesses": 61
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.corridor-au-nsw-lake-haven-lake-haven-drive.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "High Street",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 24.13,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
     "corridor-au-nsw-laurieton-laurie-street": {
       "schema_version": 1,
       "place_id": "corridor-au-nsw-laurieton-laurie-street",
@@ -132606,55 +132901,6 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 3.24,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
-    "corridor-au-nsw-queanbeyan-monaro-street": {
-      "schema_version": 1,
-      "place_id": "corridor-au-nsw-queanbeyan-monaro-street",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "101021009",
-          "sa2_name": "Queanbeyan",
-          "population_2025": 11251,
-          "population_growth_pct": -1.09,
-          "median_household_income": 1206,
-          "age_45_plus_pct": 38.8,
-          "retail_businesses": 52
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.corridor-au-nsw-queanbeyan-monaro-street.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "High Street",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 12.25,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -135469,7 +135715,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -135483,11 +135729,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 6.45,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-ip-generation",
+            "group-retpro"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -135518,7 +135767,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -135532,10 +135781,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 133.99,
-          "group_ids": [],
+          "group_ids": [
+            "group-mcconaghy"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -136130,7 +136381,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -136144,11 +136395,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 24.24,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-vicinity"
+          ],
+          "overlap_status": "LEASING_CONTROLLER_OVERLAP"
         }
       }
     },
@@ -137373,7 +137626,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -137387,11 +137640,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 12.36,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-retpro",
+            "group-riverside-plaza-syndicate"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },

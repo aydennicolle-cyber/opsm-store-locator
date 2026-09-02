@@ -11,7 +11,7 @@ group-ispt,ISPT,,,ASSET_MANAGER,Australia,https://ispt.com.au/,Active,https://is
 group-region,Region Group,,,PROPERTY_COMPANY,Australia,https://regiongroup.au/,Active,https://regiongroup.au/,2026-09-02,High
 group-charter-hall,Charter Hall,,,ASSET_MANAGER,Australia,https://www.charterhall.com.au/,Active,https://www.charterhall.com.au/,2026-09-02,High
 group-ma-financial,MA Financial,,,ASSET_MANAGER,Australia,https://mafinancial.com/,Active,https://mafinancial.com/,2026-09-02,High
-group-ip-generation,IP Generation,,,ASSET_MANAGER,Australia,https://ipgeneration.com.au/,Active,https://ipgeneration.com.au/,2026-09-02,High
+group-ip-generation,IP Generation,group-ma-financial,,ASSET_MANAGER,Australia,https://www.ipgeneration.com.au/,Active,https://www.ipgeneration.com.au/about/,2026-09-02,High
 group-retpro,RetPro,group-ma-financial,,CENTRE_OPERATOR,Australia,https://retprogroup.com.au/,Active,https://retprogroup.com.au/about-us/,2026-09-02,High
 group-haben,Haben,,,PROPERTY_COMPANY,Australia,https://haben.com.au/,Active,https://haben.com.au/,2026-09-02,High
 group-kiwi-property,Kiwi Property,,,PROPERTY_COMPANY,New Zealand,https://www.kiwiproperty.com/,Active,https://www.kiwiproperty.com/,2026-09-02,High
@@ -38,7 +38,7 @@ group-millwater-park,Millwater Park Limited,,,PRIVATE_LANDLORD,New Zealand,https
 group-barfoot-commercial,Barfoot & Thompson Commercial,,,EXTERNAL_AGENCY,New Zealand,https://www.barfoot.co.nz/commercial,Active,https://www.barfoot.co.nz/commercial,2026-09-02,High
 group-brisbane-airport,Brisbane Airport Corporation,,,PROPERTY_COMPANY,Australia,https://www.bne.com.au/corporate,Active,https://www.bne.com.au/corporate,2026-09-02,High
 group-centa-property,Centa Property Group,,,CENTRE_OPERATOR,Australia,https://centaproperty.com.au/,Active,https://centaproperty.com.au/,2026-09-02,High
-group-mcconaghy,McConaghy Properties,,,PROPERTY_COMPANY,Australia,https://mcconaghyproperties.com.au/,Active,https://mcconaghyproperties.com.au/our-business/manage/,2026-09-02,High
+group-mcconaghy,McConaghy Group,,,PROPERTY_COMPANY,Australia,https://www.mcconaghygroup.com/,Active,https://www.mcconaghygroup.com/about-mcconaghy-group/,2026-09-02,High
 group-pure-property,Pure Property Management,,,CENTRE_OPERATOR,Australia,https://www.purepm.com.au/,Active,https://www.purepm.com.au/,2026-09-02,Medium
 group-revelop,Revelop,,,PROPERTY_COMPANY,Australia,https://www.revelop.com.au/,Active,https://www.revelop.com.au/,2026-09-02,High
 group-elanor-investors,Elanor Investors Group,,,ASSET_MANAGER,Australia,https://www.elanorinvestors.com/,Active,https://www.elanorinvestors.com/investments/asset/riverton-forum,2026-09-02,High
@@ -134,3 +134,4 @@ group-hmc-lml-no5-property-trust,HMC LML No. 5 Property Trust,group-hmc-capital,
 group-qic-active-retail-property-fund,QIC Active Retail Property Fund,group-qic,,INVESTMENT_VEHICLE,Australia,https://www.qic.com/Investment-Capabilities/Real-Estate,Active,https://bathurstcitycentre.qicre.com/conditions-of-entry/centre-conditions-of-entry,2026-09-02,High
 group-charter-hall-prime-retail-fund,Charter Hall Prime Retail Fund,group-charter-hall,CPRF,INVESTMENT_VEHICLE,Australia,https://www.charterhall.com.au/investor-centre/unlisted-direct-property-funds/charter-hall-prime-retail-fund-%28cprf%29,Active,https://www.charterhall.com.au/investor-centre/unlisted-direct-property-funds/charter-hall-prime-retail-fund-%28cprf%29,2026-09-02,High
 group-raptis-investments,Raptis Investments Pty Ltd,,,PROPERTY_COMPANY,Australia,https://www.deepwaterplaza.com.au/,Active,https://www.deepwaterplaza.com.au/privacy-policy/,2026-09-02,High
+group-riverside-plaza-syndicate,Riverside Plaza Syndicate,group-elanor-investors,,INVESTMENT_VEHICLE,Australia,https://www.elanorinvestors.com/investors/managed-fund/riverside-plaza-syndicate,Active,https://www.elanorinvestors.com/investors/managed-fund/riverside-plaza-syndicate,2026-09-02,High

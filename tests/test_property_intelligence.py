@@ -759,8 +759,8 @@ class PropertyIntelligenceTests(unittest.TestCase):
         lismore = self.payload["property_summaries"]["place-au-nsw-lismore-shopping-centre"]
         self.assertEqual(lismore["research_status"], "Verified")
         self.assertEqual(lismore["centre_class"], "Sub-regional")
-        self.assertEqual(lismore["owner_names"], ["McConaghy Properties"])
-        self.assertEqual(lismore["manager_names"], ["McConaghy Properties"])
+        self.assertEqual(lismore["owner_names"], ["McConaghy Group"])
+        self.assertEqual(lismore["manager_names"], ["McConaghy Group"])
         self.assertEqual(lismore["leasing_arrangement"], "In-house")
         self.assertEqual(lismore["gla_sqm"], 29901)
         self.assertEqual(lismore["tenancy_count"], 69)
@@ -768,8 +768,8 @@ class PropertyIntelligenceTests(unittest.TestCase):
         kingaroy = self.payload["property_summaries"]["place-au-qld-kingaroy-plaza"]
         self.assertEqual(kingaroy["research_status"], "Verified")
         self.assertEqual(kingaroy["centre_class"], "Sub-regional")
-        self.assertEqual(kingaroy["owner_names"], ["McConaghy Properties"])
-        self.assertEqual(kingaroy["manager_names"], ["McConaghy Properties"])
+        self.assertEqual(kingaroy["owner_names"], ["McConaghy Group"])
+        self.assertEqual(kingaroy["manager_names"], ["McConaghy Group"])
         self.assertEqual(kingaroy["leasing_arrangement"], "In-house")
         self.assertEqual(kingaroy["gla_sqm"], 13005)
         self.assertEqual(kingaroy["tenancy_count"], 45)
@@ -1112,6 +1112,46 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(crown["owner_names"], [])
         self.assertEqual(crown["manager_names"], [])
         self.assertEqual(crown["leasing_arrangement"], "Unknown")
+
+    def test_current_lake_haven_riverside_glendale_and_grafton_roles_are_explicit(self) -> None:
+        groups = {group["group_id"]: group for group in self.groups}
+        self.assertEqual(groups["group-ip-generation"]["parent_group_id"], "group-ma-financial")
+        self.assertEqual(groups["group-mcconaghy"]["canonical_name"], "McConaghy Group")
+        self.assertEqual(
+            groups["group-riverside-plaza-syndicate"]["parent_group_id"],
+            "group-elanor-investors",
+        )
+
+        glendale = self.payload["property_summaries"]["place-au-nsw-glendale-stockland-shopping-centre"]
+        self.assertEqual(glendale["research_status"], "Verified")
+        self.assertEqual(glendale["centre_class"], "Sub-regional")
+        self.assertEqual(glendale["owner_names"], ["IP Generation"])
+        self.assertEqual(glendale["manager_names"], ["RetPro"])
+        self.assertEqual(glendale["leasing_arrangement"], "In-house")
+
+        grafton = self.payload["property_summaries"]["place-au-nsw-grafton-shoppingworld"]
+        self.assertEqual(grafton["research_status"], "Partial")
+        self.assertEqual(grafton["centre_class"], "Sub-regional")
+        self.assertEqual(grafton["owner_names"], [])
+        self.assertEqual(grafton["manager_names"], ["McConaghy Group"])
+        self.assertEqual(grafton["leasing_arrangement"], "In-house")
+
+        lake_haven = self.payload["property_summaries"]["place-au-nsw-lake-haven-shopping-centre"]
+        self.assertEqual(lake_haven["research_status"], "Verified")
+        self.assertEqual(lake_haven["centre_class"], "Sub-regional")
+        self.assertEqual(lake_haven["owner_names"], ["Vicinity Centres"])
+        self.assertEqual(lake_haven["manager_names"], ["Vicinity Centres"])
+        self.assertEqual(lake_haven["leasing_arrangement"], "In-house")
+        self.assertEqual(lake_haven["gla_sqm"], 43205)
+        self.assertEqual(lake_haven["annual_visits"], 5700000)
+
+        riverside = self.payload["property_summaries"]["place-au-nsw-riverside-plaza-queanbeyan"]
+        self.assertEqual(riverside["research_status"], "Verified")
+        self.assertEqual(riverside["centre_class"], "Sub-regional")
+        self.assertEqual(riverside["owner_names"], ["Riverside Plaza Syndicate"])
+        self.assertEqual(riverside["manager_names"], ["RetPro"])
+        self.assertEqual(riverside["leasing_arrangement"], "In-house")
+        self.assertEqual(riverside["gla_sqm"], 22787)
 
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]

@@ -418,6 +418,52 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(rockdale["address"], "1 Rockdale Plaza Drive")
         self.assertEqual(rockdale["postcode"], "2216")
 
+    def test_lake_haven_riverside_glendale_and_grafton_use_current_public_records(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        expected = {
+            "place-au-nsw-glendale-stockland-shopping-centre": (
+                "Glendale City Centre", "387 Lake Road", "2285"
+            ),
+            "place-au-nsw-grafton-shoppingworld": (
+                "Grafton Shoppingworld", "52-74 Fitzroy Street", "2460"
+            ),
+            "place-au-nsw-lake-haven-shopping-centre": (
+                "Lake Haven Centre", "Corner Lake Haven Drive and Goobarabah Avenue", "2263"
+            ),
+            "place-au-nsw-riverside-plaza-queanbeyan": (
+                "Riverside Plaza", "131 Monaro Street", "2620"
+            ),
+        }
+        for place_id, (name, address, postcode) in expected.items():
+            with self.subTest(place_id=place_id):
+                place = places[place_id]
+                self.assertEqual(place["name"], name)
+                self.assertEqual(place["address"], address)
+                self.assertEqual(place["postcode"], postcode)
+                self.assertEqual(place["location_setting"], "Shopping Centre")
+
+        memberships = {row["store_id"]: row for row in self.memberships}
+        self.assertEqual(
+            memberships["opsm-1320"]["place_id"],
+            "place-au-nsw-lake-haven-shopping-centre",
+        )
+        self.assertEqual(
+            memberships["opsm-1384"]["place_id"],
+            "place-au-nsw-riverside-plaza-queanbeyan",
+        )
+        self.assertEqual(memberships["opsm-1320"]["location_setting"], "Shopping Centre")
+        self.assertEqual(memberships["opsm-1384"]["location_setting"], "Shopping Centre")
+
+        for place_id, store_ids in {
+            "place-au-nsw-lake-haven-shopping-centre": {"opsm-1320", "specsavers-3511"},
+            "place-au-nsw-riverside-plaza-queanbeyan": {"opsm-1384", "specsavers-3574"},
+        }.items():
+            with self.subTest(place_id=place_id):
+                self.assertEqual(
+                    {row["store_id"] for row in self.memberships if row["place_id"] == place_id},
+                    store_ids,
+                )
+
     def test_current_charter_hall_nsw_batch_has_complete_public_addresses(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         expected = {
