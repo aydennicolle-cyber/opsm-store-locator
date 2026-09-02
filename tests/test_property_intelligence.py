@@ -710,6 +710,24 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(maddington["leasing_arrangement"], "In-house")
         self.assertEqual(maddington["gla_sqm"], 27661)
 
+    def test_current_plumpton_and_dandenong_roles_preserve_known_unknowns(self) -> None:
+        plumpton = self.payload["property_summaries"]["place-au-nsw-plumpton-marketplace"]
+        self.assertEqual(plumpton["centre_class"], "Sub-regional")
+        self.assertEqual(plumpton["research_status"], "Partial")
+        self.assertEqual(plumpton["owner_names"], ["HMC Australian Retail Partnership"])
+        self.assertEqual(plumpton["manager_names"], ["HMC Capital"])
+        self.assertEqual(plumpton["leasing_arrangement"], "Unknown")
+        self.assertEqual(plumpton["gla_sqm"], 18132)
+
+        dandenong = self.payload["property_summaries"]["place-au-vic-dandenong-square"]
+        self.assertEqual(dandenong["centre_class"], "Regional")
+        self.assertEqual(dandenong["research_status"], "Verified")
+        self.assertEqual(dandenong["owner_names"], ["Dandenong Plaza JV Unit Trust"])
+        self.assertEqual(dandenong["manager_names"], ["JLL"])
+        self.assertEqual(dandenong["leasing_arrangement"], "External agency")
+        self.assertNotIn("gla_sqm", dandenong)
+        self.assertNotIn("tenancy_count", dandenong)
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

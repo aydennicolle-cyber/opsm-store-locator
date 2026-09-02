@@ -288,6 +288,21 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(maddington["address"], "Corner Burslem Drive and Attfield Street")
         self.assertEqual(maddington["postcode"], "6109")
 
+    def test_current_plumpton_and_dandenong_names_preserve_stable_ids(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+
+        plumpton = places["place-au-nsw-plumpton-marketplace"]
+        self.assertEqual(plumpton["name"], "HomeCo Plumpton Marketplace")
+        self.assertIn("Plumpton Marketplace", plumpton["aliases"])
+        self.assertEqual(plumpton["address"], "260 Jersey Road")
+        self.assertEqual(plumpton["postcode"], "2761")
+
+        dandenong = places["place-au-vic-dandenong-square"]
+        self.assertEqual(dandenong["name"], "Dandenong Square")
+        self.assertIn("Dandenong Plaza", dandenong["aliases"])
+        self.assertEqual(dandenong["address"], "Corner McCrae and Walker Streets")
+        self.assertEqual(dandenong["postcode"], "3175")
+
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, expected_name in {

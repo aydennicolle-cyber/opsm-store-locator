@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T03:12:22.971840+00:00",
+  "generated_at": "2026-09-02T03:16:25.926826+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 110,
-    "relationship_count": 749,
-    "active_relationship_count": 747,
+    "group_count": 114,
+    "relationship_count": 760,
+    "active_relationship_count": 758,
     "shopping_centre_count": 586,
-    "researched_property_count": 232,
-    "classed_property_count": 222,
+    "researched_property_count": 234,
+    "classed_property_count": 224,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -1880,6 +1880,75 @@
       "aliases": [
         "Sirona Urban"
       ]
+    },
+    {
+      "group_id": "group-hmc-australian-retail-partnership",
+      "canonical_name": "HMC Australian Retail Partnership",
+      "parent_group_id": "group-hmc-capital",
+      "brand_name": "HARP",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.hmccapital.com.au/",
+      "status": "Active",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "HMC Australian Retail Partnership",
+        "HARP",
+        "HMC Australian Retail Partnership HARP"
+      ]
+    },
+    {
+      "group_id": "group-dandenong-plaza-jv-trust",
+      "canonical_name": "Dandenong Plaza JV Unit Trust",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://dandenongsquare.com/",
+      "status": "Active",
+      "source_url": "https://www.aer.gov.au/industry/registers/network-exemptions/trustee-dandenong-plaza-jv-unit-trust-dandenong-plaza-shopping-centre-network-exemption",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Dandenong Plaza JV Unit Trust",
+        "The Trustee for Dandenong Plaza JV Unit Trust"
+      ]
+    },
+    {
+      "group_id": "group-network-retail-group",
+      "canonical_name": "Network Retail Group",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "EXTERNAL_AGENCY",
+      "country_scope": "Australia",
+      "official_url": "https://networkretail.com.au/",
+      "status": "Active",
+      "source_url": "https://dandenongsquare.com/centre-info/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Network Retail Group",
+        "Network Retail"
+      ]
+    },
+    {
+      "group_id": "group-bluestone-retail",
+      "canonical_name": "Bluestone Retail",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "EXTERNAL_AGENCY",
+      "country_scope": "Australia",
+      "official_url": "https://bluestoneretail.com.au/",
+      "status": "Active",
+      "source_url": "https://dandenongsquare.com/centre-info/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Bluestone Retail",
+        "Bluestone Retail Group"
+      ]
     }
   ],
   "group_alias_index": {
@@ -2092,7 +2161,16 @@
     "realsideproperty": "group-realside-property",
     "realside": "group-realside-property",
     "realsidepropertyptyltd": "group-realside-property",
-    "sironaurban": "group-sirona-urban"
+    "sironaurban": "group-sirona-urban",
+    "hmcaustralianretailpartnership": "group-hmc-australian-retail-partnership",
+    "harp": "group-hmc-australian-retail-partnership",
+    "hmcaustralianretailpartnershipharp": "group-hmc-australian-retail-partnership",
+    "dandenongplazajvunittrust": "group-dandenong-plaza-jv-trust",
+    "thetrusteefordandenongplazajvunittrust": "group-dandenong-plaza-jv-trust",
+    "networkretailgroup": "group-network-retail-group",
+    "networkretail": "group-network-retail-group",
+    "bluestoneretail": "group-bluestone-retail",
+    "bluestoneretailgroup": "group-bluestone-retail"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -14079,6 +14157,182 @@
       "confidence": "High",
       "public_note": "Realside appointed Sirona Urban as asset and development manager when it acquired Maddington Central; the current Realside portfolio confirms the asset remains held",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-hmc-harp-plumpton-owner-owner",
+      "place_id": "place-au-nsw-plumpton-marketplace",
+      "group_id": "group-hmc-australian-retail-partnership",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "source_type": "Official current fund portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "HMC's current results identify HomeCo Plumpton Marketplace as a HARP asset and define HARP as its sub-regional retail strategy; the ownership percentage is not separately published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-hmc-plumpton-manager-manager",
+      "place_id": "place-au-nsw-plumpton-marketplace",
+      "group_id": "group-hmc-capital",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.aer.gov.au/industry/registers/network-exemptions/lendlease-property-management-australia-pty-ltd-plumpton-marketplace-network-exemption",
+      "source_type": "Current regulator record corroborated by official HMC fund portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The AER records HMC Capital as the current site registrant after Lendlease while HMC's current fund results identify the venue in its managed HARP portfolio; current leasing control is not publicly established",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-hmc-plumpton-manager-operator",
+      "place_id": "place-au-nsw-plumpton-marketplace",
+      "group_id": "group-hmc-capital",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.aer.gov.au/industry/registers/network-exemptions/lendlease-property-management-australia-pty-ltd-plumpton-marketplace-network-exemption",
+      "source_type": "Current regulator record corroborated by official HMC fund portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The AER records HMC Capital as the current site registrant after Lendlease while HMC's current fund results identify the venue in its managed HARP portfolio; current leasing control is not publicly established",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-dandenong-jv-owner-owner",
+      "place_id": "place-au-vic-dandenong-square",
+      "group_id": "group-dandenong-plaza-jv-trust",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.aer.gov.au/industry/registers/network-exemptions/trustee-dandenong-plaza-jv-unit-trust-dandenong-plaza-shopping-centre-network-exemption",
+      "source_type": "Current regulator and business-register evidence",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current AER exemption and ABN register connect the Dandenong Plaza JV Unit Trust directly to the active Dandenong Square business and site; beneficial ownership shares behind the trust are not published",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-dandenong-manager-manager",
+      "place_id": "place-au-vic-dandenong-square",
+      "group_id": "group-jll",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://dandenongsquare.com/centre-info/",
+      "source_type": "Official current venue management and pop-up leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies JLL centre management and directs pop-up and casual leasing through JLL",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-dandenong-manager-operator",
+      "place_id": "place-au-vic-dandenong-square",
+      "group_id": "group-jll",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://dandenongsquare.com/centre-info/",
+      "source_type": "Official current venue management and pop-up leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies JLL centre management and directs pop-up and casual leasing through JLL",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-dandenong-manager-external_leasing_agent",
+      "place_id": "place-au-vic-dandenong-square",
+      "group_id": "group-jll",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://dandenongsquare.com/centre-info/",
+      "source_type": "Official current venue management and pop-up leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies JLL centre management and directs pop-up and casual leasing through JLL",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-network-retail-dandenong-leasing-leasing_controller",
+      "place_id": "place-au-vic-dandenong-square",
+      "group_id": "group-network-retail-group",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://dandenongsquare.com/centre-info/",
+      "source_type": "Official current venue permanent leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue appoints Network Retail Group for permanent retailer leasing alongside Bluestone Retail",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-network-retail-dandenong-leasing-external_leasing_agent",
+      "place_id": "place-au-vic-dandenong-square",
+      "group_id": "group-network-retail-group",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://dandenongsquare.com/centre-info/",
+      "source_type": "Official current venue permanent leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue appoints Network Retail Group for permanent retailer leasing alongside Bluestone Retail",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-bluestone-dandenong-leasing-leasing_controller",
+      "place_id": "place-au-vic-dandenong-square",
+      "group_id": "group-bluestone-retail",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://dandenongsquare.com/centre-info/",
+      "source_type": "Official current venue permanent leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue appoints Bluestone Retail for permanent retailer leasing alongside Network Retail Group",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-bluestone-dandenong-leasing-external_leasing_agent",
+      "place_id": "place-au-vic-dandenong-square",
+      "group_id": "group-bluestone-retail",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://dandenongsquare.com/centre-info/",
+      "source_type": "Official current venue permanent leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue appoints Bluestone Retail for permanent retailer leasing alongside Network Retail Group",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -21349,6 +21603,144 @@
       "public_note": "Realside appointed Sirona Urban as asset and development manager when it acquired Maddington Central; the current Realside portfolio confirms the asset remains held",
       "match_status": "Matched",
       "matched_place_id": "place-au-wa-maddington-centro-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "hmc-harp-plumpton-owner",
+      "group_id": "group-hmc-australian-retail-partnership",
+      "canonical_name": "HomeCo Plumpton Marketplace",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Plumpton Marketplace",
+      "preferred_place_id": "place-au-nsw-plumpton-marketplace",
+      "roles": "OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "18132",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "source_type": "Official current fund portfolio",
+      "source_date": "2026-02-11",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "HMC's current results identify HomeCo Plumpton Marketplace as a HARP asset and define HARP as its sub-regional retail strategy; the ownership percentage is not separately published",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-plumpton-marketplace"
+    },
+    {
+      "portfolio_asset_id": "hmc-plumpton-manager",
+      "group_id": "group-hmc-capital",
+      "canonical_name": "HomeCo Plumpton Marketplace",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "Plumpton Marketplace",
+      "preferred_place_id": "place-au-nsw-plumpton-marketplace",
+      "roles": "MANAGER|OPERATOR",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.aer.gov.au/industry/registers/network-exemptions/lendlease-property-management-australia-pty-ltd-plumpton-marketplace-network-exemption",
+      "source_type": "Current regulator record corroborated by official HMC fund portfolio",
+      "source_date": "2025-03-23",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The AER records HMC Capital as the current site registrant after Lendlease while HMC's current fund results identify the venue in its managed HARP portfolio; current leasing control is not publicly established",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-plumpton-marketplace"
+    },
+    {
+      "portfolio_asset_id": "dandenong-jv-owner",
+      "group_id": "group-dandenong-plaza-jv-trust",
+      "canonical_name": "Dandenong Square",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "Dandenong Plaza|Dandenong Plaza Shopping Centre",
+      "preferred_place_id": "place-au-vic-dandenong-square",
+      "roles": "OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.aer.gov.au/industry/registers/network-exemptions/trustee-dandenong-plaza-jv-unit-trust-dandenong-plaza-shopping-centre-network-exemption",
+      "source_type": "Current regulator and business-register evidence",
+      "source_date": "2026-08-21",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current AER exemption and ABN register connect the Dandenong Plaza JV Unit Trust directly to the active Dandenong Square business and site; beneficial ownership shares behind the trust are not published",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-dandenong-square"
+    },
+    {
+      "portfolio_asset_id": "jll-dandenong-manager",
+      "group_id": "group-jll",
+      "canonical_name": "Dandenong Square",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "Dandenong Plaza|Dandenong Plaza Shopping Centre",
+      "preferred_place_id": "place-au-vic-dandenong-square",
+      "roles": "MANAGER|OPERATOR|EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://dandenongsquare.com/centre-info/",
+      "source_type": "Official current venue management and pop-up leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue identifies JLL centre management and directs pop-up and casual leasing through JLL",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-dandenong-square"
+    },
+    {
+      "portfolio_asset_id": "network-retail-dandenong-leasing",
+      "group_id": "group-network-retail-group",
+      "canonical_name": "Dandenong Square",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "Dandenong Plaza|Dandenong Plaza Shopping Centre",
+      "preferred_place_id": "place-au-vic-dandenong-square",
+      "roles": "LEASING_CONTROLLER|EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://dandenongsquare.com/centre-info/",
+      "source_type": "Official current venue permanent leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue appoints Network Retail Group for permanent retailer leasing alongside Bluestone Retail",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-dandenong-square"
+    },
+    {
+      "portfolio_asset_id": "bluestone-dandenong-leasing",
+      "group_id": "group-bluestone-retail",
+      "canonical_name": "Dandenong Square",
+      "country": "Australia",
+      "state": "VIC",
+      "aliases": "Dandenong Plaza|Dandenong Plaza Shopping Centre",
+      "preferred_place_id": "place-au-vic-dandenong-square",
+      "roles": "LEASING_CONTROLLER|EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://dandenongsquare.com/centre-info/",
+      "source_type": "Official current venue permanent leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue appoints Bluestone Retail for permanent retailer leasing alongside Network Retail Group",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-vic-dandenong-square"
     }
   ],
   "property_summaries": {
@@ -44116,6 +44508,98 @@
         "retail_businesses": 78
       }
     },
+    "place-au-nsw-plumpton-marketplace": {
+      "place_id": "place-au-nsw-plumpton-marketplace",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
+      "centre_class_evidence": {
+        "place_id": "place-au-nsw-plumpton-marketplace",
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+        "source_type": "Official current fund strategy and asset portfolio",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "HMC identifies Plumpton Marketplace in HARP and explicitly defines HARP as its sub-regional retail strategy"
+      },
+      "research_status": "Partial",
+      "research_evidence": {
+        "place_id": "place-au-nsw-plumpton-marketplace",
+        "research_status": "Partial",
+        "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current HMC and regulator sources identify HARP ownership HMC management and a confirmed sub-regional class; current leasing control remains unpublished"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [
+        "rel-portfolio-hmc-harp-plumpton-owner-owner",
+        "rel-portfolio-hmc-plumpton-manager-manager",
+        "rel-portfolio-hmc-plumpton-manager-operator"
+      ],
+      "group_ids": [
+        "group-hmc-australian-retail-partnership",
+        "group-hmc-capital"
+      ],
+      "owner_names": [
+        "HMC Australian Retail Partnership"
+      ],
+      "manager_names": [
+        "HMC Capital"
+      ],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 15.88,
+      "competitor_context": {
+        "by_retailer": {
+          "OPSM": {
+            "in_centre": [
+              {
+                "store_id": "opsm-1351",
+                "name": "OPSM Plumpton",
+                "distance_km": 0.01
+              }
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": []
+          },
+          "Specsavers": {
+            "in_centre": [
+              {
+                "store_id": "specsavers-3528",
+                "name": "Plumpton Marketplace",
+                "distance_km": 0.0
+              }
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": []
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 6.02,
+          "Bailey Nelson": 15.88,
+          "OPSM": 0.01,
+          "Oscar Wylee": 2.7,
+          "Specsavers": 0.0
+        },
+        "independent_2km_count": 0
+      },
+      "market": {
+        "sa2_code": "116031315",
+        "sa2_name": "Hassall Grove - Plumpton",
+        "population_2025": 21657,
+        "population_growth_pct": 0.38,
+        "median_household_income": 1066,
+        "age_45_plus_pct": 34.9,
+        "retail_businesses": 76
+      },
+      "gla_sqm": 18132.0,
+      "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/",
+      "last_verified_at": "2026-09-02"
+    },
     "place-au-nsw-imperial-shopping-centre": {
       "place_id": "place-au-nsw-imperial-shopping-centre",
       "centre_class": "Unknown",
@@ -46804,84 +47288,6 @@
       "annual_visits": 33299999.999999996,
       "source_url": "https://assets.ctfassets.net/0vreywxqlgab/6Akr2FWL1op8qg4qujnUZo/a43fa6f6f175e593a262a315aba309f0/2025_Property_Compendium.pdf",
       "last_verified_at": "2026-09-02"
-    },
-    "place-au-nsw-plumpton-marketplace": {
-      "place_id": "place-au-nsw-plumpton-marketplace",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-nsw-plumpton-marketplace",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-nsw-plumpton-marketplace",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 15.88,
-      "competitor_context": {
-        "by_retailer": {
-          "OPSM": {
-            "in_centre": [
-              {
-                "store_id": "opsm-1351",
-                "name": "OPSM Plumpton",
-                "distance_km": 0.01
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [
-              {
-                "store_id": "specsavers-3528",
-                "name": "Plumpton Marketplace",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 6.02,
-          "Bailey Nelson": 15.88,
-          "OPSM": 0.01,
-          "Oscar Wylee": 2.7,
-          "Specsavers": 0.0
-        },
-        "independent_2km_count": 0
-      },
-      "market": {
-        "sa2_code": "116031315",
-        "sa2_name": "Hassall Grove - Plumpton",
-        "population_2025": 21657,
-        "population_growth_pct": 0.38,
-        "median_household_income": 1066,
-        "age_45_plus_pct": 34.9,
-        "retail_businesses": 76
-      }
     },
     "place-au-nsw-rhodes-waterside-shopping-centre": {
       "place_id": "place-au-nsw-rhodes-waterside-shopping-centre",
@@ -88038,35 +88444,53 @@
     },
     "place-au-vic-dandenong-square": {
       "place_id": "place-au-vic-dandenong-square",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-vic-dandenong-square",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Inferred",
+        "source_url": "https://dandenongsquare.com/centre-info/",
+        "source_type": "Official current venue profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Regional format inferred from the current venue's more than 160 stores and five named major retail anchors; the venue does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-vic-dandenong-square",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://dandenongsquare.com/centre-info/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current regulator register and venue evidence identify the owner trust JLL centre management Network Retail and Bluestone permanent leasing JLL pop-up leasing and a defensible inferred Regional class"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-dandenong-jv-owner-owner",
+        "rel-portfolio-jll-dandenong-manager-manager",
+        "rel-portfolio-jll-dandenong-manager-operator",
+        "rel-portfolio-jll-dandenong-manager-external_leasing_agent",
+        "rel-portfolio-network-retail-dandenong-leasing-leasing_controller",
+        "rel-portfolio-network-retail-dandenong-leasing-external_leasing_agent",
+        "rel-portfolio-bluestone-dandenong-leasing-leasing_controller",
+        "rel-portfolio-bluestone-dandenong-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-bluestone-retail",
+        "group-dandenong-plaza-jv-trust",
+        "group-jll",
+        "group-network-retail-group"
+      ],
+      "owner_names": [
+        "Dandenong Plaza JV Unit Trust"
+      ],
+      "manager_names": [
+        "JLL"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 12.3,
@@ -115749,7 +116173,7 @@
     },
     "group-jll": {
       "group_id": "group-jll",
-      "property_count": 9,
+      "property_count": 10,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -115774,6 +116198,11 @@
         ],
         "place-au-vic-corio-village": [
           "EXTERNAL_LEASING_AGENT"
+        ],
+        "place-au-vic-dandenong-square": [
+          "EXTERNAL_LEASING_AGENT",
+          "MANAGER",
+          "OPERATOR"
         ],
         "place-au-vic-greensborough-plaza": [
           "MANAGER",
@@ -116636,11 +117065,15 @@
     },
     "group-hmc-capital": {
       "group_id": "group-hmc-capital",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-plumpton-marketplace": [
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-nsw-roselands-shopping-centre": [
           "MANAGER",
           "OPERATOR"
@@ -116979,6 +117412,60 @@
       "asset_roles": {
         "place-au-wa-maddington-centro-shopping-centre": [
           "MANAGER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-hmc-australian-retail-partnership": {
+      "group_id": "group-hmc-australian-retail-partnership",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-plumpton-marketplace": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-dandenong-plaza-jv-trust": {
+      "group_id": "group-dandenong-plaza-jv-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-vic-dandenong-square": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-network-retail-group": {
+      "group_id": "group-network-retail-group",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-vic-dandenong-square": [
+          "EXTERNAL_LEASING_AGENT",
+          "LEASING_CONTROLLER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-bluestone-retail": {
+      "group_id": "group-bluestone-retail",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-vic-dandenong-square": [
+          "EXTERNAL_LEASING_AGENT",
+          "LEASING_CONTROLLER"
         ]
       },
       "white_space_property_ids": []
@@ -130567,6 +131054,58 @@
         }
       }
     },
+    "place-au-nsw-plumpton-marketplace": {
+      "schema_version": 1,
+      "place_id": "place-au-nsw-plumpton-marketplace",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "116031315",
+          "sa2_name": "Hassall Grove - Plumpton",
+          "population_2025": 21657,
+          "population_growth_pct": 0.38,
+          "median_household_income": 1066,
+          "age_45_plus_pct": 34.9,
+          "retail_businesses": 76
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-au-nsw-plumpton-marketplace.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "Shopping Centre",
+          "centre_class": "Sub-regional"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Available",
+        "values": {
+          "nearest_bailey_km": 15.88,
+          "group_ids": [
+            "group-hmc-australian-retail-partnership",
+            "group-hmc-capital"
+          ],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
     "place-au-nsw-imperial-shopping-centre": {
       "schema_version": 1,
       "place_id": "place-au-nsw-imperial-shopping-centre",
@@ -131896,55 +132435,6 @@
             "group-scentre"
           ],
           "overlap_status": "PROPERTY_GROUP_OVERLAP"
-        }
-      }
-    },
-    "place-au-nsw-plumpton-marketplace": {
-      "schema_version": 1,
-      "place_id": "place-au-nsw-plumpton-marketplace",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "116031315",
-          "sa2_name": "Hassall Grove - Plumpton",
-          "population_2025": 21657,
-          "population_growth_pct": 0.38,
-          "median_household_income": 1066,
-          "age_45_plus_pct": 34.9,
-          "retail_businesses": 76
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-nsw-plumpton-marketplace.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 15.88,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
         }
       }
     },
@@ -152915,7 +153405,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -152929,11 +153419,16 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 12.3,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-bluestone-retail",
+            "group-dandenong-plaza-jv-trust",
+            "group-jll",
+            "group-network-retail-group"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
