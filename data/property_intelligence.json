@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T03:16:25.926826+00:00",
+  "generated_at": "2026-09-02T03:19:51.322071+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 114,
-    "relationship_count": 760,
-    "active_relationship_count": 758,
-    "shopping_centre_count": 586,
-    "researched_property_count": 234,
-    "classed_property_count": 224,
+    "group_count": 117,
+    "relationship_count": 769,
+    "active_relationship_count": 767,
+    "shopping_centre_count": 585,
+    "researched_property_count": 236,
+    "classed_property_count": 226,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -1949,6 +1949,60 @@
         "Bluestone Retail",
         "Bluestone Retail Group"
       ]
+    },
+    {
+      "group_id": "group-perdaman-commercial-properties",
+      "canonical_name": "Perdaman Commercial Properties",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "PROPERTY_COMPANY",
+      "country_scope": "Australia",
+      "official_url": "https://www.northamboulevard.com.au/",
+      "status": "Active",
+      "source_url": "https://www.northamboulevard.com.au/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Perdaman Commercial Properties",
+        "Perdaman Commercial Property",
+        "Perdaman Commercial"
+      ]
+    },
+    {
+      "group_id": "group-mitcham-shopping-centre-proprietary",
+      "canonical_name": "Mitcham Shopping Centre Proprietary Limited",
+      "parent_group_id": "group-taplin-real-estate",
+      "brand_name": "",
+      "group_type": "PRIVATE_LANDLORD",
+      "country_scope": "Australia",
+      "official_url": "https://mitchamsquare.com.au/",
+      "status": "Active",
+      "source_url": "https://abr.business.gov.au/ABN/View/98007665214",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Mitcham Shopping Centre Proprietary Limited",
+        "Mitcham Shopping Centre Pty Ltd",
+        "MITCHAM SHOPPING CENTRE PROPRIETARY LIMITED"
+      ]
+    },
+    {
+      "group_id": "group-taplin-real-estate",
+      "canonical_name": "Taplin Real Estate Group",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "PROPERTY_COMPANY",
+      "country_scope": "Australia",
+      "official_url": "https://www.taplin.com.au/",
+      "status": "Active",
+      "source_url": "https://mitchamsquare.com.au/about/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Taplin Real Estate Group",
+        "Taplin Group",
+        "Taplin Realty"
+      ]
     }
   ],
   "group_alias_index": {
@@ -2170,7 +2224,15 @@
     "networkretailgroup": "group-network-retail-group",
     "networkretail": "group-network-retail-group",
     "bluestoneretail": "group-bluestone-retail",
-    "bluestoneretailgroup": "group-bluestone-retail"
+    "bluestoneretailgroup": "group-bluestone-retail",
+    "perdamancommercialproperties": "group-perdaman-commercial-properties",
+    "perdamancommercialproperty": "group-perdaman-commercial-properties",
+    "perdamancommercial": "group-perdaman-commercial-properties",
+    "mitchamshoppingcentreproprietarylimited": "group-mitcham-shopping-centre-proprietary",
+    "mitchamshoppingcentreptyltd": "group-mitcham-shopping-centre-proprietary",
+    "taplinrealestategroup": "group-taplin-real-estate",
+    "taplingroup": "group-taplin-real-estate",
+    "taplinrealty": "group-taplin-real-estate"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -14333,6 +14395,150 @@
       "confidence": "High",
       "public_note": "The current venue appoints Bluestone Retail for permanent retailer leasing alongside Network Retail Group",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-perdaman-northam-boulevard-owner",
+      "place_id": "place-au-wa-northam-boulevard-shopping-centre",
+      "group_id": "group-perdaman-commercial-properties",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.northamboulevard.com.au/",
+      "source_type": "Official current owner manager and venue profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies Perdaman investment and the centre as part of Perdaman Commercial Properties while providing direct casual short-term and long-term leasing; its directory identifies two anchors and 22 specialty stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-perdaman-northam-boulevard-manager",
+      "place_id": "place-au-wa-northam-boulevard-shopping-centre",
+      "group_id": "group-perdaman-commercial-properties",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.northamboulevard.com.au/",
+      "source_type": "Official current owner manager and venue profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies Perdaman investment and the centre as part of Perdaman Commercial Properties while providing direct casual short-term and long-term leasing; its directory identifies two anchors and 22 specialty stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-perdaman-northam-boulevard-operator",
+      "place_id": "place-au-wa-northam-boulevard-shopping-centre",
+      "group_id": "group-perdaman-commercial-properties",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.northamboulevard.com.au/",
+      "source_type": "Official current owner manager and venue profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies Perdaman investment and the centre as part of Perdaman Commercial Properties while providing direct casual short-term and long-term leasing; its directory identifies two anchors and 22 specialty stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-perdaman-northam-boulevard-leasing_controller",
+      "place_id": "place-au-wa-northam-boulevard-shopping-centre",
+      "group_id": "group-perdaman-commercial-properties",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.northamboulevard.com.au/",
+      "source_type": "Official current owner manager and venue profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies Perdaman investment and the centre as part of Perdaman Commercial Properties while providing direct casual short-term and long-term leasing; its directory identifies two anchors and 22 specialty stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-jll-northam-boulevard-external_leasing_agent",
+      "place_id": "place-au-wa-northam-boulevard-shopping-centre",
+      "group_id": "group-jll",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://locationxjll.com.au/contacts/",
+      "source_type": "Official current external leasing portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "JLL's current Location X leasing portfolio explicitly includes Northam Boulevard; private contact details are intentionally excluded",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mitcham-shopping-centre-owner-owner",
+      "place_id": "place-au-sa-mitcham-shopping-centre",
+      "group_id": "group-mitcham-shopping-centre-proprietary",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://abr.business.gov.au/ABN/View/98007665214",
+      "source_type": "Current Australian Business Register corroborated by official venue profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current ABN identifies Mitcham Shopping Centre Proprietary Limited and the official venue states that Mitcham Square is owned by the Taplin group; the AER also lists Torrens Park Shopping Centre Pty Ltd at the site so beneficial ownership shares remain unpublished",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-taplin-mitcham-manager-manager",
+      "place_id": "place-au-sa-mitcham-shopping-centre",
+      "group_id": "group-taplin-real-estate",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mitchamsquare.com.au/centre-information/",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that Taplin owns and manages Mitcham Square and directs permanent and casual leasing through Taplin; the directory identifies two major supermarkets a cinema and 59 specialty shops",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-taplin-mitcham-manager-operator",
+      "place_id": "place-au-sa-mitcham-shopping-centre",
+      "group_id": "group-taplin-real-estate",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mitchamsquare.com.au/centre-information/",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that Taplin owns and manages Mitcham Square and directs permanent and casual leasing through Taplin; the directory identifies two major supermarkets a cinema and 59 specialty shops",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-taplin-mitcham-manager-leasing_controller",
+      "place_id": "place-au-sa-mitcham-shopping-centre",
+      "group_id": "group-taplin-real-estate",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://mitchamsquare.com.au/centre-information/",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that Taplin owns and manages Mitcham Square and directs permanent and casual leasing through Taplin; the directory identifies two major supermarkets a cinema and 59 specialty shops",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -21741,6 +21947,98 @@
       "public_note": "The current venue appoints Bluestone Retail for permanent retailer leasing alongside Network Retail Group",
       "match_status": "Matched",
       "matched_place_id": "place-au-vic-dandenong-square"
+    },
+    {
+      "portfolio_asset_id": "perdaman-northam-boulevard",
+      "group_id": "group-perdaman-commercial-properties",
+      "canonical_name": "Northam Boulevard",
+      "country": "Australia",
+      "state": "WA",
+      "aliases": "Northam Boulevard Shopping Centre",
+      "preferred_place_id": "place-au-wa-northam-boulevard-shopping-centre",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "24",
+      "annual_visits_m": "",
+      "source_url": "https://www.northamboulevard.com.au/",
+      "source_type": "Official current owner manager and venue profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue identifies Perdaman investment and the centre as part of Perdaman Commercial Properties while providing direct casual short-term and long-term leasing; its directory identifies two anchors and 22 specialty stores",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-wa-northam-boulevard-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "jll-northam-boulevard",
+      "group_id": "group-jll",
+      "canonical_name": "Northam Boulevard",
+      "country": "Australia",
+      "state": "WA",
+      "aliases": "Northam Boulevard Shopping Centre",
+      "preferred_place_id": "place-au-wa-northam-boulevard-shopping-centre",
+      "roles": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "24",
+      "annual_visits_m": "",
+      "source_url": "https://locationxjll.com.au/contacts/",
+      "source_type": "Official current external leasing portfolio",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "JLL's current Location X leasing portfolio explicitly includes Northam Boulevard; private contact details are intentionally excluded",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-wa-northam-boulevard-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "mitcham-shopping-centre-owner",
+      "group_id": "group-mitcham-shopping-centre-proprietary",
+      "canonical_name": "Mitcham Square",
+      "country": "Australia",
+      "state": "SA",
+      "aliases": "Mitcham Shopping Centre|Mitcham Square Shopping Centre",
+      "preferred_place_id": "place-au-sa-mitcham-shopping-centre",
+      "roles": "OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://abr.business.gov.au/ABN/View/98007665214",
+      "source_type": "Current Australian Business Register corroborated by official venue profile",
+      "source_date": "2026-08-05",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current ABN identifies Mitcham Shopping Centre Proprietary Limited and the official venue states that Mitcham Square is owned by the Taplin group; the AER also lists Torrens Park Shopping Centre Pty Ltd at the site so beneficial ownership shares remain unpublished",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-sa-mitcham-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "taplin-mitcham-manager",
+      "group_id": "group-taplin-real-estate",
+      "canonical_name": "Mitcham Square",
+      "country": "Australia",
+      "state": "SA",
+      "aliases": "Mitcham Shopping Centre|Mitcham Square Shopping Centre",
+      "preferred_place_id": "place-au-sa-mitcham-shopping-centre",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "62",
+      "annual_visits_m": "",
+      "source_url": "https://mitchamsquare.com.au/centre-information/",
+      "source_type": "Official current owner manager and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue states that Taplin owns and manages Mitcham Square and directs permanent and casual leasing through Taplin; the directory identifies two major supermarkets a cinema and 59 specialty shops",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-sa-mitcham-shopping-centre"
     }
   ],
   "property_summaries": {
@@ -69015,32 +69313,44 @@
     },
     "place-au-sa-mitcham-shopping-centre": {
       "place_id": "place-au-sa-mitcham-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-sa-mitcham-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://mitchamsquare.com.au/centre-information/",
+        "source_type": "Official current venue profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from two major supermarkets a seven-screen cinema and 59 specialty stores; the venue does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-sa-mitcham-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://mitchamsquare.com.au/about/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue regulator and ABN evidence identify the Taplin ownership group operating owner entity in-house management direct leasing and a defensible inferred sub-regional class; beneficial ownership shares between the two current site entities remain unpublished"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-mitcham-shopping-centre-owner-owner",
+        "rel-portfolio-taplin-mitcham-manager-manager",
+        "rel-portfolio-taplin-mitcham-manager-operator",
+        "rel-portfolio-taplin-mitcham-manager-leasing_controller"
+      ],
+      "group_ids": [
+        "group-mitcham-shopping-centre-proprietary",
+        "group-taplin-real-estate"
+      ],
+      "owner_names": [
+        "Mitcham Shopping Centre Proprietary Limited"
+      ],
+      "manager_names": [
+        "Taplin Real Estate Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -69089,7 +69399,10 @@
         "median_household_income": 1355,
         "age_45_plus_pct": 49.3,
         "retail_businesses": 83
-      }
+      },
+      "tenancy_count": 62,
+      "source_url": "https://mitchamsquare.com.au/centre-information/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-sa-mount-barker-central": {
       "place_id": "place-au-sa-mount-barker-central",
@@ -73688,6 +74001,112 @@
         "median_household_income": 1065,
         "age_45_plus_pct": 42.6,
         "retail_businesses": 163
+      }
+    },
+    "place-au-vic-ballarat-bridge-mall": {
+      "place_id": "place-au-vic-ballarat-bridge-mall",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "place-au-vic-ballarat-bridge-mall",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Verified unknown",
+      "research_evidence": {
+        "place_id": "place-au-vic-ballarat-bridge-mall",
+        "research_status": "Verified unknown",
+        "source_url": "https://www.ballarat.vic.gov.au/news/bridge-mall-redevelopment-officially-opens",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The City of Ballarat confirms Bridge Mall is a multi-property public retail street and civic precinct rather than a single shopping centre so single-property ownership and leasing relationships do not apply"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 78.64,
+      "competitor_context": {
+        "by_retailer": {
+          "Independent / Other optical": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "independent-other-optical-osm-au-node-4437613792",
+                "name": "Kevin Paisley",
+                "distance_km": 0.05
+              }
+            ],
+            "catchment_2km": [
+              {
+                "store_id": "independent-other-optical-osm-au-way-150873536",
+                "name": "Fairbanks Eye Gallery",
+                "distance_km": 1.08
+              },
+              {
+                "store_id": "independent-other-optical-osm-au-way-151241624",
+                "name": "Sturt Optical",
+                "distance_km": 0.83
+              }
+            ]
+          },
+          "OPSM": {
+            "in_centre": [
+              {
+                "store_id": "opsm-2261",
+                "name": "OPSM Ballarat Bridge Mall",
+                "distance_km": 0.29
+              }
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "opsm-1057",
+                "name": "OPSM Ballarat",
+                "distance_km": 0.29
+              }
+            ]
+          },
+          "Specsavers": {
+            "in_centre": [
+              {
+                "store_id": "specsavers-3396",
+                "name": "Ballarat Bridge Mall",
+                "distance_km": 0.29
+              }
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": []
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 0.05,
+          "Bailey Nelson": 78.64,
+          "OPSM": 0.29,
+          "Oscar Wylee": 63.61,
+          "Specsavers": 0.29
+        },
+        "independent_2km_count": 3
+      },
+      "market": {
+        "sa2_code": "201011002",
+        "sa2_name": "Ballarat",
+        "population_2025": 11668,
+        "population_growth_pct": -3.34,
+        "median_household_income": 1092,
+        "age_45_plus_pct": 49.9,
+        "retail_businesses": 170
       }
     },
     "corridor-au-vic-benalla-bridge-street": {
@@ -85982,112 +86401,6 @@
         "median_household_income": 992,
         "age_45_plus_pct": 44.6,
         "retail_businesses": 64
-      }
-    },
-    "place-au-vic-ballarat-bridge-mall": {
-      "place_id": "place-au-vic-ballarat-bridge-mall",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-vic-ballarat-bridge-mall",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-vic-ballarat-bridge-mall",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 78.64,
-      "competitor_context": {
-        "by_retailer": {
-          "Independent / Other optical": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "independent-other-optical-osm-au-node-4437613792",
-                "name": "Kevin Paisley",
-                "distance_km": 0.05
-              }
-            ],
-            "catchment_2km": [
-              {
-                "store_id": "independent-other-optical-osm-au-way-150873536",
-                "name": "Fairbanks Eye Gallery",
-                "distance_km": 1.08
-              },
-              {
-                "store_id": "independent-other-optical-osm-au-way-151241624",
-                "name": "Sturt Optical",
-                "distance_km": 0.83
-              }
-            ]
-          },
-          "OPSM": {
-            "in_centre": [
-              {
-                "store_id": "opsm-2261",
-                "name": "OPSM Ballarat Bridge Mall",
-                "distance_km": 0.29
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "opsm-1057",
-                "name": "OPSM Ballarat",
-                "distance_km": 0.29
-              }
-            ]
-          },
-          "Specsavers": {
-            "in_centre": [
-              {
-                "store_id": "specsavers-3396",
-                "name": "Ballarat Bridge Mall",
-                "distance_km": 0.29
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 0.05,
-          "Bailey Nelson": 78.64,
-          "OPSM": 0.29,
-          "Oscar Wylee": 63.61,
-          "Specsavers": 0.29
-        },
-        "independent_2km_count": 3
-      },
-      "market": {
-        "sa2_code": "201011002",
-        "sa2_name": "Ballarat",
-        "population_2025": 11668,
-        "population_growth_pct": -3.34,
-        "median_household_income": 1092,
-        "age_45_plus_pct": 49.9,
-        "retail_businesses": 170
       }
     },
     "place-au-vic-barkly-square": {
@@ -101613,35 +101926,48 @@
     },
     "place-au-wa-northam-boulevard-shopping-centre": {
       "place_id": "place-au-wa-northam-boulevard-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-wa-northam-boulevard-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.northamboulevard.com.au/",
+        "source_type": "Official current venue profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from Woolworths and Kmart anchors plus 22 specialty stores and a regional catchment exceeding 43000; the venue does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-wa-northam-boulevard-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.northamboulevard.com.au/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The current venue identifies Perdaman ownership management direct leasing JLL external leasing and a defensible inferred sub-regional class"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-perdaman-northam-boulevard-owner",
+        "rel-portfolio-perdaman-northam-boulevard-manager",
+        "rel-portfolio-perdaman-northam-boulevard-operator",
+        "rel-portfolio-perdaman-northam-boulevard-leasing_controller",
+        "rel-portfolio-jll-northam-boulevard-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-jll",
+        "group-perdaman-commercial-properties"
+      ],
+      "owner_names": [
+        "Perdaman Commercial Properties"
+      ],
+      "manager_names": [
+        "Perdaman Commercial Properties"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 80.46,
@@ -101687,7 +102013,10 @@
         "median_household_income": 837,
         "age_45_plus_pct": 48.1,
         "retail_businesses": 46
-      }
+      },
+      "tenancy_count": 24,
+      "source_url": "https://www.northamboulevard.com.au/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-wa-clarkson-ocean-keys-shopping-centre": {
       "place_id": "place-au-wa-clarkson-ocean-keys-shopping-centre",
@@ -116173,7 +116502,7 @@
     },
     "group-jll": {
       "group_id": "group-jll",
-      "property_count": 10,
+      "property_count": 11,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -116212,6 +116541,9 @@
           "EXTERNAL_LEASING_AGENT"
         ],
         "place-au-vic-woodgrove-shopping-centre": [
+          "EXTERNAL_LEASING_AGENT"
+        ],
+        "place-au-wa-northam-boulevard-shopping-centre": [
           "EXTERNAL_LEASING_AGENT"
         ],
         "place-au-wa-riverton-stockland": [
@@ -117466,6 +117798,50 @@
         "place-au-vic-dandenong-square": [
           "EXTERNAL_LEASING_AGENT",
           "LEASING_CONTROLLER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-perdaman-commercial-properties": {
+      "group_id": "group-perdaman-commercial-properties",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-wa-northam-boulevard-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-mitcham-shopping-centre-proprietary": {
+      "group_id": "group-mitcham-shopping-centre-proprietary",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-sa-mitcham-shopping-centre": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-taplin-real-estate": {
+      "group_id": "group-taplin-real-estate",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-sa-mitcham-shopping-centre": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
         ]
       },
       "white_space_property_ids": []
@@ -143594,7 +143970,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -143608,10 +143984,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 5.86,
-          "group_ids": [],
+          "group_ids": [
+            "group-mitcham-shopping-centre-proprietary",
+            "group-taplin-real-estate"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -146086,6 +146465,55 @@
           "nearest_bailey_km": 3.24,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
+        }
+      }
+    },
+    "place-au-vic-ballarat-bridge-mall": {
+      "schema_version": 1,
+      "place_id": "place-au-vic-ballarat-bridge-mall",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "201011002",
+          "sa2_name": "Ballarat",
+          "population_2025": 11668,
+          "population_growth_pct": -3.34,
+          "median_household_income": 1092,
+          "age_45_plus_pct": 49.9,
+          "retail_businesses": 170
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-au-vic-ballarat-bridge-mall.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "High Street",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 78.64,
+          "group_ids": [],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -152092,55 +152520,6 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 11.14,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
-    "place-au-vic-ballarat-bridge-mall": {
-      "schema_version": 1,
-      "place_id": "place-au-vic-ballarat-bridge-mall",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "201011002",
-          "sa2_name": "Ballarat",
-          "population_2025": 11668,
-          "population_growth_pct": -3.34,
-          "median_household_income": 1092,
-          "age_45_plus_pct": 49.9,
-          "retail_businesses": 170
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-vic-ballarat-bridge-mall.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 78.64,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -160109,7 +160488,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -160123,11 +160502,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 80.46,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-jll",
+            "group-perdaman-commercial-properties"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },

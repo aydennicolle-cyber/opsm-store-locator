@@ -728,6 +728,33 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertNotIn("gla_sqm", dandenong)
         self.assertNotIn("tenancy_count", dandenong)
 
+    def test_current_northam_and_mitcham_roles_preserve_property_structures(self) -> None:
+        northam = self.payload["property_summaries"]["place-au-wa-northam-boulevard-shopping-centre"]
+        self.assertEqual(northam["centre_class"], "Sub-regional")
+        self.assertEqual(northam["research_status"], "Verified")
+        self.assertEqual(northam["owner_names"], ["Perdaman Commercial Properties"])
+        self.assertEqual(northam["manager_names"], ["Perdaman Commercial Properties"])
+        self.assertEqual(northam["leasing_arrangement"], "External agency")
+        self.assertEqual(northam["tenancy_count"], 24)
+
+        mitcham = self.payload["property_summaries"]["place-au-sa-mitcham-shopping-centre"]
+        self.assertEqual(mitcham["centre_class"], "Sub-regional")
+        self.assertEqual(mitcham["research_status"], "Partial")
+        self.assertEqual(
+            mitcham["owner_names"],
+            ["Mitcham Shopping Centre Proprietary Limited"],
+        )
+        self.assertEqual(mitcham["manager_names"], ["Taplin Real Estate Group"])
+        self.assertEqual(mitcham["leasing_arrangement"], "In-house")
+        self.assertEqual(mitcham["tenancy_count"], 62)
+
+    def test_bridge_mall_is_not_modelled_as_a_single_property(self) -> None:
+        bridge_mall = self.payload["property_summaries"]["place-au-vic-ballarat-bridge-mall"]
+        self.assertEqual(bridge_mall["research_status"], "Verified unknown")
+        self.assertEqual(bridge_mall["owner_names"], [])
+        self.assertEqual(bridge_mall["manager_names"], [])
+        self.assertEqual(bridge_mall["leasing_arrangement"], "Unknown")
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

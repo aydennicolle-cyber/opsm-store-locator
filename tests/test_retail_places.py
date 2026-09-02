@@ -303,6 +303,32 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(dandenong["address"], "Corner McCrae and Walker Streets")
         self.assertEqual(dandenong["postcode"], "3175")
 
+    def test_northam_mitcham_and_bridge_mall_use_current_place_types(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+
+        northam = places["place-au-wa-northam-boulevard-shopping-centre"]
+        self.assertEqual(northam["name"], "Northam Boulevard")
+        self.assertEqual(northam["address"], "171 Fitzgerald Street East")
+        self.assertEqual(northam["postcode"], "6401")
+
+        mitcham = places["place-au-sa-mitcham-shopping-centre"]
+        self.assertEqual(mitcham["name"], "Mitcham Square")
+        self.assertIn("Mitcham Shopping Centre", mitcham["aliases"])
+        self.assertEqual(mitcham["address"], "119 Belair Road")
+        self.assertEqual(mitcham["postcode"], "5062")
+
+        bridge_mall = places["place-au-vic-ballarat-bridge-mall"]
+        self.assertEqual(bridge_mall["name"], "Bridge Mall")
+        self.assertEqual(bridge_mall["location_setting"], "High Street")
+        self.assertEqual(bridge_mall["place_type"], "High Street Corridor")
+        self.assertEqual(bridge_mall["postcode"], "3350")
+        memberships = [
+            row for row in self.memberships
+            if row["place_id"] == "place-au-vic-ballarat-bridge-mall"
+        ]
+        self.assertEqual(len(memberships), 2)
+        self.assertTrue(all(row["location_setting"] == "High Street" for row in memberships))
+
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, expected_name in {
