@@ -80,9 +80,9 @@ class PropertyIntelligenceTests(unittest.TestCase):
 
         stockland = [row for row in assets if row["group_id"] == "group-stockland"]
         self.assertEqual(len(stockland), 20)
-        self.assertEqual(sum(row["match_status"] == "Matched" for row in stockland), 13)
-        self.assertEqual(sum(row["match_status"] != "Matched" for row in stockland), 7)
-        self.assertEqual(self.payload["group_portfolios"]["group-stockland"]["property_count"], 13)
+        self.assertEqual(sum(row["match_status"] == "Matched" for row in stockland), 15)
+        self.assertEqual(sum(row["match_status"] != "Matched" for row in stockland), 5)
+        self.assertEqual(self.payload["group_portfolios"]["group-stockland"]["property_count"], 15)
 
     def test_centre_class_inference_uses_two_official_measures(self) -> None:
         inferred = [
@@ -1323,6 +1323,34 @@ class PropertyIntelligenceTests(unittest.TestCase):
 
         review_ids = {item["review_id"] for item in self.payload["review_items"]}
         self.assertFalse(any(review_id.startswith("review-portfolio-qic-") for review_id in review_ids))
+
+    def test_current_stockland_baringa_and_piccadilly_profiles_are_explicit(self) -> None:
+        baringa = self.payload["property_summaries"][
+            "place-au-qld-stockland-baringa-shopping-centre"
+        ]
+        self.assertEqual(baringa["research_status"], "Verified")
+        self.assertEqual(baringa["centre_class"], "Neighbourhood")
+        self.assertEqual(baringa["centre_class_method"], "Confirmed")
+        self.assertEqual(baringa["owner_names"], ["Stockland"])
+        self.assertEqual(baringa["manager_names"], ["Stockland"])
+        self.assertEqual(baringa["leasing_arrangement"], "In-house")
+        self.assertEqual(baringa["gla_sqm"], 6972)
+        self.assertEqual(baringa["tenancy_count"], 16)
+
+        piccadilly = self.payload["property_summaries"][
+            "place-au-nsw-stockland-piccadilly-shopping-centre"
+        ]
+        self.assertEqual(piccadilly["research_status"], "Verified")
+        self.assertEqual(piccadilly["centre_class"], "CBD / Mixed-use")
+        self.assertEqual(piccadilly["centre_class_method"], "Confirmed")
+        self.assertEqual(piccadilly["owner_names"], ["Stockland"])
+        self.assertEqual(piccadilly["manager_names"], ["Stockland"])
+        self.assertEqual(piccadilly["leasing_arrangement"], "In-house")
+        self.assertEqual(piccadilly["gla_sqm"], 2983)
+
+        review_ids = {item["review_id"] for item in self.payload["review_items"]}
+        self.assertNotIn("review-portfolio-stockland-fy26-baringa", review_ids)
+        self.assertNotIn("review-portfolio-stockland-fy26-piccadilly", review_ids)
 
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]

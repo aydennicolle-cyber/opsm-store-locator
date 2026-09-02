@@ -814,6 +814,16 @@ class RetailPlaceTests(unittest.TestCase):
                 "10 Park Street",
                 "2103",
             ),
+            "place-au-qld-stockland-baringa-shopping-centre": (
+                "Stockland Baringa Shopping Centre",
+                "1 Edwards Terrace",
+                "4551",
+            ),
+            "place-au-nsw-stockland-piccadilly-shopping-centre": (
+                "Stockland Piccadilly Shopping Centre",
+                "210 Pitt Street",
+                "2000",
+            ),
         }.items():
             with self.subTest(place_id=place_id):
                 place = places[place_id]
