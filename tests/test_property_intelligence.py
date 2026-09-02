@@ -1334,6 +1334,55 @@ class PropertyIntelligenceTests(unittest.TestCase):
         review_ids = {item["review_id"] for item in self.payload["review_items"]}
         self.assertFalse(any(review_id.startswith("review-portfolio-qic-") for review_id in review_ids))
 
+    def test_domain_watergardens_and_silverdale_class_gaps_are_resolved(self) -> None:
+        domain = self.payload["property_summaries"]["place-au-qld-domain-central"]
+        self.assertEqual(domain["centre_class"], "Large Format")
+        self.assertEqual(domain["centre_class_method"], "Confirmed")
+        self.assertEqual(domain["gla_sqm"], 52382)
+        self.assertEqual(domain["tenancy_count"], 59)
+        self.assertEqual(domain["manager_names"], ["QIC Real Estate"])
+
+        watergardens = self.payload["property_summaries"]["place-au-vic-watergardens-town-centre"]
+        self.assertEqual(watergardens["centre_class"], "Regional")
+        self.assertEqual(watergardens["centre_class_method"], "Inferred")
+        self.assertEqual(watergardens["gla_sqm"], 71226)
+        self.assertEqual(watergardens["tenancy_count"], 201)
+        self.assertEqual(watergardens["annual_visits"], 11700000)
+        self.assertEqual(
+            len(watergardens["competitor_context"]["by_retailer"]["Specsavers"]["in_centre"]),
+            1,
+        )
+        self.assertEqual(
+            len(watergardens["competitor_context"]["by_retailer"]["Oscar Wylee"]["in_centre"]),
+            1,
+        )
+
+        silverdale_centre = self.payload["property_summaries"]["place-nz-auckland-silverdale-centre"]
+        self.assertEqual(silverdale_centre["centre_class"], "Sub-regional")
+        self.assertEqual(silverdale_centre["centre_class_method"], "Inferred")
+        self.assertEqual(silverdale_centre["owner_names"], ["Stride Property"])
+        self.assertEqual(silverdale_centre["manager_names"], ["Stride Property"])
+
+        silverdale_mall = self.payload["property_summaries"]["place-nz-auckland-silverdale-mall"]
+        self.assertEqual(silverdale_mall["centre_class"], "Other")
+        self.assertEqual(silverdale_mall["centre_class_method"], "Inferred")
+        self.assertEqual(silverdale_mall["leasing_arrangement"], "External agency")
+        roles = {
+            (row["group_id"], row["role"])
+            for row in self.relationships
+            if row["place_id"] == "place-nz-auckland-silverdale-mall"
+        }
+        self.assertIn(("group-barfoot-commercial", "EXTERNAL_LEASING_AGENT"), roles)
+
+        with (DATA / "property_research_queue.csv").open(newline="", encoding="utf-8") as handle:
+            queued_place_ids = {row["place_id"] for row in csv.DictReader(handle)}
+        self.assertTrue({
+            "place-au-qld-domain-central",
+            "place-au-vic-watergardens-town-centre",
+            "place-nz-auckland-silverdale-centre",
+            "place-nz-auckland-silverdale-mall",
+        }.isdisjoint(queued_place_ids))
+
     def test_current_stockland_baringa_and_piccadilly_profiles_are_explicit(self) -> None:
         baringa = self.payload["property_summaries"][
             "place-au-qld-stockland-baringa-shopping-centre"

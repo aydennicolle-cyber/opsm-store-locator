@@ -139,6 +139,28 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertGreaterEqual(len(westpoint), 2)
         self.assertEqual(set(westpoint), {"place-au-nsw-westpoint-shopping-centre"})
 
+    def test_watergardens_retailer_name_variants_share_one_canonical_place(self) -> None:
+        expected_place_id = "place-au-vic-watergardens-town-centre"
+        memberships = {row["store_id"]: row for row in self.memberships}
+        self.assertEqual(memberships["oscar-wylee-92"]["place_id"], expected_place_id)
+        self.assertEqual(memberships["specsavers-3311"]["place_id"], expected_place_id)
+        places = {place["place_id"]: place for place in self.places}
+        self.assertNotIn("place-au-vic-watergardens-shopping-centre", places)
+        watergardens = places[expected_place_id]
+        self.assertEqual(watergardens["name"], "Watergardens Town Centre")
+        self.assertEqual(watergardens["address"], "399 Melton Highway")
+        self.assertIn("Watergardens Shopping Centre", watergardens["aliases"])
+        self.assertEqual(set(watergardens["retailers"]), {"Oscar Wylee", "Specsavers"})
+        remaps = read_csv("place_id_remaps.csv")
+        self.assertIn(
+            {
+                "previous_place_id": "place-au-vic-watergardens-shopping-centre",
+                "canonical_place_id": expected_place_id,
+                "reason": "Evidence-backed place identity consolidation",
+            },
+            remaps,
+        )
+
     def test_capalaba_park_duplicate_is_consolidated(self) -> None:
         expected_place_id = "place-au-qld-capalaba-park-shopping-centre"
         capalaba = [

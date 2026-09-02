@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T05:05:19.067854+00:00",
+  "generated_at": "2026-09-02T05:11:36.819120+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
     "group_count": 137,
-    "relationship_count": 944,
-    "active_relationship_count": 942,
-    "shopping_centre_count": 585,
+    "relationship_count": 945,
+    "active_relationship_count": 943,
+    "shopping_centre_count": 584,
     "researched_property_count": 282,
-    "classed_property_count": 274,
+    "classed_property_count": 278,
     "conflict_count": 0,
     "development_asset_count": 1,
     "unmatched_active_portfolio_count": 0,
@@ -2670,6 +2670,22 @@
       "derived_from": "curated_relationship"
     },
     {
+      "relationship_id": "rel-silverdale-mall-external-leasing",
+      "place_id": "place-nz-auckland-silverdale-mall",
+      "group_id": "group-barfoot-commercial",
+      "role": "EXTERNAL_LEASING_AGENT",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://silverdalemall.co.nz/centre-info/",
+      "source_type": "Official current property leasing page",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current centre information identifies Barfoot and Thompson Commercial as the retail sales and leasing agency",
+      "derived_from": "curated_relationship"
+    },
+    {
       "relationship_id": "rel-silverdale-centre-owner",
       "place_id": "place-nz-auckland-silverdale-centre",
       "group_id": "group-stride",
@@ -4998,11 +5014,11 @@
       "valid_from": "",
       "valid_to": "",
       "status": "ACTIVE",
-      "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
-      "source_type": "Official current managed-portfolio report",
+      "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/watergardens",
+      "source_type": "Official current QIC asset profile",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
-      "public_note": "QIC Real Estate lists this asset in its current managed portfolio",
+      "public_note": "QIC Real Estate lists Watergardens in its current asset portfolio and publishes its current scale and visitation",
       "derived_from": "official_portfolio_asset"
     },
     {
@@ -5014,11 +5030,11 @@
       "valid_from": "",
       "valid_to": "",
       "status": "ACTIVE",
-      "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
-      "source_type": "Official current managed-portfolio report",
+      "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/watergardens",
+      "source_type": "Official current QIC asset profile",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
-      "public_note": "QIC Real Estate lists this asset in its current managed portfolio",
+      "public_note": "QIC Real Estate lists Watergardens in its current asset portfolio and publishes its current scale and visitation",
       "derived_from": "official_portfolio_asset"
     },
     {
@@ -5494,11 +5510,11 @@
       "valid_from": "",
       "valid_to": "",
       "status": "ACTIVE",
-      "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
-      "source_type": "Official current managed-portfolio report",
+      "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/Domain-Central",
+      "source_type": "Official current QIC asset profile",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
-      "public_note": "QIC Real Estate lists this asset in its current managed portfolio",
+      "public_note": "QIC Real Estate lists Domain Central in its current asset portfolio and publishes its current scale and homemaker format",
       "derived_from": "official_portfolio_asset"
     },
     {
@@ -5510,11 +5526,11 @@
       "valid_from": "",
       "valid_to": "",
       "status": "ACTIVE",
-      "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
-      "source_type": "Official current managed-portfolio report",
+      "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/Domain-Central",
+      "source_type": "Official current QIC asset profile",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
-      "public_note": "QIC Real Estate lists this asset in its current managed portfolio",
+      "public_note": "QIC Real Estate lists Domain Central in its current asset portfolio and publishes its current scale and homemaker format",
       "derived_from": "official_portfolio_asset"
     },
     {
@@ -18788,16 +18804,16 @@
       "preferred_place_id": "place-au-vic-watergardens-town-centre",
       "roles": "MANAGER|OPERATOR",
       "ownership_percentage": "",
-      "gla_sqm": "",
-      "tenancy_count": "",
-      "annual_visits_m": "",
-      "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
-      "source_type": "Official current managed-portfolio report",
-      "source_date": "2025-06-30",
+      "gla_sqm": "71226",
+      "tenancy_count": "201",
+      "annual_visits_m": "11.7",
+      "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/watergardens",
+      "source_type": "Official current QIC asset profile",
+      "source_date": "2026-09-02",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "status": "ACTIVE",
-      "public_note": "QIC Real Estate lists this asset in its current managed portfolio",
+      "public_note": "QIC Real Estate lists Watergardens in its current asset portfolio and publishes its current scale and visitation",
       "match_status": "Matched",
       "matched_place_id": "place-au-vic-watergardens-town-centre"
     },
@@ -19110,16 +19126,16 @@
       "preferred_place_id": "place-au-qld-domain-central",
       "roles": "MANAGER|OPERATOR",
       "ownership_percentage": "",
-      "gla_sqm": "",
-      "tenancy_count": "",
+      "gla_sqm": "52382",
+      "tenancy_count": "59",
       "annual_visits_m": "",
-      "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
-      "source_type": "Official current managed-portfolio report",
-      "source_date": "2025-06-30",
+      "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/Domain-Central",
+      "source_type": "Official current QIC asset profile",
+      "source_date": "2026-09-02",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "status": "ACTIVE",
-      "public_note": "QIC Real Estate lists this asset in its current managed portfolio",
+      "public_note": "QIC Real Estate lists Domain Central in its current asset portfolio and publishes its current scale and homemaker format",
       "match_status": "Matched",
       "matched_place_id": "place-au-qld-domain-central"
     },
@@ -65296,26 +65312,26 @@
     },
     "place-au-qld-domain-central": {
       "place_id": "place-au-qld-domain-central",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Large Format",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-qld-domain-central",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Large Format",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/Domain-Central",
+        "source_type": "Official current QIC asset profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "QIC explicitly describes Domain Central as Queensland's largest homemaker centre with leading large-format retailers"
       },
       "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-qld-domain-central",
         "research_status": "Partial",
-        "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
+        "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/Domain-Central",
         "last_verified_at": "2026-09-02",
         "confidence": "High",
-        "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
+        "public_note": "Current QIC sources confirm management operation current public scale and the large-format homemaker class; ownership and leasing control remain unverified"
       },
       "leasing_arrangement": "Unknown",
       "relationship_ids": [
@@ -65381,7 +65397,11 @@
         "median_household_income": 953,
         "age_45_plus_pct": 43.8,
         "retail_businesses": 102
-      }
+      },
+      "gla_sqm": 52382.0,
+      "tenancy_count": 59,
+      "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/Domain-Central",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-qld-earlville-shopping-town": {
       "place_id": "place-au-qld-earlville-shopping-town",
@@ -99262,117 +99282,28 @@
       "source_url": "https://www.vicinity.com.au/portfolio/our-properties/victoria-gardens-shopping-centre",
       "last_verified_at": "2026-09-02"
     },
-    "place-au-vic-watergardens-shopping-centre": {
-      "place_id": "place-au-vic-watergardens-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-vic-watergardens-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-vic-watergardens-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 12.98,
-      "competitor_context": {
-        "by_retailer": {
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "opsm-1131",
-                "name": "OPSM Sydenham",
-                "distance_km": 0.23
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Oscar Wylee": {
-            "in_centre": [
-              {
-                "store_id": "oscar-wylee-92",
-                "name": "Watergardens",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "specsavers-3311",
-                "name": "Watergardens Town Centre",
-                "distance_km": 0.16
-              }
-            ],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 5.49,
-          "Bailey Nelson": 12.98,
-          "OPSM": 0.23,
-          "Oscar Wylee": 0.0,
-          "Specsavers": 0.16
-        },
-        "independent_2km_count": 0
-      },
-      "market": {
-        "sa2_code": "213011340",
-        "sa2_name": "Taylors Lakes",
-        "population_2025": 16896,
-        "population_growth_pct": -1.02,
-        "median_household_income": 1138,
-        "age_45_plus_pct": 49.9,
-        "retail_businesses": 113
-      }
-    },
     "place-au-vic-watergardens-town-centre": {
       "place_id": "place-au-vic-watergardens-town-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-vic-watergardens-town-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/watergardens",
+        "source_type": "Official current QIC asset profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Scale inferred from official portfolio GLA (71,226 sqm) and tenant count (201); not inferred from GLA alone"
       },
       "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-vic-watergardens-town-centre",
         "research_status": "Partial",
-        "source_url": "https://esg.qicre.com/esg/2025-sustainability-report/our-performance/",
+        "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/watergardens",
         "last_verified_at": "2026-09-02",
         "confidence": "High",
-        "public_note": "At least one public property-group role is identified; full ownership and leasing research is incomplete"
+        "public_note": "Current QIC sources confirm management operation current public scale visitation and inferred regional class; ownership and leasing control remain unverified"
       },
       "leasing_arrangement": "Unknown",
       "relationship_ids": [
@@ -99421,14 +99352,14 @@
             "catchment_2km": []
           },
           "Oscar Wylee": {
-            "in_centre": [],
-            "nearby_unverified": [
+            "in_centre": [
               {
                 "store_id": "oscar-wylee-92",
                 "name": "Watergardens",
                 "distance_km": 0.16
               }
             ],
+            "nearby_unverified": [],
             "catchment_2km": []
           },
           "Specsavers": {
@@ -99460,7 +99391,12 @@
         "median_household_income": 1138,
         "age_45_plus_pct": 49.9,
         "retail_businesses": 113
-      }
+      },
+      "gla_sqm": 71226.0,
+      "tenancy_count": 201,
+      "annual_visits": 11700000.0,
+      "source_url": "https://www.qic.com/Investment-Capabilities/Real-Estate/Real-Estate-Assets/watergardens",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-vic-waurn-ponds-shopping-centre": {
       "place_id": "place-au-vic-waurn-ponds-shopping-centre",
@@ -112422,26 +112358,26 @@
     },
     "place-nz-auckland-silverdale-centre": {
       "place_id": "place-nz-auckland-silverdale-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-nz-auckland-silverdale-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://silverdalecentre.co.nz/about-us/",
+        "source_type": "Official current centre profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from two major anchors Woolworths and The Warehouse plus more than 35 specialty shops; the source does not publish a formal class label"
       },
       "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-nz-auckland-silverdale-centre",
         "research_status": "Partial",
-        "source_url": "https://silverdalecentre.co.nz/",
+        "source_url": "https://silverdalecentre.co.nz/about-us/",
         "last_verified_at": "2026-09-02",
         "confidence": "High",
-        "public_note": "Owner and manager identified; leasing control not yet published"
+        "public_note": "Current centre sources identify Stride ownership and management plus the two-major sub-regional format; leasing control is not yet published"
       },
       "leasing_arrangement": "Unknown",
       "relationship_ids": [
@@ -112516,31 +112452,32 @@
     },
     "place-nz-auckland-silverdale-mall": {
       "place_id": "place-nz-auckland-silverdale-mall",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Other",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-nz-auckland-silverdale-mall",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Other",
+        "classification_method": "Inferred",
+        "source_url": "https://silverdalemall.co.nz/centre-info/",
+        "source_type": "Official current centre profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Lifestyle-mall format inferred from the current Farmers-led 30-store specialty offer without a supermarket anchor; the source does not publish a formal class label"
       },
       "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-nz-auckland-silverdale-mall",
         "research_status": "Partial",
-        "source_url": "https://silverdalemall.co.nz/",
+        "source_url": "https://silverdalemall.co.nz/centre-info/",
         "last_verified_at": "2026-09-02",
         "confidence": "High",
-        "public_note": "Owner and manager identified; leasing control not yet published"
+        "public_note": "Current centre sources identify Millwater Park Limited ownership Barfoot and Thompson Commercial management and external leasing plus the lifestyle-mall format; further ownership detail is not published"
       },
-      "leasing_arrangement": "Unknown",
+      "leasing_arrangement": "External agency",
       "relationship_ids": [
         "rel-silverdale-mall-owner",
-        "rel-silverdale-mall-manager"
+        "rel-silverdale-mall-manager",
+        "rel-silverdale-mall-external-leasing"
       ],
       "group_ids": [
         "group-barfoot-commercial",
@@ -122292,6 +122229,7 @@
       "bailey_property_ids": [],
       "asset_roles": {
         "place-nz-auckland-silverdale-mall": [
+          "EXTERNAL_LEASING_AGENT",
           "MANAGER"
         ]
       },
@@ -145084,7 +145022,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Large Format"
         }
       },
       "accessibility": {
@@ -162095,55 +162033,6 @@
         }
       }
     },
-    "place-au-vic-watergardens-shopping-centre": {
-      "schema_version": 1,
-      "place_id": "place-au-vic-watergardens-shopping-centre",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "213011340",
-          "sa2_name": "Taylors Lakes",
-          "population_2025": 16896,
-          "population_growth_pct": -1.02,
-          "median_household_income": 1138,
-          "age_45_plus_pct": 49.9,
-          "retail_businesses": 113
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-vic-watergardens-shopping-centre.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 12.98,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
     "place-au-vic-watergardens-town-centre": {
       "schema_version": 1,
       "place_id": "place-au-vic-watergardens-town-centre",
@@ -162171,7 +162060,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -168914,7 +168803,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -168957,7 +168846,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Other"
         }
       },
       "accessibility": {
