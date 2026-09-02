@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T03:27:10.755548+00:00",
+  "generated_at": "2026-09-02T03:34:47.061130+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
     "group_count": 121,
-    "relationship_count": 786,
-    "active_relationship_count": 784,
+    "relationship_count": 802,
+    "active_relationship_count": 800,
     "shopping_centre_count": 584,
-    "researched_property_count": 241,
-    "classed_property_count": 231,
+    "researched_property_count": 245,
+    "classed_property_count": 235,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -14889,6 +14889,262 @@
       "confidence": "Medium",
       "public_note": "The current public leasing campaign identifies Savills alongside PPI Funds Management; private agent contact details are intentionally excluded",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-cqr-armidale-central-owner-owner",
+      "place_id": "place-au-nsw-armidale-central",
+      "group_id": "group-charter-hall-retail-reit",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/News/news-article/2026/08/06/charter-hall-retail-reit-2026-full-year-results",
+      "source_type": "Official current listed-fund results",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "CQR confirms settlement of its 100 percent acquisition of Armidale Central during FY26",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-armidale-management-manager",
+      "place_id": "place-au-nsw-armidale-central",
+      "group_id": "group-charter-hall",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.armidalecentral.com.au/",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs centre leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-armidale-management-operator",
+      "place_id": "place-au-nsw-armidale-central",
+      "group_id": "group-charter-hall",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.armidalecentral.com.au/",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs centre leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-armidale-management-leasing_controller",
+      "place_id": "place-au-nsw-armidale-central",
+      "group_id": "group-charter-hall",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.armidalecentral.com.au/",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs centre leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-rp1-carnes-hill-owner-owner",
+      "place_id": "place-au-nsw-carnes-hill-marketplace",
+      "group_id": "group-charter-hall-rp1",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Carnes-Hill-Marketplace",
+      "source_type": "Official current fund ownership and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall identifies 100 percent RP1 fund ownership and lists three majors plus 41 specialty stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-carnes-hill-management-manager",
+      "place_id": "place-au-nsw-carnes-hill-marketplace",
+      "group_id": "group-charter-hall",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.carneshillmarketplace.com.au/",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent and casual leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-carnes-hill-management-operator",
+      "place_id": "place-au-nsw-carnes-hill-marketplace",
+      "group_id": "group-charter-hall",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.carneshillmarketplace.com.au/",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent and casual leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-carnes-hill-management-leasing_controller",
+      "place_id": "place-au-nsw-carnes-hill-marketplace",
+      "group_id": "group-charter-hall",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.carneshillmarketplace.com.au/",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent and casual leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ccrf-chullora-marketplace-owner-owner",
+      "place_id": "place-au-nsw-chullora-marketplace",
+      "group_id": "group-charter-hall-ccrf",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/News/news-article/2025/08/08/cqr-transfers-jv-investments-and-four-100--owned-assets-into-ccrf-as-a-foundation-investor-with-expansion-and-contraction-rights",
+      "source_type": "Official current acquisition and fund portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall confirms Chullora Marketplace was acquired 100 percent for CCRF and the current DCRF portfolio continues to identify it as an underlying asset",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-chullora-management-manager",
+      "place_id": "place-au-nsw-chullora-marketplace",
+      "group_id": "group-charter-hall",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/investor-centre/unlisted-direct-property-funds/charter-hall-direct-convenience-retail-fund/property-portfolio",
+      "source_type": "Official current managed fund portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall's current integrated platform and fund portfolio identify Chullora Marketplace as an actively managed retail asset",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-chullora-management-operator",
+      "place_id": "place-au-nsw-chullora-marketplace",
+      "group_id": "group-charter-hall",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/investor-centre/unlisted-direct-property-funds/charter-hall-direct-convenience-retail-fund/property-portfolio",
+      "source_type": "Official current managed fund portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall's current integrated platform and fund portfolio identify Chullora Marketplace as an actively managed retail asset",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-chullora-management-leasing_controller",
+      "place_id": "place-au-nsw-chullora-marketplace",
+      "group_id": "group-charter-hall",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/investor-centre/unlisted-direct-property-funds/charter-hall-direct-convenience-retail-fund/property-portfolio",
+      "source_type": "Official current managed fund portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall's current integrated platform and fund portfolio identify Chullora Marketplace as an actively managed retail asset",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-rp1-highlands-marketplace-owner-owner",
+      "place_id": "place-au-nsw-highlands-marketplace",
+      "group_id": "group-charter-hall-rp1",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Highlands-Marketplace",
+      "source_type": "Official current fund ownership and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall identifies 100 percent RP1 fund ownership and lists two majors plus 35 specialty stores",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-highlands-management-manager",
+      "place_id": "place-au-nsw-highlands-marketplace",
+      "group_id": "group-charter-hall",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.highlandsmarketplace.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs vacant-shop and casual leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-highlands-management-operator",
+      "place_id": "place-au-nsw-highlands-marketplace",
+      "group_id": "group-charter-hall",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.highlandsmarketplace.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs vacant-shop and casual leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-highlands-management-leasing_controller",
+      "place_id": "place-au-nsw-highlands-marketplace",
+      "group_id": "group-charter-hall",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.highlandsmarketplace.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs vacant-shop and casual leasing through Charter Hall",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -22550,6 +22806,190 @@
       "public_note": "The current public leasing campaign identifies Savills alongside PPI Funds Management; private agent contact details are intentionally excluded",
       "match_status": "Matched",
       "matched_place_id": "place-au-sa-whyalla-westland-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "cqr-armidale-central-owner",
+      "group_id": "group-charter-hall-retail-reit",
+      "canonical_name": "Armidale Central",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-armidale-central",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/News/news-article/2026/08/06/charter-hall-retail-reit-2026-full-year-results",
+      "source_type": "Official current listed-fund results",
+      "source_date": "2026-06-30",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "CQR confirms settlement of its 100 percent acquisition of Armidale Central during FY26",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-armidale-central"
+    },
+    {
+      "portfolio_asset_id": "charter-hall-armidale-management",
+      "group_id": "group-charter-hall",
+      "canonical_name": "Armidale Central",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-armidale-central",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.armidalecentral.com.au/",
+      "source_type": "Official current venue and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs centre leasing through Charter Hall",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-armidale-central"
+    },
+    {
+      "portfolio_asset_id": "rp1-carnes-hill-owner",
+      "group_id": "group-charter-hall-rp1",
+      "canonical_name": "Carnes Hill Marketplace",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-carnes-hill-marketplace",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "17899",
+      "tenancy_count": "44",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Carnes-Hill-Marketplace",
+      "source_type": "Official current fund ownership and property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall identifies 100 percent RP1 fund ownership and lists three majors plus 41 specialty stores",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-carnes-hill-marketplace"
+    },
+    {
+      "portfolio_asset_id": "charter-hall-carnes-hill-management",
+      "group_id": "group-charter-hall",
+      "canonical_name": "Carnes Hill Marketplace",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-carnes-hill-marketplace",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "17899",
+      "tenancy_count": "44",
+      "annual_visits_m": "",
+      "source_url": "https://www.carneshillmarketplace.com.au/",
+      "source_type": "Official current venue and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs permanent and casual leasing through Charter Hall",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-carnes-hill-marketplace"
+    },
+    {
+      "portfolio_asset_id": "ccrf-chullora-marketplace-owner",
+      "group_id": "group-charter-hall-ccrf",
+      "canonical_name": "Chullora Marketplace",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-chullora-marketplace",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/News/news-article/2025/08/08/cqr-transfers-jv-investments-and-four-100--owned-assets-into-ccrf-as-a-foundation-investor-with-expansion-and-contraction-rights",
+      "source_type": "Official current acquisition and fund portfolio",
+      "source_date": "2025-08-08",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall confirms Chullora Marketplace was acquired 100 percent for CCRF and the current DCRF portfolio continues to identify it as an underlying asset",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-chullora-marketplace"
+    },
+    {
+      "portfolio_asset_id": "charter-hall-chullora-management",
+      "group_id": "group-charter-hall",
+      "canonical_name": "Chullora Marketplace",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-chullora-marketplace",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/investor-centre/unlisted-direct-property-funds/charter-hall-direct-convenience-retail-fund/property-portfolio",
+      "source_type": "Official current managed fund portfolio",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall's current integrated platform and fund portfolio identify Chullora Marketplace as an actively managed retail asset",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-chullora-marketplace"
+    },
+    {
+      "portfolio_asset_id": "rp1-highlands-marketplace-owner",
+      "group_id": "group-charter-hall-rp1",
+      "canonical_name": "Highlands Marketplace",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-highlands-marketplace",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "16480",
+      "tenancy_count": "37",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Highlands-Marketplace",
+      "source_type": "Official current fund ownership and property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall identifies 100 percent RP1 fund ownership and lists two majors plus 35 specialty stores",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-highlands-marketplace"
+    },
+    {
+      "portfolio_asset_id": "charter-hall-highlands-management",
+      "group_id": "group-charter-hall",
+      "canonical_name": "Highlands Marketplace",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-highlands-marketplace",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "16480",
+      "tenancy_count": "37",
+      "annual_visits_m": "",
+      "source_url": "https://www.highlandsmarketplace.com.au/lease-here",
+      "source_type": "Official current venue and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue is operated on Charter Hall infrastructure and directs vacant-shop and casual leasing through Charter Hall",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-highlands-marketplace"
     }
   ],
   "property_summaries": {
@@ -41704,35 +42144,47 @@
     },
     "place-au-nsw-armidale-central": {
       "place_id": "place-au-nsw-armidale-central",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-armidale-central",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.charterhall.com.au/News/news-article/2026/08/06/charter-hall-retail-reit-2026-full-year-results",
+        "source_type": "Official current listed-fund results",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "CQR explicitly identifies Armidale Central as one of three sub-regional shopping-centre acquisitions settled during FY26"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-armidale-central",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.charterhall.com.au/News/news-article/2026/08/06/charter-hall-retail-reit-2026-full-year-results",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current CQR results venue and AER evidence confirm 100 percent listed-fund ownership Charter Hall management direct leasing and a confirmed sub-regional class"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-cqr-armidale-central-owner-owner",
+        "rel-portfolio-charter-hall-armidale-management-manager",
+        "rel-portfolio-charter-hall-armidale-management-operator",
+        "rel-portfolio-charter-hall-armidale-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-charter-hall",
+        "group-charter-hall-retail-reit"
+      ],
+      "owner_names": [
+        "Charter Hall Retail REIT"
+      ],
+      "manager_names": [
+        "Charter Hall"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 250.34,
@@ -42962,35 +43414,47 @@
     },
     "place-au-nsw-carnes-hill-marketplace": {
       "place_id": "place-au-nsw-carnes-hill-marketplace",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-carnes-hill-marketplace",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Carnes-Hill-Marketplace",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Charter Hall explicitly classifies Carnes Hill Marketplace as a sub-regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-carnes-hill-marketplace",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Carnes-Hill-Marketplace",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Charter Hall sources confirm 100 percent RP1 ownership in-house management direct leasing a confirmed sub-regional class and current public centre metrics"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-rp1-carnes-hill-owner-owner",
+        "rel-portfolio-charter-hall-carnes-hill-management-manager",
+        "rel-portfolio-charter-hall-carnes-hill-management-operator",
+        "rel-portfolio-charter-hall-carnes-hill-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-charter-hall",
+        "group-charter-hall-rp1"
+      ],
+      "owner_names": [
+        "Retail Partnership No.1"
+      ],
+      "manager_names": [
+        "Charter Hall"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 25.96,
@@ -43025,7 +43489,11 @@
         "median_household_income": 1081,
         "age_45_plus_pct": 32.1,
         "retail_businesses": 47
-      }
+      },
+      "gla_sqm": 17899.0,
+      "tenancy_count": 44,
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Carnes-Hill-Marketplace",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-castle-towers": {
       "place_id": "place-au-nsw-castle-towers",
@@ -43813,35 +44281,47 @@
     },
     "place-au-nsw-chullora-marketplace": {
       "place_id": "place-au-nsw-chullora-marketplace",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-chullora-marketplace",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.planningportal.nsw.gov.au/planning-panel/chullora-marketplace",
+        "source_type": "Authoritative public planning record corroborated by current Charter Hall portfolio",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The NSW planning record explicitly classifies Chullora Marketplace as sub-regional while current Charter Hall evidence confirms continuing operation and fund ownership"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-chullora-marketplace",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.charterhall.com.au/News/news-article/2025/08/08/cqr-transfers-jv-investments-and-four-100--owned-assets-into-ccrf-as-a-foundation-investor-with-expansion-and-contraction-rights",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Charter Hall fund evidence confirms 100 percent CCRF ownership in-house management direct leasing and a government-confirmed sub-regional class"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-ccrf-chullora-marketplace-owner-owner",
+        "rel-portfolio-charter-hall-chullora-management-manager",
+        "rel-portfolio-charter-hall-chullora-management-operator",
+        "rel-portfolio-charter-hall-chullora-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-charter-hall",
+        "group-charter-hall-ccrf"
+      ],
+      "owner_names": [
+        "Charter Hall Convenience Retail Fund"
+      ],
+      "manager_names": [
+        "Charter Hall"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 11.06,
@@ -45252,35 +45732,47 @@
     },
     "place-au-nsw-highlands-marketplace": {
       "place_id": "place-au-nsw-highlands-marketplace",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-highlands-marketplace",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Highlands-Marketplace",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from 16480 square metres of NLA two majors and 35 specialty stores; the current profile uses Convenience Plus rather than an SCCA class"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-highlands-marketplace",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Highlands-Marketplace",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Charter Hall sources confirm 100 percent RP1 ownership in-house management direct leasing a defensible inferred sub-regional class and current public centre metrics"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-rp1-highlands-marketplace-owner-owner",
+        "rel-portfolio-charter-hall-highlands-management-manager",
+        "rel-portfolio-charter-hall-highlands-management-operator",
+        "rel-portfolio-charter-hall-highlands-management-leasing_controller"
+      ],
+      "group_ids": [
+        "group-charter-hall",
+        "group-charter-hall-rp1"
+      ],
+      "owner_names": [
+        "Retail Partnership No.1"
+      ],
+      "manager_names": [
+        "Charter Hall"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 76.21,
@@ -45315,7 +45807,11 @@
         "median_household_income": 1013,
         "age_45_plus_pct": 48.8,
         "retail_businesses": 78
-      }
+      },
+      "gla_sqm": 16480.0,
+      "tenancy_count": 37,
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Highlands-Marketplace",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-plumpton-marketplace": {
       "place_id": "place-au-nsw-plumpton-marketplace",
@@ -116589,17 +117085,37 @@
     },
     "group-charter-hall": {
       "group_id": "group-charter-hall",
-      "property_count": 6,
+      "property_count": 10,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-armidale-central": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-nsw-bateau-bay-square": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
         ],
+        "place-au-nsw-carnes-hill-marketplace": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-nsw-chullora-marketplace": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
         "place-au-nsw-dubbo-square": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-nsw-highlands-marketplace": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
@@ -117641,11 +118157,14 @@
     },
     "group-charter-hall-retail-reit": {
       "group_id": "group-charter-hall-retail-reit",
-      "property_count": 3,
+      "property_count": 4,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-armidale-central": [
+          "OWNER"
+        ],
         "place-au-nsw-dubbo-square": [
           "OWNER"
         ],
@@ -118057,11 +118576,14 @@
     },
     "group-charter-hall-ccrf": {
       "group_id": "group-charter-hall-ccrf",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-chullora-marketplace": [
+          "OWNER"
+        ],
         "place-au-vic-waverley-gardens-shopping-centre": [
           "OWNER"
         ]
@@ -118070,11 +118592,17 @@
     },
     "group-charter-hall-rp1": {
       "group_id": "group-charter-hall-rp1",
-      "property_count": 1,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
       "asset_roles": {
+        "place-au-nsw-carnes-hill-marketplace": [
+          "OWNER"
+        ],
+        "place-au-nsw-highlands-marketplace": [
+          "OWNER"
+        ],
         "place-au-vic-corio-village": [
           "OWNER"
         ]
@@ -130247,7 +130775,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -130261,11 +130789,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 250.34,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-charter-hall",
+            "group-charter-hall-retail-reit"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -130837,7 +131368,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -130851,11 +131382,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 25.96,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-charter-hall",
+            "group-charter-hall-rp1"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -131229,7 +131763,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -131243,11 +131777,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 11.06,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-charter-hall",
+            "group-charter-hall-ccrf"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -132051,7 +132588,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -132065,11 +132602,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 76.21,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-charter-hall",
+            "group-charter-hall-rp1"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },

@@ -373,6 +373,27 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(len(memberships), 2)
         self.assertTrue(all(row["location_setting"] == "High Street" for row in memberships))
 
+    def test_current_charter_hall_nsw_batch_has_complete_public_addresses(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        expected = {
+            "place-au-nsw-armidale-central": ("225 Beardy Street", "Armidale", "2350"),
+            "place-au-nsw-carnes-hill-marketplace": (
+                "Corner Cowpasture and Kurrajong Roads",
+                "Horningsea Park",
+                "2171",
+            ),
+            "place-au-nsw-chullora-marketplace": ("355 Waterloo Road", "Greenacre", "2190"),
+            "place-au-nsw-highlands-marketplace": ("197 Old Hume Highway", "Mittagong", "2575"),
+        }
+        for place_id, (address, locality, postcode) in expected.items():
+            with self.subTest(place_id=place_id):
+                place = places[place_id]
+                self.assertEqual(place["address"], address)
+                self.assertEqual(place["locality"], locality)
+                self.assertEqual(place["postcode"], postcode)
+                self.assertEqual(place["location_setting"], "Shopping Centre")
+                self.assertEqual(place["place_type"], "Shopping Centre")
+
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, expected_name in {

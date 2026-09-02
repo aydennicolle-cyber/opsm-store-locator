@@ -805,6 +805,46 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(cuba_mall["manager_names"], [])
         self.assertEqual(cuba_mall["leasing_arrangement"], "Unknown")
 
+    def test_current_charter_hall_nsw_batch_has_explicit_fund_and_management_roles(self) -> None:
+        expected = {
+            "place-au-nsw-armidale-central": {
+                "owner": "Charter Hall Retail REIT",
+                "gla": None,
+                "tenants": None,
+            },
+            "place-au-nsw-carnes-hill-marketplace": {
+                "owner": "Retail Partnership No.1",
+                "gla": 17899,
+                "tenants": 44,
+            },
+            "place-au-nsw-chullora-marketplace": {
+                "owner": "Charter Hall Convenience Retail Fund",
+                "gla": None,
+                "tenants": None,
+            },
+            "place-au-nsw-highlands-marketplace": {
+                "owner": "Retail Partnership No.1",
+                "gla": 16480,
+                "tenants": 37,
+            },
+        }
+        for place_id, expected_values in expected.items():
+            with self.subTest(place_id=place_id):
+                summary = self.payload["property_summaries"][place_id]
+                self.assertEqual(summary["research_status"], "Verified")
+                self.assertEqual(summary["centre_class"], "Sub-regional")
+                self.assertEqual(summary["owner_names"], [expected_values["owner"]])
+                self.assertEqual(summary["manager_names"], ["Charter Hall"])
+                self.assertEqual(summary["leasing_arrangement"], "In-house")
+                if expected_values["gla"] is None:
+                    self.assertNotIn("gla_sqm", summary)
+                else:
+                    self.assertEqual(summary["gla_sqm"], expected_values["gla"])
+                if expected_values["tenants"] is None:
+                    self.assertNotIn("tenancy_count", summary)
+                else:
+                    self.assertEqual(summary["tenancy_count"], expected_values["tenants"])
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})
