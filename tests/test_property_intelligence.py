@@ -73,7 +73,6 @@ class PropertyIntelligenceTests(unittest.TestCase):
             if row["status"] == "ACTIVE" and row["match_status"] != "Matched"
         ]
         review_ids = {row["review_id"] for row in self.payload["review_items"]}
-        self.assertTrue(unmatched)
         self.assertTrue(all(f"review-portfolio-{row['portfolio_asset_id']}" in review_ids for row in unmatched))
 
         haben = [row for row in assets if row["group_id"] == "group-haben"]
@@ -83,11 +82,11 @@ class PropertyIntelligenceTests(unittest.TestCase):
 
         stockland = [row for row in assets if row["group_id"] == "group-stockland"]
         self.assertEqual(len(stockland), 20)
-        self.assertEqual(sum(row["match_status"] == "Matched" for row in stockland), 18)
-        self.assertEqual(sum(row["match_status"] == "Unmatched" for row in stockland), 1)
+        self.assertEqual(sum(row["match_status"] == "Matched" for row in stockland), 19)
+        self.assertEqual(sum(row["match_status"] == "Unmatched" for row in stockland), 0)
         self.assertEqual(sum(row["match_status"] == "Development" for row in stockland), 1)
-        self.assertEqual(self.payload["group_portfolios"]["group-stockland"]["property_count"], 18)
-        self.assertEqual(self.payload["metadata"]["unmatched_active_portfolio_count"], 1)
+        self.assertEqual(self.payload["group_portfolios"]["group-stockland"]["property_count"], 19)
+        self.assertEqual(self.payload["metadata"]["unmatched_active_portfolio_count"], 0)
         self.assertEqual(self.payload["metadata"]["development_asset_count"], 1)
         self.assertEqual(
             {row["portfolio_asset_id"] for row in self.payload["development_leads"]},
@@ -1389,6 +1388,24 @@ class PropertyIntelligenceTests(unittest.TestCase):
         review_ids = {item["review_id"] for item in self.payload["review_items"]}
         for asset_id in ("gables", "providence", "sienna-wood"):
             self.assertNotIn(f"review-portfolio-stockland-fy26-{asset_id}", review_ids)
+
+    def test_shellharbour_retail_park_is_a_distinct_large_format_asset(self) -> None:
+        place_id = "place-au-nsw-shellharbour-retail-park"
+        summary = self.payload["property_summaries"][place_id]
+        self.assertEqual(summary["research_status"], "Verified")
+        self.assertEqual(summary["centre_class"], "Large Format")
+        self.assertEqual(summary["centre_class_method"], "Confirmed")
+        self.assertEqual(summary["owner_names"], ["Stockland"])
+        self.assertEqual(summary["manager_names"], ["Stockland"])
+        self.assertEqual(summary["leasing_arrangement"], "In-house")
+        self.assertEqual(summary["gla_sqm"], 22233)
+        roles = {
+            row["role"] for row in self.relationships
+            if row["place_id"] == place_id and row["group_id"] == "group-stockland"
+        }
+        self.assertEqual(roles, {"OWNER", "MANAGER", "OPERATOR", "LEASING_CONTROLLER"})
+        review_ids = {item["review_id"] for item in self.payload["review_items"]}
+        self.assertNotIn("review-portfolio-stockland-fy26-shellharbour-retail-park", review_ids)
 
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]

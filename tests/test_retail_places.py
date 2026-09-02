@@ -839,6 +839,11 @@ class RetailPlaceTests(unittest.TestCase):
                 "10 Daintree Street",
                 "6112",
             ),
+            "place-au-nsw-shellharbour-retail-park": (
+                "Shellharbour Retail Park",
+                "5 Range Road",
+                "2529",
+            ),
         }.items():
             with self.subTest(place_id=place_id):
                 place = places[place_id]

@@ -111,7 +111,7 @@ class DataHealthTests(unittest.TestCase):
         self.assertGreater(property_health["counts"]["relationships"], 0)
         self.assertEqual(property_health["counts"]["researched_bailey_centres"], property_health["counts"]["bailey_centres"])
         self.assertEqual(property_health["counts"]["classed_bailey_centres"], property_health["counts"]["bailey_centres"])
-        self.assertEqual(property_health["counts"]["unmatched_active_portfolio_assets"], 1)
+        self.assertEqual(property_health["counts"]["unmatched_active_portfolio_assets"], 0)
         self.assertEqual(property_health["counts"]["development_assets"], 1)
 
 

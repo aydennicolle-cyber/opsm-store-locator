@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T04:59:39.139876+00:00",
+  "generated_at": "2026-09-02T05:05:19.067854+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
     "group_count": 137,
-    "relationship_count": 940,
-    "active_relationship_count": 938,
-    "shopping_centre_count": 584,
-    "researched_property_count": 281,
-    "classed_property_count": 273,
+    "relationship_count": 944,
+    "active_relationship_count": 942,
+    "shopping_centre_count": 585,
+    "researched_property_count": 282,
+    "classed_property_count": 274,
     "conflict_count": 0,
     "development_asset_count": 1,
-    "unmatched_active_portfolio_count": 1,
+    "unmatched_active_portfolio_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
     "portfolio_overlap_note": "Portfolio overlap is derived from public tenancy and property-group evidence; it is not proof of a private commercial relationship."
@@ -8395,6 +8395,70 @@
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "public_note": "Current FY26 portfolio and mapped public centre evidence reconcile the dual-level retail component of Piccadilly Complex to this canonical place",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-stockland-fy26-shellharbour-retail-park-owner",
+      "place_id": "place-au-nsw-shellharbour-retail-park",
+      "group_id": "group-stockland",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://links.sgx.com/1.0.0/corporate-announcements/OCV00Y9N84LUK0AD/901651_FY26%20Property%20Portfolio.pdf",
+      "source_type": "Official current property portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current FY26 portfolio confirms the operating retail park and Stockland's full ownership management operation and leasing control",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-stockland-fy26-shellharbour-retail-park-manager",
+      "place_id": "place-au-nsw-shellharbour-retail-park",
+      "group_id": "group-stockland",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://links.sgx.com/1.0.0/corporate-announcements/OCV00Y9N84LUK0AD/901651_FY26%20Property%20Portfolio.pdf",
+      "source_type": "Official current property portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current FY26 portfolio confirms the operating retail park and Stockland's full ownership management operation and leasing control",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-stockland-fy26-shellharbour-retail-park-operator",
+      "place_id": "place-au-nsw-shellharbour-retail-park",
+      "group_id": "group-stockland",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://links.sgx.com/1.0.0/corporate-announcements/OCV00Y9N84LUK0AD/901651_FY26%20Property%20Portfolio.pdf",
+      "source_type": "Official current property portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current FY26 portfolio confirms the operating retail park and Stockland's full ownership management operation and leasing control",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-stockland-fy26-shellharbour-retail-park-leasing_controller",
+      "place_id": "place-au-nsw-shellharbour-retail-park",
+      "group_id": "group-stockland",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://links.sgx.com/1.0.0/corporate-announcements/OCV00Y9N84LUK0AD/901651_FY26%20Property%20Portfolio.pdf",
+      "source_type": "Official current property portfolio",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Current FY26 portfolio confirms the operating retail park and Stockland's full ownership management operation and leasing control",
       "derived_from": "official_portfolio_asset"
     },
     {
@@ -20744,8 +20808,8 @@
       "canonical_name": "Shellharbour Retail Park",
       "country": "Australia",
       "state": "NSW",
-      "aliases": "",
-      "preferred_place_id": "",
+      "aliases": "Stockland Shellharbour Retail Park|Stockland Retail Park",
+      "preferred_place_id": "place-au-nsw-shellharbour-retail-park",
       "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
       "ownership_percentage": "100",
       "gla_sqm": "22233",
@@ -20757,9 +20821,9 @@
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "status": "ACTIVE",
-      "public_note": "Current FY26 portfolio asset; canonical place match remains under review",
-      "match_status": "Unmatched",
-      "matched_place_id": ""
+      "public_note": "Current FY26 portfolio confirms the operating retail park and Stockland's full ownership management operation and leasing control",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-shellharbour-retail-park"
     },
     {
       "portfolio_asset_id": "stockland-fy26-baringa",
@@ -53911,6 +53975,138 @@
       "gla_sqm": 20986.0,
       "tenancy_count": 77,
       "source_url": "https://haben.com.au/properties/seven-hills-plaza",
+      "last_verified_at": "2026-09-02"
+    },
+    "place-au-nsw-shellharbour-retail-park": {
+      "place_id": "place-au-nsw-shellharbour-retail-park",
+      "centre_class": "Large Format",
+      "centre_class_method": "Confirmed",
+      "centre_class_evidence": {
+        "place_id": "place-au-nsw-shellharbour-retail-park",
+        "centre_class": "Large Format",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.stockland.com.au/globalassets/retail-towncentres/nsw/shellharbour/home-page/leasing-fact-sheets_shellharbour-retail-park.pdf",
+        "source_type": "Official Stockland leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Stockland explicitly describes Shellharbour Retail Park as a bulky-goods centre with large-format retail tenancies"
+      },
+      "research_status": "Verified",
+      "research_evidence": {
+        "place_id": "place-au-nsw-shellharbour-retail-park",
+        "research_status": "Verified",
+        "source_url": "https://links.sgx.com/1.0.0/corporate-announcements/OCV00Y9N84LUK0AD/901651_FY26%20Property%20Portfolio.pdf",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Stockland portfolio and leasing sources confirm the distinct operating retail park full ownership management operation leasing control address GLA and large-format class"
+      },
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-stockland-fy26-shellharbour-retail-park-owner",
+        "rel-portfolio-stockland-fy26-shellharbour-retail-park-manager",
+        "rel-portfolio-stockland-fy26-shellharbour-retail-park-operator",
+        "rel-portfolio-stockland-fy26-shellharbour-retail-park-leasing_controller"
+      ],
+      "group_ids": [
+        "group-stockland"
+      ],
+      "owner_names": [
+        "Stockland"
+      ],
+      "manager_names": [
+        "Stockland"
+      ],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "LEASING_CONTROLLER_OVERLAP",
+      "portfolio_overlap_groups": [
+        {
+          "group_id": "group-stockland",
+          "canonical_name": "Stockland",
+          "role": "LEASING_CONTROLLER",
+          "bailey_property_count": 1,
+          "bailey_store_count": 1
+        },
+        {
+          "group_id": "group-stockland",
+          "canonical_name": "Stockland",
+          "role": "OWNER",
+          "bailey_property_count": 1,
+          "bailey_store_count": 1
+        },
+        {
+          "group_id": "group-stockland",
+          "canonical_name": "Stockland",
+          "role": "MANAGER",
+          "bailey_property_count": 1,
+          "bailey_store_count": 1
+        },
+        {
+          "group_id": "group-stockland",
+          "canonical_name": "Stockland",
+          "role": "OPERATOR",
+          "bailey_property_count": 1,
+          "bailey_store_count": 1
+        }
+      ],
+      "portfolio_white_space": true,
+      "nearest_bailey_km": 63.87,
+      "competitor_context": {
+        "by_retailer": {
+          "OPSM": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "opsm-1105",
+                "name": "SHELLHARBOUR",
+                "distance_km": 0.77
+              }
+            ]
+          },
+          "Specsavers": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "specsavers-3377",
+                "name": "Shellharbour Stockland",
+                "distance_km": 0.7
+              }
+            ]
+          },
+          "Oscar Wylee": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "oscar-wylee-37",
+                "name": "Stockland Shellharbour",
+                "distance_km": 0.56
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 43.86,
+          "Bailey Nelson": 63.87,
+          "OPSM": 0.77,
+          "Oscar Wylee": 0.56,
+          "Specsavers": 0.7
+        },
+        "independent_2km_count": 0
+      },
+      "market": {
+        "sa2_code": "107031142",
+        "sa2_name": "Shellharbour - Oak Flats",
+        "population_2025": 11007,
+        "population_growth_pct": 4.13,
+        "median_household_income": 946,
+        "age_45_plus_pct": 48.3,
+        "retail_businesses": 63
+      },
+      "gla_sqm": 22233.0,
+      "source_url": "https://links.sgx.com/1.0.0/corporate-announcements/OCV00Y9N84LUK0AD/901651_FY26%20Property%20Portfolio.pdf",
       "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-singleton-square": {
@@ -121069,7 +121265,7 @@
     },
     "group-stockland": {
       "group_id": "group-stockland",
-      "property_count": 18,
+      "property_count": 19,
       "bailey_property_count": 1,
       "bailey_store_count": 1,
       "bailey_property_ids": [
@@ -121077,6 +121273,12 @@
       ],
       "asset_roles": {
         "place-au-nsw-forster-stockland": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ],
+        "place-au-nsw-shellharbour-retail-park": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR",
@@ -121179,6 +121381,7 @@
       },
       "white_space_property_ids": [
         "place-au-nsw-forster-stockland",
+        "place-au-nsw-shellharbour-retail-park",
         "place-au-nsw-shellharbour-stockland",
         "place-au-nsw-stockland-gables",
         "place-au-nsw-stockland-merrylands",
@@ -139221,6 +139424,57 @@
             "group-haben"
           ],
           "overlap_status": "UNKNOWN"
+        }
+      }
+    },
+    "place-au-nsw-shellharbour-retail-park": {
+      "schema_version": 1,
+      "place_id": "place-au-nsw-shellharbour-retail-park",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "107031142",
+          "sa2_name": "Shellharbour - Oak Flats",
+          "population_2025": 11007,
+          "population_growth_pct": 4.13,
+          "median_household_income": 946,
+          "age_45_plus_pct": 48.3,
+          "retail_businesses": 63
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-au-nsw-shellharbour-retail-park.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "Shopping Centre",
+          "centre_class": "Large Format"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Available",
+        "values": {
+          "nearest_bailey_km": 63.87,
+          "group_ids": [
+            "group-stockland"
+          ],
+          "overlap_status": "LEASING_CONTROLLER_OVERLAP"
         }
       }
     },
@@ -172631,14 +172885,5 @@
       "matched_place_id": ""
     }
   ],
-  "review_items": [
-    {
-      "review_id": "review-portfolio-stockland-fy26-shellharbour-retail-park",
-      "place_id": "",
-      "candidate_group_id": "group-stockland",
-      "reason": "Official portfolio asset has no exact canonical-place match",
-      "source_url": "https://links.sgx.com/1.0.0/corporate-announcements/OCV00Y9N84LUK0AD/901651_FY26%20Property%20Portfolio.pdf",
-      "status": "Pending"
-    }
-  ]
+  "review_items": []
 }

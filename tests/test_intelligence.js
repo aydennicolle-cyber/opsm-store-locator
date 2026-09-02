@@ -152,4 +152,5 @@ assert.ok(appSource.includes("renderDataHealthView"));
 assert.ok(appSource.includes("eligible_for_analytics"));
 assert.ok(appSource.includes("portfolio_white_space"));
 assert.ok(appSource.includes("PROPERTY_CORRECTION_STORAGE_KEY"));
+assert.ok(appSource.includes('centre.centre_class_evidence?.confidence || "Medium"'));
 console.log("Intelligence tests passed");

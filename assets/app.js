@@ -1992,7 +1992,7 @@
       <form id="centreClassCorrectionForm" class="correction-grid">
         <label><span>Centre class</span><select name="centre_class">${filterOptions(["Super Regional", "Regional", "Sub-regional", "Neighbourhood", "CBD / Mixed-use", "Outlet", "Large Format", "Other", "Unknown"], centre.centre_class || "Unknown", "Class")}</select></label>
         <label><span>Method</span><select name="classification_method">${filterOptions(["Confirmed", "Inferred", "Manual"], centre.centre_class_method || "Manual", "Method")}</select></label>
-        <label><span>Confidence</span><select name="confidence">${filterOptions(["High", "Medium", "Low"], "Medium", "Confidence")}</select></label>
+        <label><span>Confidence</span><select name="confidence">${filterOptions(["High", "Medium", "Low"], centre.centre_class_evidence?.confidence || "Medium", "Confidence")}</select></label>
         <label class="wide"><span>Public evidence URL</span><input name="source_url" type="url" value="${escapeHtml(centre.centre_class_evidence?.source_url || "")}" placeholder="https://…" /></label>
         <button class="detail-action" type="submit">Save centre class</button>
       </form>
