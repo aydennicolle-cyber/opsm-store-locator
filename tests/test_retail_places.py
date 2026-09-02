@@ -239,6 +239,19 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(balgowlah["postcode"], "2093")
         self.assertIn("Stockland Balgowlah", balgowlah["aliases"])
 
+    def test_current_runaway_bay_and_sugarland_names_preserve_stable_ids(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        runaway_bay = places["place-au-qld-runaway-bay-shopping-village"]
+        self.assertEqual(runaway_bay["name"], "Runaway Bay Centre")
+        self.assertIn("Runaway Bay Shopping Village", runaway_bay["aliases"])
+        self.assertEqual(runaway_bay["postcode"], "4216")
+
+        sugarland = places["place-au-qld-sugarland-shoppingtown"]
+        self.assertEqual(sugarland["name"], "Sugarland Plaza")
+        self.assertIn("Sugarland Shoppingtown", sugarland["aliases"])
+        self.assertIn("Stockland Bundaberg", sugarland["aliases"])
+        self.assertEqual(sugarland["postcode"], "4670")
+
     def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, expected_name in {

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T02:58:14+00:00",
+    "generated_at": "2026-09-02T03:02:39+00:00",
     "place_count": 1032,
     "centre_count": 586,
     "corridor_count": 446,
@@ -18841,10 +18841,12 @@
     {
       "place_id": "place-au-qld-runaway-bay-shopping-village",
       "centre_id": "place-au-qld-runaway-bay-shopping-village",
-      "name": "Runaway Bay Shopping Village",
-      "canonical_name": "Runaway Bay Shopping Village",
+      "name": "Runaway Bay Centre",
+      "canonical_name": "Runaway Bay Centre",
       "aliases": [
-        "Runaway Bay Centre"
+        "Runaway Bay Centre",
+        "Runaway Bay Shopping Village",
+        "Runaway Bay Shopping Centre"
       ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
@@ -18852,8 +18854,8 @@
       "state": "QLD",
       "locality": "Runaway Bay",
       "suburb": "Runaway Bay",
-      "postcode": "",
-      "address": "",
+      "postcode": "4216",
+      "address": "10-12 Lae Drive",
       "latitude": -27.913984,
       "longitude": 153.40071,
       "owner": "",
@@ -18865,12 +18867,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "https://www.runawaybaycentre.com.au/",
-      "source_url": "https://www.runawaybaycentre.com.au/",
-      "source_date": "",
+      "official_url": "https://runawaybaycentre.com.au/",
+      "source_url": "https://runawaybaycentre.com.au/",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "The current official venue and Greenpool portfolio use Runaway Bay Centre as the canonical name while the stable place ID is retained",
       "retailers": [
         "OPSM",
         "Specsavers"
@@ -19131,17 +19133,20 @@
     {
       "place_id": "place-au-qld-sugarland-shoppingtown",
       "centre_id": "place-au-qld-sugarland-shoppingtown",
-      "name": "Sugarland Shoppingtown",
-      "canonical_name": "Sugarland Shoppingtown",
-      "aliases": [],
+      "name": "Sugarland Plaza",
+      "canonical_name": "Sugarland Plaza",
+      "aliases": [
+        "Sugarland Shoppingtown",
+        "Stockland Bundaberg"
+      ],
       "place_type": "Shopping Centre",
       "location_setting": "Shopping Centre",
       "country": "Australia",
       "state": "QLD",
-      "locality": "Avoca",
-      "suburb": "Avoca",
-      "postcode": "",
-      "address": "",
+      "locality": "Bundaberg West",
+      "suburb": "Bundaberg West",
+      "postcode": "4670",
+      "address": "115-119 Takalvan Street",
       "latitude": -24.887964,
       "longitude": 152.31892,
       "owner": "",
@@ -19153,12 +19158,12 @@
       "anchors": [],
       "tenancy_count": "",
       "redevelopment_activity": "",
-      "official_url": "",
-      "source_url": "",
-      "source_date": "",
+      "official_url": "https://sugarlandplaza.com.au/",
+      "source_url": "https://sugarlandplaza.com.au/contact-us/",
+      "source_date": "2026-09-02",
       "status": "Active",
       "confidence": "Medium",
-      "source_basis": "Canonical centre consolidated from public store and place evidence",
+      "source_basis": "The current official venue uses Sugarland Plaza and confirms its Bundaberg West address while the stable place ID is retained",
       "retailers": [
         "OPSM",
         "Specsavers"
@@ -19167,7 +19172,7 @@
       "has_bailey": false,
       "mapping_confidence": "Medium",
       "certification_status": "Best available",
-      "evidence_tier": "Derived"
+      "evidence_tier": "Official"
     },
     {
       "place_id": "place-au-unknown-sugarworld-shopping-centre",

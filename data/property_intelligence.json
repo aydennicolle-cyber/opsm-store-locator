@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T02:58:22.319165+00:00",
+  "generated_at": "2026-09-02T03:02:46.790617+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 98,
-    "relationship_count": 713,
-    "active_relationship_count": 711,
+    "group_count": 100,
+    "relationship_count": 721,
+    "active_relationship_count": 719,
     "shopping_centre_count": 586,
-    "researched_property_count": 224,
-    "classed_property_count": 214,
+    "researched_property_count": 226,
+    "classed_property_count": 216,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -237,13 +237,13 @@
     {
       "group_id": "group-retpro",
       "canonical_name": "RetPro",
-      "parent_group_id": "",
+      "parent_group_id": "group-ma-financial",
       "brand_name": "",
       "group_type": "CENTRE_OPERATOR",
       "country_scope": "Australia",
       "official_url": "https://retprogroup.com.au/",
       "status": "Active",
-      "source_url": "https://retprogroup.com.au/",
+      "source_url": "https://retprogroup.com.au/about-us/",
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "aliases": [
@@ -1673,6 +1673,41 @@
         "CPRAM",
         "Capital Property Retail Asset Management"
       ]
+    },
+    {
+      "group_id": "group-greenpool-capital",
+      "canonical_name": "Greenpool Capital",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "ASSET_MANAGER",
+      "country_scope": "Australia",
+      "official_url": "https://www.greenpoolcapital.com/",
+      "status": "Active",
+      "source_url": "https://www.greenpoolcapital.com/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Greenpool Capital",
+        "Greenpool Capital Group"
+      ]
+    },
+    {
+      "group_id": "group-greenpool-management",
+      "canonical_name": "Greenpool Management Co Pty Ltd",
+      "parent_group_id": "group-greenpool-capital",
+      "brand_name": "",
+      "group_type": "CENTRE_OPERATOR",
+      "country_scope": "Australia",
+      "official_url": "https://www.greenpoolcapital.com/",
+      "status": "Active",
+      "source_url": "https://runawaybaycentre.com.au/wp-content/uploads/2025/08/RBC-Terms-Conditions-Fathers-Day-2025-Giveaway-Promotion_R1.pdf",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Greenpool Management Co Pty Ltd",
+        "Greenpool Management Co",
+        "Greenpool Management Co. Pty Ltd"
+      ]
     }
   ],
   "group_alias_index": {
@@ -1861,7 +1896,11 @@
     "smithfieldcentretrust": "group-smithfield-centre-trust",
     "thetrusteeforsmithfieldcentretrust": "group-smithfield-centre-trust",
     "cpram": "group-cpram",
-    "capitalpropertyretailassetmanagement": "group-cpram"
+    "capitalpropertyretailassetmanagement": "group-cpram",
+    "greenpoolcapital": "group-greenpool-capital",
+    "greenpoolcapitalgroup": "group-greenpool-capital",
+    "greenpoolmanagementcoptyltd": "group-greenpool-management",
+    "greenpoolmanagementco": "group-greenpool-management"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -13272,6 +13311,134 @@
       "confidence": "High",
       "public_note": "IFM publishes the current asset profile and direct permanent leasing pathway for Southgate Shopping Centre",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-greenpool-runaway-bay-owner-owner",
+      "place_id": "place-au-qld-runaway-bay-shopping-village",
+      "group_id": "group-greenpool-capital",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.greenpoolcapital.com/runaway-bay-centre",
+      "source_type": "Official current asset portfolio and acquisition history",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Greenpool retains Runaway Bay Centre in its current asset portfolio after acquiring control with investment partner Qualitas; the exact current legal vehicle and ownership split remain unpublished",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-greenpool-runaway-bay-manager-manager",
+      "place_id": "place-au-qld-runaway-bay-shopping-village",
+      "group_id": "group-greenpool-management",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://runawaybaycentre.com.au/centre-info/leasing-opportunities/",
+      "source_type": "Official current venue leasing profile and manager terms",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue provides direct in-house leasing while published venue terms identify Greenpool Management Co Pty Ltd as the centre manager",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-greenpool-runaway-bay-manager-operator",
+      "place_id": "place-au-qld-runaway-bay-shopping-village",
+      "group_id": "group-greenpool-management",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://runawaybaycentre.com.au/centre-info/leasing-opportunities/",
+      "source_type": "Official current venue leasing profile and manager terms",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue provides direct in-house leasing while published venue terms identify Greenpool Management Co Pty Ltd as the centre manager",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-greenpool-runaway-bay-manager-leasing_controller",
+      "place_id": "place-au-qld-runaway-bay-shopping-village",
+      "group_id": "group-greenpool-management",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://runawaybaycentre.com.au/centre-info/leasing-opportunities/",
+      "source_type": "Official current venue leasing profile and manager terms",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue provides direct in-house leasing while published venue terms identify Greenpool Management Co Pty Ltd as the centre manager",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-ma-sugarland-owner-owner",
+      "place_id": "place-au-qld-sugarland-shoppingtown",
+      "group_id": "group-ma-financial",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://sugarlandplaza.com.au/wp-content/uploads/2024/05/Mothers-Day-Gift-Hamper-Comp_TCs.pdf",
+      "source_type": "Official venue ownership terms corroborated by the current MA-managed venue",
+      "last_verified_at": "2026-09-02",
+      "confidence": "Medium",
+      "public_note": "Official venue terms identify MA Financial at owner-group level; the exact legal investment vehicle and ownership percentage remain unpublished",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-retpro-sugarland-manager-manager",
+      "place_id": "place-au-qld-sugarland-shoppingtown",
+      "group_id": "group-retpro",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://sugarlandplaza.com.au/leasing-opportunities/",
+      "source_type": "Official current venue management leasing and directory profiles",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that it is proudly managed by MA Financial Group and routes long-term and casual leasing through the same team; RetPro is the stable canonical ID for MA Financial retail services",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-retpro-sugarland-manager-operator",
+      "place_id": "place-au-qld-sugarland-shoppingtown",
+      "group_id": "group-retpro",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://sugarlandplaza.com.au/leasing-opportunities/",
+      "source_type": "Official current venue management leasing and directory profiles",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that it is proudly managed by MA Financial Group and routes long-term and casual leasing through the same team; RetPro is the stable canonical ID for MA Financial retail services",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-retpro-sugarland-manager-leasing_controller",
+      "place_id": "place-au-qld-sugarland-shoppingtown",
+      "group_id": "group-retpro",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://sugarlandplaza.com.au/leasing-opportunities/",
+      "source_type": "Official current venue management leasing and directory profiles",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that it is proudly managed by MA Financial Group and routes long-term and casual leasing through the same team; RetPro is the stable canonical ID for MA Financial retail services",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -20151,6 +20318,98 @@
       "public_note": "IFM publishes the current asset profile and direct permanent leasing pathway for Southgate Shopping Centre",
       "match_status": "Matched",
       "matched_place_id": "place-au-nsw-southgate-shopping-centre"
+    },
+    {
+      "portfolio_asset_id": "greenpool-runaway-bay-owner",
+      "group_id": "group-greenpool-capital",
+      "canonical_name": "Runaway Bay Centre",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Runaway Bay Shopping Centre|Runaway Bay Shopping Village",
+      "preferred_place_id": "place-au-qld-runaway-bay-shopping-village",
+      "roles": "OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://www.greenpoolcapital.com/runaway-bay-centre",
+      "source_type": "Official current asset portfolio and acquisition history",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Greenpool retains Runaway Bay Centre in its current asset portfolio after acquiring control with investment partner Qualitas; the exact current legal vehicle and ownership split remain unpublished",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-runaway-bay-shopping-village"
+    },
+    {
+      "portfolio_asset_id": "greenpool-runaway-bay-manager",
+      "group_id": "group-greenpool-management",
+      "canonical_name": "Runaway Bay Centre",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Runaway Bay Shopping Centre|Runaway Bay Shopping Village",
+      "preferred_place_id": "place-au-qld-runaway-bay-shopping-village",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://runawaybaycentre.com.au/centre-info/leasing-opportunities/",
+      "source_type": "Official current venue leasing profile and manager terms",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue provides direct in-house leasing while published venue terms identify Greenpool Management Co Pty Ltd as the centre manager",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-runaway-bay-shopping-village"
+    },
+    {
+      "portfolio_asset_id": "ma-sugarland-owner",
+      "group_id": "group-ma-financial",
+      "canonical_name": "Sugarland Plaza",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Sugarland Shoppingtown|Stockland Bundaberg",
+      "preferred_place_id": "place-au-qld-sugarland-shoppingtown",
+      "roles": "OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "",
+      "annual_visits_m": "",
+      "source_url": "https://sugarlandplaza.com.au/wp-content/uploads/2024/05/Mothers-Day-Gift-Hamper-Comp_TCs.pdf",
+      "source_type": "Official venue ownership terms corroborated by the current MA-managed venue",
+      "source_date": "2024-05-09",
+      "last_verified_at": "2026-09-02",
+      "confidence": "Medium",
+      "status": "ACTIVE",
+      "public_note": "Official venue terms identify MA Financial at owner-group level; the exact legal investment vehicle and ownership percentage remain unpublished",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-sugarland-shoppingtown"
+    },
+    {
+      "portfolio_asset_id": "retpro-sugarland-manager",
+      "group_id": "group-retpro",
+      "canonical_name": "Sugarland Plaza",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "Sugarland Shoppingtown|Stockland Bundaberg",
+      "preferred_place_id": "place-au-qld-sugarland-shoppingtown",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "62",
+      "annual_visits_m": "",
+      "source_url": "https://sugarlandplaza.com.au/leasing-opportunities/",
+      "source_type": "Official current venue management leasing and directory profiles",
+      "source_date": "2026-07-01",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue states that it is proudly managed by MA Financial Group and routes long-term and casual leasing through the same team; RetPro is the stable canonical ID for MA Financial retail services",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-sugarland-shoppingtown"
     }
   ],
   "property_summaries": {
@@ -60917,32 +61176,44 @@
     },
     "place-au-qld-runaway-bay-shopping-village": {
       "place_id": "place-au-qld-runaway-bay-shopping-village",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-qld-runaway-bay-shopping-village",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.greenpoolcapital.com/runaway-bay-centre",
+        "source_type": "Official current asset portfolio",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Greenpool's current asset profile explicitly describes Runaway Bay Centre as subregional"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-qld-runaway-bay-shopping-village",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.greenpoolcapital.com/runaway-bay-centre",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Greenpool sources confirm owner-group control legal Greenpool management direct leasing and a confirmed sub-regional class; the exact legal ownership vehicle and Qualitas interest remain unresolved"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-greenpool-runaway-bay-owner-owner",
+        "rel-portfolio-greenpool-runaway-bay-manager-manager",
+        "rel-portfolio-greenpool-runaway-bay-manager-operator",
+        "rel-portfolio-greenpool-runaway-bay-manager-leasing_controller"
+      ],
+      "group_ids": [
+        "group-greenpool-capital",
+        "group-greenpool-management"
+      ],
+      "owner_names": [
+        "Greenpool Capital"
+      ],
+      "manager_names": [
+        "Greenpool Management Co Pty Ltd"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -61706,32 +61977,44 @@
     },
     "place-au-qld-sugarland-shoppingtown": {
       "place_id": "place-au-qld-sugarland-shoppingtown",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-qld-sugarland-shoppingtown",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://sugarlandplaza.com.au/store-directory/",
+        "source_type": "Official current venue directory and centre profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional format inferred from the current Big W and Woolworths anchors plus 62-store directory; the venue does not publish a formal class"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-qld-sugarland-shoppingtown",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://sugarlandplaza.com.au/leasing-opportunities/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue evidence confirms MA Financial owner-group identity MA Financial retail-services management and direct leasing plus a defensible inferred sub-regional class; the exact legal ownership vehicle remains unresolved"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-ma-sugarland-owner-owner",
+        "rel-portfolio-retpro-sugarland-manager-manager",
+        "rel-portfolio-retpro-sugarland-manager-operator",
+        "rel-portfolio-retpro-sugarland-manager-leasing_controller"
+      ],
+      "group_ids": [
+        "group-ma-financial",
+        "group-retpro"
+      ],
+      "owner_names": [
+        "MA Financial"
+      ],
+      "manager_names": [
+        "RetPro"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -61772,7 +62055,10 @@
         },
         "independent_2km_count": 0
       },
-      "market": {}
+      "market": {},
+      "tenancy_count": 62,
+      "source_url": "https://sugarlandplaza.com.au/leasing-opportunities/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-unknown-sugarworld-shopping-centre": {
       "place_id": "place-au-unknown-sugarworld-shopping-centre",
@@ -113947,7 +114233,7 @@
     },
     "group-ma-financial": {
       "group_id": "group-ma-financial",
-      "property_count": 1,
+      "property_count": 2,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -113956,6 +114242,9 @@
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
+        ],
+        "place-au-qld-sugarland-shoppingtown": [
+          "OWNER"
         ]
       },
       "white_space_property_ids": []
@@ -113978,11 +114267,17 @@
     },
     "group-retpro": {
       "group_id": "group-retpro",
-      "property_count": 0,
+      "property_count": 1,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
-      "asset_roles": {},
+      "asset_roles": {
+        "place-au-qld-sugarland-shoppingtown": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ]
+      },
       "white_space_property_ids": []
     },
     "group-haben": {
@@ -115436,6 +115731,34 @@
         "place-au-qld-cairns-smithfield-centre": [
           "EXTERNAL_LEASING_AGENT",
           "LEASING_CONTROLLER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-greenpool-capital": {
+      "group_id": "group-greenpool-capital",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-runaway-bay-shopping-village": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-greenpool-management": {
+      "group_id": "group-greenpool-management",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-runaway-bay-shopping-village": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
         ]
       },
       "white_space_property_ids": []
@@ -138141,7 +138464,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -138155,10 +138478,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 10.87,
-          "group_ids": [],
+          "group_ids": [
+            "group-greenpool-capital",
+            "group-greenpool-management"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -138479,7 +138805,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -138493,10 +138819,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 270.76,
-          "group_ids": [],
+          "group_ids": [
+            "group-ma-financial",
+            "group-retpro"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }

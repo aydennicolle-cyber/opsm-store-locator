@@ -630,6 +630,26 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(southgate["leasing_arrangement"], "In-house")
         self.assertEqual(southgate["gla_sqm"], 23676)
 
+    def test_runaway_bay_and_sugarland_preserve_group_level_unknowns(self) -> None:
+        runaway_bay = self.payload["property_summaries"]["place-au-qld-runaway-bay-shopping-village"]
+        self.assertEqual(runaway_bay["centre_class"], "Sub-regional")
+        self.assertEqual(runaway_bay["research_status"], "Partial")
+        self.assertEqual(runaway_bay["owner_names"], ["Greenpool Capital"])
+        self.assertEqual(runaway_bay["manager_names"], ["Greenpool Management Co Pty Ltd"])
+        self.assertEqual(runaway_bay["leasing_arrangement"], "In-house")
+
+        sugarland = self.payload["property_summaries"]["place-au-qld-sugarland-shoppingtown"]
+        self.assertEqual(sugarland["centre_class"], "Sub-regional")
+        self.assertEqual(sugarland["research_status"], "Partial")
+        self.assertEqual(sugarland["owner_names"], ["MA Financial"])
+        self.assertEqual(sugarland["manager_names"], ["RetPro"])
+        self.assertEqual(sugarland["leasing_arrangement"], "In-house")
+        self.assertEqual(sugarland["tenancy_count"], 62)
+
+        groups = {group["group_id"]: group for group in self.payload["groups"]}
+        self.assertEqual(groups["group-retpro"]["parent_group_id"], "group-ma-financial")
+        self.assertEqual(groups["group-greenpool-management"]["parent_group_id"], "group-greenpool-capital")
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T02:58:14+00:00",
+    "generated_at": "2026-09-02T03:02:39+00:00",
     "benchmark": "All mapped Bailey Nelson stores, separated by country and location setting",
     "method": "Transparent lookalike screening rank; not a probability of store success",
     "weights": {
@@ -10103,7 +10103,7 @@
       },
       {
         "place_id": "place-au-qld-runaway-bay-shopping-village",
-        "name": "Runaway Bay Shopping Village",
+        "name": "Runaway Bay Centre",
         "country": "Australia",
         "state": "QLD",
         "locality": "Runaway Bay",
@@ -10128,7 +10128,7 @@
           "OPSM",
           "Specsavers"
         ],
-        "evidence_url": "https://www.runawaybaycentre.com.au/",
+        "evidence_url": "https://runawaybaycentre.com.au/",
         "rank": 315
       },
       {
@@ -13667,10 +13667,10 @@
       },
       {
         "place_id": "place-au-qld-sugarland-shoppingtown",
-        "name": "Sugarland Shoppingtown",
+        "name": "Sugarland Plaza",
         "country": "Australia",
         "state": "QLD",
-        "locality": "Avoca",
+        "locality": "Bundaberg West",
         "location_setting": "Shopping Centre",
         "score": 83,
         "screening_completeness": 50,
@@ -13692,7 +13692,7 @@
           "OPSM",
           "Specsavers"
         ],
-        "evidence_url": "",
+        "evidence_url": "https://sugarlandplaza.com.au/",
         "rank": 441
       },
       {
