@@ -200,6 +200,32 @@ class RetailPlaceTests(unittest.TestCase):
             {"OPSM", "Specsavers"},
         )
 
+    def test_taigum_beenleigh_and_oasis_use_current_official_place_profiles(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        expected = {
+            "place-au-qld-taigum-square": (
+                "Taigum Square",
+                "Corner Church and Beams Roads",
+            ),
+            "place-au-qld-beenleigh-marketplace": (
+                "Beenleigh Marketplace",
+                "114-118 George Street",
+            ),
+            "place-au-nt-oasis-shopping-centre": (
+                "Oasis Shopping Village",
+                "Corner Temple Terrace and Chung Wah Terrace",
+            ),
+        }
+        for place_id, (name, address) in expected.items():
+            with self.subTest(place_id=place_id):
+                self.assertEqual(places[place_id]["name"], name)
+                self.assertEqual(places[place_id]["address"], address)
+                self.assertEqual(places[place_id]["retailers"], ["Specsavers"])
+        self.assertIn(
+            "Oasis Shopping Centre",
+            places["place-au-nt-oasis-shopping-centre"]["aliases"],
+        )
+
     def test_capalaba_park_duplicate_is_consolidated(self) -> None:
         expected_place_id = "place-au-qld-capalaba-park-shopping-centre"
         capalaba = [

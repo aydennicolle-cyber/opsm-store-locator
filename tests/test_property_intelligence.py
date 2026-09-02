@@ -1426,6 +1426,52 @@ class PropertyIntelligenceTests(unittest.TestCase):
                     1,
                 )
 
+    def test_taigum_beenleigh_and_oasis_property_profiles_preserve_known_unknowns(self) -> None:
+        taigum = self.payload["property_summaries"]["place-au-qld-taigum-square"]
+        self.assertEqual(taigum["research_status"], "Verified")
+        self.assertEqual(taigum["centre_class"], "Sub-regional")
+        self.assertEqual(taigum["centre_class_method"], "Confirmed")
+        self.assertEqual(taigum["owner_names"], ["Vicinity Centres"])
+        self.assertEqual(taigum["manager_names"], ["Vicinity Centres"])
+        self.assertEqual(taigum["leasing_arrangement"], "In-house")
+        self.assertEqual(taigum["gla_sqm"], 22470)
+        self.assertEqual(taigum["annual_visits"], 2700000)
+
+        beenleigh = self.payload["property_summaries"]["place-au-qld-beenleigh-marketplace"]
+        self.assertEqual(beenleigh["research_status"], "Verified")
+        self.assertEqual(beenleigh["centre_class"], "Sub-regional")
+        self.assertEqual(beenleigh["centre_class_method"], "Inferred")
+        self.assertEqual(
+            beenleigh["owner_names"],
+            ["Mintus Investments Pty Ltd ATF The Retail Investment Trust 5"],
+        )
+        self.assertEqual(beenleigh["manager_names"], [])
+        self.assertEqual(beenleigh["leasing_arrangement"], "In-house")
+        beenleigh_roles = {
+            (row["group_id"], row["role"])
+            for row in self.relationships
+            if row["place_id"] == "place-au-qld-beenleigh-marketplace"
+        }
+        self.assertEqual(
+            beenleigh_roles,
+            {
+                ("group-mintus-beenleigh-trust", "OWNER"),
+                ("group-mintus", "OPERATOR"),
+                ("group-mintus", "LEASING_CONTROLLER"),
+            },
+        )
+
+        oasis = self.payload["property_summaries"]["place-au-nt-oasis-shopping-centre"]
+        self.assertEqual(oasis["research_status"], "Partial")
+        self.assertEqual(oasis["centre_class"], "Neighbourhood")
+        self.assertEqual(oasis["centre_class_method"], "Inferred")
+        self.assertEqual(
+            oasis["owner_names"],
+            ["Super Highway Express Pty Ltd ATF Morris Property Trust"],
+        )
+        self.assertEqual(oasis["manager_names"], [])
+        self.assertEqual(oasis["leasing_arrangement"], "Unknown")
+
     def test_current_stockland_baringa_and_piccadilly_profiles_are_explicit(self) -> None:
         baringa = self.payload["property_summaries"][
             "place-au-qld-stockland-baringa-shopping-centre"

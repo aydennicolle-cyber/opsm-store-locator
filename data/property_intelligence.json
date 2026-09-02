@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T05:17:13.990917+00:00",
+  "generated_at": "2026-09-02T05:23:02.936185+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 138,
-    "relationship_count": 948,
-    "active_relationship_count": 946,
+    "group_count": 140,
+    "relationship_count": 956,
+    "active_relationship_count": 954,
     "shopping_centre_count": 581,
-    "researched_property_count": 283,
-    "classed_property_count": 279,
+    "researched_property_count": 286,
+    "classed_property_count": 282,
     "conflict_count": 0,
     "development_asset_count": 1,
     "unmatched_active_portfolio_count": 0,
@@ -2372,6 +2372,40 @@
         "Juilliard Corporation Pty Ltd",
         "Juilliard"
       ]
+    },
+    {
+      "group_id": "group-mintus-beenleigh-trust",
+      "canonical_name": "Mintus Investments Pty Ltd ATF The Retail Investment Trust 5",
+      "parent_group_id": "group-mintus",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://www.mintus.com.au/",
+      "status": "Active",
+      "source_url": "https://www.beenleighmarketplace.com.au/privacy-policy/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Mintus Investments Pty Ltd ATF The Retail Investment Trust 5",
+        "The Retail Investment Trust 5"
+      ]
+    },
+    {
+      "group_id": "group-morris-property-trust",
+      "canonical_name": "Super Highway Express Pty Ltd ATF Morris Property Trust",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "INVESTMENT_VEHICLE",
+      "country_scope": "Australia",
+      "official_url": "https://oasisshoppingvillage.com.au/",
+      "status": "Active",
+      "source_url": "https://oasisshoppingvillage.com.au/oasis-rewards-app/oasisrewards-privacy-policy/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Super Highway Express Pty Ltd ATF Morris Property Trust",
+        "Morris Property Trust"
+      ]
     }
   ],
   "group_alias_index": {
@@ -2652,7 +2686,11 @@
     "thetrusteeformahyperdometowncentrefund": "group-ma-hyperdome-town-centre-fund",
     "mahyperdomefund": "group-ma-hyperdome-town-centre-fund",
     "juilliardcorporationptyltd": "group-juilliard",
-    "juilliard": "group-juilliard"
+    "juilliard": "group-juilliard",
+    "mintusinvestmentsptyltdatftheretailinvestmenttrust5": "group-mintus-beenleigh-trust",
+    "theretailinvestmenttrust5": "group-mintus-beenleigh-trust",
+    "superhighwayexpressptyltdatfmorrispropertytrust": "group-morris-property-trust",
+    "morrispropertytrust": "group-morris-property-trust"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -3630,6 +3668,22 @@
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "public_note": "The current permanent leasing channel is handled through the Juilliard centre manager",
+      "derived_from": "curated_relationship"
+    },
+    {
+      "relationship_id": "rel-oasis-palmerston-owner",
+      "place_id": "place-au-nt-oasis-shopping-centre",
+      "group_id": "group-morris-property-trust",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://oasisshoppingvillage.com.au/oasis-rewards-app/oasisrewards-privacy-policy/",
+      "source_type": "Official current venue privacy and ownership statement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue privacy statement identifies the property owner as Super Highway Express Pty Ltd as trustee for Morris Property Trust",
       "derived_from": "curated_relationship"
     },
     {
@@ -17809,6 +17863,118 @@
       "derived_from": "official_portfolio_asset"
     },
     {
+      "relationship_id": "rel-portfolio-vicinity-taigum-square-owner",
+      "place_id": "place-au-qld-taigum-square",
+      "group_id": "group-vicinity",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/taigum-square",
+      "source_type": "Official current owner manager and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity confirms full ownership current management direct leasing a Sub Regional classification and current public centre metrics",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-taigum-square-manager",
+      "place_id": "place-au-qld-taigum-square",
+      "group_id": "group-vicinity",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/taigum-square",
+      "source_type": "Official current owner manager and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity confirms full ownership current management direct leasing a Sub Regional classification and current public centre metrics",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-taigum-square-operator",
+      "place_id": "place-au-qld-taigum-square",
+      "group_id": "group-vicinity",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/taigum-square",
+      "source_type": "Official current owner manager and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity confirms full ownership current management direct leasing a Sub Regional classification and current public centre metrics",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-taigum-square-leasing_controller",
+      "place_id": "place-au-qld-taigum-square",
+      "group_id": "group-vicinity",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/taigum-square",
+      "source_type": "Official current owner manager and property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Vicinity confirms full ownership current management direct leasing a Sub Regional classification and current public centre metrics",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mintus-beenleigh-owner-owner",
+      "place_id": "place-au-qld-beenleigh-marketplace",
+      "group_id": "group-mintus-beenleigh-trust",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.beenleighmarketplace.com.au/privacy-policy/",
+      "source_type": "Official current venue ownership statement",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue privacy policy identifies Mintus Investments Pty Ltd as trustee for The Retail Investment Trust 5 and legal owner of Beenleigh Marketplace",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mintus-beenleigh-operations-operator",
+      "place_id": "place-au-qld-beenleigh-marketplace",
+      "group_id": "group-mintus",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.beenleighmarketplace.com.au/contact-us/",
+      "source_type": "Official current venue operation and leasing pages",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies Mintus as operator and routes permanent leasing through the Mintus leasing manager",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-mintus-beenleigh-operations-leasing_controller",
+      "place_id": "place-au-qld-beenleigh-marketplace",
+      "group_id": "group-mintus",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.beenleighmarketplace.com.au/contact-us/",
+      "source_type": "Official current venue operation and leasing pages",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue identifies Mintus as operator and routes permanent leasing through the Mintus leasing manager",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
       "relationship_id": "rel-portfolio-perron-galleria-co_owner",
       "place_id": "place-au-wa-morley-galleria",
       "group_id": "group-perron",
@@ -27048,6 +27214,75 @@
       "public_note": "Vicinity reports a 50 percent interest current centre facts direct management and leasing for Galleria",
       "match_status": "Matched",
       "matched_place_id": "place-au-wa-morley-galleria"
+    },
+    {
+      "portfolio_asset_id": "vicinity-taigum-square",
+      "group_id": "group-vicinity",
+      "canonical_name": "Taigum Square",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "",
+      "preferred_place_id": "place-au-qld-taigum-square",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "100",
+      "gla_sqm": "22470",
+      "tenancy_count": "",
+      "annual_visits_m": "2.7",
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/taigum-square",
+      "source_type": "Official current owner manager and property profile",
+      "source_date": "2025-12-31",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Vicinity confirms full ownership current management direct leasing a Sub Regional classification and current public centre metrics",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-taigum-square"
+    },
+    {
+      "portfolio_asset_id": "mintus-beenleigh-owner",
+      "group_id": "group-mintus-beenleigh-trust",
+      "canonical_name": "Beenleigh Marketplace",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "",
+      "preferred_place_id": "place-au-qld-beenleigh-marketplace",
+      "roles": "OWNER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "55",
+      "annual_visits_m": "",
+      "source_url": "https://www.beenleighmarketplace.com.au/privacy-policy/",
+      "source_type": "Official current venue ownership statement",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue privacy policy identifies Mintus Investments Pty Ltd as trustee for The Retail Investment Trust 5 and legal owner of Beenleigh Marketplace",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-beenleigh-marketplace"
+    },
+    {
+      "portfolio_asset_id": "mintus-beenleigh-operations",
+      "group_id": "group-mintus",
+      "canonical_name": "Beenleigh Marketplace",
+      "country": "Australia",
+      "state": "QLD",
+      "aliases": "",
+      "preferred_place_id": "place-au-qld-beenleigh-marketplace",
+      "roles": "OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "",
+      "tenancy_count": "55",
+      "annual_visits_m": "",
+      "source_url": "https://www.beenleighmarketplace.com.au/contact-us/",
+      "source_type": "Official current venue operation and leasing pages",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue identifies Mintus as operator and routes permanent leasing through the Mintus leasing manager",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-qld-beenleigh-marketplace"
     },
     {
       "portfolio_asset_id": "perron-galleria",
@@ -59174,31 +59409,37 @@
     },
     "place-au-nt-oasis-shopping-centre": {
       "place_id": "place-au-nt-oasis-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Neighbourhood",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nt-oasis-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Neighbourhood",
+        "classification_method": "Inferred",
+        "source_url": "https://oasisshoppingvillage.com.au/leasing/",
+        "source_type": "Official current centre leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Neighbourhood class inferred from the current full-line Coles anchor and 38 food retail medical fitness and specialty tenants; the source does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nt-oasis-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://oasisshoppingvillage.com.au/oasis-rewards-app/oasisrewards-privacy-policy/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue sources confirm the owning trust address inferred neighbourhood format and mapped Specsavers tenancy; management and leasing-controller entities remain explicitly unknown"
       },
       "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
+      "relationship_ids": [
+        "rel-oasis-palmerston-owner"
+      ],
+      "group_ids": [
+        "group-morris-property-trust"
+      ],
+      "owner_names": [
+        "Super Highway Express Pty Ltd ATF Morris Property Trust"
+      ],
       "manager_names": [],
       "has_bailey": false,
       "bailey_store_count": 0,
@@ -63761,35 +64002,44 @@
     },
     "place-au-qld-beenleigh-marketplace": {
       "place_id": "place-au-qld-beenleigh-marketplace",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-qld-beenleigh-marketplace",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.beenleighmarketplace.com.au/store-directory/",
+        "source_type": "Official current centre directory and profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Sub-regional class inferred from the current Big W and Woolworths anchors plus more than 55 specialty stores; the source does not publish a formal class label"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-qld-beenleigh-marketplace",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.beenleighmarketplace.com.au/privacy-policy/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current venue privacy leasing and directory sources confirm the owning trust Mintus operation direct leasing address retail format and mapped Specsavers tenancy"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-mintus-beenleigh-owner-owner",
+        "rel-portfolio-mintus-beenleigh-operations-operator",
+        "rel-portfolio-mintus-beenleigh-operations-leasing_controller"
+      ],
+      "group_ids": [
+        "group-mintus",
+        "group-mintus-beenleigh-trust"
+      ],
+      "owner_names": [
+        "Mintus Investments Pty Ltd ATF The Retail Investment Trust 5"
+      ],
       "manager_names": [],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 18.33,
@@ -63841,7 +64091,10 @@
         "median_household_income": 776,
         "age_45_plus_pct": 41.5,
         "retail_businesses": 57
-      }
+      },
+      "tenancy_count": 55,
+      "source_url": "https://www.beenleighmarketplace.com.au/privacy-policy/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-qld-beerwah-village": {
       "place_id": "place-au-qld-beerwah-village",
@@ -70029,37 +70282,77 @@
     },
     "place-au-qld-taigum-square": {
       "place_id": "place-au-qld-taigum-square",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-qld-taigum-square",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/taigum-square",
+        "source_type": "Official current owner property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Vicinity classifies Taigum Square as Sub Regional under SCCA guidelines"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-qld-taigum-square",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/taigum-square",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current Vicinity property and venue sources confirm full ownership management operation direct leasing address Sub Regional class public metrics and the mapped Specsavers tenancy"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-vicinity-taigum-square-owner",
+        "rel-portfolio-vicinity-taigum-square-manager",
+        "rel-portfolio-vicinity-taigum-square-operator",
+        "rel-portfolio-vicinity-taigum-square-leasing_controller"
+      ],
+      "group_ids": [
+        "group-vicinity"
+      ],
+      "owner_names": [
+        "Vicinity Centres"
+      ],
+      "manager_names": [
+        "Vicinity Centres"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
+      "portfolio_overlap_status": "LEASING_CONTROLLER_OVERLAP",
+      "portfolio_overlap_groups": [
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "LEASING_CONTROLLER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "OWNER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "MANAGER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "OPERATOR",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        }
+      ],
+      "portfolio_white_space": true,
       "nearest_bailey_km": 3.75,
       "competitor_context": {
         "by_retailer": {
@@ -70084,7 +70377,11 @@
         },
         "independent_2km_count": 0
       },
-      "market": {}
+      "market": {},
+      "gla_sqm": 22470.0,
+      "annual_visits": 2700000.0,
+      "source_url": "https://www.vicinity.com.au/portfolio/our-properties/taigum-square",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-qld-the-pines-shopping-centre": {
       "place_id": "place-au-qld-the-pines-shopping-centre",
@@ -120457,7 +120754,7 @@
     },
     "group-vicinity": {
       "group_id": "group-vicinity",
-      "property_count": 25,
+      "property_count": 26,
       "bailey_property_count": 5,
       "bailey_store_count": 5,
       "bailey_property_ids": [
@@ -120507,6 +120804,12 @@
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
+        ],
+        "place-au-qld-taigum-square": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
         ],
         "place-au-sa-edwardstown-castle-plaza-shopping-centre": [
           "LEASING_CONTROLLER",
@@ -120616,6 +120919,7 @@
         "place-au-nsw-nepean-village",
         "place-au-nsw-warriewood-square",
         "place-au-qld-browns-plains-grand-plaza-shopping-centre",
+        "place-au-qld-taigum-square",
         "place-au-sa-edwardstown-castle-plaza-shopping-centre",
         "place-au-sa-elizabeth-shopping-centre",
         "place-au-unknown-emporium",
@@ -122643,7 +122947,7 @@
     },
     "group-mintus": {
       "group_id": "group-mintus",
-      "property_count": 2,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -122656,6 +122960,10 @@
         "place-au-nsw-grove-square": [
           "LEASING_CONTROLLER",
           "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-qld-beenleigh-marketplace": [
+          "LEASING_CONTROLLER",
           "OPERATOR"
         ]
       },
@@ -123562,6 +123870,32 @@
         "place-au-vic-mid-valley-shopping-centre": [
           "LEASING_CONTROLLER",
           "MANAGER",
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-mintus-beenleigh-trust": {
+      "group_id": "group-mintus-beenleigh-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-qld-beenleigh-marketplace": [
+          "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-morris-property-trust": {
+      "group_id": "group-morris-property-trust",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nt-oasis-shopping-centre": [
           "OWNER"
         ]
       },
@@ -141438,7 +141772,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Neighbourhood"
         }
       },
       "accessibility": {
@@ -141452,10 +141786,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 2599.82,
-          "group_ids": [],
+          "group_ids": [
+            "group-morris-property-trust"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -143886,7 +144222,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -143900,11 +144236,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 18.33,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-mintus",
+            "group-mintus-beenleigh-trust"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -147048,7 +147387,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -147062,11 +147401,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 3.75,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-vicinity"
+          ],
+          "overlap_status": "LEASING_CONTROLLER_OVERLAP"
         }
       }
     },
