@@ -209,6 +209,29 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(len(memberships), 4)
         self.assertTrue(all(row["location_setting"] == "High Street" for row in memberships))
 
+    def test_pitt_street_precinct_does_not_absorb_nearby_stores_by_proximity(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        pitt_street = places["place-au-nsw-pitt-street-mall"]
+        self.assertEqual(pitt_street["location_setting"], "High Street")
+        self.assertEqual(pitt_street["place_type"], "High Street Corridor")
+        self.assertEqual(pitt_street["postcode"], "2000")
+        self.assertEqual(pitt_street["optical_store_count"], 0)
+
+        memberships = {row["store_id"]: row for row in self.memberships}
+        opsm = memberships["opsm-1304"]
+        self.assertEqual(opsm["place_id"], "corridor-au-nsw-sydney-george-street")
+        self.assertEqual(opsm["location_setting"], "High Street")
+        self.assertEqual(opsm["mapping_confidence"], "High")
+
+        specsavers = memberships["specsavers-3581"]
+        self.assertEqual(specsavers["place_id"], "place-au-nsw-westfield-sydney")
+        self.assertEqual(specsavers["location_setting"], "Shopping Centre")
+        self.assertEqual(specsavers["mapping_confidence"], "High")
+
+        westfield = places["place-au-nsw-westfield-sydney"]
+        self.assertIn("Specsavers", westfield["retailers"])
+        self.assertIn("Bailey Nelson", westfield["retailers"])
+
     def test_balgowlah_village_preserves_the_legacy_place_id_and_alias(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         balgowlah = places["place-au-nsw-balgowlah-shopping-centre"]

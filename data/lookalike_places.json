@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-02T02:47:24+00:00",
+    "generated_at": "2026-09-02T02:58:14+00:00",
     "benchmark": "All mapped Bailey Nelson stores, separated by country and location setting",
     "method": "Transparent lookalike screening rank; not a probability of store success",
     "weights": {
@@ -12250,36 +12250,6 @@
         "rank": 389
       },
       {
-        "place_id": "place-au-nsw-pitt-street-mall",
-        "name": "Pitt Street Mall",
-        "country": "Australia",
-        "state": "NSW",
-        "locality": "Sydney",
-        "location_setting": "Shopping Centre",
-        "score": 30,
-        "screening_completeness": 90,
-        "components": {
-          "bailey_footprint_similarity": 37,
-          "bailey_whitespace": 1,
-          "optical_market_validation": 58,
-          "accessibility_retail_context": null
-        },
-        "market_features": {
-          "population_2025": 9305.0,
-          "population_growth_2021_2025_pct": 13.64,
-          "age_45_plus_pct_2021": 37.7,
-          "median_household_income_weekly_2021": 2010.0
-        },
-        "nearest_bailey_km": 0.2,
-        "optical_store_count": 2,
-        "retailers": [
-          "OPSM",
-          "Specsavers"
-        ],
-        "evidence_url": "",
-        "rank": 390
-      },
-      {
         "place_id": "place-au-unknown-acland-court",
         "name": "Acland Court",
         "country": "Australia",
@@ -12304,7 +12274,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://aclandcourt.com.au/",
-        "rank": 391
+        "rank": 390
       },
       {
         "place_id": "place-au-unknown-box-hill-large-format-retail-centre",
@@ -12331,7 +12301,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.home-co.com.au/centre/home-consortium-box-hill/",
-        "rank": 392
+        "rank": 391
       },
       {
         "place_id": "place-au-unknown-bulleen-plaza",
@@ -12358,7 +12328,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://bulleenplaza.com.au/",
-        "rank": 393
+        "rank": 392
       },
       {
         "place_id": "place-au-unknown-kippa-ring-shopping-centre",
@@ -12385,7 +12355,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://kipparingshoppingcentre.qicre.com/",
-        "rank": 394
+        "rank": 393
       },
       {
         "place_id": "place-au-qld-market-square-deception-bay",
@@ -12412,7 +12382,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://mktdeceptionbay.com.au/",
-        "rank": 395
+        "rank": 394
       },
       {
         "place_id": "place-au-qld-peninsula-fair-shopping-centre",
@@ -12441,7 +12411,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.penfair.com.au/",
-        "rank": 396
+        "rank": 395
       },
       {
         "place_id": "place-au-vic-whitehorse-optical-centre",
@@ -12470,7 +12440,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "",
-        "rank": 397
+        "rank": 396
       },
       {
         "place_id": "place-au-vic-centre-rd",
@@ -12499,7 +12469,7 @@
           "OPSM"
         ],
         "evidence_url": "",
-        "rank": 398
+        "rank": 397
       },
       {
         "place_id": "place-au-unknown-forestway-shopping-centre",
@@ -12526,7 +12496,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.forestway.com.au/",
-        "rank": 399
+        "rank": 398
       },
       {
         "place_id": "place-au-unknown-galleria",
@@ -12553,7 +12523,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.galleria.com.au/",
-        "rank": 400
+        "rank": 399
       },
       {
         "place_id": "place-au-nsw-grove-square",
@@ -12582,7 +12552,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://grovesquare.com.au/",
-        "rank": 401
+        "rank": 400
       },
       {
         "place_id": "place-au-unknown-jesmond-central",
@@ -12609,7 +12579,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.jesmondcentral.com.au/",
-        "rank": 402
+        "rank": 401
       },
       {
         "place_id": "place-au-vic-keilor-downs-shopping-centre",
@@ -12638,7 +12608,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.keilorcentral.com.au",
-        "rank": 403
+        "rank": 402
       },
       {
         "place_id": "place-au-vic-box-hill-central-south",
@@ -12667,7 +12637,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.com.au/stores/boxhill",
-        "rank": 404
+        "rank": 403
       },
       {
         "place_id": "place-au-nsw-cherrybrook-village-shopping-centre",
@@ -12694,7 +12664,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.cherrybrookvillage.com.au",
-        "rank": 405
+        "rank": 404
       },
       {
         "place_id": "place-au-tas-new-town-plaza",
@@ -12721,7 +12691,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://regiongroup.au/portfolio/",
-        "rank": 406
+        "rank": 405
       },
       {
         "place_id": "place-au-wa-floreat-forum",
@@ -12750,7 +12720,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.floreatforum.com.au/",
-        "rank": 407
+        "rank": 406
       },
       {
         "place_id": "place-au-wa-bentley-plaza",
@@ -12777,7 +12747,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.bentleyplaza.com.au/",
-        "rank": 408
+        "rank": 407
       },
       {
         "place_id": "place-au-unknown-ivanhoe-plaza",
@@ -12804,7 +12774,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://ivanhoeplaza.com",
-        "rank": 409
+        "rank": 408
       },
       {
         "place_id": "place-au-sa-pasadena-green-shopping-centre",
@@ -12833,7 +12803,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/stores/sa/pasadena/vision-hub-pasadena-by-opsm/2962",
-        "rank": 410
+        "rank": 409
       },
       {
         "place_id": "place-au-nsw-cronulla-mall",
@@ -12862,7 +12832,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "",
-        "rank": 411
+        "rank": 410
       },
       {
         "place_id": "place-au-unknown-majura-park",
@@ -12889,7 +12859,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://majuraparkshopping.com.au/",
-        "rank": 412
+        "rank": 411
       },
       {
         "place_id": "place-au-wa-manning-arcade",
@@ -12918,7 +12888,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 413
+        "rank": 412
       },
       {
         "place_id": "place-au-unknown-frankston-power-centre",
@@ -12945,7 +12915,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.frankstonpowercentre.com.au/",
-        "rank": 414
+        "rank": 413
       },
       {
         "place_id": "place-au-vic-bayside-centre",
@@ -12974,7 +12944,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 415
+        "rank": 414
       },
       {
         "place_id": "place-au-unknown-burwood-one",
@@ -13001,7 +12971,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://burwoodone.com.au/",
-        "rank": 416
+        "rank": 415
       },
       {
         "place_id": "place-au-wa-cloisters-square",
@@ -13030,7 +13000,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 417
+        "rank": 416
       },
       {
         "place_id": "place-au-wa-murray-st-mall",
@@ -13059,7 +13029,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 418
+        "rank": 417
       },
       {
         "place_id": "place-au-unknown-bentons-square",
@@ -13086,7 +13056,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://regiongroup.au/portfolio/",
-        "rank": 419
+        "rank": 418
       },
       {
         "place_id": "place-au-unknown-harbour-town",
@@ -13113,7 +13083,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://harbourtownadelaide.com.au/",
-        "rank": 420
+        "rank": 419
       },
       {
         "place_id": "place-au-unknown-home-co-mornington",
@@ -13140,7 +13110,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.home-co.com.au/centre/home-consortium-mornington/",
-        "rank": 421
+        "rank": 420
       },
       {
         "place_id": "place-au-unknown-homeco-peninsula",
@@ -13167,7 +13137,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://home-co.com.au/peninsula",
-        "rank": 422
+        "rank": 421
       },
       {
         "place_id": "place-au-vic-mornington-central",
@@ -13196,7 +13166,7 @@
           "Oscar Wylee"
         ],
         "evidence_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-mornington.html",
-        "rank": 423
+        "rank": 422
       },
       {
         "place_id": "place-au-nsw-rose-bay-eyecare-centre",
@@ -13225,7 +13195,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "",
-        "rank": 424
+        "rank": 423
       },
       {
         "place_id": "place-au-unknown-skygate-dfo",
@@ -13252,7 +13222,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://skygate.com.au/",
-        "rank": 425
+        "rank": 424
       },
       {
         "place_id": "place-au-unknown-mornington-village-shopping-centre",
@@ -13279,7 +13249,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://morningtonvillagesc.com.au",
-        "rank": 426
+        "rank": 425
       },
       {
         "place_id": "place-au-vic-melbourne-central-shopping-centre-ground-level",
@@ -13308,7 +13278,7 @@
           "Oscar Wylee"
         ],
         "evidence_url": "https://www.melbournecentral.com.au/",
-        "rank": 427
+        "rank": 426
       },
       {
         "place_id": "place-au-unknown-kingston-central-plaza",
@@ -13335,7 +13305,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://kingstoncentralplaza.com/",
-        "rank": 428
+        "rank": 427
       },
       {
         "place_id": "place-au-unknown-qv",
@@ -13362,7 +13332,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.qv.com.au/",
-        "rank": 429
+        "rank": 428
       },
       {
         "place_id": "place-au-unknown-dfo-moorabbin",
@@ -13389,7 +13359,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.dfo.com.au/",
-        "rank": 430
+        "rank": 429
       },
       {
         "place_id": "place-au-unknown-brooklane-shopping-centre",
@@ -13416,7 +13386,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://retail.centuria.com.au/retail-centre/brooklane-shopping-centre-ellenbrook/",
-        "rank": 431
+        "rank": 430
       },
       {
         "place_id": "place-au-unknown-craigieburn-village",
@@ -13443,7 +13413,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://craigieburnvillage.com.au/",
-        "rank": 432
+        "rank": 431
       },
       {
         "place_id": "place-au-unknown-mitchell-centre",
@@ -13470,7 +13440,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "http://www.mitchellcentre.com.au/",
-        "rank": 433
+        "rank": 432
       },
       {
         "place_id": "place-au-unknown-stockland-birtinya",
@@ -13497,7 +13467,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.stockland.com.au/shopping-centres/centres/stockland-birtinya",
-        "rank": 434
+        "rank": 433
       },
       {
         "place_id": "place-au-unknown-winnellie-shopping-centre",
@@ -13524,7 +13494,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.winnellieshoppingcentre.com/",
-        "rank": 435
+        "rank": 434
       },
       {
         "place_id": "place-au-unknown-craigieburn-junction",
@@ -13551,7 +13521,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://craigieburnjunction.com.au",
-        "rank": 436
+        "rank": 435
       },
       {
         "place_id": "place-au-unknown-greenfield-shopping-village",
@@ -13578,7 +13548,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.gpsv.com.au/",
-        "rank": 437
+        "rank": 436
       },
       {
         "place_id": "place-au-wa-mandurah-forum",
@@ -13609,7 +13579,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 438
+        "rank": 437
       },
       {
         "place_id": "place-au-unknown-tarneit-central-shopping-centre",
@@ -13636,7 +13606,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://tarneitcentral.com.au",
-        "rank": 439
+        "rank": 438
       },
       {
         "place_id": "place-au-unknown-greenway-wetherill-park",
@@ -13663,7 +13633,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://greenwaywetherillpark.com.au/",
-        "rank": 440
+        "rank": 439
       },
       {
         "place_id": "place-au-nt-casuarina-square",
@@ -13693,7 +13663,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.casuarinasquare.com.au/",
-        "rank": 441
+        "rank": 440
       },
       {
         "place_id": "place-au-qld-sugarland-shoppingtown",
@@ -13723,7 +13693,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 442
+        "rank": 441
       },
       {
         "place_id": "place-au-unknown-marsden-park-home",
@@ -13750,7 +13720,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://homehubmarsdenpark.com.au/",
-        "rank": 443
+        "rank": 442
       },
       {
         "place_id": "place-au-nsw-bonnyrigg-plaza",
@@ -13779,7 +13749,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.bonnyriggplaza.com.au/",
-        "rank": 444
+        "rank": 443
       },
       {
         "place_id": "place-au-qld-earlville-shopping-town",
@@ -13808,7 +13778,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://earlvilleshoppingtown.com.au/",
-        "rank": 445
+        "rank": 444
       },
       {
         "place_id": "place-au-sa-elizabeth-city-centre",
@@ -13837,7 +13807,7 @@
           "Oscar Wylee"
         ],
         "evidence_url": "",
-        "rank": 446
+        "rank": 445
       },
       {
         "place_id": "place-au-nsw-figtree-grove-shopping-centre",
@@ -13866,7 +13836,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://figtreegrove.com.au/",
-        "rank": 447
+        "rank": 446
       },
       {
         "place_id": "place-au-nt-hibiscus-shoppingtown",
@@ -13895,7 +13865,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 448
+        "rank": 447
       },
       {
         "place_id": "place-au-sa-seaford-central",
@@ -13924,7 +13894,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.com.au/stores/seaford",
-        "rank": 449
+        "rank": 448
       },
       {
         "place_id": "place-au-sa-westfield-tea-tree-plaza",
@@ -13955,7 +13925,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.westfield.com.au/",
-        "rank": 450
+        "rank": 449
       },
       {
         "place_id": "place-au-nsw-parramatta-westfield",
@@ -13986,7 +13956,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.westfield.com.au/",
-        "rank": 451
+        "rank": 450
       },
       {
         "place_id": "place-au-vic-plenty-valley-westfield",
@@ -14017,7 +13987,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.westfield.com.au/",
-        "rank": 452
+        "rank": 451
       },
       {
         "place_id": "place-au-unknown-pakenham-place-shopping-centre",
@@ -14044,7 +14014,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.pakenhamplace.com.au/",
-        "rank": 453
+        "rank": 452
       },
       {
         "place_id": "place-au-vic-wyndham-village-shopping-centre",
@@ -14073,7 +14043,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://wyndhamvillage.com.au/",
-        "rank": 454
+        "rank": 453
       },
       {
         "place_id": "place-au-nsw-rhodes-waterside-shopping-centre",
@@ -14104,7 +14074,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.rhodeswaterside.com.au/",
-        "rank": 455
+        "rank": 454
       },
       {
         "place_id": "place-au-nsw-roselands-shopping-centre",
@@ -14134,7 +14104,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://home-co.com.au/roselands",
-        "rank": 456
+        "rank": 455
       },
       {
         "place_id": "place-au-vic-westfield-airport-west",
@@ -14165,7 +14135,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.westfield.com.au/",
-        "rank": 457
+        "rank": 456
       },
       {
         "place_id": "place-au-qld-brookside-shopping-centre",
@@ -14196,7 +14166,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.brookside.com.au/",
-        "rank": 458
+        "rank": 457
       },
       {
         "place_id": "place-au-unknown-derrimut-village",
@@ -14223,7 +14193,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://derrimutvillagesc.com.au/",
-        "rank": 459
+        "rank": 458
       },
       {
         "place_id": "place-au-qld-hyperdome-loganholme",
@@ -14252,7 +14222,7 @@
           "Oscar Wylee"
         ],
         "evidence_url": "",
-        "rank": 460
+        "rank": 459
       },
       {
         "place_id": "place-au-qld-logan-hyperdome",
@@ -14281,7 +14251,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://hyperdomeshopping.qicre.com/",
-        "rank": 461
+        "rank": 460
       },
       {
         "place_id": "place-au-vic-pakenham-central-marketplace",
@@ -14310,7 +14280,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://regiongroup.au/portfolio/",
-        "rank": 462
+        "rank": 461
       },
       {
         "place_id": "place-au-nsw-tweed-mall",
@@ -14339,7 +14309,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.tweedmall.com.au/",
-        "rank": 463
+        "rank": 462
       },
       {
         "place_id": "place-au-vic-forest-hill-chase",
@@ -14370,7 +14340,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 464
+        "rank": 463
       },
       {
         "place_id": "place-au-qld-capalaba-central-shopping-centre",
@@ -14397,7 +14367,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.capalabacentral.com.au/",
-        "rank": 465
+        "rank": 464
       },
       {
         "place_id": "place-au-nsw-top-ryde-city-shopping-centre",
@@ -14428,7 +14398,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.toprydecity.com.au/",
-        "rank": 466
+        "rank": 465
       },
       {
         "place_id": "place-au-unknown-lakeside-square-shopping-centre",
@@ -14455,7 +14425,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://lakesidesquare.com.au/",
-        "rank": 467
+        "rank": 466
       },
       {
         "place_id": "place-au-unknown-homeco",
@@ -14482,7 +14452,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.home-co.com.au/centre/keysborough/",
-        "rank": 468
+        "rank": 467
       },
       {
         "place_id": "place-au-vic-waverley-gardens-shopping-centre",
@@ -14512,7 +14482,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.waverleygardens.com.au/",
-        "rank": 469
+        "rank": 468
       },
       {
         "place_id": "place-au-sa-southgate-plaza",
@@ -14541,7 +14511,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 470
+        "rank": 469
       },
       {
         "place_id": "place-au-wa-belmont-forum",
@@ -14571,7 +14541,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 471
+        "rank": 470
       },
       {
         "place_id": "place-au-unknown-campbellfield-plaza",
@@ -14598,7 +14568,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "http://www.specialtymallleasing.com/Campbellfield-Plaza",
-        "rank": 472
+        "rank": 471
       },
       {
         "place_id": "place-au-act-cooleman-court",
@@ -14627,7 +14597,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://regiongroup.au/portfolio/",
-        "rank": 473
+        "rank": 472
       },
       {
         "place_id": "place-au-vic-endeavour-hills-shopping-centre",
@@ -14656,7 +14626,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.endeavourhillsshopping.com.au/",
-        "rank": 474
+        "rank": 473
       },
       {
         "place_id": "place-au-nsw-deepwater-plaza-centre",
@@ -14685,7 +14655,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 475
+        "rank": 474
       },
       {
         "place_id": "place-au-nsw-seven-hills-plaza",
@@ -14714,7 +14684,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.sevenhillsplaza.com.au/",
-        "rank": 476
+        "rank": 475
       },
       {
         "place_id": "place-au-qld-mt-gravatt-westfield",
@@ -14745,7 +14715,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.westfield.com.au/",
-        "rank": 477
+        "rank": 476
       },
       {
         "place_id": "place-au-qld-cannon-hill-kmart-plaza",
@@ -14775,7 +14745,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 478
+        "rank": 477
       },
       {
         "place_id": "place-au-vic-northcote-plaza",
@@ -14805,7 +14775,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.northcoteplaza.com/",
-        "rank": 479
+        "rank": 478
       },
       {
         "place_id": "place-au-nsw-leichhardt-marketplace",
@@ -14835,7 +14805,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 480
+        "rank": 479
       },
       {
         "place_id": "place-au-qld-arndale-shopping-centre",
@@ -14864,7 +14834,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 481
+        "rank": 480
       },
       {
         "place_id": "place-au-vic-casey-central-shopping-centre",
@@ -14893,7 +14863,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://caseycentral.com.au/",
-        "rank": 482
+        "rank": 481
       },
       {
         "place_id": "place-au-wa-dog-swamp-shopping-centre",
@@ -14922,7 +14892,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://dogswampsc.com.au/",
-        "rank": 483
+        "rank": 482
       },
       {
         "place_id": "place-au-sa-sefton-plaza-shopping-centre",
@@ -14951,7 +14921,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 484
+        "rank": 483
       },
       {
         "place_id": "place-au-vic-sunshine-marketplace",
@@ -14980,7 +14950,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.sunshinemarketplace.com.au/",
-        "rank": 485
+        "rank": 484
       },
       {
         "place_id": "place-au-wa-waterford-village-green",
@@ -15009,7 +14979,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 486
+        "rank": 485
       },
       {
         "place_id": "place-au-nsw-north-rocks-shopping-centre",
@@ -15038,7 +15008,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.westfield.com.au/northrocks",
-        "rank": 487
+        "rank": 486
       },
       {
         "place_id": "place-au-qld-25-fairfield-gardens-shopping-centre",
@@ -15067,7 +15037,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.fairfieldgardens.com.au/",
-        "rank": 488
+        "rank": 487
       },
       {
         "place_id": "place-au-nsw-broadway-shopping-centre",
@@ -15097,7 +15067,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.broadwaysydney.com.au/",
-        "rank": 489
+        "rank": 488
       },
       {
         "place_id": "place-au-act-canberra-centre",
@@ -15127,7 +15097,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 490
+        "rank": 489
       },
       {
         "place_id": "place-au-qld-taigum-square",
@@ -15156,7 +15126,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.taigumsquare.com.au/",
-        "rank": 491
+        "rank": 490
       },
       {
         "place_id": "place-au-unknown-burwood-brickworks-shopping-centre",
@@ -15183,7 +15153,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.burwoodbrickworks.shopping/",
-        "rank": 492
+        "rank": 491
       },
       {
         "place_id": "place-au-unknown-dfo-essendon",
@@ -15210,7 +15180,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.dfo.com.au/essendon",
-        "rank": 493
+        "rank": 492
       },
       {
         "place_id": "place-au-unknown-bay-central",
@@ -15237,7 +15207,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.baycentralwoolooware.com.au/",
-        "rank": 494
+        "rank": 493
       },
       {
         "place_id": "place-au-vic-fitzroy-north-eye-centre",
@@ -15266,7 +15236,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "",
-        "rank": 495
+        "rank": 494
       },
       {
         "place_id": "place-au-nsw-marrickville-metro",
@@ -15295,7 +15265,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.marrickvillemetro.com.au/",
-        "rank": 496
+        "rank": 495
       },
       {
         "place_id": "place-au-vic-melbourne-optical-centre",
@@ -15324,7 +15294,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.melbournesgpo.com/",
-        "rank": 497
+        "rank": 496
       },
       {
         "place_id": "place-au-nsw-the-galeries",
@@ -15353,7 +15323,7 @@
           "Oscar Wylee"
         ],
         "evidence_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-sydney-galeries.html",
-        "rank": 498
+        "rank": 497
       },
       {
         "place_id": "place-au-vic-barkly-square",
@@ -15382,7 +15352,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.com.au/stores/brunswick",
-        "rank": 499
+        "rank": 498
       },
       {
         "place_id": "place-au-vic-pran-central-shopping-centre",
@@ -15411,7 +15381,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 500
+        "rank": 499
       },
       {
         "place_id": "place-au-tas-rosny-park-eastlands-shopping-centre",
@@ -15440,7 +15410,7 @@
           "Specsavers"
         ],
         "evidence_url": "",
-        "rank": 501
+        "rank": 500
       },
       {
         "place_id": "place-au-unknown-burnside-village-shopping-centre",
@@ -15467,7 +15437,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.burnsidevillage.com.au/",
-        "rank": 502
+        "rank": 501
       },
       {
         "place_id": "place-au-unknown-the-district-docklands",
@@ -15494,7 +15464,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.thedistrictdocklands.com.au/",
-        "rank": 503
+        "rank": 502
       },
       {
         "place_id": "place-au-unknown-sunny-park-shopping-centre",
@@ -15521,7 +15491,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.sunnypark.com.au/",
-        "rank": 504
+        "rank": 503
       },
       {
         "place_id": "place-au-unknown-the-barracks",
@@ -15548,7 +15518,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://thebarracks.info/",
-        "rank": 505
+        "rank": 504
       },
       {
         "place_id": "place-au-unknown-regent-place",
@@ -15575,7 +15545,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.regentplace.com.au/",
-        "rank": 506
+        "rank": 505
       },
       {
         "place_id": "place-au-unknown-camberwell-place",
@@ -15602,7 +15572,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.camberwellplace.com.au/",
-        "rank": 507
+        "rank": 506
       },
       {
         "place_id": "place-au-unknown-collins-arcade",
@@ -15629,7 +15599,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.collinsarcade.com.au/",
-        "rank": 508
+        "rank": 507
       },
       {
         "place_id": "place-au-unknown-emporium",
@@ -15656,7 +15626,7 @@
         "optical_store_count": 0,
         "retailers": [],
         "evidence_url": "https://www.emporiummelbourne.com.au/",
-        "rank": 509
+        "rank": 508
       }
     ],
     "au-high-street": [
@@ -24190,6 +24160,35 @@
         "rank": 293
       },
       {
+        "place_id": "corridor-au-nsw-sydney-george-street",
+        "name": "George Street",
+        "country": "Australia",
+        "state": "NSW",
+        "locality": "Sydney",
+        "location_setting": "High Street",
+        "score": 22,
+        "screening_completeness": 100,
+        "components": {
+          "bailey_footprint_similarity": 35,
+          "bailey_whitespace": 1,
+          "optical_market_validation": 29,
+          "accessibility_retail_context": 20
+        },
+        "market_features": {
+          "population_2025": 9305.0,
+          "population_growth_2021_2025_pct": 13.64,
+          "age_45_plus_pct_2021": 37.7,
+          "median_household_income_weekly_2021": 2010.0
+        },
+        "nearest_bailey_km": 0.2,
+        "optical_store_count": 1,
+        "retailers": [
+          "OPSM"
+        ],
+        "evidence_url": "https://www.opsm.com.au/stores/nsw/sydney/opsm-george-street/1304",
+        "rank": 294
+      },
+      {
         "place_id": "corridor-au-nsw-sydney-macquarie-street",
         "name": "Macquarie Street",
         "country": "Australia",
@@ -24216,7 +24215,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 294
+        "rank": 295
       },
       {
         "place_id": "corridor-au-vic-coburg-waterfield-street",
@@ -24245,7 +24244,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 295
+        "rank": 296
       },
       {
         "place_id": "corridor-au-nsw-crows-nest-willoughby-road",
@@ -24274,7 +24273,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 296
+        "rank": 297
       },
       {
         "place_id": "corridor-au-qld-fortitude-valley-winn-street",
@@ -24303,7 +24302,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "http://www.winnlane.com.au/shop_details/shop/core_optics/section/shop",
-        "rank": 297
+        "rank": 298
       },
       {
         "place_id": "corridor-au-wa-cottesloe-napoleon-street",
@@ -24332,7 +24331,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 298
+        "rank": 299
       },
       {
         "place_id": "corridor-au-vic-frankston-wells-street",
@@ -24361,7 +24360,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.com.au/stores/frankston",
-        "rank": 299
+        "rank": 300
       },
       {
         "place_id": "corridor-au-vic-hawthorn-burwood-road",
@@ -24390,7 +24389,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 300
+        "rank": 301
       },
       {
         "place_id": "corridor-au-vic-frankston-olsen-street",
@@ -24419,7 +24418,34 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 301
+        "rank": 302
+      },
+      {
+        "place_id": "place-au-nsw-pitt-street-mall",
+        "name": "Pitt Street Mall",
+        "country": "Australia",
+        "state": "NSW",
+        "locality": "Sydney",
+        "location_setting": "High Street",
+        "score": 20,
+        "screening_completeness": 70,
+        "components": {
+          "bailey_footprint_similarity": 35,
+          "bailey_whitespace": 1,
+          "optical_market_validation": null,
+          "accessibility_retail_context": null
+        },
+        "market_features": {
+          "population_2025": 9305.0,
+          "population_growth_2021_2025_pct": 13.64,
+          "age_45_plus_pct_2021": 37.7,
+          "median_household_income_weekly_2021": 2010.0
+        },
+        "nearest_bailey_km": 0.2,
+        "optical_store_count": 0,
+        "retailers": [],
+        "evidence_url": "https://www.cityofsydney.nsw.gov.au/hireable-outdoor-spaces/pitt-street-mall",
+        "rank": 303
       },
       {
         "place_id": "corridor-au-vic-vic-koornang-road",
@@ -24448,7 +24474,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.openstreetmap.org/way/631561723",
-        "rank": 302
+        "rank": 304
       },
       {
         "place_id": "corridor-au-vic-carnegie-koornang-road",
@@ -24477,7 +24503,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.openstreetmap.org/way/631561733",
-        "rank": 303
+        "rank": 305
       },
       {
         "place_id": "corridor-au-sa-adelaide-north-terrace",
@@ -24506,7 +24532,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 304
+        "rank": 306
       },
       {
         "place_id": "corridor-au-vic-vic-pakington-street-2",
@@ -24535,7 +24561,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://eyewearonpako.com.au",
-        "rank": 305
+        "rank": 307
       },
       {
         "place_id": "corridor-au-sa-glenside-portrush-road",
@@ -24564,7 +24590,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 306
+        "rank": 308
       },
       {
         "place_id": "corridor-au-qld-qld-vulture-street",
@@ -24593,7 +24619,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.visionoptics.com.au/",
-        "rank": 307
+        "rank": 309
       },
       {
         "place_id": "corridor-au-nsw-marrickville-smidmore-street",
@@ -24622,7 +24648,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 308
+        "rank": 310
       },
       {
         "place_id": "corridor-au-vic-north-melbourne-errol-street",
@@ -24651,7 +24677,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.openstreetmap.org/node/4740799236",
-        "rank": 309
+        "rank": 311
       },
       {
         "place_id": "corridor-au-vic-collingwood-johnston-street",
@@ -24680,7 +24706,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.openstreetmap.org/node/615137311",
-        "rank": 310
+        "rank": 312
       },
       {
         "place_id": "corridor-au-vic-south-yarra-toorak-road",
@@ -24709,7 +24735,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 311
+        "rank": 313
       },
       {
         "place_id": "corridor-au-vic-brunswick-barkly-street",
@@ -24738,7 +24764,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 312
+        "rank": 314
       },
       {
         "place_id": "corridor-au-tas-rosny-bayfield-street",
@@ -24767,7 +24793,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 313
+        "rank": 315
       },
       {
         "place_id": "corridor-au-nsw-pagewood-bunnerong-road",
@@ -24796,7 +24822,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 314
+        "rank": 316
       },
       {
         "place_id": "corridor-au-vic-melbourne-little-collins-street",
@@ -24825,7 +24851,7 @@
           "Specsavers"
         ],
         "evidence_url": "https://www.specsavers.com.au/stores/littlecollins",
-        "rank": 315
+        "rank": 317
       },
       {
         "place_id": "corridor-au-nsw-mosman-military-road",
@@ -24854,7 +24880,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 316
+        "rank": 318
       },
       {
         "place_id": "corridor-au-vic-vic-tanti-avenue",
@@ -24883,7 +24909,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.openstreetmap.org/way/1343917840",
-        "rank": 317
+        "rank": 319
       },
       {
         "place_id": "corridor-au-vic-vic-wellington-street",
@@ -24912,7 +24938,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.openstreetmap.org/node/2310667483",
-        "rank": 318
+        "rank": 320
       },
       {
         "place_id": "corridor-au-vic-mornington-barkly-street",
@@ -24941,7 +24967,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 319
+        "rank": 321
       },
       {
         "place_id": "corridor-au-vic-city-of-camberwell-burke-road",
@@ -24970,7 +24996,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 320
+        "rank": 322
       },
       {
         "place_id": "corridor-au-vic-melbourne-bourke-street",
@@ -24999,7 +25025,7 @@
           "OPSM"
         ],
         "evidence_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-        "rank": 321
+        "rank": 323
       },
       {
         "place_id": "corridor-au-vic-vic-grattan-street",
@@ -25028,7 +25054,7 @@
           "Independent / Other optical"
         ],
         "evidence_url": "https://www.openstreetmap.org/node/678347804",
-        "rank": 322
+        "rank": 324
       }
     ],
     "nz-high-street": [

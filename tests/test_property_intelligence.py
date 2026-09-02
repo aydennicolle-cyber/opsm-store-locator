@@ -614,6 +614,22 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(coastlands["manager_names"], ["Coastlands Shoppingtown Ltd"])
         self.assertEqual(coastlands["leasing_arrangement"], "Private landlord")
 
+    def test_victoria_point_and_southgate_current_portfolios_are_explicit(self) -> None:
+        victoria_point = self.payload["property_summaries"]["place-au-qld-victoria-point-shopping-centre"]
+        self.assertEqual(victoria_point["centre_class"], "Sub-regional")
+        self.assertEqual(victoria_point["owner_names"], ["Leda Holdings"])
+        self.assertEqual(victoria_point["manager_names"], ["Leda Holdings"])
+        self.assertEqual(victoria_point["leasing_arrangement"], "In-house")
+        self.assertNotIn("gla_sqm", victoria_point)
+        self.assertNotIn("tenancy_count", victoria_point)
+
+        southgate = self.payload["property_summaries"]["place-au-nsw-southgate-shopping-centre"]
+        self.assertEqual(southgate["centre_class"], "Sub-regional")
+        self.assertEqual(southgate["owner_names"], ["IFM Real Estate Core Fund"])
+        self.assertEqual(southgate["manager_names"], ["IFM Investors"])
+        self.assertEqual(southgate["leasing_arrangement"], "In-house")
+        self.assertEqual(southgate["gla_sqm"], 23676)
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})
