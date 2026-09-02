@@ -19,7 +19,11 @@ FIELDS = [
     "source_name", "source_url", "discovered_at", "review_status", "disposition",
     "canonical_id", "reviewed_at", "evidence_notes",
 ]
-MAJOR = re.compile(r"\b(?:opsm|specsavers|bailey[\s&-]*(?:and[\s-]*)?nelson|oscar[\s-]*wylee)\b", re.I)
+MAJOR = re.compile(
+    r"\b(?:opsm|specsavers|bailey[\s&-]*(?:and[\s-]*)?nelson|oscar[\s-]*wylee|"
+    r"george[\s&-]*(?:and[\s-]*)?matilda|eyecare\s*plus|(?:the\s+)?optical\s+superstore)\b",
+    re.I,
+)
 NON_COMPARABLE = re.compile(r"\b(?:sunglass(?:es)?\s+(?:hut|style|shack)|eyewear\s+glasses\s+repair|ophthalmolog|eye\s+surgery|laser\s+eye)\b", re.I)
 
 

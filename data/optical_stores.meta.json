@@ -1,6 +1,6 @@
 {
   "name": "Australia and New Zealand Optical Retail Network",
-  "store_count": 1450,
+  "store_count": 1691,
   "source_freshness": {
     "OPSM Australia": "2026-09-01T07:42:23+00:00",
     "Specsavers Australia": "2026-09-01T23:21:29.969Z",
@@ -10,12 +10,18 @@
     "Oscar Wylee New Zealand": "2026-09-01T07:45:57.558Z",
     "OPSM New Zealand": "2026-09-01T07:42:29+00:00",
     "Bailey Nelson New Zealand": "2026-09-01T07:43:01+00:00",
-    "Independent / Other optical": "2026-09-01T07:48:20.085579Z"
+    "Independent / Other optical": "2026-09-01T07:48:20.085579Z",
+    "George & Matilda Australia": "2026-09-02T08:30:37.078821+00:00",
+    "Eyecare Plus Australia": "2026-09-02T08:30:37.078821+00:00",
+    "Optical Superstore Australia": "2026-09-02T08:30:37.078821+00:00"
   },
   "retailer_counts": {
     "Bailey Nelson": 82,
-    "Independent / Other optical": 383,
+    "Eyecare Plus": 105,
+    "George & Matilda": 114,
+    "Independent / Other optical": 354,
     "OPSM": 392,
+    "Optical Superstore": 51,
     "Oscar Wylee": 131,
     "Specsavers": 462
   },
@@ -26,20 +32,23 @@
     "Unclassified"
   ],
   "network_summary": {
-    "total": 1450,
+    "total": 1691,
     "by_retailer": {
       "Bailey Nelson": 82,
-      "Independent / Other optical": 383,
+      "Eyecare Plus": 105,
+      "George & Matilda": 114,
+      "Independent / Other optical": 354,
       "OPSM": 392,
+      "Optical Superstore": 51,
       "Oscar Wylee": 131,
       "Specsavers": 462
     },
     "by_country": {
-      "Australia": 1244,
+      "Australia": 1485,
       "New Zealand": 206
     },
     "by_state": {
-      "ACT": 23,
+      "ACT": 29,
       "Auckland": 70,
       "Bay of Plenty": 11,
       "Canterbury": 21,
@@ -47,26 +56,27 @@
       "Hawke's Bay": 10,
       "Manawatu-Whanganui": 8,
       "Marlborough": 1,
-      "NSW": 351,
-      "NT": 12,
+      "NSW": 450,
+      "NT": 16,
       "Nelson": 7,
       "Northland": 5,
       "Otago": 9,
-      "QLD": 229,
-      "SA": 93,
+      "QLD": 301,
+      "SA": 102,
       "Southland": 4,
-      "TAS": 37,
+      "TAS": 49,
       "Taranaki": 4,
       "Tasman": 2,
-      "VIC": 356,
-      "WA": 143,
+      "VIC": 387,
+      "WA": 151,
       "Waikato": 22,
       "Wellington": 28
     },
     "by_location_type": {
-      "Main Street / Street-front": 575,
-      "Shopping Centre": 593,
-      "Unclassified": 282
+      "Main Street / Street-front": 744,
+      "Other": 2,
+      "Shopping Centre": 679,
+      "Unclassified": 266
     },
     "multi_brand_venues": [
       {
@@ -168,10 +178,19 @@
         ]
       },
       {
+        "venue_id": "nsw-carnes-hill-marketplace",
+        "venue_name": "Carnes Hill Marketplace",
+        "retailers": [
+          "Eyecare Plus",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "nsw-castle-towers",
         "venue_name": "Castle Towers",
         "retailers": [
           "Bailey Nelson",
+          "George & Matilda",
           "OPSM",
           "Oscar Wylee",
           "Specsavers"
@@ -231,6 +250,7 @@
         "venue_id": "nsw-hill-rouse-town",
         "venue_name": "Rouse Hill Town Centre",
         "retailers": [
+          "George & Matilda",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -294,9 +314,18 @@
         ]
       },
       {
+        "venue_id": "nsw-marketplace-menai",
+        "venue_name": "Menai Marketplace Shopping Centre",
+        "retailers": [
+          "George & Matilda",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "nsw-merrylands-stockland",
         "venue_name": "Merrylands Stockland",
         "retailers": [
+          "George & Matilda",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -350,9 +379,18 @@
         ]
       },
       {
+        "venue_id": "nsw-roselands",
+        "venue_name": "Roselands Shopping Centre",
+        "retailers": [
+          "Eyecare Plus",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "nsw-shellharbour-stockland",
         "venue_name": "Stockland Shellharbour",
         "retailers": [
+          "Optical Superstore",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -386,8 +424,18 @@
         "venue_id": "nt-casuarina-square",
         "venue_name": "Casuarina Square",
         "retailers": [
+          "Optical Superstore",
           "Oscar Wylee",
           "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-australia-fair",
+        "venue_name": "Australia Fair Shopping Centre",
+        "retailers": [
+          "George & Matilda",
+          "Optical Superstore",
+          "Oscar Wylee"
         ]
       },
       {
@@ -395,6 +443,15 @@
         "venue_name": "Stockland Hervey Bay",
         "retailers": [
           "OPSM",
+          "Optical Superstore",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-bribie-island",
+        "venue_name": "Bribie Island Shopping Centre",
+        "retailers": [
+          "George & Matilda",
           "Specsavers"
         ]
       },
@@ -402,7 +459,32 @@
         "venue_id": "qld-brookside",
         "venue_name": "Brookside Shopping Centre",
         "retailers": [
+          "Optical Superstore",
           "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-burleigh-heads-stockland",
+        "venue_name": "Stockland Burleigh Heads",
+        "retailers": [
+          "Eyecare Plus",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-canelands-mackay",
+        "venue_name": "Mackay Canelands Shopping Centre",
+        "retailers": [
+          "Optical Superstore",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-capalaba-park",
+        "venue_name": "Capalaba Park Shopping Centre",
+        "retailers": [
+          "Optical Superstore",
           "Specsavers"
         ]
       },
@@ -464,6 +546,14 @@
         ]
       },
       {
+        "venue_id": "qld-gravatt-mt-plaza",
+        "venue_name": "Mt. Gravatt Plaza",
+        "retailers": [
+          "OPSM",
+          "Optical Superstore"
+        ]
+      },
+      {
         "venue_id": "qld-gravatt-mt-westfield",
         "venue_name": "Westfield Mt Gravatt",
         "retailers": [
@@ -510,8 +600,17 @@
         "venue_id": "qld-morayfield",
         "venue_name": "Morayfield Shopping Centre",
         "retailers": [
+          "Optical Superstore",
           "Oscar Wylee",
           "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-plaza-sunshine",
+        "venue_name": "Sunshine Plaza",
+        "retailers": [
+          "George & Matilda",
+          "Oscar Wylee"
         ]
       },
       {
@@ -526,7 +625,16 @@
         "venue_id": "qld-rockhampton-stockland",
         "venue_name": "Rockhampton Stockland",
         "retailers": [
+          "Optical Superstore",
           "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "qld-square-taigum",
+        "venue_name": "Taigum Square",
+        "retailers": [
+          "Optical Superstore",
           "Specsavers"
         ]
       },
@@ -536,6 +644,14 @@
         "retailers": [
           "OPSM",
           "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "sa-farm-ingle-plaza",
+        "venue_name": "Ingle Farm Plaza",
+        "retailers": [
+          "Optical Superstore",
           "Specsavers"
         ]
       },
@@ -609,6 +725,14 @@
         ]
       },
       {
+        "venue_id": "vic-city-knox",
+        "venue_name": "Knox City Shopping Centre",
+        "retailers": [
+          "Optical Superstore",
+          "Specsavers"
+        ]
+      },
+      {
         "venue_id": "vic-dandenong-square",
         "venue_name": "Dandenong Square",
         "retailers": [
@@ -638,6 +762,14 @@
         "venue_name": "Fountain Gate Westfield Lvl 2",
         "retailers": [
           "Oscar Wylee",
+          "Specsavers"
+        ]
+      },
+      {
+        "venue_id": "vic-gardens-waverley",
+        "venue_name": "Waverley Gardens Shopping Centre",
+        "retailers": [
+          "Optical Superstore",
           "Specsavers"
         ]
       },
@@ -833,6 +965,6 @@
         ]
       }
     ],
-    "single_brand_venue_count": 299
+    "single_brand_venue_count": 346
   }
 }

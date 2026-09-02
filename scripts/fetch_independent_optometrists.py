@@ -60,7 +60,8 @@ NZ_REGIONS = [
     "West Coast",
 ]
 MAJOR_BRAND = re.compile(
-    r"\b(?:opsm|specsavers|bailey[\s&-]*(?:and[\s-]*)?nelson|oscar[\s-]*wylee)\b",
+    r"\b(?:opsm|specsavers|bailey[\s&-]*(?:and[\s-]*)?nelson|oscar[\s-]*wylee|"
+    r"george[\s&-]*(?:and[\s-]*)?matilda|eyecare\s*plus|(?:the\s+)?optical\s+superstore)\b",
     flags=re.IGNORECASE,
 )
 NON_COMPARABLE = re.compile(
@@ -447,7 +448,10 @@ def write_outputs(stores: list[dict], queries: list[dict]) -> None:
                 "fetched_at": fetched_at,
                 "store_count": len(stores),
                 "coverage": "Community-mapped shop=optician discovery records; non-exhaustive and subject to comparability review",
-                "excluded_major_brands": ["OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee"],
+                "excluded_major_brands": [
+                    "OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee",
+                    "George & Matilda", "Eyecare Plus", "Optical Superstore",
+                ],
                 "excluded_non_comparable_patterns": ["sunglasses-only", "repair-only", "ophthalmology", "eye surgery", "laser eye"],
                 "queries": queries,
             },

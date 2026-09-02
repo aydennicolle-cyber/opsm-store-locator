@@ -2,20 +2,20 @@
   "use strict";
 
   const Intel = window.LeasingIntel;
-  const BRAND_ORDER = [
+  let BRAND_ORDER = [
     "OPSM",
     "Specsavers",
     "Bailey Nelson",
     "Oscar Wylee",
     "Independent / Other optical",
   ];
-  const DEFAULT_RETAILERS = BRAND_ORDER.filter((retailer) => retailer !== "Independent / Other optical");
+  let DEFAULT_RETAILERS = BRAND_ORDER.filter((retailer) => retailer !== "Independent / Other optical");
   const CENTRE_BAG_SVG = `<svg class="centre-bag-icon" viewBox="0 0 24 24" aria-hidden="true">
     <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
     <path d="M3 6h18"></path>
     <path d="M16 10a4 4 0 0 1-8 0"></path>
   </svg>`;
-  const BRAND_CONFIG = {
+  let BRAND_CONFIG = {
     OPSM: { color: "#211d1b", slug: "opsm", short: "OPSM", mark: "OPSM", markerWidth: 38 },
     Specsavers: {
       color: "#009b55",
@@ -147,6 +147,7 @@
   const state = {
     view: "network",
     allStores: [],
+    retailerRegistry: [],
     filteredStores: [],
     metadata: {},
     centres: [],
@@ -266,6 +267,24 @@
       .replaceAll("'", "&#039;");
   }
 
+  function configureRetailers(payload) {
+    const retailers = Array.isArray(payload?.retailers) ? payload.retailers : [];
+    if (!retailers.length) return;
+    state.retailerRegistry = retailers;
+    BRAND_ORDER = retailers.map((item) => item.name);
+    DEFAULT_RETAILERS = retailers.filter((item) => item.default_visible).map((item) => item.name);
+    BRAND_CONFIG = Object.fromEntries(retailers.map((item) => [item.name, {
+      color: item.color,
+      slug: item.slug,
+      short: item.short,
+      mark: item.mark,
+      markerWidth: Number(item.marker_width) || 40,
+      networkType: item.network_type || "additional",
+      minMarkerZoom: Number(item.min_marker_zoom) || 0,
+    }]));
+    state.filters.retailers = new Set(DEFAULT_RETAILERS);
+  }
+
   function refreshIcons() {
     if (window.lucide) window.lucide.createIcons({ attrs: { "stroke-width": 1.8 } });
   }
@@ -300,7 +319,9 @@
     if (retailer === "Bailey Nelson") {
       return `<span class="retailer-logo ${config.slug} ${context}" aria-hidden="true"><span class="bn-letter">B</span><i></i><span class="bn-letter">N</span></span>`;
     }
-    return `<span class="retailer-logo ${config.slug} ${context}" aria-hidden="true"><span>${escapeHtml(
+    const generic = ["OPSM", "Specsavers", "Oscar Wylee", "Independent / Other optical"].includes(retailer)
+      ? "" : " generic-network";
+    return `<span class="retailer-logo ${config.slug} ${context}${generic}" style="--brand-color:${escapeHtml(config.color)}" aria-hidden="true"><span>${escapeHtml(
       config.mark
     )}</span></span>`;
   }
@@ -459,7 +480,7 @@
       elements.visibleTotalLabel.textContent = "stores observed in census";
     } else {
       elements.visibleTotal.textContent = state.filteredStores.length.toLocaleString("en-AU");
-      elements.visibleTotalLabel.textContent = "locations visible";
+      elements.visibleTotalLabel.textContent = "locations selected";
     }
     renderView();
     updateCentreMarkersForFilters();
@@ -477,12 +498,17 @@
   }
 
   function retailerOptionsHtml() {
+    let previousType = "";
     return BRAND_ORDER.map((retailer) => {
       const config = BRAND_CONFIG[retailer];
       const count = state.allStores.filter(
         (store) => store.retailer === retailer && storeMatchesFilters(store, true)
       ).length;
-      return `<label class="retailer-option" data-retailer="${escapeHtml(retailer)}">
+      const heading = config.networkType !== previousType
+        ? `<span class="retailer-group-label">${config.networkType === "primary" ? "Core networks" : config.networkType === "additional" ? "Additional networks · markers from zoom 8" : "Background discovery · markers from zoom 10"}</span>`
+        : "";
+      previousType = config.networkType;
+      return `${heading}<label class="retailer-option" data-retailer="${escapeHtml(retailer)}">
         <input type="checkbox" value="${escapeHtml(retailer)}" ${state.filters.retailers.has(retailer) ? "checked" : ""} />
         ${brandMarkHtml(retailer, "filter")}
         <span title="${escapeHtml(retailer)}">${escapeHtml(retailer)}</span><output>${count}</output>
@@ -642,17 +668,26 @@
 
   function applyFilters(render = true) {
     state.filteredStores = state.allStores.filter((store) => storeMatchesFilters(store));
-    storeClusters.clearLayers();
-    state.filteredStores.forEach((store) => storeClusters.addLayer(markerById.get(store.store_id)));
+    refreshStoreMarkerVisibility();
     updateCentreMarkersForFilters();
     if (state.view !== "health") {
       elements.visibleTotal.textContent = state.filteredStores.length.toLocaleString("en-AU");
-      elements.visibleTotalLabel.textContent = "locations visible";
+      elements.visibleTotalLabel.textContent = "locations selected";
     }
     if (render && state.view === "network") renderNetworkView();
     updateSaturationLayer();
     updateShareUrl(false);
     window.requestAnimationFrame(repositionCloseZoomMarkers);
+  }
+
+  function refreshStoreMarkerVisibility() {
+    storeClusters.clearLayers();
+    const zoom = map.getZoom();
+    state.filteredStores.forEach((store) => {
+      if (zoom < (BRAND_CONFIG[store.retailer]?.minMarkerZoom || 0)) return;
+      const marker = markerById.get(store.store_id);
+      if (marker) storeClusters.addLayer(marker);
+    });
   }
 
   function renderCentresView() {
@@ -679,7 +714,7 @@
           <label><span>Minimum nearest BN (km)</span><input id="placeMinBailey" type="number" min="0" step="1" value="${escapeHtml(state.placeFilters.min_bailey_distance)}" placeholder="No minimum" /></label>
           <label><span>Sort results</span><select id="placeSort">${filterOptions(["name", "optical_tenants", "household_income", "nearest_bailey", "portfolio_white_space"], state.placeFilters.sort, "Sort by")}</select></label>
         </div>
-        <fieldset class="place-retailer-filter"><legend>Require every selected retailer</legend>${BRAND_ORDER.slice(0, 4).map((brand) => `<label><input type="checkbox" value="${escapeHtml(brand)}" ${state.placeFilters.retailers.has(brand) ? "checked" : ""} />${brandMarkHtml(brand, "compact")}<span>${escapeHtml(brand)}</span></label>`).join("")}</fieldset>
+        <fieldset class="place-retailer-filter"><legend>Require every selected retailer</legend>${BRAND_ORDER.filter((brand) => BRAND_CONFIG[brand].networkType !== "background").map((brand) => `<label><input type="checkbox" value="${escapeHtml(brand)}" ${state.placeFilters.retailers.has(brand) ? "checked" : ""} />${brandMarkHtml(brand, "compact")}<span>${escapeHtml(brand)}</span></label>`).join("")}</fieldset>
         <div class="button-row place-actions">
           <button class="secondary-command" id="exportCorrections" type="button"><i data-lucide="download"></i>Export local corrections (${state.consultantCorrections.length})</button>
           <button class="secondary-command" id="importCorrections" type="button"><i data-lucide="upload"></i>Import corrections CSV</button>
@@ -2333,7 +2368,12 @@
     if (state.view === "network") renderNetworkView();
     if (moveMap) {
       const marker = markerById.get(storeId);
-      storeClusters.zoomToShowLayer(marker, () => map.setView([store.latitude, store.longitude], Math.max(map.getZoom(), 14)));
+      const targetZoom = Math.max(map.getZoom(), BRAND_CONFIG[store.retailer]?.minMarkerZoom || 0, 14);
+      if (marker && storeClusters.hasLayer(marker)) {
+        storeClusters.zoomToShowLayer(marker, () => map.setView([store.latitude, store.longitude], targetZoom));
+      } else {
+        map.setView([store.latitude, store.longitude], targetZoom);
+      }
     }
   }
 
@@ -2928,7 +2968,10 @@
       markerById.forEach(resetMarkerPosition);
       centreMarkerById.forEach(resetMarkerPosition);
     });
-    map.on("zoomend", repositionCloseZoomMarkers);
+    map.on("zoomend", () => {
+      refreshStoreMarkerVisibility();
+      repositionCloseZoomMarkers();
+    });
     map.on("moveend", () => {
       if (["health", "transport", "parking"].some((layer) => state.activeLayers.has(layer))) loadAmenities();
       repositionCloseZoomMarkers();
@@ -2945,7 +2988,7 @@
 
   async function initialise() {
     try {
-      const [stores, markets, places, links, events, profiles, dataHealth, lookalikes, propertyIntelligence] = await Promise.all([
+      const [stores, markets, places, links, events, profiles, dataHealth, lookalikes, propertyIntelligence, retailerRegistry] = await Promise.all([
         loadJson("data/optical_stores.geojson"),
         loadJson("data/sa2_market.geojson"),
         loadJson("data/retail_places.json"),
@@ -2955,7 +2998,9 @@
         loadJson("data/data_health.json"),
         loadJson("data/lookalike_places.json"),
         loadJson("data/property_intelligence.json"),
+        loadJson("data/retailer_registry.json"),
       ]);
+      configureRetailers(retailerRegistry);
       state.metadata = stores.metadata || {};
       state.allStores = stores.features.map((feature) => ({
         ...feature.properties,

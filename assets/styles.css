@@ -112,6 +112,7 @@ fieldset { margin: 13px 0; padding: 0; border: 0; }
 legend, .select-grid label > span, .service-field > span, .opportunity-form label > span, .input-grid label > span { margin-bottom: 6px; color: var(--muted); font-size: 9px; font-weight: 800; text-transform: uppercase; }
 .retailer-filter { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
 .retailer-filter legend { grid-column: 1 / -1; }
+.retailer-group-label { grid-column: 1 / -1; margin-top: 5px; color: var(--muted); font-size: 8px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
 .retailer-option { min-width: 0; height: 62px; display: grid; grid-template-columns: 1fr auto; grid-template-rows: 28px 14px; gap: 2px 4px; align-items: center; padding: 6px 7px; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; }
 .retailer-option input { position: absolute; opacity: 0; pointer-events: none; }
 .retailer-option:has(input:not(:checked)) { opacity: .42; background: var(--soft); }
@@ -130,6 +131,7 @@ legend, .select-grid label > span, .service-field > span, .opportunity-form labe
 .retailer-logo.bailey-nelson i { width: 4px; height: 2px; flex: 0 0 auto; background: #171717; }
 .retailer-logo.oscar-wylee { width: 50px; height: 20px; border: 1px solid #2848a7; background: white; color: #2848a7; font-family: Georgia, "Times New Roman", serif; font-size: 7px; font-weight: 600; }
 .retailer-logo.independent-other { width: 32px; height: 20px; border: 1px solid #6b5b4b; border-radius: 3px; background: #6b5b4b; color: white; font-size: 7px; font-weight: 850; }
+.retailer-logo.generic-network { width: min(100%, 60px); min-width: 34px; height: 20px; padding: 0 5px; border: 1px solid color-mix(in srgb, var(--brand-color) 78%, black); border-radius: 3px; background: var(--brand-color); color: white; font-size: 6px; font-weight: 850; letter-spacing: -.1px; }
 .retailer-option[data-retailer="Independent / Other optical"] { grid-column: span 2; }
 .retailer-logo.filter.opsm { width: 38px; height: 20px; font-size: 8px; }
 .retailer-logo.filter.specsavers { width: 52px; height: 21px; }

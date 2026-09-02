@@ -307,6 +307,34 @@ def query_sa2_for_point(longitude: float, latitude: float) -> dict:
     return matches[0]["attributes"] if matches else {}
 
 
+def point_to_segment_km(
+    longitude: float, latitude: float, first: list[float], second: list[float]
+) -> float:
+    scale_x = 111.32 * math.cos(math.radians(latitude))
+    ax, ay = (first[0] - longitude) * scale_x, (first[1] - latitude) * 110.574
+    bx, by = (second[0] - longitude) * scale_x, (second[1] - latitude) * 110.574
+    dx, dy = bx - ax, by - ay
+    denominator = dx * dx + dy * dy
+    fraction = 0.0 if denominator == 0 else max(0.0, min(1.0, -(ax * dx + ay * dy) / denominator))
+    return math.hypot(ax + fraction * dx, ay + fraction * dy)
+
+
+def geometry_boundary_distance_km(longitude: float, latitude: float, geometry: dict) -> float:
+    polygons = geometry.get("coordinates", [])
+    if geometry.get("type") == "Polygon":
+        polygons = [polygons]
+    distances = []
+    for polygon in polygons:
+        if not polygon:
+            continue
+        ring = polygon[0]
+        distances.extend(
+            point_to_segment_km(longitude, latitude, ring[index], ring[index + 1])
+            for index in range(len(ring) - 1)
+        )
+    return min(distances, default=float("inf"))
+
+
 def link_stores_to_market(stores: list[dict], features: list[dict]) -> dict[str, dict]:
     spatial = []
     for feature in features:
@@ -334,18 +362,34 @@ def link_stores_to_market(stores: list[dict], features: list[dict]) -> dict[str,
         exact = {}
         if not match:
             exact = query_sa2_for_point(longitude, latitude)
+        boundary_match = None
+        boundary_distance = None
+        if not match and not exact:
+            nearest = min(
+                (
+                    (geometry_boundary_distance_km(longitude, latitude, feature["geometry"]), feature)
+                    for feature in features
+                ),
+                key=lambda item: item[0],
+            )
+            if nearest[0] <= 2.0:
+                boundary_distance, boundary_match = nearest
         links[store["store_id"]] = {
             "sa2_code": (
                 match["properties"]["sa2_code"]
                 if match
                 else exact.get("sa2_code_2021", "")
+                or (boundary_match or {}).get("properties", {}).get("sa2_code", "")
             ),
             "sa2_name": (
                 match["properties"]["sa2_name"]
                 if match
                 else exact.get("sa2_name_2021", "")
+                or (boundary_match or {}).get("properties", {}).get("sa2_name", "")
             ),
-            "match_confidence": "High" if match or exact else "Unmatched",
+            "match_confidence": "High" if match or exact else "Medium" if boundary_match else "Unmatched",
+            "match_method": "Point in SA2" if match or exact else "Nearest SA2 boundary fallback" if boundary_match else "Unmatched",
+            "boundary_distance_km": round(boundary_distance, 3) if boundary_distance is not None else None,
         }
     return links
 

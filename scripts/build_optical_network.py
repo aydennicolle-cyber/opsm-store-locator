@@ -22,6 +22,8 @@ OVERRIDE_PATH = DATA_DIR / "location_overrides.csv"
 AREA_OVERRIDE_PATH = DATA_DIR / "public_area_overrides.csv"
 CENTRE_REGISTRY_PATH = DATA_DIR / "shopping_centres.csv"
 CENTRE_MEMBERSHIP_PATH = DATA_DIR / "centre_store_memberships.csv"
+RETAILER_REGISTRY_PATH = DATA_DIR / "retailer_registry.json"
+IDENTITY_REMAPS_PATH = DATA_DIR / "store_identity_remaps.csv"
 VALID_STATES = {"ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"}
 VALID_NZ_REGIONS = {
     "Auckland",
@@ -75,9 +77,11 @@ CENTRE_PHRASES = (
     "shopping centre",
     "shopping center",
     "shopping ctr",
+    "shp ctr",
     "s/c",
     "westfield",
     "marketplace",
+    "market place",
     "town centre",
     "town center",
     "central plaza",
@@ -145,12 +149,59 @@ STREET_TERMS = (
     " lane",
     " drive",
     " boulevard",
+    " place",
+    " pl,",
+    " walk",
 )
+AMBIGUOUS_NAME_TERMS = {" towers", " junction", " indooroopilly"}
+
+
+def centre_evidence_segments(store: dict) -> list[str]:
+    locality_values = {
+        tidy(store.get("suburb", "")).lower(),
+        tidy(store.get("state", "")).lower(),
+        tidy(store.get("postcode", "")).lower(),
+        tidy(store.get("country", "")).lower(),
+    }
+    segments = []
+    for segment in store.get("full_address", "").split(","):
+        cleaned = tidy(segment)
+        lowered = cleaned.lower()
+        if not cleaned or lowered in locality_values:
+            continue
+        # "Queen Street Mall" and "Centre Dandenong Road" are street names,
+        # not evidence that the tenancy is inside a shopping centre.
+        if re.search(r"\b(?:street|st|road|rd|avenue|ave|drive|dr|parade|pde|highway|hwy)\s+mall\b", lowered):
+            continue
+        if re.search(r"\bcentre\s+[a-z' -]+\s+(?:road|rd|street|st|avenue|ave|drive|dr)\b", lowered):
+            continue
+        segments.append(lowered)
+    return segments
 
 
 def read_csv(path: Path) -> list[dict]:
     with path.open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
+
+
+def retailer_registry() -> list[dict]:
+    payload = json.loads(RETAILER_REGISTRY_PATH.read_text(encoding="utf-8"))
+    retailers = payload.get("retailers", [])
+    names = [item.get("name", "") for item in retailers]
+    if not retailers or any(not name for name in names) or len(names) != len(set(names)):
+        raise ValueError("Retailer registry must contain unique, named retailer entries")
+    return retailers
+
+
+def identity_remaps() -> dict[str, str]:
+    remaps = {}
+    for row in read_csv(IDENTITY_REMAPS_PATH):
+        source = tidy(row.get("source_store_id", ""))
+        canonical = tidy(row.get("canonical_store_id", ""))
+        if not source or not canonical or source == canonical or source in remaps:
+            raise ValueError(f"Invalid store identity remap: {row}")
+        remaps[source] = canonical
+    return remaps
 
 
 def read_freshness() -> dict[str, str]:
@@ -164,7 +215,7 @@ def read_freshness() -> dict[str, str]:
     oscar_wylee = json.loads(
         (ROOT / "retailers" / "oscar-wylee" / "source_snapshot.json").read_text(encoding="utf-8")
     )
-    return {
+    freshness = {
         "OPSM Australia": opsm["fetched_at"],
         "Specsavers Australia": specsavers["fetched_at"],
         "Bailey Nelson Australia": bailey["fetched_at"],
@@ -185,6 +236,16 @@ def read_freshness() -> dict[str, str]:
             (ROOT / "retailers" / "independent-other" / "source_snapshot.json").read_text(encoding="utf-8")
         )["fetched_at"],
     }
+    for retailer, folder, label in (
+        ("George & Matilda", "george-and-matilda", "George & Matilda Australia"),
+        ("Eyecare Plus", "eyecare-plus", "Eyecare Plus Australia"),
+        ("Optical Superstore", "optical-superstore", "Optical Superstore Australia"),
+    ):
+        snapshot = json.loads(
+            (ROOT / "retailers" / folder / "source_snapshot.json").read_text(encoding="utf-8")
+        )
+        freshness[label] = snapshot["fetched_at"]
+    return freshness
 
 
 def tidy(value: str) -> str:
@@ -234,6 +295,9 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
             "Independent / Other optical",
             "",
         ),
+        ("George & Matilda", "george-and-matilda", "George & Matilda Australia", ""),
+        ("Eyecare Plus", "eyecare-plus", "Eyecare Plus Australia", ""),
+        ("Optical Superstore", "optical-superstore", "Optical Superstore Australia", ""),
     ):
         for row in read_csv(ROOT / "retailers" / folder / "stores.csv"):
             local_id = tidy(row["id"])
@@ -283,12 +347,23 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                 "fetched_at": freshness["OPSM New Zealand"],
             }
         )
-    return stores
+    remaps = identity_remaps()
+    by_id = {store["store_id"]: store for store in stores}
+    missing = [
+        (source, canonical) for source, canonical in remaps.items()
+        if source not in by_id or canonical not in by_id
+    ]
+    if missing:
+        raise ValueError(f"Store identity remap refers to missing source/canonical store: {missing[:5]}")
+    return [store for store in stores if store["store_id"] not in remaps]
 
 
 def cleaned_store_name(store: dict) -> str:
     name = store["name"]
-    for prefix in ("OPSM ", "Bailey Nelson ", "Specsavers ", "Oscar Wylee "):
+    for prefix in (
+        "OPSM ", "Bailey Nelson ", "Specsavers ", "Oscar Wylee ",
+        "George & Matilda ", "Eyecare Plus ", "Optical Superstore ",
+    ):
         if name.lower().startswith(prefix.lower()):
             name = name[len(prefix) :]
     if " - " in name:
@@ -326,6 +401,7 @@ def clean_venue(value: str) -> str:
             value = remainder
     value = re.sub(r"^\d+[a-z]?\s+", "", value, flags=re.IGNORECASE)
     value = re.sub(r"\bS/C\b", "Shopping Centre", value, flags=re.IGNORECASE)
+    value = re.sub(r"\bShp\s+Ctr\b", "Shopping Centre", value, flags=re.IGNORECASE)
     return value.strip(" ,- ")
 
 
@@ -371,10 +447,26 @@ def classify(store: dict) -> dict:
             "classification_confidence": "High",
             "classification_basis": "Official name/address contains a non-centre commercial venue term",
         }
-    explicit = [phrase for phrase in CENTRE_PHRASES if phrase in text]
-    named = [term.strip() for term in CENTRE_NAME_TERMS if term in text]
+    evidence_segments = centre_evidence_segments(store)
+    name_text = f" {store['name'].lower()} "
+    additional_network = store["retailer"] in {"George & Matilda", "Eyecare Plus", "Optical Superstore"}
+    if additional_network:
+        explicit = [
+            phrase for phrase in CENTRE_PHRASES
+            if phrase in name_text or any(phrase in segment for segment in evidence_segments)
+        ]
+        named = [
+            term.strip() for term in CENTRE_NAME_TERMS
+            if any(term in f" {segment}" for segment in evidence_segments)
+            or (term not in AMBIGUOUS_NAME_TERMS and term in name_text)
+        ]
+    else:
+        # Preserve the established classifier for the previously audited core
+        # networks; the stricter segment logic applies to newly added sources.
+        explicit = [phrase for phrase in CENTRE_PHRASES if phrase in text]
+        named = [term.strip() for term in CENTRE_NAME_TERMS if term in text]
     shop_format = bool(re.search(r"\b(shop|level)\s*[a-z0-9]", text))
-    if explicit or named or shop_format:
+    if explicit or named or (shop_format and not additional_network):
         venue_name = venue_from_evidence(store, text)
         confidence = "High" if explicit or named else "Medium"
         basis = "Official name/address contains shopping-centre evidence"
@@ -396,7 +488,11 @@ def classify(store: dict) -> dict:
             "venue_id": "",
             "location_type": "Main Street / Street-front",
             "classification_confidence": "Medium",
-            "classification_basis": "Official address is a numbered or corner street address without centre evidence",
+            "classification_basis": (
+                "Official address is a numbered or corner street address without named centre evidence"
+                if not shop_format
+                else "Official address has a shop/unit within a numbered street address but no named centre evidence"
+            ),
         }
     if has_street:
         return {
@@ -483,22 +579,22 @@ def validate(stores: list[dict]) -> None:
         duplicates = [item for item, count in Counter(ids).items() if count > 1]
         raise ValueError(f"Duplicate store IDs: {duplicates[:10]}")
     counts = Counter(store["retailer"] for store in stores)
-    required_retailers = {"OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee", "Independent / Other optical"}
+    registry = retailer_registry()
+    required_retailers = {item["name"] for item in registry}
     if set(counts) != required_retailers or any(counts[retailer] == 0 for retailer in required_retailers):
         raise ValueError(f"Missing required retailer scope: {dict(counts)}")
     source_counts = Counter()
-    for retailer, folder in (
-        ("OPSM", "opsm"),
-        ("OPSM", "opsm-nz"),
-        ("Specsavers", "specsavers"),
-        ("Specsavers", "specsavers-nz"),
-        ("Bailey Nelson", "bailey-nelson"),
-        ("Bailey Nelson", "bailey-nelson-nz"),
-        ("Oscar Wylee", "oscar-wylee"),
-        ("Oscar Wylee", "oscar-wylee-nz"),
-        ("Independent / Other optical", "independent-other"),
-    ):
-        source_counts[retailer] += len(read_csv(ROOT / "retailers" / folder / "stores.csv"))
+    for item in registry:
+        for folder in item.get("source_folders", []):
+            source_counts[item["name"]] += len(read_csv(ROOT / "retailers" / folder / "stores.csv"))
+    for source_store_id in identity_remaps():
+        matched = next(
+            (item for item in registry if source_store_id.startswith(f"{item['slug']}-")),
+            None,
+        )
+        if not matched:
+            raise ValueError(f"Cannot resolve remapped source retailer: {source_store_id}")
+        source_counts[matched["name"]] -= 1
     if counts != source_counts:
         raise ValueError(f"Combined counts do not reconcile to source files: combined={dict(counts)} source={dict(source_counts)}")
     history_paths = sorted((DATA_DIR / "history").glob("*.json"))
@@ -507,10 +603,16 @@ def validate(stores: list[dict]) -> None:
         # archived snapshot may pre-date a separately reviewed source-scope
         # correction; it should not block every later no-change rebuild.
         if OUTPUT_CSV.exists():
+            prior_rows = read_csv(OUTPUT_CSV)
+            prior_by_id = {store["store_id"]: store for store in prior_rows}
             prior_scopes = Counter(
                 (store["retailer"], store.get("country", "Australia"))
-                for store in read_csv(OUTPUT_CSV)
+                for store in prior_rows
             )
+            for source_store_id in identity_remaps():
+                previous = prior_by_id.get(source_store_id)
+                if previous:
+                    prior_scopes[(previous["retailer"], previous.get("country", "Australia"))] -= 1
             baseline_label = "latest generated network"
         else:
             previous = json.loads(history_paths[-1].read_text(encoding="utf-8")).get("stores", {})

@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "retailers": [
+    {
+      "retailer_id": "opsm",
+      "name": "OPSM",
+      "slug": "opsm",
+      "network_type": "primary",
+      "is_named_network": true,
+      "default_visible": true,
+      "min_marker_zoom": 0,
+      "color": "#211d1b",
+      "short": "OPSM",
+      "mark": "OPSM",
+      "marker_width": 38,
+      "source_folders": ["opsm", "opsm-nz"]
+    },
+    {
+      "retailer_id": "specsavers",
+      "name": "Specsavers",
+      "slug": "specsavers",
+      "network_type": "primary",
+      "is_named_network": true,
+      "default_visible": true,
+      "min_marker_zoom": 0,
+      "color": "#009b55",
+      "short": "SPEC",
+      "mark": "Specsavers",
+      "marker_width": 58,
+      "source_folders": ["specsavers", "specsavers-nz"]
+    },
+    {
+      "retailer_id": "bailey-nelson",
+      "name": "Bailey Nelson",
+      "slug": "bailey-nelson",
+      "network_type": "primary",
+      "is_named_network": true,
+      "default_visible": true,
+      "min_marker_zoom": 0,
+      "color": "#171717",
+      "short": "BN",
+      "mark": "BN",
+      "marker_width": 50,
+      "source_folders": ["bailey-nelson", "bailey-nelson-nz"]
+    },
+    {
+      "retailer_id": "oscar-wylee",
+      "name": "Oscar Wylee",
+      "slug": "oscar-wylee",
+      "network_type": "primary",
+      "is_named_network": true,
+      "default_visible": true,
+      "min_marker_zoom": 0,
+      "color": "#2848a7",
+      "short": "OW",
+      "mark": "Oscar Wylee",
+      "marker_width": 54,
+      "source_folders": ["oscar-wylee", "oscar-wylee-nz"]
+    },
+    {
+      "retailer_id": "george-and-matilda",
+      "name": "George & Matilda",
+      "slug": "george-matilda",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": false,
+      "min_marker_zoom": 8,
+      "color": "#e5522d",
+      "short": "G&M",
+      "mark": "G&M",
+      "marker_width": 42,
+      "source_folders": ["george-and-matilda"]
+    },
+    {
+      "retailer_id": "eyecare-plus",
+      "name": "Eyecare Plus",
+      "slug": "eyecare-plus",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": false,
+      "min_marker_zoom": 8,
+      "color": "#147b8f",
+      "short": "E+",
+      "mark": "Eyecare+",
+      "marker_width": 52,
+      "source_folders": ["eyecare-plus"]
+    },
+    {
+      "retailer_id": "optical-superstore",
+      "name": "Optical Superstore",
+      "slug": "optical-superstore",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": false,
+      "min_marker_zoom": 8,
+      "color": "#7c3fa1",
+      "short": "OSS",
+      "mark": "Optical Superstore",
+      "marker_width": 66,
+      "source_folders": ["optical-superstore"]
+    },
+    {
+      "retailer_id": "independent-other",
+      "name": "Independent / Other optical",
+      "slug": "independent-other",
+      "network_type": "background",
+      "is_named_network": false,
+      "default_visible": false,
+      "min_marker_zoom": 10,
+      "color": "#6b5b4b",
+      "short": "IND",
+      "mark": "IND",
+      "marker_width": 34,
+      "source_folders": ["independent-other"]
+    }
+  ],
+  "affiliations": [
+    {
+      "affiliation_id": "provision",
+      "name": "ProVision",
+      "status": "planned",
+      "description": "Member affiliation retained separately from the consumer-facing store banner."
+    }
+  ]
+}

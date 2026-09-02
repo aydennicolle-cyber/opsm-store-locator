@@ -22,12 +22,18 @@ REVIEW_PATH = DATA / "place_review.csv"
 STORE_HEALTH_PATH = DATA / "store_certification.csv"
 HEALTH_PATH = DATA / "data_health.json"
 PROPERTY_INTELLIGENCE_PATH = DATA / "property_intelligence.json"
-NAMED_RETAILERS = {"OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee"}
+NAMED_RETAILERS = {
+    "OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee",
+    "George & Matilda", "Eyecare Plus", "Optical Superstore",
+}
 FRESHNESS_KEYS = {
     "opsm-au": "OPSM Australia", "opsm-nz": "OPSM New Zealand",
     "specsavers-au": "Specsavers Australia", "specsavers-nz": "Specsavers New Zealand",
     "bailey-nelson-au": "Bailey Nelson Australia", "bailey-nelson-nz": "Bailey Nelson New Zealand",
     "oscar-wylee-au": "Oscar Wylee Australia", "oscar-wylee-nz": "Oscar Wylee New Zealand",
+    "george-and-matilda-au": "George & Matilda Australia",
+    "eyecare-plus-au": "Eyecare Plus Australia",
+    "optical-superstore-au": "Optical Superstore Australia",
     "osm-opticians": "Independent / Other optical",
 }
 
@@ -108,7 +114,11 @@ def source_id_for_store(store: dict) -> str:
     country = "nz" if store["country"] == "New Zealand" else "au"
     if store["retailer"] == "Independent / Other optical":
         return "osm-opticians"
-    retailer = {"OPSM": "opsm", "Specsavers": "specsavers", "Bailey Nelson": "bailey-nelson", "Oscar Wylee": "oscar-wylee"}[store["retailer"]]
+    retailer = {
+        "OPSM": "opsm", "Specsavers": "specsavers", "Bailey Nelson": "bailey-nelson",
+        "Oscar Wylee": "oscar-wylee", "George & Matilda": "george-and-matilda",
+        "Eyecare Plus": "eyecare-plus", "Optical Superstore": "optical-superstore",
+    }[store["retailer"]]
     return f"{retailer}-{country}"
 
 

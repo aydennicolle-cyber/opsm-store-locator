@@ -90,30 +90,24 @@ class OpticalNetworkTests(unittest.TestCase):
         self.assertEqual(self.geojson["metadata"]["store_count"], len(self.rows))
 
     def test_retailer_counts(self) -> None:
+        registry = json.loads((ROOT / "data" / "retailer_registry.json").read_text(encoding="utf-8"))["retailers"]
         counts = {
-            retailer: sum(row["retailer"] == retailer for row in self.rows)
-            for retailer in (
-                "OPSM",
-                "Specsavers",
-                "Bailey Nelson",
-                "Oscar Wylee",
-                "Independent / Other optical",
-            )
-        }
-        source_folders = {
-            "OPSM": ("opsm", "opsm-nz"),
-            "Specsavers": ("specsavers", "specsavers-nz"),
-            "Bailey Nelson": ("bailey-nelson", "bailey-nelson-nz"),
-            "Oscar Wylee": ("oscar-wylee", "oscar-wylee-nz"),
-            "Independent / Other optical": ("independent-other",),
+            item["name"]: sum(row["retailer"] == item["name"] for row in self.rows)
+            for item in registry
         }
         expected = {}
-        for retailer, folders in source_folders.items():
+        for item in registry:
             total = 0
-            for folder in folders:
+            for folder in item["source_folders"]:
                 with (ROOT / "retailers" / folder / "stores.csv").open(newline="", encoding="utf-8") as handle:
                     total += sum(1 for _ in csv.DictReader(handle))
-            expected[retailer] = total
+            expected[item["name"]] = total
+        with (ROOT / "data" / "store_identity_remaps.csv").open(newline="", encoding="utf-8") as handle:
+            remaps = list(csv.DictReader(handle))
+        for remap in remaps:
+            source = remap["source_store_id"]
+            retailer = next(item for item in registry if source.startswith(f"{item['slug']}-"))
+            expected[retailer["name"]] -= 1
         self.assertEqual(counts, expected)
         countries = {country: sum(row["country"] == country for row in self.rows) for country in ("Australia", "New Zealand")}
         self.assertEqual(sum(countries.values()), len(self.rows))
@@ -122,6 +116,21 @@ class OpticalNetworkTests(unittest.TestCase):
         ]
         self.assertEqual(len(bailey_nz), 14)
         self.assertTrue(all(row["status"] == "Active" for row in bailey_nz))
+
+    def test_retailer_registry_and_identity_remaps(self) -> None:
+        registry = json.loads((ROOT / "data" / "retailer_registry.json").read_text(encoding="utf-8"))["retailers"]
+        names = [item["name"] for item in registry]
+        self.assertEqual(len(names), len(set(names)))
+        self.assertTrue({"George & Matilda", "Eyecare Plus", "Optical Superstore"}.issubset(names))
+        additional = [item for item in registry if item["network_type"] == "additional"]
+        self.assertTrue(all(not item["default_visible"] for item in additional))
+        self.assertTrue(all(item["min_marker_zoom"] >= 8 for item in additional))
+        ids = {row["store_id"] for row in self.rows}
+        with (ROOT / "data" / "store_identity_remaps.csv").open(newline="", encoding="utf-8") as handle:
+            remaps = list(csv.DictReader(handle))
+        self.assertTrue(remaps)
+        self.assertTrue(all(row["source_store_id"] not in ids for row in remaps))
+        self.assertTrue(all(row["canonical_store_id"] in ids for row in remaps))
 
     def test_ids_states_coordinates_and_sources(self) -> None:
         ids = [row["store_id"] for row in self.rows]

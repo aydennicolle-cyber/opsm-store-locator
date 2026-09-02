@@ -12,17 +12,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-NAMED = {"OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee"}
-NAMED_SOURCE_FOLDERS = (
-    "opsm",
-    "opsm-nz",
-    "specsavers",
-    "specsavers-nz",
-    "bailey-nelson",
-    "bailey-nelson-nz",
-    "oscar-wylee",
-    "oscar-wylee-nz",
-)
+REGISTRY = json.loads((DATA / "retailer_registry.json").read_text(encoding="utf-8"))["retailers"]
+NAMED = {item["name"] for item in REGISTRY if item["is_named_network"]}
 
 
 def read_csv(name: str) -> list[dict]:
@@ -32,9 +23,16 @@ def read_csv(name: str) -> list[dict]:
 
 def named_source_count() -> int:
     total = 0
-    for folder in NAMED_SOURCE_FOLDERS:
-        with (ROOT / "retailers" / folder / "stores.csv").open(newline="", encoding="utf-8") as handle:
-            total += sum(1 for _ in csv.DictReader(handle))
+    for item in REGISTRY:
+        if not item["is_named_network"]:
+            continue
+        for folder in item["source_folders"]:
+            with (ROOT / "retailers" / folder / "stores.csv").open(newline="", encoding="utf-8") as handle:
+                total += sum(1 for _ in csv.DictReader(handle))
+    with (DATA / "store_identity_remaps.csv").open(newline="", encoding="utf-8") as handle:
+        for remap in csv.DictReader(handle):
+            if any(remap["source_store_id"].startswith(f"{item['slug']}-") and item["is_named_network"] for item in REGISTRY):
+                total -= 1
     return total
 
 
@@ -220,7 +218,8 @@ class RetailPlaceTests(unittest.TestCase):
             with self.subTest(place_id=place_id):
                 self.assertEqual(places[place_id]["name"], name)
                 self.assertEqual(places[place_id]["address"], address)
-                self.assertEqual(places[place_id]["retailers"], ["Specsavers"])
+                required = {"Specsavers", "Optical Superstore"} if place_id == "place-au-qld-taigum-square" else {"Specsavers"}
+                self.assertTrue(required.issubset(places[place_id]["retailers"]))
         self.assertIn(
             "Oasis Shopping Centre",
             places["place-au-nt-oasis-shopping-centre"]["aliases"],
@@ -240,7 +239,8 @@ class RetailPlaceTests(unittest.TestCase):
             with self.subTest(place_id=place_id):
                 self.assertEqual(places[place_id]["name"], name)
                 self.assertEqual(places[place_id]["address"], address)
-                self.assertEqual(places[place_id]["retailers"], ["Specsavers"])
+                required = {"Specsavers", "Optical Superstore"} if place_id == "place-au-qld-castletown-shoppingworld" else {"Specsavers"}
+                self.assertTrue(required.issubset(places[place_id]["retailers"]))
         self.assertIn(
             "Castletown Shoppingworld",
             places["place-au-qld-castletown-shoppingworld"]["aliases"],
@@ -591,8 +591,8 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(sunshine["postcode"], "4558")
 
         expected_members = {
-            "place-au-qld-logan-hyperdome": {"opsm-1562", "oscar-wylee-27", "specsavers-3302"},
-            "place-au-qld-sunshine-plaza": {"opsm-1263", "oscar-wylee-51", "specsavers-3201"},
+            "place-au-qld-logan-hyperdome": {"opsm-1562", "oscar-wylee-27", "specsavers-3302", "optical-superstore-60505"},
+            "place-au-qld-sunshine-plaza": {"opsm-1263", "oscar-wylee-51", "specsavers-3201", "george-matilda-17206"},
         }
         for place_id, store_ids in expected_members.items():
             with self.subTest(place_id=place_id):

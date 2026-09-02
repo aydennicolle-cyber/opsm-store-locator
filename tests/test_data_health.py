@@ -11,23 +11,22 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-NAMED_SOURCE_FOLDERS = (
-    "opsm",
-    "opsm-nz",
-    "specsavers",
-    "specsavers-nz",
-    "bailey-nelson",
-    "bailey-nelson-nz",
-    "oscar-wylee",
-    "oscar-wylee-nz",
-)
+REGISTRY = json.loads((ROOT / "data" / "retailer_registry.json").read_text(encoding="utf-8"))["retailers"]
+NAMED = {item["name"] for item in REGISTRY if item["is_named_network"]}
 
 
 def named_source_count() -> int:
     total = 0
-    for folder in NAMED_SOURCE_FOLDERS:
-        with (ROOT / "retailers" / folder / "stores.csv").open(newline="", encoding="utf-8") as handle:
-            total += sum(1 for _ in csv.DictReader(handle))
+    for item in REGISTRY:
+        if not item["is_named_network"]:
+            continue
+        for folder in item["source_folders"]:
+            with (ROOT / "retailers" / folder / "stores.csv").open(newline="", encoding="utf-8") as handle:
+                total += sum(1 for _ in csv.DictReader(handle))
+    with (DATA / "store_identity_remaps.csv").open(newline="", encoding="utf-8") as handle:
+        for remap in csv.DictReader(handle):
+            if any(remap["source_store_id"].startswith(f"{item['slug']}-") and item["is_named_network"] for item in REGISTRY):
+                total -= 1
     return total
 
 
@@ -64,7 +63,7 @@ class DataHealthTests(unittest.TestCase):
         for row in self.certification:
             self.assertIn(row["operational_status"], {"Usable", "Needs review", "Limited"})
             self.assertIn(row["location_setting"], {"Shopping Centre", "High Street", "Other", "Uncertain"})
-        named = [row for row in self.certification if row["retailer"] in {"OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee"}]
+        named = [row for row in self.certification if row["retailer"] in NAMED]
         self.assertEqual(len(named), named_source_count())
         self.assertTrue(all(row["usable_for_network"] == "true" for row in named))
 

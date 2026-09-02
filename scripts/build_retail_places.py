@@ -35,7 +35,10 @@ REMAPS_PATH = DATA / "place_id_remaps.csv"
 EXCEPTIONS_PATH = DATA / "place_review.csv"
 LOOKALIKES_PATH = DATA / "lookalike_places.json"
 
-NAMED_RETAILERS = {"OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee"}
+NAMED_RETAILERS = {
+    "OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee",
+    "George & Matilda", "Eyecare Plus", "Optical Superstore",
+}
 SOURCE_DISAGREEMENTS = {}
 GENERIC_PLACE_WORDS = {
     "shopping", "centre", "center", "mall", "plaza", "marketplace", "town", "city",
@@ -51,6 +54,7 @@ STREET_TYPES = {
     "pde": "Parade", "parade": "Parade", "ln": "Lane", "lane": "Lane", "way": "Way",
     "blvd": "Boulevard", "boulevard": "Boulevard", "tce": "Terrace", "terrace": "Terrace",
     "cres": "Crescent", "crescent": "Crescent", "esplanade": "Esplanade", "mall": "Mall",
+    "pl": "Place", "place": "Place", "walk": "Walk",
 }
 MEMBERSHIP_FIELDS = [
     "store_id", "retailer", "country", "state", "store_name", "place_id", "place_name",
@@ -76,6 +80,22 @@ def apply_place_consolidations(places: list[dict], old_to_new: dict[str, str]) -
         if not previous or not canonical or previous == canonical:
             raise ValueError(f"Invalid place consolidation: {row}")
         source, target = by_id.get(previous), by_id.get(canonical)
+        if not source and target:
+            # A broader refreshed store set can make the normaliser collapse an
+            # already-reviewed alias before this explicit remap is applied.
+            # Preserve the historical remap even though no second entity remains.
+            remaps[previous] = canonical
+            continue
+        if source and not target:
+            # The refreshed cluster may already contain every alias while
+            # choosing a non-canonical generated name. Preserve the reviewed
+            # canonical ID by renaming that single merged entity in place.
+            source["place_id"] = canonical
+            source["centre_id"] = canonical
+            by_id.pop(previous)
+            by_id[canonical] = source
+            remaps[previous] = canonical
+            continue
         if not source or not target:
             raise ValueError(f"Unknown place consolidation target: {previous} -> {canonical}")
         if source.get("country") != target.get("country") or source.get("location_setting") != target.get("location_setting"):
@@ -99,14 +119,47 @@ def apply_place_consolidations(places: list[dict], old_to_new: dict[str, str]) -
     return remaps
 
 
-def apply_canonical_place_overrides(places: list[dict]) -> None:
+def apply_canonical_place_overrides(places: list[dict], old_to_new: dict[str, str]) -> None:
     """Apply evidenced current public names while preserving stable canonical IDs."""
     by_id = {place["place_id"]: place for place in places}
     for row in read_csv(CANONICAL_OVERRIDES_PATH):
         place_id = row.get("place_id", "").strip()
         place = by_id.get(place_id)
         if not place:
-            raise ValueError(f"Unknown canonical place override: {place_id}")
+            current_name = clean_name(row.get("canonical_name", ""))
+            expected_state = row.get("state", "").strip()
+            override_names = {
+                current_name,
+                *(clean_name(alias) for alias in (row.get("aliases") or "").split("|") if clean_name(alias)),
+            }
+            candidates = [
+                item for item in places
+                if clean_name(item.get("name", "")) in override_names
+                and (not expected_state or item.get("state") == expected_state)
+            ]
+            if not candidates:
+                candidates = [
+                    item for item in places
+                    if (not expected_state or item.get("state") == expected_state)
+                    and any(
+                        name_tokens
+                        and len(tokens(item.get("name", "")) & name_tokens)
+                        / max(1, min(len(tokens(item.get("name", ""))), len(name_tokens))) >= 0.8
+                        for name_tokens in (tokens(name) for name in override_names)
+                    )
+                ]
+            if len(candidates) != 1:
+                raise ValueError(f"Unknown canonical place override: {place_id}")
+            place = candidates[0]
+            generated_id = place["place_id"]
+            place["place_id"] = place_id
+            place["centre_id"] = place_id
+            by_id.pop(generated_id)
+            by_id[place_id] = place
+            for previous, canonical in list(old_to_new.items()):
+                if canonical == generated_id:
+                    old_to_new[previous] = place_id
+            old_to_new[generated_id] = place_id
         current_name = clean_name(row.get("canonical_name", ""))
         evidence_url = row.get("evidence_url", "").strip()
         verified_at = row.get("verified_at", "").strip()
@@ -440,7 +493,7 @@ def add_broad_osm_centres(places: list[dict]) -> None:
 
 def parse_street(address: str) -> str:
     matches = re.findall(
-        r"\b([A-Za-zÀ-ž][A-Za-zÀ-ž' .&-]{1,55}?)\s+(Road|Rd|Street|St|Avenue|Ave|Drive|Dr|Highway|Hwy|Parade|Pde|Lane|Ln|Way|Boulevard|Blvd|Terrace|Tce|Crescent|Cres|Esplanade|Mall)\b",
+        r"\b([A-Za-zÀ-ž][A-Za-zÀ-ž' .&-]{1,55}?)\s+(Road|Rd|Street|St|Avenue|Ave|Drive|Dr|Highway|Hwy|Parade|Pde|Lane|Ln|Way|Boulevard|Blvd|Terrace|Tce|Crescent|Cres|Esplanade|Mall|Place|Pl|Walk)\b",
         str(address),
         flags=re.I,
     )
@@ -496,6 +549,92 @@ def create_place_from_override(store: dict, override: dict) -> dict:
         "optical_store_count": 0,
         "old_centre_ids": [],
     }
+
+
+def promote_store_named_centres(
+    stores: list[dict], places: list[dict], old_to_new: dict[str, str]
+) -> None:
+    """Promote explicit centre names from official retailer address evidence.
+
+    This uses named-address evidence only. Coordinates locate the resulting
+    record but never establish membership by proximity.
+    """
+    for store in sorted(stores, key=lambda row: (row["country"], row["state"], row["suburb"], row["name"])):
+        venue_id = store.get("venue_id", "").strip()
+        venue_name = clean_name(store.get("venue_name", ""))
+        if store.get("location_type") != "Shopping Centre" or not venue_id or not venue_name:
+            continue
+        if venue_id in old_to_new:
+            continue
+        normalized_name = slug(venue_name)
+        normalized_locality = slug(store.get("suburb", ""))
+        existing = next(
+            (
+                place for place in places
+                if place.get("location_setting") == "Shopping Centre"
+                and place.get("country") == store["country"]
+                and place.get("state") == store["state"]
+                and normalized_name in {
+                    slug(place.get("name", "")),
+                    *(slug(alias) for alias in place.get("aliases", [])),
+                }
+                and (
+                    not normalized_locality
+                    or not slug(place.get("locality") or place.get("suburb", ""))
+                    or slug(place.get("locality") or place.get("suburb", "")) == normalized_locality
+                )
+            ),
+            None,
+        )
+        if existing:
+            if venue_id not in existing["old_centre_ids"]:
+                existing["old_centre_ids"].append(venue_id)
+            old_to_new[venue_id] = existing["place_id"]
+            continue
+
+        place_id = centre_place_id(store["country"], store["state"], venue_name)
+        collision = next((place for place in places if place["place_id"] == place_id), None)
+        if collision:
+            place_id = centre_place_id(
+                store["country"], store["state"], f"{venue_name} {store.get('suburb', '')}"
+            )
+        place = {
+            "place_id": place_id,
+            "centre_id": place_id,
+            "name": venue_name,
+            "canonical_name": venue_name,
+            "aliases": [],
+            "place_type": "Shopping Centre",
+            "location_setting": "Shopping Centre",
+            "country": store["country"],
+            "state": store["state"],
+            "locality": store.get("suburb", ""),
+            "suburb": store.get("suburb", ""),
+            "postcode": store.get("postcode", ""),
+            "address": store.get("full_address", ""),
+            "latitude": float(store["latitude"]),
+            "longitude": float(store["longitude"]),
+            "owner": "",
+            "manager": "",
+            "centre_type": "",
+            "gla_sqm": "",
+            "annual_visits": "",
+            "trade_area_population": "",
+            "anchors": [],
+            "tenancy_count": "",
+            "redevelopment_activity": "",
+            "official_url": store.get("official_url", ""),
+            "source_url": store.get("source_url") or store.get("official_url", ""),
+            "source_date": store.get("fetched_at", "")[:10],
+            "status": "Active",
+            "confidence": "High",
+            "source_basis": "Official retailer locator explicitly names this shopping centre in the store address",
+            "retailers": [],
+            "optical_store_count": 0,
+            "old_centre_ids": [venue_id],
+        }
+        places.append(place)
+        old_to_new[venue_id] = place_id
 
 
 def main() -> None:
@@ -558,7 +697,8 @@ def main() -> None:
     add_broad_osm_centres(places)
     add_official_retail_places(places)
     consolidation_remaps = apply_place_consolidations(places, old_to_new)
-    apply_canonical_place_overrides(places)
+    apply_canonical_place_overrides(places, old_to_new)
+    promote_store_named_centres(stores, places, old_to_new)
     for override in overrides.values():
         if override.get("place_id") in consolidation_remaps:
             override["place_id"] = consolidation_remaps[override["place_id"]]
