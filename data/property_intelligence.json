@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T02:20:58.013463+00:00",
+  "generated_at": "2026-09-02T02:26:48.565746+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 76,
-    "relationship_count": 637,
-    "active_relationship_count": 635,
+    "group_count": 77,
+    "relationship_count": 648,
+    "active_relationship_count": 646,
     "shopping_centre_count": 587,
-    "researched_property_count": 206,
-    "classed_property_count": 196,
+    "researched_property_count": 209,
+    "classed_property_count": 199,
     "conflict_count": 0,
     "unknown_is_valid": true,
     "relationship_derivation_note": "Official property or portfolio domains may establish a group role. Geographic proximity never establishes property membership or a group relationship.",
@@ -1292,6 +1292,25 @@
         "RP2",
         "Retail Partnership No2"
       ]
+    },
+    {
+      "group_id": "group-bachrach-naumburger",
+      "canonical_name": "Bachrach Naumburger Group",
+      "parent_group_id": "",
+      "brand_name": "BNG Property",
+      "group_type": "PROPERTY_COMPANY",
+      "country_scope": "Australia",
+      "official_url": "https://bngproperty.com.au/",
+      "status": "Active",
+      "source_url": "https://www.parkbeachplaza.com.au/privacy-policy/",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "aliases": [
+        "Bachrach Naumburger Group",
+        "BNG Property",
+        "BNG",
+        "H.A. Bachrach (Nom) Pty Ltd"
+      ]
     }
   ],
   "group_alias_index": {
@@ -1430,7 +1449,11 @@
     "mintusinvestments4ptyltd": "group-mintus-ashfield-trust",
     "theretailinvestmenttrust8": "group-mintus-ashfield-trust",
     "retailpartnershipno2": "group-charter-hall-rp2",
-    "rp2": "group-charter-hall-rp2"
+    "rp2": "group-charter-hall-rp2",
+    "bachrachnaumburgergroup": "group-bachrach-naumburger",
+    "bngproperty": "group-bachrach-naumburger",
+    "bng": "group-bachrach-naumburger",
+    "habachrachnomptyltd": "group-bachrach-naumburger"
   },
   "group_id_remaps": [],
   "relationships": [
@@ -11625,6 +11648,182 @@
       "confidence": "High",
       "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
       "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-bng-park-beach-plaza-manager",
+      "place_id": "place-au-nsw-park-beach-plaza",
+      "group_id": "group-bachrach-naumburger",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.parkbeachplaza.com.au/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue and privacy pages identify Park Beach Plaza as a BNG shopping centre and provide a direct permanent leasing pathway; the legal owner is not asserted from this evidence",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-bng-park-beach-plaza-operator",
+      "place_id": "place-au-nsw-park-beach-plaza",
+      "group_id": "group-bachrach-naumburger",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.parkbeachplaza.com.au/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue and privacy pages identify Park Beach Plaza as a BNG shopping centre and provide a direct permanent leasing pathway; the legal owner is not asserted from this evidence",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-bng-park-beach-plaza-leasing_controller",
+      "place_id": "place-au-nsw-park-beach-plaza",
+      "group_id": "group-bachrach-naumburger",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.parkbeachplaza.com.au/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The venue and privacy pages identify Park Beach Plaza as a BNG shopping centre and provide a direct permanent leasing pathway; the legal owner is not asserted from this evidence",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-warriewood-square-owner",
+      "place_id": "place-au-nsw-warriewood-square",
+      "group_id": "group-vicinity",
+      "role": "OWNER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.warriewoodsquare.com.au/centre-info/leasing",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that Warriewood Square is proudly owned and managed by Vicinity and publishes a direct Vicinity leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-warriewood-square-manager",
+      "place_id": "place-au-nsw-warriewood-square",
+      "group_id": "group-vicinity",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.warriewoodsquare.com.au/centre-info/leasing",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that Warriewood Square is proudly owned and managed by Vicinity and publishes a direct Vicinity leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-warriewood-square-operator",
+      "place_id": "place-au-nsw-warriewood-square",
+      "group_id": "group-vicinity",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.warriewoodsquare.com.au/centre-info/leasing",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that Warriewood Square is proudly owned and managed by Vicinity and publishes a direct Vicinity leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-vicinity-warriewood-square-leasing_controller",
+      "place_id": "place-au-nsw-warriewood-square",
+      "group_id": "group-vicinity",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.warriewoodsquare.com.au/centre-info/leasing",
+      "source_type": "Official current owner manager and leasing profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "The current venue states that Warriewood Square is proudly owned and managed by Vicinity and publishes a direct Vicinity leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-cqr-singleton-square-owner",
+      "place_id": "place-au-nsw-singleton-square",
+      "group_id": "group-charter-hall-retail-reit",
+      "role": "OWNER",
+      "ownership_percentage": 100.0,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Singleton-Square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall reports 100 percent ownership by CQR",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-singleton-square-manager",
+      "place_id": "place-au-nsw-singleton-square",
+      "group_id": "group-charter-hall",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Singleton-Square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-singleton-square-operator",
+      "place_id": "place-au-nsw-singleton-square",
+      "group_id": "group-charter-hall",
+      "role": "OPERATOR",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Singleton-Square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
+      "derived_from": "official_portfolio_asset"
+    },
+    {
+      "relationship_id": "rel-portfolio-charter-hall-singleton-square-leasing_controller",
+      "place_id": "place-au-nsw-singleton-square",
+      "group_id": "group-charter-hall",
+      "role": "LEASING_CONTROLLER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Singleton-Square",
+      "source_type": "Official current owner and manager property profile",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
+      "derived_from": "official_portfolio_asset"
     }
   ],
   "portfolio_assets": [
@@ -17630,6 +17829,98 @@
       "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
       "match_status": "Matched",
       "matched_place_id": "place-au-nsw-bateau-bay-square"
+    },
+    {
+      "portfolio_asset_id": "bng-park-beach-plaza",
+      "group_id": "group-bachrach-naumburger",
+      "canonical_name": "Park Beach Plaza",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-park-beach-plaza",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "42662.88",
+      "tenancy_count": "120",
+      "annual_visits_m": "5",
+      "source_url": "https://www.parkbeachplaza.com.au/leasing/",
+      "source_type": "Official current venue management and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The venue and privacy pages identify Park Beach Plaza as a BNG shopping centre and provide a direct permanent leasing pathway; the legal owner is not asserted from this evidence",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-park-beach-plaza"
+    },
+    {
+      "portfolio_asset_id": "vicinity-warriewood-square",
+      "group_id": "group-vicinity",
+      "canonical_name": "Warriewood Square",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-warriewood-square",
+      "roles": "OWNER|MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "30000",
+      "tenancy_count": "100",
+      "annual_visits_m": "",
+      "source_url": "https://www.warriewoodsquare.com.au/centre-info/leasing",
+      "source_type": "Official current owner manager and leasing profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "The current venue states that Warriewood Square is proudly owned and managed by Vicinity and publishes a direct Vicinity leasing pathway",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-warriewood-square"
+    },
+    {
+      "portfolio_asset_id": "cqr-singleton-square",
+      "group_id": "group-charter-hall-retail-reit",
+      "canonical_name": "Singleton Square",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-singleton-square",
+      "roles": "OWNER",
+      "ownership_percentage": "100",
+      "gla_sqm": "20646",
+      "tenancy_count": "48",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Singleton-Square",
+      "source_type": "Official current owner and manager property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall reports 100 percent ownership by CQR",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-singleton-square"
+    },
+    {
+      "portfolio_asset_id": "charter-hall-singleton-square",
+      "group_id": "group-charter-hall",
+      "canonical_name": "Singleton Square",
+      "country": "Australia",
+      "state": "NSW",
+      "aliases": "",
+      "preferred_place_id": "place-au-nsw-singleton-square",
+      "roles": "MANAGER|OPERATOR|LEASING_CONTROLLER",
+      "ownership_percentage": "",
+      "gla_sqm": "20646",
+      "tenancy_count": "48",
+      "annual_visits_m": "",
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Singleton-Square",
+      "source_type": "Official current owner and manager property profile",
+      "source_date": "2026-09-02",
+      "last_verified_at": "2026-09-02",
+      "confidence": "High",
+      "status": "ACTIVE",
+      "public_note": "Charter Hall publishes the current asset profile and direct permanent leasing pathway",
+      "match_status": "Matched",
+      "matched_place_id": "place-au-nsw-singleton-square"
     }
   ],
   "property_summaries": {
@@ -42505,32 +42796,40 @@
     },
     "place-au-nsw-park-beach-plaza": {
       "place_id": "place-au-nsw-park-beach-plaza",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Regional",
+      "centre_class_method": "Inferred",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-park-beach-plaza",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Regional",
+        "classification_method": "Inferred",
+        "source_url": "https://www.parkbeachplaza.com.au/wp-content/uploads/2024/12/Park-Beach-Plaza_Fact-Sheet_DEC-2024.pdf",
+        "source_type": "Official venue fact sheet and current leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "Medium",
+        "public_note": "Regional format inferred from the official 42662 square metres of GLA five major anchors 120 specialty stores and broad regional trade area"
       },
-      "research_status": "Not researched",
+      "research_status": "Partial",
       "research_evidence": {
         "place_id": "place-au-nsw-park-beach-plaza",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Partial",
+        "source_url": "https://www.parkbeachplaza.com.au/privacy-policy/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Official venue pages confirm Bachrach Naumburger Group management operations and direct leasing; the legal owner remains unidentified"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-bng-park-beach-plaza-manager",
+        "rel-portfolio-bng-park-beach-plaza-operator",
+        "rel-portfolio-bng-park-beach-plaza-leasing_controller"
+      ],
+      "group_ids": [
+        "group-bachrach-naumburger"
+      ],
       "owner_names": [],
-      "manager_names": [],
+      "manager_names": [
+        "Bachrach Naumburger Group"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
       "portfolio_overlap_status": "UNKNOWN",
@@ -42590,7 +42889,12 @@
         "median_household_income": 808,
         "age_45_plus_pct": 47,
         "retail_businesses": 87
-      }
+      },
+      "gla_sqm": 42662.88,
+      "tenancy_count": 120,
+      "annual_visits": 5000000.0,
+      "source_url": "https://www.parkbeachplaza.com.au/leasing/",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-parramatta-westfield": {
       "place_id": "place-au-nsw-parramatta-westfield",
@@ -44097,35 +44401,47 @@
     },
     "place-au-nsw-singleton-square": {
       "place_id": "place-au-nsw-singleton-square",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-singleton-square",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Singleton-Square",
+        "source_type": "Official current owner and manager property profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Charter Hall explicitly describes Singleton Square as a convenience-based sub-regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-singleton-square",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Singleton-Square",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Charter Hall confirms 100 percent CQR ownership current management and direct permanent leasing control"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-cqr-singleton-square-owner",
+        "rel-portfolio-charter-hall-singleton-square-manager",
+        "rel-portfolio-charter-hall-singleton-square-operator",
+        "rel-portfolio-charter-hall-singleton-square-leasing_controller"
+      ],
+      "group_ids": [
+        "group-charter-hall",
+        "group-charter-hall-retail-reit"
+      ],
+      "owner_names": [
+        "Charter Hall Retail REIT"
+      ],
+      "manager_names": [
+        "Charter Hall"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_status": "NO_KNOWN_OVERLAP",
       "portfolio_overlap_groups": [],
       "portfolio_white_space": false,
       "nearest_bailey_km": 45.55,
@@ -44171,7 +44487,11 @@
         "median_household_income": 1138,
         "age_45_plus_pct": 37.3,
         "retail_businesses": 59
-      }
+      },
+      "gla_sqm": 20646.0,
+      "tenancy_count": 48,
+      "source_url": "https://www.charterhall.com.au/property/property-detail/Singleton-Square",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-southgate-shopping-centre": {
       "place_id": "place-au-nsw-southgate-shopping-centre",
@@ -46373,37 +46693,77 @@
     },
     "place-au-nsw-warriewood-square": {
       "place_id": "place-au-nsw-warriewood-square",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
       "centre_class_evidence": {
         "place_id": "place-au-nsw-warriewood-square",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.warriewoodsquare.com.au/centre-info/leasing",
+        "source_type": "Official current owner manager and leasing profile",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The official venue explicitly describes Warriewood Square as a sub-regional shopping centre"
       },
-      "research_status": "Not researched",
+      "research_status": "Verified",
       "research_evidence": {
         "place_id": "place-au-nsw-warriewood-square",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
+        "research_status": "Verified",
+        "source_url": "https://www.warriewoodsquare.com.au/centre-info/leasing",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The current venue confirms Vicinity ownership management operations and direct leasing control"
       },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
+      "leasing_arrangement": "In-house",
+      "relationship_ids": [
+        "rel-portfolio-vicinity-warriewood-square-owner",
+        "rel-portfolio-vicinity-warriewood-square-manager",
+        "rel-portfolio-vicinity-warriewood-square-operator",
+        "rel-portfolio-vicinity-warriewood-square-leasing_controller"
+      ],
+      "group_ids": [
+        "group-vicinity"
+      ],
+      "owner_names": [
+        "Vicinity Centres"
+      ],
+      "manager_names": [
+        "Vicinity Centres"
+      ],
       "has_bailey": false,
       "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
+      "portfolio_overlap_status": "LEASING_CONTROLLER_OVERLAP",
+      "portfolio_overlap_groups": [
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "LEASING_CONTROLLER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "OWNER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "MANAGER",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        },
+        {
+          "group_id": "group-vicinity",
+          "canonical_name": "Vicinity Centres",
+          "role": "OPERATOR",
+          "bailey_property_count": 5,
+          "bailey_store_count": 5
+        }
+      ],
+      "portfolio_white_space": true,
       "nearest_bailey_km": 8.37,
       "competitor_context": {
         "by_retailer": {
@@ -46447,7 +46807,11 @@
         "median_household_income": 1485,
         "age_45_plus_pct": 42.7,
         "retail_businesses": 64
-      }
+      },
+      "gla_sqm": 30000.0,
+      "tenancy_count": 100,
+      "source_url": "https://www.warriewoodsquare.com.au/centre-info/leasing",
+      "last_verified_at": "2026-09-02"
     },
     "place-au-nsw-westfield-burwood": {
       "place_id": "place-au-nsw-westfield-burwood",
@@ -110179,7 +110543,7 @@
     },
     "group-vicinity": {
       "group_id": "group-vicinity",
-      "property_count": 20,
+      "property_count": 21,
       "bailey_property_count": 5,
       "bailey_store_count": 5,
       "bailey_property_ids": [
@@ -110203,6 +110567,12 @@
           "OWNER"
         ],
         "place-au-nsw-nepean-village": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR",
+          "OWNER"
+        ],
+        "place-au-nsw-warriewood-square": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR",
@@ -110305,6 +110675,7 @@
         "place-au-nsw-bankstown-central",
         "place-au-nsw-chatswood-chase",
         "place-au-nsw-nepean-village",
+        "place-au-nsw-warriewood-square",
         "place-au-qld-browns-plains-grand-plaza-shopping-centre",
         "place-au-sa-edwardstown-castle-plaza-shopping-centre",
         "place-au-sa-elizabeth-shopping-centre",
@@ -110865,7 +111236,7 @@
     },
     "group-charter-hall": {
       "group_id": "group-charter-hall",
-      "property_count": 3,
+      "property_count": 4,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -110881,6 +111252,11 @@
           "OPERATOR"
         ],
         "place-au-nsw-orange-central-square": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
+        ],
+        "place-au-nsw-singleton-square": [
           "LEASING_CONTROLLER",
           "MANAGER",
           "OPERATOR"
@@ -111825,7 +112201,7 @@
     },
     "group-charter-hall-retail-reit": {
       "group_id": "group-charter-hall-retail-reit",
-      "property_count": 2,
+      "property_count": 3,
       "bailey_property_count": 0,
       "bailey_store_count": 0,
       "bailey_property_ids": [],
@@ -111834,6 +112210,9 @@
           "OWNER"
         ],
         "place-au-nsw-orange-central-square": [
+          "OWNER"
+        ],
+        "place-au-nsw-singleton-square": [
           "OWNER"
         ]
       },
@@ -112026,6 +112405,21 @@
       "asset_roles": {
         "place-au-nsw-bateau-bay-square": [
           "OWNER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-bachrach-naumburger": {
+      "group_id": "group-bachrach-naumburger",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-nsw-park-beach-plaza": [
+          "LEASING_CONTROLLER",
+          "MANAGER",
+          "OPERATOR"
         ]
       },
       "white_space_property_ids": []
@@ -126781,7 +127175,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Regional"
         }
       },
       "accessibility": {
@@ -126795,10 +127189,12 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 188.34,
-          "group_ids": [],
+          "group_ids": [
+            "group-bachrach-naumburger"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -127548,7 +127944,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -127562,11 +127958,14 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 45.55,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-charter-hall",
+            "group-charter-hall-retail-reit"
+          ],
+          "overlap_status": "NO_KNOWN_OVERLAP"
         }
       }
     },
@@ -128678,7 +129077,7 @@
         "availability": "Partial",
         "values": {
           "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
+          "centre_class": "Sub-regional"
         }
       },
       "accessibility": {
@@ -128692,11 +129091,13 @@
         }
       },
       "portfolio": {
-        "availability": "Not researched",
+        "availability": "Available",
         "values": {
           "nearest_bailey_km": 8.37,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
+          "group_ids": [
+            "group-vicinity"
+          ],
+          "overlap_status": "LEASING_CONTROLLER_OVERLAP"
         }
       }
     },

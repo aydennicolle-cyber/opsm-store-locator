@@ -486,6 +486,31 @@ class PropertyIntelligenceTests(unittest.TestCase):
                 self.assertEqual(summary["gla_sqm"], gla_sqm)
                 self.assertEqual(summary["tenancy_count"], tenancy_count)
 
+    def test_final_pre_release_centre_batch_preserves_evidenced_roles(self) -> None:
+        park_beach = self.payload["property_summaries"]["place-au-nsw-park-beach-plaza"]
+        self.assertEqual(park_beach["centre_class"], "Regional")
+        self.assertEqual(park_beach["owner_names"], [])
+        self.assertEqual(park_beach["manager_names"], ["Bachrach Naumburger Group"])
+        self.assertEqual(park_beach["leasing_arrangement"], "In-house")
+        self.assertEqual(park_beach["gla_sqm"], 42662.88)
+        self.assertEqual(park_beach["tenancy_count"], 120)
+
+        warriewood = self.payload["property_summaries"]["place-au-nsw-warriewood-square"]
+        self.assertEqual(warriewood["centre_class"], "Sub-regional")
+        self.assertEqual(warriewood["owner_names"], ["Vicinity Centres"])
+        self.assertEqual(warriewood["manager_names"], ["Vicinity Centres"])
+        self.assertEqual(warriewood["leasing_arrangement"], "In-house")
+        self.assertEqual(warriewood["gla_sqm"], 30000)
+        self.assertEqual(warriewood["tenancy_count"], 100)
+
+        singleton = self.payload["property_summaries"]["place-au-nsw-singleton-square"]
+        self.assertEqual(singleton["centre_class"], "Sub-regional")
+        self.assertEqual(singleton["owner_names"], ["Charter Hall Retail REIT"])
+        self.assertEqual(singleton["manager_names"], ["Charter Hall"])
+        self.assertEqual(singleton["leasing_arrangement"], "In-house")
+        self.assertEqual(singleton["gla_sqm"], 20646)
+        self.assertEqual(singleton["tenancy_count"], 48)
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})
