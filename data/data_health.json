@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-09-02T05:11:37+00:00",
+  "generated_at": "2026-09-02T05:17:14+00:00",
   "coverage_as_of": "2026-09-02",
   "certification_status": "Operational",
   "coverage_statement": "The network uses best-available public store data. Freshness, location setting and canonical place confidence are reported separately.",
@@ -14,13 +14,13 @@
     "usable_stores": 1126,
     "usable_named_network_stores": 1067,
     "current_named_network_stores": 1067,
-    "places": 1027,
-    "centres": 584,
+    "places": 1024,
+    "centres": 581,
     "corridors": 443
   },
   "changes_from_baseline": {
     "stores": -41,
-    "places": 633
+    "places": 630
   },
   "dimensions": {
     "source_freshness": 75.0,
@@ -82,7 +82,7 @@
     "Shopping Centre": 706
   },
   "place_types": {
-    "Shopping Centre": 584,
+    "Shopping Centre": 581,
     "High Street Corridor": 443
   },
   "sources": [
@@ -290,7 +290,7 @@
       "required": false,
       "snapshot": "data/property_intelligence.json",
       "completion_status": "partial",
-      "last_success": "2026-09-02T05:11:36.819120+00:00",
+      "last_success": "2026-09-02T05:17:13.990917+00:00",
       "age_days": 0,
       "max_age_days": 180,
       "available": true,
@@ -303,21 +303,21 @@
     "coverage_statement": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
     "portfolio_overlap_note": "Portfolio overlap is derived from public tenancy and property-group evidence; it is not proof of a private commercial relationship.",
     "dimensions": {
-      "research_coverage": 48.3,
+      "research_coverage": 48.7,
       "relationship_freshness": 99.9,
-      "centre_class_coverage": 47.6,
+      "centre_class_coverage": 48.0,
       "bailey_centre_research_coverage": 100.0,
       "bailey_centre_class_coverage": 100.0,
       "conflict_reconciliation": 100.0
     },
     "counts": {
-      "groups": 137,
-      "relationships": 943,
-      "current_relationships": 942,
+      "groups": 138,
+      "relationships": 946,
+      "current_relationships": 945,
       "stale_relationships": 1,
-      "shopping_centres": 584,
-      "researched_centres": 282,
-      "classed_centres": 278,
+      "shopping_centres": 581,
+      "researched_centres": 283,
+      "classed_centres": 279,
       "bailey_centres": 45,
       "researched_bailey_centres": 45,
       "classed_bailey_centres": 45,
@@ -10129,7 +10129,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-tas-rosny-park-eastlands-shopping-centre",
+      "place_id": "place-au-tas-hobart-eastlands",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -12923,7 +12923,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-melbourne-central-shopping-centre-ground-level",
+      "place_id": "place-au-vic-melbourne-central-shopping-centre",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -13165,7 +13165,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-cnr-centre-valley-rd-princes-dr",
+      "place_id": "place-au-vic-mid-valley-shopping-centre",
       "mapping_confidence": "High",
       "issues": ""
     },

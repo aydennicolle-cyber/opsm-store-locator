@@ -1383,6 +1383,49 @@ class PropertyIntelligenceTests(unittest.TestCase):
             "place-nz-auckland-silverdale-mall",
         }.isdisjoint(queued_place_ids))
 
+    def test_mid_valley_and_consolidated_tenant_context_are_explicit(self) -> None:
+        mid_valley = self.payload["property_summaries"]["place-au-vic-mid-valley-shopping-centre"]
+        self.assertEqual(mid_valley["research_status"], "Verified")
+        self.assertEqual(mid_valley["centre_class"], "Regional")
+        self.assertEqual(mid_valley["centre_class_method"], "Inferred")
+        self.assertEqual(mid_valley["owner_names"], ["Juilliard Corporation Pty Ltd"])
+        self.assertEqual(mid_valley["manager_names"], ["Juilliard Corporation Pty Ltd"])
+        self.assertEqual(mid_valley["leasing_arrangement"], "In-house")
+        mid_valley_roles = {
+            row["role"] for row in self.relationships
+            if row["place_id"] == "place-au-vic-mid-valley-shopping-centre"
+            and row["group_id"] == "group-juilliard"
+        }
+        self.assertEqual(mid_valley_roles, {"OWNER", "MANAGER", "LEASING_CONTROLLER"})
+        self.assertEqual(
+            len(mid_valley["competitor_context"]["by_retailer"]["OPSM"]["in_centre"]),
+            1,
+        )
+        self.assertEqual(
+            len(mid_valley["competitor_context"]["by_retailer"]["Specsavers"]["in_centre"]),
+            1,
+        )
+
+        eastlands = self.payload["property_summaries"]["place-au-tas-hobart-eastlands"]
+        self.assertEqual(
+            len(eastlands["competitor_context"]["by_retailer"]["Bailey Nelson"]["in_centre"]),
+            1,
+        )
+        self.assertEqual(
+            len(eastlands["competitor_context"]["by_retailer"]["Specsavers"]["in_centre"]),
+            1,
+        )
+
+        melbourne_central = self.payload["property_summaries"][
+            "place-au-vic-melbourne-central-shopping-centre"
+        ]
+        for retailer in ("Bailey Nelson", "OPSM", "Oscar Wylee", "Specsavers"):
+            with self.subTest(retailer=retailer):
+                self.assertEqual(
+                    len(melbourne_central["competitor_context"]["by_retailer"][retailer]["in_centre"]),
+                    1,
+                )
+
     def test_current_stockland_baringa_and_piccadilly_profiles_are_explicit(self) -> None:
         baringa = self.payload["property_summaries"][
             "place-au-qld-stockland-baringa-shopping-centre"

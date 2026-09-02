@@ -161,6 +161,45 @@ class RetailPlaceTests(unittest.TestCase):
             remaps,
         )
 
+    def test_eastlands_melbourne_central_and_mid_valley_duplicates_are_consolidated(self) -> None:
+        memberships = {row["store_id"]: row for row in self.memberships}
+        expected = {
+            "place-au-tas-hobart-eastlands": {
+                "bailey-nelson-hobart-eastlands",
+                "specsavers-3421",
+            },
+            "place-au-vic-melbourne-central-shopping-centre": {
+                "bailey-nelson-melbourne-cbd",
+                "opsm-1091",
+                "oscar-wylee-6",
+                "specsavers-3397",
+            },
+            "place-au-vic-mid-valley-shopping-centre": {
+                "opsm-1145",
+                "specsavers-3639",
+            },
+        }
+        for place_id, store_ids in expected.items():
+            with self.subTest(place_id=place_id):
+                self.assertEqual(
+                    {memberships[store_id]["place_id"] for store_id in store_ids},
+                    {place_id},
+                )
+
+        places = {place["place_id"]: place for place in self.places}
+        self.assertNotIn("place-au-tas-rosny-park-eastlands-shopping-centre", places)
+        self.assertNotIn("place-au-vic-melbourne-central-shopping-centre-ground-level", places)
+        self.assertNotIn("place-au-vic-cnr-centre-valley-rd-princes-dr", places)
+        self.assertEqual(places["place-au-tas-hobart-eastlands"]["name"], "Eastlands")
+        self.assertEqual(
+            places["place-au-vic-melbourne-central-shopping-centre"]["name"],
+            "Melbourne Central",
+        )
+        self.assertEqual(
+            set(places["place-au-vic-mid-valley-shopping-centre"]["retailers"]),
+            {"OPSM", "Specsavers"},
+        )
+
     def test_capalaba_park_duplicate_is_consolidated(self) -> None:
         expected_place_id = "place-au-qld-capalaba-park-shopping-centre"
         capalaba = [
