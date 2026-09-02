@@ -374,10 +374,10 @@
         .filter((item) => ["OWNER", "CO_OWNER", "MANAGER", "OPERATOR"].includes(item.role))
         .map((item) => item.group_id)
     );
-    if ([...controllers].some((groupId) => operating.has(groupId))) return "In-house";
     if ([...controllers].some((groupId) => groupById.get(groupId)?.group_type === "PRIVATE_LANDLORD")) {
       return "Private landlord";
     }
+    if ([...controllers].some((groupId) => operating.has(groupId))) return "In-house";
     return "Unknown";
   }
 

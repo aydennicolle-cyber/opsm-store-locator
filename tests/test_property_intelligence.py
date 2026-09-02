@@ -565,6 +565,27 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertEqual(roselands["manager_names"], ["HMC Capital"])
         self.assertEqual(roselands["leasing_arrangement"], "External agency")
 
+    def test_current_pines_waverley_and_corio_structures_keep_leasing_roles_separate(self) -> None:
+        pines = self.payload["property_summaries"]["place-au-qld-the-pines-shopping-centre"]
+        self.assertEqual(pines["centre_class"], "Sub-regional")
+        self.assertEqual(pines["owner_names"], ["The Pines Shopping Centre (Qld.) Pty Ltd"])
+        self.assertEqual(pines["manager_names"], ["The Pines Shopping Centre (Qld.) Pty Ltd"])
+        self.assertEqual(pines["leasing_arrangement"], "Private landlord")
+
+        waverley = self.payload["property_summaries"]["place-au-vic-waverley-gardens-shopping-centre"]
+        self.assertEqual(waverley["centre_class"], "Sub-regional")
+        self.assertEqual(waverley["owner_names"], ["Charter Hall Convenience Retail Fund"])
+        self.assertEqual(waverley["manager_names"], ["Charter Hall"])
+        self.assertEqual(waverley["leasing_arrangement"], "External agency")
+
+        corio = self.payload["property_summaries"]["place-au-vic-corio-village"]
+        self.assertEqual(corio["centre_class"], "Sub-regional")
+        self.assertEqual(corio["owner_names"], ["Retail Partnership No.1"])
+        self.assertEqual(corio["manager_names"], ["Charter Hall"])
+        self.assertEqual(corio["leasing_arrangement"], "External agency")
+        self.assertEqual(corio["gla_sqm"], 33600)
+        self.assertEqual(corio["tenancy_count"], 77)
+
     def test_property_summaries_cover_every_place_and_unknown_is_explicit(self) -> None:
         summaries = self.payload["property_summaries"]
         self.assertEqual(set(summaries), {place["place_id"] for place in self.places})

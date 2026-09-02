@@ -109,6 +109,10 @@ assert.equal(Intel.deriveLeasingArrangement([
 assert.equal(Intel.deriveLeasingArrangement([
   {status: "ACTIVE", role: "EXTERNAL_LEASING_AGENT", group_id: "agency"},
 ], []), "External agency");
+assert.equal(Intel.deriveLeasingArrangement([
+  {status: "ACTIVE", role: "OWNER", group_id: "private"},
+  {status: "ACTIVE", role: "LEASING_CONTROLLER", group_id: "private"},
+], [{group_id: "private", group_type: "PRIVATE_LANDLORD"}]), "Private landlord");
 assert.equal(Intel.portfolioOverlapStatus({
   hasBailey: false,
   relationships: [{status: "ACTIVE", role: "MANAGER", group_id: "one"}],
