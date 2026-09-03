@@ -111,6 +111,8 @@ class PropertyIntelligenceTests(unittest.TestCase):
         belconnen = self.payload["property_summaries"]["place-au-act-westfield-belconnen"]
         self.assertEqual(belconnen["annual_visits"], 10_800_000)
         self.assertTrue(belconnen["source_url"].startswith("https://"))
+        self.assertRegex(belconnen["source_date"], r"^\d{4}-\d{2}-\d{2}$")
+        self.assertRegex(belconnen["last_verified_at"], r"^\d{4}-\d{2}-\d{2}$")
         bankstown = self.payload["property_summaries"]["place-au-nsw-bankstown-central"]
         self.assertEqual(bankstown["centre_class"], "Regional")
         self.assertEqual(bankstown["gla_sqm"], 78575)

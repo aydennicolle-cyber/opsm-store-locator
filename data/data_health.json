@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-09-03T02:00:29+00:00",
+  "generated_at": "2026-09-03T05:41:32+00:00",
   "coverage_as_of": "2026-09-03",
   "certification_status": "Operational",
   "coverage_statement": "The network uses best-available public store data. Freshness, location setting and canonical place confidence are reported separately.",
@@ -593,7 +593,7 @@
       "required": false,
       "snapshot": "data/property_intelligence.json",
       "completion_status": "partial",
-      "last_success": "2026-09-03T02:00:28.426374+00:00",
+      "last_success": "2026-09-03T05:41:32.666772+00:00",
       "age_days": 0,
       "max_age_days": 180,
       "available": true,
@@ -634,6 +634,118 @@
       "leasing_agency": 90
     }
   },
+  "co_tenancy": {
+    "coverage_statement": "Curated key co-tenants only; not a complete centre directory. Optical rows require accepted canonical place membership. Research-started coverage includes qualified uncertain evidence; anchor-profiled and multi-category coverage count accepted active tenants only.",
+    "dimensions": {
+      "bailey_research_started": 100.0,
+      "bailey_anchor_coverage": 82.2,
+      "bailey_multi_category_coverage": 80.0,
+      "evidence_freshness": 91.9
+    },
+    "counts": {
+      "pilot_places": 10,
+      "bailey_centres": 45,
+      "bailey_research_started": 45,
+      "bailey_anchor_profiled": 37,
+      "bailey_multi_category_profiled": 36,
+      "researched_places": 55,
+      "key_tenant_records": 246,
+      "current_key_tenant_records": 226
+    },
+    "freshness_policy_days": 90
+  },
+  "intelligence_layer_register": [
+    {
+      "layer_id": "demographics",
+      "label": "Population and demographics",
+      "status": "Operational",
+      "priority": "Now",
+      "public_automation_path": "ABS Data by Region and Census plus Stats NZ regional boundaries",
+      "current_boundary": "Australian SA2 population growth age and equivalised household income are source-year labelled",
+      "manual_or_private_gap": "NZ comparable small-area demographics and daytime population still need an official ingestion path"
+    },
+    {
+      "layer_id": "property",
+      "label": "Ownership management and leasing",
+      "status": "In progress",
+      "priority": "Now",
+      "public_automation_path": "Official owner portfolios annual reports filings and leasing pages",
+      "current_boundary": "Public roles and portfolio overlap only",
+      "manual_or_private_gap": "Private contacts deal history rents and lease terms remain outside the public repository"
+    },
+    {
+      "layer_id": "co_tenancy",
+      "label": "Key co-tenancy profiles",
+      "status": "In progress",
+      "priority": "Now",
+      "public_automation_path": "Official centre directories and owner materials",
+      "current_boundary": "Curated anchors and decision-relevant categories rather than exhaustive directories",
+      "manual_or_private_gap": "Directory gaps and ambiguous brand categories require manual review"
+    },
+    {
+      "layer_id": "development",
+      "label": "Growth and development signals",
+      "status": "Pilot",
+      "priority": "Now",
+      "public_automation_path": "Official government project pages planning sources and owner announcements",
+      "current_boundary": "Selective verified signals are mapped and early-stage proposals are labelled",
+      "manual_or_private_gap": "Continuous jurisdiction-wide monitoring and local impact judgement are not yet complete"
+    },
+    {
+      "layer_id": "visitation",
+      "label": "Centre visitation and scale",
+      "status": "In progress",
+      "priority": "Next",
+      "public_automation_path": "Official owner compendia annual reports and public centre profiles",
+      "current_boundary": "Metrics retain property and evidence dates and unknown is explicit",
+      "manual_or_private_gap": "Many centres do not publish footfall GLA turnover or vacancy"
+    },
+    {
+      "layer_id": "tourism",
+      "label": "Tourism and visitor demand",
+      "status": "Planned",
+      "priority": "Next",
+      "public_automation_path": "TRA Tourism Research Australia MBIE and Stats NZ official releases",
+      "current_boundary": "No tourism proxy is currently used in opportunity scoring",
+      "manual_or_private_gap": "Geographic alignment seasonal interpretation and local visitor counts require design and review"
+    },
+    {
+      "layer_id": "transport",
+      "label": "Transport accessibility and traffic",
+      "status": "Planned",
+      "priority": "Next",
+      "public_automation_path": "State transport open data GTFS station usage and road-count datasets",
+      "current_boundary": "OpenStreetMap amenities are available only as contextual evidence",
+      "manual_or_private_gap": "Jurisdictions publish inconsistent measures and travel-time catchments require routing infrastructure"
+    },
+    {
+      "layer_id": "positioning",
+      "label": "Premium and value retail positioning",
+      "status": "Planned",
+      "priority": "Next",
+      "public_automation_path": "Versioned public brand taxonomy applied to evidenced co-tenancy",
+      "current_boundary": "Current tenant categories do not yet form a premium-value score",
+      "manual_or_private_gap": "Brand positioning changes and mixed-format retailers require curator judgement"
+    },
+    {
+      "layer_id": "spending",
+      "label": "Consumer spending",
+      "status": "Planned",
+      "priority": "Later",
+      "public_automation_path": "Official household expenditure and regional economic releases where geographically defensible",
+      "current_boundary": "Income is explicitly not presented as spending",
+      "manual_or_private_gap": "Granular card spend centre turnover and category spend are generally proprietary"
+    },
+    {
+      "layer_id": "performance",
+      "label": "Private Bailey performance",
+      "status": "Client/private only",
+      "priority": "Later",
+      "public_automation_path": "Authenticated private service or browser-memory-only import",
+      "current_boundary": "No raw private performance values are stored in public assets",
+      "manual_or_private_gap": "Revenue contribution occupancy cost and deal information require Bailey authorization and private controls"
+    }
+  ],
   "store_certification": {
     "independent-other-optical-osm-au-node-2161974913": {
       "operational_status": "Limited",

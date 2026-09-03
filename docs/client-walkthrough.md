@@ -71,13 +71,13 @@ The store has accepted evidence linking it to that centre or corridor. Distance 
 Australia uses ABS SA2 data: 2025 estimated resident population plus selected 2021 Census age and median equivalised weekly household-income measures. Very small-area rates are suppressed where Census perturbation can mislead. Equivalised income is not consumer spending; no verified consumer-spending layer is loaded yet.
 
 **Key co-tenancy profile**  
-A curated list of important anchors and Bailey-relevant tenant categories for the fixed top-ten pilot. It is not a complete centre directory.
+A curated list of important anchors and Bailey-relevant tenant categories. The fixed top-ten opportunity pilot remains available, and every currently mapped Bailey shopping centre has now received an initial official-source research pass. It is not a complete centre directory.
 
 ## Known limitations to state openly
 
 - New Zealand stores and places do not yet have directly comparable official demographic rankings in this public build.
 - The broader centre census is materially ahead of property ownership/class research; unknown property facts remain visible.
-- Key co-tenancy coverage currently applies only to the fixed Australian shopping-centre pilot set.
+- All 45 currently mapped Bailey shopping centres have an initial co-tenancy research pass. As of 3 September 2026, 37 have an accepted active anchor profile and 36 have accepted tenants across at least three tracked categories; older or ambiguous evidence remains visibly qualified.
 - Independent optical coverage and independent website/social-link enrichment are still incomplete.
 - Catchments are indicative straight-line and area-apportioned estimates rather than drive-time trade areas or customer-origin analysis.
 - Public centre directories change. Every tenant and relationship should be rechecked before commercial decisions.

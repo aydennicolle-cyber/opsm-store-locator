@@ -174,6 +174,8 @@
     lookalikes: { metadata: {}, rankings: {}, bailey_benchmarks: [] },
     placeTenants: [],
     placeTenantMetadata: {},
+    developmentSignals: [],
+    developmentMetadata: {},
     placeIdRemaps: {},
     placeShortlist: new Set(),
     performanceBenchmark: null,
@@ -279,6 +281,7 @@
   const amenityLayer = L.layerGroup().addTo(map);
   const placeFocusLayer = L.layerGroup().addTo(map);
   const placeFocusCatchmentLayer = L.layerGroup().addTo(map);
+  const developmentLayer = L.layerGroup();
   const focusedStoreMarkerById = new Map();
 
   function escapeHtml(value) {
@@ -419,6 +422,30 @@
     });
     refreshIcons();
     repositionCloseZoomMarkers();
+  }
+
+  function createDevelopmentMarkers() {
+    developmentLayer.clearLayers();
+    state.developmentSignals.forEach((signal) => {
+      if (!Number.isFinite(Number(signal.latitude)) || !Number.isFinite(Number(signal.longitude))) return;
+      const marker = L.marker([Number(signal.latitude), Number(signal.longitude)], {
+        icon: L.divIcon({
+          className: "",
+          html: `<div class="development-pin ${signal.evidence_status === "Lead" ? "lead" : ""}"><span aria-hidden="true">↗</span></div>`,
+          iconSize: [28, 28],
+          iconAnchor: [14, 14],
+        }),
+        title: signal.title,
+        zIndexOffset: 1100,
+      });
+      marker.bindTooltip(`<strong>${escapeHtml(signal.title)}</strong><br>${escapeHtml(signal.status.replaceAll("_", " "))} · ${escapeHtml(signal.evidence_status)}`, { direction: "top", offset: [0, -9] });
+      marker.on("click", () => {
+        const place = state.centres.find((item) => item.place_id === signal.place_id);
+        if (place) openCentreDetail(place);
+      });
+      marker.addTo(developmentLayer);
+    });
+    refreshIcons();
   }
 
   function resetMarkerPosition(marker) {
@@ -1894,6 +1921,10 @@
       bailey_centre_research_coverage: "Bailey centre research coverage",
       bailey_centre_class_coverage: "Bailey centre class coverage",
       conflict_reconciliation: "Property conflict reconciliation",
+      bailey_research_started: "Bailey co-tenancy research started",
+      bailey_anchor_coverage: "Bailey accepted-anchor coverage",
+      bailey_multi_category_coverage: "Bailey accepted multi-category coverage",
+      evidence_freshness: "Co-tenancy evidence freshness",
     }[key] || key;
   }
 
@@ -1907,6 +1938,7 @@
     const blockers = health.blocking_counts || {};
     const lowestDimension = Math.min(...Object.values(health.dimensions));
     const propertyHealth = health.property_intelligence || { dimensions: {}, counts: {} };
+    const coTenancyHealth = health.co_tenancy || { dimensions: {}, counts: {} };
     const independentStores = state.allStores.filter((store) => store.retailer === "Independent / Other optical");
     const independentProfiles = {
       websites: independentStores.filter((store) => store.website_url).length,
@@ -1962,6 +1994,22 @@
         </div>
         <p>${escapeHtml(propertyHealth.coverage_statement || "Property relationship coverage is reported separately.")}</p>
         <p class="empty-note">${escapeHtml(propertyHealth.portfolio_overlap_note || "")}</p>
+      </section>
+      <section class="health-overview property-health">
+        <div class="section-heading"><h2>Key co-tenancy research</h2><span>curated profiles, not complete directories</span></div>
+        <div class="health-dimensions">${Object.entries(coTenancyHealth.dimensions || {}).map(([key, value]) => `<div><span>${escapeHtml(healthDimensionLabel(key))}</span><strong>${Number(value).toFixed(1)}%</strong><i><b style="width:${Number(value)}%"></b></i></div>`).join("")}</div>
+        <div class="compact-metrics">
+          <div><strong>${formatNumber(coTenancyHealth.counts?.pilot_places || 0)}</strong><span>opportunity pilot places</span></div>
+          <div><strong>${formatNumber(coTenancyHealth.counts?.bailey_research_started || 0)}/${formatNumber(coTenancyHealth.counts?.bailey_centres || 0)}</strong><span>Bailey profiles started</span></div>
+          <div><strong>${formatNumber(coTenancyHealth.counts?.bailey_anchor_profiled || 0)}/${formatNumber(coTenancyHealth.counts?.bailey_centres || 0)}</strong><span>Bailey centres with anchors</span></div>
+          <div><strong>${formatNumber(coTenancyHealth.counts?.bailey_multi_category_profiled || 0)}/${formatNumber(coTenancyHealth.counts?.bailey_centres || 0)}</strong><span>Bailey accepted multi-category profiles</span></div>
+        </div>
+        <p>${escapeHtml(coTenancyHealth.coverage_statement || "Co-tenancy coverage is reported separately.")}</p>
+      </section>
+      <section class="health-overview property-health">
+        <div class="section-heading"><h2>Intelligence layer roadmap</h2><span>public automation versus known gaps</span></div>
+        <div class="health-source-list">${(health.intelligence_layer_register || []).map((layer) => `<div><span class="source-state ${["Operational", "In progress"].includes(layer.status) ? "current" : layer.status === "Pilot" ? "partial" : "stale"}">${escapeHtml(layer.status)}</span><span><strong>${escapeHtml(layer.label)}</strong><small>${escapeHtml(layer.current_boundary)}</small></span><b>${escapeHtml(layer.priority)}</b></div>`).join("")}</div>
+        <p class="empty-note">Planned layers are not silently included in rankings. Open a generated data record or methodology note before relying on a metric.</p>
       </section>
       <section class="health-blockers">
         <h2>Promoted review exceptions</h2>
@@ -2460,8 +2508,23 @@
     const grouped = Object.groupBy
       ? Object.groupBy(keyTenants, (row) => row.category)
       : keyTenants.reduce((result, row) => ((result[row.category] ||= []).push(row), result), {});
-    return `<div class="co-tenancy-profile">${Object.entries(grouped).sort(([a], [b]) => a.localeCompare(b)).map(([category, rows]) => `<div><strong>${escapeHtml(category)}</strong><span>${rows.map((row) => `<a href="${escapeHtml(row.source_url)}" target="_blank" rel="noopener">${escapeHtml(row.tenant_name)}${row.anchor_flag ? " · anchor" : ""}</a>`).join("")}</span></div>`).join("")}</div>
-      <p class="empty-note">Curated key co-tenants only—not a complete centre directory. Verified ${escapeHtml(formatDate(state.placeTenantMetadata.verified_at))}.</p>`;
+    return `<div class="co-tenancy-profile">${Object.entries(grouped).sort(([a], [b]) => a.localeCompare(b)).map(([category, rows]) => `<div><strong>${escapeHtml(category)}</strong><span>${rows.map((row) => `<a href="${escapeHtml(row.source_url)}" target="_blank" rel="noopener" title="${escapeHtml(row.source_date ? `Source dated ${formatDate(row.source_date)}` : `Checked ${formatDate(row.verified_at)}`)}">${escapeHtml(row.tenant_name)}${row.anchor_flag ? " · anchor" : ""}${row.status === "Uncertain" ? " · uncertain" : ""}</a>`).join("")}</span></div>`).join("")}</div>
+      <p class="empty-note">Curated key co-tenants only—not a complete centre directory. Evidence checked ${escapeHtml(formatDate(state.placeTenantMetadata.verified_at))}; stale or uncertain records are labelled individually.</p>`;
+  }
+
+  function developmentSignalsHtml(centre) {
+    const signals = state.developmentSignals.filter((item) => item.place_id === centre.place_id);
+    if (!signals.length) return "";
+    return `<section class="detail-section"><div class="section-title-row"><h3>Growth & development signals</h3><span class="source-pill">Selective public evidence</span></div>
+      <div class="development-signal-list">${signals.map((signal) => `<article>
+        <div><strong>${escapeHtml(signal.title)}</strong><span>${escapeHtml(signal.status.replaceAll("_", " "))} · ${escapeHtml(signal.impact_horizon || "Timing not published")}</span></div>
+        <span class="source-state ${signal.evidence_status === "Verified" ? "current" : "partial"}">${escapeHtml(signal.evidence_status)}</span>
+        <p>${escapeHtml(signal.summary)}</p>
+        <dl><div><dt>Temporary</dt><dd>${escapeHtml(signal.temporary_impact || "Unknown")}</dd></div><div><dt>Long term</dt><dd>${escapeHtml(signal.long_term_impact || "Unknown")}</dd></div></dl>
+        <a href="${escapeHtml(signal.source_url)}" target="_blank" rel="noopener">${escapeHtml(signal.source_type)} · checked ${escapeHtml(formatDate(signal.last_verified_at))}</a>
+      </article>`).join("")}</div>
+      <p class="empty-note">This is a selective signal register, not a complete development pipeline. Early-stage proposals may change or not proceed.</p>
+    </section>`;
   }
 
   function propertyGroupNames(centre) {
@@ -2508,7 +2571,7 @@
       membership_type: tenant.category === "Optical" ? "Accepted exact-place optical membership" : "Researched key co-tenant",
       tenant_id: tenant.tenant_id, tenant_name: tenant.tenant_name, retailer: tenant.retailer || "", category: tenant.category,
       anchor_flag: tenant.anchor_flag ? "true" : "false", selection_basis: tenant.selection_basis, status: tenant.status,
-      source_url: tenant.source_url, source_type: tenant.source_type, verified_at: tenant.verified_at, confidence: tenant.confidence,
+      source_url: tenant.source_url, source_type: tenant.source_type, source_date: tenant.source_date || "", verified_at: tenant.verified_at, confidence: tenant.confidence,
     })));
     exportRecords(`bailey-place-tenants-${new Date().toISOString().slice(0, 10)}.csv`, records);
   }
@@ -2576,6 +2639,7 @@
         <p class="empty-note">The map is focused on the competition shown above. IN ${isCorridor ? "CORRIDOR" : "CENTRE"} requires the same accepted canonical place ID; distance alone never establishes membership.</p>
       </section>
       <section class="detail-section"><h3>Key co-tenancy profile</h3>${keyCoTenancyHtml(centre)}</section>
+      ${developmentSignalsHtml(centre)}
       <section class="detail-section"><h3>Ownership, management and leasing</h3>
         <div class="data-grid property-summary-grid">
           <div class="data-point"><span>Centre class</span><strong>${escapeHtml(centre.centre_class || "Unknown")}</strong><small>${escapeHtml(centre.centre_class_method || "Not confirmed")}</small></div>
@@ -2592,7 +2656,7 @@
         <div class="data-point"><span>Retail tenancies</span><strong>${formatNumber(centre.tenancy_count)}</strong></div>
         <div class="data-point"><span>Trade area population</span><strong>${formatNumber(centre.trade_area_population)}</strong></div>
         <div class="data-point"><span>Nearest Bailey Nelson</span><strong>${Number.isFinite(Number(centre.nearest_bailey_km)) ? Intel.formatDistance(Number(centre.nearest_bailey_km)) : "Unknown"}</strong></div>
-      </div></section>
+      </div>${centre.source_url && (centre.gla_sqm || centre.annual_visits || centre.tenancy_count) ? `<p class="empty-note">Metric source: <a href="${escapeHtml(centre.source_url)}" target="_blank" rel="noopener">public owner material</a>${centre.source_date ? ` dated ${escapeHtml(formatDate(centre.source_date))}` : ""}${centre.last_verified_at ? ` · checked ${escapeHtml(formatDate(centre.last_verified_at))}` : ""}.</p>` : ""}</section>
       <section class="detail-section source-block"><i data-lucide="database"></i><div><strong>${escapeHtml(centre.source_basis || "Best available public place record")}</strong><span>${centre.source_date ? `Place evidence dated ${escapeHtml(formatDate(centre.source_date))}` : "Public metrics remain incomplete"}</span></div></section>
       <details class="technical-details"><summary>Technical record, methodology and public corrections</summary>
         <section class="detail-section"><h3>Technical record</h3><div class="data-grid">
@@ -3102,6 +3166,9 @@
       growthLayer ||= buildMarketLayer("growth");
       growthLayer.addTo(map);
     } else if (growthLayer && map.hasLayer(growthLayer)) map.removeLayer(growthLayer);
+    if (state.activeLayers.has("development")) {
+      if (!map.hasLayer(developmentLayer)) developmentLayer.addTo(map);
+    } else if (map.hasLayer(developmentLayer)) map.removeLayer(developmentLayer);
     updateSaturationLayer();
     loadAmenities();
   }
@@ -3570,7 +3637,7 @@
 
   async function initialise() {
     try {
-      const [stores, markets, places, links, events, profiles, dataHealth, lookalikes, propertyIntelligence, retailerRegistry, placeTenants] = await Promise.all([
+      const [stores, markets, places, links, events, profiles, dataHealth, lookalikes, propertyIntelligence, retailerRegistry, placeTenants, developmentSignals] = await Promise.all([
         loadJson("data/optical_stores.geojson"),
         loadJson("data/sa2_market.geojson"),
         loadJson("data/retail_places.json"),
@@ -3582,6 +3649,7 @@
         loadJson("data/property_intelligence.json"),
         loadJson("data/retailer_registry.json"),
         loadJson("data/place_tenants.json"),
+        loadJson("data/growth_development_signals.json"),
       ]);
       configureRetailers(retailerRegistry);
       state.metadata = stores.metadata || {};
@@ -3599,6 +3667,8 @@
       state.placeIdRemaps = places.place_id_remaps || {};
       state.placeTenants = placeTenants.memberships || [];
       state.placeTenantMetadata = placeTenants.metadata || {};
+      state.developmentSignals = developmentSignals.signals || [];
+      state.developmentMetadata = developmentSignals.metadata || {};
       loadLocalPlaces();
       state.storeLinks = links.links;
       state.events = events;
@@ -3636,6 +3706,7 @@
       loadPlaceShortlist();
       createStoreMarkers();
       createCentreMarkers();
+      createDevelopmentMarkers();
       bindGlobalEvents();
       const hasSharedMap = new URLSearchParams(window.location.search).has("share");
       restoreShareState();

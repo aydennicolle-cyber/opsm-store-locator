@@ -158,7 +158,9 @@ python3 scripts/build_data_health.py
 
 The market-intelligence build uses official ABS Data by Region workbooks and SA2 boundaries for Australia and refreshes public centre profiles. It archives a trans-Tasman network snapshot only when census certification passes. New Zealand stores retain explicit Stats NZ coverage status and are never joined to Australian market data.
 
-The fixed first co-tenancy pilot covers the ten Australian shopping centres selected on 3 September 2026. It records accepted optical memberships and researched key co-tenants with official directory evidence; it is a key co-tenancy profile, not a complete centre directory. The client walkthrough is documented in `docs/client-walkthrough.md`.
+The co-tenancy programme preserves the fixed ten-centre Australian opportunity pilot selected on 3 September 2026 and derives its ongoing Bailey shopping-centre scope from accepted store-place memberships. Every currently mapped Bailey shopping centre has an initial official-source research pass. It records accepted optical memberships and researched key co-tenants; it is a key co-tenancy profile, not a complete centre directory. Research-started, accepted-anchor, multi-category and freshness coverage are reported separately in Data Health, with older or ambiguous evidence explicitly qualified.
+
+The optional Growth & Development map layer is built from `data/growth_development_signals.csv`. It shows selective source-backed public signals with explicit status, timing, temporary and long-term implications. It is not a complete planning or construction pipeline, and early-stage proposals are never treated as committed projects. The broader public-data automation and manual/private gaps are declared in `data/intelligence_layer_register.csv`. The client walkthrough is documented in `docs/client-walkthrough.md`.
 
 Run the complete public checks:
 

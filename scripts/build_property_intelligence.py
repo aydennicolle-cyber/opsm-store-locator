@@ -608,6 +608,7 @@ def main() -> None:
             metrics["annual_visits"] = float(asset["annual_visits_m"]) * 1_000_000
         if any(asset.get(field) for field in ("gla_sqm", "tenancy_count", "annual_visits_m")):
             metrics.setdefault("source_url", asset["source_url"])
+            metrics.setdefault("source_date", asset["source_date"])
             metrics.setdefault("last_verified_at", asset["last_verified_at"])
 
     relationships_by_place: dict[str, list[dict]] = defaultdict(list)

@@ -331,6 +331,19 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .swatch.growth { background: #76a744; }
 .swatch.saturation { background: #ed8b45; border-radius: 50%; }
 .centre-layer-icon { color: #855e0c; }
+.development-pin { width: 28px; height: 28px; display: grid; place-items: center; border: 2px solid white; border-radius: 7px; background: #b5532f; color: white; box-shadow: 0 2px 10px rgb(23 27 31 / 30%); transform: rotate(45deg); }
+.development-pin span { font-size: 18px; font-weight: 900; line-height: 1; transform: rotate(-45deg); }
+.development-pin.lead { background: #8b8178; border-style: dashed; }
+.development-signal-list { display: grid; gap: 8px; }
+.development-signal-list article { display: grid; grid-template-columns: 1fr auto; gap: 5px 10px; padding: 10px; border: 1px solid var(--line); background: var(--soft); }
+.development-signal-list article > div:first-child { display: grid; gap: 2px; }
+.development-signal-list article > div:first-child span, .development-signal-list a { color: var(--muted); font-size: 8px; }
+.development-signal-list p, .development-signal-list dl, .development-signal-list a { grid-column: 1 / -1; margin: 0; }
+.development-signal-list p { font-size: 9px; line-height: 1.45; }
+.development-signal-list dl { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.development-signal-list dl div { padding: 6px; background: white; }
+.development-signal-list dt { color: var(--muted); font-size: 7px; font-weight: 800; text-transform: uppercase; }
+.development-signal-list dd { margin: 2px 0 0; font-size: 8px; }
 .mode-notice { position: absolute; z-index: 490; top: 62px; left: 14px; max-width: 390px; padding: 9px 12px; border-radius: 3px; background: var(--ink); color: white; box-shadow: var(--shadow); font-size: 9px; }
 
 .store-marker { background: transparent; border: 0; }

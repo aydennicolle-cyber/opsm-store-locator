@@ -45,6 +45,7 @@ class RetailPlaceTests(unittest.TestCase):
         cls.reviews = read_csv("place_review.csv")
         cls.lookalikes = json.loads((DATA / "lookalike_places.json").read_text(encoding="utf-8"))
         cls.place_tenants = json.loads((DATA / "place_tenants.json").read_text(encoding="utf-8"))
+        cls.development_signals = json.loads((DATA / "growth_development_signals.json").read_text(encoding="utf-8"))
 
     def test_canonical_ids_are_unique_and_typed(self) -> None:
         ids = [place["place_id"] for place in self.places]
@@ -996,8 +997,9 @@ class RetailPlaceTests(unittest.TestCase):
         for place_id in pilot_ids:
             place_rows = [row for row in rows if row["place_id"] == place_id]
             self.assertTrue(any(row["category"] != "Optical" for row in place_rows))
+        scope_ids = self.place_tenants["metadata"]["scope_place_ids"]
         expected_optical_store_ids = {
-            row["store_id"] for row in self.memberships if row["place_id"] in pilot_ids
+            row["store_id"] for row in self.memberships if row["place_id"] in scope_ids
         }
         exported_optical_store_ids = {
             row["store_id"] for row in rows if row["category"] == "Optical"
@@ -1007,6 +1009,54 @@ class RetailPlaceTests(unittest.TestCase):
             self.assertRegex(row["source_url"], r"^https?://")
             self.assertRegex(row["verified_at"], r"^\d{4}-\d{2}-\d{2}$")
             self.assertIn(row["confidence"], {"High", "Medium", "Uncertain"})
+
+    def test_bailey_centre_cotenancy_scope_is_derived_from_memberships(self) -> None:
+        expected = sorted({
+            row["place_id"] for row in self.memberships
+            if row["retailer"] == "Bailey Nelson"
+            and row["location_setting"] == "Shopping Centre"
+            and row["place_id"]
+        })
+        metadata = self.place_tenants["metadata"]
+        self.assertEqual(metadata["bailey_centre_place_ids"], expected)
+        self.assertEqual(
+            metadata["scope_place_ids"],
+            sorted(set(metadata["pilot_place_ids"]) | set(expected)),
+        )
+        self.assertEqual(metadata["researched_bailey_centre_place_ids"], expected)
+
+        rows = self.place_tenants["memberships"]
+        accepted_anchor_ids = {
+            row["place_id"] for row in rows
+            if row["category"] != "Optical"
+            and row["status"] == "Active"
+            and row["anchor_flag"] is True
+        }
+        self.assertEqual(
+            metadata["anchor_profiled_bailey_centre_place_ids"],
+            sorted(accepted_anchor_ids & set(expected)),
+        )
+        for place_id in metadata["multi_category_bailey_centre_place_ids"]:
+            active_categories = {
+                row["category"] for row in rows
+                if row["place_id"] == place_id
+                and row["category"] != "Optical"
+                and row["status"] == "Active"
+            }
+            self.assertGreaterEqual(len(active_categories), 3)
+
+    def test_development_signals_are_public_evidenced_and_place_resolved(self) -> None:
+        place_ids = {place["place_id"] for place in self.places}
+        signals = self.development_signals["signals"]
+        self.assertEqual(self.development_signals["metadata"]["signal_count"], len(signals))
+        self.assertEqual(len({row["signal_id"] for row in signals}), len(signals))
+        for row in signals:
+            if row["place_id"]:
+                self.assertIn(row["place_id"], place_ids)
+            self.assertRegex(row["source_url"], r"^https?://")
+            self.assertRegex(row["last_verified_at"], r"^\d{4}-\d{2}-\d{2}$")
+            self.assertIn(row["evidence_status"], {"Verified", "Lead"})
+            self.assertIn(row["confidence"], {"High", "Medium", "Low"})
 
     def test_top_ten_pilot_identity_repairs(self) -> None:
         places = {place["place_id"]: place for place in self.places}

@@ -36,6 +36,8 @@ EXCEPTIONS_PATH = DATA / "place_review.csv"
 LOOKALIKES_PATH = DATA / "lookalike_places.json"
 KEY_TENANTS_PATH = DATA / "place_key_tenants.csv"
 PLACE_TENANTS_PATH = DATA / "place_tenants.json"
+DEVELOPMENT_SIGNALS_INPUT_PATH = DATA / "growth_development_signals.csv"
+DEVELOPMENT_SIGNALS_PATH = DATA / "growth_development_signals.json"
 
 PILOT_PLACE_IDS = [
     "place-au-nsw-westfield-penrith",
@@ -53,6 +55,14 @@ TENANT_CATEGORIES = {
     "Optical", "Department-store anchor", "Supermarket anchor", "Premium fashion",
     "Contemporary fashion", "Youth fashion", "Beauty", "Design and lifestyle",
     "Activewear", "Premium grocery", "Hospitality", "Technology", "Luxury",
+}
+DEVELOPMENT_SIGNAL_TYPES = {
+    "RETAIL_REDEVELOPMENT", "RESIDENTIAL_GROWTH", "MIXED_USE", "TRANSPORT_INFRASTRUCTURE",
+    "ROAD_INFRASTRUCTURE", "HEALTH_EDUCATION", "OTHER",
+}
+DEVELOPMENT_STATUSES = {
+    "EARLY_STAGE", "ANNOUNCED", "APPROVED", "UNDER_CONSTRUCTION", "COMPLETED",
+    "PAUSED", "CANCELLED", "UNKNOWN",
 }
 
 NAMED_RETAILERS = {
@@ -95,18 +105,30 @@ def read_csv(path: Path) -> list[dict]:
 
 
 def build_place_tenants(places: list[dict], memberships: list[dict], old_to_new: dict[str, str], generated_at: str) -> None:
-    """Build accepted optical memberships plus a small, evidenced co-tenancy pilot."""
+    """Build accepted optical memberships and the evidenced co-tenancy programme."""
     place_ids = {place["place_id"] for place in places}
     resolved_pilot = [old_to_new.get(place_id, place_id) for place_id in PILOT_PLACE_IDS]
     missing_pilot = [place_id for place_id in resolved_pilot if place_id not in place_ids]
     if missing_pilot:
         raise ValueError(f"Co-tenancy pilot references unknown places: {missing_pilot}")
 
+    bailey_centre_ids = sorted({
+        old_to_new.get(row.get("place_id", ""), row.get("place_id", ""))
+        for row in memberships
+        if row.get("retailer") == "Bailey Nelson"
+        and row.get("location_setting") == "Shopping Centre"
+        and row.get("place_id")
+    })
+    missing_bailey_centres = [place_id for place_id in bailey_centre_ids if place_id not in place_ids]
+    if missing_bailey_centres:
+        raise ValueError(f"Bailey centre co-tenancy scope references unknown places: {missing_bailey_centres}")
+    scope_place_ids = sorted(set(resolved_pilot) | set(bailey_centre_ids))
+
     output: list[dict] = []
     seen_ids: set[str] = set()
     for row in memberships:
         place_id = old_to_new.get(row.get("place_id", ""), row.get("place_id", ""))
-        if place_id not in resolved_pilot or not row.get("store_id"):
+        if place_id not in scope_place_ids or not row.get("store_id"):
             continue
         membership_id = f"tenant-membership-{slug(place_id)}-{slug(row['store_id'])}"
         item = {
@@ -134,8 +156,8 @@ def build_place_tenants(places: list[dict], memberships: list[dict], old_to_new:
         membership_id = item.get("membership_id", "")
         if not membership_id or membership_id in seen_ids:
             raise ValueError(f"Invalid or duplicate tenant membership_id: {membership_id}")
-        if item["place_id"] not in resolved_pilot:
-            raise ValueError(f"Key tenant is outside the locked pilot: {item['place_id']}")
+        if item["place_id"] not in scope_place_ids:
+            raise ValueError(f"Key tenant is outside the co-tenancy programme scope: {item['place_id']}")
         if item.get("category") not in TENANT_CATEGORIES - {"Optical"}:
             raise ValueError(f"Invalid key tenant category: {item.get('category')}")
         if item.get("status") not in {"Active", "Uncertain"}:
@@ -150,23 +172,122 @@ def build_place_tenants(places: list[dict], memberships: list[dict], old_to_new:
             datetime.fromisoformat(item.get("verified_at", ""))
         except ValueError as error:
             raise ValueError(f"Key tenant requires YYYY-MM-DD verification date: {membership_id}") from error
+        if item.get("source_date"):
+            try:
+                datetime.fromisoformat(item["source_date"])
+            except ValueError as error:
+                raise ValueError(f"Key tenant source_date must be YYYY-MM-DD: {membership_id}") from error
         item["anchor_flag"] = item["anchor_flag"].lower() == "true"
         item["retailer"] = ""
         item["store_id"] = ""
         seen_ids.add(membership_id)
         output.append(item)
 
-    coverage = {place_id: sum(row["place_id"] == place_id and row["category"] != "Optical" for row in output) for place_id in resolved_pilot}
+    key_rows = [row for row in output if row["category"] != "Optical"]
+    coverage = {
+        place_id: sum(row["place_id"] == place_id for row in key_rows)
+        for place_id in scope_place_ids
+    }
+    category_coverage = {
+        place_id: sorted({
+            row["category"] for row in key_rows
+            if row["place_id"] == place_id and row["status"] == "Active"
+        })
+        for place_id in scope_place_ids
+    }
+    anchor_coverage = {
+        place_id: any(
+            row["place_id"] == place_id
+            and row["anchor_flag"]
+            and row["status"] == "Active"
+            for row in key_rows
+        )
+        for place_id in scope_place_ids
+    }
+    researched_place_ids = sorted(place_id for place_id, count in coverage.items() if count)
+    researched_bailey_ids = sorted(set(researched_place_ids) & set(bailey_centre_ids))
+    anchor_profiled_bailey_ids = sorted(
+        place_id for place_id in bailey_centre_ids if anchor_coverage[place_id]
+    )
+    multi_category_bailey_ids = sorted(
+        place_id for place_id in bailey_centre_ids if len(category_coverage[place_id]) >= 3
+    )
     PLACE_TENANTS_PATH.write_text(json.dumps({
         "metadata": {
             "generated_at": generated_at,
             "verified_at": max((row.get("verified_at", "") for row in output), default=""),
-            "scope": "Locked 3 September 2026 Australian shopping-centre ranks 1–10",
-            "coverage_note": "Curated key co-tenants only; not a complete centre directory. Optical rows require accepted canonical place membership.",
+            "scope": "Locked Australian opportunity pilot plus all currently accepted Bailey Nelson shopping-centre places",
+            "coverage_note": "Curated key co-tenants only; not a complete centre directory. Optical rows require accepted canonical place membership. Research-started coverage includes qualified uncertain evidence; anchor-profiled and multi-category coverage count accepted active tenants only.",
             "pilot_place_ids": resolved_pilot,
+            "bailey_centre_place_ids": bailey_centre_ids,
+            "scope_place_ids": scope_place_ids,
+            "researched_place_ids": researched_place_ids,
+            "researched_bailey_centre_place_ids": researched_bailey_ids,
+            "anchor_profiled_bailey_centre_place_ids": anchor_profiled_bailey_ids,
+            "multi_category_bailey_centre_place_ids": multi_category_bailey_ids,
             "key_tenant_count_by_place": coverage,
+            "key_tenant_categories_by_place": category_coverage,
         },
         "memberships": sorted(output, key=lambda row: (row["place_id"], row["category"], row["tenant_name"])),
+    }, indent=2) + "\n", encoding="utf-8")
+
+
+def build_development_signals(places: list[dict], old_to_new: dict[str, str], generated_at: str) -> None:
+    """Validate source-backed public development signals without treating news leads as facts."""
+    place_by_id = {place["place_id"]: place for place in places}
+    output = []
+    seen_ids: set[str] = set()
+    for raw in read_csv(DEVELOPMENT_SIGNALS_INPUT_PATH):
+        row = {key: str(value or "").strip() for key, value in raw.items()}
+        signal_id = row.get("signal_id", "")
+        if not signal_id or signal_id in seen_ids:
+            raise ValueError(f"Invalid or duplicate development signal_id: {signal_id}")
+        seen_ids.add(signal_id)
+        place_id = old_to_new.get(row.get("place_id", ""), row.get("place_id", ""))
+        place = place_by_id.get(place_id) if place_id else None
+        if place_id and not place:
+            raise ValueError(f"Development signal references unknown place: {signal_id} -> {place_id}")
+        if row.get("signal_type") not in DEVELOPMENT_SIGNAL_TYPES:
+            raise ValueError(f"Invalid development signal type: {signal_id}")
+        if row.get("status") not in DEVELOPMENT_STATUSES:
+            raise ValueError(f"Invalid development signal status: {signal_id}")
+        if row.get("evidence_status") not in {"Verified", "Lead"}:
+            raise ValueError(f"Invalid development evidence status: {signal_id}")
+        if row.get("impact_direction") not in {"Positive", "Negative", "Mixed", "Unknown"}:
+            raise ValueError(f"Invalid development impact direction: {signal_id}")
+        if row.get("confidence") not in {"High", "Medium", "Low"}:
+            raise ValueError(f"Invalid development confidence: {signal_id}")
+        if not re.match(r"^https?://", row.get("source_url", "")):
+            raise ValueError(f"Development signal requires a public source URL: {signal_id}")
+        for field in ("published_at", "expected_completion_date", "last_verified_at"):
+            if row.get(field):
+                try:
+                    datetime.fromisoformat(row[field])
+                except ValueError as error:
+                    raise ValueError(f"Development signal {field} must be ISO date: {signal_id}") from error
+        latitude = number(row.get("latitude")) if row.get("latitude") else number(place.get("latitude")) if place else None
+        longitude = number(row.get("longitude")) if row.get("longitude") else number(place.get("longitude")) if place else None
+        if latitude is None or longitude is None or not (-90 <= latitude <= 90) or not (-180 <= longitude <= 180):
+            raise ValueError(f"Development signal requires valid coordinates or a mapped place: {signal_id}")
+        output.append({
+            **row,
+            "place_id": place_id,
+            "place_name": place.get("name", "") if place else "",
+            "country": row.get("country") or (place.get("country", "") if place else ""),
+            "state": row.get("state") or (place.get("state", "") if place else ""),
+            "latitude": latitude,
+            "longitude": longitude,
+        })
+    DEVELOPMENT_SIGNALS_PATH.write_text(json.dumps({
+        "metadata": {
+            "schema_version": 1,
+            "generated_at": generated_at,
+            "signal_count": len(output),
+            "verified_count": sum(row["evidence_status"] == "Verified" for row in output),
+            "lead_count": sum(row["evidence_status"] == "Lead" for row in output),
+            "coverage_note": "Selective public signals, not a complete development pipeline. Leads remain visibly distinct from verified official evidence.",
+        },
+        "signals": sorted(output, key=lambda row: (row["country"], row["state"], row["title"])),
     }, indent=2) + "\n", encoding="utf-8")
 
 
@@ -1022,6 +1143,7 @@ def main() -> None:
     }
     PLACES_PATH.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     build_place_tenants(places, memberships, old_to_new, generated_at)
+    build_development_signals(places, old_to_new, generated_at)
     build_lookalikes(places, memberships, stores, generated_at)
     print(
         f"Built {len(places)} canonical places ({payload['metadata']['centre_count']} centres, "

@@ -113,6 +113,24 @@ class DataHealthTests(unittest.TestCase):
         self.assertEqual(property_health["counts"]["unmatched_active_portfolio_assets"], 0)
         self.assertEqual(property_health["counts"]["development_assets"], 1)
 
+    def test_co_tenancy_health_and_layer_roadmap_are_explicit(self) -> None:
+        co_tenancy = self.health["co_tenancy"]
+        self.assertEqual(
+            set(co_tenancy["dimensions"]),
+            {"bailey_research_started", "bailey_anchor_coverage", "bailey_multi_category_coverage", "evidence_freshness"},
+        )
+        bailey_centre_ids = {
+            row["place_id"] for row in self.certification
+            if row["retailer"] == "Bailey Nelson"
+            and row["location_setting"] == "Shopping Centre"
+            and row["place_id"]
+        }
+        self.assertEqual(co_tenancy["counts"]["bailey_centres"], len(bailey_centre_ids))
+        self.assertLessEqual(co_tenancy["counts"]["bailey_anchor_profiled"], co_tenancy["counts"]["bailey_centres"])
+        layers = self.health["intelligence_layer_register"]
+        self.assertEqual(len({row["layer_id"] for row in layers}), len(layers))
+        self.assertTrue({"demographics", "co_tenancy", "development", "visitation", "tourism", "transport", "positioning", "performance"}.issubset({row["layer_id"] for row in layers}))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -22,6 +22,8 @@ REVIEW_PATH = DATA / "place_review.csv"
 STORE_HEALTH_PATH = DATA / "store_certification.csv"
 HEALTH_PATH = DATA / "data_health.json"
 PROPERTY_INTELLIGENCE_PATH = DATA / "property_intelligence.json"
+PLACE_TENANTS_PATH = DATA / "place_tenants.json"
+INTELLIGENCE_LAYER_REGISTER_PATH = DATA / "intelligence_layer_register.csv"
 NAMED_RETAILERS = {
     "OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee",
     "George & Matilda", "Eyecare Plus", "Optical Superstore",
@@ -160,6 +162,7 @@ def main() -> None:
     places_payload = json.loads(PLACE_PATH.read_text(encoding="utf-8"))
     places = places_payload["places"]
     property_intelligence = json.loads(PROPERTY_INTELLIGENCE_PATH.read_text(encoding="utf-8"))
+    place_tenants = json.loads(PLACE_TENANTS_PATH.read_text(encoding="utf-8"))
     reviews = read_csv(REVIEW_PATH)
     pending_reviews = [row for row in reviews if row.get("review_status") == "Pending"]
     discovery = read_csv(DATA / "discovery_candidates.csv")
@@ -263,6 +266,30 @@ def main() -> None:
         "conflict_reconciliation": percent(len(shopping_centres) - len(property_conflicts), len(shopping_centres)),
     }
 
+    tenant_metadata = place_tenants.get("metadata", {})
+    bailey_tenant_scope = tenant_metadata.get("bailey_centre_place_ids", [])
+    researched_bailey_tenants = tenant_metadata.get("researched_bailey_centre_place_ids", [])
+    anchor_profiled_bailey = tenant_metadata.get("anchor_profiled_bailey_centre_place_ids", [])
+    multi_category_bailey = tenant_metadata.get("multi_category_bailey_centre_place_ids", [])
+    tenant_rows = [row for row in place_tenants.get("memberships", []) if row.get("category") != "Optical"]
+    current_tenant_rows = []
+    for row in tenant_rows:
+        evidence_date = parse_date(row.get("source_date") or row.get("verified_at"))
+        if evidence_date and (as_of - evidence_date).days <= 90:
+            current_tenant_rows.append(row)
+    co_tenancy_dimensions = {
+        "bailey_research_started": percent(len(researched_bailey_tenants), len(bailey_tenant_scope)),
+        "bailey_anchor_coverage": percent(len(anchor_profiled_bailey), len(bailey_tenant_scope)),
+        "bailey_multi_category_coverage": percent(len(multi_category_bailey), len(bailey_tenant_scope)),
+        "evidence_freshness": percent(len(current_tenant_rows), len(tenant_rows)),
+    }
+    intelligence_layers = read_csv(INTELLIGENCE_LAYER_REGISTER_PATH)
+    for layer in intelligence_layers:
+        if layer.get("status") not in {"Operational", "In progress", "Pilot", "Planned", "Client/private only"}:
+            raise ValueError(f"Invalid intelligence layer status: {layer.get('layer_id')}")
+        if layer.get("priority") not in {"Now", "Next", "Later"}:
+            raise ValueError(f"Invalid intelligence layer priority: {layer.get('layer_id')}")
+
     health = {
         "schema_version": 3, "generated_at": generated_at, "coverage_as_of": generated_at[:10], "certification_status": status,
         "coverage_statement": "The network uses best-available public store data. Freshness, location setting and canonical place confidence are reported separately.",
@@ -308,6 +335,22 @@ def main() -> None:
             },
             "freshness_policy_days": {"ownership_management": 180, "leasing_agency": 90},
         },
+        "co_tenancy": {
+            "coverage_statement": tenant_metadata.get("coverage_note", "Curated key co-tenancy profiles; not complete directories."),
+            "dimensions": co_tenancy_dimensions,
+            "counts": {
+                "pilot_places": len(tenant_metadata.get("pilot_place_ids", [])),
+                "bailey_centres": len(bailey_tenant_scope),
+                "bailey_research_started": len(researched_bailey_tenants),
+                "bailey_anchor_profiled": len(anchor_profiled_bailey),
+                "bailey_multi_category_profiled": len(multi_category_bailey),
+                "researched_places": len(tenant_metadata.get("researched_place_ids", [])),
+                "key_tenant_records": len(tenant_rows),
+                "current_key_tenant_records": len(current_tenant_rows),
+            },
+            "freshness_policy_days": 90,
+        },
+        "intelligence_layer_register": intelligence_layers,
         "store_certification": {
             row["store_id"]: {key: row[key] for key in ("operational_status", "usable_for_network", "current_source", "eligible_for_analytics", "eligible_for_place_analytics", "location_setting", "place_id", "mapping_confidence", "issues")}
             for row in certification_rows
