@@ -26,6 +26,9 @@ NAMED_RETAILERS = {
     "OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee",
     "George & Matilda", "Eyecare Plus", "Optical Superstore",
     "1001 Optometry", "EyeQ Optometrists", "Laubman & Pank",
+    "Bupa Optical", "Chemist Warehouse Optometry", "Dresden Vision",
+    "Optical Warehouse", "The Optical Company", "Optical by National Pharmacies",
+    "Matthews Eyecare",
 }
 FRESHNESS_KEYS = {
     "opsm-au": "OPSM Australia", "opsm-nz": "OPSM New Zealand",
@@ -38,6 +41,13 @@ FRESHNESS_KEYS = {
     "1001-optometry-au": "1001 Optometry Australia",
     "eyeq-optometrists-au": "EyeQ Optometrists Australia",
     "laubman-and-pank-au": "Laubman & Pank Australia",
+    "bupa-optical-au": "Bupa Optical Australia",
+    "chemist-warehouse-optometry-au": "Chemist Warehouse Optometry Australia",
+    "dresden-vision-au": "Dresden Vision Australia",
+    "optical-warehouse-au": "Optical Warehouse Australia",
+    "the-optical-company-au": "The Optical Company Australia",
+    "national-pharmacies-optical-au": "Optical by National Pharmacies Australia",
+    "matthews-eyecare-nz": "Matthews Eyecare New Zealand",
     "provision-affiliation": "ProVision Australia",
     "osm-opticians": "Independent / Other optical",
 }
@@ -125,6 +135,13 @@ def source_id_for_store(store: dict) -> str:
         "Eyecare Plus": "eyecare-plus", "Optical Superstore": "optical-superstore",
         "1001 Optometry": "1001-optometry", "EyeQ Optometrists": "eyeq-optometrists",
         "Laubman & Pank": "laubman-and-pank",
+        "Bupa Optical": "bupa-optical",
+        "Chemist Warehouse Optometry": "chemist-warehouse-optometry",
+        "Dresden Vision": "dresden-vision",
+        "Optical Warehouse": "optical-warehouse",
+        "The Optical Company": "the-optical-company",
+        "Optical by National Pharmacies": "national-pharmacies-optical",
+        "Matthews Eyecare": "matthews-eyecare",
     }[store["retailer"]]
     return f"{retailer}-{country}"
 

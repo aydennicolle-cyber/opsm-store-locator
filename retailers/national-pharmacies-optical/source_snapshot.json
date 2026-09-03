@@ -1,0 +1,52 @@
+{
+  "source_url": "https://www.nationalpharmacies.com.au/optical-booking/",
+  "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+  "store_count": 19,
+  "scope": [
+    "Australia"
+  ],
+  "method": "Official optical booking locator rendered through a bounded text proxy; addresses geocoded",
+  "retained_fields": [
+    "id",
+    "name",
+    "status",
+    "country",
+    "state",
+    "city",
+    "postal_code",
+    "full_address",
+    "phone",
+    "latitude",
+    "longitude",
+    "official_url",
+    "services",
+    "audiology",
+    "source_url"
+  ],
+  "excluded_fields": [
+    "email",
+    "opening_hours"
+  ],
+  "source_ids": [
+    "adelaide-5000",
+    "blackwood-5051",
+    "christies-beach-5165",
+    "cumberland-park-5041",
+    "findon-5023",
+    "gawler-5118",
+    "glenelg-5045",
+    "glenunga-5064",
+    "golden-grove-5125",
+    "marden-5070",
+    "marion-5046",
+    "modbury-5092",
+    "mt-barker-5251",
+    "newton-5074",
+    "north-adelaide-5006",
+    "norwood-5067",
+    "torrensville-5031",
+    "victor-harbor-5211",
+    "west-lakes-5021"
+  ],
+  "coordinate_note": "Official coordinates retained where supplied; otherwise the official address was rate-limit geocoded. Geocoding does not establish place membership."
+}

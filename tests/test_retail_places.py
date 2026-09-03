@@ -592,8 +592,8 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(sunshine["postcode"], "4558")
 
         expected_members = {
-            "place-au-qld-logan-hyperdome": {"opsm-1562", "oscar-wylee-27", "specsavers-3302", "optical-superstore-60505"},
-            "place-au-qld-sunshine-plaza": {"opsm-1263", "oscar-wylee-51", "specsavers-3201", "george-matilda-17206"},
+            "place-au-qld-logan-hyperdome": {"opsm-1562", "oscar-wylee-27", "specsavers-3302", "optical-superstore-60505", "the-optical-company-loganholme-4129"},
+            "place-au-qld-sunshine-plaza": {"opsm-1263", "oscar-wylee-51", "specsavers-3201", "george-matilda-17206", "bupa-optical-13626269"},
         }
         for place_id, store_ids in expected_members.items():
             with self.subTest(place_id=place_id):

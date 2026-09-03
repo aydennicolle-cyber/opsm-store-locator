@@ -1,0 +1,61 @@
+{
+  "source_url": "https://matthews.co.nz/practices/",
+  "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+  "store_count": 28,
+  "scope": [
+    "New Zealand"
+  ],
+  "method": "Official structured practice list; addresses geocoded when coordinates are not published",
+  "retained_fields": [
+    "id",
+    "name",
+    "status",
+    "country",
+    "state",
+    "city",
+    "postal_code",
+    "full_address",
+    "phone",
+    "latitude",
+    "longitude",
+    "official_url",
+    "services",
+    "audiology",
+    "source_url"
+  ],
+  "excluded_fields": [
+    "email",
+    "opening_hours"
+  ],
+  "source_ids": [
+    "55695732",
+    "WLXfKmCsTgWwYhS77Bx1Sw",
+    "X9Qi9sOYQg-I582_-n5IHg",
+    "Vcg1qaVdRci6CYiGUv1ykA",
+    "164485380",
+    "56792215",
+    "120105921",
+    "W_7XvdUeTGSYm87lGtKnHw",
+    "56812204",
+    "aePVyAsOS-my1Du-ENsu_Q",
+    "56793134",
+    "120105905",
+    "159009135",
+    "122878592",
+    "156549769",
+    "156549757",
+    "120000624",
+    "dQJmHt3lRpeh9JOwudbWyA",
+    "120106031",
+    "120105925",
+    "D6EWCffaT2yKNB0WG7FXqg",
+    "120000583",
+    "120000658",
+    "Cbhc57urQOO_mDW3hQ4LTA",
+    "120000629",
+    "AxXyzSQbSp6Mu2HhFZG7Mw",
+    "120000610",
+    "120000641"
+  ],
+  "coordinate_note": "Official coordinates retained where supplied; otherwise the official address was rate-limit geocoded. Geocoding does not establish place membership."
+}

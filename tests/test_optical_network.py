@@ -149,7 +149,16 @@ class OpticalNetworkTests(unittest.TestCase):
     def test_additional_network_logos_are_local_assets(self) -> None:
         registry = json.loads((ROOT / "data" / "retailer_registry.json").read_text(encoding="utf-8"))["retailers"]
         additional = [item for item in registry if item["network_type"] == "additional"]
-        self.assertEqual(len(additional), 6)
+        self.assertEqual(len(additional), 13)
+        self.assertTrue({
+            "Bupa Optical",
+            "Chemist Warehouse Optometry",
+            "Dresden Vision",
+            "Optical Warehouse",
+            "The Optical Company",
+            "Optical by National Pharmacies",
+            "Matthews Eyecare",
+        }.issubset({item["name"] for item in additional}))
         for item in additional:
             logo = item.get("logo", "")
             self.assertTrue(logo.startswith("assets/"), item["name"])
@@ -160,6 +169,25 @@ class OpticalNetworkTests(unittest.TestCase):
         affiliated = [row for row in self.rows if "provision" in row["affiliations"].split("|")]
         self.assertGreater(len(affiliated), 300)
         self.assertTrue(all(row["country"] == "Australia" for row in affiliated))
+
+    def test_group_affiliations_are_distinct_from_storefront_brands(self) -> None:
+        affiliations = json.loads(
+            (ROOT / "data" / "retailer_registry.json").read_text(encoding="utf-8")
+        )["affiliations"]
+        by_id = {item["affiliation_id"]: item for item in affiliations}
+        self.assertEqual(by_id["visique"]["status"], "partial")
+        self.assertGreater(
+            sum("visique" in row["affiliations"].split("|") for row in self.rows),
+            0,
+        )
+        optical_company = [
+            row for row in self.rows
+            if "optical-company-network" in row["affiliations"].split("|")
+        ]
+        self.assertEqual(
+            {row["retailer"] for row in optical_company},
+            {"Optical Warehouse", "The Optical Company"},
+        )
 
     def test_independent_public_profiles_are_explicit_and_safe(self) -> None:
         independent = [

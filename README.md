@@ -138,7 +138,9 @@ Refresh the additional official network locators:
 
 ```bash
 python3 scripts/fetch_additional_optical_networks.py
+python3 scripts/fetch_priority_optical_networks.py
 python3 scripts/reconcile_provision_affiliations.py
+python3 scripts/reconcile_priority_network_identities.py
 ```
 
 Rebuild the combined network after refreshing any retailer:

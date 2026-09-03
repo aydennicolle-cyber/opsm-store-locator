@@ -39,6 +39,9 @@ NAMED_RETAILERS = {
     "OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee",
     "George & Matilda", "Eyecare Plus", "Optical Superstore",
     "1001 Optometry", "EyeQ Optometrists", "Laubman & Pank",
+    "Bupa Optical", "Chemist Warehouse Optometry", "Dresden Vision",
+    "Optical Warehouse", "The Optical Company", "Optical by National Pharmacies",
+    "Matthews Eyecare",
 }
 SOURCE_DISAGREEMENTS = {}
 GENERIC_PLACE_WORDS = {

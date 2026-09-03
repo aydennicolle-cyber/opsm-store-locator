@@ -279,7 +279,7 @@
     if (!retailers.length) return;
     state.retailerRegistry = retailers;
     state.affiliations = (Array.isArray(payload?.affiliations) ? payload.affiliations : [])
-      .filter((item) => item.status === "active");
+      .filter((item) => ["active", "partial"].includes(item.status));
     BRAND_ORDER = retailers.map((item) => item.name);
     DEFAULT_RETAILERS = retailers.filter((item) => item.default_visible).map((item) => item.name);
     BRAND_CONFIG = Object.fromEntries(retailers.map((item) => [item.name, {
@@ -574,7 +574,7 @@
           </select></label>
           <label><span>Status</span><select id="statusSelect">${filterOptions(statuses, state.filters.status, "All statuses")}</select></label>
           <label><span>Affiliation</span><select id="affiliationSelect"><option value="">Any affiliation</option>${state.affiliations
-            .map((item) => `<option value="${escapeHtml(item.affiliation_id)}" ${state.filters.affiliation === item.affiliation_id ? "selected" : ""}>${escapeHtml(item.name)}</option>`)
+            .map((item) => `<option value="${escapeHtml(item.affiliation_id)}" ${state.filters.affiliation === item.affiliation_id ? "selected" : ""}>${escapeHtml(item.name)}${item.status === "partial" ? " · partial coverage" : ""}</option>`)
             .join("")}</select></label>
         </div>
         <label class="service-field"><span>Service</span><input id="serviceInput" value="${escapeHtml(
@@ -645,7 +645,9 @@
       document.getElementById(id).addEventListener("change", (event) => {
         state.filters[key] = event.target.value;
         if (key === "affiliation" && event.target.value) {
-          state.filters.retailers.add("Independent / Other optical");
+          state.allStores
+            .filter((store) => String(store.affiliations || "").split("|").includes(event.target.value))
+            .forEach((store) => state.filters.retailers.add(store.retailer));
         }
         if (key === "country") state.filters.state = "";
         applyFilters();

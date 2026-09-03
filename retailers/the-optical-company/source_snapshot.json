@@ -1,0 +1,52 @@
+{
+  "source_url": "https://www.opticalco.com.au/locations-listing/",
+  "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+  "store_count": 19,
+  "scope": [
+    "Australia"
+  ],
+  "method": "Official network location list; consumer-facing The Optical Co stores only",
+  "retained_fields": [
+    "id",
+    "name",
+    "status",
+    "country",
+    "state",
+    "city",
+    "postal_code",
+    "full_address",
+    "phone",
+    "latitude",
+    "longitude",
+    "official_url",
+    "services",
+    "audiology",
+    "source_url"
+  ],
+  "excluded_fields": [
+    "email",
+    "opening_hours"
+  ],
+  "source_ids": [
+    "charlestown-5400",
+    "chatswood-2067",
+    "green-hills-2323",
+    "murwillumbah-2484",
+    "newcastle-2302",
+    "parramatta-2150",
+    "rutherford-2320",
+    "singleton-2330",
+    "st-ives-2075",
+    "the-galeries-sydney-cbd-2000",
+    "wallsend-2287",
+    "carindale-4152",
+    "helensvale-4212",
+    "loganholme-4129",
+    "mt-gravatt-4122",
+    "mt-ommaney-4074",
+    "robina-4226",
+    "runaway-bay-4216",
+    "melbourne-cbd-3000"
+  ],
+  "coordinate_note": "Official coordinates retained where supplied; otherwise the official address was rate-limit geocoded. Geocoding does not establish place membership."
+}

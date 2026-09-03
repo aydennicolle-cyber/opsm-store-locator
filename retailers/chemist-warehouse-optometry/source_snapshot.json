@@ -1,0 +1,41 @@
+{
+  "source_url": "https://chemistwarehouseoptometry.com.au/pages/store-locator",
+  "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+  "store_count": 8,
+  "scope": [
+    "Australia"
+  ],
+  "method": "Official Storepoint locator endpoint",
+  "retained_fields": [
+    "id",
+    "name",
+    "status",
+    "country",
+    "state",
+    "city",
+    "postal_code",
+    "full_address",
+    "phone",
+    "latitude",
+    "longitude",
+    "official_url",
+    "services",
+    "audiology",
+    "source_url"
+  ],
+  "excluded_fields": [
+    "email",
+    "opening_hours"
+  ],
+  "source_ids": [
+    "loc_97478811908906366c95f13d",
+    "loc_6c1259c5e73d324c1332b2ff",
+    "loc_ced2c69e19a8c19e90889805",
+    "loc_35eb87c7c6bf6aadb455d238",
+    "loc_3657c1c785c24993ac574833",
+    "loc_83c238eec174e184d77ea4c8",
+    "loc_a2abf50af420ac2fc7b256a6",
+    "loc_ab98241db6b00036b9c0eebb"
+  ],
+  "coordinate_note": "Official coordinates retained where supplied; otherwise the official address was rate-limit geocoded. Geocoding does not establish place membership."
+}

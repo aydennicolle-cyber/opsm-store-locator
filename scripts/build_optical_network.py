@@ -250,6 +250,13 @@ def read_freshness() -> dict[str, str]:
         ("1001 Optometry", "1001-optometry", "1001 Optometry Australia"),
         ("EyeQ Optometrists", "eyeq-optometrists", "EyeQ Optometrists Australia"),
         ("Laubman & Pank", "laubman-and-pank", "Laubman & Pank Australia"),
+        ("Bupa Optical", "bupa-optical", "Bupa Optical Australia"),
+        ("Chemist Warehouse Optometry", "chemist-warehouse-optometry", "Chemist Warehouse Optometry Australia"),
+        ("Dresden Vision", "dresden-vision", "Dresden Vision Australia"),
+        ("Optical Warehouse", "optical-warehouse", "Optical Warehouse Australia"),
+        ("The Optical Company", "the-optical-company", "The Optical Company Australia"),
+        ("Optical by National Pharmacies", "national-pharmacies-optical", "Optical by National Pharmacies Australia"),
+        ("Matthews Eyecare", "matthews-eyecare", "Matthews Eyecare New Zealand"),
         ("ProVision", "provision", "ProVision Australia"),
     ):
         snapshot = json.loads(
@@ -317,6 +324,13 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
         ("1001 Optometry", "1001-optometry", "1001 Optometry Australia", ""),
         ("EyeQ Optometrists", "eyeq-optometrists", "EyeQ Optometrists Australia", ""),
         ("Laubman & Pank", "laubman-and-pank", "Laubman & Pank Australia", ""),
+        ("Bupa Optical", "bupa-optical", "Bupa Optical Australia", ""),
+        ("Chemist Warehouse Optometry", "chemist-warehouse-optometry", "Chemist Warehouse Optometry Australia", ""),
+        ("Dresden Vision", "dresden-vision", "Dresden Vision Australia", ""),
+        ("Optical Warehouse", "optical-warehouse", "Optical Warehouse Australia", ""),
+        ("The Optical Company", "the-optical-company", "The Optical Company Australia", ""),
+        ("Optical by National Pharmacies", "national-pharmacies-optical", "Optical by National Pharmacies Australia", ""),
+        ("Matthews Eyecare", "matthews-eyecare", "Matthews Eyecare New Zealand", "nz-"),
         ("Independent / Other optical", "provision", "ProVision Australia", "provision-"),
     ):
         for row in read_csv(ROOT / "retailers" / folder / "stores.csv"):
@@ -326,7 +340,12 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                 {
                     "retailer": retailer,
                     "store_id": f"{slug(retailer)}-{id_country}{local_id}",
-                    "affiliations": "provision" if folder == "provision" else "",
+                    "affiliations": (
+                        "provision" if folder == "provision"
+                        else "optical-company-network" if folder in {"optical-warehouse", "the-optical-company"}
+                        else "visique" if retailer == "Independent / Other optical" and re.search(r"\bvisique\b", tidy(row["name"]), re.I)
+                        else ""
+                    ),
                     "name": tidy(row["name"]),
                     "status": tidy(row.get("status", "Active")) or "Active",
                     "country": country,
@@ -407,6 +426,9 @@ def cleaned_store_name(store: dict) -> str:
         "OPSM ", "Bailey Nelson ", "Specsavers ", "Oscar Wylee ",
         "George & Matilda ", "Eyecare Plus ", "Optical Superstore ",
         "1001 Optometry ", "EyeQ Optometrists ", "Laubman & Pank ",
+        "Bupa Optical ", "Chemist Warehouse Optometry ", "Dresden Vision ",
+        "Optical Warehouse ", "The Optical Company ",
+        "Optical by National Pharmacies ", "Matthews Eyecare ",
     ):
         if name.lower().startswith(prefix.lower()):
             name = name[len(prefix) :]
@@ -496,6 +518,9 @@ def classify(store: dict) -> dict:
     additional_network = store["retailer"] in {
         "George & Matilda", "Eyecare Plus", "Optical Superstore", "1001 Optometry",
         "EyeQ Optometrists", "Laubman & Pank",
+        "Bupa Optical", "Chemist Warehouse Optometry", "Dresden Vision",
+        "Optical Warehouse", "The Optical Company", "Optical by National Pharmacies",
+        "Matthews Eyecare",
     } or "provision" in store.get("affiliations", "").split("|")
     if additional_network:
         explicit = [

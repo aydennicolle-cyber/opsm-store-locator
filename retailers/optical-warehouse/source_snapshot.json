@@ -1,0 +1,41 @@
+{
+  "source_url": "https://www.opticalwarehouse.com.au/local-store/",
+  "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+  "store_count": 8,
+  "scope": [
+    "Australia"
+  ],
+  "method": "Official store list; addresses geocoded when coordinates are not published",
+  "retained_fields": [
+    "id",
+    "name",
+    "status",
+    "country",
+    "state",
+    "city",
+    "postal_code",
+    "full_address",
+    "phone",
+    "latitude",
+    "longitude",
+    "official_url",
+    "services",
+    "audiology",
+    "source_url"
+  ],
+  "excluded_fields": [
+    "email",
+    "opening_hours"
+  ],
+  "source_ids": [
+    "booval-fair",
+    "browns-plains",
+    "capalaba",
+    "hervey-bay",
+    "maroochydore",
+    "maryborough",
+    "stafford",
+    "strathpine"
+  ],
+  "coordinate_note": "Official coordinates retained where supplied; otherwise the official address was rate-limit geocoded. Geocoding does not establish place membership."
+}
