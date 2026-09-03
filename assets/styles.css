@@ -246,6 +246,7 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .performance-import strong { font-size: 9px; text-transform: uppercase; }
 .performance-import small { margin-top: 3px; color: var(--muted); font-size: 8px; line-height: 1.35; }
 .performance-import .secondary-command { min-height: 31px; padding: 0 8px; font-size: 8px; }
+.form-note code { padding: 1px 3px; border: 1px solid #d8e0e3; border-radius: 2px; background: white; color: #35464e; font-size: 0.95em; }
 .lookalike-section { flex: 1 1 auto; }
 .lookalike-list { min-height: 0; overflow: auto; }
 .lookalike-row { width: 100%; min-height: 76px; display: grid; grid-template-columns: minmax(0, 1fr) 34px; align-items: stretch; border-bottom: 1px solid #e7eaeb; background: white; }
@@ -299,6 +300,10 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .event-type.relocated { border-color: var(--gold); }
 
 .compare-intro .button-row { margin-top: 12px; }
+.workflow-note { display: grid; grid-template-columns: 18px 1fr; gap: 8px; margin-bottom: 12px; padding: 10px; border: 1px solid #bcdde5; background: #eff9fb; color: #37525c; }
+.workflow-note svg { width: 16px; height: 16px; color: var(--teal); }
+.workflow-note p { margin: 0; font-size: 9px; line-height: 1.5; }
+.workflow-note strong { color: var(--ink); }
 .button-row { display: flex; flex-wrap: wrap; gap: 7px; }
 .comparison-table-wrap { min-height: 0; flex: 1; overflow: auto; padding: 14px 16px; }
 .comparison-table-wrap h2 { margin-bottom: 10px; }
@@ -417,6 +422,19 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .glossary-list > div { padding: 11px 12px; border: 1px solid var(--line); background: #fbfcfc; }
 .glossary-list dt { margin-bottom: 5px; color: var(--teal); font-size: 10px; font-weight: 850; }
 .glossary-list dd { margin: 0; color: #4e5a60; font-size: 9px; line-height: 1.55; }
+.tour-header { background: #eef7f8; }
+.tour-intro { background: #fafcfc; color: #44565d; }
+.tour-steps { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; counter-reset: tour-step; }
+.tour-steps li { position: relative; min-height: 42px; padding: 9px 10px 9px 40px; border: 1px solid var(--line); background: #fbfcfc; counter-increment: tour-step; }
+.tour-steps li::before { content: counter(tour-step); position: absolute; top: 9px; left: 10px; display: grid; width: 21px; height: 21px; place-items: center; border-radius: 50%; background: var(--ink); color: white; font-size: 8px; font-weight: 850; }
+.tour-steps strong, .tour-steps span { display: block; }
+.tour-steps strong { font-size: 10px; }
+.tour-steps span { margin-top: 3px; color: var(--muted); font-size: 9px; line-height: 1.45; }
+.tour-actions { display: grid; gap: 0; margin: 0; border: 1px solid var(--line); }
+.tour-actions > div { display: grid; grid-template-columns: 92px 1fr; gap: 10px; padding: 9px 10px; border-bottom: 1px solid var(--line); }
+.tour-actions > div:last-child { border-bottom: 0; }
+.tour-actions dt { color: var(--ink); font-size: 9px; font-weight: 850; }
+.tour-actions dd { margin: 0; color: var(--muted); font-size: 9px; line-height: 1.45; }
 .technical-details { border-bottom: 1px solid var(--line); background: #f7f8f8; }
 .technical-details > summary { padding: 14px 24px; color: var(--muted); font-size: 9px; font-weight: 800; cursor: pointer; text-transform: uppercase; }
 .technical-details[open] > summary { border-bottom: 1px solid var(--line); }

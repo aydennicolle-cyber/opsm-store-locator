@@ -15,6 +15,22 @@ As of 3 September 2026 the working census contains:
 
 Counts are generated from reconciled sources. They are not hard-coded targets. Independent coverage remains less complete than named-network coverage.
 
+## Quick orientation before presenting
+
+Open the question-mark icon in the app header for the built-in five-minute tour. The map toolbar works as follows:
+
+- **Layers** changes contextual overlays; it does not change the underlying store census.
+- **Store distance** lets you select two existing stores and draws their straight-line separation.
+- **Candidate** turns the next blank-map click into a hypothetical site. That point inherits its containing public demographic area and nearby network evidence.
+- **Save view** stores the current public view, filters, map position and candidate points in that browser and restores them on a later base-page visit. It does not create a shareable link.
+- **Share** copies a sanitised URL. Local corrections, place shortlist entries and private performance data are excluded.
+- **Brief** prints the currently open place or selected candidate. Open the intended record first.
+- **Export** is context-aware: Network exports selected stores, Places exports filtered places, Opportunity exports the current Bailey-free place results and Compare exports candidate evidence.
+
+Normal marker clicks remain inspection actions: a store opens its store detail and nearby network; a place opens exact-place tenants and nearby competition. Candidate mode is deliberately separate so inspecting an existing marker does not accidentally create a candidate.
+
+The optional **Load private Bailey benchmark** control in Opportunity accepts `store_id` or `store_name` plus `rank` or `performance_score`. If at least five Bailey stores match, the best ten temporarily replace the all-Bailey benchmark. The CSV and raw values remain in browser memory and are not uploaded, stored, exported or placed in share URLs.
+
 ## Suggested 12-minute walkthrough
 
 ### 1. Network — 2 minutes
@@ -40,7 +56,7 @@ Bookmark several Opportunity results. Show that the saved-place shortlist persis
 
 - Summary CSV for one row per place and its decision evidence.
 - Tenant CSV for accepted optical memberships plus researched key co-tenants.
-- A printable selected-place brief from the drawer or the context-aware Report button.
+- A printable selected-place brief from the drawer or the context-aware Brief button.
 
 ### 5. Property intelligence — 1 minute
 

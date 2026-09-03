@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="assets/styles.css?v=20260903k" />
+    <link rel="stylesheet" href="assets/styles.css?v=20260903l" />
   </head>
   <body>
     <header class="app-header">
@@ -31,6 +31,9 @@
       </nav>
       <div class="header-actions">
         <span class="public-badge"><i data-lucide="globe-2"></i>Public intelligence</span>
+        <button class="icon-button" id="tourButton" type="button" title="Open platform tour" aria-label="Open platform tour">
+          <i data-lucide="circle-help"></i>
+        </button>
         <button class="icon-button" id="glossaryButton" type="button" title="Open glossary" aria-label="Open glossary">
           <i data-lucide="book-open"></i>
         </button>
@@ -58,12 +61,12 @@
       <section class="map-workspace" aria-label="Interactive leasing intelligence map">
         <div class="map-toolbar" role="toolbar" aria-label="Map tools">
           <button id="layersButton" type="button" title="Map layers"><i data-lucide="layers-3"></i><span>Layers</span></button>
-          <button id="storeCompareButton" type="button" title="Compare store distance"><i data-lucide="ruler"></i><span>Store distance</span></button>
-          <button id="candidateButton" type="button" title="Drop a candidate site"><i data-lucide="map-pin-plus"></i><span>Candidate</span></button>
-          <button id="saveViewButton" type="button" title="Save this view"><i data-lucide="bookmark"></i><span>Save</span></button>
+          <button id="storeCompareButton" type="button" title="Select two existing stores and measure straight-line distance"><i data-lucide="ruler"></i><span>Store distance</span></button>
+          <button id="candidateButton" type="button" title="Add a hypothetical candidate point for screening"><i data-lucide="map-pin-plus"></i><span>Candidate</span></button>
+          <button id="saveViewButton" type="button" title="Save filters and map position in this browser"><i data-lucide="bookmark"></i><span>Save view</span></button>
           <button id="shareButton" type="button" title="Copy a sanitised public link"><i data-lucide="share-2"></i><span>Share</span></button>
-          <button id="reportButton" type="button" title="Create client report"><i data-lucide="file-down"></i><span>Report</span></button>
-          <button id="downloadButton" type="button" title="Download filtered stores"><i data-lucide="download"></i><span>CSV</span></button>
+          <button id="reportButton" type="button" title="Print a brief for the open place or candidate"><i data-lucide="file-down"></i><span>Brief</span></button>
+          <button id="downloadButton" type="button" title="Export the records visible in the current view"><i data-lucide="download"></i><span>Export</span></button>
         </div>
 
         <aside class="layer-panel" id="layerPanel" hidden aria-label="Map layers">
@@ -137,6 +140,6 @@
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
     <script src="assets/intelligence.js?v=20260903g"></script>
-    <script src="assets/app.js?v=20260903m"></script>
+    <script src="assets/app.js?v=20260903n"></script>
   </body>
 </html>

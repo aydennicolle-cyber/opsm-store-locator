@@ -541,10 +541,11 @@
     if (view === "health" && state.dataHealth) {
       elements.visibleTotal.textContent = Number(state.dataHealth.observed.stores).toLocaleString("en-AU");
       elements.visibleTotalLabel.textContent = "stores observed in census";
-    } else {
+    } else if (view === "network") {
       elements.visibleTotal.textContent = state.filteredStores.length.toLocaleString("en-AU");
-      elements.visibleTotalLabel.textContent = "locations selected";
+      elements.visibleTotalLabel.textContent = `selected of ${(Number(state.metadata.store_count) || state.allStores.length).toLocaleString("en-AU")} census stores`;
     }
+    updateToolbarContext();
     renderView();
     updateCentreMarkersForFilters();
     updateShareUrl(false);
@@ -762,9 +763,9 @@
     state.filteredStores = state.allStores.filter((store) => storeMatchesFilters(store));
     refreshStoreMarkerVisibility();
     updateCentreMarkersForFilters();
-    if (state.view !== "health") {
+    if (state.view === "network") {
       elements.visibleTotal.textContent = state.filteredStores.length.toLocaleString("en-AU");
-      elements.visibleTotalLabel.textContent = "locations selected";
+      elements.visibleTotalLabel.textContent = `selected of ${(Number(state.metadata.store_count) || state.allStores.length).toLocaleString("en-AU")} census stores`;
     }
     if (render && state.view === "network") renderNetworkView();
     updateSaturationLayer();
@@ -781,6 +782,22 @@
       const marker = markerById.get(store.store_id);
       if (marker) storeClusters.addLayer(marker);
     });
+  }
+
+  function updateToolbarContext() {
+    const reportButton = document.getElementById("reportButton");
+    const downloadButton = document.getElementById("downloadButton");
+    if (!reportButton || !downloadButton) return;
+    reportButton.title = "Print a brief for the open place or candidate";
+    const exportLabels = {
+      network: "Export the currently selected store records",
+      centres: "Export the currently filtered retail places",
+      opportunity: "Export the current Bailey-free opportunity results",
+      compare: "Export the candidate comparison",
+      trends: "Export the currently selected store records",
+      health: "Export the currently selected store records",
+    };
+    downloadButton.title = exportLabels[state.view] || "Export current public records";
   }
 
   function relevantCompetitionEntries(place) {
@@ -1195,11 +1212,11 @@
         </details>
         <div class="performance-import">
           <span><strong>Bailey benchmark</strong><small>${escapeHtml(benchmarkLabel)}</small></span>
-          <button class="secondary-command" id="performanceImportButton" type="button"><i data-lucide="upload"></i>Load performance CSV</button>
+          <button class="secondary-command" id="performanceImportButton" type="button" title="Optional private benchmark; processed only in this browser"><i data-lucide="upload"></i>Load private Bailey benchmark</button>
           ${state.performanceBenchmark ? '<button class="secondary-command" id="performanceClearButton" type="button">Use all Bailey stores</button>' : ""}
           <input id="performanceFile" type="file" accept=".csv,text/csv" hidden />
         </div>
-        <p class="form-note">The CSV is read locally in memory and is never uploaded, stored, logged, exported or added to a share URL.</p>
+        <p class="form-note"><strong>Optional:</strong> load a CSV with <code>store_id</code> or <code>store_name</code>, plus <code>rank</code> or <code>performance_score</code>. With at least five Bailey matches, the best ten become the lookalike benchmark. The file and raw values stay in browser memory only and are never uploaded, saved, exported or added to a share URL.</p>
       </section>
       <section class="result-section lookalike-section">
         <div class="section-heading"><h2>${escapeHtml(`${state.opportunityFilters.country} · ${settingLabel}`)}</h2><span>${rows.length} Bailey-free places</span></div>
@@ -1376,6 +1393,7 @@
   function renderCompareView() {
     elements.viewContent.innerHTML = `
       <section class="compare-intro">
+        <div class="workflow-note"><i data-lucide="info"></i><p><strong>Compare hypothetical sites here.</strong> Add a candidate, then click its exact map point so the tool can attach the containing public demographic area and nearby network evidence. To inspect a known store or retail place, click its marker instead; that opens its existing detail and surrounding competition without creating a candidate.</p></div>
         <div class="compact-metrics">
           <div><strong>${state.candidates.length}</strong><span>candidates</span></div>
           <div><strong>${state.compareStores.length}</strong><span>stores selected</span></div>
@@ -2581,9 +2599,9 @@
       location_setting: centre.location_setting, country: centre.country, state: centre.state, locality: centre.locality || centre.suburb || "", postcode: centre.postcode || "", address: centre.address || "",
       nearest_bailey_km: row.nearest_bailey_km ?? centre.nearest_bailey_km ?? "", population_2025: market.population_2025 ?? "",
       population_growth_2021_2025_pct: market.population_growth_2021_2025_pct ?? "", age_45_plus_pct_2021: market.age_45_plus_pct_2021 ?? "",
-      median_equivalised_household_income_weekly_2021: market.median_equivalised_household_income_weekly_2021 ?? "", centre_class: centre.centre_class || "Unknown",
-      property_groups: propertyGroupNames(centre).join(" | "), leasing_arrangement: centre.leasing_arrangement || "Unknown",
-      portfolio_overlap: overlapLabel(centre.portfolio_overlap_status, centre.location_setting === "High Street" ? "corridor" : "centre"),
+      median_equivalised_household_income_weekly_2021: market.median_equivalised_household_income_weekly_2021 ?? "", centre_class: centre.location_setting === "High Street" ? "Not applicable at corridor level" : centre.centre_class || "Unknown",
+      property_groups: centre.location_setting === "High Street" ? "" : propertyGroupNames(centre).join(" | "), leasing_arrangement: centre.location_setting === "High Street" ? "Not applicable at corridor level" : centre.leasing_arrangement || "Unknown",
+      portfolio_overlap: centre.location_setting === "High Street" ? "Not assessed at corridor level" : overlapLabel(centre.portfolio_overlap_status, "centre"),
       optical_store_count: centre.optical_store_count || 0, retailers: (centre.retailers || []).join(" | "),
       high_street_baseline_status: centre.location_setting === "High Street" && (state.placeTenantMetadata.researched_bailey_corridor_place_ids || []).includes(centre.place_id) ? "Baseline checked" : "",
       exact_place_optical_tenant_count: tenantsForPlace(centre.place_id).filter((row) => row.category === "Optical").length,
@@ -2681,7 +2699,10 @@
       ${highStreetProfileHtml(centre)}
       <section class="detail-section"><h3>Key co-tenancy profile</h3>${keyCoTenancyHtml(centre)}</section>
       ${developmentSignalsHtml(centre)}
-      <section class="detail-section"><h3>Ownership, management and leasing</h3>
+      ${isCorridor ? `<section class="detail-section"><h3>High-street place context</h3><div class="data-grid property-summary-grid">
+          <div class="data-point"><span>Place type</span><strong>High Street Corridor</strong></div>
+          <div class="data-point"><span>Property intelligence</span><strong>Not assessed at corridor level</strong></div>
+        </div><p class="empty-note">Centre class, ownership and leasing control describe an individual property. They are not applied to an entire street corridor.</p></section>` : `<section class="detail-section"><h3>Ownership, management and leasing</h3>
         <div class="data-grid property-summary-grid">
           <div class="data-point"><span>Centre class</span><strong>${escapeHtml(centre.centre_class || "Unknown")}</strong><small>${escapeHtml(centre.centre_class_method || "Not confirmed")}</small></div>
           <div class="data-point"><span>Leasing arrangement</span><strong>${escapeHtml(centre.leasing_arrangement || "Unknown")}</strong></div>
@@ -2690,14 +2711,15 @@
         <strong>${escapeHtml(overlapLabel(centre.portfolio_overlap_status, placeLabel))}</strong>
         <p>${centre.portfolio_overlap_groups?.length ? centre.portfolio_overlap_groups.map((item) => `${escapeHtml(item.canonical_name)} (${escapeHtml(relationshipRoleLabel(item.role))}): ${item.bailey_store_count} Bailey store${item.bailey_store_count === 1 ? "" : "s"} across ${item.bailey_property_count} propert${item.bailey_property_count === 1 ? "y" : "ies"}`).join("<br>") : "No evidenced public portfolio overlap is available."}</p>
         <small>Portfolio overlap is derived from public property and tenancy evidence. It is not proof of a private commercial relationship.</small>
-      </section>
-      <section class="detail-section"><h3>Public ${isCorridor ? "place" : "centre"} metrics</h3><div class="data-grid">
-        <div class="data-point"><span>Total GLA</span><strong>${centre.gla_sqm ? formatNumber(centre.gla_sqm, " sqm") : "Not published"}</strong></div>
+      </section>`}
+      <section class="detail-section"><h3>Public ${isCorridor ? "corridor" : "centre"} metrics</h3><div class="data-grid">
+        ${isCorridor ? `<div class="data-point"><span>Comparison boundary</span><strong>800 m indicative corridor</strong></div>
+        <div class="data-point"><span>Exact mapped optical stores</span><strong>${formatNumber(centre.optical_store_count || 0)}</strong></div>` : `<div class="data-point"><span>Total GLA</span><strong>${centre.gla_sqm ? formatNumber(centre.gla_sqm, " sqm") : "Not published"}</strong></div>
         <div class="data-point"><span>Annual visits</span><strong>${formatNumber(centre.annual_visits)}</strong></div>
         <div class="data-point"><span>Retail tenancies</span><strong>${formatNumber(centre.tenancy_count)}</strong></div>
-        <div class="data-point"><span>Trade area population</span><strong>${formatNumber(centre.trade_area_population)}</strong></div>
+        <div class="data-point"><span>Trade area population</span><strong>${formatNumber(centre.trade_area_population)}</strong></div>`}
         <div class="data-point"><span>Nearest Bailey Nelson</span><strong>${Number.isFinite(Number(centre.nearest_bailey_km)) ? Intel.formatDistance(Number(centre.nearest_bailey_km)) : "Unknown"}</strong></div>
-      </div>${centre.source_url && (centre.gla_sqm || centre.annual_visits || centre.tenancy_count) ? `<p class="empty-note">Metric source: <a href="${escapeHtml(centre.source_url)}" target="_blank" rel="noopener">public owner material</a>${centre.source_date ? ` dated ${escapeHtml(formatDate(centre.source_date))}` : ""}${centre.last_verified_at ? ` · checked ${escapeHtml(formatDate(centre.last_verified_at))}` : ""}.</p>` : ""}</section>
+      </div>${!isCorridor && centre.source_url && (centre.gla_sqm || centre.annual_visits || centre.tenancy_count) ? `<p class="empty-note">Metric source: <a href="${escapeHtml(centre.source_url)}" target="_blank" rel="noopener">public owner material</a>${centre.source_date ? ` dated ${escapeHtml(formatDate(centre.source_date))}` : ""}${centre.last_verified_at ? ` · checked ${escapeHtml(formatDate(centre.last_verified_at))}` : ""}.</p>` : ""}</section>
       <section class="detail-section source-block"><i data-lucide="database"></i><div><strong>${escapeHtml(centre.source_basis || "Best available public place record")}</strong><span>${centre.source_date ? `Place evidence dated ${escapeHtml(formatDate(centre.source_date))}` : "Public metrics remain incomplete"}</span></div></section>
       <details class="technical-details"><summary>Technical record, methodology and public corrections</summary>
         <section class="detail-section"><h3>Technical record</h3><div class="data-grid">
@@ -2706,7 +2728,7 @@
           <div class="data-point"><span>Research status</span><strong>${escapeHtml(centre.research_status || "Not researched")}</strong></div>
           <div class="data-point"><span>Location setting</span><strong>${escapeHtml(centre.location_setting)}</strong></div>
         </div><p class="empty-note">A canonical place ID is the stable record used to join stores, property facts and corrections without relying on changing names.</p></section>
-        ${propertyCorrectionEditorHtml(centre, relationships)}
+        ${isCorridor ? '<p class="empty-note">Property ownership and centre-class corrections are available for shopping-centre records only.</p>' : propertyCorrectionEditorHtml(centre, relationships)}
       </details>`;
     openDetailPanel();
     bindNearRows();
@@ -3376,11 +3398,11 @@
       <section><h3>Why it ranks</h3>${componentHtml}<p>Lookalike score compares public evidence with Bailey Nelson’s mapped footprint. It is a screening heuristic, not a forecast of store success.</p></section>
       <section><h3>Exact-place optical tenants</h3><p>${optical.length ? optical.map((item) => escapeHtml(item.tenant_name)).join(" · ") : "No accepted exact-place optical membership is recorded."}</p></section>
       <section><h3>Key co-tenancy profile</h3><p>${keyTenants.length ? keyTenants.map((item) => `${escapeHtml(item.tenant_name)} (${escapeHtml(item.category)})`).join(" · ") : "Key co-tenancy research has not been completed for this place."}</p></section>
-      <section><h3>Property and leasing</h3><div class="report-grid">
+      ${centre.location_setting === "High Street" ? '<section><h3>High-street place context</h3><p>Centre class, ownership, leasing arrangement and property portfolio overlap are not applied to a whole street corridor.</p></section>' : `<section><h3>Property and leasing</h3><div class="report-grid">
         <div><span>Centre class</span><strong>${escapeHtml(record.centre_class)}</strong></div>
         <div><span>Property groups</span><strong>${escapeHtml(record.property_groups || "Unknown")}</strong></div>
         <div><span>Leasing arrangement</span><strong>${escapeHtml(record.leasing_arrangement)}</strong></div>
-      </div><p>${escapeHtml(record.portfolio_overlap)}</p></section>
+      </div><p>${escapeHtml(record.portfolio_overlap)}</p></section>`}
       <section><h3>Evidence gaps and cautions</h3><ul>
         <li>${gaps.length ? `${escapeHtml(gaps.join(", "))} are not scored because evidence is unavailable.` : "All four weighted screening components have public evidence."}</li>
         <li>Nearby retailers are not treated as tenants unless they share the accepted canonical place ID.</li>
@@ -3480,7 +3502,7 @@
 
   function saveView() {
     localStorage.setItem("optical-leasing-saved-view", JSON.stringify(shareState()));
-    showToast("View saved in this browser.");
+    showToast("View saved in this browser and will reopen on your next base-page visit.");
   }
 
   function restoreShareState() {
@@ -3493,7 +3515,14 @@
         showToast("The shared view could not be read.", "warning");
       }
     }
-    if (!payload) return;
+    if (!payload) {
+      try {
+        payload = JSON.parse(localStorage.getItem("optical-leasing-saved-view") || "null");
+      } catch {
+        localStorage.removeItem("optical-leasing-saved-view");
+      }
+    }
+    if (!payload) return false;
     if (VIEW_CONFIG[payload.view]) state.view = payload.view;
     if (payload.filters) {
       state.filters.retailers = new Set(
@@ -3556,6 +3585,7 @@
     if (Number.isFinite(payload.map?.latitude) && Number.isFinite(payload.map?.longitude)) {
       map.setView([payload.map.latitude, payload.map.longitude], payload.map.zoom || 10);
     }
+    return true;
   }
 
   function downloadFilteredCsv() {
@@ -3563,6 +3593,37 @@
       state.filteredStores.map((store) => PUBLIC_STORE_FIELDS.map((field) => csvEscape(store[field])).join(","))
     );
     downloadText(`optical-stores-filtered-${new Date().toISOString().slice(0, 10)}.csv`, `${rows.join("\n")}\n`);
+  }
+
+  function downloadCandidateComparisonCsv() {
+    const records = state.candidates.map((candidate) => {
+      const score = scoreCandidate(candidate);
+      const market = marketForPoint(candidate)?.properties || {};
+      return {
+        candidate_id: candidate.id,
+        candidate_name: candidate.name,
+        latitude: candidate.latitude,
+        longitude: candidate.longitude,
+        brand_profile: candidate.profile_id,
+        available_area_sqm: candidate.area_sqm || "",
+        screening_score: score.score ?? "",
+        evidence_coverage_pct: score.coverage ?? "",
+        population_2025: market.population_2025 ?? "",
+        population_growth_2021_2025_pct: market.population_growth_2021_2025_pct ?? "",
+        age_45_plus_pct_2021: market.age_45_plus_pct_2021 ?? "",
+        median_equivalised_household_income_weekly_2021: market.median_equivalised_household_income_weekly_2021 ?? "",
+        nearest_competitor_km: score.nearestCompetitorKm ?? "",
+        competitors_within_5km: score.competitorCountFiveKm ?? "",
+      };
+    });
+    exportRecords(`candidate-comparison-${new Date().toISOString().slice(0, 10)}.csv`, records);
+  }
+
+  function downloadContextCsv() {
+    if (state.view === "centres") return exportPlaceSummary(filteredPlaces().map((place) => place.place_id));
+    if (state.view === "opportunity") return exportPlaceSummary(performanceAdjustedLookalikes().map((place) => place.place_id));
+    if (state.view === "compare") return downloadCandidateComparisonCsv();
+    return downloadFilteredCsv();
   }
 
   function resetAll() {
@@ -3578,6 +3639,7 @@
       affiliation: "",
     };
     state.candidates = [];
+    localStorage.removeItem("optical-leasing-saved-view");
     candidateLayer.clearLayers();
     candidateMarkerById.clear();
     catchmentLayer.clearLayers();
@@ -3613,6 +3675,7 @@
       if (match) openPropertyGroupDetail(decodeURIComponent(match[1]));
     });
     document.getElementById("resetButton").addEventListener("click", resetAll);
+    document.getElementById("tourButton").addEventListener("click", openTourDetail);
     document.getElementById("glossaryButton").addEventListener("click", openGlossaryDetail);
     document.getElementById("layersButton").addEventListener("click", () => {
       elements.layerPanel.hidden = !elements.layerPanel.hidden;
@@ -3649,7 +3712,7 @@
     document.getElementById("saveViewButton").addEventListener("click", saveView);
     document.getElementById("shareButton").addEventListener("click", () => updateShareUrl(true));
     document.getElementById("reportButton").addEventListener("click", generateContextReport);
-    document.getElementById("downloadButton").addEventListener("click", downloadFilteredCsv);
+    document.getElementById("downloadButton").addEventListener("click", downloadContextCsv);
     map.on("click", (event) => {
       if (state.candidateDropMode) dropCandidate(event.latlng);
     });
@@ -3680,6 +3743,38 @@
       </header>
       <section class="detail-section glossary-intro"><p>These definitions explain how the tool uses each term. They are working leasing-intelligence definitions, not legal or accounting advice.</p></section>
       <section class="detail-section"><dl class="glossary-list">${state.glossary.map((item) => `<div><dt>${escapeHtml(item.term)}</dt><dd>${escapeHtml(item.definition)}</dd></div>`).join("")}</dl></section>`;
+    openDetailPanel();
+    refreshIcons();
+  }
+
+  function openTourDetail() {
+    elements.detailContent.innerHTML = `
+      <header class="detail-header tour-header" style="--brand-color:#168095">
+        <span class="retailer-tag"><i data-lucide="compass"></i>Five-minute platform tour</span>
+        <h2>From market map to client brief</h2>
+        <address>The quickest path through the public leasing-intelligence workflow.</address>
+      </header>
+      <section class="detail-section tour-intro"><p><strong>Recommended client flow:</strong> find an opportunity, understand why it ranks, inspect competition and leasing, save it to the shortlist, then export a brief.</p></section>
+      <section class="detail-section"><h3>The six main views</h3><ol class="tour-steps">
+        <li><strong>Network</strong><span>Filter and inspect individual optical stores. The headline shows the selected subset and the full census total.</span></li>
+        <li><strong>Places</strong><span>Browse canonical shopping centres and high-street corridors, their exact mapped optical tenants, and researched public property facts.</span></li>
+        <li><strong>Opportunity</strong><span>Rank Bailey-free places using a transparent lookalike screen. Score means similarity; completeness means how much evidence was available.</span></li>
+        <li><strong>Trends</strong><span>Review recorded openings, closures, relocations and source freshness. This depends on reconciled historical snapshots.</span></li>
+        <li><strong>Compare</strong><span>Place hypothetical candidate points side by side. A candidate uses the public demographic area containing the clicked point plus nearby network evidence.</span></li>
+        <li><strong>Data Health</strong><span>See what is mapped, current, researched or still incomplete before relying on a result.</span></li>
+      </ol></section>
+      <section class="detail-section"><h3>Map tools</h3><dl class="tour-actions">
+        <div><dt>Layers</dt><dd>Turn demographics, population growth, development signals, competition and amenities on or off.</dd></div>
+        <div><dt>Store distance</dt><dd>Select two existing store markers or list rows; the map draws their straight-line distance.</dd></div>
+        <div><dt>Candidate</dt><dd>Click an exact hypothetical site on the map for screening. This is separate from inspecting an existing store or place.</dd></div>
+        <div><dt>Save view</dt><dd>Save the current filters, map position and public candidate points in this browser. It is local, not shared.</dd></div>
+        <div><dt>Share</dt><dd>Copy a public-safe URL containing the current view and filters. Local corrections, shortlist entries and private performance data are excluded.</dd></div>
+        <div><dt>Brief</dt><dd>Print the open place’s client brief, or the selected candidate brief. Open the item you want first.</dd></div>
+        <div><dt>Export</dt><dd>Download the records relevant to the current view: stores, places, opportunity results or candidate comparison.</dd></div>
+      </dl></section>
+      <section class="detail-section"><h3>Clicks and comparison</h3><p>Clicking a <strong>store</strong> opens that store and nearby retailers. Clicking a <strong>place</strong> opens the centre or corridor, exact-place optical tenants and nearby competition. Turning on <strong>Candidate</strong> changes a blank map click into a hypothetical site. Existing markers keep their normal detail behaviour, which avoids mixing inspection with candidate creation.</p></section>
+      <section class="detail-section"><h3>Optional private Bailey benchmark</h3><p>The Opportunity CSV loader is only for a Bailey-supplied performance ranking. It needs a store ID or name plus rank or performance score, and at least five valid matches. It temporarily re-benchmarks the lookalike screen using the best ten matches. The file and raw values remain in browser memory and are not uploaded or saved.</p></section>
+      <section class="detail-section source-block"><i data-lucide="shield-check"></i><div><strong>Use Data Health as the caveat page</strong><span>The map is broad; property research, co-tenancy and demographic availability are not equally complete for every place.</span></div></section>`;
     openDetailPanel();
     refreshIcons();
   }
@@ -3765,10 +3860,9 @@
       createCentreMarkers();
       createDevelopmentMarkers();
       bindGlobalEvents();
-      const hasSharedMap = new URLSearchParams(window.location.search).has("share");
-      restoreShareState();
+      const restoredView = restoreShareState();
       applyFilters(false);
-      if (!hasSharedMap) map.fitBounds(NETWORK_BOUNDS, { padding: [18, 18] });
+      if (!restoredView) map.fitBounds(NETWORK_BOUNDS, { padding: [18, 18] });
       updateLayerVisibility();
       setView(state.view);
       renderCandidateDock();
