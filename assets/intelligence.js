@@ -208,8 +208,8 @@
       },
       {
         value: percentile(
-          all.map((item) => item.median_household_income_weekly_2021),
-          properties.median_household_income_weekly_2021
+          all.map((item) => item.median_equivalised_household_income_weekly_2021 ?? item.median_household_income_weekly_2021),
+          properties.median_equivalised_household_income_weekly_2021 ?? properties.median_household_income_weekly_2021
         ),
         weight: 20,
       },
@@ -352,7 +352,7 @@
       sa2Count: included.length,
       population: Math.round(population),
       age45PlusPct: weighted("age_45_plus_pct_2021"),
-      medianHouseholdIncomeWeekly: weighted("median_household_income_weekly_2021"),
+      medianHouseholdIncomeWeekly: weighted("median_equivalised_household_income_weekly_2021"),
       apportionmentMethod: "SA2 area-overlap apportionment",
     };
   }
@@ -437,6 +437,24 @@
     return { by_retailer: byRetailer };
   }
 
+  function normalisePlaceShortlist(placeIds, remaps = {}) {
+    const resolved = [];
+    const seen = new Set();
+    for (const value of Array.isArray(placeIds) ? placeIds : []) {
+      let current = String(value || "");
+      const visited = new Set();
+      while (current && remaps[current] && !visited.has(current)) {
+        visited.add(current);
+        current = remaps[current];
+      }
+      if (current && !seen.has(current)) {
+        seen.add(current);
+        resolved.push(current);
+      }
+    }
+    return resolved;
+  }
+
   function placeMatchesRetailerFilters(place, mustHave, mustNotHave, requireAny = false) {
     const retailers = new Set(Array.isArray(place?.retailers) ? place.retailers : []);
     return (!requireAny || retailers.size > 0)
@@ -497,6 +515,7 @@
   return {
     haversine,
     formatDistance,
+    normalisePlaceShortlist,
     percentile,
     pointInGeometry,
     findMarketFeature,

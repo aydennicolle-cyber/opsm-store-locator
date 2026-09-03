@@ -569,7 +569,7 @@ def market_for_place(place: dict, market_features: list[dict]) -> dict:
                 "sa2_name": props.get("sa2_name") or props.get("SA2_NAME21") or props.get("name") or "",
                 "population_2025": props.get("population_2025"),
                 "population_growth_pct": props.get("population_growth_2021_2025_pct"),
-                "median_household_income": props.get("median_household_income_weekly_2021"),
+                "median_household_income": props.get("median_equivalised_household_income_weekly_2021"),
                 "age_45_plus_pct": props.get("age_45_plus_pct_2021"),
                 "retail_businesses": props.get("retail_businesses_2025"),
             }

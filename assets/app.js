@@ -158,6 +158,7 @@
     metadata: {},
     centres: [],
     markets: [],
+    marketMetadata: {},
     storeLinks: {},
     events: {},
     profiles: [],
@@ -171,6 +172,10 @@
     propertyCorrections: [],
     localPropertyGroups: [],
     lookalikes: { metadata: {}, rankings: {}, bailey_benchmarks: [] },
+    placeTenants: [],
+    placeTenantMetadata: {},
+    placeIdRemaps: {},
+    placeShortlist: new Set(),
     performanceBenchmark: null,
     consultantCorrections: [],
     localPlaces: [],
@@ -230,6 +235,7 @@
   const LOCAL_PLACE_STORAGE_KEY = "bailey-leasing-local-places-v1";
   const PROPERTY_CORRECTION_STORAGE_KEY = "bailey-leasing-property-corrections-v1";
   const LOCAL_PROPERTY_GROUP_STORAGE_KEY = "bailey-leasing-local-property-groups-v1";
+  const PLACE_SHORTLIST_STORAGE_KEY = "bailey-leasing-place-shortlist-v1";
 
   const map = L.map("map", { zoomControl: false, preferCanvas: true }).setView(
     AUSTRALIA_VIEW.center,
@@ -865,7 +871,7 @@
           <label><span>Leasing arrangement</span><select id="placeArrangement">${filterOptions(["In-house", "External agency", "Private landlord", "Unknown"], state.placeFilters.arrangement, "Any arrangement")}</select></label>
           <label><span>Portfolio overlap</span><select id="placeOverlap">${filterOptions(["SAME_CENTRE", "LEASING_CONTROLLER_OVERLAP", "PROPERTY_GROUP_OVERLAP", "EXTERNAL_AGENCY_OVERLAP", "NO_KNOWN_OVERLAP", "UNKNOWN"], state.placeFilters.overlap, "Any overlap status")}</select></label>
           <label><span>Centre class</span><select id="placeCentreClass">${filterOptions(["Super Regional", "Regional", "Sub-regional", "Neighbourhood", "CBD / Mixed-use", "Outlet", "Large Format", "Other", "Unknown"], state.placeFilters.centre_class, "Any centre class")}</select></label>
-          <label><span>Minimum weekly income</span><input id="placeMinIncome" type="number" min="0" step="100" value="${escapeHtml(state.placeFilters.min_income)}" placeholder="No minimum" /></label>
+          <label><span>Minimum equivalised weekly income</span><input id="placeMinIncome" type="number" min="0" step="100" value="${escapeHtml(state.placeFilters.min_income)}" placeholder="No minimum" /></label>
           <label><span>Minimum nearest BN (km)</span><input id="placeMinBailey" type="number" min="0" step="1" value="${escapeHtml(state.placeFilters.min_bailey_distance)}" placeholder="No minimum" /></label>
           <label><span>Sort results</span><select id="placeSort">${filterOptions(["name", "optical_tenants", "household_income", "nearest_bailey", "portfolio_white_space"], state.placeFilters.sort, "Sort by")}</select></label>
         </div>
@@ -935,7 +941,7 @@
     return state.centres.filter((place) => {
       const groupNames = (place.group_ids || []).map((groupId) => propertyGroup(groupId)?.canonical_name || "").join(" ");
       const haystack = `${place.name} ${(place.aliases || []).join(" ")} ${place.locality} ${place.suburb} ${place.state} ${place.owner} ${place.manager} ${groupNames}`.toLowerCase();
-      const income = Number(place.market?.median_household_income || place.market?.median_household_income_weekly_2021 || 0);
+      const income = Number(place.market?.median_household_income || place.market?.median_equivalised_household_income_weekly_2021 || 0);
       const nearestBailey = Number(place.nearest_bailey_km);
       return (
         (!query || haystack.includes(query)) &&
@@ -958,7 +964,7 @@
     const sorters = {
       name: (a, b) => a.name.localeCompare(b.name),
       optical_tenants: (a, b) => Number(b.optical_store_count) - Number(a.optical_store_count) || a.name.localeCompare(b.name),
-      household_income: (a, b) => Number(b.market?.median_household_income || b.market?.median_household_income_weekly_2021 || 0) - Number(a.market?.median_household_income || a.market?.median_household_income_weekly_2021 || 0) || a.name.localeCompare(b.name),
+      household_income: (a, b) => Number(b.market?.median_household_income || b.market?.median_equivalised_household_income_weekly_2021 || 0) - Number(a.market?.median_household_income || a.market?.median_equivalised_household_income_weekly_2021 || 0) || a.name.localeCompare(b.name),
       nearest_bailey: (a, b) => Number(b.nearest_bailey_km || -1) - Number(a.nearest_bailey_km || -1) || a.name.localeCompare(b.name),
       portfolio_white_space: (a, b) => Number(b.portfolio_white_space) - Number(a.portfolio_white_space) || Number(b.optical_store_count) - Number(a.optical_store_count) || a.name.localeCompare(b.name),
     };
@@ -1025,7 +1031,7 @@
   function performanceAdjustedLookalikes() {
     const rows = lookalikeKeys().flatMap((key) => state.lookalikes.rankings?.[key] || [])
       .map((row) => ({ ...row, components: { ...row.components } }));
-    const fields = ["population_2025", "population_growth_2021_2025_pct", "age_45_plus_pct_2021", "median_household_income_weekly_2021"];
+    const fields = ["population_2025", "population_growth_2021_2025_pct", "age_45_plus_pct_2021", "median_equivalised_household_income_weekly_2021"];
     rows.forEach((row) => {
       const benchmarks = selectedPerformanceBenchmarks(row.location_setting);
       if (!state.performanceBenchmark || benchmarks.length < 2) return;
@@ -1059,13 +1065,31 @@
 
   function lookalikeRowHtml(row) {
     const components = row.components || {};
-    return `<button class="lookalike-row" data-place-id="${escapeHtml(row.place_id)}">
+    const saved = state.placeShortlist.has(resolvePlaceId(row.place_id));
+    return `<div class="lookalike-row">
+      <button class="lookalike-open" type="button" data-open-place-id="${escapeHtml(row.place_id)}" aria-label="Open ${escapeHtml(row.name)}">
       <span class="rank-number">${row.rank}</span>
       <span><strong>${escapeHtml(row.name)}</strong><small>${escapeHtml(`${row.location_setting} · ${row.locality || "Locality not recorded"}${row.state ? `, ${row.state}` : ""}`)}</small></span>
       <span class="lookalike-score"><strong>${row.score ?? "—"}</strong><small>lookalike</small></span>
       <span><strong>${row.screening_completeness}%</strong><small>complete</small></span>
       <span class="component-mini"><small>Footprint ${components.bailey_footprint_similarity ?? "—"} · Whitespace ${components.bailey_whitespace ?? "—"} · Optical ${components.optical_market_validation ?? "—"} · Context ${components.accessibility_retail_context ?? "—"}</small></span>
-    </button>`;
+      </button>
+      <button class="place-shortlist-toggle ${saved ? "saved" : ""}" type="button" data-shortlist-place-id="${escapeHtml(row.place_id)}" aria-label="${saved ? "Remove from" : "Add to"} shortlist" title="${saved ? "Remove from" : "Add to"} shortlist"><i data-lucide="bookmark${saved ? "-check" : ""}"></i></button>
+    </div>`;
+  }
+
+  function opportunityShortlistHtml() {
+    const entries = shortlistedPlaces();
+    const available = entries.filter((item) => item.place);
+    const unavailable = entries.length - available.length;
+    return `<section class="place-shortlist-panel">
+      <div><span><strong>${entries.length}</strong> saved place${entries.length === 1 ? "" : "s"}</span>${unavailable ? `<small>${unavailable} unavailable or awaiting a remap</small>` : ""}</div>
+      <div class="button-row">
+        <button class="secondary-command" id="exportShortlistSummary" type="button" ${available.length ? "" : "disabled"}>Summary CSV</button>
+        <button class="secondary-command" id="exportShortlistTenants" type="button" ${available.length ? "" : "disabled"}>Tenant CSV</button>
+        <button class="secondary-command" id="clearPlaceShortlist" type="button" ${entries.length ? "" : "disabled"}>Clear</button>
+      </div>
+    </section>`;
   }
 
   async function importPerformanceBenchmark(file) {
@@ -1151,6 +1175,7 @@
       </section>
       <section class="result-section lookalike-section">
         <div class="section-heading"><h2>${escapeHtml(`${state.opportunityFilters.country} · ${settingLabel}`)}</h2><span>${rows.length} Bailey-free places</span></div>
+        ${opportunityShortlistHtml()}
         <div class="lookalike-list" id="lookalikeList">${rows.length ? rows.slice(0, 150).map(lookalikeRowHtml).join("") : '<div class="empty-state"><strong>No places match these filters</strong><span>Change the location setting or retailer presence requirements.</span></div>'}</div>
       </section>
       <details class="manual-screening"><summary>Screen a manual candidate point</summary><section class="opportunity-form">
@@ -1173,7 +1198,7 @@
         <p class="form-note">The index is a transparent heuristic, not a probability of store success. Unavailable components reduce screening completeness rather than being guessed.</p>
       </section>
       <section class="result-section">
-        <div class="section-heading"><h2>Shortlist</h2><span>${state.candidates.length} sites</span></div>
+        <div class="section-heading"><h2>Manual candidate shortlist</h2><span>${state.candidates.length} sites</span></div>
         <div class="candidate-list" id="candidateList">${
           state.candidates.length
             ? state.candidates.map(candidateListRow).join("")
@@ -1239,10 +1264,19 @@
       renderOpportunityView();
     });
     document.getElementById("lookalikeList").addEventListener("click", (event) => {
-      const row = event.target.closest("[data-place-id]");
+      const shortlistButton = event.target.closest("[data-shortlist-place-id]");
+      if (shortlistButton) return togglePlaceShortlist(shortlistButton.dataset.shortlistPlaceId);
+      const row = event.target.closest("[data-open-place-id]");
       if (!row) return;
-      const place = state.centres.find((item) => item.place_id === row.dataset.placeId);
+      const place = state.centres.find((item) => item.place_id === row.dataset.openPlaceId);
       openCentreDetail(place);
+    });
+    document.getElementById("exportShortlistSummary")?.addEventListener("click", () => exportPlaceSummary([...state.placeShortlist]));
+    document.getElementById("exportShortlistTenants")?.addEventListener("click", () => exportPlaceTenants([...state.placeShortlist]));
+    document.getElementById("clearPlaceShortlist")?.addEventListener("click", () => {
+      state.placeShortlist.clear();
+      persistPlaceShortlist();
+      renderOpportunityView();
     });
     [
       ["profileSelect", "profile_id"],
@@ -1286,7 +1320,7 @@
             ([retailer, date]) => `<div><span>${escapeHtml(retailer)}</span><strong>${escapeHtml(formatDate(date))}</strong></div>`
           )
           .join("")}
-        <div><span>ABS market indicators</span><strong>26 May 2026</strong></div>
+        <div><span>ABS market indicators</span><strong>${escapeHtml(formatDate(state.marketMetadata.source_release_date))}</strong></div>
       </section>
       <section class="result-section">
         <div class="section-heading"><h2>Network events</h2><span>${events.length} events</span></div>
@@ -1382,6 +1416,62 @@
     link.download = filename;
     link.click();
     URL.revokeObjectURL(url);
+  }
+
+  function resolvePlaceId(placeId) {
+    let current = String(placeId || "");
+    const visited = new Set();
+    while (current && state.placeIdRemaps[current] && !visited.has(current)) {
+      visited.add(current);
+      current = state.placeIdRemaps[current];
+    }
+    return current;
+  }
+
+  function loadPlaceShortlist() {
+    try {
+      const stored = JSON.parse(localStorage.getItem(PLACE_SHORTLIST_STORAGE_KEY) || "[]");
+      const resolved = Intel.normalisePlaceShortlist(stored, state.placeIdRemaps);
+      state.placeShortlist = new Set(resolved);
+      persistPlaceShortlist();
+    } catch {
+      state.placeShortlist = new Set();
+    }
+  }
+
+  function persistPlaceShortlist() {
+    localStorage.setItem(PLACE_SHORTLIST_STORAGE_KEY, JSON.stringify([...state.placeShortlist]));
+  }
+
+  function togglePlaceShortlist(placeId) {
+    const resolved = resolvePlaceId(placeId);
+    if (!resolved) return;
+    if (state.placeShortlist.has(resolved)) state.placeShortlist.delete(resolved);
+    else state.placeShortlist.add(resolved);
+    persistPlaceShortlist();
+    if (state.view === "opportunity") renderOpportunityView();
+    if (state.selectedCentreId === resolved && elements.detailPanel.classList.contains("open")) {
+      openCentreDetail(state.centres.find((item) => item.place_id === resolved));
+    }
+  }
+
+  function shortlistedPlaces() {
+    return [...state.placeShortlist].map((placeId) => ({
+      placeId,
+      place: state.centres.find((item) => item.place_id === placeId) || null,
+    }));
+  }
+
+  function allPublishedLookalikes() {
+    return Object.values(state.lookalikes.rankings || {}).flat();
+  }
+
+  function publishedLookalike(placeId) {
+    return allPublishedLookalikes().find((row) => row.place_id === resolvePlaceId(placeId)) || null;
+  }
+
+  function tenantsForPlace(placeId) {
+    return state.placeTenants.filter((row) => row.place_id === resolvePlaceId(placeId));
   }
 
   function loadConsultantCorrections() {
@@ -1837,6 +1927,17 @@
         <div><span>High-street corridors</span><strong>${formatNumber(health.observed.corridors)}</strong><small>800 m indicative catchments</small></div>
       </section>
       <section class="health-overview property-health">
+        <div class="section-heading"><h2>Demographic intelligence health</h2><span>separate from store and property freshness</span></div>
+        <div class="compact-metrics">
+          <div><strong>${formatNumber(state.marketMetadata.feature_count || state.markets.length)}</strong><span>Australian SA2 areas</span></div>
+          <div><strong>${escapeHtml(formatDate(state.marketMetadata.source_release_date))}</strong><span>ABS release</span></div>
+          <div><strong>${formatNumber(state.markets.filter((item) => item.properties.population_2025 !== null).length)}</strong><span>2025 population values</span></div>
+          <div><strong>${formatNumber(state.markets.filter((item) => item.properties.small_population_caution).length)}</strong><span>small-area cautions</span></div>
+        </div>
+        <p>Population uses ABS 2025 estimated resident population. Age and equivalised weekly household income retain their 2021 Census reference year. Very small-area rates are suppressed where Census perturbation can make percentages misleading.</p>
+        <p class="empty-note">${escapeHtml(state.marketMetadata.consumer_spending_status || "Consumer spending is not included in this build.")}</p>
+      </section>
+      <section class="health-overview property-health">
         <div class="section-heading"><h2>Independent public profiles</h2><span>identity and discovery evidence</span></div>
         <div class="compact-metrics">
           <div><strong>${formatNumber(independentProfiles.websites)}</strong><span>business websites</span></div>
@@ -2221,8 +2322,8 @@
           "%"
         )}</strong></div>
         <div class="data-point"><span>Age 45+ 2021</span><strong>${formatNumber(properties.age_45_plus_pct_2021, "%")}</strong></div>
-        <div class="data-point"><span>Weekly household income</span><strong>$${formatNumber(
-          properties.median_household_income_weekly_2021
+        <div class="data-point"><span>Equivalised weekly household income</span><strong>$${formatNumber(
+          properties.median_equivalised_household_income_weekly_2021
         )}</strong></div>
         <div class="data-point"><span>Retail businesses 2025</span><strong>${formatNumber(
           properties.retail_businesses_2025
@@ -2232,7 +2333,7 @@
           "%"
         )}</strong></div>
       </div>
-      <p class="empty-note">ABS Data by Region, released 26 May 2026. Census-derived measures retain their 2021 reference year.</p>
+      <p class="empty-note">ABS Data by Region released ${escapeHtml(formatDate(state.marketMetadata.source_release_date))}. Census-derived measures retain their 2021 reference year. Equivalised household income is not consumer spending. ${escapeHtml(properties.quality_note || "")}</p>
     </section>`;
   }
 
@@ -2309,6 +2410,109 @@
       </div>`).join("")}</div>`;
   }
 
+  const LOOKALIKE_COMPONENTS = {
+    bailey_footprint_similarity: ["Footprint similarity", "How closely the public demographic and location context resembles Bailey Nelson places in the same country and setting."],
+    bailey_whitespace: ["Bailey whitespace", "How much geographic room exists from the nearest current Bailey Nelson store."],
+    optical_market_validation: ["Optical validation", "Demand signal from optical stores accepted as members of this exact centre or corridor."],
+    accessibility_retail_context: ["Retail context", "Available public evidence for centre scale or established high-street activity."],
+  };
+
+  function hasLookalikeComponent(value) {
+    return value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value));
+  }
+
+  function opportunitySummaryHtml(centre) {
+    const row = publishedLookalike(centre.place_id);
+    if (!row) {
+      return `<section class="detail-section opportunity-summary"><div class="section-title-row"><h3>Opportunity summary</h3><span class="source-pill">Decision screen</span></div>
+        <p>${centre.has_bailey ? "Bailey Nelson is already mapped to this place, so it is not included in the Bailey-free opportunity ranking." : "This place does not currently have a published lookalike ranking."}</p>
+        <div class="data-grid"><div class="data-point"><span>Bailey Nelson</span><strong>${centre.has_bailey ? "Present" : "Not mapped"}</strong></div><div class="data-point"><span>Mapped optical stores</span><strong>${formatNumber(centre.optical_store_count || 0)}</strong></div></div>
+      </section>`;
+    }
+    const market = row.market_features || {};
+    const gaps = Object.entries(LOOKALIKE_COMPONENTS).filter(([key]) => !hasLookalikeComponent(row.components?.[key])).map(([, value]) => value[0]);
+    return `<section class="detail-section opportunity-summary">
+      <div class="section-title-row"><h3>Opportunity summary</h3><span class="source-pill">Bailey-free rank</span></div>
+      <div class="opportunity-lead"><div class="score-ring ${row.screening_completeness < 60 ? "low-coverage" : ""}" style="--score:${row.score || 0}"><strong>${row.score ?? "—"}</strong><span>lookalike</span></div>
+        <div><strong>#${row.rank} in ${escapeHtml(row.country)} · ${escapeHtml(row.location_setting)}</strong><p>${row.screening_completeness}% screening completeness. The score is a transparent comparison with Bailey Nelson’s mapped footprint, not a success probability.</p></div></div>
+      <div class="lookalike-components">${Object.entries(LOOKALIKE_COMPONENTS).map(([key, [label, explanation]]) => {
+        const value = row.components?.[key];
+        return `<div><span><strong>${escapeHtml(label)}</strong><small>${escapeHtml(explanation)}</small></span><b>${hasLookalikeComponent(value) ? Math.round(Number(value)) : "N/A"}</b></div>`;
+      }).join("")}</div>
+      <div class="data-grid opportunity-facts">
+        <div class="data-point"><span>Population 2025</span><strong>${formatNumber(market.population_2025)}</strong></div>
+        <div class="data-point"><span>Population growth 2021–25</span><strong>${formatNumber(market.population_growth_2021_2025_pct, "%")}</strong></div>
+        <div class="data-point"><span>Age 45+ (2021)</span><strong>${formatNumber(market.age_45_plus_pct_2021, "%")}</strong></div>
+        <div class="data-point"><span>Equivalised weekly household income (2021)</span><strong>${market.median_equivalised_household_income_weekly_2021 ? `$${formatNumber(market.median_equivalised_household_income_weekly_2021)}` : "N/A"}</strong></div>
+        <div class="data-point"><span>Nearest Bailey Nelson</span><strong>${Number.isFinite(Number(row.nearest_bailey_km)) ? Intel.formatDistance(Number(row.nearest_bailey_km)) : "Unknown"}</strong></div>
+        <div class="data-point"><span>Exact-place optical stores</span><strong>${formatNumber(row.optical_store_count || 0)}</strong></div>
+      </div>
+      <p class="evidence-gaps"><strong>Evidence gaps:</strong> ${gaps.length ? escapeHtml(gaps.join(", ")) : "No weighted component is missing."}</p>
+    </section>`;
+  }
+
+  function keyCoTenancyHtml(centre) {
+    const tenants = tenantsForPlace(centre.place_id);
+    const keyTenants = tenants.filter((row) => row.category !== "Optical");
+    if (!keyTenants.length) {
+      return `<p class="empty-note">Key co-tenancy research has not yet been completed for this place. This does not mean those tenant categories are absent.</p>`;
+    }
+    const grouped = Object.groupBy
+      ? Object.groupBy(keyTenants, (row) => row.category)
+      : keyTenants.reduce((result, row) => ((result[row.category] ||= []).push(row), result), {});
+    return `<div class="co-tenancy-profile">${Object.entries(grouped).sort(([a], [b]) => a.localeCompare(b)).map(([category, rows]) => `<div><strong>${escapeHtml(category)}</strong><span>${rows.map((row) => `<a href="${escapeHtml(row.source_url)}" target="_blank" rel="noopener">${escapeHtml(row.tenant_name)}${row.anchor_flag ? " · anchor" : ""}</a>`).join("")}</span></div>`).join("")}</div>
+      <p class="empty-note">Curated key co-tenants only—not a complete centre directory. Verified ${escapeHtml(formatDate(state.placeTenantMetadata.verified_at))}.</p>`;
+  }
+
+  function propertyGroupNames(centre) {
+    return [...new Set(state.propertyRelationships.filter((item) => item.place_id === centre.place_id && Intel.activeRelationship(item)).map((item) => propertyGroup(item.group_id)?.canonical_name || item.group_id))];
+  }
+
+  function placeSummaryRecord(centre) {
+    const row = publishedLookalike(centre.place_id) || {};
+    const market = row.market_features || {};
+    const relationships = state.propertyRelationships.filter((item) => item.place_id === centre.place_id && Intel.activeRelationship(item));
+    const verifiedDates = relationships.map((item) => item.last_verified_at).filter(Boolean).sort();
+    return {
+      place_id: centre.place_id, place_name: centre.name, rank: row.rank ?? "", lookalike_score: row.score ?? "",
+      screening_completeness_pct: row.screening_completeness ?? "",
+      footprint_similarity: row.components?.bailey_footprint_similarity ?? "", bailey_whitespace: row.components?.bailey_whitespace ?? "",
+      optical_validation: row.components?.optical_market_validation ?? "", retail_context: row.components?.accessibility_retail_context ?? "",
+      location_setting: centre.location_setting, country: centre.country, state: centre.state, locality: centre.locality || centre.suburb || "", postcode: centre.postcode || "", address: centre.address || "",
+      nearest_bailey_km: row.nearest_bailey_km ?? centre.nearest_bailey_km ?? "", population_2025: market.population_2025 ?? "",
+      population_growth_2021_2025_pct: market.population_growth_2021_2025_pct ?? "", age_45_plus_pct_2021: market.age_45_plus_pct_2021 ?? "",
+      median_equivalised_household_income_weekly_2021: market.median_equivalised_household_income_weekly_2021 ?? "", centre_class: centre.centre_class || "Unknown",
+      property_groups: propertyGroupNames(centre).join(" | "), leasing_arrangement: centre.leasing_arrangement || "Unknown",
+      portfolio_overlap: overlapLabel(centre.portfolio_overlap_status, centre.location_setting === "High Street" ? "corridor" : "centre"),
+      optical_store_count: centre.optical_store_count || 0, retailers: (centre.retailers || []).join(" | "),
+      place_evidence_date: centre.source_date || "", property_evidence_latest: verifiedDates.at(-1) || "", official_url: centre.official_url || centre.source_url || "",
+    };
+  }
+
+  function exportRecords(filename, records) {
+    if (!records.length) return showToast("No available places to export.", "warning");
+    const fields = Object.keys(records[0]);
+    const lines = [fields.join(","), ...records.map((record) => fields.map((field) => csvEscape(record[field])).join(","))];
+    downloadText(filename, `${lines.join("\n")}\n`);
+  }
+
+  function exportPlaceSummary(placeIds) {
+    const centres = [...new Set(placeIds.map(resolvePlaceId))].map((id) => state.centres.find((item) => item.place_id === id)).filter(Boolean);
+    exportRecords(`bailey-place-summary-${new Date().toISOString().slice(0, 10)}.csv`, centres.map(placeSummaryRecord));
+  }
+
+  function exportPlaceTenants(placeIds) {
+    const centres = [...new Set(placeIds.map(resolvePlaceId))].map((id) => state.centres.find((item) => item.place_id === id)).filter(Boolean);
+    const records = centres.flatMap((centre) => tenantsForPlace(centre.place_id).map((tenant) => ({
+      place_id: centre.place_id, place_name: centre.name, country: centre.country, state: centre.state,
+      membership_type: tenant.category === "Optical" ? "Accepted exact-place optical membership" : "Researched key co-tenant",
+      tenant_id: tenant.tenant_id, tenant_name: tenant.tenant_name, retailer: tenant.retailer || "", category: tenant.category,
+      anchor_flag: tenant.anchor_flag ? "true" : "false", selection_basis: tenant.selection_basis, status: tenant.status,
+      source_url: tenant.source_url, source_type: tenant.source_type, verified_at: tenant.verified_at, confidence: tenant.confidence,
+    })));
+    exportRecords(`bailey-place-tenants-${new Date().toISOString().slice(0, 10)}.csv`, records);
+  }
+
   function propertyCorrectionEditorHtml(centre, relationships) {
     const groupOptions = state.propertyGroups.slice().sort((a, b) => a.canonical_name.localeCompare(b.canonical_name))
       .map((group) => `<option value="${escapeHtml(group.group_id)}">${escapeHtml(group.canonical_name)}</option>`).join("");
@@ -2354,28 +2558,33 @@
     const publicUrl = centre.official_url || centre.source_url || centre.public_url;
     const isCorridor = centre.location_setting === "High Street";
     const placeLabel = isCorridor ? "corridor" : "centre";
+    const saved = state.placeShortlist.has(resolvePlaceId(centre.place_id));
     elements.detailContent.innerHTML = `
       <header class="detail-header" style="--brand-color:#d29b27">
         <span class="retailer-tag">${centre.location_setting === "High Street" ? '<i data-lucide="route"></i>' : CENTRE_BAG_SVG}${escapeHtml(centre.place_type)}</span>
         <h2>${escapeHtml(centre.name)}</h2><address>${escapeHtml(centre.address || `${centre.locality || centre.suburb}, ${centre.state}`)}</address>
-        ${publicUrl ? `<div class="link-row"><a class="command-link primary" href="${escapeHtml(publicUrl)}" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Public place source</a></div>` : ""}
+        <div class="link-row">
+          <button class="detail-action ${saved ? "saved" : "primary"}" id="detailShortlist" type="button"><i data-lucide="bookmark${saved ? "-check" : ""}"></i>${saved ? "Shortlisted" : "Add to shortlist"}</button>
+          <button class="detail-action" id="placeReport" type="button"><i data-lucide="file-down"></i>Print brief</button>
+          <button class="detail-action" id="placeSummaryCsv" type="button">Summary CSV</button>
+          <button class="detail-action" id="placeTenantCsv" type="button">Tenant CSV</button>
+          ${publicUrl ? `<a class="command-link" href="${escapeHtml(publicUrl)}" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Public source</a>` : ""}
+        </div>
       </header>
-      <section class="detail-section"><h3>Property profile</h3><div class="data-grid">
-        <div class="data-point"><span>Location setting</span><strong>${escapeHtml(centre.location_setting)}</strong></div>
-        <div class="data-point"><span>Centre class</span><strong>${escapeHtml(centre.centre_class || "Unknown")}</strong><small>${escapeHtml(centre.centre_class_method || "Not confirmed")}</small></div>
-        <div class="data-point"><span>Research status</span><strong>${escapeHtml(centre.research_status || "Not researched")}</strong></div>
-        <div class="data-point"><span>Leasing arrangement</span><strong>${escapeHtml(centre.leasing_arrangement || "Unknown")}</strong></div>
-        <div class="data-point"><span>Canonical property ID</span><strong>${escapeHtml(centre.place_id)}</strong></div>
-        <div class="data-point"><span>Mapping confidence</span><strong>${escapeHtml(centre.mapping_confidence || centre.confidence)}</strong></div>
-      </div></section>
-      <section class="detail-section"><h3>Ownership, management and leasing</h3>${relationshipCardsHtml(relationships)}</section>
+      ${opportunitySummaryHtml(centre)}
+      <section class="detail-section"><h3>Optical competition context</h3>${competitorContextHtml(centre)}
+        <p class="empty-note">The map is focused on the competition shown above. IN ${isCorridor ? "CORRIDOR" : "CENTRE"} requires the same accepted canonical place ID; distance alone never establishes membership.</p>
+      </section>
+      <section class="detail-section"><h3>Key co-tenancy profile</h3>${keyCoTenancyHtml(centre)}</section>
+      <section class="detail-section"><h3>Ownership, management and leasing</h3>
+        <div class="data-grid property-summary-grid">
+          <div class="data-point"><span>Centre class</span><strong>${escapeHtml(centre.centre_class || "Unknown")}</strong><small>${escapeHtml(centre.centre_class_method || "Not confirmed")}</small></div>
+          <div class="data-point"><span>Leasing arrangement</span><strong>${escapeHtml(centre.leasing_arrangement || "Unknown")}</strong></div>
+        </div>${relationshipCardsHtml(relationships)}</section>
       <section class="detail-section portfolio-overlap"><h3>Bailey Nelson portfolio overlap</h3>
         <strong>${escapeHtml(overlapLabel(centre.portfolio_overlap_status, placeLabel))}</strong>
         <p>${centre.portfolio_overlap_groups?.length ? centre.portfolio_overlap_groups.map((item) => `${escapeHtml(item.canonical_name)} (${escapeHtml(relationshipRoleLabel(item.role))}): ${item.bailey_store_count} Bailey store${item.bailey_store_count === 1 ? "" : "s"} across ${item.bailey_property_count} propert${item.bailey_property_count === 1 ? "y" : "ies"}`).join("<br>") : "No evidenced public portfolio overlap is available."}</p>
         <small>Portfolio overlap is derived from public property and tenancy evidence. It is not proof of a private commercial relationship.</small>
-      </section>
-      <section class="detail-section"><h3>Optical competition context</h3>${competitorContextHtml(centre)}
-        <p class="empty-note">The map is focused on the competition shown above. IN ${isCorridor ? "CORRIDOR" : "CENTRE"} requires the same accepted canonical place ID; distance alone never establishes membership.</p>
       </section>
       <section class="detail-section"><h3>Public ${isCorridor ? "place" : "centre"} metrics</h3><div class="data-grid">
         <div class="data-point"><span>Total GLA</span><strong>${centre.gla_sqm ? formatNumber(centre.gla_sqm, " sqm") : "Not published"}</strong></div>
@@ -2384,11 +2593,23 @@
         <div class="data-point"><span>Trade area population</span><strong>${formatNumber(centre.trade_area_population)}</strong></div>
         <div class="data-point"><span>Nearest Bailey Nelson</span><strong>${Number.isFinite(Number(centre.nearest_bailey_km)) ? Intel.formatDistance(Number(centre.nearest_bailey_km)) : "Unknown"}</strong></div>
       </div></section>
-      ${propertyCorrectionEditorHtml(centre, relationships)}
-      <section class="detail-section source-block"><i data-lucide="database"></i><div><strong>${escapeHtml(centre.source_basis || "Best available public place record")}</strong><span>${centre.source_date ? `Place evidence dated ${escapeHtml(formatDate(centre.source_date))}` : "Public metrics remain incomplete"}</span></div></section>`;
+      <section class="detail-section source-block"><i data-lucide="database"></i><div><strong>${escapeHtml(centre.source_basis || "Best available public place record")}</strong><span>${centre.source_date ? `Place evidence dated ${escapeHtml(formatDate(centre.source_date))}` : "Public metrics remain incomplete"}</span></div></section>
+      <details class="technical-details"><summary>Technical record, methodology and public corrections</summary>
+        <section class="detail-section"><h3>Technical record</h3><div class="data-grid">
+          <div class="data-point"><span>Canonical place ID</span><strong>${escapeHtml(centre.place_id)}</strong></div>
+          <div class="data-point"><span>Mapping confidence</span><strong>${escapeHtml(centre.mapping_confidence || centre.confidence)}</strong></div>
+          <div class="data-point"><span>Research status</span><strong>${escapeHtml(centre.research_status || "Not researched")}</strong></div>
+          <div class="data-point"><span>Location setting</span><strong>${escapeHtml(centre.location_setting)}</strong></div>
+        </div><p class="empty-note">A canonical place ID is the stable record used to join stores, property facts and corrections without relying on changing names.</p></section>
+        ${propertyCorrectionEditorHtml(centre, relationships)}
+      </details>`;
     openDetailPanel();
     bindNearRows();
     bindPropertyDetail(centre, relationships);
+    document.getElementById("detailShortlist")?.addEventListener("click", () => togglePlaceShortlist(centre.place_id));
+    document.getElementById("placeReport")?.addEventListener("click", () => generatePlaceReport(centre));
+    document.getElementById("placeSummaryCsv")?.addEventListener("click", () => exportPlaceSummary([centre.place_id]));
+    document.getElementById("placeTenantCsv")?.addEventListener("click", () => exportPlaceTenants([centre.place_id]));
     focusPlaceOnMap(centre);
   }
 
@@ -2865,7 +3086,7 @@
             }</strong></div>`
         ).join("")}</div></section>
       <section class="detail-section source-block"><i data-lucide="database"></i><div><strong>ABS Data by Region 2011–25</strong>
-        <span>Released 26 May 2026 · High confidence</span></div></section>`;
+        <span>Released ${escapeHtml(formatDate(state.marketMetadata.source_release_date))} · High confidence</span></div></section>`;
     openDetailPanel();
   }
 
@@ -3012,6 +3233,55 @@
     }
   }
 
+  function showReport(title, content) {
+    document.getElementById("reportDate").textContent = formatDate(new Date().toISOString());
+    document.querySelector("#reportSheet header h2").textContent = title;
+    elements.reportContent.innerHTML = content;
+    elements.reportSheet.setAttribute("aria-hidden", "false");
+    window.print();
+    window.setTimeout(() => elements.reportSheet.setAttribute("aria-hidden", "true"), 500);
+  }
+
+  function generatePlaceReport(centre) {
+    if (!centre) return;
+    const row = publishedLookalike(centre.place_id) || {};
+    const record = placeSummaryRecord(centre);
+    const tenants = tenantsForPlace(centre.place_id);
+    const optical = tenants.filter((item) => item.category === "Optical");
+    const keyTenants = tenants.filter((item) => item.category !== "Optical");
+    const gaps = Object.entries(LOOKALIKE_COMPONENTS).filter(([key]) => !hasLookalikeComponent(row.components?.[key])).map(([, value]) => value[0]);
+    const componentHtml = `<div class="score-components">${Object.entries(LOOKALIKE_COMPONENTS).map(([key, [label]]) => {
+      const value = row.components?.[key];
+      return `<div><span>${escapeHtml(label)}</span><b>${hasLookalikeComponent(value) ? Math.round(Number(value)) : "N/A"}</b><i><em style="width:${hasLookalikeComponent(value) ? Math.round(Number(value)) : 0}%"></em></i></div>`;
+    }).join("")}</div>`;
+    showReport("Selected place brief", `
+      <section class="report-lead"><div><p>${escapeHtml(centre.location_setting)}</p><h3>${escapeHtml(centre.name)}</h3><span>${escapeHtml(`${centre.locality || centre.suburb || "Locality unrecorded"}${centre.state ? `, ${centre.state}` : ""}`)}</span></div>
+        <div class="report-score"><strong>${row.score ?? "—"}</strong><span>Lookalike score</span><small>${row.screening_completeness ?? "—"}% complete${row.rank ? ` · rank #${row.rank}` : ""}</small></div></section>
+      <section><h3>Opportunity evidence</h3><div class="report-grid">
+        <div><span>Population 2025</span><strong>${formatNumber(record.population_2025)}</strong></div>
+        <div><span>Growth 2021–25</span><strong>${formatNumber(record.population_growth_2021_2025_pct, "%")}</strong></div>
+        <div><span>Age 45+</span><strong>${formatNumber(record.age_45_plus_pct_2021, "%")}</strong></div>
+        <div><span>Equivalised weekly household income</span><strong>${record.median_equivalised_household_income_weekly_2021 ? `$${formatNumber(record.median_equivalised_household_income_weekly_2021)}` : "N/A"}</strong></div>
+        <div><span>Nearest Bailey Nelson</span><strong>${Number.isFinite(Number(record.nearest_bailey_km)) ? Intel.formatDistance(Number(record.nearest_bailey_km)) : "Unknown"}</strong></div>
+        <div><span>Exact-place optical stores</span><strong>${formatNumber(centre.optical_store_count || 0)}</strong></div>
+      </div></section>
+      <section><h3>Why it ranks</h3>${componentHtml}<p>Lookalike score compares public evidence with Bailey Nelson’s mapped footprint. It is a screening heuristic, not a forecast of store success.</p></section>
+      <section><h3>Exact-place optical tenants</h3><p>${optical.length ? optical.map((item) => escapeHtml(item.tenant_name)).join(" · ") : "No accepted exact-place optical membership is recorded."}</p></section>
+      <section><h3>Key co-tenancy profile</h3><p>${keyTenants.length ? keyTenants.map((item) => `${escapeHtml(item.tenant_name)} (${escapeHtml(item.category)})`).join(" · ") : "Key co-tenancy research has not been completed for this place."}</p></section>
+      <section><h3>Property and leasing</h3><div class="report-grid">
+        <div><span>Centre class</span><strong>${escapeHtml(record.centre_class)}</strong></div>
+        <div><span>Property groups</span><strong>${escapeHtml(record.property_groups || "Unknown")}</strong></div>
+        <div><span>Leasing arrangement</span><strong>${escapeHtml(record.leasing_arrangement)}</strong></div>
+      </div><p>${escapeHtml(record.portfolio_overlap)}</p></section>
+      <section><h3>Evidence gaps and cautions</h3><ul>
+        <li>${gaps.length ? `${escapeHtml(gaps.join(", "))} are not scored because evidence is unavailable.` : "All four weighted screening components have public evidence."}</li>
+        <li>Nearby retailers are not treated as tenants unless they share the accepted canonical place ID.</li>
+        <li>Key co-tenancy profiles are curated and are not complete centre directories.</li>
+        <li>Rent, lease terms, pedestrian barriers and private Bailey Nelson performance are outside this public brief.</li>
+      </ul></section>
+      <section><h3>Sources</h3><p>${record.official_url ? `Primary place source: ${escapeHtml(record.official_url)}. ` : ""}Demographics use the Australian public market dataset described in the application methodology. Property and tenant facts retain their own evidence dates in the CSV exports.</p></section>`);
+  }
+
   function generateReport(candidate = null) {
     const target =
       candidate ||
@@ -3025,8 +3295,7 @@
     const market = marketForPoint(target)?.properties || {};
     const catchments = CATCHMENT_RADII.map((radius) => Intel.catchmentSummary(target, radius, state.markets));
     const proximity = proximityModel(target, null, true);
-    document.getElementById("reportDate").textContent = formatDate(new Date().toISOString());
-    elements.reportContent.innerHTML = `
+    showReport("Candidate site brief", `
       <section class="report-lead"><div><p>Candidate</p><h3>${escapeHtml(target.name)}</h3><span>${escapeHtml(
       marketLabel(target)
     )}</span></div><div class="report-score"><strong>${model.score ?? "-"}</strong><span>Site score</span><small>${
@@ -3036,8 +3305,8 @@
         <div><span>Population 2025</span><strong>${formatNumber(market.population_2025)}</strong></div>
         <div><span>Growth 2021–25</span><strong>${formatNumber(market.population_growth_2021_2025_pct, "%")}</strong></div>
         <div><span>Age 45+</span><strong>${formatNumber(market.age_45_plus_pct_2021, "%")}</strong></div>
-        <div><span>Weekly household income</span><strong>$${formatNumber(
-          market.median_household_income_weekly_2021
+        <div><span>Equivalised weekly household income</span><strong>$${formatNumber(
+          market.median_equivalised_household_income_weekly_2021
         )}</strong></div>
         <div><span>5 km competitors</span><strong>${model.competitorCountFiveKm}</strong></div>
         <div><span>Nearest competing store</span><strong>${Intel.formatDistance(model.nearestCompetitorKm)}</strong></div>
@@ -3052,10 +3321,13 @@
         <li>${model.nearbyCentreLead ? `${escapeHtml(model.nearbyCentreLead.centre.name)} is nearby and requires evidence before centre strength can apply.` : "No reviewed shopping-centre lead is recorded within 750 metres."}</li>
         <li>Driving time, pedestrian barriers, rent and lease terms are outside this public assessment.</li>
       </ul></section>
-      <section><h3>Sources</h3><p>Australian Bureau of Statistics Data by Region 2011–25, Stats NZ regional boundaries, official retailer locators, OpenStreetMap contributors, reviewed venue IDs and public landlord profiles where available. Every source retains its own reference date and coverage label.</p></section>`;
-    elements.reportSheet.setAttribute("aria-hidden", "false");
-    window.print();
-    window.setTimeout(() => elements.reportSheet.setAttribute("aria-hidden", "true"), 500);
+      <section><h3>Sources</h3><p>Australian Bureau of Statistics Data by Region 2011–25, Stats NZ regional boundaries, official retailer locators, OpenStreetMap contributors, reviewed venue IDs and public landlord profiles where available. Every source retains its own reference date and coverage label.</p></section>`);
+  }
+
+  function generateContextReport() {
+    const selectedPlace = state.centres.find((item) => item.place_id === state.selectedCentreId);
+    if (selectedPlace && elements.detailPanel.classList.contains("open")) return generatePlaceReport(selectedPlace);
+    return generateReport();
   }
 
   function shareState() {
@@ -3267,7 +3539,7 @@
     });
     document.getElementById("saveViewButton").addEventListener("click", saveView);
     document.getElementById("shareButton").addEventListener("click", () => updateShareUrl(true));
-    document.getElementById("reportButton").addEventListener("click", () => generateReport());
+    document.getElementById("reportButton").addEventListener("click", generateContextReport);
     document.getElementById("downloadButton").addEventListener("click", downloadFilteredCsv);
     map.on("click", (event) => {
       if (state.candidateDropMode) dropCandidate(event.latlng);
@@ -3298,7 +3570,7 @@
 
   async function initialise() {
     try {
-      const [stores, markets, places, links, events, profiles, dataHealth, lookalikes, propertyIntelligence, retailerRegistry] = await Promise.all([
+      const [stores, markets, places, links, events, profiles, dataHealth, lookalikes, propertyIntelligence, retailerRegistry, placeTenants] = await Promise.all([
         loadJson("data/optical_stores.geojson"),
         loadJson("data/sa2_market.geojson"),
         loadJson("data/retail_places.json"),
@@ -3309,6 +3581,7 @@
         loadJson("data/lookalike_places.json"),
         loadJson("data/property_intelligence.json"),
         loadJson("data/retailer_registry.json"),
+        loadJson("data/place_tenants.json"),
       ]);
       configureRetailers(retailerRegistry);
       state.metadata = stores.metadata || {};
@@ -3321,7 +3594,11 @@
         throw new Error("Store data count does not match metadata");
       }
       state.markets = markets.features;
+      state.marketMetadata = markets.metadata || {};
       state.centres = places.places;
+      state.placeIdRemaps = places.place_id_remaps || {};
+      state.placeTenants = placeTenants.memberships || [];
+      state.placeTenantMetadata = placeTenants.metadata || {};
       loadLocalPlaces();
       state.storeLinks = links.links;
       state.events = events;
@@ -3356,6 +3633,7 @@
       applyConsultantCorrections();
       loadPropertyCorrections();
       applyPropertyCorrections();
+      loadPlaceShortlist();
       createStoreMarkers();
       createCentreMarkers();
       bindGlobalEvents();

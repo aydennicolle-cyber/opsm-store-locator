@@ -2,6 +2,12 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const Intel = require("../assets/intelligence.js");
 
+assert.deepEqual(
+  Intel.normalisePlaceShortlist(["old-a", "current", "old-a", "missing"], {"old-a": "middle", "middle": "current"}),
+  ["current", "missing"],
+  "shortlist remaps should resolve chains and deduplicate without dropping unavailable place IDs"
+);
+
 assert.equal(Intel.haversine({latitude: 0, longitude: 0}, {latitude: 0, longitude: 0}), 0);
 assert.equal(Intel.formatFitScore(120, 100, 140), 100);
 assert.equal(Intel.formatFitScore(null, 100, 140), null);
@@ -20,14 +26,14 @@ const partialFraction = Intel.geometryOverlapFraction({latitude: 0, longitude: 0
 assert.ok(partialFraction > 0 && partialFraction < 1);
 const apportioned = Intel.catchmentSummary(
   {latitude: 0, longitude: 0}, 0.8,
-  [{geometry: partialGeometry, properties: {population_2025: 1000, age_45_plus_pct_2021: 40, median_household_income_weekly_2021: 1500}}]
+  [{geometry: partialGeometry, properties: {population_2025: 1000, age_45_plus_pct_2021: 40, median_equivalised_household_income_weekly_2021: 1500}}]
 );
 assert.ok(apportioned.population > 0 && apportioned.population < 1000);
 assert.equal(apportioned.apportionmentMethod, "SA2 area-overlap apportionment");
 
 const markets = [
-  {properties: {population_2025: 1000, population_growth_2021_2025_pct: 2, age_45_plus_pct_2021: 40, median_household_income_weekly_2021: 1500}},
-  {properties: {population_2025: 2000, population_growth_2021_2025_pct: 4, age_45_plus_pct_2021: 50, median_household_income_weekly_2021: 2000}},
+  {properties: {population_2025: 1000, population_growth_2021_2025_pct: 2, age_45_plus_pct_2021: 40, median_equivalised_household_income_weekly_2021: 1500}},
+  {properties: {population_2025: 2000, population_growth_2021_2025_pct: 4, age_45_plus_pct_2021: 50, median_equivalised_household_income_weekly_2021: 2000}},
 ];
 const profile = {retailer: "OPSM", weights: {market_demand: 25, competitive_white_space: 25, centre_strength: 20, accessibility: 10, network_fit: 10, format_fit: 10}};
 const base = Intel.candidateScore({

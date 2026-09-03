@@ -34,6 +34,26 @@ MEMBERSHIPS_PATH = DATA / "store_place_memberships.csv"
 REMAPS_PATH = DATA / "place_id_remaps.csv"
 EXCEPTIONS_PATH = DATA / "place_review.csv"
 LOOKALIKES_PATH = DATA / "lookalike_places.json"
+KEY_TENANTS_PATH = DATA / "place_key_tenants.csv"
+PLACE_TENANTS_PATH = DATA / "place_tenants.json"
+
+PILOT_PLACE_IDS = [
+    "place-au-nsw-westfield-penrith",
+    "place-au-nsw-nepean-village",
+    "place-au-unknown-jimboomba-shopping-centre",
+    "place-au-unknown-redland-bay-shopping-village",
+    "place-au-unknown-homeco-way-536334280",
+    "place-au-nsw-narellan-town-centre",
+    "place-au-qld-cairns-smithfield-centre",
+    "place-au-unknown-kingston-village-shopping-centre",
+    "place-au-qld-cairns-shopping-centre",
+    "place-au-unknown-mt-annan-central",
+]
+TENANT_CATEGORIES = {
+    "Optical", "Department-store anchor", "Supermarket anchor", "Premium fashion",
+    "Contemporary fashion", "Youth fashion", "Beauty", "Design and lifestyle",
+    "Activewear", "Premium grocery", "Hospitality", "Technology", "Luxury",
+}
 
 NAMED_RETAILERS = {
     "OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee",
@@ -72,6 +92,82 @@ def read_csv(path: Path) -> list[dict]:
         return []
     with path.open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
+
+
+def build_place_tenants(places: list[dict], memberships: list[dict], old_to_new: dict[str, str], generated_at: str) -> None:
+    """Build accepted optical memberships plus a small, evidenced co-tenancy pilot."""
+    place_ids = {place["place_id"] for place in places}
+    resolved_pilot = [old_to_new.get(place_id, place_id) for place_id in PILOT_PLACE_IDS]
+    missing_pilot = [place_id for place_id in resolved_pilot if place_id not in place_ids]
+    if missing_pilot:
+        raise ValueError(f"Co-tenancy pilot references unknown places: {missing_pilot}")
+
+    output: list[dict] = []
+    seen_ids: set[str] = set()
+    for row in memberships:
+        place_id = old_to_new.get(row.get("place_id", ""), row.get("place_id", ""))
+        if place_id not in resolved_pilot or not row.get("store_id"):
+            continue
+        membership_id = f"tenant-membership-{slug(place_id)}-{slug(row['store_id'])}"
+        item = {
+            "membership_id": membership_id,
+            "place_id": place_id,
+            "tenant_id": f"optical-store-{row['store_id']}",
+            "tenant_name": row.get("store_name") or row.get("retailer") or "Optical store",
+            "retailer": row.get("retailer", ""),
+            "store_id": row["store_id"],
+            "category": "Optical",
+            "anchor_flag": False,
+            "selection_basis": "Accepted canonical place membership",
+            "status": "Active",
+            "source_url": row.get("evidence_url", ""),
+            "source_type": "Accepted store-place evidence",
+            "verified_at": row.get("verified_at", ""),
+            "confidence": row.get("mapping_confidence", "Uncertain"),
+        }
+        seen_ids.add(membership_id)
+        output.append(item)
+
+    for row in read_csv(KEY_TENANTS_PATH):
+        item = {key: str(value or "").strip() for key, value in row.items()}
+        item["place_id"] = old_to_new.get(item.get("place_id", ""), item.get("place_id", ""))
+        membership_id = item.get("membership_id", "")
+        if not membership_id or membership_id in seen_ids:
+            raise ValueError(f"Invalid or duplicate tenant membership_id: {membership_id}")
+        if item["place_id"] not in resolved_pilot:
+            raise ValueError(f"Key tenant is outside the locked pilot: {item['place_id']}")
+        if item.get("category") not in TENANT_CATEGORIES - {"Optical"}:
+            raise ValueError(f"Invalid key tenant category: {item.get('category')}")
+        if item.get("status") not in {"Active", "Uncertain"}:
+            raise ValueError(f"Invalid key tenant status: {item.get('status')}")
+        if item.get("confidence") not in {"High", "Medium", "Low"}:
+            raise ValueError(f"Invalid key tenant confidence: {item.get('confidence')}")
+        if item.get("anchor_flag", "").lower() not in {"true", "false"}:
+            raise ValueError(f"Invalid key tenant anchor flag: {membership_id}")
+        if not re.match(r"^https?://", item.get("source_url", "")):
+            raise ValueError(f"Key tenant requires a public source URL: {membership_id}")
+        try:
+            datetime.fromisoformat(item.get("verified_at", ""))
+        except ValueError as error:
+            raise ValueError(f"Key tenant requires YYYY-MM-DD verification date: {membership_id}") from error
+        item["anchor_flag"] = item["anchor_flag"].lower() == "true"
+        item["retailer"] = ""
+        item["store_id"] = ""
+        seen_ids.add(membership_id)
+        output.append(item)
+
+    coverage = {place_id: sum(row["place_id"] == place_id and row["category"] != "Optical" for row in output) for place_id in resolved_pilot}
+    PLACE_TENANTS_PATH.write_text(json.dumps({
+        "metadata": {
+            "generated_at": generated_at,
+            "verified_at": max((row.get("verified_at", "") for row in output), default=""),
+            "scope": "Locked 3 September 2026 Australian shopping-centre ranks 1–10",
+            "coverage_note": "Curated key co-tenants only; not a complete centre directory. Optical rows require accepted canonical place membership.",
+            "pilot_place_ids": resolved_pilot,
+            "key_tenant_count_by_place": coverage,
+        },
+        "memberships": sorted(output, key=lambda row: (row["place_id"], row["category"], row["tenant_name"])),
+    }, indent=2) + "\n", encoding="utf-8")
 
 
 def apply_place_consolidations(places: list[dict], old_to_new: dict[str, str]) -> dict[str, str]:
@@ -921,9 +1017,11 @@ def main() -> None:
             "named_network_review_count": len(exceptions),
             "coverage_note": "Canonical places use official public evidence where available and best-available mappings with visible confidence elsewhere.",
         },
+        "place_id_remaps": dict(sorted(old_to_new.items())),
         "places": places,
     }
     PLACES_PATH.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    build_place_tenants(places, memberships, old_to_new, generated_at)
     build_lookalikes(places, memberships, stores, generated_at)
     print(
         f"Built {len(places)} canonical places ({payload['metadata']['centre_count']} centres, "
@@ -1007,13 +1105,13 @@ def build_lookalikes(places: list[dict], memberships: list[dict], stores: list[d
                             "population_2025",
                             "population_growth_2021_2025_pct",
                             "age_45_plus_pct_2021",
-                            "median_household_income_weekly_2021",
+                            "median_equivalised_household_income_weekly_2021",
                         )
                     },
                 }
             )
     bailey_stores = [stores_by_id[row["store_id"]] for row in memberships if row["retailer"] == "Bailey Nelson"]
-    fields = ("population_2025", "population_growth_2021_2025_pct", "age_45_plus_pct_2021", "median_household_income_weekly_2021")
+    fields = ("population_2025", "population_growth_2021_2025_pct", "age_45_plus_pct_2021", "median_equivalised_household_income_weekly_2021")
     rankings: dict[str, list[dict]] = defaultdict(list)
     for place in places:
         if place["has_bailey"] or place["location_setting"] not in {"Shopping Centre", "High Street"}:

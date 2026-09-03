@@ -50,7 +50,7 @@ class MarketIntelligenceTests(unittest.TestCase):
             "population_growth_2021_2025_pct",
             "median_age_2021",
             "age_45_plus_pct_2021",
-            "median_household_income_weekly_2021",
+            "median_equivalised_household_income_weekly_2021",
             "unemployment_rate_2021",
             "retail_businesses_2025",
             "health_businesses_2025",
@@ -58,6 +58,17 @@ class MarketIntelligenceTests(unittest.TestCase):
             "confidence",
         }
         self.assertTrue(required.issubset(populated[0]["properties"]))
+        self.assertTrue(all(
+            feature["properties"].get("unemployment_rate_2021") is None
+            or 0 <= feature["properties"]["unemployment_rate_2021"] <= 100
+            for feature in self.markets["features"]
+        ))
+        self.assertTrue(all(
+            feature["properties"].get("age_45_plus_pct_2021") is None
+            or 0 <= feature["properties"]["age_45_plus_pct_2021"] <= 100
+            for feature in self.markets["features"]
+        ))
+        self.assertIn("not consumer spending", self.markets["metadata"]["field_definitions"]["median_equivalised_household_income_weekly_2021"])
 
     def test_all_stores_join_to_sa2(self) -> None:
         store_count = len(json.loads((DATA / "optical_stores.geojson").read_text())["features"])

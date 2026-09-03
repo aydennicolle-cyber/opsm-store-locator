@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-03T00:11:45.459235+00:00",
+  "generated_at": "2026-09-03T02:00:28.426374+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
-    "group_count": 153,
-    "relationship_count": 1036,
-    "active_relationship_count": 1034,
+    "group_count": 155,
+    "relationship_count": 1038,
+    "active_relationship_count": 1036,
     "shopping_centre_count": 736,
-    "researched_property_count": 312,
-    "classed_property_count": 308,
+    "researched_property_count": 316,
+    "classed_property_count": 312,
     "conflict_count": 0,
     "development_asset_count": 1,
     "unmatched_active_portfolio_count": 0,
@@ -2150,6 +2150,38 @@
       ]
     },
     {
+      "group_id": "group-all-commercial-properties-qld",
+      "canonical_name": "All Commercial Properties Qld",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "ASSET_MANAGER",
+      "country_scope": "Australia",
+      "official_url": "https://redlandbayshoppingvillage.com.au/",
+      "status": "Active",
+      "source_url": "https://redlandbayshoppingvillage.com.au/centre-map/",
+      "last_verified_at": "2026-09-03",
+      "confidence": "High",
+      "aliases": [
+        "All Commercial Properties Qld"
+      ]
+    },
+    {
+      "group_id": "group-rook-partners",
+      "canonical_name": "Rook Partners",
+      "parent_group_id": "",
+      "brand_name": "",
+      "group_type": "ASSET_MANAGER",
+      "country_scope": "Australia",
+      "official_url": "https://rookpartners.com/",
+      "status": "Active",
+      "source_url": "https://www.mtannancentral.com.au/stores",
+      "last_verified_at": "2026-09-03",
+      "confidence": "High",
+      "aliases": [
+        "Rook Partners"
+      ]
+    },
+    {
       "group_id": "group-hmc-last-mile-logistics-property-trust-1",
       "canonical_name": "HMC Last Mile Logistics Property Trust 1",
       "parent_group_id": "group-hmc-capital",
@@ -2881,6 +2913,8 @@
     "homecodailyneedsreit": "group-homeco-daily-needs-reit",
     "hdn": "group-homeco-daily-needs-reit",
     "homecodailyneedsreithdn": "group-homeco-daily-needs-reit",
+    "allcommercialpropertiesqld": "group-all-commercial-properties-qld",
+    "rookpartners": "group-rook-partners",
     "hmclastmilelogisticspropertytrust1": "group-hmc-last-mile-logistics-property-trust-1",
     "lmlfundi": "group-hmc-last-mile-logistics-property-trust-1",
     "hmclmlpropertytrust1": "group-hmc-last-mile-logistics-property-trust-1",
@@ -3870,6 +3904,38 @@
       "last_verified_at": "2026-09-02",
       "confidence": "High",
       "public_note": "The official property profile publishes Region Group leasing details for this centre",
+      "derived_from": "curated_relationship"
+    },
+    {
+      "relationship_id": "rel-redland-bay-all-commercial-manager",
+      "place_id": "place-au-unknown-redland-bay-shopping-village",
+      "group_id": "group-all-commercial-properties-qld",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://redlandbayshoppingvillage.com.au/centre-map/",
+      "source_type": "Official current centre website",
+      "last_verified_at": "2026-09-03",
+      "confidence": "High",
+      "public_note": "The current official centre website identifies All Commercial Properties Qld as manager",
+      "derived_from": "curated_relationship"
+    },
+    {
+      "relationship_id": "rel-mt-annan-rook-manager",
+      "place_id": "place-au-unknown-mt-annan-central",
+      "group_id": "group-rook-partners",
+      "role": "MANAGER",
+      "ownership_percentage": null,
+      "valid_from": "",
+      "valid_to": "",
+      "status": "ACTIVE",
+      "source_url": "https://www.mtannancentral.com.au/stores",
+      "source_type": "Official current centre website",
+      "last_verified_at": "2026-09-03",
+      "confidence": "High",
+      "public_note": "The current official centre website identifies Rook Partners as manager",
       "derived_from": "curated_relationship"
     },
     {
@@ -32748,9 +32814,9 @@
         "sa2_code": "208031192",
         "sa2_name": "Moorabbin Airport",
         "population_2025": 26,
-        "population_growth_pct": 0,
+        "population_growth_pct": null,
         "median_household_income": null,
-        "age_45_plus_pct": 7.7,
+        "age_45_plus_pct": null,
         "retail_businesses": 9
       }
     },
@@ -34776,9 +34842,9 @@
         "sa2_code": "404031104",
         "sa2_name": "Adelaide Airport",
         "population_2025": 3,
-        "population_growth_pct": 0,
+        "population_growth_pct": null,
         "median_household_income": null,
-        "age_45_plus_pct": 100,
+        "age_45_plus_pct": null,
         "retail_businesses": 4
       }
     },
@@ -35365,171 +35431,6 @@
         "median_household_income": 1100,
         "age_45_plus_pct": 40.6,
         "retail_businesses": 178
-      }
-    },
-    "place-au-unknown-homeco-way-536334280": {
-      "place_id": "place-au-unknown-homeco-way-536334280",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-unknown-homeco-way-536334280",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-unknown-homeco-way-536334280",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 30.18,
-      "competitor_context": {
-        "by_retailer": {
-          "Independent / Other optical": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "independent-other-optical-osm-au-node-9318665504",
-                "name": "Glamoureyes",
-                "distance_km": 1.25
-              },
-              {
-                "store_id": "independent-other-optical-osm-au-node-9354608723",
-                "name": "Penrith Spectacles",
-                "distance_km": 1.68
-              },
-              {
-                "store_id": "independent-other-optical-provision-337407",
-                "name": "City Optics Nepean",
-                "distance_km": 1.19
-              },
-              {
-                "store_id": "independent-other-optical-provision-316011",
-                "name": "City Optics Penrith",
-                "distance_km": 1.76
-              },
-              {
-                "store_id": "independent-other-optical-provision-155308",
-                "name": "Eyewear Central",
-                "distance_km": 1.76
-              }
-            ]
-          },
-          "1001 Optometry": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "1001-optometry-7297950",
-                "name": "1001 Optometry Penrith",
-                "distance_km": 1.6
-              }
-            ]
-          },
-          "Eyecare Plus": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "eyecare-plus-661",
-                "name": "Eyecare Plus Optometrists Penrith",
-                "distance_km": 1.93
-              }
-            ]
-          },
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "opsm-1300",
-                "name": "OPSM Nepean",
-                "distance_km": 1.19
-              },
-              {
-                "store_id": "opsm-1328",
-                "name": "OPSM Penrith Plaza",
-                "distance_km": 1.7
-              }
-            ]
-          },
-          "Oscar Wylee": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "oscar-wylee-43",
-                "name": "Westfield Penrith",
-                "distance_km": 1.65
-              }
-            ]
-          },
-          "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "specsavers-3578",
-                "name": "Penrith Nepean",
-                "distance_km": 1.11
-              },
-              {
-                "store_id": "specsavers-3386",
-                "name": "Penrith Westfield",
-                "distance_km": 1.7
-              }
-            ]
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 1.19,
-          "Bailey Nelson": 30.18,
-          "OPSM": 1.19,
-          "Oscar Wylee": 1.65,
-          "Specsavers": 1.11,
-          "Bupa Optical": 22.32,
-          "George & Matilda": 22.38,
-          "Optical Superstore": 47.91,
-          "Eyecare Plus": 1.93,
-          "EyeQ Optometrists": 44.07,
-          "Matthews Eyecare": 1944.23,
-          "1001 Optometry": 1.6,
-          "Chemist Warehouse Optometry": 32.38,
-          "The Optical Company": 30.07,
-          "Laubman & Pank": 603.59,
-          "Dresden Vision": 46.4,
-          "Optical Warehouse": 712.97,
-          "Optical by National Pharmacies": 1093.58
-        },
-        "independent_2km_count": 5
-      },
-      "market": {
-        "sa2_code": "124031461",
-        "sa2_name": "Jamisontown - South Penrith",
-        "population_2025": 17749,
-        "population_growth_pct": 1.94,
-        "median_household_income": 1071,
-        "age_45_plus_pct": 38.8,
-        "retail_businesses": 92
       }
     },
     "place-au-unknown-homeco-way-536335852": {
@@ -36371,78 +36272,10 @@
         "sa2_code": "208031192",
         "sa2_name": "Moorabbin Airport",
         "population_2025": 26,
-        "population_growth_pct": 0,
+        "population_growth_pct": null,
         "median_household_income": null,
-        "age_45_plus_pct": 7.7,
+        "age_45_plus_pct": null,
         "retail_businesses": 9
-      }
-    },
-    "place-au-unknown-kingston-village-shopping-centre": {
-      "place_id": "place-au-unknown-kingston-village-shopping-centre",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-unknown-kingston-village-shopping-centre",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-unknown-kingston-village-shopping-centre",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 19.73,
-      "competitor_context": {
-        "by_retailer": {},
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 8.73,
-          "Bailey Nelson": 19.73,
-          "OPSM": 19.05,
-          "Oscar Wylee": 19.02,
-          "Specsavers": 10.07,
-          "Bupa Optical": 20.48,
-          "George & Matilda": 41.29,
-          "Optical Superstore": 48.88,
-          "Eyecare Plus": 39.6,
-          "EyeQ Optometrists": 52.19,
-          "Matthews Eyecare": 2069.83,
-          "1001 Optometry": 60.98,
-          "Chemist Warehouse Optometry": 707.03,
-          "The Optical Company": 60.68,
-          "Laubman & Pank": 364.03,
-          "Dresden Vision": 19.76,
-          "Optical Warehouse": 1409.61,
-          "Optical by National Pharmacies": 605.28
-        },
-        "independent_2km_count": 0
-      },
-      "market": {
-        "sa2_code": "203031490",
-        "sa2_name": "Ocean Grove",
-        "population_2025": 20792,
-        "population_growth_pct": 7.21,
-        "median_household_income": 1128,
-        "age_45_plus_pct": 48.6,
-        "retail_businesses": 84
       }
     },
     "place-au-unknown-kippa-ring-shopping-centre": {
@@ -37913,108 +37746,6 @@
         "median_household_income": 1099,
         "age_45_plus_pct": 42.5,
         "retail_businesses": 116
-      }
-    },
-    "place-au-unknown-mt-annan-central": {
-      "place_id": "place-au-unknown-mt-annan-central",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-unknown-mt-annan-central",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-unknown-mt-annan-central",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 31.83,
-      "competitor_context": {
-        "by_retailer": {
-          "Eyecare Plus": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "eyecare-plus-648",
-                "name": "Eyecare Plus Optometrists Mt Annan",
-                "distance_km": 0.33
-              }
-            ]
-          },
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "opsm-1056",
-                "name": "OPSM Narellan",
-                "distance_km": 1.93
-              }
-            ]
-          },
-          "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "specsavers-3345",
-                "name": "Narellan Town Centre",
-                "distance_km": 1.92
-              }
-            ]
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 21.11,
-          "Bailey Nelson": 31.83,
-          "OPSM": 1.93,
-          "Oscar Wylee": 2.05,
-          "Specsavers": 1.92,
-          "Bupa Optical": 21.01,
-          "George & Matilda": 24.13,
-          "Optical Superstore": 30.36,
-          "Eyecare Plus": 0.33,
-          "EyeQ Optometrists": 28.54,
-          "Matthews Eyecare": 1916.56,
-          "1001 Optometry": 33.54,
-          "Chemist Warehouse Optometry": 5.62,
-          "The Optical Company": 34.76,
-          "Laubman & Pank": 629.91,
-          "Dresden Vision": 42.77,
-          "Optical Warehouse": 741.54,
-          "Optical by National Pharmacies": 1094.63
-        },
-        "independent_2km_count": 0
-      },
-      "market": {
-        "sa2_code": "123011701",
-        "sa2_name": "Mount Annan",
-        "population_2025": 19565,
-        "population_growth_pct": 2.12,
-        "median_household_income": 1257,
-        "age_45_plus_pct": 35.4,
-        "retail_businesses": 47
       }
     },
     "place-au-unknown-mt-annan-marketplace": {
@@ -39544,74 +39275,6 @@
         "median_household_income": 843,
         "age_45_plus_pct": 8.5,
         "retail_businesses": 187
-      }
-    },
-    "place-au-unknown-redland-bay-shopping-village": {
-      "place_id": "place-au-unknown-redland-bay-shopping-village",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "place-au-unknown-redland-bay-shopping-village",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "place-au-unknown-redland-bay-shopping-village",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 22.07,
-      "competitor_context": {
-        "by_retailer": {},
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 9.82,
-          "Bailey Nelson": 22.07,
-          "OPSM": 3.43,
-          "Oscar Wylee": 14.05,
-          "Specsavers": 3.31,
-          "Bupa Optical": 22.04,
-          "George & Matilda": 24.0,
-          "Optical Superstore": 13.96,
-          "Eyecare Plus": 15.39,
-          "EyeQ Optometrists": 426.19,
-          "Matthews Eyecare": 2128.89,
-          "1001 Optometry": 34.8,
-          "Chemist Warehouse Optometry": 12.58,
-          "The Optical Company": 13.02,
-          "Laubman & Pank": 14.63,
-          "Dresden Vision": 32.14,
-          "Optical Warehouse": 14.38,
-          "Optical by National Pharmacies": 1586.36
-        },
-        "independent_2km_count": 0
-      },
-      "market": {
-        "sa2_code": "301021009",
-        "sa2_name": "Redland Bay",
-        "population_2025": 20283,
-        "population_growth_pct": 12.06,
-        "median_household_income": 1141,
-        "age_45_plus_pct": 42.5,
-        "retail_businesses": 84
       }
     },
     "place-au-unknown-regent-place": {
@@ -74436,6 +74099,171 @@
       "source_url": "https://announcements.asx.com.au/asxpdf/20230927/pdf/05vb9jv2stp3qc.pdf",
       "last_verified_at": "2026-09-02"
     },
+    "place-au-unknown-homeco-way-536334280": {
+      "place_id": "place-au-unknown-homeco-way-536334280",
+      "centre_class": "Large Format",
+      "centre_class_method": "Confirmed",
+      "centre_class_evidence": {
+        "place_id": "place-au-unknown-homeco-way-536334280",
+        "centre_class": "Large Format",
+        "classification_method": "Confirmed",
+        "source_url": "https://www.hmccapital.com.au/investor-centre/pds/",
+        "source_type": "Official portfolio material",
+        "last_verified_at": "2026-09-03",
+        "confidence": "Medium",
+        "public_note": "Official asset material depicts HomeCo Penrith as a large-format retail centre with major bulky-goods tenants"
+      },
+      "research_status": "Partial",
+      "research_evidence": {
+        "place_id": "place-au-unknown-homeco-way-536334280",
+        "research_status": "Partial",
+        "source_url": "https://www.hmccapital.com.au/investor-centre/pds/",
+        "last_verified_at": "2026-09-03",
+        "confidence": "Medium",
+        "public_note": "Official portfolio material resolves HomeCo Penrith and its large-format identity; current property-role detail remains incomplete"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 30.18,
+      "competitor_context": {
+        "by_retailer": {
+          "Independent / Other optical": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "independent-other-optical-osm-au-node-9318665504",
+                "name": "Glamoureyes",
+                "distance_km": 1.25
+              },
+              {
+                "store_id": "independent-other-optical-osm-au-node-9354608723",
+                "name": "Penrith Spectacles",
+                "distance_km": 1.68
+              },
+              {
+                "store_id": "independent-other-optical-provision-337407",
+                "name": "City Optics Nepean",
+                "distance_km": 1.19
+              },
+              {
+                "store_id": "independent-other-optical-provision-316011",
+                "name": "City Optics Penrith",
+                "distance_km": 1.76
+              },
+              {
+                "store_id": "independent-other-optical-provision-155308",
+                "name": "Eyewear Central",
+                "distance_km": 1.76
+              }
+            ]
+          },
+          "1001 Optometry": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "1001-optometry-7297950",
+                "name": "1001 Optometry Penrith",
+                "distance_km": 1.6
+              }
+            ]
+          },
+          "Eyecare Plus": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "eyecare-plus-661",
+                "name": "Eyecare Plus Optometrists Penrith",
+                "distance_km": 1.93
+              }
+            ]
+          },
+          "OPSM": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "opsm-1300",
+                "name": "OPSM Nepean",
+                "distance_km": 1.19
+              },
+              {
+                "store_id": "opsm-1328",
+                "name": "OPSM Penrith Plaza",
+                "distance_km": 1.7
+              }
+            ]
+          },
+          "Oscar Wylee": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "oscar-wylee-43",
+                "name": "Westfield Penrith",
+                "distance_km": 1.65
+              }
+            ]
+          },
+          "Specsavers": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "specsavers-3578",
+                "name": "Penrith Nepean",
+                "distance_km": 1.11
+              },
+              {
+                "store_id": "specsavers-3386",
+                "name": "Penrith Westfield",
+                "distance_km": 1.7
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 1.19,
+          "Bailey Nelson": 30.18,
+          "OPSM": 1.19,
+          "Oscar Wylee": 1.65,
+          "Specsavers": 1.11,
+          "Bupa Optical": 22.32,
+          "George & Matilda": 22.38,
+          "Optical Superstore": 47.91,
+          "Eyecare Plus": 1.93,
+          "EyeQ Optometrists": 44.07,
+          "Matthews Eyecare": 1944.23,
+          "1001 Optometry": 1.6,
+          "Chemist Warehouse Optometry": 32.38,
+          "The Optical Company": 30.07,
+          "Laubman & Pank": 603.59,
+          "Dresden Vision": 46.4,
+          "Optical Warehouse": 712.97,
+          "Optical by National Pharmacies": 1093.58
+        },
+        "independent_2km_count": 5
+      },
+      "market": {
+        "sa2_code": "124031461",
+        "sa2_name": "Jamisontown - South Penrith",
+        "population_2025": 17749,
+        "population_growth_pct": 1.94,
+        "median_household_income": 1071,
+        "age_45_plus_pct": 38.8,
+        "retail_businesses": 92
+      }
+    },
     "place-au-nsw-plumpton-marketplace": {
       "place_id": "place-au-nsw-plumpton-marketplace",
       "centre_class": "Sub-regional",
@@ -77548,6 +77376,114 @@
         "median_household_income": 979,
         "age_45_plus_pct": 49.8,
         "retail_businesses": 96
+      }
+    },
+    "place-au-unknown-mt-annan-central": {
+      "place_id": "place-au-unknown-mt-annan-central",
+      "centre_class": "Neighbourhood",
+      "centre_class_method": "Inferred",
+      "centre_class_evidence": {
+        "place_id": "place-au-unknown-mt-annan-central",
+        "centre_class": "Neighbourhood",
+        "classification_method": "Inferred",
+        "source_url": "https://www.mtannancentral.com.au/centre-info",
+        "source_type": "Official current centre information",
+        "last_verified_at": "2026-09-03",
+        "confidence": "Medium",
+        "public_note": "Neighbourhood format inferred from the current Coles-anchored local-centre directory and centre information"
+      },
+      "research_status": "Partial",
+      "research_evidence": {
+        "place_id": "place-au-unknown-mt-annan-central",
+        "research_status": "Partial",
+        "source_url": "https://www.mtannancentral.com.au/stores",
+        "last_verified_at": "2026-09-03",
+        "confidence": "High",
+        "public_note": "Current official centre evidence confirms the address Coles-anchored directory inferred class and manager while ownership and leasing control remain unknown"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [
+        "rel-mt-annan-rook-manager"
+      ],
+      "group_ids": [
+        "group-rook-partners"
+      ],
+      "owner_names": [],
+      "manager_names": [
+        "Rook Partners"
+      ],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 31.83,
+      "competitor_context": {
+        "by_retailer": {
+          "Eyecare Plus": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "eyecare-plus-648",
+                "name": "Eyecare Plus Optometrists Mt Annan",
+                "distance_km": 0.33
+              }
+            ]
+          },
+          "OPSM": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "opsm-1056",
+                "name": "OPSM Narellan",
+                "distance_km": 1.93
+              }
+            ]
+          },
+          "Specsavers": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "specsavers-3345",
+                "name": "Narellan Town Centre",
+                "distance_km": 1.92
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 21.11,
+          "Bailey Nelson": 31.83,
+          "OPSM": 1.93,
+          "Oscar Wylee": 2.05,
+          "Specsavers": 1.92,
+          "Bupa Optical": 21.01,
+          "George & Matilda": 24.13,
+          "Optical Superstore": 30.36,
+          "Eyecare Plus": 0.33,
+          "EyeQ Optometrists": 28.54,
+          "Matthews Eyecare": 1916.56,
+          "1001 Optometry": 33.54,
+          "Chemist Warehouse Optometry": 5.62,
+          "The Optical Company": 34.76,
+          "Laubman & Pank": 629.91,
+          "Dresden Vision": 42.77,
+          "Optical Warehouse": 741.54,
+          "Optical by National Pharmacies": 1094.63
+        },
+        "independent_2km_count": 0
+      },
+      "market": {
+        "sa2_code": "123011701",
+        "sa2_name": "Mount Annan",
+        "population_2025": 19565,
+        "population_growth_pct": 2.12,
+        "median_household_income": 1257,
+        "age_45_plus_pct": 35.4,
+        "retail_businesses": 47
       }
     },
     "place-au-nsw-mt-druitt-westfield": {
@@ -107714,119 +107650,6 @@
         "retail_businesses": 167
       }
     },
-    "place-au-qld-cairns-smithfield-centre": {
-      "place_id": "place-au-qld-cairns-smithfield-centre",
-      "centre_class": "Sub-regional",
-      "centre_class_method": "Confirmed",
-      "centre_class_evidence": {
-        "place_id": "place-au-qld-cairns-smithfield-centre",
-        "centre_class": "Sub-regional",
-        "classification_method": "Confirmed",
-        "source_url": "https://stonebridge.com.au/stonebridge-sells-qld-sub-regional-centre-for-138-million/",
-        "source_type": "Authoritative transaction and current venue profiles",
-        "last_verified_at": "2026-09-02",
-        "confidence": "High",
-        "public_note": "The transaction adviser explicitly classifies Smithfield Shopping Centre as sub-regional and the current venue confirms the same major-anchor format"
-      },
-      "research_status": "Partial",
-      "research_evidence": {
-        "place_id": "place-au-qld-cairns-smithfield-centre",
-        "research_status": "Partial",
-        "source_url": "https://www.smithfieldcentre.com.au/centre-information/leasing/",
-        "last_verified_at": "2026-09-02",
-        "confidence": "High",
-        "public_note": "Current ABN and venue evidence identify the owner trust CPRAM permanent leasing and JLL casual leasing; the current centre manager remains unidentified"
-      },
-      "leasing_arrangement": "External agency",
-      "relationship_ids": [
-        "rel-portfolio-smithfield-centre-trust-owner-owner",
-        "rel-portfolio-cpram-smithfield-leasing-leasing_controller",
-        "rel-portfolio-cpram-smithfield-leasing-external_leasing_agent",
-        "rel-portfolio-jll-smithfield-casual-leasing-external_leasing_agent"
-      ],
-      "group_ids": [
-        "group-cpram",
-        "group-jll",
-        "group-smithfield-centre-trust"
-      ],
-      "owner_names": [
-        "Smithfield Centre Trust"
-      ],
-      "manager_names": [],
-      "has_bailey": false,
-      "bailey_store_count": 0,
-      "portfolio_overlap_status": "UNKNOWN",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 1354.72,
-      "competitor_context": {
-        "by_retailer": {
-          "OPSM": {
-            "in_centre": [
-              {
-                "store_id": "opsm-1237",
-                "name": "OPSM Smithfield",
-                "distance_km": 0.07
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "Bupa Optical": {
-            "in_centre": [],
-            "nearby_unverified": [
-              {
-                "store_id": "bupa-optical-3870853",
-                "name": "Bupa Optical Smithfield",
-                "distance_km": 0.14
-              }
-            ],
-            "catchment_2km": []
-          },
-          "Specsavers": {
-            "in_centre": [
-              {
-                "store_id": "specsavers-3304",
-                "name": "Cairns Smithfield Centre",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 7.9,
-          "Bailey Nelson": 1354.72,
-          "OPSM": 0.07,
-          "Oscar Wylee": 12.94,
-          "Specsavers": 0.0,
-          "Bupa Optical": 0.14,
-          "George & Matilda": 12.26,
-          "Optical Superstore": 12.56,
-          "Eyecare Plus": 8.35,
-          "EyeQ Optometrists": 603.24,
-          "Matthews Eyecare": 3464.45,
-          "1001 Optometry": 1401.87,
-          "Chemist Warehouse Optometry": 782.61,
-          "The Optical Company": 1403.94,
-          "Laubman & Pank": 13.24,
-          "Dresden Vision": 1402.26,
-          "Optical Warehouse": 1196.53,
-          "Optical by National Pharmacies": 2092.36
-        },
-        "independent_2km_count": 0
-      },
-      "market": {
-        "sa2_code": "306011142",
-        "sa2_name": "Trinity Beach - Smithfield",
-        "population_2025": 19862,
-        "population_growth_pct": 16.19,
-        "median_household_income": 1097,
-        "age_45_plus_pct": 39.1,
-        "retail_businesses": 78
-      }
-    },
     "place-au-qld-caloundra-shopping-centre": {
       "place_id": "place-au-qld-caloundra-shopping-centre",
       "centre_class": "Sub-regional",
@@ -115048,6 +114871,80 @@
       "source_url": "https://www.retailfirst.com.au/leasing",
       "last_verified_at": "2026-09-02"
     },
+    "place-au-unknown-redland-bay-shopping-village": {
+      "place_id": "place-au-unknown-redland-bay-shopping-village",
+      "centre_class": "Neighbourhood",
+      "centre_class_method": "Inferred",
+      "centre_class_evidence": {
+        "place_id": "place-au-unknown-redland-bay-shopping-village",
+        "centre_class": "Neighbourhood",
+        "classification_method": "Inferred",
+        "source_url": "https://redlandbayshoppingvillage.com.au/centre-map/",
+        "source_type": "Official current centre map",
+        "last_verified_at": "2026-09-03",
+        "confidence": "Medium",
+        "public_note": "Neighbourhood format inferred from the current Woolworths-anchored local centre directory and village configuration"
+      },
+      "research_status": "Partial",
+      "research_evidence": {
+        "place_id": "place-au-unknown-redland-bay-shopping-village",
+        "research_status": "Partial",
+        "source_url": "https://redlandbayshoppingvillage.com.au/centre-map/",
+        "last_verified_at": "2026-09-03",
+        "confidence": "High",
+        "public_note": "Current official centre evidence confirms the address centre class directory and manager while ownership and leasing control remain unknown"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [
+        "rel-redland-bay-all-commercial-manager"
+      ],
+      "group_ids": [
+        "group-all-commercial-properties-qld"
+      ],
+      "owner_names": [],
+      "manager_names": [
+        "All Commercial Properties Qld"
+      ],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 22.07,
+      "competitor_context": {
+        "by_retailer": {},
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 9.82,
+          "Bailey Nelson": 22.07,
+          "OPSM": 3.43,
+          "Oscar Wylee": 14.05,
+          "Specsavers": 3.31,
+          "Bupa Optical": 22.04,
+          "George & Matilda": 24.0,
+          "Optical Superstore": 13.96,
+          "Eyecare Plus": 15.39,
+          "EyeQ Optometrists": 426.19,
+          "Matthews Eyecare": 2128.89,
+          "1001 Optometry": 34.8,
+          "Chemist Warehouse Optometry": 12.58,
+          "The Optical Company": 13.02,
+          "Laubman & Pank": 14.63,
+          "Dresden Vision": 32.14,
+          "Optical Warehouse": 14.38,
+          "Optical by National Pharmacies": 1586.36
+        },
+        "independent_2km_count": 0
+      },
+      "market": {
+        "sa2_code": "301021009",
+        "sa2_name": "Redland Bay",
+        "population_2025": 20283,
+        "population_growth_pct": 12.06,
+        "median_household_income": 1141,
+        "age_45_plus_pct": 42.5,
+        "retail_businesses": 84
+      }
+    },
     "place-au-qld-ipswich-riverlink-shopping-centre": {
       "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
       "centre_class": "Regional",
@@ -115914,6 +115811,119 @@
         "median_household_income": 946,
         "age_45_plus_pct": 62.8,
         "retail_businesses": 87
+      }
+    },
+    "place-au-qld-cairns-smithfield-centre": {
+      "place_id": "place-au-qld-cairns-smithfield-centre",
+      "centre_class": "Sub-regional",
+      "centre_class_method": "Confirmed",
+      "centre_class_evidence": {
+        "place_id": "place-au-qld-cairns-smithfield-centre",
+        "centre_class": "Sub-regional",
+        "classification_method": "Confirmed",
+        "source_url": "https://stonebridge.com.au/stonebridge-sells-qld-sub-regional-centre-for-138-million/",
+        "source_type": "Authoritative transaction and current venue profiles",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "The transaction adviser explicitly classifies Smithfield Shopping Centre as sub-regional and the current venue confirms the same major-anchor format"
+      },
+      "research_status": "Partial",
+      "research_evidence": {
+        "place_id": "place-au-qld-cairns-smithfield-centre",
+        "research_status": "Partial",
+        "source_url": "https://www.smithfieldcentre.com.au/centre-information/leasing/",
+        "last_verified_at": "2026-09-02",
+        "confidence": "High",
+        "public_note": "Current ABN and venue evidence identify the owner trust CPRAM permanent leasing and JLL casual leasing; the current centre manager remains unidentified"
+      },
+      "leasing_arrangement": "External agency",
+      "relationship_ids": [
+        "rel-portfolio-smithfield-centre-trust-owner-owner",
+        "rel-portfolio-cpram-smithfield-leasing-leasing_controller",
+        "rel-portfolio-cpram-smithfield-leasing-external_leasing_agent",
+        "rel-portfolio-jll-smithfield-casual-leasing-external_leasing_agent"
+      ],
+      "group_ids": [
+        "group-cpram",
+        "group-jll",
+        "group-smithfield-centre-trust"
+      ],
+      "owner_names": [
+        "Smithfield Centre Trust"
+      ],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 1354.72,
+      "competitor_context": {
+        "by_retailer": {
+          "OPSM": {
+            "in_centre": [
+              {
+                "store_id": "opsm-1237",
+                "name": "OPSM Smithfield",
+                "distance_km": 0.07
+              }
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": []
+          },
+          "Bupa Optical": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "bupa-optical-3870853",
+                "name": "Bupa Optical Smithfield",
+                "distance_km": 0.14
+              }
+            ],
+            "catchment_2km": []
+          },
+          "Specsavers": {
+            "in_centre": [
+              {
+                "store_id": "specsavers-3304",
+                "name": "Cairns Smithfield Centre",
+                "distance_km": 0.0
+              }
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": []
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 7.9,
+          "Bailey Nelson": 1354.72,
+          "OPSM": 0.07,
+          "Oscar Wylee": 12.94,
+          "Specsavers": 0.0,
+          "Bupa Optical": 0.14,
+          "George & Matilda": 12.26,
+          "Optical Superstore": 12.56,
+          "Eyecare Plus": 8.35,
+          "EyeQ Optometrists": 603.24,
+          "Matthews Eyecare": 3464.45,
+          "1001 Optometry": 1401.87,
+          "Chemist Warehouse Optometry": 782.61,
+          "The Optical Company": 1403.94,
+          "Laubman & Pank": 13.24,
+          "Dresden Vision": 1402.26,
+          "Optical Warehouse": 1196.53,
+          "Optical by National Pharmacies": 2092.36
+        },
+        "independent_2km_count": 0
+      },
+      "market": {
+        "sa2_code": "306011142",
+        "sa2_name": "Trinity Beach - Smithfield",
+        "population_2025": 19862,
+        "population_growth_pct": 16.19,
+        "median_household_income": 1097,
+        "age_45_plus_pct": 39.1,
+        "retail_businesses": 78
       }
     },
     "place-au-qld-smithfield-shopping-centre": {
@@ -169918,6 +169928,74 @@
         "retail_businesses": 57
       }
     },
+    "place-au-unknown-kingston-village-shopping-centre": {
+      "place_id": "place-au-unknown-kingston-village-shopping-centre",
+      "centre_class": "Neighbourhood",
+      "centre_class_method": "Inferred",
+      "centre_class_evidence": {
+        "place_id": "place-au-unknown-kingston-village-shopping-centre",
+        "centre_class": "Neighbourhood",
+        "classification_method": "Inferred",
+        "source_url": "https://kingstonvillage.com.au/trading-hours-location/",
+        "source_type": "Official current centre information",
+        "last_verified_at": "2026-09-03",
+        "confidence": "Medium",
+        "public_note": "Neighbourhood format inferred from the current local-centre identity and supermarket-led operating information"
+      },
+      "research_status": "Partial",
+      "research_evidence": {
+        "place_id": "place-au-unknown-kingston-village-shopping-centre",
+        "research_status": "Partial",
+        "source_url": "https://kingstonvillage.com.au/trading-hours-location/",
+        "last_verified_at": "2026-09-03",
+        "confidence": "Medium",
+        "public_note": "Current official centre evidence confirms the address Woolworths presence and inferred class while current ownership management and leasing control remain unknown"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 19.73,
+      "competitor_context": {
+        "by_retailer": {},
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 8.73,
+          "Bailey Nelson": 19.73,
+          "OPSM": 19.05,
+          "Oscar Wylee": 19.02,
+          "Specsavers": 10.07,
+          "Bupa Optical": 20.48,
+          "George & Matilda": 41.29,
+          "Optical Superstore": 48.88,
+          "Eyecare Plus": 39.6,
+          "EyeQ Optometrists": 52.19,
+          "Matthews Eyecare": 2069.83,
+          "1001 Optometry": 60.98,
+          "Chemist Warehouse Optometry": 707.03,
+          "The Optical Company": 60.68,
+          "Laubman & Pank": 364.03,
+          "Dresden Vision": 19.76,
+          "Optical Warehouse": 1409.61,
+          "Optical by National Pharmacies": 605.28
+        },
+        "independent_2km_count": 0
+      },
+      "market": {
+        "sa2_code": "203031490",
+        "sa2_name": "Ocean Grove",
+        "population_2025": 20792,
+        "population_growth_pct": 7.21,
+        "median_household_income": 1128,
+        "age_45_plus_pct": 48.6,
+        "retail_businesses": 84
+      }
+    },
     "place-au-vic-lakeview-shopping-centre": {
       "place_id": "place-au-vic-lakeview-shopping-centre",
       "centre_class": "Unknown",
@@ -210542,6 +210620,32 @@
       },
       "white_space_property_ids": []
     },
+    "group-all-commercial-properties-qld": {
+      "group_id": "group-all-commercial-properties-qld",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-unknown-redland-bay-shopping-village": [
+          "MANAGER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
+    "group-rook-partners": {
+      "group_id": "group-rook-partners",
+      "property_count": 1,
+      "bailey_property_count": 0,
+      "bailey_store_count": 0,
+      "bailey_property_ids": [],
+      "asset_roles": {
+        "place-au-unknown-mt-annan-central": [
+          "MANAGER"
+        ]
+      },
+      "white_space_property_ids": []
+    },
     "group-hmc-last-mile-logistics-property-trust-1": {
       "group_id": "group-hmc-last-mile-logistics-property-trust-1",
       "property_count": 1,
@@ -212476,9 +212580,9 @@
           "sa2_code": "208031192",
           "sa2_name": "Moorabbin Airport",
           "population_2025": 26,
-          "population_growth_pct": 0,
+          "population_growth_pct": null,
           "median_household_income": null,
-          "age_45_plus_pct": 7.7,
+          "age_45_plus_pct": null,
           "retail_businesses": 9
         }
       },
@@ -213432,9 +213536,9 @@
           "sa2_code": "404031104",
           "sa2_name": "Adelaide Airport",
           "population_2025": 3,
-          "population_growth_pct": 0,
+          "population_growth_pct": null,
           "median_household_income": null,
-          "age_45_plus_pct": 100,
+          "age_45_plus_pct": null,
           "retail_businesses": 4
         }
       },
@@ -213753,55 +213857,6 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 7.18,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
-    "place-au-unknown-homeco-way-536334280": {
-      "schema_version": 1,
-      "place_id": "place-au-unknown-homeco-way-536334280",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "124031461",
-          "sa2_name": "Jamisontown - South Penrith",
-          "population_2025": 17749,
-          "population_growth_pct": 1.94,
-          "median_household_income": 1071,
-          "age_45_plus_pct": 38.8,
-          "retail_businesses": 92
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-unknown-homeco-way-536334280.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 30.18,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -214208,9 +214263,9 @@
           "sa2_code": "208031192",
           "sa2_name": "Moorabbin Airport",
           "population_2025": 26,
-          "population_growth_pct": 0,
+          "population_growth_pct": null,
           "median_household_income": null,
-          "age_45_plus_pct": 7.7,
+          "age_45_plus_pct": null,
           "retail_businesses": 9
         }
       },
@@ -214243,55 +214298,6 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 3.67,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
-    "place-au-unknown-kingston-village-shopping-centre": {
-      "schema_version": 1,
-      "place_id": "place-au-unknown-kingston-village-shopping-centre",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "203031490",
-          "sa2_name": "Ocean Grove",
-          "population_2025": 20792,
-          "population_growth_pct": 7.21,
-          "median_household_income": 1128,
-          "age_45_plus_pct": 48.6,
-          "retail_businesses": 84
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-unknown-kingston-village-shopping-centre.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 19.73,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -215157,55 +215163,6 @@
         }
       }
     },
-    "place-au-unknown-mt-annan-central": {
-      "schema_version": 1,
-      "place_id": "place-au-unknown-mt-annan-central",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "123011701",
-          "sa2_name": "Mount Annan",
-          "population_2025": 19565,
-          "population_growth_pct": 2.12,
-          "median_household_income": 1257,
-          "age_45_plus_pct": 35.4,
-          "retail_businesses": 47
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-unknown-mt-annan-central.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 31.83,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
     "place-au-unknown-mt-annan-marketplace": {
       "schema_version": 1,
       "place_id": "place-au-unknown-mt-annan-marketplace",
@@ -215930,55 +215887,6 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 0.21,
-          "group_ids": [],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
-    "place-au-unknown-redland-bay-shopping-village": {
-      "schema_version": 1,
-      "place_id": "place-au-unknown-redland-bay-shopping-village",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "301021009",
-          "sa2_name": "Redland Bay",
-          "population_2025": 20283,
-          "population_growth_pct": 12.06,
-          "median_household_income": 1141,
-          "age_45_plus_pct": 42.5,
-          "retail_businesses": 84
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-unknown-redland-bay-shopping-village.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Unknown"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Not researched",
-        "values": {
-          "nearest_bailey_km": 22.07,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -230665,6 +230573,55 @@
         }
       }
     },
+    "place-au-unknown-homeco-way-536334280": {
+      "schema_version": 1,
+      "place_id": "place-au-unknown-homeco-way-536334280",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "124031461",
+          "sa2_name": "Jamisontown - South Penrith",
+          "population_2025": 17749,
+          "population_growth_pct": 1.94,
+          "median_household_income": 1071,
+          "age_45_plus_pct": 38.8,
+          "retail_businesses": 92
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-au-unknown-homeco-way-536334280.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "Shopping Centre",
+          "centre_class": "Large Format"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 30.18,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
     "place-au-nsw-plumpton-marketplace": {
       "schema_version": 1,
       "place_id": "place-au-nsw-plumpton-marketplace",
@@ -231987,6 +231944,57 @@
         "values": {
           "nearest_bailey_km": 87.96,
           "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
+    "place-au-unknown-mt-annan-central": {
+      "schema_version": 1,
+      "place_id": "place-au-unknown-mt-annan-central",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "123011701",
+          "sa2_name": "Mount Annan",
+          "population_2025": 19565,
+          "population_growth_pct": 2.12,
+          "median_household_income": 1257,
+          "age_45_plus_pct": 35.4,
+          "retail_businesses": 47
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-au-unknown-mt-annan-central.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "Shopping Centre",
+          "centre_class": "Neighbourhood"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Available",
+        "values": {
+          "nearest_bailey_km": 31.83,
+          "group_ids": [
+            "group-rook-partners"
+          ],
           "overlap_status": "UNKNOWN"
         }
       }
@@ -243930,59 +243938,6 @@
         }
       }
     },
-    "place-au-qld-cairns-smithfield-centre": {
-      "schema_version": 1,
-      "place_id": "place-au-qld-cairns-smithfield-centre",
-      "demographic": {
-        "availability": "Available",
-        "values": {
-          "sa2_code": "306011142",
-          "sa2_name": "Trinity Beach - Smithfield",
-          "population_2025": 19862,
-          "population_growth_pct": 16.19,
-          "median_household_income": 1097,
-          "age_45_plus_pct": 39.1,
-          "retail_businesses": 78
-        }
-      },
-      "competition": {
-        "availability": "Available",
-        "evidence_pointer": "property_summaries.place-au-qld-cairns-smithfield-centre.competitor_context",
-        "values": {
-          "in_centre_rule": "accepted shared canonical place_id",
-          "nearby_rule": "straight-line distance only; never centre membership"
-        }
-      },
-      "retail_environment": {
-        "availability": "Partial",
-        "values": {
-          "location_setting": "Shopping Centre",
-          "centre_class": "Sub-regional"
-        }
-      },
-      "accessibility": {
-        "availability": "Unavailable",
-        "values": {}
-      },
-      "catchment": {
-        "availability": "Indicative only",
-        "values": {
-          "method": "2 km straight-line competitor context"
-        }
-      },
-      "portfolio": {
-        "availability": "Available",
-        "values": {
-          "nearest_bailey_km": 1354.72,
-          "group_ids": [
-            "group-cpram",
-            "group-jll",
-            "group-smithfield-centre-trust"
-          ],
-          "overlap_status": "UNKNOWN"
-        }
-      }
-    },
     "place-au-qld-caloundra-shopping-centre": {
       "schema_version": 1,
       "place_id": "place-au-qld-caloundra-shopping-centre",
@@ -246979,6 +246934,57 @@
         }
       }
     },
+    "place-au-unknown-redland-bay-shopping-village": {
+      "schema_version": 1,
+      "place_id": "place-au-unknown-redland-bay-shopping-village",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "301021009",
+          "sa2_name": "Redland Bay",
+          "population_2025": 20283,
+          "population_growth_pct": 12.06,
+          "median_household_income": 1141,
+          "age_45_plus_pct": 42.5,
+          "retail_businesses": 84
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-au-unknown-redland-bay-shopping-village.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "Shopping Centre",
+          "centre_class": "Neighbourhood"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Available",
+        "values": {
+          "nearest_bailey_km": 22.07,
+          "group_ids": [
+            "group-all-commercial-properties-qld"
+          ],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
     "place-au-qld-ipswich-riverlink-shopping-centre": {
       "schema_version": 1,
       "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
@@ -247326,6 +247332,59 @@
           "group_ids": [
             "group-greenpool-capital",
             "group-greenpool-management"
+          ],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
+    "place-au-qld-cairns-smithfield-centre": {
+      "schema_version": 1,
+      "place_id": "place-au-qld-cairns-smithfield-centre",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "306011142",
+          "sa2_name": "Trinity Beach - Smithfield",
+          "population_2025": 19862,
+          "population_growth_pct": 16.19,
+          "median_household_income": 1097,
+          "age_45_plus_pct": 39.1,
+          "retail_businesses": 78
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-au-qld-cairns-smithfield-centre.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "Shopping Centre",
+          "centre_class": "Sub-regional"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Available",
+        "values": {
+          "nearest_bailey_km": 1354.72,
+          "group_ids": [
+            "group-cpram",
+            "group-jll",
+            "group-smithfield-centre-trust"
           ],
           "overlap_status": "UNKNOWN"
         }
@@ -269897,6 +269956,55 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 8.83,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
+    "place-au-unknown-kingston-village-shopping-centre": {
+      "schema_version": 1,
+      "place_id": "place-au-unknown-kingston-village-shopping-centre",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "203031490",
+          "sa2_name": "Ocean Grove",
+          "population_2025": 20792,
+          "population_growth_pct": 7.21,
+          "median_household_income": 1128,
+          "age_45_plus_pct": 48.6,
+          "retail_businesses": 84
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-au-unknown-kingston-village-shopping-centre.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "Shopping Centre",
+          "centre_class": "Neighbourhood"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 19.73,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }

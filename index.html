@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="assets/styles.css?v=20260903h" />
+    <link rel="stylesheet" href="assets/styles.css?v=20260903i" />
   </head>
   <body>
     <header class="app-header">
@@ -65,7 +65,7 @@
 
         <aside class="layer-panel" id="layerPanel" hidden aria-label="Map layers">
           <header><strong>Map layers</strong><button class="icon-button" id="layerClose" type="button" aria-label="Close layers"><i data-lucide="x"></i></button></header>
-          <label><input type="checkbox" data-layer="demographic" /><span><i class="swatch demographic"></i>Demographic demand</span></label>
+          <label><input type="checkbox" data-layer="demographic" /><span><i class="swatch demographic"></i>ABS demographic context</span></label>
           <label><input type="checkbox" data-layer="growth" /><span><i class="swatch growth"></i>Population growth</span></label>
           <label><input type="checkbox" data-layer="saturation" /><span><i class="swatch saturation"></i>Competitor saturation</span></label>
           <label><input type="checkbox" data-layer="centres" checked /><span>
@@ -80,7 +80,7 @@
           <label><input type="checkbox" data-layer="health" /><span><i data-lucide="cross"></i>Health retailers</span></label>
           <label><input type="checkbox" data-layer="transport" /><span><i data-lucide="train-front"></i>Public transport</span></label>
           <label><input type="checkbox" data-layer="parking" /><span><i data-lucide="square-parking"></i>Parking</span></label>
-          <p>Local amenity layers use OpenStreetMap and load only when zoomed into a precinct.</p>
+          <p>ABS layers use 2025 population and 2021 Census age and equivalised-income measures. Income is not consumer spending; no spending layer is currently loaded. Local amenity layers use OpenStreetMap and load only when zoomed into a precinct.</p>
         </aside>
 
         <div class="mode-notice" id="modeNotice" hidden></div>
@@ -132,7 +132,7 @@
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
-    <script src="assets/intelligence.js?v=20260903f"></script>
-    <script src="assets/app.js?v=20260903h"></script>
+    <script src="assets/intelligence.js?v=20260903g"></script>
+    <script src="assets/app.js?v=20260903i"></script>
   </body>
 </html>

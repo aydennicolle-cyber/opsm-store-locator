@@ -44,6 +44,7 @@ class RetailPlaceTests(unittest.TestCase):
         cls.memberships = read_csv("store_place_memberships.csv")
         cls.reviews = read_csv("place_review.csv")
         cls.lookalikes = json.loads((DATA / "lookalike_places.json").read_text(encoding="utf-8"))
+        cls.place_tenants = json.loads((DATA / "place_tenants.json").read_text(encoding="utf-8"))
 
     def test_canonical_ids_are_unique_and_typed(self) -> None:
         ids = [place["place_id"] for place in self.places]
@@ -982,6 +983,50 @@ class RetailPlaceTests(unittest.TestCase):
                 self.assertEqual(row["location_setting"], "Shopping Centre" if setting == "shopping-centre" else "High Street")
                 self.assertTrue(0 <= row["screening_completeness"] <= 100)
                 self.assertIn("market_features", row)
+
+    def test_locked_top_ten_cotenancy_pilot_is_evidenced(self) -> None:
+        pilot_ids = self.place_tenants["metadata"]["pilot_place_ids"]
+        self.assertEqual(len(pilot_ids), 10)
+        self.assertEqual(len(pilot_ids), len(set(pilot_ids)))
+        place_ids = {place["place_id"] for place in self.places}
+        self.assertTrue(set(pilot_ids).issubset(place_ids))
+        rows = self.place_tenants["memberships"]
+        membership_ids = [row["membership_id"] for row in rows]
+        self.assertEqual(len(membership_ids), len(set(membership_ids)))
+        for place_id in pilot_ids:
+            place_rows = [row for row in rows if row["place_id"] == place_id]
+            self.assertTrue(any(row["category"] != "Optical" for row in place_rows))
+        expected_optical_store_ids = {
+            row["store_id"] for row in self.memberships if row["place_id"] in pilot_ids
+        }
+        exported_optical_store_ids = {
+            row["store_id"] for row in rows if row["category"] == "Optical"
+        }
+        self.assertEqual(exported_optical_store_ids, expected_optical_store_ids)
+        for row in rows:
+            self.assertRegex(row["source_url"], r"^https?://")
+            self.assertRegex(row["verified_at"], r"^\d{4}-\d{2}-\d{2}$")
+            self.assertIn(row["confidence"], {"High", "Medium", "Uncertain"})
+
+    def test_top_ten_pilot_identity_repairs(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        expected = {
+            "place-au-nsw-westfield-penrith": ("Westfield Penrith", "NSW", "Penrith", "2750"),
+            "place-au-nsw-nepean-village": ("Nepean Village", "NSW", "Penrith", "2750"),
+            "place-au-unknown-jimboomba-shopping-centre": ("Jimboomba Junction Shopping Centre", "QLD", "Jimboomba", "4280"),
+            "place-au-unknown-redland-bay-shopping-village": ("Redland Bay Shopping Village", "QLD", "Redland Bay", "4165"),
+            "place-au-unknown-homeco-way-536334280": ("HomeCo Penrith", "NSW", "Penrith", "2750"),
+            "place-au-nsw-narellan-town-centre": ("Narellan Town Centre", "NSW", "Narellan", "2567"),
+            "place-au-qld-cairns-smithfield-centre": ("Smithfield Shopping Centre", "QLD", "Smithfield", "4878"),
+            "place-au-unknown-kingston-village-shopping-centre": ("Kingston Village Shopping Centre", "VIC", "Ocean Grove", "3226"),
+            "place-au-qld-cairns-shopping-centre": ("Cairns Central", "QLD", "Cairns City", "4870"),
+            "place-au-unknown-mt-annan-central": ("Mt Annan Central", "NSW", "Mount Annan", "2567"),
+        }
+        for place_id, values in expected.items():
+            place = places[place_id]
+            self.assertEqual((place["name"], place["state"], place["locality"], place["postcode"]), values)
+            self.assertTrue(place["address"])
+            self.assertTrue(place["official_url"].startswith("https://"))
 
 
 if __name__ == "__main__":

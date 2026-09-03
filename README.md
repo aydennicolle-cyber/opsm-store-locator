@@ -15,9 +15,9 @@ Historical baseline captured in July 2026 (not a current completeness target):
 - Independent / Other optical: 425 community-mapped locations
 - Combined: 1,491 locations (1,269 Australia; 222 New Zealand)
 
-The local working draft now separates store usability, source freshness, location setting and canonical place mapping. As of 2 September 2026 it contains 2,099 unique stores, including 1,418 usable named-network stores, plus 715 canonical centres/plazas and 792 high-street corridors. All 1,418 named-network stores have an accepted location setting and place mapping, with no promoted mapping reviews outstanding. The 6,192 unpromoted map records remain background discovery leads rather than consultant review work.
+The local working draft now separates store usability, source freshness, location setting and canonical place mapping. As of 3 September 2026 it contains 2,210 unique stores, including 1,552 usable named-network stores, plus 736 canonical centres/plazas and 834 high-street corridors. All 1,552 named-network stores have an accepted location setting and place mapping, with no promoted mapping reviews outstanding. The 6,192 unpromoted map records remain background discovery leads rather than consultant review work.
 
-These counts are generated, not hard-coded. `data/data_health.json` reports each health dimension separately and keeps 6,192 unpromoted discovery leads informational. The four core networks remain selected by default. George & Matilda (114), Eyecare Plus (105), Optical Superstore (51), 1001 Optometry (16), EyeQ Optometrists (25) and Laubman & Pank (40) are optional filters in the same Network view; their markers appear from zoom level 8 to prevent national-map crowding. Independent/Other appears from zoom level 10.
+These counts are generated, not hard-coded. `data/data_health.json` reports each health dimension separately and keeps 6,192 unpromoted discovery leads informational. Six core retailer groups are selected by default: OPSM, Specsavers, Bailey Nelson, Oscar Wylee, George & Matilda and Eyecare Plus. Smaller named groups remain optional filters in the same Network view; their markers appear from zoom level 8 to prevent national-map crowding. Independent/Other appears from zoom level 10.
 
 The independent/other layer combines OpenStreetMap `shop=optician` discovery with 337 practices from ProVision's official public locator. ProVision is stored as a filterable affiliation rather than a retailer brand, and accepted identity remaps prevent duplicate practice pins. The broader independent layer remains non-exhaustive and is switched off by default in the two-country view.
 
@@ -34,13 +34,13 @@ Other retailer maps remain separate from the optical analysis:
 
 - **Network:** filter by country, region and retailer; preserve proximity analysis, same-centre checks, pair comparison and CSV export.
 - **Places:** search shopping centres, plazas and high-street corridors by name, geography, canonical property group, leasing arrangement, centre class, portfolio overlap, retailer presence and mapping confidence; inspect every mapped optical tenant and its public relationship evidence.
-- **Opportunity:** rank Bailey-free places separately by country and location setting using footprint similarity, whitespace, optical validation and public retail context. Optional Bailey performance CSVs are read only in browser memory.
+- **Opportunity:** rank Bailey-free places separately by country and location setting using footprint similarity, whitespace, optical validation and public retail context. Save a browser-local place shortlist, export summary and key-tenant CSVs, and print a selected-place brief. Optional Bailey performance CSVs are read only in browser memory.
 - **Trends:** review source dates, archived store snapshots and detected openings, closures or relocations.
 - **Compare:** hold three or more public candidate sites in a fixed comparison tray.
 
 The public map also provides:
 
-- ABS SA2 demographic demand and population-growth layers for Australia.
+- ABS SA2 demographic context and population-growth layers for Australia. The build validates every selected workbook column against its official header, preserves each indicator's reference year, suppresses unreliable rates for very small Census populations and clearly distinguishes equivalised household income from consumer spending. No consumer-spending dataset is currently loaded.
 - Competitor saturation, reviewed centre and optional OpenStreetMap health, transport and parking layers.
 - 1 km, 3 km, 5 km and 10 km catchment summaries using intersecting SA2-centroid estimates.
 - A white-space score using market demand, competitive white space, centre strength, accessibility, network fit and format fit.
@@ -70,6 +70,8 @@ The combined schema is published in:
 - `data/place_id_remaps.csv`
 - `data/place_review.csv`
 - `data/lookalike_places.json`
+- `data/place_tenants.json`
+- `data/place_key_tenants.csv`
 - `data/property_intelligence.json`
 - `data/property_groups.csv`
 - `data/property_group_aliases.csv`
@@ -154,7 +156,9 @@ python3 scripts/build_property_intelligence.py
 python3 scripts/build_data_health.py
 ```
 
-The market-intelligence build uses official ABS Data by Region workbooks and SA2 boundaries for Australia, refreshes public centre profiles, and archives the successful trans-Tasman network snapshot. New Zealand stores retain explicit Stats NZ coverage status and are never joined to Australian market data.
+The market-intelligence build uses official ABS Data by Region workbooks and SA2 boundaries for Australia and refreshes public centre profiles. It archives a trans-Tasman network snapshot only when census certification passes. New Zealand stores retain explicit Stats NZ coverage status and are never joined to Australian market data.
+
+The fixed first co-tenancy pilot covers the ten Australian shopping centres selected on 3 September 2026. It records accepted optical memberships and researched key co-tenants with official directory evidence; it is a key co-tenancy profile, not a complete centre directory. The client walkthrough is documented in `docs/client-walkthrough.md`.
 
 Run the complete public checks:
 

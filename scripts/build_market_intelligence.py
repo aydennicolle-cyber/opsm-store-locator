@@ -73,16 +73,21 @@ def whole_or_decimal(value):
     return int(value) if float(value).is_integer() else round(float(value), 2)
 
 
-def workbook_rows(path: Path, years: set[int], columns: dict[str, int]) -> dict[str, dict[int, dict]]:
+def workbook_rows(path: Path, years: set[int], columns: dict[str, tuple[int, str]]) -> dict[str, dict[int, dict]]:
     workbook = load_workbook(path, read_only=True, data_only=True)
     sheet = workbook["Table 1"]
+    for name, (index, expected_header) in columns.items():
+        actual_header = str(sheet.cell(7, index + 1).value or "").strip()
+        if actual_header != expected_header:
+            workbook.close()
+            raise RuntimeError(f"ABS workbook schema changed for {name}: expected {expected_header!r}; found {actual_header!r}")
     results: dict[str, dict[int, dict]] = defaultdict(dict)
     for row in sheet.iter_rows(min_row=8, values_only=True):
         code = str(row[0] or "").strip()
         year = int(row[2]) if isinstance(row[2], (int, float)) else None
         if len(code) != 9 or year not in years:
             continue
-        results[code][year] = {name: number(row[index]) for name, index in columns.items()}
+        results[code][year] = {name: number(row[index]) for name, (index, _) in columns.items()}
     workbook.close()
     return results
 
@@ -180,34 +185,34 @@ def build_market_features() -> list[dict]:
         paths["population"],
         {2021, 2025},
         {
-            "population": 3,
-            "density": 4,
-            "median_age": 9,
-            "age_45_49_pct": 111,
-            "age_50_54_pct": 112,
-            "age_55_59_pct": 113,
-            "age_60_64_pct": 114,
-            "age_65_69_pct": 115,
-            "age_70_74_pct": 116,
-            "age_75_79_pct": 117,
-            "age_80_84_pct": 118,
-            "age_85_plus_pct": 119,
+            "population": (3, "Estimated resident population (no.)"),
+            "density": (4, "Population density (persons/km2)"),
+            "median_age": (9, "Median age - persons (years)"),
+            "age_45_49_pct": (111, "Persons - 45-49 years (%)"),
+            "age_50_54_pct": (112, "Persons - 50-54 years (%)"),
+            "age_55_59_pct": (113, "Persons - 55-59 years (%)"),
+            "age_60_64_pct": (114, "Persons - 60-64 years (%)"),
+            "age_65_69_pct": (115, "Persons - 65-69 years (%)"),
+            "age_70_74_pct": (116, "Persons - 70-74 years (%)"),
+            "age_75_79_pct": (117, "Persons - 75-79 years (%)"),
+            "age_80_84_pct": (118, "Persons - 80-84 years (%)"),
+            "age_85_plus_pct": (119, "Persons - 85 and over (%)"),
         },
     )
     economy = workbook_rows(
         paths["economy"],
         {2025},
-        {"total_businesses": 7, "retail_businesses": 14, "health_businesses": 24},
+        {"total_businesses": (7, "Total businesses (no.)"), "retail_businesses": (14, "Retail trade (no.)"), "health_businesses": (24, "Health care and social assistance (no.)")},
     )
     income = workbook_rows(
         paths["income"],
         {2021},
-        {"median_household_income_weekly": 11},
+        {"median_equivalised_household_income_weekly": (11, "Median equivalised total household income (weekly) ($)")},
     )
     employment = workbook_rows(
         paths["employment"],
         {2021},
-        {"unemployment_rate": 53, "participation_rate": 54},
+        {"unemployment_rate": (53, "Unemployment rate (%)"), "participation_rate": (54, "Participation rate (%)")},
     )
 
     market_features = []
@@ -241,6 +246,21 @@ def build_market_features() -> list[dict]:
         age_45_plus = sum(value for value in age_values if value is not None) if any(
             value is not None for value in age_values
         ) else None
+        small_population_caution = population_baseline is not None and population_baseline < 100
+        if small_population_caution:
+            growth = None
+            age_45_plus = None
+        if age_45_plus is not None and not 0 <= age_45_plus <= 100:
+            age_45_plus = None
+        unemployment = employment.get(code, {}).get(2021, {}).get("unemployment_rate")
+        participation = employment.get(code, {}).get(2021, {}).get("participation_rate")
+        if small_population_caution or (unemployment is not None and not 0 <= unemployment <= 100):
+            unemployment = None
+        if small_population_caution or (participation is not None and not 0 <= participation <= 100):
+            participation = None
+        equivalised_income = income.get(code, {}).get(2021, {}).get("median_equivalised_household_income_weekly")
+        if small_population_caution:
+            equivalised_income = None
         centre_lon, centre_lat = geometry_centre(feature["geometry"])
         market_features.append(
             {
@@ -258,15 +278,9 @@ def build_market_features() -> list[dict]:
                     "population_density_2025": whole_or_decimal(current.get("density")),
                     "median_age_2021": whole_or_decimal(census.get("median_age")),
                     "age_45_plus_pct_2021": whole_or_decimal(age_45_plus),
-                    "median_household_income_weekly_2021": whole_or_decimal(
-                        income.get(code, {}).get(2021, {}).get("median_household_income_weekly")
-                    ),
-                    "unemployment_rate_2021": whole_or_decimal(
-                        employment.get(code, {}).get(2021, {}).get("unemployment_rate")
-                    ),
-                    "participation_rate_2021": whole_or_decimal(
-                        employment.get(code, {}).get(2021, {}).get("participation_rate")
-                    ),
+                    "median_equivalised_household_income_weekly_2021": whole_or_decimal(equivalised_income),
+                    "unemployment_rate_2021": whole_or_decimal(unemployment),
+                    "participation_rate_2021": whole_or_decimal(participation),
                     "total_businesses_2025": whole_or_decimal(
                         economy.get(code, {}).get(2025, {}).get("total_businesses")
                     ),
@@ -280,6 +294,8 @@ def build_market_features() -> list[dict]:
                     "source_url": ABS_BASE,
                     "source_release_date": ABS_RELEASE_DATE,
                     "confidence": "High",
+                    "small_population_caution": small_population_caution,
+                    "quality_note": "Census-derived rates and growth suppressed because the 2021 population was below 100" if small_population_caution else "Published ABS indicators; Census measures retain their 2021 reference year",
                 },
             }
         )
@@ -596,6 +612,12 @@ def main() -> None:
                     "source_url": ABS_BASE,
                     "source_release_date": ABS_RELEASE_DATE,
                     "boundary_source": SA2_SERVICE.rsplit("/query", 1)[0],
+                    "field_definitions": {
+                        "population_2025": "ABS estimated resident population",
+                        "population_growth_2021_2025_pct": "Change in ABS estimated resident population; suppressed where the 2021 population is below 100",
+                        "median_equivalised_household_income_weekly_2021": "ABS Census median equivalised total household income per week; this is not consumer spending",
+                    },
+                    "consumer_spending_status": "Not included — no verified consumer-expenditure dataset is loaded",
                     "generated_at": datetime.now(timezone.utc).isoformat(),
                 },
                 "features": features,
