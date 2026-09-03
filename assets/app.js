@@ -200,7 +200,13 @@
       target_min_sqm: "",
       target_max_sqm: "",
     },
-    opportunityFilters: { country: "Australia", setting: "Shopping Centre" },
+    opportunityFilters: {
+      country: "Australia",
+      setting: "",
+      require_any_retailer: false,
+      must_have_retailers: new Set(),
+      must_not_have_retailers: new Set(),
+    },
     placeFilters: {
       search: "", country: "", type: "", bailey: "", retailers: new Set(), confidence: "",
       group_id: "", arrangement: "", overlap: "", centre_class: "", min_income: "",
@@ -970,17 +976,23 @@
       .join("");
   }
 
-  function lookalikeKey() {
+  function lookalikeKeys() {
     const country = state.opportunityFilters.country === "Australia" ? "au" : "nz";
-    const setting = state.opportunityFilters.setting === "Shopping Centre" ? "shopping-centre" : "high-street";
-    return `${country}-${setting}`;
+    const settings = state.opportunityFilters.setting === "Shopping Centre"
+      ? ["shopping-centre"]
+      : state.opportunityFilters.setting === "High Street"
+        ? ["high-street"]
+        : ["shopping-centre", "high-street"];
+    return settings.map((setting) => `${country}-${setting}`);
   }
 
-  function selectedPerformanceBenchmarks() {
+  function selectedPerformanceBenchmarks(setting = "") {
     if (!state.performanceBenchmark) return [];
     const selected = new Set(state.performanceBenchmark.store_ids);
     return (state.lookalikes.bailey_benchmarks || []).filter(
-      (row) => selected.has(row.store_id) && row.country === state.opportunityFilters.country && row.location_setting === state.opportunityFilters.setting
+      (row) => selected.has(row.store_id)
+        && row.country === state.opportunityFilters.country
+        && (!setting || row.location_setting === setting)
     );
   }
 
@@ -992,11 +1004,12 @@
   }
 
   function performanceAdjustedLookalikes() {
-    const rows = (state.lookalikes.rankings?.[lookalikeKey()] || []).map((row) => ({ ...row, components: { ...row.components } }));
-    const benchmarks = selectedPerformanceBenchmarks();
-    if (!state.performanceBenchmark || benchmarks.length < 2) return rows;
+    const rows = lookalikeKeys().flatMap((key) => state.lookalikes.rankings?.[key] || [])
+      .map((row) => ({ ...row, components: { ...row.components } }));
     const fields = ["population_2025", "population_growth_2021_2025_pct", "age_45_plus_pct_2021", "median_household_income_weekly_2021"];
     rows.forEach((row) => {
+      const benchmarks = selectedPerformanceBenchmarks(row.location_setting);
+      if (!state.performanceBenchmark || benchmarks.length < 2) return;
       const similarities = fields.map((field) => {
         const value = Number(row.market_features?.[field]);
         const target = medianValue(benchmarks.map((benchmark) => Number(benchmark.market_features?.[field])));
@@ -1014,16 +1027,22 @@
         ? Math.round(available.reduce((sum, key) => sum + Number(row.components[key]) * weights[key], 0) / row.screening_completeness)
         : null;
     });
-    rows.sort((a, b) => (a.screening_completeness < 60) - (b.screening_completeness < 60) || (b.score || 0) - (a.score || 0) || a.name.localeCompare(b.name));
-    rows.forEach((row, index) => { row.rank = index + 1; });
-    return rows;
+    const filtered = rows.filter((row) => Intel.placeMatchesRetailerFilters(
+      row,
+      state.opportunityFilters.must_have_retailers,
+      state.opportunityFilters.must_not_have_retailers,
+      state.opportunityFilters.require_any_retailer
+    ));
+    filtered.sort((a, b) => (a.screening_completeness < 60) - (b.screening_completeness < 60) || (b.score || 0) - (a.score || 0) || a.name.localeCompare(b.name));
+    filtered.forEach((row, index) => { row.rank = index + 1; });
+    return filtered;
   }
 
   function lookalikeRowHtml(row) {
     const components = row.components || {};
     return `<button class="lookalike-row" data-place-id="${escapeHtml(row.place_id)}">
       <span class="rank-number">${row.rank}</span>
-      <span><strong>${escapeHtml(row.name)}</strong><small>${escapeHtml(`${row.locality || "Locality not recorded"}${row.state ? `, ${row.state}` : ""}`)}</small></span>
+      <span><strong>${escapeHtml(row.name)}</strong><small>${escapeHtml(`${row.location_setting} · ${row.locality || "Locality not recorded"}${row.state ? `, ${row.state}` : ""}`)}</small></span>
       <span class="lookalike-score"><strong>${row.score ?? "—"}</strong><small>lookalike</small></span>
       <span><strong>${row.screening_completeness}%</strong><small>complete</small></span>
       <span class="component-mini"><small>Footprint ${components.bailey_footprint_similarity ?? "—"} · Whitespace ${components.bailey_whitespace ?? "—"} · Optical ${components.optical_market_validation ?? "—"} · Context ${components.accessibility_retail_context ?? "—"}</small></span>
@@ -1062,17 +1081,47 @@
   function renderOpportunityView() {
     const rows = performanceAdjustedLookalikes();
     elements.visibleTotal.textContent = rows.length.toLocaleString("en-AU");
-    elements.visibleTotalLabel.textContent = "Bailey-free places in segment";
+    elements.visibleTotalLabel.textContent = "Bailey-free places visible";
+    const retailerChoices = BRAND_ORDER.filter((retailer) => retailer !== "Bailey Nelson");
+    const retailerFilterCount = Number(state.opportunityFilters.require_any_retailer)
+      + state.opportunityFilters.must_have_retailers.size
+      + state.opportunityFilters.must_not_have_retailers.size;
+    const retailerFilterLabel = retailerFilterCount
+      ? `${state.opportunityFilters.require_any_retailer ? "At least one optical retailer · " : ""}${state.opportunityFilters.must_have_retailers.size} required · ${state.opportunityFilters.must_not_have_retailers.size} excluded`
+      : "No retailer requirement";
+    const retailerCheckboxes = (mode, selected) => retailerChoices.map((retailer) => `
+      <label><input type="checkbox" data-opportunity-retailer="${escapeHtml(mode)}" value="${escapeHtml(retailer)}" ${selected.has(retailer) ? "checked" : ""} />
+        <span>${escapeHtml(retailer)}</span>
+      </label>`).join("");
     const benchmarkLabel = state.performanceBenchmark
       ? `Top ${state.performanceBenchmark.store_ids.length} imported Bailey matches · ${state.performanceBenchmark.unmatched.length} unmatched rows`
-      : "All current Bailey Nelson stores in this country and setting";
+      : state.opportunityFilters.setting
+        ? "All current Bailey Nelson stores in this country and setting"
+        : "All current Bailey Nelson stores, compared within each location setting";
+    const settingLabel = state.opportunityFilters.setting || "All settings";
     elements.viewContent.innerHTML = `
       <section class="experimental-banner"><i data-lucide="scan-search"></i><div><strong>Lookalike screening rank</strong><span>Transparent leasing screen, not a probability of store success. Stale sources and missing evidence remain visible in completeness.</span></div></section>
       <section class="opportunity-form ranking-controls">
         <div class="select-grid">
           <label><span>Country</span><select id="lookalikeCountry">${filterOptions(["Australia", "New Zealand"], state.opportunityFilters.country, "Country")}</select></label>
-          <label><span>Location setting</span><select id="lookalikeSetting">${filterOptions(["Shopping Centre", "High Street"], state.opportunityFilters.setting, "Setting")}</select></label>
+          <label><span>Location setting</span><select id="lookalikeSetting">
+            <option value="" ${state.opportunityFilters.setting ? "" : "selected"}>All settings</option>
+            <option value="Shopping Centre" ${state.opportunityFilters.setting === "Shopping Centre" ? "selected" : ""}>Shopping centres</option>
+            <option value="High Street" ${state.opportunityFilters.setting === "High Street" ? "selected" : ""}>High streets</option>
+          </select></label>
         </div>
+        <details class="opportunity-retailer-filters" ${retailerFilterCount ? "open" : ""}>
+          <summary><span><strong>Retailer presence</strong><small>${escapeHtml(retailerFilterLabel)}</small></span><i data-lucide="chevron-down"></i></summary>
+          <label class="opportunity-any-retailer"><input id="opportunityAnyRetailer" type="checkbox" ${state.opportunityFilters.require_any_retailer ? "checked" : ""} />
+            <span><strong>At least one mapped optical retailer</strong><small>Any brand; useful for centres or corridors with existing optical validation.</small></span>
+          </label>
+          <div class="opportunity-retailer-columns">
+            <fieldset><legend>Must have every selected retailer</legend>${retailerCheckboxes("must-have", state.opportunityFilters.must_have_retailers)}</fieldset>
+            <fieldset><legend>Must not have any selected retailer</legend>${retailerCheckboxes("must-not-have", state.opportunityFilters.must_not_have_retailers)}</fieldset>
+          </div>
+          ${retailerFilterCount ? '<button class="secondary-command" id="clearOpportunityRetailers" type="button">Clear retailer filters</button>' : ""}
+          <p class="form-note">Presence means an accepted mapping to this exact centre or corridor, not merely a nearby store.</p>
+        </details>
         <div class="performance-import">
           <span><strong>Bailey benchmark</strong><small>${escapeHtml(benchmarkLabel)}</small></span>
           <button class="secondary-command" id="performanceImportButton" type="button"><i data-lucide="upload"></i>Load performance CSV</button>
@@ -1082,8 +1131,8 @@
         <p class="form-note">The CSV is read locally in memory and is never uploaded, stored, logged, exported or added to a share URL.</p>
       </section>
       <section class="result-section lookalike-section">
-        <div class="section-heading"><h2>${escapeHtml(`${state.opportunityFilters.country} · ${state.opportunityFilters.setting}`)}</h2><span>${rows.length} Bailey-free places</span></div>
-        <div class="lookalike-list" id="lookalikeList">${rows.length ? rows.slice(0, 150).map(lookalikeRowHtml).join("") : '<div class="empty-state"><strong>No ranked places in this segment</strong><span>Choose another country or setting.</span></div>'}</div>
+        <div class="section-heading"><h2>${escapeHtml(`${state.opportunityFilters.country} · ${settingLabel}`)}</h2><span>${rows.length} Bailey-free places</span></div>
+        <div class="lookalike-list" id="lookalikeList">${rows.length ? rows.slice(0, 150).map(lookalikeRowHtml).join("") : '<div class="empty-state"><strong>No places match these filters</strong><span>Change the location setting or retailer presence requirements.</span></div>'}</div>
       </section>
       <details class="manual-screening"><summary>Screen a manual candidate point</summary><section class="opportunity-form">
         <label><span>Brand profile</span><select id="profileSelect">${profileOptions()}</select></label>
@@ -1132,6 +1181,33 @@
     });
     document.getElementById("lookalikeSetting").addEventListener("change", (event) => {
       state.opportunityFilters.setting = event.target.value;
+      renderOpportunityView();
+      updateCentreMarkersForFilters();
+    });
+    document.querySelectorAll("[data-opportunity-retailer]").forEach((input) => {
+      input.addEventListener("change", () => {
+        const isRequired = input.dataset.opportunityRetailer === "must-have";
+        const target = isRequired ? state.opportunityFilters.must_have_retailers : state.opportunityFilters.must_not_have_retailers;
+        const opposite = isRequired ? state.opportunityFilters.must_not_have_retailers : state.opportunityFilters.must_have_retailers;
+        if (input.checked) {
+          target.add(input.value);
+          opposite.delete(input.value);
+        } else {
+          target.delete(input.value);
+        }
+        renderOpportunityView();
+        updateCentreMarkersForFilters();
+      });
+    });
+    document.getElementById("opportunityAnyRetailer").addEventListener("change", (event) => {
+      state.opportunityFilters.require_any_retailer = event.target.checked;
+      renderOpportunityView();
+      updateCentreMarkersForFilters();
+    });
+    document.getElementById("clearOpportunityRetailers")?.addEventListener("click", () => {
+      state.opportunityFilters.require_any_retailer = false;
+      state.opportunityFilters.must_have_retailers.clear();
+      state.opportunityFilters.must_not_have_retailers.clear();
       renderOpportunityView();
       updateCentreMarkersForFilters();
     });
@@ -2969,6 +3045,7 @@
       view: state.view,
       filters: state.filters,
       placeFilters: state.placeFilters,
+      opportunityFilters: state.opportunityFilters,
       map: { latitude: center.lat, longitude: center.lng, zoom: map.getZoom() },
       candidates: state.candidates,
     });
@@ -3046,6 +3123,20 @@
       state.placeFilters.min_income = payload.place_filters.min_income ?? "";
       state.placeFilters.min_bailey_distance = payload.place_filters.min_bailey_distance ?? "";
       state.placeFilters.sort = payload.place_filters.sort || "name";
+    }
+    if (payload.opportunity_filters) {
+      state.opportunityFilters.country = ["Australia", "New Zealand"].includes(payload.opportunity_filters.country)
+        ? payload.opportunity_filters.country : "Australia";
+      state.opportunityFilters.setting = ["Shopping Centre", "High Street"].includes(payload.opportunity_filters.setting)
+        ? payload.opportunity_filters.setting : "";
+      state.opportunityFilters.require_any_retailer = Boolean(payload.opportunity_filters.require_any_retailer);
+      state.opportunityFilters.must_have_retailers = new Set(
+        (payload.opportunity_filters.must_have_retailers || []).filter((retailer) => BRAND_ORDER.includes(retailer) && retailer !== "Bailey Nelson")
+      );
+      state.opportunityFilters.must_not_have_retailers = new Set(
+        (payload.opportunity_filters.must_not_have_retailers || []).filter((retailer) => BRAND_ORDER.includes(retailer) && retailer !== "Bailey Nelson")
+      );
+      state.opportunityFilters.must_have_retailers.forEach((retailer) => state.opportunityFilters.must_not_have_retailers.delete(retailer));
     }
     (payload.candidates || []).forEach((candidate, index) => {
       if (!Number.isFinite(candidate.latitude) || !Number.isFinite(candidate.longitude)) return;

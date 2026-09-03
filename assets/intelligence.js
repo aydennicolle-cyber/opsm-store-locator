@@ -437,6 +437,13 @@
     return { by_retailer: byRetailer };
   }
 
+  function placeMatchesRetailerFilters(place, mustHave, mustNotHave, requireAny = false) {
+    const retailers = new Set(Array.isArray(place?.retailers) ? place.retailers : []);
+    return (!requireAny || retailers.size > 0)
+      && Array.from(mustHave || []).every((retailer) => retailers.has(retailer))
+      && Array.from(mustNotHave || []).every((retailer) => !retailers.has(retailer));
+  }
+
   function sanitiseShareState(state) {
     return {
       view: state.view || "network",
@@ -462,6 +469,13 @@
         min_income: number(state.placeFilters?.min_income),
         min_bailey_distance: number(state.placeFilters?.min_bailey_distance),
         sort: state.placeFilters?.sort || "name",
+      },
+      opportunity_filters: {
+        country: state.opportunityFilters?.country || "Australia",
+        setting: state.opportunityFilters?.setting || "",
+        require_any_retailer: Boolean(state.opportunityFilters?.require_any_retailer),
+        must_have_retailers: Array.from(state.opportunityFilters?.must_have_retailers || []),
+        must_not_have_retailers: Array.from(state.opportunityFilters?.must_not_have_retailers || []),
       },
       map: {
         latitude: number(state.map?.latitude),
@@ -497,6 +511,7 @@
     portfolioOverlapStatus,
     effectivePropertyRelationships,
     competitorPropertyContext,
+    placeMatchesRetailerFilters,
     sanitiseShareState,
   };
 });

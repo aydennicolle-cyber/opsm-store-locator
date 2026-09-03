@@ -135,6 +135,19 @@ const propertyContext = Intel.competitorPropertyContext(
 );
 assert.equal(propertyContext.by_retailer.OPSM.in_centre.length, 1);
 assert.equal(propertyContext.by_retailer.OPSM.nearby_unverified.length, 1);
+assert.equal(Intel.placeMatchesRetailerFilters(
+  {retailers: ["OPSM", "Specsavers"]},
+  new Set(["OPSM", "Specsavers"]),
+  new Set(["Oscar Wylee"])
+), true);
+assert.equal(Intel.placeMatchesRetailerFilters(
+  {retailers: ["OPSM", "Specsavers", "Oscar Wylee"]},
+  ["OPSM", "Specsavers"],
+  ["Oscar Wylee"]
+), false);
+assert.equal(Intel.placeMatchesRetailerFilters({retailers: []}, [], []), true);
+assert.equal(Intel.placeMatchesRetailerFilters({retailers: []}, [], [], true), false);
+assert.equal(Intel.placeMatchesRetailerFilters({retailers: ["OPSM"]}, [], [], true), true);
 const propertyShare = Intel.sanitiseShareState({
   view: "centres", filters: {}, placeFilters: {group_id: "group-qic", retailers: new Set(["OPSM", "Specsavers"]), min_income: "1500"},
   propertyCorrections: [{private_contact: "person"}], map: {}, candidates: [],
@@ -142,6 +155,15 @@ const propertyShare = Intel.sanitiseShareState({
 assert.equal(propertyShare.place_filters.group_id, "group-qic");
 assert.deepEqual(propertyShare.place_filters.retailers, ["OPSM", "Specsavers"]);
 assert.equal(propertyShare.propertyCorrections, undefined);
+const opportunityShare = Intel.sanitiseShareState({
+  view: "opportunity", filters: {}, placeFilters: {},
+  opportunityFilters: {country: "Australia", setting: "", require_any_retailer: true, must_have_retailers: new Set(["OPSM", "Specsavers"]), must_not_have_retailers: new Set(["Oscar Wylee"])},
+  map: {}, candidates: [],
+});
+assert.equal(opportunityShare.opportunity_filters.setting, "");
+assert.equal(opportunityShare.opportunity_filters.require_any_retailer, true);
+assert.deepEqual(opportunityShare.opportunity_filters.must_have_retailers, ["OPSM", "Specsavers"]);
+assert.deepEqual(opportunityShare.opportunity_filters.must_not_have_retailers, ["Oscar Wylee"]);
 
 const appSource = fs.readFileSync(require.resolve("../assets/app.js"), "utf8");
 const indexSource = fs.readFileSync(require.resolve("../index.html"), "utf8");
