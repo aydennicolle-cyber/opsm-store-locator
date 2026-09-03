@@ -137,6 +137,12 @@ class OpticalNetworkTests(unittest.TestCase):
         additional = [item for item in registry if item["network_type"] == "additional"]
         self.assertTrue(all(not item["default_visible"] for item in additional))
         self.assertTrue(all(item["min_marker_zoom"] >= 8 for item in additional))
+        primary = [item for item in registry if item["network_type"] == "primary"]
+        self.assertEqual(
+            {item["name"] for item in primary},
+            {"OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee", "George & Matilda", "Eyecare Plus"},
+        )
+        self.assertTrue(all(item["default_visible"] for item in primary))
         ids = {row["store_id"] for row in self.rows}
         remaps = []
         for path in (ROOT / "data" / "store_identity_remaps.csv", ROOT / "data" / "provision_identity_remaps.csv"):
@@ -149,7 +155,7 @@ class OpticalNetworkTests(unittest.TestCase):
     def test_additional_network_logos_are_local_assets(self) -> None:
         registry = json.loads((ROOT / "data" / "retailer_registry.json").read_text(encoding="utf-8"))["retailers"]
         additional = [item for item in registry if item["network_type"] == "additional"]
-        self.assertEqual(len(additional), 13)
+        self.assertEqual(len(additional), 11)
         self.assertTrue({
             "Bupa Optical",
             "Chemist Warehouse Optometry",

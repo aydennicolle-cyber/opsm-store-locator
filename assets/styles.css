@@ -117,6 +117,9 @@ fieldset { margin: 13px 0; padding: 0; border: 0; }
 legend, .select-grid label > span, .service-field > span, .opportunity-form label > span, .input-grid label > span { margin-bottom: 6px; color: var(--muted); font-size: 9px; font-weight: 800; text-transform: uppercase; }
 .retailer-filter { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
 .retailer-filter legend { grid-column: 1 / -1; }
+.retailer-filter-actions { grid-column: 1 / -1; display: flex; justify-content: flex-end; gap: 5px; }
+.retailer-filter-actions button { min-height: 25px; padding: 0 8px; border: 1px solid var(--line); border-radius: 3px; background: white; color: var(--ink); font-size: 8px; font-weight: 800; cursor: pointer; }
+.retailer-filter-actions button:hover { border-color: var(--teal); color: var(--teal); }
 .retailer-group-label { grid-column: 1 / -1; margin-top: 5px; color: var(--muted); font-size: 8px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
 .retailer-option { min-width: 0; height: 62px; display: grid; grid-template-columns: 1fr auto; grid-template-rows: 28px 14px; gap: 2px 4px; align-items: center; padding: 6px 7px; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; }
 .retailer-option input { position: absolute; opacity: 0; pointer-events: none; }

@@ -179,4 +179,7 @@ assert.ok(appSource.includes('centre.centre_class_evidence?.confidence || "Mediu
 assert.ok(appSource.includes("relevantCompetitionEntries"));
 assert.ok(appSource.includes("placeFocusLayer"));
 assert.ok(appSource.includes('state.view === "opportunity"'));
+assert.ok(appSource.includes('id="selectAllRetailers"'));
+assert.ok(appSource.includes('id="clearAllRetailers"'));
+assert.ok(appSource.includes("applyFilters(false);\n        renderNetworkResults();"));
 console.log("Intelligence tests passed");

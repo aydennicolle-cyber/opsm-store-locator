@@ -563,7 +563,13 @@
         <label class="search-field"><i data-lucide="search"></i><span class="sr-only">Search stores</span>
           <input id="searchInput" type="search" value="${escapeHtml(state.filters.search)}" placeholder="Store, suburb or postcode" autocomplete="off" />
         </label>
-        <fieldset class="retailer-filter"><legend>Retailer</legend>${retailerOptionsHtml()}</fieldset>
+        <fieldset class="retailer-filter"><legend>Retailer</legend>
+          <div class="retailer-filter-actions">
+            <button id="selectAllRetailers" type="button">Select all</button>
+            <button id="clearAllRetailers" type="button">Clear all</button>
+          </div>
+          ${retailerOptionsHtml()}
+        </fieldset>
         <div class="select-grid">
           <label><span>Country</span><select id="countrySelect">${filterOptions(
             countries,
@@ -678,8 +684,21 @@
       input.addEventListener("change", () => {
         if (input.checked) state.filters.retailers.add(input.value);
         else state.filters.retailers.delete(input.value);
-        applyFilters();
+        applyFilters(false);
+        renderNetworkResults();
       });
+    });
+    document.getElementById("selectAllRetailers").addEventListener("click", () => {
+      state.filters.retailers = new Set(BRAND_ORDER);
+      document.querySelectorAll('.retailer-option input[type="checkbox"]').forEach((input) => { input.checked = true; });
+      applyFilters(false);
+      renderNetworkResults();
+    });
+    document.getElementById("clearAllRetailers").addEventListener("click", () => {
+      state.filters.retailers.clear();
+      document.querySelectorAll('.retailer-option input[type="checkbox"]').forEach((input) => { input.checked = false; });
+      applyFilters(false);
+      renderNetworkResults();
     });
     document.getElementById("storeList").addEventListener("click", (event) => {
       const row = event.target.closest("[data-store-id]");
