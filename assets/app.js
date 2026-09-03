@@ -177,6 +177,7 @@
     selectedStoreId: "",
     selectedCentreId: "",
     selectedCandidateId: "",
+    focusedPlaceId: "",
     storeCompareMode: false,
     candidateDropMode: false,
     compareStores: [],
@@ -264,6 +265,9 @@
   const candidateLayer = L.layerGroup().addTo(map);
   const catchmentLayer = L.layerGroup().addTo(map);
   const amenityLayer = L.layerGroup().addTo(map);
+  const placeFocusLayer = L.layerGroup().addTo(map);
+  const placeFocusCatchmentLayer = L.layerGroup().addTo(map);
+  const focusedStoreMarkerById = new Map();
 
   function escapeHtml(value) {
     return String(value ?? "")
@@ -343,10 +347,10 @@
     )}</span></span>`;
   }
 
-  function storeIcon(store) {
+  function storeIcon(store, className = "store-marker") {
     const width = BRAND_CONFIG[store.retailer].markerWidth;
     return L.divIcon({
-      className: "store-marker",
+      className,
       html: `<div class="store-logo-marker">${brandMarkHtml(store.retailer, "map")}</div>`,
       iconSize: [width, 26],
       iconAnchor: [width / 2, 13],
@@ -457,7 +461,9 @@
   function updateCentreMarkersForFilters() {
     const visibleVenueIds = state.view === "centres"
       ? new Set(filteredPlaces().map((place) => place.place_id))
-      : new Set(state.filteredStores.map((store) => store.place_id).filter(Boolean));
+      : state.view === "opportunity"
+        ? new Set(performanceAdjustedLookalikes().map((place) => place.place_id))
+        : new Set(state.filteredStores.map((store) => store.place_id).filter(Boolean));
     centreLayer.clearLayers();
     visibleVenueIds.forEach((venueId) => {
       const marker = centreMarkerById.get(venueId);
@@ -709,12 +715,109 @@
 
   function refreshStoreMarkerVisibility() {
     storeClusters.clearLayers();
+    if (state.focusedPlaceId) return;
     const zoom = map.getZoom();
     state.filteredStores.forEach((store) => {
       if (zoom < (BRAND_CONFIG[store.retailer]?.minMarkerZoom || 0)) return;
       const marker = markerById.get(store.store_id);
       if (marker) storeClusters.addLayer(marker);
     });
+  }
+
+  function relevantCompetitionEntries(place) {
+    const byRetailer = place?.competitor_context?.by_retailer || {};
+    const categories = [
+      ["in_centre", place.location_setting === "High Street" ? "IN CORRIDOR" : "IN CENTRE", 0],
+      ["nearby_unverified", place.location_setting === "High Street" ? "NEARBY — NOT VERIFIED IN CORRIDOR" : "NEARBY — NOT VERIFIED IN CENTRE", 1],
+      ["catchment_2km", "ELSEWHERE WITHIN 2 KM", 2],
+    ];
+    const entries = new Map();
+    BRAND_ORDER.forEach((retailer) => {
+      const context = byRetailer[retailer] || {};
+      categories.forEach(([key, label, priority]) => {
+        (context[key] || []).forEach((record) => {
+          const store = state.allStores.find((item) => item.store_id === record.store_id);
+          if (!store || (entries.has(store.store_id) && entries.get(store.store_id).priority <= priority)) return;
+          entries.set(store.store_id, { store, category: key, label, priority, distance: Number(record.distance_km) });
+        });
+      });
+    });
+    return [...entries.values()].sort((left, right) => left.priority - right.priority || left.store.retailer.localeCompare(right.store.retailer) || left.store.name.localeCompare(right.store.name));
+  }
+
+  function repositionFocusedPlaceMarkers() {
+    if (!state.focusedPlaceId) return;
+    const place = state.centres.find((item) => item.place_id === state.focusedPlaceId);
+    if (!place) return;
+    focusedStoreMarkerById.forEach((marker) => resetMarkerPosition(marker));
+    const inPlace = [...focusedStoreMarkerById.values()].filter((marker) => marker.options.focusCategory === "in_centre");
+    if (inPlace.length) {
+      const anchor = L.latLng(Number(place.latitude), Number(place.longitude));
+      const point = map.latLngToLayerPoint(anchor);
+      const radius = inPlace.length > 5 ? 68 : 54;
+      inPlace
+        .sort((left, right) => left.options.storeId.localeCompare(right.options.storeId))
+        .forEach((marker, index) => {
+          const angle = -Math.PI / 2 + (Math.PI * 2 * index) / inPlace.length;
+          const offset = L.point(Math.cos(angle) * radius, Math.sin(angle) * radius);
+          marker.setLatLng(map.layerPointToLatLng(point.add(offset)));
+        });
+    }
+    const centreMarker = centreMarkerById.get(place.place_id);
+    if (centreMarker) centreMarker.setLatLng([Number(place.latitude), Number(place.longitude)]);
+  }
+
+  function clearPlaceFocus(restoreNetworkMarkers = true) {
+    state.focusedPlaceId = "";
+    placeFocusLayer.clearLayers();
+    placeFocusCatchmentLayer.clearLayers();
+    focusedStoreMarkerById.clear();
+    if (restoreNetworkMarkers) refreshStoreMarkerVisibility();
+  }
+
+  function focusPlaceOnMap(place) {
+    if (!place || !Number.isFinite(Number(place.latitude)) || !Number.isFinite(Number(place.longitude))) return;
+    clearPlaceFocus(false);
+    state.focusedPlaceId = place.place_id;
+    storeClusters.clearLayers();
+    const entries = relevantCompetitionEntries(place);
+    const bounds = L.latLngBounds([[Number(place.latitude), Number(place.longitude)]]);
+    entries.forEach(({ store, category, label, distance }) => {
+      const marker = L.marker([store.latitude, store.longitude], {
+        icon: storeIcon(store, "store-marker place-focus-store-marker"),
+        retailer: store.retailer,
+        storeId: store.store_id,
+        title: store.name,
+        baseLatitude: Number(store.latitude),
+        baseLongitude: Number(store.longitude),
+        focusCategory: category,
+        zIndexOffset: category === "in_centre" ? 1400 : 1250,
+      });
+      marker.bindTooltip(
+        `<strong>${escapeHtml(store.name)}</strong><br>${escapeHtml(label)}${Number.isFinite(distance) ? ` · ${escapeHtml(Intel.formatDistance(distance))}` : ""}`,
+        { direction: "top", offset: [0, -8] }
+      );
+      marker.on("click", () => selectStore(store.store_id, false));
+      marker.addTo(placeFocusLayer);
+      focusedStoreMarkerById.set(store.store_id, marker);
+      bounds.extend([Number(store.latitude), Number(store.longitude)]);
+    });
+    if (entries.some((entry) => entry.category !== "in_centre")) {
+      L.circle([Number(place.latitude), Number(place.longitude)], {
+        radius: 2000,
+        color: "#927126",
+        weight: 1,
+        dashArray: "5 5",
+        fillColor: "#d29b27",
+        fillOpacity: 0.035,
+        interactive: false,
+      }).addTo(placeFocusCatchmentLayer);
+    }
+    const centreMarker = centreMarkerById.get(place.place_id);
+    if (centreMarker && !centreLayer.hasLayer(centreMarker)) centreLayer.addLayer(centreMarker);
+    if (entries.length) map.fitBounds(bounds, { padding: [70, 70], maxZoom: 15 });
+    else map.setView([Number(place.latitude), Number(place.longitude)], 15);
+    window.requestAnimationFrame(repositionFocusedPlaceMarkers);
   }
 
   function renderCentresView() {
@@ -799,7 +902,6 @@
       if (!row) return;
       const centre = state.centres.find((item) => item.place_id === row.dataset.placeId);
       openCentreDetail(centre);
-      map.setView([centre.latitude, centre.longitude], 15);
     });
   }
 
@@ -959,6 +1061,8 @@
 
   function renderOpportunityView() {
     const rows = performanceAdjustedLookalikes();
+    elements.visibleTotal.textContent = rows.length.toLocaleString("en-AU");
+    elements.visibleTotalLabel.textContent = "Bailey-free places in segment";
     const benchmarkLabel = state.performanceBenchmark
       ? `Top ${state.performanceBenchmark.store_ids.length} imported Bailey matches · ${state.performanceBenchmark.unmatched.length} unmatched rows`
       : "All current Bailey Nelson stores in this country and setting";
@@ -1024,10 +1128,12 @@
     document.getElementById("lookalikeCountry").addEventListener("change", (event) => {
       state.opportunityFilters.country = event.target.value;
       renderOpportunityView();
+      updateCentreMarkersForFilters();
     });
     document.getElementById("lookalikeSetting").addEventListener("change", (event) => {
       state.opportunityFilters.setting = event.target.value;
       renderOpportunityView();
+      updateCentreMarkersForFilters();
     });
     document.getElementById("performanceImportButton").addEventListener("click", () => document.getElementById("performanceFile").click());
     document.getElementById("performanceFile").addEventListener("change", (event) => {
@@ -1042,7 +1148,6 @@
       if (!row) return;
       const place = state.centres.find((item) => item.place_id === row.dataset.placeId);
       openCentreDetail(place);
-      if (place) map.setView([place.latitude, place.longitude], 14);
     });
     [
       ["profileSelect", "profile_id"],
@@ -2089,14 +2194,24 @@
     const context = centre.competitor_context?.by_retailer || {};
     const placeLabel = centre.location_setting === "High Street" ? "CORRIDOR" : "CENTRE";
     const placeLabelLower = placeLabel.toLowerCase();
-    return `<div class="competitor-context">${BRAND_ORDER.map((brand) => {
+    const brands = BRAND_ORDER.map((brand) => {
       const values = context[brand] || { in_centre: [], nearby_unverified: [], catchment_2km: [] };
-      return `<div><strong>${brandMarkHtml(brand, "compact")}${escapeHtml(brand)}</strong>
+      return { brand, values };
+    }).filter(({ values }) => values.in_centre.length || values.nearby_unverified.length || values.catchment_2km.length);
+    if (!brands.length) return '<p class="empty-note">No mapped optical competition within the selected place or its 2 km context.</p>';
+    const storeRows = (records, label) => records.map((record) => `<button type="button" class="competition-store-row" data-store-id="${escapeHtml(record.store_id)}">
+      <span>${escapeHtml(record.name)}</span><b>${escapeHtml(label)}${Number.isFinite(Number(record.distance_km)) ? ` · ${escapeHtml(Intel.formatDistance(Number(record.distance_km)))}` : ""}</b>
+    </button>`).join("");
+    return `<div class="competitor-context">${brands.map(({ brand, values }) => `<div><strong>${brandMarkHtml(brand, "compact")}${escapeHtml(brand)}</strong>
         <span>${values.in_centre.length ? `${values.in_centre.length} IN ${placeLabel}` : `Not mapped in ${placeLabelLower}`}</span>
         ${values.nearby_unverified.length ? `<small>${values.nearby_unverified.length} NEARBY ≤250M — NOT VERIFIED IN ${placeLabel}</small>` : ""}
         ${values.catchment_2km.length ? `<small>${values.catchment_2km.length} elsewhere within 2 km straight-line catchment</small>` : ""}
-      </div>`;
-    }).join("")}</div>`;
+        <div class="competition-store-list">
+          ${storeRows(values.in_centre, `IN ${placeLabel}`)}
+          ${storeRows(values.nearby_unverified, `NEARBY — NOT VERIFIED IN ${placeLabel}`)}
+          ${storeRows(values.catchment_2km, "WITHIN 2 KM")}
+        </div>
+      </div>`).join("")}</div>`;
   }
 
   function propertyCorrectionEditorHtml(centre, relationships) {
@@ -2138,7 +2253,6 @@
   function openCentreDetail(centre) {
     if (!centre) return;
     state.selectedCentreId = centre.place_id;
-    const stores = state.allStores.filter((store) => store.place_id === centre.place_id);
     const relationships = state.propertyRelationships.filter(
       (item) => item.place_id === centre.place_id && Intel.activeRelationship(item)
     );
@@ -2166,8 +2280,7 @@
         <small>Portfolio overlap is derived from public property and tenancy evidence. It is not proof of a private commercial relationship.</small>
       </section>
       <section class="detail-section"><h3>Optical competition context</h3>${competitorContextHtml(centre)}
-        <div class="nearest-list">${stores.map((store) => nearRows([{ store, distance: 0 }], 1)).join("")}</div>
-        <p class="empty-note">IN ${isCorridor ? "CORRIDOR" : "CENTRE"} requires the same accepted canonical place ID. Distance alone never establishes membership.</p>
+        <p class="empty-note">The map is focused on the competition shown above. IN ${isCorridor ? "CORRIDOR" : "CENTRE"} requires the same accepted canonical place ID; distance alone never establishes membership.</p>
       </section>
       <section class="detail-section"><h3>Public ${isCorridor ? "place" : "centre"} metrics</h3><div class="data-grid">
         <div class="data-point"><span>Total GLA</span><strong>${centre.gla_sqm ? formatNumber(centre.gla_sqm, " sqm") : "Not published"}</strong></div>
@@ -2181,6 +2294,7 @@
     openDetailPanel();
     bindNearRows();
     bindPropertyDetail(centre, relationships);
+    focusPlaceOnMap(centre);
   }
 
   function bindPropertyDetail(centre, relationships) {
@@ -2432,6 +2546,7 @@
     elements.detailPanel.classList.remove("open");
     elements.detailPanel.setAttribute("aria-hidden", "true");
     catchmentLayer.clearLayers();
+    clearPlaceFocus();
   }
 
   function bindNearRows() {
@@ -3054,10 +3169,12 @@
     map.on("zoomend", () => {
       refreshStoreMarkerVisibility();
       repositionCloseZoomMarkers();
+      repositionFocusedPlaceMarkers();
     });
     map.on("moveend", () => {
       if (["health", "transport", "parking"].some((layer) => state.activeLayers.has(layer))) loadAmenities();
       repositionCloseZoomMarkers();
+      repositionFocusedPlaceMarkers();
       updateShareUrl(false);
     });
     window.addEventListener("resize", () => map.invalidateSize());

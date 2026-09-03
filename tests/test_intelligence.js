@@ -154,4 +154,7 @@ assert.ok(appSource.includes("eligible_for_analytics"));
 assert.ok(appSource.includes("portfolio_white_space"));
 assert.ok(appSource.includes("PROPERTY_CORRECTION_STORAGE_KEY"));
 assert.ok(appSource.includes('centre.centre_class_evidence?.confidence || "Medium"'));
+assert.ok(appSource.includes("relevantCompetitionEntries"));
+assert.ok(appSource.includes("placeFocusLayer"));
+assert.ok(appSource.includes('state.view === "opportunity"'));
 console.log("Intelligence tests passed");
