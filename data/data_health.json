@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-09-03T12:31:17+00:00",
+  "generated_at": "2026-09-03T23:12:41+00:00",
   "coverage_as_of": "2026-09-03",
   "certification_status": "Operational",
   "coverage_statement": "The network uses best-available public store data. Freshness, location setting and canonical place confidence are reported separately.",
@@ -304,7 +304,7 @@
       "required": true,
       "snapshot": "retailers/george-and-matilda/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 0,
+      "age_days": 1,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -320,7 +320,7 @@
       "required": true,
       "snapshot": "retailers/eyecare-plus/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 0,
+      "age_days": 1,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -336,7 +336,7 @@
       "required": true,
       "snapshot": "retailers/optical-superstore/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 0,
+      "age_days": 1,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -352,7 +352,7 @@
       "required": true,
       "snapshot": "retailers/1001-optometry/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 0,
+      "age_days": 1,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -368,7 +368,7 @@
       "required": true,
       "snapshot": "retailers/eyeq-optometrists/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 0,
+      "age_days": 1,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -384,7 +384,7 @@
       "required": true,
       "snapshot": "retailers/laubman-and-pank/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 0,
+      "age_days": 1,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -512,7 +512,7 @@
       "required": true,
       "snapshot": "retailers/provision/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 0,
+      "age_days": 1,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -595,7 +595,7 @@
       "required": false,
       "snapshot": "data/property_intelligence.json",
       "completion_status": "partial",
-      "last_success": "2026-09-03T12:31:11.647468+00:00",
+      "last_success": "2026-09-03T23:12:38.935130+00:00",
       "age_days": 0,
       "max_age_days": 180,
       "available": true,
@@ -640,19 +640,19 @@
     "coverage_statement": "Curated key co-tenants only; not a complete directory. Optical rows require accepted canonical place membership. Bailey high-street baseline coverage confirms the corridor and its accepted optical tenants; broader retail-mix research remains separately measurable.",
     "dimensions": {
       "bailey_research_started": 100.0,
-      "bailey_anchor_coverage": 94.0,
-      "bailey_multi_category_coverage": 76.0,
-      "evidence_freshness": 96.0
+      "bailey_anchor_coverage": 96.0,
+      "bailey_multi_category_coverage": 80.0,
+      "evidence_freshness": 96.7
     },
     "counts": {
       "pilot_places": 10,
       "bailey_centres": 50,
       "bailey_research_started": 50,
-      "bailey_anchor_profiled": 47,
-      "bailey_multi_category_profiled": 38,
-      "researched_places": 60,
-      "key_tenant_records": 250,
-      "current_key_tenant_records": 240
+      "bailey_anchor_profiled": 48,
+      "bailey_multi_category_profiled": 40,
+      "researched_places": 63,
+      "key_tenant_records": 299,
+      "current_key_tenant_records": 289
     },
     "freshness_policy_days": 90
   },
@@ -660,12 +660,12 @@
     "coverage_statement": "Baseline research reconciles each Bailey Nelson address and accepted optical membership to a canonical street-and-locality corridor. Broader co-tenancy, visitation and footfall research is measured separately because high streets usually have no single authoritative tenant directory.",
     "dimensions": {
       "bailey_corridor_baseline_coverage": 100.0,
-      "bailey_corridor_retail_mix_coverage": 0.0
+      "bailey_corridor_retail_mix_coverage": 9.4
     },
     "counts": {
       "bailey_corridors": 32,
       "baseline_researched": 32,
-      "key_tenant_profiled": 0
+      "key_tenant_profiled": 3
     }
   },
   "intelligence_layer_register": [
@@ -11076,7 +11076,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "High Street",
       "place_id": "corridor-au-qld-fortitude-valley-james-street",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "george-matilda-17213": {
@@ -18677,7 +18677,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "High Street",
       "place_id": "corridor-au-vic-fitzroy-gertrude-street",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "independent-other-optical-provision-17164": {

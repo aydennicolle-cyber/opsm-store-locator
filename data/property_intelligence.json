@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-03T12:31:11.647468+00:00",
+  "generated_at": "2026-09-03T23:12:38.935130+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
     "group_count": 157,
@@ -92823,124 +92823,6 @@
       },
       "market": {}
     },
-    "corridor-au-qld-burleigh-heads-james-street": {
-      "place_id": "corridor-au-qld-burleigh-heads-james-street",
-      "centre_class": "Unknown",
-      "centre_class_method": "",
-      "centre_class_evidence": {
-        "place_id": "corridor-au-qld-burleigh-heads-james-street",
-        "centre_class": "Unknown",
-        "classification_method": "",
-        "source_url": "",
-        "source_type": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": ""
-      },
-      "research_status": "Not researched",
-      "research_evidence": {
-        "place_id": "corridor-au-qld-burleigh-heads-james-street",
-        "research_status": "Not researched",
-        "source_url": "",
-        "last_verified_at": "",
-        "confidence": "",
-        "public_note": "No public property relationship research has been completed"
-      },
-      "leasing_arrangement": "Unknown",
-      "relationship_ids": [],
-      "group_ids": [],
-      "owner_names": [],
-      "manager_names": [],
-      "has_bailey": true,
-      "bailey_store_count": 1,
-      "portfolio_overlap_status": "SAME_CENTRE",
-      "portfolio_overlap_groups": [],
-      "portfolio_white_space": false,
-      "nearest_bailey_km": 0.0,
-      "competitor_context": {
-        "by_retailer": {
-          "Bailey Nelson": {
-            "in_centre": [
-              {
-                "store_id": "bailey-nelson-burleigh-heads",
-                "name": "Bailey Nelson Burleigh Heads",
-                "distance_km": 0.0
-              }
-            ],
-            "nearby_unverified": [],
-            "catchment_2km": []
-          },
-          "OPSM": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "opsm-1085",
-                "name": "OPSM Burleigh Heads",
-                "distance_km": 1.36
-              }
-            ]
-          },
-          "Specsavers": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "specsavers-3225",
-                "name": "Burleigh Heads Stockland",
-                "distance_km": 1.36
-              }
-            ]
-          },
-          "Eyecare Plus": {
-            "in_centre": [],
-            "nearby_unverified": [],
-            "catchment_2km": [
-              {
-                "store_id": "eyecare-plus-5512",
-                "name": "Eyecare Plus Optometrists Burleigh",
-                "distance_km": 1.38
-              },
-              {
-                "store_id": "eyecare-plus-641",
-                "name": "Eyecare Plus Optometrists Miami",
-                "distance_km": 1.77
-              }
-            ]
-          }
-        },
-        "nearest_by_retailer_km": {
-          "Independent / Other optical": 2.6,
-          "Bailey Nelson": 0.0,
-          "OPSM": 1.36,
-          "Oscar Wylee": 5.38,
-          "Specsavers": 1.36,
-          "Bupa Optical": 6.28,
-          "George & Matilda": 12.42,
-          "Optical Superstore": 5.25,
-          "Eyecare Plus": 1.38,
-          "EyeQ Optometrists": 375.08,
-          "Matthews Eyecare": 2091.03,
-          "1001 Optometry": 80.73,
-          "Chemist Warehouse Optometry": 65.93,
-          "The Optical Company": 6.59,
-          "Laubman & Pank": 67.78,
-          "Dresden Vision": 80.33,
-          "Optical Warehouse": 67.92,
-          "Optical by National Pharmacies": 1570.64
-        },
-        "independent_2km_count": 0
-      },
-      "market": {
-        "sa2_code": "309011225",
-        "sa2_name": "Burleigh Heads",
-        "population_2025": 10055,
-        "population_growth_pct": 8.56,
-        "median_household_income": 1130,
-        "age_45_plus_pct": 48.7,
-        "retail_businesses": 266
-      }
-    },
     "corridor-au-qld-fortitude-valley-james-street": {
       "place_id": "corridor-au-qld-fortitude-valley-james-street",
       "centre_class": "Unknown",
@@ -93079,6 +92961,124 @@
         "median_household_income": 1302,
         "age_45_plus_pct": 19.7,
         "retail_businesses": 247
+      }
+    },
+    "corridor-au-qld-burleigh-heads-james-street": {
+      "place_id": "corridor-au-qld-burleigh-heads-james-street",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "corridor-au-qld-burleigh-heads-james-street",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "corridor-au-qld-burleigh-heads-james-street",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": true,
+      "bailey_store_count": 1,
+      "portfolio_overlap_status": "SAME_CENTRE",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 0.0,
+      "competitor_context": {
+        "by_retailer": {
+          "Bailey Nelson": {
+            "in_centre": [
+              {
+                "store_id": "bailey-nelson-burleigh-heads",
+                "name": "Bailey Nelson Burleigh Heads",
+                "distance_km": 0.0
+              }
+            ],
+            "nearby_unverified": [],
+            "catchment_2km": []
+          },
+          "OPSM": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "opsm-1085",
+                "name": "OPSM Burleigh Heads",
+                "distance_km": 1.36
+              }
+            ]
+          },
+          "Specsavers": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "specsavers-3225",
+                "name": "Burleigh Heads Stockland",
+                "distance_km": 1.36
+              }
+            ]
+          },
+          "Eyecare Plus": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "eyecare-plus-5512",
+                "name": "Eyecare Plus Optometrists Burleigh",
+                "distance_km": 1.38
+              },
+              {
+                "store_id": "eyecare-plus-641",
+                "name": "Eyecare Plus Optometrists Miami",
+                "distance_km": 1.77
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 2.6,
+          "Bailey Nelson": 0.0,
+          "OPSM": 1.36,
+          "Oscar Wylee": 5.38,
+          "Specsavers": 1.36,
+          "Bupa Optical": 6.28,
+          "George & Matilda": 12.42,
+          "Optical Superstore": 5.25,
+          "Eyecare Plus": 1.38,
+          "EyeQ Optometrists": 375.08,
+          "Matthews Eyecare": 2091.03,
+          "1001 Optometry": 80.73,
+          "Chemist Warehouse Optometry": 65.93,
+          "The Optical Company": 6.59,
+          "Laubman & Pank": 67.78,
+          "Dresden Vision": 80.33,
+          "Optical Warehouse": 67.92,
+          "Optical by National Pharmacies": 1570.64
+        },
+        "independent_2km_count": 0
+      },
+      "market": {
+        "sa2_code": "309011225",
+        "sa2_name": "Burleigh Heads",
+        "population_2025": 10055,
+        "population_growth_pct": 8.56,
+        "median_household_income": 1130,
+        "age_45_plus_pct": 48.7,
+        "retail_businesses": 266
       }
     },
     "corridor-au-qld-newtown-james-street": {
@@ -229622,24 +229622,24 @@
         }
       }
     },
-    "corridor-au-qld-burleigh-heads-james-street": {
+    "corridor-au-qld-fortitude-valley-james-street": {
       "schema_version": 1,
-      "place_id": "corridor-au-qld-burleigh-heads-james-street",
+      "place_id": "corridor-au-qld-fortitude-valley-james-street",
       "demographic": {
         "availability": "Available",
         "values": {
-          "sa2_code": "309011225",
-          "sa2_name": "Burleigh Heads",
-          "population_2025": 10055,
-          "population_growth_pct": 8.56,
-          "median_household_income": 1130,
-          "age_45_plus_pct": 48.7,
-          "retail_businesses": 266
+          "sa2_code": "305011106",
+          "sa2_name": "Fortitude Valley",
+          "population_2025": 11889,
+          "population_growth_pct": 22.1,
+          "median_household_income": 1302,
+          "age_45_plus_pct": 19.7,
+          "retail_businesses": 247
         }
       },
       "competition": {
         "availability": "Available",
-        "evidence_pointer": "property_summaries.corridor-au-qld-burleigh-heads-james-street.competitor_context",
+        "evidence_pointer": "property_summaries.corridor-au-qld-fortitude-valley-james-street.competitor_context",
         "values": {
           "in_centre_rule": "accepted shared canonical place_id",
           "nearby_rule": "straight-line distance only; never centre membership"
@@ -229671,24 +229671,24 @@
         }
       }
     },
-    "corridor-au-qld-fortitude-valley-james-street": {
+    "corridor-au-qld-burleigh-heads-james-street": {
       "schema_version": 1,
-      "place_id": "corridor-au-qld-fortitude-valley-james-street",
+      "place_id": "corridor-au-qld-burleigh-heads-james-street",
       "demographic": {
         "availability": "Available",
         "values": {
-          "sa2_code": "305011106",
-          "sa2_name": "Fortitude Valley",
-          "population_2025": 11889,
-          "population_growth_pct": 22.1,
-          "median_household_income": 1302,
-          "age_45_plus_pct": 19.7,
-          "retail_businesses": 247
+          "sa2_code": "309011225",
+          "sa2_name": "Burleigh Heads",
+          "population_2025": 10055,
+          "population_growth_pct": 8.56,
+          "median_household_income": 1130,
+          "age_45_plus_pct": 48.7,
+          "retail_businesses": 266
         }
       },
       "competition": {
         "availability": "Available",
-        "evidence_pointer": "property_summaries.corridor-au-qld-fortitude-valley-james-street.competitor_context",
+        "evidence_pointer": "property_summaries.corridor-au-qld-burleigh-heads-james-street.competitor_context",
         "values": {
           "in_centre_rule": "accepted shared canonical place_id",
           "nearby_rule": "straight-line distance only; never centre membership"

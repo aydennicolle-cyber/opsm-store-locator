@@ -1440,10 +1440,40 @@ def average_available(values: list[float | None]) -> float | None:
 
 def build_lookalikes(places: list[dict], memberships: list[dict], stores: list[dict], generated_at: str) -> None:
     markets = json.loads(MARKETS_PATH.read_text(encoding="utf-8")).get("features", [])
+    market_links = json.loads(LINKS_PATH.read_text(encoding="utf-8")).get("links", {})
+    market_by_code = {
+        str(feature.get("properties", {}).get("sa2_code", "")): feature.get("properties", {})
+        for feature in markets
+        if feature.get("properties", {}).get("sa2_code")
+    }
+    memberships_by_place: dict[str, list[dict]] = defaultdict(list)
+    for membership in memberships:
+        if membership.get("place_id") and membership.get("review_status") == "Accepted":
+            memberships_by_place[membership["place_id"]].append(membership)
     membership_by_store = {row["store_id"]: row for row in memberships}
     stores_by_id = {row["store_id"]: row for row in stores}
+    market_basis_by_place: dict[str, str] = {}
     for place in places:
         place["market"] = market_for_point(place, markets)
+        if place["market"]:
+            market_basis_by_place[place["place_id"]] = "Place point in SA2"
+            continue
+        if place.get("country") != "Australia":
+            continue
+        member_codes = {
+            str(link.get("sa2_code"))
+            for membership in memberships_by_place.get(place["place_id"], [])
+            if (link := market_links.get(membership.get("store_id", "")))
+            and link.get("sa2_code")
+            and link.get("match_confidence") == "High"
+        }
+        # The fallback uses an already accepted place membership and unanimous
+        # member-store SA2 links. It does not infer place membership by proximity.
+        if len(member_codes) == 1:
+            market_code = next(iter(member_codes))
+            place["market"] = market_by_code.get(market_code)
+            if place["market"]:
+                market_basis_by_place[place["place_id"]] = "Accepted member-store SA2 consensus"
     benchmark: dict[tuple[str, str], list[dict]] = defaultdict(list)
     bailey_benchmarks: list[dict] = []
     for membership in memberships:
@@ -1459,6 +1489,7 @@ def build_lookalikes(places: list[dict], memberships: list[dict], stores: list[d
                     "place_id": place["place_id"],
                     "country": place["country"],
                     "location_setting": place["location_setting"],
+                    "market_match_basis": market_basis_by_place.get(place["place_id"], "Unavailable"),
                     "market_features": {
                         field: number((place.get("market") or {}).get(field))
                         for field in (
@@ -1525,6 +1556,7 @@ def build_lookalikes(places: list[dict], memberships: list[dict], stores: list[d
                 "market_features": {
                     field: number((place.get("market") or {}).get(field)) for field in fields
                 },
+                "market_match_basis": market_basis_by_place.get(place["place_id"], "Unavailable"),
                 "nearest_bailey_km": round(nearest_bailey, 1) if nearest_bailey is not None else None,
                 "optical_store_count": place["optical_store_count"],
                 "retailers": place["retailers"],
