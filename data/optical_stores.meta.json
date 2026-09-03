@@ -1,6 +1,6 @@
 {
   "name": "Australia and New Zealand Optical Retail Network",
-  "store_count": 2210,
+  "store_count": 2151,
   "source_freshness": {
     "OPSM Australia": "2026-09-01T07:42:23+00:00",
     "Specsavers Australia": "2026-09-01T23:21:29.969Z",
@@ -33,9 +33,9 @@
     "Chemist Warehouse Optometry": 8,
     "Dresden Vision": 5,
     "EyeQ Optometrists": 25,
-    "Eyecare Plus": 105,
+    "Eyecare Plus": 103,
     "George & Matilda": 114,
-    "Independent / Other optical": 658,
+    "Independent / Other optical": 601,
     "Laubman & Pank": 40,
     "Matthews Eyecare": 28,
     "OPSM": 392,
@@ -52,8 +52,10 @@
     "Other",
     "Unclassified"
   ],
+  "coordinate_override_count": 11,
+  "publication_exclusion_count": 1,
   "network_summary": {
-    "total": 2210,
+    "total": 2151,
     "by_retailer": {
       "1001 Optometry": 16,
       "Bailey Nelson": 82,
@@ -61,9 +63,9 @@
       "Chemist Warehouse Optometry": 8,
       "Dresden Vision": 5,
       "EyeQ Optometrists": 25,
-      "Eyecare Plus": 105,
+      "Eyecare Plus": 103,
       "George & Matilda": 114,
-      "Independent / Other optical": 658,
+      "Independent / Other optical": 601,
       "Laubman & Pank": 40,
       "Matthews Eyecare": 28,
       "OPSM": 392,
@@ -75,39 +77,39 @@
       "The Optical Company": 19
     },
     "by_country": {
-      "Australia": 1984,
-      "New Zealand": 226
+      "Australia": 1926,
+      "New Zealand": 225
     },
     "by_state": {
       "ACT": 34,
       "Auckland": 72,
       "Bay of Plenty": 13,
       "Canterbury": 22,
-      "Gisborne": 4,
+      "Gisborne": 3,
       "Hawke's Bay": 10,
       "Manawatu-Whanganui": 8,
       "Marlborough": 3,
-      "NSW": 581,
-      "NT": 18,
+      "NSW": 570,
+      "NT": 16,
       "Nelson": 5,
       "Northland": 7,
       "Otago": 12,
-      "QLD": 410,
-      "SA": 152,
+      "QLD": 399,
+      "SA": 149,
       "Southland": 6,
-      "TAS": 58,
+      "TAS": 54,
       "Taranaki": 6,
       "Tasman": 5,
-      "VIC": 531,
-      "WA": 200,
+      "VIC": 508,
+      "WA": 196,
       "Waikato": 24,
       "Wellington": 29
     },
     "by_location_type": {
-      "Main Street / Street-front": 1053,
-      "Other": 3,
-      "Shopping Centre": 890,
-      "Unclassified": 264
+      "Main Street / Street-front": 1054,
+      "Other": 10,
+      "Shopping Centre": 857,
+      "Unclassified": 230
     },
     "multi_brand_venues": [
       {
@@ -662,6 +664,7 @@
         "venue_id": "qld-chermside-westfield",
         "venue_name": "Chermside Westfield",
         "retailers": [
+          "Bupa Optical",
           "Oscar Wylee",
           "Specsavers"
         ]
@@ -694,6 +697,7 @@
         "venue_id": "qld-fair-pacific",
         "venue_name": "Pacific Fair",
         "retailers": [
+          "Bupa Optical",
           "OPSM",
           "Oscar Wylee",
           "Specsavers"
@@ -746,6 +750,7 @@
         "retailers": [
           "1001 Optometry",
           "Bailey Nelson",
+          "Bupa Optical",
           "Laubman & Pank",
           "OPSM",
           "Oscar Wylee",
@@ -844,6 +849,7 @@
         "venue_id": "qld-westfield",
         "venue_name": "Westfield Shopping Centre",
         "retailers": [
+          "Bupa Optical",
           "George & Matilda",
           "The Optical Company"
         ]
@@ -1229,6 +1235,6 @@
         ]
       }
     ],
-    "single_brand_venue_count": 457
+    "single_brand_venue_count": 423
   }
 }

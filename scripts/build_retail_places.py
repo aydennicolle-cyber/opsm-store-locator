@@ -21,9 +21,9 @@ CENTRES_PATH = DATA / "centres.json"
 MARKETS_PATH = DATA / "sa2_market.geojson"
 LINKS_PATH = DATA / "store_market_links.json"
 OVERRIDES_PATH = DATA / "store_place_overrides.csv"
-REVIEW_PATH = DATA / "centre_recognition_review.csv"
 CONSOLIDATIONS_PATH = DATA / "place_consolidations.csv"
 CANONICAL_OVERRIDES_PATH = DATA / "place_canonical_overrides.csv"
+SUPPRESSIONS_PATH = DATA / "place_suppressions.csv"
 OFFICIAL_PLACES_PATH = DATA / "official_retail_places.csv"
 OSM_DISCOVERY = (
     (DATA / "discovery" / "retail_places_osm_au.json", "Australia", "au"),
@@ -107,6 +107,7 @@ def read_csv(path: Path) -> list[dict]:
 def build_place_tenants(places: list[dict], memberships: list[dict], old_to_new: dict[str, str], generated_at: str) -> None:
     """Build accepted optical memberships and the evidenced co-tenancy programme."""
     place_ids = {place["place_id"] for place in places}
+    key_tenant_rows = read_csv(KEY_TENANTS_PATH)
     resolved_pilot = [old_to_new.get(place_id, place_id) for place_id in PILOT_PLACE_IDS]
     missing_pilot = [place_id for place_id in resolved_pilot if place_id not in place_ids]
     if missing_pilot:
@@ -122,7 +123,30 @@ def build_place_tenants(places: list[dict], memberships: list[dict], old_to_new:
     missing_bailey_centres = [place_id for place_id in bailey_centre_ids if place_id not in place_ids]
     if missing_bailey_centres:
         raise ValueError(f"Bailey centre co-tenancy scope references unknown places: {missing_bailey_centres}")
-    scope_place_ids = sorted(set(resolved_pilot) | set(bailey_centre_ids))
+    bailey_corridor_ids = sorted({
+        old_to_new.get(row.get("place_id", ""), row.get("place_id", ""))
+        for row in memberships
+        if row.get("retailer") == "Bailey Nelson"
+        and row.get("location_setting") == "High Street"
+        and row.get("place_id")
+    })
+    missing_bailey_corridors = [place_id for place_id in bailey_corridor_ids if place_id not in place_ids]
+    if missing_bailey_corridors:
+        raise ValueError(f"Bailey high-street scope references unknown places: {missing_bailey_corridors}")
+    # Preserve completed public research if a corrected store membership means a
+    # place is no longer in the Bailey-centre cohort.  Classification corrections
+    # must not require deleting otherwise valid place intelligence.
+    keyed_place_ids = {
+        old_to_new.get(row.get("place_id", ""), row.get("place_id", ""))
+        for row in key_tenant_rows
+        if row.get("place_id")
+    }
+    unknown_keyed_places = sorted(keyed_place_ids - place_ids)
+    if unknown_keyed_places:
+        raise ValueError(f"Key tenant data references unknown places: {unknown_keyed_places}")
+    scope_place_ids = sorted(
+        set(resolved_pilot) | set(bailey_centre_ids) | set(bailey_corridor_ids) | keyed_place_ids
+    )
 
     output: list[dict] = []
     seen_ids: set[str] = set()
@@ -150,7 +174,7 @@ def build_place_tenants(places: list[dict], memberships: list[dict], old_to_new:
         seen_ids.add(membership_id)
         output.append(item)
 
-    for row in read_csv(KEY_TENANTS_PATH):
+    for row in key_tenant_rows:
         item = {key: str(value or "").strip() for key, value in row.items()}
         item["place_id"] = old_to_new.get(item.get("place_id", ""), item.get("place_id", ""))
         membership_id = item.get("membership_id", "")
@@ -212,19 +236,29 @@ def build_place_tenants(places: list[dict], memberships: list[dict], old_to_new:
     multi_category_bailey_ids = sorted(
         place_id for place_id in bailey_centre_ids if len(category_coverage[place_id]) >= 3
     )
+    researched_bailey_corridor_ids = sorted({
+        row["place_id"] for row in output
+        if row["place_id"] in bailey_corridor_ids and row["category"] == "Optical"
+    })
+    key_tenant_profiled_bailey_corridor_ids = sorted(
+        place_id for place_id in bailey_corridor_ids if coverage[place_id]
+    )
     PLACE_TENANTS_PATH.write_text(json.dumps({
         "metadata": {
             "generated_at": generated_at,
             "verified_at": max((row.get("verified_at", "") for row in output), default=""),
-            "scope": "Locked Australian opportunity pilot plus all currently accepted Bailey Nelson shopping-centre places",
-            "coverage_note": "Curated key co-tenants only; not a complete centre directory. Optical rows require accepted canonical place membership. Research-started coverage includes qualified uncertain evidence; anchor-profiled and multi-category coverage count accepted active tenants only.",
+            "scope": "Locked Australian opportunity pilot plus all currently accepted Bailey Nelson shopping-centre and high-street places",
+            "coverage_note": "Curated key co-tenants only; not a complete directory. Optical rows require accepted canonical place membership. Bailey high-street baseline coverage confirms the corridor and its accepted optical tenants; broader retail-mix research remains separately measurable.",
             "pilot_place_ids": resolved_pilot,
             "bailey_centre_place_ids": bailey_centre_ids,
+            "bailey_corridor_place_ids": bailey_corridor_ids,
             "scope_place_ids": scope_place_ids,
             "researched_place_ids": researched_place_ids,
             "researched_bailey_centre_place_ids": researched_bailey_ids,
             "anchor_profiled_bailey_centre_place_ids": anchor_profiled_bailey_ids,
             "multi_category_bailey_centre_place_ids": multi_category_bailey_ids,
+            "researched_bailey_corridor_place_ids": researched_bailey_corridor_ids,
+            "key_tenant_profiled_bailey_corridor_place_ids": key_tenant_profiled_bailey_corridor_ids,
             "key_tenant_count_by_place": coverage,
             "key_tenant_categories_by_place": category_coverage,
         },
@@ -294,6 +328,12 @@ def build_development_signals(places: list[dict], old_to_new: dict[str, str], ge
 def apply_place_consolidations(places: list[dict], old_to_new: dict[str, str]) -> dict[str, str]:
     """Apply evidence-backed identity merges; never infer them from proximity."""
     by_id = {place["place_id"]: place for place in places}
+    reviewed_target_settings = {
+        (row.get("place_id") or "").strip(): (row.get("location_setting") or "").strip()
+        for row in read_csv(CANONICAL_OVERRIDES_PATH)
+        if (row.get("place_id") or "").strip()
+        and (row.get("location_setting") or "").strip()
+    }
     remaps: dict[str, str] = {}
     for row in read_csv(CONSOLIDATIONS_PATH):
         previous = row.get("previous_place_id", "").strip()
@@ -319,7 +359,13 @@ def apply_place_consolidations(places: list[dict], old_to_new: dict[str, str]) -
             continue
         if not source or not target:
             raise ValueError(f"Unknown place consolidation target: {previous} -> {canonical}")
-        if source.get("country") != target.get("country") or source.get("location_setting") != target.get("location_setting"):
+        effective_target_setting = reviewed_target_settings.get(
+            canonical, target.get("location_setting")
+        )
+        if (
+            source.get("country") != target.get("country")
+            or source.get("location_setting") != effective_target_setting
+        ):
             raise ValueError(f"Incompatible place consolidation: {previous} -> {canonical}")
         for alias in [source.get("name", ""), *source.get("aliases", [])]:
             if alias and alias != target.get("name") and alias not in target["aliases"]:
@@ -413,6 +459,66 @@ def apply_canonical_place_overrides(places: list[dict], old_to_new: dict[str, st
                 place[field] = value
                 if field == "locality":
                     place["suburb"] = value
+
+
+def apply_place_suppressions(
+    places: list[dict], old_to_new: dict[str, str], stores: list[dict], overrides: dict[str, dict]
+) -> list[dict]:
+    """Remove reviewed false place identities after every affected store is remapped.
+
+    Suppressions are reserved for records that cannot be consolidated because a
+    vague source identity (for example, just ``Westfield``) incorrectly joined
+    stores from more than one real property. The raw source venue IDs remain in
+    this evidenced input, while unsafe canonical remaps are removed.
+    """
+    by_id = {place["place_id"]: place for place in places}
+    applied = []
+    for row in read_csv(SUPPRESSIONS_PATH):
+        place_id = row.get("place_id", "").strip()
+        source_ids = {
+            item.strip() for item in row.get("source_venue_ids", "").split("|") if item.strip()
+        }
+        reason = row.get("reason", "").strip()
+        evidence_url = row.get("evidence_url", "").strip()
+        verified_at = row.get("verified_at", "").strip()
+        if not place_id or not reason or not evidence_url or not verified_at:
+            raise ValueError(f"Incomplete place suppression: {row}")
+        place = by_id.get(place_id)
+        if not place and source_ids:
+            candidates = [
+                item for item in places
+                if source_ids & set(item.get("old_centre_ids", []))
+            ]
+            if len(candidates) == 1:
+                place = candidates[0]
+                place_id = place["place_id"]
+        if not place:
+            raise ValueError(f"Unknown place suppression: {place_id}")
+        source_ids |= {
+            previous for previous, canonical in old_to_new.items() if canonical == place_id
+        }
+        unresolved = [
+            store["store_id"] for store in stores
+            if store.get("venue_id") in source_ids and store["store_id"] not in overrides
+        ]
+        if unresolved:
+            raise ValueError(
+                f"Suppressed place still has stores without explicit remaps: {place_id} -> {unresolved}"
+            )
+        places.remove(place)
+        by_id.pop(place_id)
+        for source_id in source_ids:
+            old_to_new.pop(source_id, None)
+        applied.append(
+            {
+                "place_id": place_id,
+                "source_venue_ids": sorted(source_ids),
+                "reason": reason,
+                "evidence_url": evidence_url,
+                "verified_at": verified_at,
+            }
+        )
+    return applied
 
 
 def add_official_retail_places(places: list[dict]) -> None:
@@ -510,6 +616,115 @@ def haversine(first: dict, second: dict) -> float:
     delta_lon = math.radians(float(second["longitude"]) - float(first["longitude"]))
     value = math.sin(delta_lat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(delta_lon / 2) ** 2
     return radius * 2 * math.atan2(math.sqrt(value), math.sqrt(1 - value))
+
+
+def normalise_address(value: str) -> str:
+    """Normalise a public postal address for conservative exact-place matching."""
+
+    value = (value or "").lower().replace("&", " cnrjoin ")
+    replacements = {
+        "highway": "hwy",
+        "street": "st",
+        "road": "rd",
+        "avenue": "ave",
+        "drive": "dr",
+        "boulevard": "blvd",
+        "parade": "pde",
+        "corner": "cnr",
+        "and": "cnrjoin",
+    }
+    for source, target in replacements.items():
+        value = re.sub(rf"\b{source}\b", target, value)
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", value).split())
+
+
+def distinctive_place_tokens(place: dict) -> set[str]:
+    """Return name tokens that are not merely the property's geography."""
+
+    context = set()
+    for field in ("locality", "suburb", "state", "country"):
+        context.update(tokens(place.get(field, "")))
+    return tokens(place.get("name", "")) - context
+
+
+def official_address_place_match(store: dict, places: list[dict]) -> dict | None:
+    """Return one authoritative place whose published address matches the store.
+
+    The relationship is established by address. Coordinates only reject an
+    implausible result and can never create a place membership.
+    """
+
+    store_address = normalise_address(store.get("full_address", ""))
+    if not store_address:
+        return None
+    matches = []
+    for place in places:
+        place_address = normalise_address(place.get("address", ""))
+        if (
+            place.get("location_setting") != "Shopping Centre"
+            or not place.get("official_url")
+            or not place_address
+            or place.get("country") != store.get("country")
+            or (place.get("state") and store.get("state") and place.get("state") != store.get("state"))
+            or (place.get("postcode") and store.get("postcode") and place.get("postcode") != store.get("postcode"))
+        ):
+            continue
+        address_matches = place_address in store_address or store_address in place_address
+        if address_matches and haversine(store, place) <= 0.5:
+            matches.append(place)
+    return matches[0] if len(matches) == 1 else None
+
+
+def validate_place_integrity(places: list[dict], memberships: list[dict], stores: list[dict]) -> None:
+    """Fail on the high-risk identity mistakes that previously reached the UI."""
+    place_ids = [place["place_id"] for place in places]
+    if len(place_ids) != len(set(place_ids)):
+        raise ValueError("Duplicate canonical place IDs")
+    place_by_id = {place["place_id"]: place for place in places}
+    stores_by_id = {store["store_id"]: store for store in stores}
+    invalid_names = []
+    generic_names = {"westfield", "westfield-shopping-centre"}
+    centres = [place for place in places if place["location_setting"] == "Shopping Centre"]
+    for place in centres:
+        name = clean_name(place.get("name", ""))
+        if name.startswith(("&", "/")) or slug(name) in generic_names:
+            invalid_names.append((place["place_id"], name))
+    if invalid_names:
+        raise ValueError(f"Malformed or ambiguous shopping-centre names: {invalid_names}")
+
+    nearby_duplicates = []
+    for index, first in enumerate(centres):
+        for second in centres[index + 1:]:
+            if first["country"] != second["country"]:
+                continue
+            if slug(clean_name(first["name"])) != slug(clean_name(second["name"])):
+                continue
+            distance = haversine(first, second)
+            if distance <= 0.5:
+                nearby_duplicates.append((first["place_id"], second["place_id"], round(distance, 3)))
+    if nearby_duplicates:
+        raise ValueError(f"Nearby duplicate shopping-centre identities: {nearby_duplicates}")
+
+    members_by_place: dict[str, list[dict]] = defaultdict(list)
+    for membership in memberships:
+        place_id = membership.get("place_id", "")
+        if place_id and place_id not in place_by_id:
+            raise ValueError(f"Membership references unknown place: {membership['store_id']} -> {place_id}")
+        if place_id and membership["location_setting"] == "Shopping Centre":
+            members_by_place[place_id].append(stores_by_id[membership["store_id"]])
+    implausible_clusters = []
+    for place_id, members in members_by_place.items():
+        if len(members) < 2:
+            continue
+        maximum = max(
+            haversine(first, second)
+            for index, first in enumerate(members)
+            for second in members[index + 1:]
+        )
+        if maximum > 5:
+            implausible_clusters.append((place_id, round(maximum, 2)))
+    if implausible_clusters:
+        raise ValueError(f"Shopping-centre memberships span implausible distances: {implausible_clusters}")
 
 
 def country_code(country: str) -> str:
@@ -871,11 +1086,6 @@ def main() -> None:
         for old_id in place["old_centre_ids"]
     }
     overrides = {row["store_id"]: row for row in read_csv(OVERRIDES_PATH)}
-    high_reviews = {
-        row["store_id"]: row
-        for row in read_csv(REVIEW_PATH)
-        if row.get("priority") == "High" and row.get("candidate_venue_id")
-    }
 
     for store_id, override in overrides.items():
         store = next((item for item in stores if item["store_id"] == store_id), None)
@@ -892,8 +1102,23 @@ def main() -> None:
                 and (
                     place["place_id"] == proposed["place_id"]
                     or (
+                        slug(clean_name(proposed["name"]))
+                        in {
+                            slug(clean_name(place.get("name", ""))),
+                            *(slug(clean_name(alias)) for alias in place.get("aliases", [])),
+                        }
+                        and (
+                            not proposed.get("locality")
+                            or not place.get("locality")
+                            or slug(proposed["locality"]) == slug(place["locality"])
+                        )
+                    )
+                    or (
                         haversine(place, proposed) <= 0.3
-                        and (tokens(place["name"]) & tokens(proposed["name"]))
+                        and (
+                            distinctive_place_tokens(place)
+                            & distinctive_place_tokens(proposed)
+                        )
                     )
                 )
             ),
@@ -920,9 +1145,17 @@ def main() -> None:
     consolidation_remaps = apply_place_consolidations(places, old_to_new)
     apply_canonical_place_overrides(places, old_to_new)
     promote_store_named_centres(stores, places, old_to_new)
+    suppressions = apply_place_suppressions(places, old_to_new, stores, overrides)
     for override in overrides.values():
-        if override.get("place_id") in consolidation_remaps:
-            override["place_id"] = consolidation_remaps[override["place_id"]]
+        place_id = override.get("place_id", "")
+        visited = set()
+        while place_id and place_id not in visited:
+            visited.add(place_id)
+            next_id = consolidation_remaps.get(place_id) or old_to_new.get(place_id)
+            if not next_id or next_id == place_id:
+                break
+            place_id = next_id
+        override["place_id"] = place_id
     place_by_id = {place["place_id"]: place for place in places}
     preliminary = []
     exceptions = []
@@ -939,6 +1172,7 @@ def main() -> None:
         evidence_url = store.get("official_url") or store.get("source_url", "")
         verified_at = store.get("fetched_at", "")[:10]
         override = overrides.get(store["store_id"])
+        address_place = official_address_place_match(store, places)
         if override:
             setting = override["location_setting"]
             place_id = override["place_id"]
@@ -956,12 +1190,13 @@ def main() -> None:
             setting = place_by_id[place_id]["location_setting"]
             confidence = "High" if store.get("classification_confidence") == "High" else "Medium"
             basis = "Canonicalised from the store's named retail-place evidence"
-        elif store["store_id"] in high_reviews and high_reviews[store["store_id"]]["candidate_venue_id"] in old_to_new:
-            review = high_reviews[store["store_id"]]
-            place_id = old_to_new[review["candidate_venue_id"]]
-            setting = place_by_id[place_id]["location_setting"]
-            confidence = "Medium"
-            basis = review["evidence"]
+        elif address_place:
+            place_id = address_place["place_id"]
+            setting = address_place["location_setting"]
+            confidence = "High"
+            basis = "Official store address matches the authoritative canonical place address"
+            evidence_url = address_place.get("official_url") or evidence_url
+            verified_at = address_place.get("source_date") or verified_at
         elif store.get("location_type") == "Other":
             setting, confidence, basis = "Other", store.get("classification_confidence") or "Medium", store["classification_basis"]
         elif store.get("location_type") == "Main Street / Street-front":
@@ -1111,6 +1346,7 @@ def main() -> None:
         place["evidence_tier"] = "Official" if place["official_url"] else "Derived"
         place.pop("old_centre_ids", None)
 
+    validate_place_integrity(places, memberships, stores)
     places.sort(key=lambda item: (item["country"], item["state"], item["place_type"], item["name"]))
     with MEMBERSHIPS_PATH.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=MEMBERSHIP_FIELDS, lineterminator="\n")
@@ -1136,6 +1372,8 @@ def main() -> None:
             "corridor_count": sum(place["location_setting"] == "High Street" for place in places),
             "membership_count": len(memberships),
             "named_network_review_count": len(exceptions),
+            "suppressed_false_place_count": len(suppressions),
+            "suppressed_false_places": suppressions,
             "coverage_note": "Canonical places use official public evidence where available and best-available mappings with visible confidence elsewhere.",
         },
         "place_id_remaps": dict(sorted(old_to_new.items())),

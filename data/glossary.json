@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "title": "Optical leasing intelligence glossary",
+    "version": "1.0",
+    "updated_at": "2026-09-03",
+    "scope": "Plain-English definitions used in the public application"
+  },
+  "terms": [
+    {
+      "term": "Anchor tenant",
+      "definition": "A major retailer that helps draw regular visits to a shopping centre, such as a supermarket or department store. An anchor is evidence about the retail environment, not proof that an optical store will succeed."
+    },
+    {
+      "term": "Bailey whitespace",
+      "definition": "How much geographic room a place has from existing Bailey Nelson stores, considering nearest-store distance and indicative catchment overlap. More whitespace can mean less apparent cannibalisation, but it does not by itself mean stronger demand."
+    },
+    {
+      "term": "Canonical place",
+      "definition": "The single stable record used for a real shopping centre or high-street corridor. Different names, spellings and former names resolve to this record so tenants and property facts are not split across duplicates."
+    },
+    {
+      "term": "Catchment",
+      "definition": "The surrounding area used to describe likely customers or nearby competition. Current circular catchments are indicative straight-line areas and are not the same as drive-time, walk-time or true trade areas."
+    },
+    {
+      "term": "Centre class",
+      "definition": "A separate description of a shopping centre's role and scale, such as Regional, Sub-regional, Neighbourhood, Outlet or CBD / Mixed-use. It does not replace the Shopping Centre location setting."
+    },
+    {
+      "term": "Co-tenancy",
+      "definition": "The mix of other retailers trading in the same centre or corridor. It helps describe the customer environment and the kinds of shopping trips a place attracts."
+    },
+    {
+      "term": "Competitor validation",
+      "definition": "Evidence that optical retailers already trade in a market or place. Competitor presence can indicate established optical demand, while also representing competitive intensity."
+    },
+    {
+      "term": "Confidence",
+      "definition": "The strength of the evidence behind a fact or mapping. High generally means direct official evidence; Medium means credible but incomplete or older evidence; Low means the item remains a research lead."
+    },
+    {
+      "term": "Exact-place membership",
+      "definition": "A store-to-place link supported by a directory, explicit venue name or defensible address evidence. Geographic closeness alone never establishes that a store is inside a centre or corridor."
+    },
+    {
+      "term": "GLA",
+      "definition": "Gross lettable area: the floor area a property reports as available for occupation by tenants. Definitions can vary between sources, so the tool retains the source and date."
+    },
+    {
+      "term": "High-street corridor",
+      "definition": "A stable grouping of street-front stores along the same street and locality. The current 800 metre area is an indicative comparison catchment; accepted membership still depends on address evidence."
+    },
+    {
+      "term": "Key co-tenancy profile",
+      "definition": "A curated selection of anchors and decision-relevant fashion, beauty, lifestyle, hospitality, grocery and technology tenants. It is not presented as a complete store directory."
+    },
+    {
+      "term": "Leasing controller",
+      "definition": "The property group that publicly appears to control leasing decisions for an asset. It may be an owner, manager, operator or separately appointed party."
+    },
+    {
+      "term": "Location setting",
+      "definition": "The physical retail context of a store or place: Shopping Centre, High Street, Other or Uncertain. It is separate from centre class and property ownership."
+    },
+    {
+      "term": "Lookalike score",
+      "definition": "A transparent screening score comparing a Bailey-free place with Bailey Nelson's mapped footprint using public market, whitespace, optical and retail-context evidence. It is not a probability or sales forecast."
+    },
+    {
+      "term": "Mapped optical tenant",
+      "definition": "An optical storefront linked to a canonical place through accepted evidence. Nearby stores without that link remain labelled as nearby rather than in-centre or in-corridor tenants."
+    },
+    {
+      "term": "Portfolio overlap",
+      "definition": "A public-data-derived indication that Bailey Nelson already trades in another property connected to the same owner, manager, operator, leasing controller or agency. It is not proof of a private commercial relationship."
+    },
+    {
+      "term": "Screening completeness",
+      "definition": "The percentage of inputs available for a place's screening calculation. A high score with low completeness should be treated more cautiously than a similarly ranked place with stronger evidence coverage."
+    },
+    {
+      "term": "Source freshness",
+      "definition": "How recently the underlying public source was successfully checked relative to the policy for that source type. Freshness is reported separately from mapping and classification completeness."
+    },
+    {
+      "term": "Trade area",
+      "definition": "The geographic market from which a centre or store draws customers. A published owner trade area is retained as a sourced property fact and is not assumed to equal the tool's circular catchment."
+    }
+  ]
+}

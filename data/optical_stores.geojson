@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "metadata": {
     "name": "Australia and New Zealand Optical Retail Network",
-    "store_count": 2210,
+    "store_count": 2151,
     "source_freshness": {
       "OPSM Australia": "2026-09-01T07:42:23+00:00",
       "Specsavers Australia": "2026-09-01T23:21:29.969Z",
@@ -35,9 +35,9 @@
       "Chemist Warehouse Optometry": 8,
       "Dresden Vision": 5,
       "EyeQ Optometrists": 25,
-      "Eyecare Plus": 105,
+      "Eyecare Plus": 103,
       "George & Matilda": 114,
-      "Independent / Other optical": 658,
+      "Independent / Other optical": 601,
       "Laubman & Pank": 40,
       "Matthews Eyecare": 28,
       "OPSM": 392,
@@ -53,7 +53,9 @@
       "Main Street / Street-front",
       "Other",
       "Unclassified"
-    ]
+    ],
+    "coordinate_override_count": 11,
+    "publication_exclusion_count": 1
   },
   "features": [
     {
@@ -2058,11 +2060,11 @@
         "directory_url": "",
         "services": "Optical / optician listing",
         "audiology": "false",
-        "venue_name": "Vision Centre",
-        "venue_id": "auckland-vision",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Unclassified",
+        "classification_confidence": "Low",
+        "classification_basis": "Insufficient official venue or street evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -3822,11 +3824,11 @@
         "directory_url": "",
         "services": "Optometry",
         "audiology": "false",
-        "venue_name": "Manukau City Centre",
-        "venue_id": "auckland-city-manukau",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -5983,48 +5985,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          178.0251638,
-          -38.6656132
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-ne-node-4523027569",
-        "affiliations": "",
-        "name": "Spec Savers",
-        "status": "Mapped",
-        "country": "New Zealand",
-        "state": "Gisborne",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "New Zealand",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/4523027569",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           178.0235598,
           -38.6644351
         ]
@@ -7159,48 +7119,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          151.2661442,
-          -33.768156
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-12803835793",
-        "affiliations": "",
-        "name": "Bupa Optical",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/12803835793",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           150.9989612,
           -33.883048
         ]
@@ -7403,48 +7321,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/2613244951",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          148.0246682,
-          -34.6383705
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-12706665276",
-        "affiliations": "",
-        "name": "EyeQ",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/12706665276",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -7663,90 +7539,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          151.2101153,
-          -33.7388677
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-7176563988",
-        "affiliations": "",
-        "name": "Forestway Optometry",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/7176563988",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          151.1942819,
-          -33.8232525
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-9894830475",
-        "affiliations": "",
-        "name": "George and Matilda Eyecare",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/9894830475",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           150.6929493,
           -33.7570576
         ]
@@ -7812,11 +7604,11 @@
         "directory_url": "",
         "services": "Optical / optician listing",
         "audiology": "false",
-        "venue_name": "HCF Eyecare Centres",
-        "venue_id": "nsw-centres-eyecare-hcf",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Unclassified",
+        "classification_confidence": "Low",
+        "classification_basis": "Insufficient official venue or street evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -8041,48 +7833,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          153.0484871,
-          -28.8633178
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-11115368664",
-        "affiliations": "",
-        "name": "Lamas + Brown Optometrists",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/11115368664",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           151.2075863,
           -33.8725169
         ]
@@ -8201,48 +7951,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/way/1025379188",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          149.5882087,
-          -32.591925
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-7730212701",
-        "affiliations": "",
-        "name": "Mudgee Eyecare",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/7730212701",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -8545,48 +8253,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          150.9198852,
-          -31.092165
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-way-1301075399",
-        "affiliations": "",
-        "name": "Paul Harvey Optometrist",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/way/1301075399",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           150.6937738,
           -33.7523535
         ]
@@ -8778,11 +8444,11 @@
         "directory_url": "",
         "services": "Optical / optician listing",
         "audiology": "false",
-        "venue_name": "Rose Bay Eyecare Centre",
-        "venue_id": "nsw-bay-eyecare-rose",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Low",
+        "classification_basis": "Official address contains street evidence but needs review",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -8862,11 +8528,11 @@
         "directory_url": "",
         "services": "Optical / optician listing",
         "audiology": "false",
-        "venue_name": "Teachers Health Centre Parramatta",
-        "venue_id": "nsw-health-parramatta-teachers",
-        "location_type": "Shopping Centre",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Other",
         "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "classification_basis": "Official name/address contains a non-centre commercial venue term",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -9125,48 +8791,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/1081203615",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          148.2950229,
-          -34.3129797
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-13343526524",
-        "affiliations": "",
-        "name": "Young Eyes",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NSW",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/13343526524",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -10813,8 +10437,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          149.23459,
-          -35.35179
+          149.8395821,
+          -36.6737728
         ]
       },
       "properties": {
@@ -14070,11 +13694,11 @@
         "directory_url": "https://www.provision.com.au/practice/rjk-optometry-optometrist-coffs-harbour/",
         "services": "",
         "audiology": "false",
-        "venue_name": "Medical and Professional Centre",
-        "venue_id": "nsw-and-medical-professional",
-        "location_type": "Shopping Centre",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Other",
         "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "classification_basis": "Official name/address contains a non-centre commercial venue term",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -14375,48 +13999,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.eyeq.com.au/find-an-optometrist/",
-        "fetched_at": "2026-09-02T12:40:25.820359+00:00"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          150.837679,
-          -34.445184
-        ]
-      },
-      "properties": {
-        "retailer": "Eyecare Plus",
-        "store_id": "eyecare-plus-692",
-        "affiliations": "",
-        "name": "Eyecare Plus Optometrists Cordeaux Heights (previously Wollongong)",
-        "status": "Active",
-        "country": "Australia",
-        "state": "NSW",
-        "suburb": "Cordeaux Heights",
-        "postcode": "2526",
-        "full_address": "Cordeaux Heights, Cordeaux Heights, NSW, 2526",
-        "phone": "0411 374 419",
-        "official_url": "https://www.eyecareplus.com.au/cordeauxheights/",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Other",
-        "classification_confidence": "High",
-        "classification_basis": "Official practice page says the relocated practice is appointment-only and does not publish the street address",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.eyecareplus.com.au/find-optometrist/",
         "fetched_at": "2026-09-02T12:40:25.820359+00:00"
       }
     },
@@ -14952,11 +14534,11 @@
         "directory_url": "https://www.provision.com.au/practice/morrisons-family-eyecare-centre/",
         "services": "",
         "audiology": "false",
-        "venue_name": "Morrison\u2019s Family Eyecare Centre",
-        "venue_id": "nsw-eyecare-family-morrison-s",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -17323,48 +16905,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          151.194327,
-          -33.883534
-        ]
-      },
-      "properties": {
-        "retailer": "Eyecare Plus",
-        "store_id": "eyecare-plus-576",
-        "affiliations": "",
-        "name": "Eyecare Plus Optometrists Broadway (temporarily relocated to Hillsdale)",
-        "status": "Active",
-        "country": "Australia",
-        "state": "NSW",
-        "suburb": "Hillsdale",
-        "postcode": "2036",
-        "full_address": "8/236 \u2013 262 Bunnerong Rd, Hillsdale, NSW, 2036",
-        "phone": "(02) 9311 4600",
-        "official_url": "https://www.eyecareplus.com.au/broadway/",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Medium",
-        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.eyecareplus.com.au/find-optometrist/",
-        "fetched_at": "2026-09-02T12:40:25.820359+00:00"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           151.230536,
           -33.951317
         ]
@@ -18690,11 +18230,11 @@
         "directory_url": "https://www.provision.com.au/practice/andrew-mizzi-optometrist/",
         "services": "",
         "audiology": "false",
-        "venue_name": "Medical & Fitness Centre",
-        "venue_id": "nsw-and-fitness-medical",
-        "location_type": "Shopping Centre",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Other",
         "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "classification_basis": "Official name/address contains a non-centre commercial venue term",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -24715,8 +24255,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          152.89538,
-          -31.42759
+          152.9102594,
+          -31.4300878
         ]
       },
       "properties": {
@@ -24757,8 +24297,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          152.89538,
-          -31.42759
+          152.8957715,
+          -31.4271907
         ]
       },
       "properties": {
@@ -25051,8 +24591,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          149.23459,
-          -35.35179
+          149.23524,
+          -35.35232
         ]
       },
       "properties": {
@@ -25534,48 +25074,6 @@
         "instagram_url": "",
         "facebook_url": "",
         "directory_url": "https://www.provision.com.au/practice/beyond-eyecare/",
-        "services": "",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Medium",
-        "classification_basis": "Official address has a shop/unit within a numbered street address but no named centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.provision.com.au/search-results/",
-        "fetched_at": "2026-09-02T12:40:25.820359+00:00"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          151.211965,
-          -33.8916472
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-provision-325061",
-        "affiliations": "provision",
-        "name": "Beyond Eyecare Surry Hills",
-        "status": "Active",
-        "country": "Australia",
-        "state": "NSW",
-        "suburb": "Redfern",
-        "postcode": "2016",
-        "full_address": "Shop L103, 399 Cleveland Street, Redfern, New South Wales, 2016",
-        "phone": "",
-        "official_url": "https://www.provision.com.au/practice/beyond-eyecare-2/",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "https://www.provision.com.au/practice/beyond-eyecare-2/",
         "services": "",
         "audiology": "false",
         "venue_name": "",
@@ -28075,8 +27573,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          151.20677,
-          -33.87025
+          151.2068053,
+          -33.8702762
         ]
       },
       "properties": {
@@ -28117,8 +27615,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          151.20677,
-          -33.87025
+          151.212195,
+          -33.8666381
         ]
       },
       "properties": {
@@ -31477,90 +30975,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          130.9836592,
-          -12.4713315
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-6267324335",
-        "affiliations": "",
-        "name": "Optical Superstore",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NT",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/6267324335",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          130.8808922,
-          -12.3752341
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-way-1250385845",
-        "affiliations": "",
-        "name": "Optical Superstore",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "NT",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/way/1250385845",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           133.880854,
           -23.69947
         ]
@@ -31920,11 +31334,11 @@
         "directory_url": "",
         "services": "Kids Vision Centre, Collect & Return",
         "audiology": "false",
-        "venue_name": "Smith St Mall",
-        "venue_id": "nt-smith-st",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Unclassified",
+        "classification_confidence": "Low",
+        "classification_basis": "Insufficient official venue or street evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -33493,48 +32907,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          152.463415,
-          -24.8147707
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-3641965394",
-        "affiliations": "",
-        "name": "Clear Optometry",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/3641965394",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           152.8864782,
           -27.3718924
         ]
@@ -33569,48 +32941,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/615108303",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          153.4247078,
-          -28.1001233
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-11267057796",
-        "affiliations": "",
-        "name": "Envision Optical",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "+61 7 5593 7844",
-        "official_url": "https://envisionoptical.com.au",
-        "website_url": "https://envisionoptical.com.au",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/11267057796",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -33703,90 +33033,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          151.2674278,
-          -27.1812905
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-2812592887",
-        "affiliations": "",
-        "name": "Eyecare Eyewear",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/2812592887",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          148.7006022,
-          -20.2772966
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-4435526091",
-        "affiliations": "",
-        "name": "EyecarePlus",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/4435526091",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           153.3005885,
           -27.8518285
         ]
@@ -33871,48 +33117,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          153.0174839,
-          -27.241537
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-4845383813",
-        "affiliations": "",
-        "name": "George & Matilda Eyecare",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/4845383813",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           152.9392126,
           -27.5065365
         ]
@@ -33947,48 +33151,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/5589514647",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          152.9604114,
-          -26.6260426
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-way-889998872",
-        "affiliations": "",
-        "name": "Hammond Optometry",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/way/889998872",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -34073,132 +33235,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/5631549727",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          153.1912362,
-          -27.5246861
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-10104842037",
-        "affiliations": "",
-        "name": "Laubman & Pank",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/10104842037",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          152.9726376,
-          -27.4993334
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-way-1254545304",
-        "affiliations": "",
-        "name": "Laubman & Pank",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/way/1254545304",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          152.9499623,
-          -27.1034723
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-7634594301",
-        "affiliations": "",
-        "name": "Laubman and Pank",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/7634594301",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -34325,90 +33361,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/12310587681",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          153.028975,
-          -27.1942502
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-10698432114",
-        "affiliations": "",
-        "name": "Optical Superstore",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/10698432114",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          152.3494223,
-          -24.8670186
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-3612643660",
-        "affiliations": "",
-        "name": "Outlook",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "QLD",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/3612643660",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -35616,11 +34568,11 @@
         "directory_url": "",
         "services": "",
         "audiology": "false",
-        "venue_name": "Beaudesert Medical Centre",
-        "venue_id": "qld-beaudesert-medical",
-        "location_type": "Shopping Centre",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Other",
         "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "classification_basis": "Official name/address contains a non-centre commercial venue term",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -36624,8 +35576,8 @@
         "directory_url": "",
         "services": "hearing|optical",
         "audiology": "true",
-        "venue_name": "& Hearing Pacific Fair",
-        "venue_id": "qld-and-fair-hearing-pacific",
+        "venue_name": "Pacific Fair Shopping Centre",
+        "venue_id": "qld-fair-pacific",
         "location_type": "Shopping Centre",
         "classification_confidence": "High",
         "classification_basis": "Official name/address contains shopping-centre evidence",
@@ -37668,7 +36620,7 @@
         "full_address": "Shop 4B, Treetops Plaza, 7 Classic Way, Burleigh Waters, Queensland, 4220",
         "phone": "",
         "official_url": "https://www.provision.com.au/practice/envision-optical-burleigh-waters/",
-        "website_url": "",
+        "website_url": "https://envisionoptical.com.au",
         "instagram_url": "",
         "facebook_url": "",
         "directory_url": "https://www.provision.com.au/practice/envision-optical-burleigh-waters/",
@@ -38640,8 +37592,8 @@
         "directory_url": "",
         "services": "hearing|optical",
         "audiology": "true",
-        "venue_name": "& Hearing Carindale",
-        "venue_id": "qld-and-carindale-hearing",
+        "venue_name": "Westfield Shopping Centre",
+        "venue_id": "qld-westfield",
         "location_type": "Shopping Centre",
         "classification_confidence": "High",
         "classification_basis": "Official name/address contains shopping-centre evidence",
@@ -39018,8 +37970,8 @@
         "directory_url": "",
         "services": "hearing|optical",
         "audiology": "true",
-        "venue_name": "& Hearing Chermside",
-        "venue_id": "qld-and-chermside-hearing",
+        "venue_name": "Westfield Chermside",
+        "venue_id": "qld-chermside-westfield",
         "location_type": "Shopping Centre",
         "classification_confidence": "High",
         "classification_basis": "Official name/address contains shopping-centre evidence",
@@ -39060,11 +38012,11 @@
         "directory_url": "",
         "services": "",
         "audiology": "false",
-        "venue_name": "Chermside Health Hub",
-        "venue_id": "qld-chermside-health-hub",
-        "location_type": "Shopping Centre",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Other",
         "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "classification_basis": "Official name/address contains a non-centre commercial venue term",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -41496,8 +40448,8 @@
         "directory_url": "",
         "services": "",
         "audiology": "false",
-        "venue_name": "Optometrists Inala Plaza",
-        "venue_id": "qld-inala-optometrists-plaza",
+        "venue_name": "Inala Town Plaza",
+        "venue_id": "qld-inala-plaza-town",
         "location_type": "Shopping Centre",
         "classification_confidence": "High",
         "classification_basis": "Official name/address contains shopping-centre evidence",
@@ -41622,8 +40574,8 @@
         "directory_url": "",
         "services": "hearing|optical",
         "audiology": "true",
-        "venue_name": "& Hearing Indooroopilly",
-        "venue_id": "qld-and-hearing-indooroopilly",
+        "venue_name": "Indooroopilly Shopping Centre",
+        "venue_id": "qld-indooroopilly",
         "location_type": "Shopping Centre",
         "classification_confidence": "High",
         "classification_basis": "Official name/address contains shopping-centre evidence",
@@ -44940,11 +43892,11 @@
         "directory_url": "",
         "services": "",
         "audiology": "false",
-        "venue_name": "Healthia Allied Health Services - SCURRS Centre",
-        "venue_id": "qld-allied-health-healthia-scurrs-services",
-        "location_type": "Shopping Centre",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Other",
         "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "classification_basis": "Official name/address contains a non-centre commercial venue term",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -49269,8 +48221,8 @@
         "venue_name": "Grand Central Shopping Centre Margaret St Toowoomba City QLD 4350",
         "venue_id": "qld-4350-central-city-grand-margaret-qld-st-toowoomba",
         "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address uses a shop/level format; venue name requires review",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -50545,48 +49497,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          138.616705,
-          -35.0204536
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-5977220533",
-        "affiliations": "",
-        "name": "National Pharmacies Optical",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "SA",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/5977220533",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           138.6052741,
           -34.9228148
         ]
@@ -50621,48 +49531,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/6389827386",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          138.6480254,
-          -34.830364
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-13253287112",
-        "affiliations": "",
-        "name": "Optical Superstore",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "SA",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/13253287112",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -50747,48 +49615,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/way/320606401",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          138.6363504,
-          -34.9212803
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-7571950286",
-        "affiliations": "",
-        "name": "Thomas & Mackay",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "SA",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "194 The Parade, Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Medium",
-        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/7571950286",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -53214,8 +52040,8 @@
         "directory_url": "",
         "services": "hearing|optical",
         "audiology": "true",
-        "venue_name": "& Hearing Tea Tree Plaza",
-        "venue_id": "sa-and-hearing-plaza-tea-tree",
+        "venue_name": "Westfield Shopping Centre",
+        "venue_id": "sa-westfield",
         "location_type": "Shopping Centre",
         "classification_confidence": "High",
         "classification_basis": "Official name/address contains shopping-centre evidence",
@@ -55230,11 +54056,11 @@
         "directory_url": "https://www.provision.com.au/practice/eyre-eye-centre-port-lincoln/",
         "services": "",
         "audiology": "false",
-        "venue_name": "Eyre Eye Centre Port Lincoln",
-        "venue_id": "sa-eye-eyre-lincoln-port",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -56238,11 +55064,11 @@
         "directory_url": "https://www.provision.com.au/practice/victor-eye-centre/",
         "services": "",
         "audiology": "false",
-        "venue_name": "Victor Eye Centre",
-        "venue_id": "sa-eye-victor",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address has a shop/unit within a numbered street address but no named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -56742,11 +55568,11 @@
         "directory_url": "https://www.provision.com.au/practice/eyre-eye-centre-whyalla/",
         "services": "",
         "audiology": "false",
-        "venue_name": "Eyre Eye Centre Whyalla",
-        "venue_id": "sa-eye-eyre-whyalla",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -56761,8 +55587,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          138.54753,
-          -35.11402
+          138.546492,
+          -35.112788
         ]
       },
       "properties": {
@@ -56994,11 +55820,11 @@
         "directory_url": "",
         "services": "",
         "audiology": "false",
-        "venue_name": "Southland Eyecare",
-        "venue_id": "southland-eyecare-southland",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -57036,11 +55862,11 @@
         "directory_url": "",
         "services": "Optical / optician listing",
         "audiology": "false",
-        "venue_name": "Southland Eye Specialists",
-        "venue_id": "southland-eye-southland-specialists",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -57307,90 +56133,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          147.0617806,
-          -42.7811602
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-3919500461",
-        "affiliations": "",
-        "name": "Total Eyecare",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "TAS",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/3919500461",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          147.3297125,
-          -42.8828832
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-4613613189",
-        "affiliations": "",
-        "name": "Total Eyecare",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "TAS",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/4613613189",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           145.903972,
           -41.051499
         ]
@@ -57426,48 +56168,6 @@
         "area_confidence": "Unknown",
         "source_url": "https://georgeandmatilda.com.au/find-a-store/",
         "fetched_at": "2026-09-02T12:40:25.820359+00:00"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.9058352,
-          -41.0510045
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-2746896734",
-        "affiliations": "",
-        "name": "Chris Dobson Optometrist",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "TAS",
-        "suburb": "Burnie",
-        "postcode": "7320",
-        "full_address": "29 Wilmot Street, Burnie, 7320, Australia",
-        "phone": "+61 3 6431 3422",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Medium",
-        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/2746896734",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
     {
@@ -59239,48 +57939,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          147.3276045,
-          -42.8948109
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-2365319231",
-        "affiliations": "",
-        "name": "Total Eyecare Optometrists",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "TAS",
-        "suburb": "Sandy Bay",
-        "postcode": "7005",
-        "full_address": "9 Magnet Court, Sandy Bay, 7005, Australia",
-        "phone": "+61 3 6223 5940",
-        "official_url": "https://totaleyecare.com.au/",
-        "website_url": "https://totaleyecare.com.au/",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/2365319231",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           147.3280534,
           -42.894941
         ]
@@ -59298,7 +57956,7 @@
         "full_address": "18 Magnet Court, Sandy Bay, Tasmania, 7005",
         "phone": "",
         "official_url": "https://www.provision.com.au/practice/total-eyecare-sandy-bay/",
-        "website_url": "",
+        "website_url": "https://totaleyecare.com.au/",
         "instagram_url": "",
         "facebook_url": "",
         "directory_url": "https://www.provision.com.au/practice/total-eyecare-sandy-bay/",
@@ -59514,11 +58172,11 @@
         "directory_url": "",
         "services": "Optical / optician listing",
         "audiology": "false",
-        "venue_name": "Taranaki Eye Centre",
-        "venue_id": "taranaki-eye-taranaki",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Unclassified",
+        "classification_confidence": "Low",
+        "classification_basis": "Insufficient official venue or street evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -59953,48 +58611,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          145.1208408,
-          -37.8196033
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-12121721359",
-        "affiliations": "",
-        "name": "1001 Optical",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/12121721359",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           145.5902248,
           -38.6051338
         ]
@@ -60247,48 +58863,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          145.0918238,
-          -37.7658978
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-way-1550521169",
-        "affiliations": "",
-        "name": "Bulleen Eyecare",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/way/1550521169",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           144.9594299,
           -37.6875166
         ]
@@ -60499,90 +59073,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          145.1512461,
-          -37.9513399
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-5203746943",
-        "affiliations": "",
-        "name": "Crystal Eyecare",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/5203746943",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.1700793,
-          -37.7919663
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-493891538",
-        "affiliations": "",
-        "name": "Donvale Optical",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "+61 3 9842 8442",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/493891538",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           145.1507984,
           -37.9506545
         ]
@@ -60659,48 +59149,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/1077951944",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.1488002,
-          -37.7142819
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-10814212741",
-        "affiliations": "",
-        "name": "Eltham Eyecare",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "+61 3 9439 1311",
-        "official_url": "https://www.elthameyecare.com.au/",
-        "website_url": "https://www.elthameyecare.com.au/",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/10814212741",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -60835,48 +59283,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          145.0577162,
-          -37.8871944
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-way-631561723",
-        "affiliations": "",
-        "name": "Eye Dentity",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "80B Koornang Road, Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Medium",
-        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/way/631561723",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           144.3591594,
           -38.1470166
         ]
@@ -61003,90 +59409,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          145.1513297,
-          -37.950875
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-4041199624",
-        "affiliations": "",
-        "name": "EyeCare Plus",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "37A Buckingham Avenue, Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Medium",
-        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/4041199624",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.0916084,
-          -37.8990355
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-6065622279",
-        "affiliations": "",
-        "name": "Eyecare Plus",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/6065622279",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           145.1191581,
           -37.9269261
         ]
@@ -61129,48 +59451,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          144.960091,
-          -37.8141059
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-1292397868",
-        "affiliations": "",
-        "name": "Eyes On",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/1292397868",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           144.9432301,
           -37.8198425
         ]
@@ -61205,90 +59485,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/6699795803",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          144.9940969,
-          -37.9132792
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-way-1031541532",
-        "affiliations": "",
-        "name": "Eyes On Brighton",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "37 Church Street, Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Medium",
-        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/way/1031541532",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.5941891,
-          -38.60607
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-way-992371055",
-        "affiliations": "",
-        "name": "Eyes and Optics",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "55 Graham Street, Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Medium",
-        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/way/992371055",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -61507,48 +59703,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          144.9782306,
-          -37.7807027
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-7202507522",
-        "affiliations": "",
-        "name": "Fitzroy North Eye Centre",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "798 Nicholson Street, Australia",
-        "phone": "+61 3 9481 3381",
-        "official_url": "https://fitzroynortheyecentre.com.au/",
-        "website_url": "https://fitzroynortheyecentre.com.au/",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "Fitzroy North Eye Centre",
-        "venue_id": "vic-eye-fitzroy-north",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/7202507522",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           144.3640014,
           -38.1475037
         ]
@@ -61583,48 +59737,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/10711723865",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          142.0227471,
-          -37.7438564
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-1391960501",
-        "affiliations": "",
-        "name": "Glenn Howell Optometrist",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "85-87 Gray Street, Australia",
-        "phone": "+61 3 5572 2185",
-        "official_url": "https://www.glennhowell.com.au/",
-        "website_url": "https://www.glennhowell.com.au/",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Medium",
-        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/1391960501",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -61793,48 +59905,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/4249862349",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          143.9205168,
-          -35.7333529
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-12708385217",
-        "affiliations": "",
-        "name": "Kerang Optical",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/12708385217",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -62053,48 +60123,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          146.2652319,
-          -38.1763822
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-12260964886",
-        "affiliations": "",
-        "name": "L & F eyecare",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/12260964886",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           143.8290857,
           -37.5403196
         ]
@@ -62286,11 +60314,11 @@
         "directory_url": "",
         "services": "Optical / optician listing",
         "audiology": "false",
-        "venue_name": "Melbourne Optical Centre",
-        "venue_id": "vic-melbourne-optical",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -62683,48 +60711,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          144.4076735,
-          -38.0228735
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-way-266792569",
-        "affiliations": "",
-        "name": "New Vision Eyewear Lara",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "10 The Centreway, Australia",
-        "phone": "+61 3 5282 4422",
-        "official_url": "https://newvisioneyewear.com.au/home",
-        "website_url": "https://newvisioneyewear.com.au/home",
-        "instagram_url": "",
-        "facebook_url": "https://facebook.com/NewVisionLara",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "The Centreway",
-        "venue_id": "vic-centreway-the",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/way/266792569",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           145.1513431,
           -37.9516109
         ]
@@ -62916,11 +60902,11 @@
         "directory_url": "",
         "services": "Optical / optician listing",
         "audiology": "false",
-        "venue_name": "Oakleigh Eye Centre",
-        "venue_id": "vic-eye-oakleigh",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -63263,90 +61249,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/12747696201",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.003918,
-          -37.7394291
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-6017200175",
-        "affiliations": "",
-        "name": "Preston Eye Care",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "354 High Street, Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Medium",
-        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/6017200175",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.2141973,
-          -37.9900302
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-5217624029",
-        "affiliations": "",
-        "name": "Russo",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/5217624029",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -63859,48 +61761,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          145.082598,
-          -37.7098241
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-3704488976",
-        "affiliations": "",
-        "name": "Watsonia Optical",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "67 Watsonia Road, Australia",
-        "phone": "+61 3 9432 7264",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Medium",
-        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/3704488976",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           145.0816034,
           -37.8129906
         ]
@@ -63924,11 +61784,11 @@
         "directory_url": "",
         "services": "Optical / optician listing",
         "audiology": "false",
-        "venue_name": "Whitehorse Optical Centre",
-        "venue_id": "vic-optical-whitehorse",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -64019,48 +61879,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/6033469826",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.6130006,
-          -37.782025
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-6355897815",
-        "affiliations": "",
-        "name": "Yarra Junction Optical",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "Yarra Junction Optical",
-        "venue_id": "vic-junction-optical-yarra",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/6355897815",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -64993,8 +62811,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          143.85536,
-          -37.56287
+          143.8613,
+          -37.5626
         ]
       },
       "properties": {
@@ -67536,8 +65354,8 @@
         "directory_url": "",
         "services": "hearing|optical",
         "audiology": "true",
-        "venue_name": "& Hearing Southland",
-        "venue_id": "vic-and-hearing-southland",
+        "venue_name": "Westfield Shopping Centre",
+        "venue_id": "vic-westfield",
         "location_type": "Shopping Centre",
         "classification_confidence": "High",
         "classification_basis": "Official name/address contains shopping-centre evidence",
@@ -69342,11 +67160,11 @@
         "directory_url": "https://www.provision.com.au/practice/dingley-eye-centre/",
         "services": "",
         "audiology": "false",
-        "venue_name": "Insightful Eye Care \u2013 Dingley Eye Centre",
-        "venue_id": "vic-care-dingley-eye-insightful",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -70218,7 +68036,7 @@
         "full_address": "Shop 2A, 906 Main Road, Eltham, Victoria, 3095",
         "phone": "",
         "official_url": "https://www.provision.com.au/practice/optometrist-eltham-eyecare/",
-        "website_url": "",
+        "website_url": "https://www.elthameyecare.com.au/",
         "instagram_url": "",
         "facebook_url": "",
         "directory_url": "https://www.provision.com.au/practice/optometrist-eltham-eyecare/",
@@ -70350,11 +68168,11 @@
         "directory_url": "https://www.provision.com.au/practice/acuity-eyecare-epping-optometrist/",
         "services": "",
         "audiology": "false",
-        "venue_name": "Epping Medical Centre",
-        "venue_id": "vic-epping-medical",
-        "location_type": "Shopping Centre",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Other",
         "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "classification_basis": "Official name/address contains a non-centre commercial venue term",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -70680,17 +68498,17 @@
         "full_address": "798 Nicholson Street, Fitzroy North, Victoria, 3068",
         "phone": "",
         "official_url": "https://www.provision.com.au/practice/fitzroy-north-eye-centre/",
-        "website_url": "",
+        "website_url": "https://fitzroynortheyecentre.com.au/",
         "instagram_url": "",
         "facebook_url": "",
         "directory_url": "https://www.provision.com.au/practice/fitzroy-north-eye-centre/",
         "services": "",
         "audiology": "false",
-        "venue_name": "Fitzroy North Eye Centre",
-        "venue_id": "vic-eye-fitzroy-north",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -70932,7 +68750,7 @@
         "full_address": "Shop 5&6, 142 \u2013 144 Young Street, Frankston, VIC, 3199, Australia",
         "phone": "(03) 9789 9667",
         "official_url": "https://georgeandmatilda.com.au/stores/optometrist-frankston-vic/",
-        "website_url": "",
+        "website_url": "https://www.beachoptical.com.au/",
         "instagram_url": "",
         "facebook_url": "",
         "directory_url": "",
@@ -70950,48 +68768,6 @@
         "area_confidence": "Unknown",
         "source_url": "https://georgeandmatilda.com.au/find-a-store/",
         "fetched_at": "2026-09-02T12:40:25.820359+00:00"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.1452405,
-          -38.147599
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-way-172654057",
-        "affiliations": "",
-        "name": "Beach Optical",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "Frankston",
-        "postcode": "3199",
-        "full_address": "229 Beach Street, Frankston, 3199, Australia",
-        "phone": "+61 3 9789 9667",
-        "official_url": "https://www.beachoptical.com.au/",
-        "website_url": "https://www.beachoptical.com.au/",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Medium",
-        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/way/172654057",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
     {
@@ -71898,7 +69674,7 @@
         "full_address": "85 Gray St, Hamilton, Victoria, 3300",
         "phone": "",
         "official_url": "https://www.provision.com.au/practice/glenn-howell-optometrist/",
-        "website_url": "",
+        "website_url": "https://www.glennhowell.com.au/",
         "instagram_url": "",
         "facebook_url": "",
         "directory_url": "https://www.provision.com.au/practice/glenn-howell-optometrist/",
@@ -72198,11 +69974,11 @@
         "directory_url": "https://www.provision.com.au/practice/dry-eye-centre/",
         "services": "",
         "audiology": "false",
-        "venue_name": "Dry Eye Centre",
-        "venue_id": "vic-dry-eye",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -73032,9 +70808,9 @@
         "full_address": "10 The Centreway, Lara, Victoria, 3212",
         "phone": "",
         "official_url": "https://www.provision.com.au/practice/new-vision-eyewear-lara/",
-        "website_url": "",
+        "website_url": "https://newvisioneyewear.com.au/home",
         "instagram_url": "",
-        "facebook_url": "",
+        "facebook_url": "https://facebook.com/NewVisionLara",
         "directory_url": "https://www.provision.com.au/practice/new-vision-eyewear-lara/",
         "services": "",
         "audiology": "false",
@@ -74107,8 +71883,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          144.96337,
-          -37.81137
+          144.9661151,
+          -37.8159952
         ]
       },
       "properties": {
@@ -74149,8 +71925,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          144.96337,
-          -37.81137
+          144.96213,
+          -37.81451
         ]
       },
       "properties": {
@@ -74233,8 +72009,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          144.96337,
-          -37.81137
+          144.9639,
+          -37.80969
         ]
       },
       "properties": {
@@ -74814,48 +72590,6 @@
         "area_confidence": "Unknown",
         "source_url": "https://www.provision.com.au/search-results/",
         "fetched_at": "2026-09-02T12:40:25.820359+00:00"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.0603287,
-          -37.6661173
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-2999573319",
-        "affiliations": "",
-        "name": "Vision at Mill Park",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "Mill Park",
-        "postcode": "",
-        "full_address": "Childs Road, Mill Park, Australia",
-        "phone": "+61 3 9436 0404",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Low",
-        "classification_basis": "Official address contains street evidence but needs review",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/2999573319",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
     {
@@ -75642,11 +73376,11 @@
         "directory_url": "",
         "services": "Collect & Return",
         "audiology": "false",
-        "venue_name": "Cnr Centre Valley Rd & Princes Dr",
-        "venue_id": "vic-and-cnr-dr-princes-rd-valley",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Unclassified",
+        "classification_confidence": "Low",
+        "classification_basis": "Insufficient official venue or street evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -76921,48 +74655,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          144.734667,
-          -37.882136
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-provision-17252",
-        "affiliations": "provision",
-        "name": "Point Cook Eyecare \u2013 now merged with Sanctuary Lakes Eyecare",
-        "status": "Active",
-        "country": "Australia",
-        "state": "VIC",
-        "suburb": "Point Cook",
-        "postcode": "3030",
-        "full_address": "Shop 18, Sanctuary Lakes Shopping Ctr, 300 Point Cook Rd, Point Cook, Victoria, 3030",
-        "phone": "",
-        "official_url": "https://www.provision.com.au/practice/point-cook-eyecare/",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "https://www.provision.com.au/practice/point-cook-eyecare/",
-        "services": "",
-        "audiology": "false",
-        "venue_name": "Sanctuary Lakes Shopping Ctr",
-        "venue_id": "vic-ctr-lakes-sanctuary",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.provision.com.au/search-results/",
-        "fetched_at": "2026-09-02T12:40:25.820359+00:00"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           144.753446,
           -37.897091
         ]
@@ -77700,11 +75392,11 @@
         "directory_url": "https://www.provision.com.au/practice/insightful-eye-care-swan-street-eye-centre/",
         "services": "",
         "audiology": "false",
-        "venue_name": "Insightful Eye Care \u2013 Swan St Eye Centre",
-        "venue_id": "vic-care-eye-insightful-st-swan",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Medium",
+        "classification_basis": "Official address has a shop/unit within a numbered street address but no named centre evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -80094,11 +77786,11 @@
         "directory_url": "https://www.provision.com.au/practice/acuity-eyecare-doncaster/",
         "services": "",
         "audiology": "false",
-        "venue_name": "Manningham Medical Centre",
-        "venue_id": "vic-manningham-medical",
-        "location_type": "Shopping Centre",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Other",
         "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "classification_basis": "Official name/address contains a non-centre commercial venue term",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -82362,11 +80054,11 @@
         "directory_url": "",
         "services": "Optical / optician listing",
         "audiology": "false",
-        "venue_name": "Eye Junction",
-        "venue_id": "wa-eye-junction",
-        "location_type": "Shopping Centre",
-        "classification_confidence": "High",
-        "classification_basis": "Official name/address contains shopping-centre evidence",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Unclassified",
+        "classification_confidence": "Low",
+        "classification_basis": "Insufficient official venue or street evidence",
         "store_area_sqm": "",
         "area_measure": "",
         "area_source": "",
@@ -82457,90 +80149,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/4569988319",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          115.7780425,
-          -31.8764606
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-11397913897",
-        "affiliations": "",
-        "name": "Laubman & Pank",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "WA",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/11397913897",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          117.8817377,
-          -35.0186287
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-6976079758",
-        "affiliations": "",
-        "name": "Laubman & Pank",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "WA",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/6976079758",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -82877,48 +80485,6 @@
         "area_date": "",
         "area_confidence": "Unknown",
         "source_url": "https://www.openstreetmap.org/node/11397913900",
-        "fetched_at": "2026-09-01T07:48:20.085579Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          114.6076279,
-          -28.7746334
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-osm-au-node-6934750148",
-        "affiliations": "",
-        "name": "midwest optical",
-        "status": "Mapped",
-        "country": "Australia",
-        "state": "WA",
-        "suburb": "",
-        "postcode": "",
-        "full_address": "Australia",
-        "phone": "",
-        "official_url": "",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "",
-        "services": "Optical / optician listing",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Unclassified",
-        "classification_confidence": "Low",
-        "classification_basis": "Insufficient official venue or street evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.openstreetmap.org/node/6934750148",
         "fetched_at": "2026-09-01T07:48:20.085579Z"
       }
     },
@@ -84166,48 +81732,6 @@
         "instagram_url": "",
         "facebook_url": "",
         "directory_url": "https://www.provision.com.au/practice/mr-b-the-optometrist/",
-        "services": "",
-        "audiology": "false",
-        "venue_name": "",
-        "venue_id": "",
-        "location_type": "Main Street / Street-front",
-        "classification_confidence": "Medium",
-        "classification_basis": "Official address is a numbered or corner street address without named centre evidence",
-        "store_area_sqm": "",
-        "area_measure": "",
-        "area_source": "",
-        "area_date": "",
-        "area_confidence": "Unknown",
-        "source_url": "https://www.provision.com.au/search-results/",
-        "fetched_at": "2026-09-02T12:40:25.820359+00:00"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          115.3464461,
-          -33.6501623
-        ]
-      },
-      "properties": {
-        "retailer": "Independent / Other optical",
-        "store_id": "independent-other-optical-provision-326220",
-        "affiliations": "provision",
-        "name": "Mr B the Optometrist",
-        "status": "Active",
-        "country": "Australia",
-        "state": "WA",
-        "suburb": "Busselton",
-        "postcode": "6280",
-        "full_address": "Busselton Blvd S.C., 1/69 Prince Street, Busselton, Western Australia, 6280",
-        "phone": "",
-        "official_url": "https://www.provision.com.au/practice/mr-b-the-optometrist-2/",
-        "website_url": "",
-        "instagram_url": "",
-        "facebook_url": "",
-        "directory_url": "https://www.provision.com.au/practice/mr-b-the-optometrist-2/",
         "services": "",
         "audiology": "false",
         "venue_name": "",

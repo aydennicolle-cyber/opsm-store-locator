@@ -11,6 +11,8 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
+from audit_store_identities import main as audit_store_identities
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -24,6 +26,7 @@ HEALTH_PATH = DATA / "data_health.json"
 PROPERTY_INTELLIGENCE_PATH = DATA / "property_intelligence.json"
 PLACE_TENANTS_PATH = DATA / "place_tenants.json"
 INTELLIGENCE_LAYER_REGISTER_PATH = DATA / "intelligence_layer_register.csv"
+STORE_IDENTITY_REVIEW_PATH = DATA / "store_identity_review.csv"
 NAMED_RETAILERS = {
     "OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee",
     "George & Matilda", "Eyecare Plus", "Optical Superstore",
@@ -152,6 +155,9 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--require-certified", action="store_true", help="Fail unless every operational health gate is 100%")
     args = parser.parse_args()
+    # Recompute identity candidates from the just-built public store network so
+    # the health result cannot rely on a stale manual audit file.
+    audit_store_identities()
     as_of = now_utc()
     generated_at = as_of.isoformat(timespec="seconds")
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
@@ -165,6 +171,11 @@ def main() -> None:
     place_tenants = json.loads(PLACE_TENANTS_PATH.read_text(encoding="utf-8"))
     reviews = read_csv(REVIEW_PATH)
     pending_reviews = [row for row in reviews if row.get("review_status") == "Pending"]
+    identity_reviews = read_csv(STORE_IDENTITY_REVIEW_PATH)
+    pending_identity_reviews = [
+        row for row in identity_reviews
+        if row.get("review_status") == "Pending" and row.get("priority") == "High"
+    ]
     discovery = read_csv(DATA / "discovery_candidates.csv")
     background_leads = [row for row in discovery if row.get("review_status") == "Pending"]
     sources = source_results(manifest, as_of, metadata)
@@ -211,6 +222,7 @@ def main() -> None:
         "location_setting_coverage": percent(setting_named, len(named_rows)),
         "place_mapping_coverage": percent(mapped_named, len(named_rows)),
         "review_reconciliation": percent(len(named_rows) - len(pending_reviews), len(named_rows)),
+        "store_identity_integrity": 100.0 if not pending_identity_reviews else 0.0,
     }
     complete = all(value == 100.0 for value in dimensions.values())
     status = "Certified" if complete else "Operational" if usable_named == len(named_rows) else "In progress"
@@ -271,6 +283,9 @@ def main() -> None:
     researched_bailey_tenants = tenant_metadata.get("researched_bailey_centre_place_ids", [])
     anchor_profiled_bailey = tenant_metadata.get("anchor_profiled_bailey_centre_place_ids", [])
     multi_category_bailey = tenant_metadata.get("multi_category_bailey_centre_place_ids", [])
+    bailey_corridor_scope = tenant_metadata.get("bailey_corridor_place_ids", [])
+    researched_bailey_corridors = tenant_metadata.get("researched_bailey_corridor_place_ids", [])
+    key_tenant_profiled_bailey_corridors = tenant_metadata.get("key_tenant_profiled_bailey_corridor_place_ids", [])
     tenant_rows = [row for row in place_tenants.get("memberships", []) if row.get("category") != "Optical"]
     current_tenant_rows = []
     for row in tenant_rows:
@@ -282,6 +297,10 @@ def main() -> None:
         "bailey_anchor_coverage": percent(len(anchor_profiled_bailey), len(bailey_tenant_scope)),
         "bailey_multi_category_coverage": percent(len(multi_category_bailey), len(bailey_tenant_scope)),
         "evidence_freshness": percent(len(current_tenant_rows), len(tenant_rows)),
+    }
+    high_street_dimensions = {
+        "bailey_corridor_baseline_coverage": percent(len(researched_bailey_corridors), len(bailey_corridor_scope)),
+        "bailey_corridor_retail_mix_coverage": percent(len(key_tenant_profiled_bailey_corridors), len(bailey_corridor_scope)),
     }
     intelligence_layers = read_csv(INTELLIGENCE_LAYER_REGISTER_PATH)
     for layer in intelligence_layers:
@@ -307,6 +326,7 @@ def main() -> None:
             "uncertain_named_network_settings": len(named_rows) - setting_named,
             "named_network_places_missing": len(named_rows) - mapped_named,
             "pending_mapping_reviews": len(pending_reviews),
+            "pending_high_priority_identity_reviews": len(pending_identity_reviews),
             "stale_or_incomplete_named_sources": len(named_rows) - current_named,
         },
         "informational_counts": {"background_discovery_leads": len(background_leads), "independent_records": sum(store["retailer"] == "Independent / Other optical" for store in stores)},
@@ -350,12 +370,22 @@ def main() -> None:
             },
             "freshness_policy_days": 90,
         },
+        "high_street_research": {
+            "coverage_statement": "Baseline research reconciles each Bailey Nelson address and accepted optical membership to a canonical street-and-locality corridor. Broader co-tenancy, visitation and footfall research is measured separately because high streets usually have no single authoritative tenant directory.",
+            "dimensions": high_street_dimensions,
+            "counts": {
+                "bailey_corridors": len(bailey_corridor_scope),
+                "baseline_researched": len(researched_bailey_corridors),
+                "key_tenant_profiled": len(key_tenant_profiled_bailey_corridors),
+            },
+        },
         "intelligence_layer_register": intelligence_layers,
         "store_certification": {
             row["store_id"]: {key: row[key] for key in ("operational_status", "usable_for_network", "current_source", "eligible_for_analytics", "eligible_for_place_analytics", "location_setting", "place_id", "mapping_confidence", "issues")}
             for row in certification_rows
         },
         "unresolved_mapping_reviews": pending_reviews,
+        "unresolved_store_identity_reviews": pending_identity_reviews,
     }
 
     with STORE_HEALTH_PATH.open("w", newline="", encoding="utf-8") as handle:

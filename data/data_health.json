@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-09-03T05:41:32+00:00",
+  "generated_at": "2026-09-03T12:03:28+00:00",
   "coverage_as_of": "2026-09-03",
   "certification_status": "Operational",
   "coverage_statement": "The network uses best-available public store data. Freshness, location setting and canonical place confidence are reported separately.",
@@ -9,36 +9,38 @@
     "places": 394
   },
   "observed": {
-    "stores": 2210,
-    "named_network_stores": 1552,
-    "usable_stores": 1929,
-    "usable_named_network_stores": 1552,
-    "current_named_network_stores": 1552,
-    "places": 1570,
-    "centres": 736,
-    "corridors": 834
+    "stores": 2151,
+    "named_network_stores": 1550,
+    "usable_stores": 1921,
+    "usable_named_network_stores": 1550,
+    "current_named_network_stores": 1550,
+    "places": 1503,
+    "centres": 691,
+    "corridors": 812
   },
   "changes_from_baseline": {
-    "stores": 719,
-    "places": 1176
+    "stores": 660,
+    "places": 1109
   },
   "dimensions": {
     "source_freshness": 88.5,
     "usable_store_coverage": 100.0,
     "location_setting_coverage": 100.0,
     "place_mapping_coverage": 100.0,
-    "review_reconciliation": 100.0
+    "review_reconciliation": 100.0,
+    "store_identity_integrity": 100.0
   },
   "blocking_counts": {
     "unusable_named_network_stores": 0,
     "uncertain_named_network_settings": 0,
     "named_network_places_missing": 0,
     "pending_mapping_reviews": 0,
+    "pending_high_priority_identity_reviews": 0,
     "stale_or_incomplete_named_sources": 0
   },
   "informational_counts": {
     "background_discovery_leads": 6192,
-    "independent_records": 658
+    "independent_records": 601
   },
   "by_retailer": {
     "1001 Optometry": {
@@ -78,9 +80,9 @@
       "needs_review": 0
     },
     "Eyecare Plus": {
-      "observed": 105,
-      "usable": 105,
-      "current_source": 105,
+      "observed": 103,
+      "usable": 103,
+      "current_source": 103,
       "needs_review": 0
     },
     "George & Matilda": {
@@ -90,10 +92,10 @@
       "needs_review": 0
     },
     "Independent / Other optical": {
-      "observed": 658,
-      "usable": 377,
-      "current_source": 658,
-      "needs_review": 8
+      "observed": 601,
+      "usable": 371,
+      "current_source": 601,
+      "needs_review": 7
     },
     "Laubman & Pank": {
       "observed": 40,
@@ -151,18 +153,18 @@
     }
   },
   "by_country": {
-    "Australia": 1984,
-    "New Zealand": 226
+    "Australia": 1926,
+    "New Zealand": 225
   },
   "by_location_setting": {
-    "Uncertain": 200,
-    "High Street": 1006,
-    "Shopping Centre": 1001,
-    "Other": 3
+    "Uncertain": 156,
+    "High Street": 976,
+    "Shopping Centre": 1009,
+    "Other": 10
   },
   "place_types": {
-    "Shopping Centre": 736,
-    "High Street Corridor": 834
+    "Shopping Centre": 691,
+    "High Street Corridor": 812
   },
   "sources": [
     {
@@ -174,7 +176,7 @@
       "required": true,
       "snapshot": "retailers/opsm/source_snapshot.json",
       "last_success": "2026-09-01T07:42:23+00:00",
-      "age_days": 1,
+      "age_days": 2,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -190,7 +192,7 @@
       "required": true,
       "snapshot": "retailers/opsm-nz/source_snapshot.json",
       "last_success": "2026-09-01T07:42:29+00:00",
-      "age_days": 1,
+      "age_days": 2,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -238,7 +240,7 @@
       "required": true,
       "snapshot": "retailers/bailey-nelson/source_snapshot.json",
       "last_success": "2026-09-01T07:42:35+00:00",
-      "age_days": 1,
+      "age_days": 2,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -254,7 +256,7 @@
       "required": true,
       "snapshot": "retailers/bailey-nelson-nz/source_snapshot.json",
       "last_success": "2026-09-01T07:43:01+00:00",
-      "age_days": 1,
+      "age_days": 2,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -270,7 +272,7 @@
       "required": true,
       "snapshot": "retailers/oscar-wylee/source_snapshot.json",
       "last_success": "2026-09-01T07:43:15+00:00",
-      "age_days": 1,
+      "age_days": 2,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -286,7 +288,7 @@
       "required": true,
       "snapshot": "retailers/oscar-wylee-nz/source_snapshot.json",
       "last_success": "2026-09-01T07:45:57.558Z",
-      "age_days": 1,
+      "age_days": 2,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -526,7 +528,7 @@
       "required": true,
       "snapshot": "retailers/independent-other/source_snapshot.json",
       "last_success": "2026-09-01T07:48:20.085579Z",
-      "age_days": 1,
+      "age_days": 2,
       "max_age_days": 90,
       "available": true,
       "complete": true,
@@ -543,7 +545,7 @@
       "snapshot": "data/discovery/retail_place_discovery_run.json",
       "completion_status": "partial",
       "last_success": "2026-09-01T08:06:07+00:00",
-      "age_days": 1,
+      "age_days": 2,
       "max_age_days": 90,
       "available": true,
       "complete": false,
@@ -593,7 +595,7 @@
       "required": false,
       "snapshot": "data/property_intelligence.json",
       "completion_status": "partial",
-      "last_success": "2026-09-03T05:41:32.666772+00:00",
+      "last_success": "2026-09-03T12:03:25.820849+00:00",
       "age_days": 0,
       "max_age_days": 180,
       "available": true,
@@ -606,24 +608,24 @@
     "coverage_statement": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
     "portfolio_overlap_note": "Portfolio overlap is derived from public tenancy and property-group evidence; it is not proof of a private commercial relationship.",
     "dimensions": {
-      "research_coverage": 42.9,
+      "research_coverage": 46.2,
       "relationship_freshness": 99.9,
-      "centre_class_coverage": 42.4,
+      "centre_class_coverage": 45.6,
       "bailey_centre_research_coverage": 100.0,
       "bailey_centre_class_coverage": 100.0,
       "conflict_reconciliation": 100.0
     },
     "counts": {
-      "groups": 155,
-      "relationships": 1036,
-      "current_relationships": 1035,
+      "groups": 157,
+      "relationships": 1047,
+      "current_relationships": 1046,
       "stale_relationships": 1,
-      "shopping_centres": 736,
-      "researched_centres": 316,
-      "classed_centres": 312,
-      "bailey_centres": 45,
-      "researched_bailey_centres": 45,
-      "classed_bailey_centres": 45,
+      "shopping_centres": 691,
+      "researched_centres": 319,
+      "classed_centres": 315,
+      "bailey_centres": 50,
+      "researched_bailey_centres": 50,
+      "classed_bailey_centres": 50,
       "conflicts": 0,
       "review_items": 0,
       "development_assets": 1,
@@ -635,24 +637,36 @@
     }
   },
   "co_tenancy": {
-    "coverage_statement": "Curated key co-tenants only; not a complete centre directory. Optical rows require accepted canonical place membership. Research-started coverage includes qualified uncertain evidence; anchor-profiled and multi-category coverage count accepted active tenants only.",
+    "coverage_statement": "Curated key co-tenants only; not a complete directory. Optical rows require accepted canonical place membership. Bailey high-street baseline coverage confirms the corridor and its accepted optical tenants; broader retail-mix research remains separately measurable.",
     "dimensions": {
       "bailey_research_started": 100.0,
-      "bailey_anchor_coverage": 82.2,
-      "bailey_multi_category_coverage": 80.0,
-      "evidence_freshness": 91.9
+      "bailey_anchor_coverage": 94.0,
+      "bailey_multi_category_coverage": 76.0,
+      "evidence_freshness": 96.0
     },
     "counts": {
       "pilot_places": 10,
-      "bailey_centres": 45,
-      "bailey_research_started": 45,
-      "bailey_anchor_profiled": 37,
-      "bailey_multi_category_profiled": 36,
-      "researched_places": 55,
-      "key_tenant_records": 246,
-      "current_key_tenant_records": 226
+      "bailey_centres": 50,
+      "bailey_research_started": 50,
+      "bailey_anchor_profiled": 47,
+      "bailey_multi_category_profiled": 38,
+      "researched_places": 60,
+      "key_tenant_records": 250,
+      "current_key_tenant_records": 240
     },
     "freshness_policy_days": 90
+  },
+  "high_street_research": {
+    "coverage_statement": "Baseline research reconciles each Bailey Nelson address and accepted optical membership to a canonical street-and-locality corridor. Broader co-tenancy, visitation and footfall research is measured separately because high streets usually have no single authoritative tenant directory.",
+    "dimensions": {
+      "bailey_corridor_baseline_coverage": 100.0,
+      "bailey_corridor_retail_mix_coverage": 0.0
+    },
+    "counts": {
+      "bailey_corridors": 32,
+      "baseline_researched": 32,
+      "key_tenant_profiled": 0
+    }
   },
   "intelligence_layer_register": [
     {
@@ -821,7 +835,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-act-westfield-belconnen",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-124": {
@@ -853,7 +867,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-act-westfield-shopping-centre",
+      "place_id": "place-au-act-westfield-belconnen",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -964,7 +978,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-act-south-point-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3308": {
@@ -1072,9 +1086,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-act-weston-creek-brierly-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-act-cooleman-court",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3657": {
@@ -1106,7 +1120,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-act-westfield-shopping-centre",
+      "place_id": "place-au-act-westfield-woden",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -1118,7 +1132,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-act-westfield-woden",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "independent-other-optical-osm-ne-node-7009136867": {
@@ -1270,10 +1284,10 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-nz-auckland-vision-centre",
-      "mapping_confidence": "High",
-      "issues": "record lacks a meaningful public storefront address"
+      "location_setting": "Uncertain",
+      "place_id": "",
+      "mapping_confidence": "Uncertain",
+      "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-ne-node-2660761055": {
       "operational_status": "Limited",
@@ -1305,7 +1319,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-nz-auckland-westfield-albany",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-nz-optometrist-albany": {
@@ -1415,7 +1429,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-nz-auckland-manukau-westfield",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-nz-4712": {
@@ -1710,9 +1724,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-nz-auckland-henderson-catherine-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-nz-auckland-westcity-waitakere-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-nz-optometrist-manukau": {
@@ -1767,7 +1781,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-nz-auckland-westfield-st-lukes",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-nz-3825": {
@@ -1789,7 +1803,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-nz-auckland-sylvia-park-mall",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-nz-1686": {
@@ -1800,7 +1814,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-nz-auckland-lynnmall-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-nz-optometrist-new-lynn": {
@@ -1833,7 +1847,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-nz-auckland-newmarket-westfield",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "matthews-eyecare-nz-X9Qi9sOYQg-I582_-n5IHg": {
@@ -1932,7 +1946,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-nz-bay-of-plenty-bayfair-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-nz-1625": {
@@ -2262,7 +2276,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-nz-canterbury-riccarton-westfield",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-nz-optometrist-riccarton": {
@@ -2297,17 +2311,6 @@
       "place_id": "corridor-nz-canterbury-timaru-elizabeth-street",
       "mapping_confidence": "Medium",
       "issues": ""
-    },
-    "independent-other-optical-osm-ne-node-4523027569": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-ne-node-12611705756": {
       "operational_status": "Limited",
@@ -2579,10 +2582,10 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-the-galeries",
+      "mapping_confidence": "High",
+      "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-node-12769119364": {
       "operational_status": "Limited",
@@ -2605,17 +2608,6 @@
       "place_id": "corridor-au-nsw-nsw-beardy-street",
       "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
-    },
-    "independent-other-optical-osm-au-node-12803835793": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-4547826400": {
       "operational_status": "Limited",
@@ -2662,17 +2654,6 @@
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-2613244951": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-12706665276": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
@@ -2738,28 +2719,6 @@
       "mapping_confidence": "Uncertain",
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
-    "independent-other-optical-osm-au-node-7176563988": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-9894830475": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
     "independent-other-optical-osm-au-node-9318665504": {
       "operational_status": "Limited",
       "usable_for_network": "false",
@@ -2777,10 +2736,10 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-nsw-hcf-eyecare-centres",
-      "mapping_confidence": "High",
-      "issues": "record lacks a meaningful public storefront address"
+      "location_setting": "Uncertain",
+      "place_id": "",
+      "mapping_confidence": "Uncertain",
+      "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-4353406489": {
       "operational_status": "Limited",
@@ -2837,27 +2796,16 @@
       "mapping_confidence": "Uncertain",
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
-    "independent-other-optical-osm-au-node-11115368664": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
     "independent-other-optical-osm-au-node-3981230962": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-the-galeries",
+      "mapping_confidence": "High",
+      "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-node-12818552017": {
       "operational_status": "Limited",
@@ -2880,17 +2828,6 @@
       "place_id": "corridor-au-nsw-nsw-anzac-parade",
       "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
-    },
-    "independent-other-optical-osm-au-node-7730212701": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-10689683737": {
       "operational_status": "Limited",
@@ -2931,10 +2868,10 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-the-galeries",
+      "mapping_confidence": "High",
+      "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-way-1104859305": {
       "operational_status": "Limited",
@@ -2959,17 +2896,6 @@
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-4546327090": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-way-1301075399": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
@@ -3030,9 +2956,9 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-nsw-rose-bay-eyecare-centre",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-nsw-nsw-new-south-head-road",
+      "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-node-2613244961": {
@@ -3052,8 +2978,8 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-nsw-teachers-health-centre-parramatta",
+      "location_setting": "Other",
+      "place_id": "",
       "mapping_confidence": "High",
       "issues": "record lacks a meaningful public storefront address"
     },
@@ -3122,17 +3048,6 @@
       "place_id": "corridor-au-nsw-nsw-forest-road",
       "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
-    },
-    "independent-other-optical-osm-au-node-13343526524": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-3977545466": {
       "operational_status": "Limited",
@@ -3274,7 +3189,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-ashfield-mall",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3519": {
@@ -3307,7 +3222,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-balgowlah-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3624": {
@@ -3461,7 +3376,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-bateau-bay-square",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3523": {
@@ -3923,7 +3838,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-westfield-burwood",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-65": {
@@ -4253,7 +4168,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-charlestown-square",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-75": {
@@ -4319,7 +4234,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-westfield-chatswood",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "bupa-optical-13626256": {
@@ -4350,9 +4265,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-nsw-westfield-chatswood",
-      "mapping_confidence": "Medium",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-nsw-chatswood-victoria-avenue",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3659": {
@@ -4383,9 +4298,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-cherrybrook-shepherds-drive",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-cherrybrook-village-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "eyecare-plus-590": {
@@ -4395,7 +4310,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-nsw-chullora-market-place",
+      "place_id": "place-au-nsw-chullora-marketplace",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -4416,8 +4331,8 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-nsw-medical-and-professional-centre",
+      "location_setting": "Other",
+      "place_id": "",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -4438,9 +4353,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-coffs-harbour-pacific-highway",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-park-beach-plaza",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3339": {
@@ -4498,17 +4413,6 @@
       "mapping_confidence": "Medium",
       "issues": ""
     },
-    "eyecare-plus-692": {
-      "operational_status": "Usable",
-      "usable_for_network": "true",
-      "current_source": "true",
-      "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "true",
-      "location_setting": "Other",
-      "place_id": "",
-      "mapping_confidence": "High",
-      "issues": ""
-    },
     "eyecare-plus-594": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -4550,7 +4454,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-dapto-mall",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3531": {
@@ -4647,9 +4551,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-nsw-morrisons-family-eyecare-centre",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-nsw-dubbo-wingewarra-street",
+      "mapping_confidence": "Medium",
       "issues": ""
     },
     "opsm-1227": {
@@ -4660,7 +4564,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-dubbo-square",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3681": {
@@ -4715,7 +4619,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-stockland-green-hills-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-87": {
@@ -4737,7 +4641,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-stockland-green-hills-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "1001-optometry-7298653": {
@@ -4759,7 +4663,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-westfield-eastgardens",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "eyeq-optometrists-eastgardens": {
@@ -4869,7 +4773,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-erina-fair",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-16": {
@@ -4922,9 +4826,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-figtree-princes-highway",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-figtree-grove-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "george-matilda-449": {
@@ -4933,9 +4837,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-figtree-princes-highway",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-figtree-grove-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3685": {
@@ -4979,7 +4883,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-forster-stockland",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3613": {
@@ -5268,17 +5172,6 @@
       "mapping_confidence": "Medium",
       "issues": ""
     },
-    "eyecare-plus-576": {
-      "operational_status": "Usable",
-      "usable_for_network": "true",
-      "current_source": "true",
-      "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-hillsdale-bunnerong-road",
-      "mapping_confidence": "Medium",
-      "issues": ""
-    },
     "eyecare-plus-121642": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -5320,7 +5213,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-westfield-hornsby",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-42": {
@@ -5386,7 +5279,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-westfield-hurstville",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-144": {
@@ -5472,9 +5365,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-jesmond-blue-gum-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-unknown-jesmond-central",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3471": {
@@ -5483,9 +5376,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-jesmond-blue-gum-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-unknown-jesmond-central",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "independent-other-optical-provision-93628": {
@@ -5626,8 +5519,8 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-nsw-medical-fitness-centre",
+      "location_setting": "Other",
+      "place_id": "",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -5650,7 +5543,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-westfield-kotara",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "bupa-optical-3870872": {
@@ -5672,7 +5565,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-westfield-kotara",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3333": {
@@ -5749,7 +5642,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-lavington-square",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3466": {
@@ -5782,7 +5675,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-leichhardt-marketplace",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3423": {
@@ -5826,7 +5719,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-lismore-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3299": {
@@ -5881,7 +5774,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-westfield-liverpool",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-41": {
@@ -6189,7 +6082,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-westfield-miranda",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-17": {
@@ -6365,7 +6258,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-mt-druitt-westfield",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3323": {
@@ -6409,7 +6302,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-lake-macquarie-square",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3335": {
@@ -6497,7 +6390,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-narellan-town-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-84": {
@@ -6882,7 +6775,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-orange-central-square",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-99": {
@@ -6992,7 +6885,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-westfield-parramatta",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3625": {
@@ -7078,9 +6971,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-penrith-high-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-westfield-penrith",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "independent-other-optical-provision-155308": {
@@ -7102,7 +6995,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-nepean-village",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-1328": {
@@ -7168,7 +7061,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-plumpton-marketplace",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3528": {
@@ -7210,9 +7103,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-port-macquarie-horton-street-2",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-unknown-port-central-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-2296": {
@@ -7233,7 +7126,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-port-macquarie-horton-street-1",
+      "place_id": "corridor-au-nsw-port-macquarie-horton-street",
       "mapping_confidence": "Medium",
       "issues": ""
     },
@@ -7244,7 +7137,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-port-macquarie-horton-street-1",
+      "place_id": "corridor-au-nsw-port-macquarie-horton-street",
       "mapping_confidence": "Medium",
       "issues": ""
     },
@@ -7366,7 +7259,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-royal-randwick-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3313": {
@@ -7399,7 +7292,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-raymond-terrace-marketplace",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3652": {
@@ -7414,17 +7307,6 @@
       "issues": ""
     },
     "independent-other-optical-provision-323950": {
-      "operational_status": "Usable",
-      "usable_for_network": "true",
-      "current_source": "true",
-      "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-redfern-cleveland-street",
-      "mapping_confidence": "Medium",
-      "issues": ""
-    },
-    "independent-other-optical-provision-325061": {
       "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
@@ -7454,7 +7336,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-rhodes-waterside-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-139": {
@@ -7465,7 +7347,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-rhodes-waterside-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3588": {
@@ -7553,7 +7435,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-roselands-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3419": {
@@ -7663,7 +7545,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-top-ryde-city-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-52": {
@@ -7739,7 +7621,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-nsw-stockland-shellharbour",
+      "place_id": "place-au-nsw-shellharbour-stockland",
       "mapping_confidence": "Medium",
       "issues": ""
     },
@@ -7795,7 +7677,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-singleton-square",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3614": {
@@ -7861,7 +7743,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-st-ives-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3637": {
@@ -7870,8 +7752,8 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-nsw-st-ives-shopping-centre",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-nsw-st-ives-mona-vale-road",
       "mapping_confidence": "Medium",
       "issues": ""
     },
@@ -8486,9 +8368,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-ultimo-bay-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-broadway-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-1423": {
@@ -8587,7 +8469,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-wagga-wagga-marketplace",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "optical-superstore-60378": {
@@ -8618,9 +8500,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-nsw-wagga-wagga-marketplace",
-      "mapping_confidence": "Medium",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-nsw-wagga-wagga-forsyth-street",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-2959": {
@@ -8719,7 +8601,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-nsw-warriewood-square",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3575": {
@@ -8871,9 +8753,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-wollongong-crown-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-wollongong-central",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-133": {
@@ -8965,28 +8847,6 @@
       "issues": ""
     },
     "independent-other-optical-osm-au-node-5720362545": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-6267324335": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-way-1250385845": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
@@ -9091,9 +8951,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-nt-smith-st-mall",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-nt-darwin-smith-street",
+      "mapping_confidence": "Medium",
       "issues": ""
     },
     "specsavers-3317": {
@@ -9213,7 +9073,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-nz-nelson-richmond-mall",
+      "place_id": "place-nz-tasman-richmond-mall",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -9223,10 +9083,10 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
+      "location_setting": "High Street",
+      "place_id": "corridor-nz-northland--state-highway-10",
+      "mapping_confidence": "Medium",
+      "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-ne-node-12577152601": {
       "operational_status": "Limited",
@@ -9234,10 +9094,10 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
+      "location_setting": "High Street",
+      "place_id": "corridor-nz-northland--cameron-street",
+      "mapping_confidence": "High",
+      "issues": "record lacks a meaningful public storefront address"
     },
     "matthews-eyecare-nz-aePVyAsOS-my1Du-ENsu_Q": {
       "operational_status": "Usable",
@@ -9503,29 +9363,7 @@
       "mapping_confidence": "Uncertain",
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
-    "independent-other-optical-osm-au-node-3641965394": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
     "independent-other-optical-osm-au-node-615108303": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-11267057796": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
@@ -9558,28 +9396,6 @@
       "mapping_confidence": "Uncertain",
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
-    "independent-other-optical-osm-au-node-2812592887": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-4435526091": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
     "independent-other-optical-osm-au-node-735998260": {
       "operational_status": "Limited",
       "usable_for_network": "false",
@@ -9602,29 +9418,7 @@
       "mapping_confidence": "Uncertain",
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
-    "independent-other-optical-osm-au-node-4845383813": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
     "independent-other-optical-osm-au-node-5589514647": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-way-889998872": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
@@ -9647,39 +9441,6 @@
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-5631549727": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-10104842037": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-way-1254545304": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-7634594301": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
@@ -9713,28 +9474,6 @@
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-12310587681": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-10698432114": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-3612643660": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
@@ -9973,7 +9712,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-aspley-hypermarket",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "optical-superstore-60461": {
@@ -10059,8 +9798,8 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-beaudesert-medical-centre",
+      "location_setting": "Other",
+      "place_id": "",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -10136,9 +9875,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-birtinya-the-avenue",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-unknown-stockland-birtinya",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3619": {
@@ -10202,9 +9941,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-brisbane-queen-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-macarthur-central",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "dresden-vision-16": {
@@ -10380,7 +10119,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-browns-plains-grand-plaza-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "optical-warehouse-browns-plains": {
@@ -10512,7 +10251,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-sugarland-shoppingtown",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "independent-other-optical-provision-329067": {
@@ -10567,7 +10306,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-burleigh-heads-stockland",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3225": {
@@ -10621,7 +10360,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-cairns-central-shopping-centre",
+      "place_id": "place-au-qld-cairns-shopping-centre",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -10633,7 +10372,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-cairns-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-1237": {
@@ -10644,7 +10383,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-cairns-smithfield-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "bupa-optical-3870854": {
@@ -10654,7 +10393,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-cairns-central-shopping-centre",
+      "place_id": "place-au-qld-cairns-shopping-centre",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -10677,7 +10416,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-cairns-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3223": {
@@ -10710,7 +10449,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-caloundra-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3692": {
@@ -10743,7 +10482,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-cannon-hill-kmart-plaza",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3658": {
@@ -10798,7 +10537,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-capalaba-park-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "optical-superstore-60458": {
@@ -10852,7 +10591,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-hearing-carindale",
+      "place_id": "place-au-qld-westfield-carindale",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -10951,7 +10690,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-hearing-chermside",
+      "place_id": "place-au-qld-westfield-chermside",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -10961,8 +10700,8 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-chermside-health-hub",
+      "location_setting": "Other",
+      "place_id": "",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -11051,7 +10790,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-cleveland-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3607": {
@@ -11095,7 +10834,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-westfield-coomera",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-2974": {
@@ -11106,7 +10845,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-westfield-coomera",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-154": {
@@ -11203,9 +10942,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-earlville-mulgrave-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-earlville-shopping-town",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3437": {
@@ -11249,7 +10988,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-the-pines-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3568": {
@@ -11270,7 +11009,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-elanora-the-pines-shopping-centre",
+      "place_id": "place-au-qld-the-pines-shopping-centre",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -11425,7 +11164,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-gladstone-centre-plaza",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "george-matilda-413": {
@@ -11501,7 +11240,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-westfield",
+      "place_id": "place-au-qld-helensvale-westfield",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -11633,7 +11372,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-hearing-indooroopilly",
+      "place_id": "place-au-qld-indooroopilly",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -11821,7 +11560,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-kingaroy-plaza",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3603": {
@@ -11841,9 +11580,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-kippa-ring-anzac-avenue",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-peninsula-fair-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "optical-superstore-60362": {
@@ -11853,7 +11592,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-kippa-ring-peninsular-fair-shopping-centre",
+      "place_id": "place-au-qld-peninsula-fair-shopping-centre",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -11974,7 +11713,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-canelands-central-shopping-centre",
+      "place_id": "place-au-qld-caneland-centre",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -11995,9 +11734,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-mackay-victoria-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-caneland-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-2264": {
@@ -12018,7 +11757,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-mackay-canelands-shopping-centre",
+      "place_id": "place-au-qld-caneland-centre",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -12040,7 +11779,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-mackay-canelands-shopping-centre",
+      "place_id": "place-au-qld-caneland-centre",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -12072,9 +11811,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-mango-hill-north-lakes-drive",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-westfield-north-lakes",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "independent-other-optical-provision-17578": {
@@ -12448,7 +12187,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-mt-ommaney-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3406": {
@@ -12468,9 +12207,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-mount-sheridan-barnard-drive",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-unknown-mount-sheridan-plaza",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-131": {
@@ -12501,8 +12240,8 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-healthia-allied-health-services-scurrs-centre",
+      "location_setting": "Other",
+      "place_id": "",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -12668,7 +12407,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-noosa-civic-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-78": {
@@ -12712,7 +12451,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-westfield-north-lakes",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "george-matilda-473": {
@@ -12722,7 +12461,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-westfield",
+      "place_id": "place-au-qld-westfield-north-lakes",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -13018,9 +12757,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-runaway-bay-lae-drive",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-runaway-bay-shopping-village",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-1076": {
@@ -13031,7 +12770,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-runaway-bay-shopping-village",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3391": {
@@ -13052,7 +12791,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-runaway-bay-centre",
+      "place_id": "place-au-qld-runaway-bay-shopping-village",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -13107,7 +12846,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-smithfield-shopping-centre",
+      "place_id": "place-au-qld-cairns-smithfield-centre",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -13183,9 +12922,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-southport-marine-parade",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-australia-fair-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "optical-superstore-61169": {
@@ -13218,7 +12957,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-australia-fair-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-93": {
@@ -13360,8 +13099,8 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-sunnybank-plaza",
-      "mapping_confidence": "Medium",
+      "place_id": "place-au-unknown-sunny-park-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3479": {
@@ -13460,7 +13199,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-toowong-village",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3566": {
@@ -13482,7 +13221,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-toowoomba-grand-central-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "bupa-optical-13626280": {
@@ -13603,7 +13342,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-toowoomba-grand-central-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3416": {
@@ -13623,9 +13362,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-toowoomba-city-margaret-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-toowoomba-grand-central-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-63": {
@@ -13636,7 +13375,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-toowoomba-grand-central-shopping-centre",
-      "mapping_confidence": "High",
+      "mapping_confidence": "Medium",
       "issues": ""
     },
     "independent-other-optical-provision-17413": {
@@ -13689,9 +13428,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-upper-mount-gravatt-kessels-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-mt-gravatt-westfield",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-1262": {
@@ -13734,7 +13473,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-westfield-garden-city",
+      "place_id": "place-au-qld-mt-gravatt-westfield",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -13745,7 +13484,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-qld-westfield-garden-city",
+      "place_id": "place-au-qld-mt-gravatt-westfield",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -13779,7 +13518,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-qld-victoria-point-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3445": {
@@ -13969,17 +13708,6 @@
       "mapping_confidence": "Uncertain",
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
-    "independent-other-optical-osm-au-node-5977220533": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
     "independent-other-optical-osm-au-node-6389827386": {
       "operational_status": "Limited",
       "usable_for_network": "false",
@@ -13990,17 +13718,6 @@
       "place_id": "place-au-sa-rundle-mall",
       "mapping_confidence": "High",
       "issues": "record lacks a meaningful public storefront address"
-    },
-    "independent-other-optical-osm-au-node-13253287112": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-4744133082": {
       "operational_status": "Limited",
@@ -14021,17 +13738,6 @@
       "eligible_for_place_analytics": "false",
       "location_setting": "High Street",
       "place_id": "corridor-au-sa-sa-east-terrace",
-      "mapping_confidence": "Medium",
-      "issues": "record lacks a meaningful public storefront address"
-    },
-    "independent-other-optical-osm-au-node-7571950286": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-sa-sa-the-parade",
       "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
     },
@@ -14263,7 +13969,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-sa-edwardstown-castle-plaza-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3369": {
@@ -14472,7 +14178,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-sa-the-grove-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "optical-by-national-pharmacies-golden-grove-5125": {
@@ -14526,7 +14232,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-sa-ingle-farm-shopping-centre",
+      "place_id": "place-au-sa-ingle-farm-plaza",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -14779,7 +14485,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-sa-barker-plaza",
+      "place_id": "place-au-sa-mount-barker-central",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -15077,7 +14783,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-sa-westfield-marion",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "bupa-optical-13626268": {
@@ -15110,7 +14816,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-sa-westfield-marion",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-38": {
@@ -15163,9 +14869,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-sa-port-adelaide-commercial-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-sa-port-adelaide-plaza",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "independent-other-optical-provision-17750": {
@@ -15196,9 +14902,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-sa-eyre-eye-centre-port-lincoln",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-sa-port-lincoln-liverpool-street",
+      "mapping_confidence": "Medium",
       "issues": ""
     },
     "opsm-1586": {
@@ -15340,7 +15046,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-sa-seaford-shopping-centre",
+      "place_id": "place-au-sa-seaford-central",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -15374,7 +15080,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-sa-mitcham-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "optical-superstore-61637": {
@@ -15460,9 +15166,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-sa-victor-eye-centre",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-sa-victor-harbor-seaview-road",
+      "mapping_confidence": "Medium",
       "issues": ""
     },
     "opsm-7082": {
@@ -15572,7 +15278,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-sa-whyalla-westland-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3388": {
@@ -15592,9 +15298,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-sa-eyre-eye-centre-whyalla",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-sa-whyalla-playford-elliott-street",
+      "mapping_confidence": "Medium",
       "issues": ""
     },
     "opsm-1573": {
@@ -15658,9 +15364,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-nz-southland-southland-eyecare",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-nz-southland-te-anau-luxmore-drive",
+      "mapping_confidence": "Medium",
       "issues": ""
     },
     "independent-other-optical-osm-ne-node-5625853837": {
@@ -15669,9 +15375,9 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-nz-southland-southland-eye-specialists",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-nz-southland-windsor-windsor-street",
+      "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-node-2597738483": {
@@ -15740,28 +15446,6 @@
       "mapping_confidence": "Uncertain",
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
-    "independent-other-optical-osm-au-node-3919500461": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-4613613189": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
     "george-matilda-391": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -15770,17 +15454,6 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "High Street",
       "place_id": "corridor-au-tas-burnie-mount-street",
-      "mapping_confidence": "Medium",
-      "issues": ""
-    },
-    "independent-other-optical-osm-au-node-2746896734": {
-      "operational_status": "Usable",
-      "usable_for_network": "true",
-      "current_source": "true",
-      "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-tas-burnie-wilmot-street",
       "mapping_confidence": "Medium",
       "issues": ""
     },
@@ -15933,8 +15606,8 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-tas-the-cat-fiddle-arcade",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-tas-hobart-murray-street",
       "mapping_confidence": "Medium",
       "issues": ""
     },
@@ -15977,8 +15650,8 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-tas-the-cat-fiddle-arcade",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-tas-hobart-collins-street",
       "mapping_confidence": "Medium",
       "issues": ""
     },
@@ -16246,17 +15919,6 @@
       "mapping_confidence": "High",
       "issues": ""
     },
-    "independent-other-optical-osm-au-node-2365319231": {
-      "operational_status": "Needs review",
-      "usable_for_network": "true",
-      "current_source": "true",
-      "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "location setting needs review"
-    },
     "independent-other-optical-provision-17873": {
       "operational_status": "Needs review",
       "usable_for_network": "true",
@@ -16318,10 +15980,10 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-nz-taranaki-taranaki-eye-centre",
-      "mapping_confidence": "High",
-      "issues": "record lacks a meaningful public storefront address"
+      "location_setting": "Uncertain",
+      "place_id": "",
+      "mapping_confidence": "Uncertain",
+      "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-ne-node-4584902719": {
       "operational_status": "Limited",
@@ -16433,17 +16095,6 @@
       "mapping_confidence": "High",
       "issues": ""
     },
-    "independent-other-optical-osm-au-node-12121721359": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
     "independent-other-optical-osm-au-node-10774441654": {
       "operational_status": "Limited",
       "usable_for_network": "false",
@@ -16510,27 +16161,16 @@
       "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
     },
-    "independent-other-optical-osm-au-way-1550521169": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
     "independent-other-optical-osm-au-node-3953229690": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-campbellfield-plaza",
+      "mapping_confidence": "Medium",
+      "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-node-11145701652": {
       "operational_status": "Limited",
@@ -16571,32 +16211,10 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-vic-high-street-1",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-cranbourne-park-shopping-centre-sp107",
+      "mapping_confidence": "High",
       "issues": "record lacks a meaningful public storefront address"
-    },
-    "independent-other-optical-osm-au-node-5203746943": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-493891538": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-5402564830": {
       "operational_status": "Limited",
@@ -16619,17 +16237,6 @@
       "place_id": "corridor-au-vic-vic-smith-street",
       "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
-    },
-    "independent-other-optical-osm-au-node-10814212741": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-10814212736": {
       "operational_status": "Limited",
@@ -16661,17 +16268,6 @@
       "eligible_for_place_analytics": "false",
       "location_setting": "High Street",
       "place_id": "corridor-au-vic-vic-nicholson-street",
-      "mapping_confidence": "Medium",
-      "issues": "record lacks a meaningful public storefront address"
-    },
-    "independent-other-optical-osm-au-way-631561723": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-vic-koornang-road",
       "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
     },
@@ -16708,40 +16304,7 @@
       "mapping_confidence": "Uncertain",
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
-    "independent-other-optical-osm-au-node-4041199624": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-vic-buckingham-avenue",
-      "mapping_confidence": "Medium",
-      "issues": "record lacks a meaningful public storefront address"
-    },
-    "independent-other-optical-osm-au-node-6065622279": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
     "independent-other-optical-osm-au-node-5242024739": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-1292397868": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
@@ -16762,28 +16325,6 @@
       "place_id": "",
       "mapping_confidence": "Uncertain",
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-way-1031541532": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-vic-church-street",
-      "mapping_confidence": "Medium",
-      "issues": "record lacks a meaningful public storefront address"
-    },
-    "independent-other-optical-osm-au-way-992371055": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-vic-graham-street",
-      "mapping_confidence": "Medium",
-      "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-node-678347804": {
       "operational_status": "Limited",
@@ -16840,17 +16381,6 @@
       "mapping_confidence": "Uncertain",
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
-    "independent-other-optical-osm-au-node-7202507522": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-fitzroy-north-eye-centre",
-      "mapping_confidence": "High",
-      "issues": "record lacks a meaningful public storefront address"
-    },
     "independent-other-optical-osm-au-node-10711723865": {
       "operational_status": "Limited",
       "usable_for_network": "false",
@@ -16862,17 +16392,6 @@
       "mapping_confidence": "Uncertain",
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
-    "independent-other-optical-osm-au-node-1391960501": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-vic-gray-street",
-      "mapping_confidence": "Medium",
-      "issues": "record lacks a meaningful public storefront address"
-    },
     "independent-other-optical-osm-au-node-13794345661": {
       "operational_status": "Limited",
       "usable_for_network": "false",
@@ -16880,8 +16399,8 @@
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-melbourne-optical-centre",
-      "mapping_confidence": "Medium",
+      "place_id": "place-au-vic-the-strand-melbourne",
+      "mapping_confidence": "High",
       "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-node-4064596156": {
@@ -16916,17 +16435,6 @@
       "place_id": "corridor-au-vic-vic-burwood-highway",
       "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
-    },
-    "independent-other-optical-osm-au-node-12708385217": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-4437613792": {
       "operational_status": "Limited",
@@ -16973,17 +16481,6 @@
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-635642145": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-12260964886": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
@@ -17045,7 +16542,7 @@
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-melbourne-optical-centre",
+      "place_id": "place-au-vic-the-strand-melbourne",
       "mapping_confidence": "High",
       "issues": "record lacks a meaningful public storefront address"
     },
@@ -17121,10 +16618,10 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-the-strand-melbourne",
+      "mapping_confidence": "High",
+      "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-way-616285448": {
       "operational_status": "Limited",
@@ -17146,17 +16643,6 @@
       "location_setting": "High Street",
       "place_id": "corridor-au-vic-vic-malop-street",
       "mapping_confidence": "Medium",
-      "issues": "record lacks a meaningful public storefront address"
-    },
-    "independent-other-optical-osm-au-way-266792569": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-the-centreway",
-      "mapping_confidence": "High",
       "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-node-5213706373": {
@@ -17188,7 +16674,7 @@
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
       "location_setting": "High Street",
-      "place_id": "corridor-au-vic-vic-high-street-2",
+      "place_id": "corridor-au-vic-vic-high-street",
       "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
     },
@@ -17209,9 +16695,9 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-oakleigh-eye-centre",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-vic-vic-warrigal-road",
+      "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-node-2296927160": {
@@ -17231,10 +16717,10 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-campbellfield-plaza",
+      "mapping_confidence": "High",
+      "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-node-4041048209": {
       "operational_status": "Limited",
@@ -17302,28 +16788,6 @@
       "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
     },
-    "independent-other-optical-osm-au-node-6017200175": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-vic-high-street-3",
-      "mapping_confidence": "Medium",
-      "issues": "record lacks a meaningful public storefront address"
-    },
-    "independent-other-optical-osm-au-node-5217624029": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
     "independent-other-optical-osm-au-node-584400749": {
       "operational_status": "Limited",
       "usable_for_network": "false",
@@ -17342,7 +16806,7 @@
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
       "location_setting": "High Street",
-      "place_id": "corridor-au-vic-vic-high-street-2",
+      "place_id": "corridor-au-vic-vic-high-street",
       "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
     },
@@ -17456,26 +16920,15 @@
       "mapping_confidence": "Uncertain",
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
-    "independent-other-optical-osm-au-node-3704488976": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-vic-watsonia-road",
-      "mapping_confidence": "Medium",
-      "issues": "record lacks a meaningful public storefront address"
-    },
     "independent-other-optical-osm-au-node-5142353150": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-whitehorse-optical-centre",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-vic-vic-whitehorse-road",
+      "mapping_confidence": "Medium",
       "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-node-11594502110": {
@@ -17499,17 +16952,6 @@
       "place_id": "",
       "mapping_confidence": "Uncertain",
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-6355897815": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-yarra-junction-optical",
-      "mapping_confidence": "High",
-      "issues": "record lacks a meaningful public storefront address"
     },
     "independent-other-optical-osm-au-node-1633680952": {
       "operational_status": "Limited",
@@ -17563,7 +17005,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-westfield-airport-west",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-62": {
@@ -17618,7 +17060,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-altona-gate-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3258": {
@@ -18113,7 +17555,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-broadmeadows-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3295": {
@@ -18212,7 +17654,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "High Street",
       "place_id": "corridor-au-vic-camberwell-burke-road",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "bupa-optical-13626252": {
@@ -18256,7 +17698,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "High Street",
       "place_id": "corridor-au-vic-camberwell-burke-road",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "independent-other-optical-provision-91990": {
@@ -18420,7 +17862,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-hearing-southland",
+      "place_id": "place-au-vic-westfield-southland",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -18487,7 +17929,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-chirnside-park-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-29": {
@@ -18519,8 +17961,8 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "High Street",
-      "place_id": "corridor-au-vic-city-of-camberwell-burke-road",
-      "mapping_confidence": "Medium",
+      "place_id": "corridor-au-vic-camberwell-burke-road",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "independent-other-optical-provision-17007": {
@@ -18652,7 +18094,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-corio-village",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "independent-other-optical-provision-186737": {
@@ -18672,9 +18114,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-craigieburn-craigieburn-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-craigieburn-central",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-138": {
@@ -18749,9 +18191,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-croydon-kent-avenue",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-unknown-croydon-central",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "independent-other-optical-provision-17118": {
@@ -18892,9 +18334,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-insightful-eye-care-dingley-eye-centre",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-vic-dingley-village-centre-dandenong-road",
+      "mapping_confidence": "Medium",
       "issues": ""
     },
     "independent-other-optical-provision-17352": {
@@ -18926,7 +18368,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-westfield-doncaster-619-doncaster-road-cnr-williamsons-road",
+      "place_id": "place-au-vic-westfield-doncaster",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -18938,7 +18380,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-westfield-doncaster",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "bupa-optical-13626259": {
@@ -18960,7 +18402,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-westfield-doncaster",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-33": {
@@ -19156,8 +18598,8 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-epping-medical-centre",
+      "location_setting": "Other",
+      "place_id": "",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -19244,9 +18686,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-fitzroy-north-eye-centre",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-vic-fitzroy-north-nicholson-street",
+      "mapping_confidence": "Medium",
       "issues": ""
     },
     "independent-other-optical-provision-17346": {
@@ -19315,17 +18757,6 @@
       "mapping_confidence": "Medium",
       "issues": ""
     },
-    "independent-other-optical-osm-au-way-172654057": {
-      "operational_status": "Usable",
-      "usable_for_network": "true",
-      "current_source": "true",
-      "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-frankston-beach-street",
-      "mapping_confidence": "Medium",
-      "issues": ""
-    },
     "opsm-1087": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -19389,7 +18820,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-westfield-geelong",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-50": {
@@ -19466,7 +18897,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-the-glen",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-1152": {
@@ -19477,7 +18908,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-the-glen",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-147": {
@@ -19521,7 +18952,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-greensborough-plaza",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-140": {
@@ -19640,9 +19071,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-dry-eye-centre",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-vic-heathmont-canterbury-road",
+      "mapping_confidence": "Medium",
       "issues": ""
     },
     "eyecare-plus-619": {
@@ -19664,7 +19095,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "High Street",
       "place_id": "corridor-au-vic-heidelberg-burgundy-street",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3477": {
@@ -19807,7 +19238,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-keysborough-parkmore-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3278": {
@@ -20047,9 +19478,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-melbourne-lonsdale-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-emporium-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "bailey-nelson-flinders-lane-melbourne": {
@@ -20071,7 +19502,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-melbourne-central-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "bupa-optical-35589156": {
@@ -20181,7 +19612,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-melbourne-central-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-6": {
@@ -20327,17 +19758,6 @@
       "mapping_confidence": "High",
       "issues": ""
     },
-    "independent-other-optical-osm-au-node-2999573319": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-mill-park-childs-road",
-      "mapping_confidence": "Medium",
-      "issues": "record lacks a meaningful public storefront address"
-    },
     "opsm-1506": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -20346,7 +19766,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-plenty-valley-westfield",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-107": {
@@ -20357,7 +19777,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-plenty-valley-westfield",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3264": {
@@ -20509,9 +19929,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-mornington-barkly-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-mornington-central",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-95": {
@@ -20610,7 +20030,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-waverley-gardens-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "optical-superstore-62163": {
@@ -20696,9 +20116,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-narre-warren-south-cranbourne-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-casey-central-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "eyecare-plus-160475": {
@@ -20764,7 +20184,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-northcote-plaza",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3551": {
@@ -20874,17 +20294,6 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-lakeview-shopping-centre",
-      "mapping_confidence": "High",
-      "issues": ""
-    },
-    "independent-other-optical-provision-17252": {
-      "operational_status": "Usable",
-      "usable_for_network": "true",
-      "current_source": "true",
-      "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-sanctuary-lakes-shopping-ctr",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -21081,9 +20490,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-insightful-eye-care-swan-st-eye-centre",
-      "mapping_confidence": "High",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-vic-richmond-swan-street",
+      "mapping_confidence": "Medium",
       "issues": ""
     },
     "opsm-1341": {
@@ -21094,7 +20503,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-victoria-gardens-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-89": {
@@ -21237,7 +20646,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-rosebud-plaza-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3354": {
@@ -21708,8 +21117,8 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-manningham-medical-centre",
+      "location_setting": "Other",
+      "place_id": "",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -21864,7 +21273,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-vic-westfield-knox-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "bupa-optical-13626264": {
@@ -22061,7 +21470,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-vic-pacific-werribee-shopping-centre",
+      "place_id": "place-au-vic-werribee-plaza",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -22302,10 +21711,10 @@
       "current_source": "true",
       "eligible_for_analytics": "false",
       "eligible_for_place_analytics": "false",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-wa-eye-junction",
-      "mapping_confidence": "High",
-      "issues": "record lacks a meaningful public storefront address"
+      "location_setting": "Uncertain",
+      "place_id": "",
+      "mapping_confidence": "Uncertain",
+      "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-11932057273": {
       "operational_status": "Limited",
@@ -22319,28 +21728,6 @@
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-4569988319": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-11397913897": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-6976079758": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
@@ -22429,17 +21816,6 @@
       "issues": "record lacks a meaningful public storefront address; location setting needs review"
     },
     "independent-other-optical-osm-au-node-11397913900": {
-      "operational_status": "Limited",
-      "usable_for_network": "false",
-      "current_source": "true",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "record lacks a meaningful public storefront address; location setting needs review"
-    },
-    "independent-other-optical-osm-au-node-6934750148": {
       "operational_status": "Limited",
       "usable_for_network": "false",
       "current_source": "true",
@@ -22578,7 +21954,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-wa-armadale-shopping-centre",
+      "place_id": "place-au-wa-armadale-central",
       "mapping_confidence": "Medium",
       "issues": ""
     },
@@ -22780,17 +22156,6 @@
       "mapping_confidence": "Medium",
       "issues": ""
     },
-    "independent-other-optical-provision-326220": {
-      "operational_status": "Usable",
-      "usable_for_network": "true",
-      "current_source": "true",
-      "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-wa-busselton-prince-street",
-      "mapping_confidence": "Medium",
-      "issues": ""
-    },
     "opsm-1197": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -22875,7 +22240,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-wa-carousel-cannington",
+      "place_id": "place-au-wa-westfield-carousel",
       "mapping_confidence": "High",
       "issues": ""
     },
@@ -22918,9 +22283,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-wa-claremont-bayview-terrace",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-claremont-quarter",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-1418": {
@@ -22929,9 +22294,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-wa-claremont-bayview-terrace",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-claremont-quarter",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-118": {
@@ -23305,7 +22670,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-wa-westfield-whitford-city",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-111": {
@@ -23349,7 +22714,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-wa-westfield-innaloo",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3473": {
@@ -23369,9 +22734,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-wa-joondalup-joondalup-drive",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-joondalup-lakeside-s-city",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "bupa-optical-29430212": {
@@ -23402,9 +22767,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-wa-joondalup-joondalup-drive",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-joondalup-lakeside-s-city",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-60": {
@@ -23503,7 +22868,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-wa-karratha-city-plaza",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3686": {
@@ -23536,7 +22901,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-wa-karrinyup-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "laubman-pank-karrinyup-optometrist": {
@@ -23558,7 +22923,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-wa-karrinyup-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-134": {
@@ -23602,7 +22967,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-wa-kwinana-marketplace",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3615": {
@@ -23679,7 +23044,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-wa-maddington-centro-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3433": {
@@ -23822,7 +23187,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-wa-midland-gate-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "oscar-wylee-76": {
@@ -23866,7 +23231,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-wa-mirrabooka-square-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3365": {
@@ -24020,7 +23385,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-wa-northam-boulevard-shopping-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3617": {
@@ -24119,7 +23484,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-wa-riverton-stockland",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3443": {
@@ -24227,9 +23592,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-wa-spearwood-rockingham-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-phoenix-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3464": {
@@ -24293,9 +23658,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-wa-success-beeliar-drive",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-cockburn-gateway-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3434": {
@@ -24372,7 +23737,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-wa-warnbro-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-1249": {
@@ -24383,7 +23748,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
       "place_id": "place-au-wa-warnbro-centre",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-3492": {
@@ -24909,9 +24274,9 @@
       "current_source": "true",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-nz-wellington-porirua-titahi-bay-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-nz-wellington-north-city-shopping-centre",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "specsavers-nz-3844": {
@@ -24944,7 +24309,7 @@
       "eligible_for_place_analytics": "true",
       "location_setting": "High Street",
       "place_id": "place-nz-wellington-cnr-cuba-mall-and-dixon-street",
-      "mapping_confidence": "Medium",
+      "mapping_confidence": "High",
       "issues": ""
     },
     "opsm-nz-1663": {
@@ -25058,5 +24423,6 @@
       "issues": ""
     }
   },
-  "unresolved_mapping_reviews": []
+  "unresolved_mapping_reviews": [],
+  "unresolved_store_identity_reviews": []
 }

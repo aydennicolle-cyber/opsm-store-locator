@@ -9,6 +9,8 @@ import re
 import unittest
 from pathlib import Path
 
+from scripts.audit_centre_recognition import explicit_place_name_overlap
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -33,6 +35,10 @@ def named_source_count() -> int:
         for remap in csv.DictReader(handle):
             if any(remap["source_store_id"].startswith(f"{item['slug']}-") and item["is_named_network"] for item in REGISTRY):
                 total -= 1
+    with (DATA / "store_publication_exclusions.csv").open(newline="", encoding="utf-8") as handle:
+        for exclusion in csv.DictReader(handle):
+            if any(exclusion["store_id"].startswith(f"{item['slug']}-") and item["is_named_network"] for item in REGISTRY):
+                total -= 1
     return total
 
 
@@ -42,6 +48,7 @@ class RetailPlaceTests(unittest.TestCase):
         cls.places_payload = json.loads((DATA / "retail_places.json").read_text(encoding="utf-8"))
         cls.places = cls.places_payload["places"]
         cls.memberships = read_csv("store_place_memberships.csv")
+        cls.centre_recognition = read_csv("centre_recognition_review.csv")
         cls.reviews = read_csv("place_review.csv")
         cls.lookalikes = json.loads((DATA / "lookalike_places.json").read_text(encoding="utf-8"))
         cls.place_tenants = json.loads((DATA / "place_tenants.json").read_text(encoding="utf-8"))
@@ -119,6 +126,72 @@ class RetailPlaceTests(unittest.TestCase):
     def test_promoted_review_queue_has_no_named_network_exceptions(self) -> None:
         self.assertEqual(self.reviews, [])
 
+    def test_centre_recognition_has_no_unresolved_identity_or_high_priority_issue(self) -> None:
+        self.assertFalse(
+            any(row["review_reason"] == "Possible duplicate centre ID" for row in self.centre_recognition)
+        )
+        self.assertFalse(any(row["review_reason"] == "Missing venue name" for row in self.centre_recognition))
+        self.assertFalse(any(row["priority"] == "High" for row in self.centre_recognition))
+
+    def test_locality_or_street_words_cannot_prove_centre_membership(self) -> None:
+        store = {
+            "name": "OPSM Hobart Street",
+            "suburb": "Hobart",
+            "state": "TAS",
+            "country": "Australia",
+        }
+        centre = {
+            "venue_name": "Cat & Fiddle Arcade Hobart",
+            "suburb": "Hobart",
+            "state": "TAS",
+            "country": "Australia",
+        }
+        self.assertFalse(explicit_place_name_overlap(store, centre))
+        store["name"] = "OPSM Cat & Fiddle"
+        self.assertTrue(explicit_place_name_overlap(store, centre))
+
+    def test_memberships_never_use_proximity_as_tenancy_evidence(self) -> None:
+        forbidden = ("coordinates are within", "proximity", "nearby centre")
+        for row in self.memberships:
+            if row["review_status"] != "Accepted":
+                continue
+            basis = row["evidence_basis"].lower()
+            self.assertFalse(any(phrase in basis for phrase in forbidden), row["store_id"])
+
+    def test_adjacent_melbourne_properties_remain_distinct(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        memberships = {row["store_id"]: row for row in self.memberships}
+        expected = {
+            "1001-optometry-7298798": "place-au-vic-emporium-shopping-centre",
+            "bailey-nelson-melbourne-cbd": "place-au-vic-melbourne-central-shopping-centre",
+            "independent-other-optical-osm-au-node-13794345661": "place-au-vic-the-strand-melbourne",
+        }
+        self.assertEqual(
+            {memberships[store_id]["place_id"] for store_id in expected},
+            set(expected.values()),
+        )
+        self.assertTrue(set(expected.values()).issubset(places))
+        central_aliases = set(places["place-au-vic-melbourne-central-shopping-centre"]["aliases"])
+        self.assertNotIn("Emporium Melbourne", central_aliases)
+        self.assertNotIn("The Strand Melbourne", central_aliases)
+
+    def test_reviewed_false_positive_and_recovered_centre_examples(self) -> None:
+        memberships = {row["store_id"]: row for row in self.memberships}
+        expected = {
+            "bailey-nelson-hobart": ("High Street", "Murray Street"),
+            "specsavers-3319": ("High Street", "Victoria Avenue"),
+            "specsavers-3254": ("High Street", "Forsyth Street"),
+            "specsavers-3637": ("High Street", "Mona Vale Road"),
+            "opsm-nz-1604": ("High Street", "Cuba Street / Cuba Mall"),
+            "independent-other-optical-provision-17025": ("High Street", "Burgundy Street"),
+            "opsm-2990": ("Shopping Centre", "Bateau Bay Square"),
+            "opsm-1415": ("Shopping Centre", "Roselands Shopping Centre"),
+        }
+        for store_id, (setting, place_name) in expected.items():
+            with self.subTest(store_id=store_id):
+                self.assertEqual(memberships[store_id]["location_setting"], setting)
+                self.assertEqual(memberships[store_id]["place_name"], place_name)
+
     def test_known_duplicate_westfield_tenants_share_one_canonical_place(self) -> None:
         memberships = {row["store_id"]: row for row in self.memberships}
         groups = [
@@ -138,6 +211,72 @@ class RetailPlaceTests(unittest.TestCase):
         ]
         self.assertGreaterEqual(len(westpoint), 2)
         self.assertEqual(set(westpoint), {"place-au-nsw-westpoint-shopping-centre"})
+
+    def test_ambiguous_and_duplicate_place_identities_are_resolved(self) -> None:
+        memberships = {row["store_id"]: row for row in self.memberships}
+        expected = {
+            "bupa-optical-3870857": "place-au-act-westfield-belconnen",
+            "eyeq-optometrists-woden": "place-au-act-westfield-woden",
+            "the-optical-company-helensvale-4212": "place-au-qld-helensvale-westfield",
+            "george-matilda-473": "place-au-qld-westfield-north-lakes",
+            "bupa-optical-13626253": "place-au-qld-westfield-carindale",
+            "bupa-optical-13626257": "place-au-qld-westfield-chermside",
+            "bupa-optical-13626263": "place-au-qld-indooroopilly",
+            "bupa-optical-13626278": "place-au-vic-westfield-southland",
+            "bupa-optical-13626279": "place-au-sa-westfield-tea-tree-plaza",
+            "specsavers-3453": "place-au-qld-australia-fair-shopping-centre",
+            "laubman-pank-mackay-caneland-optometrist": "place-au-qld-caneland-centre",
+            "optical-superstore-60690": "place-au-qld-caneland-centre",
+            "oscar-wylee-105": "place-au-qld-caneland-centre",
+            "specsavers-3404": "place-au-qld-caneland-centre",
+            "optical-superstore-60362": "place-au-qld-peninsula-fair-shopping-centre",
+            "specsavers-3461": "place-au-qld-peninsula-fair-shopping-centre",
+            "opsm-1262": "place-au-qld-mt-gravatt-westfield",
+            "oscar-wylee-9": "place-au-qld-mt-gravatt-westfield",
+            "specsavers-3248": "place-au-qld-mt-gravatt-westfield",
+            "bupa-optical-3870877": "place-au-qld-mt-gravatt-westfield",
+            "laubman-pank-garden-city-qld-optometrist": "place-au-qld-mt-gravatt-westfield",
+        }
+        for store_id, place_id in expected.items():
+            with self.subTest(store_id=store_id):
+                self.assertEqual(memberships[store_id]["place_id"], place_id)
+
+        place_ids = {place["place_id"] for place in self.places}
+        self.assertNotIn("place-au-act-westfield-shopping-centre", place_ids)
+        self.assertNotIn("place-au-qld-westfield", place_ids)
+        self.assertNotIn("place-au-qld-canelands-central-shopping-centre", place_ids)
+        self.assertNotIn("place-au-qld-kippa-ring-peninsular-fair-shopping-centre", place_ids)
+        self.assertNotIn("place-au-qld-westfield-garden-city", place_ids)
+        self.assertEqual(self.places_payload["metadata"]["suppressed_false_place_count"], 4)
+
+        places = {place["place_id"]: place for place in self.places}
+        self.assertEqual(places["place-au-qld-caneland-centre"]["name"], "Caneland Central")
+        self.assertEqual(places["place-au-qld-peninsula-fair-shopping-centre"]["name"], "Peninsula Fair")
+        self.assertEqual(places["place-au-qld-mt-gravatt-westfield"]["name"], "Westfield Mt Gravatt")
+
+    def test_nearby_but_distinct_retail_places_remain_separate(self) -> None:
+        places = {place["place_id"]: place for place in self.places}
+        self.assertIn("place-nz-auckland-silverdale-centre", places)
+        self.assertIn("place-nz-auckland-silverdale-mall", places)
+        self.assertIn("place-au-unknown-kippa-ring-shopping-centre", places)
+        self.assertIn("place-au-qld-peninsula-fair-shopping-centre", places)
+
+    def test_nearby_centre_name_variants_have_one_canonical_identity(self) -> None:
+        centres = [place for place in self.places if place["location_setting"] == "Shopping Centre"]
+        normalized = {}
+        for place in centres:
+            key = (place["country"], re.sub(r"[^a-z0-9]+", "-", place["name"].lower()).strip("-"))
+            normalized.setdefault(key, []).append(place)
+        for places in normalized.values():
+            for index, first in enumerate(places):
+                for second in places[index + 1:]:
+                    latitude_delta = abs(float(first["latitude"]) - float(second["latitude"]))
+                    longitude_delta = abs(float(first["longitude"]) - float(second["longitude"]))
+                    self.assertFalse(latitude_delta < 0.005 and longitude_delta < 0.005)
+
+        forbidden = {"Westfield", "Westfield Shopping Centre"}
+        self.assertFalse(any(place["name"] in forbidden for place in centres))
+        self.assertFalse(any(place["name"].startswith(("&", "/")) for place in centres))
 
     def test_watergardens_retailer_name_variants_share_one_canonical_place(self) -> None:
         expected_place_id = "place-au-vic-watergardens-town-centre"
@@ -649,7 +788,8 @@ class RetailPlaceTests(unittest.TestCase):
                 "bailey-nelson-bayside-frankston", "opsm-1087", "oscar-wylee-150", "specsavers-3565"
             },
             "place-au-vic-cranbourne-park-shopping-centre-sp107": {
-                "opsm-1290", "oscar-wylee-86", "specsavers-3425"
+                "opsm-1290", "oscar-wylee-86", "specsavers-3425",
+                "independent-other-optical-osm-au-way-637166859",
             },
             "place-au-sa-elizabeth-shopping-centre": {
                 "opsm-1155", "oscar-wylee-113", "specsavers-3351", "laubman-pank-elizabeth-optometrist"
@@ -1019,10 +1159,7 @@ class RetailPlaceTests(unittest.TestCase):
         })
         metadata = self.place_tenants["metadata"]
         self.assertEqual(metadata["bailey_centre_place_ids"], expected)
-        self.assertEqual(
-            metadata["scope_place_ids"],
-            sorted(set(metadata["pilot_place_ids"]) | set(expected)),
-        )
+        self.assertTrue(set(metadata["pilot_place_ids"]) | set(expected) <= set(metadata["scope_place_ids"]))
         self.assertEqual(metadata["researched_bailey_centre_place_ids"], expected)
 
         rows = self.place_tenants["memberships"]
@@ -1044,6 +1181,24 @@ class RetailPlaceTests(unittest.TestCase):
                 and row["status"] == "Active"
             }
             self.assertGreaterEqual(len(active_categories), 3)
+
+    def test_bailey_high_street_baseline_scope_is_complete(self) -> None:
+        metadata = self.place_tenants["metadata"]
+        expected = sorted({
+            row["place_id"] for row in self.memberships
+            if row["retailer"] == "Bailey Nelson"
+            and row["location_setting"] == "High Street"
+            and row["review_status"] == "Accepted"
+        })
+        self.assertEqual(len(expected), 32)
+        self.assertEqual(metadata["bailey_corridor_place_ids"], expected)
+        self.assertEqual(metadata["researched_bailey_corridor_place_ids"], expected)
+        optical_places = {
+            row["place_id"] for row in self.place_tenants["memberships"]
+            if row["category"] == "Optical"
+        }
+        self.assertTrue(set(expected).issubset(optical_places))
+        self.assertTrue(set(expected) <= set(metadata["scope_place_ids"]))
 
     def test_development_signals_are_public_evidenced_and_place_resolved(self) -> None:
         place_ids = {place["place_id"] for place in self.places}

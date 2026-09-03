@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "store_count": 2210,
-    "matched_count": 1984,
+    "store_count": 2151,
+    "matched_count": 1926,
     "source_release_date": "2026-05-26"
   },
   "links": {
@@ -992,13 +992,6 @@
       "geography_system": "Stats NZ",
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
-    "independent-other-optical-osm-ne-node-4523027569": {
-      "sa2_code": "",
-      "sa2_name": "",
-      "match_confidence": "Not available",
-      "geography_system": "Stats NZ",
-      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
-    },
     "independent-other-optical-osm-ne-node-12611705756": {
       "sa2_code": "",
       "sa2_name": "",
@@ -1188,13 +1181,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-12803835793": {
-      "sa2_code": "122031429",
-      "sa2_name": "Freshwater - Brookvale",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-4547826400": {
       "sa2_code": "125031479",
       "sa2_name": "Chester Hill - Sefton",
@@ -1230,13 +1216,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-12706665276": {
-      "sa2_code": "113031263",
-      "sa2_name": "Cootamundra",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-4678091420": {
       "sa2_code": "101021009",
       "sa2_name": "Queanbeyan",
@@ -1268,20 +1247,6 @@
     "independent-other-optical-osm-au-node-10866980758": {
       "sa2_code": "127031601",
       "sa2_name": "Warwick Farm",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-7176563988": {
-      "sa2_code": "122031692",
-      "sa2_name": "Belrose",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-9894830475": {
-      "sa2_code": "121011401",
-      "sa2_name": "St Leonards - Naremburn",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -1335,13 +1300,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-11115368664": {
-      "sa2_code": "112021244",
-      "sa2_name": "Casino",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-3981230962": {
       "sa2_code": "117031644",
       "sa2_name": "Sydney (North) - Millers Point",
@@ -1359,13 +1317,6 @@
     "independent-other-optical-osm-au-way-1025379188": {
       "sa2_code": "118021564",
       "sa2_name": "Kensington (NSW)",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-7730212701": {
-      "sa2_code": "103031072",
-      "sa2_name": "Mudgee",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -1415,13 +1366,6 @@
     "independent-other-optical-osm-au-node-4546327090": {
       "sa2_code": "127031731",
       "sa2_name": "Liverpool - East",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-way-1301075399": {
-      "sa2_code": "110041202",
-      "sa2_name": "Tamworth - East",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -1513,13 +1457,6 @@
     "independent-other-optical-osm-au-node-1081203615": {
       "sa2_code": "119031664",
       "sa2_name": "Hurstville - Central",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-13343526524": {
-      "sa2_code": "101061543",
-      "sa2_name": "Young",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -1798,8 +1735,8 @@
       "boundary_distance_km": null
     },
     "opsm-2943": {
-      "sa2_code": "101021009",
-      "sa2_name": "Queanbeyan",
+      "sa2_code": "101041019",
+      "sa2_name": "Bega - Tathra",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -2392,13 +2329,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "eyecare-plus-692": {
-      "sa2_code": "107011134",
-      "sa2_name": "Unanderra - Mount Kembla",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "eyecare-plus-594": {
       "sa2_code": "107041145",
       "sa2_name": "Corrimal - Tarrawanna - Bellambi",
@@ -2878,13 +2808,6 @@
     "eyecare-plus-618": {
       "sa2_code": "111031224",
       "sa2_name": "Hamilton - Broadmeadow",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "eyecare-plus-576": {
-      "sa2_code": "117031331",
-      "sa2_name": "Glebe - Forest Lodge",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -4254,13 +4177,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-provision-325061": {
-      "sa2_code": "117031642",
-      "sa2_name": "Redfern",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "eyecare-plus-665": {
       "sa2_code": "119011360",
       "sa2_name": "Revesby",
@@ -5241,20 +5157,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-6267324335": {
-      "sa2_code": "701041041",
-      "sa2_name": "Palmerston - North",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-way-1250385845": {
-      "sa2_code": "701021013",
-      "sa2_name": "Brinkin - Nakara",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "eyecare-plus-560": {
       "sa2_code": "702011045",
       "sa2_name": "Charles",
@@ -5577,23 +5479,9 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-3641965394": {
-      "sa2_code": "319011493",
-      "sa2_name": "Bargara - Burnett Heads",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-615108303": {
       "sa2_code": "314011387",
       "sa2_name": "Samford Valley",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-11267057796": {
-      "sa2_code": "309011225",
-      "sa2_name": "Burleigh Heads",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5612,20 +5500,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-2812592887": {
-      "sa2_code": "307021183",
-      "sa2_name": "Wambo",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-4435526091": {
-      "sa2_code": "312031359",
-      "sa2_name": "Airlie - Whitsundays",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-735998260": {
       "sa2_code": "309071557",
       "sa2_name": "Upper Coomera - North",
@@ -5640,23 +5514,9 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-4845383813": {
-      "sa2_code": "314021579",
-      "sa2_name": "North Lakes",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-5589514647": {
       "sa2_code": "304021087",
       "sa2_name": "Brookfield - Kenmore Hills",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-way-889998872": {
-      "sa2_code": "316071548",
-      "sa2_name": "Nambour",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5671,27 +5531,6 @@
     "independent-other-optical-osm-au-node-5631549727": {
       "sa2_code": "311021306",
       "sa2_name": "Beenleigh",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-10104842037": {
-      "sa2_code": "301011004",
-      "sa2_name": "Capalaba",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-way-1254545304": {
-      "sa2_code": "304031094",
-      "sa2_name": "Indooroopilly",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-7634594301": {
-      "sa2_code": "313021366",
-      "sa2_name": "Caboolture - South",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -5713,20 +5552,6 @@
     "independent-other-optical-osm-au-node-12310587681": {
       "sa2_code": "303021059",
       "sa2_name": "Yeronga",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-10698432114": {
-      "sa2_code": "313041373",
-      "sa2_name": "Deception Bay",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-3612643660": {
-      "sa2_code": "319011495",
-      "sa2_name": "Bundaberg",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -8419,23 +8244,9 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-5977220533": {
-      "sa2_code": "403031067",
-      "sa2_name": "Blackwood",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-6389827386": {
       "sa2_code": "401011001",
       "sa2_name": "Adelaide",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-13253287112": {
-      "sa2_code": "402041040",
-      "sa2_name": "Ingle Farm",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -8450,13 +8261,6 @@
     "independent-other-optical-osm-au-way-320606401": {
       "sa2_code": "407031162",
       "sa2_name": "Loxton",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-7571950286": {
-      "sa2_code": "401051017",
-      "sa2_name": "Norwood (SA)",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -9546,28 +9350,7 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-3919500461": {
-      "sa2_code": "601031020",
-      "sa2_name": "New Norfolk",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-4613613189": {
-      "sa2_code": "601051027",
-      "sa2_name": "Hobart",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "george-matilda-391": {
-      "sa2_code": "604011077",
-      "sa2_name": "Burnie - Wivenhoe",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-2746896734": {
       "sa2_code": "604011077",
       "sa2_name": "Burnie - Wivenhoe",
       "match_confidence": "High",
@@ -9868,13 +9651,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-2365319231": {
-      "sa2_code": "601051031",
-      "sa2_name": "Sandy Bay",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-provision-17873": {
       "sa2_code": "601051031",
       "sa2_name": "Sandy Bay",
@@ -9987,13 +9763,6 @@
       "geography_system": "Stats NZ",
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
-    "independent-other-optical-osm-au-node-12121721359": {
-      "sa2_code": "207031163",
-      "sa2_name": "Box Hill",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-10774441654": {
       "sa2_code": "205031093",
       "sa2_name": "Wonthaggi - Inverloch",
@@ -10036,13 +9805,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-way-1550521169": {
-      "sa2_code": "207021156",
-      "sa2_name": "Bulleen",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-3953229690": {
       "sa2_code": "210051243",
       "sa2_name": "Campbellfield - Coolaroo",
@@ -10078,20 +9840,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-5203746943": {
-      "sa2_code": "212041317",
-      "sa2_name": "Springvale",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-493891538": {
-      "sa2_code": "207021425",
-      "sa2_name": "Doncaster East - South",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-5402564830": {
       "sa2_code": "212041317",
       "sa2_name": "Springvale",
@@ -10102,13 +9850,6 @@
     "independent-other-optical-osm-au-node-1077951944": {
       "sa2_code": "206071142",
       "sa2_name": "Fitzroy",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-10814212741": {
-      "sa2_code": "209031209",
-      "sa2_name": "Eltham",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10134,13 +9875,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-way-631561723": {
-      "sa2_code": "208021176",
-      "sa2_name": "Carnegie",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-way-865564237": {
       "sa2_code": "203021039",
       "sa2_name": "Geelong",
@@ -10162,20 +9896,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-4041199624": {
-      "sa2_code": "212041317",
-      "sa2_name": "Springvale",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-6065622279": {
-      "sa2_code": "212051326",
-      "sa2_name": "Oakleigh - Huntingdale",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-5242024739": {
       "sa2_code": "212051568",
       "sa2_name": "Clayton - Central",
@@ -10183,30 +9903,9 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-1292397868": {
-      "sa2_code": "206041505",
-      "sa2_name": "Melbourne CBD - West",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-6699795803": {
       "sa2_code": "206041118",
       "sa2_name": "Docklands",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-way-1031541532": {
-      "sa2_code": "208011169",
-      "sa2_name": "Brighton (Vic.)",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-way-992371055": {
-      "sa2_code": "205031093",
-      "sa2_name": "Wonthaggi - Inverloch",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10246,23 +9945,9 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-7202507522": {
-      "sa2_code": "206071143",
-      "sa2_name": "Fitzroy North",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-10711723865": {
       "sa2_code": "203021039",
       "sa2_name": "Geelong",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-1391960501": {
-      "sa2_code": "217011421",
-      "sa2_name": "Hamilton (Vic.)",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10291,13 +9976,6 @@
     "independent-other-optical-osm-au-node-4249862349": {
       "sa2_code": "211011448",
       "sa2_name": "Ferntree Gully (South) - Upper Ferntree Gully",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-12708385217": {
-      "sa2_code": "215031402",
-      "sa2_name": "Kerang",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10333,13 +10011,6 @@
     "independent-other-optical-osm-au-node-635642145": {
       "sa2_code": "212051322",
       "sa2_name": "Glen Waverley - West",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-12260964886": {
-      "sa2_code": "205041095",
-      "sa2_name": "Moe - Newborough",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -10442,13 +10113,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-way-266792569": {
-      "sa2_code": "203021043",
-      "sa2_name": "Lara",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-5213706373": {
       "sa2_code": "212041317",
       "sa2_name": "Springvale",
@@ -10540,20 +10204,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-6017200175": {
-      "sa2_code": "209021428",
-      "sa2_name": "Preston - East",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-5217624029": {
-      "sa2_code": "212041563",
-      "sa2_name": "Dandenong - North",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-584400749": {
       "sa2_code": "206051512",
       "sa2_name": "South Melbourne",
@@ -10638,13 +10288,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-3704488976": {
-      "sa2_code": "209011204",
-      "sa2_name": "Watsonia",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-5142353150": {
       "sa2_code": "207011147",
       "sa2_name": "Balwyn",
@@ -10662,13 +10305,6 @@
     "independent-other-optical-osm-au-node-6033469826": {
       "sa2_code": "213031348",
       "sa2_name": "Footscray",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-6355897815": {
-      "sa2_code": "211051286",
-      "sa2_name": "Yarra Valley",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -11821,13 +11457,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-way-172654057": {
-      "sa2_code": "214011372",
-      "sa2_name": "Frankston North",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "opsm-1087": {
       "sa2_code": "214011371",
       "sa2_name": "Frankston",
@@ -12347,15 +11976,15 @@
       "boundary_distance_km": null
     },
     "opsm-1589": {
-      "sa2_code": "206041504",
-      "sa2_name": "Melbourne CBD - North",
+      "sa2_code": "206041503",
+      "sa2_name": "Melbourne CBD - East",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
     "opsm-1472": {
-      "sa2_code": "206041504",
-      "sa2_name": "Melbourne CBD - North",
+      "sa2_code": "206041505",
+      "sa2_name": "Melbourne CBD - West",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -12459,13 +12088,6 @@
       "boundary_distance_km": null
     },
     "independent-other-optical-provision-49127": {
-      "sa2_code": "209041220",
-      "sa2_name": "Mill Park - North",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-2999573319": {
       "sa2_code": "209041220",
       "sa2_name": "Mill Park - North",
       "match_confidence": "High",
@@ -12811,13 +12433,6 @@
     "independent-other-optical-provision-186553": {
       "sa2_code": "208031185",
       "sa2_name": "Carrum - Patterson Lakes",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-provision-17252": {
-      "sa2_code": "213051580",
-      "sa2_name": "Point Cook - North East",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -13739,20 +13354,6 @@
       "match_method": "Point in SA2",
       "boundary_distance_km": null
     },
-    "independent-other-optical-osm-au-node-11397913897": {
-      "sa2_code": "505021089",
-      "sa2_name": "Karrinyup - Gwelup - Carine",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-6976079758": {
-      "sa2_code": "509011225",
-      "sa2_name": "Albany",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
     "independent-other-optical-osm-au-node-12841444736": {
       "sa2_code": "503021042",
       "sa2_name": "Subiaco - Shenton Park",
@@ -13805,13 +13406,6 @@
     "independent-other-optical-osm-au-node-11397913900": {
       "sa2_code": "505021089",
       "sa2_name": "Karrinyup - Gwelup - Carine",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-osm-au-node-6934750148": {
-      "sa2_code": "511041285",
-      "sa2_name": "Geraldton",
       "match_confidence": "High",
       "match_method": "Point in SA2",
       "boundary_distance_km": null
@@ -14020,13 +13614,6 @@
       "boundary_distance_km": null
     },
     "independent-other-optical-provision-292345": {
-      "sa2_code": "501011293",
-      "sa2_name": "Busselton - East",
-      "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
-    },
-    "independent-other-optical-provision-326220": {
       "sa2_code": "501011293",
       "sa2_name": "Busselton - East",
       "match_confidence": "High",

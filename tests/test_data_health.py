@@ -27,6 +27,10 @@ def named_source_count() -> int:
         for remap in csv.DictReader(handle):
             if any(remap["source_store_id"].startswith(f"{item['slug']}-") and item["is_named_network"] for item in REGISTRY):
                 total -= 1
+    with (DATA / "store_publication_exclusions.csv").open(newline="", encoding="utf-8") as handle:
+        for exclusion in csv.DictReader(handle):
+            if any(exclusion["store_id"].startswith(f"{item['slug']}-") and item["is_named_network"] for item in REGISTRY):
+                total -= 1
     return total
 
 
@@ -35,6 +39,7 @@ class DataHealthTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.health = json.loads((DATA / "data_health.json").read_text(encoding="utf-8"))
         cls.places = json.loads((DATA / "retail_places.json").read_text(encoding="utf-8"))
+        cls.glossary = json.loads((DATA / "glossary.json").read_text(encoding="utf-8"))
         with (DATA / "optical_stores.csv").open(newline="", encoding="utf-8") as handle:
             cls.stores = list(csv.DictReader(handle))
         with (DATA / "store_certification.csv").open(newline="", encoding="utf-8") as handle:
@@ -49,10 +54,14 @@ class DataHealthTests(unittest.TestCase):
                 "location_setting_coverage",
                 "place_mapping_coverage",
                 "review_reconciliation",
+                "store_identity_integrity",
             },
         )
         self.assertEqual(self.health["baselines"], {"stores": 1491, "places": 394})
         self.assertIn("best-available public store data", self.health["coverage_statement"])
+        self.assertEqual(self.health["dimensions"]["store_identity_integrity"], 100.0)
+        self.assertEqual(self.health["blocking_counts"]["pending_high_priority_identity_reviews"], 0)
+        self.assertEqual(self.health["unresolved_store_identity_reviews"], [])
 
     def test_every_observed_store_has_certification(self) -> None:
         store_ids = {row["store_id"] for row in self.stores}
@@ -130,6 +139,31 @@ class DataHealthTests(unittest.TestCase):
         layers = self.health["intelligence_layer_register"]
         self.assertEqual(len({row["layer_id"] for row in layers}), len(layers))
         self.assertTrue({"demographics", "co_tenancy", "development", "visitation", "tourism", "transport", "positioning", "performance"}.issubset({row["layer_id"] for row in layers}))
+
+    def test_bailey_high_street_research_is_reported_separately(self) -> None:
+        research = self.health["high_street_research"]
+        self.assertEqual(
+            set(research["dimensions"]),
+            {"bailey_corridor_baseline_coverage", "bailey_corridor_retail_mix_coverage"},
+        )
+        bailey_corridor_ids = {
+            row["place_id"] for row in self.certification
+            if row["retailer"] == "Bailey Nelson"
+            and row["location_setting"] == "High Street"
+            and row["place_id"]
+        }
+        self.assertEqual(len(bailey_corridor_ids), 32)
+        self.assertEqual(research["counts"]["bailey_corridors"], len(bailey_corridor_ids))
+        self.assertEqual(research["counts"]["baseline_researched"], len(bailey_corridor_ids))
+        self.assertLessEqual(research["counts"]["key_tenant_profiled"], len(bailey_corridor_ids))
+
+    def test_public_glossary_is_complete_and_unambiguous(self) -> None:
+        terms = self.glossary["terms"]
+        labels = [row["term"] for row in terms]
+        self.assertEqual(len(labels), len(set(labels)))
+        self.assertGreaterEqual(len(labels), 20)
+        self.assertTrue({"Anchor tenant", "Co-tenancy", "Canonical place", "Lookalike score", "Screening completeness"}.issubset(labels))
+        self.assertTrue(all(row["definition"].strip() for row in terms))
 
 
 if __name__ == "__main__":

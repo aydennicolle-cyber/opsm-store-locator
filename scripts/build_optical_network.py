@@ -25,6 +25,8 @@ CENTRE_MEMBERSHIP_PATH = DATA_DIR / "centre_store_memberships.csv"
 RETAILER_REGISTRY_PATH = DATA_DIR / "retailer_registry.json"
 IDENTITY_REMAPS_PATH = DATA_DIR / "store_identity_remaps.csv"
 PROVISION_REMAPS_PATH = DATA_DIR / "provision_identity_remaps.csv"
+COORDINATE_OVERRIDE_PATH = DATA_DIR / "store_coordinate_overrides.csv"
+PUBLICATION_EXCLUSIONS_PATH = DATA_DIR / "store_publication_exclusions.csv"
 VALID_STATES = {"ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"}
 VALID_NZ_REGIONS = {
     "Auckland",
@@ -140,6 +142,16 @@ OTHER_TERMS = (
     "hospital precinct",
     "university campus",
     "business park",
+    "medical centre",
+    "medical center",
+    "medical & fitness centre",
+    "medical and fitness centre",
+    "professional centre",
+    "professional center",
+    "health centre",
+    "health center",
+    "health hub",
+    "allied health services",
 )
 STREET_TERMS = (
     " street",
@@ -160,6 +172,10 @@ STREET_TERMS = (
     " walk",
 )
 AMBIGUOUS_NAME_TERMS = {" towers", " junction", " indooroopilly"}
+OPTICAL_BUSINESS_TERMS = {
+    "optical", "optometry", "optometrist", "optometrists", "eyecare", "eye",
+    "vision", "hearing", "health", "clinic", "spectacles", "eyewear",
+}
 
 
 def centre_evidence_segments(store: dict) -> list[str]:
@@ -209,6 +225,66 @@ def identity_remaps() -> dict[str, str]:
                 raise ValueError(f"Invalid store identity remap: {row}")
             remaps[source] = canonical
     return remaps
+
+
+def publication_exclusions() -> dict[str, dict]:
+    exclusions = {}
+    for row in read_csv(PUBLICATION_EXCLUSIONS_PATH):
+        store_id = tidy(row.get("store_id", ""))
+        reason = tidy(row.get("reason", ""))
+        evidence_url = tidy(row.get("evidence_url", ""))
+        verified_at = tidy(row.get("verified_at", ""))
+        if not store_id or store_id in exclusions or not reason:
+            raise ValueError(f"Invalid or duplicate store publication exclusion: {row}")
+        if not evidence_url.startswith(("https://", "http://")):
+            raise ValueError(f"Store publication exclusion lacks public evidence: {store_id}")
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", verified_at):
+            raise ValueError(f"Store publication exclusion has invalid verification date: {store_id}")
+        exclusions[store_id] = row
+    return exclusions
+
+
+def load_coordinate_overrides() -> dict[str, dict]:
+    overrides = {}
+    for row in read_csv(COORDINATE_OVERRIDE_PATH):
+        store_id = tidy(row.get("store_id", ""))
+        if not store_id or store_id in overrides:
+            raise ValueError(f"Invalid or duplicate coordinate override: {row}")
+        latitude = float(row.get("latitude", ""))
+        longitude = float(row.get("longitude", ""))
+        evidence_url = tidy(row.get("evidence_url", ""))
+        verified_at = tidy(row.get("verified_at", ""))
+        if not (-48.0 <= latitude <= -9.0 and 112.0 <= longitude <= 179.5):
+            raise ValueError(f"Coordinate override outside AU/NZ bounds: {store_id}")
+        if not evidence_url.startswith(("https://", "http://")):
+            raise ValueError(f"Coordinate override lacks public evidence URL: {store_id}")
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", verified_at):
+            raise ValueError(f"Coordinate override has invalid verification date: {store_id}")
+        overrides[store_id] = {
+            "latitude": latitude,
+            "longitude": longitude,
+            "evidence_url": evidence_url,
+            "coordinate_source": tidy(row.get("coordinate_source", "")),
+            "verified_at": verified_at,
+            "reason": tidy(row.get("reason", "")),
+        }
+    return overrides
+
+
+def apply_coordinate_overrides(stores: list[dict]) -> int:
+    overrides = load_coordinate_overrides()
+    matched = set()
+    for store in stores:
+        override = overrides.get(store["store_id"])
+        if not override:
+            continue
+        store["latitude"] = override["latitude"]
+        store["longitude"] = override["longitude"]
+        matched.add(store["store_id"])
+    unmatched = set(overrides) - matched
+    if unmatched:
+        raise ValueError(f"Coordinate overrides refer to missing stores: {sorted(unmatched)[:10]}")
+    return len(matched)
 
 
 def read_freshness() -> dict[str, str]:
@@ -417,7 +493,13 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
         for field in ("website_url", "instagram_url", "facebook_url"):
             if not by_id[canonical].get(field) and by_id[source].get(field):
                 by_id[canonical][field] = by_id[source][field]
-    return [store for store in stores if store["store_id"] not in remaps]
+    resolved = [store for store in stores if store["store_id"] not in remaps]
+    exclusions = publication_exclusions()
+    resolved_ids = {store["store_id"] for store in resolved}
+    missing_exclusions = sorted(set(exclusions) - resolved_ids)
+    if missing_exclusions:
+        raise ValueError(f"Store publication exclusion refers to missing store: {missing_exclusions[:5]}")
+    return [store for store in resolved if store["store_id"] not in exclusions]
 
 
 def cleaned_store_name(store: dict) -> str:
@@ -436,6 +518,16 @@ def cleaned_store_name(store: dict) -> str:
         parts = name.split(" - ")
         name = max(parts, key=lambda part: sum(term in f" {part.lower()}" for term in CENTRE_NAME_TERMS))
     return tidy(name)
+
+
+def optical_business_name(value: str) -> bool:
+    return bool(set(re.findall(r"[a-z0-9]+", value.lower())) & OPTICAL_BUSINESS_TERMS)
+
+
+def colocation_venue_key(value: str) -> str:
+    """Normalize floor/shop variants while retaining the actual venue identity."""
+    value = re.sub(r"\b(?:level|lvl?|floor|shop|unit)\s*[a-z0-9.-]+\b", " ", value.lower())
+    return re.sub(r"[^a-z0-9]+", "", value)
 
 
 def clean_venue(value: str) -> str:
@@ -474,8 +566,9 @@ def clean_venue(value: str) -> str:
 def venue_from_evidence(store: dict, text: str) -> str:
     name = cleaned_store_name(store)
     lowered_name = f" {name.lower()}"
-    if any(term in lowered_name for term in CENTRE_NAME_TERMS) or any(
-        phrase in lowered_name for phrase in CENTRE_PHRASES
+    if not optical_business_name(name) and (
+        any(term in lowered_name for term in CENTRE_NAME_TERMS)
+        or any(phrase in lowered_name for phrase in CENTRE_PHRASES)
     ):
         return clean_venue(name)
     for segment in store["full_address"].split(","):
@@ -505,7 +598,9 @@ def venue_identifier(state: str, venue_name: str) -> str:
 
 def classify(store: dict) -> dict:
     text = f" {store['name']} {store['full_address']} ".lower()
-    if any(term in text for term in OTHER_TERMS):
+    if any(term in text for term in OTHER_TERMS) and not any(
+        phrase in text for phrase in CENTRE_PHRASES
+    ):
         return {
             "venue_name": "",
             "venue_id": "",
@@ -515,6 +610,7 @@ def classify(store: dict) -> dict:
         }
     evidence_segments = centre_evidence_segments(store)
     name_text = f" {store['name'].lower()} "
+    name_is_business = optical_business_name(cleaned_store_name(store))
     additional_network = store["retailer"] in {
         "George & Matilda", "Eyecare Plus", "Optical Superstore", "1001 Optometry",
         "EyeQ Optometrists", "Laubman & Pank",
@@ -525,18 +621,27 @@ def classify(store: dict) -> dict:
     if additional_network:
         explicit = [
             phrase for phrase in CENTRE_PHRASES
-            if phrase in name_text or any(phrase in segment for segment in evidence_segments)
+            if (not name_is_business and phrase in name_text)
+            or any(phrase in segment for segment in evidence_segments)
         ]
         named = [
             term.strip() for term in CENTRE_NAME_TERMS
             if any(term in f" {segment}" for segment in evidence_segments)
-            or (term not in AMBIGUOUS_NAME_TERMS and term in name_text)
+            or (not name_is_business and term not in AMBIGUOUS_NAME_TERMS and term in name_text)
         ]
     else:
         # Preserve the established classifier for the previously audited core
         # networks; the stricter segment logic applies to newly added sources.
-        explicit = [phrase for phrase in CENTRE_PHRASES if phrase in text]
-        named = [term.strip() for term in CENTRE_NAME_TERMS if term in text]
+        explicit = [
+            phrase for phrase in CENTRE_PHRASES
+            if (not name_is_business and phrase in name_text)
+            or any(phrase in segment for segment in evidence_segments)
+        ]
+        named = [
+            term.strip() for term in CENTRE_NAME_TERMS
+            if any(term in f" {segment}" for segment in evidence_segments)
+            or (not name_is_business and term in name_text)
+        ]
     shop_format = bool(re.search(r"\b(shop|level)\s*[a-z0-9]", text))
     if explicit or named or (shop_format and not additional_network):
         venue_name = venue_from_evidence(store, text)
@@ -650,6 +755,49 @@ def validate(stores: list[dict]) -> None:
     if len(ids) != len(set(ids)):
         duplicates = [item for item, count in Counter(ids).items() if count > 1]
         raise ValueError(f"Duplicate store IDs: {duplicates[:10]}")
+    physical_addresses: dict[tuple[str, str], str] = {}
+    duplicate_addresses = []
+    for store in stores:
+        normalized_address = re.sub(r"[^a-z0-9]+", "", store.get("full_address", "").lower())
+        if len(normalized_address) < 14 or normalized_address in {"australia", "newzealand"}:
+            continue
+        key = (store["retailer"], normalized_address)
+        previous = physical_addresses.get(key)
+        if previous:
+            duplicate_addresses.append((previous, store["store_id"]))
+        else:
+            physical_addresses[key] = store["store_id"]
+    if duplicate_addresses:
+        raise ValueError(f"Duplicate same-retailer store addresses: {duplicate_addresses[:10]}")
+    coordinate_groups: dict[tuple[str, float, float], list[dict]] = defaultdict(list)
+    for store in stores:
+        coordinate_groups[
+            (store["retailer"], round(store["latitude"], 6), round(store["longitude"], 6))
+        ].append(store)
+    conflicting_coordinates = []
+    for colocated in coordinate_groups.values():
+        if len(colocated) < 2:
+            continue
+        normalized_addresses = {
+            re.sub(r"[^a-z0-9]+", "", store.get("full_address", "").lower())
+            for store in colocated
+            if len(re.sub(r"[^a-z0-9]+", "", store.get("full_address", "").lower())) >= 14
+        }
+        accepted_venues = {store.get("venue_id", "") for store in colocated if store.get("venue_id", "")}
+        venue_keys = {
+            colocation_venue_key(store.get("venue_name", ""))
+            for store in colocated
+            if colocation_venue_key(store.get("venue_name", ""))
+        }
+        # Multiple departments or floors at one accepted tenancy can legitimately
+        # share a marker. Distinct meaningful addresses for the same retailer cannot.
+        if len(normalized_addresses) > 1 and len(accepted_venues) != 1 and len(venue_keys) != 1:
+            conflicting_coordinates.append([store["store_id"] for store in colocated])
+    if conflicting_coordinates:
+        raise ValueError(
+            f"Same-retailer stores with distinct addresses share exact coordinates: "
+            f"{conflicting_coordinates[:10]}"
+        )
     counts = Counter(store["retailer"] for store in stores)
     registry = retailer_registry()
     required_retailers = {item["name"] for item in registry}
@@ -670,6 +818,14 @@ def validate(stores: list[dict]) -> None:
         if not matched:
             raise ValueError(f"Cannot resolve remapped source retailer: {source_store_id}")
         source_counts[matched["name"]] -= 1
+    for excluded_store_id in publication_exclusions():
+        matched = next(
+            (item for item in registry if excluded_store_id.startswith(f"{item['slug']}-")),
+            None,
+        )
+        if not matched:
+            raise ValueError(f"Cannot resolve excluded source retailer: {excluded_store_id}")
+        source_counts[matched["name"]] -= 1
     if counts != source_counts:
         raise ValueError(f"Combined counts do not reconcile to source files: combined={dict(counts)} source={dict(source_counts)}")
     history_paths = sorted((DATA_DIR / "history").glob("*.json"))
@@ -686,6 +842,10 @@ def validate(stores: list[dict]) -> None:
             )
             for source_store_id in identity_remaps():
                 previous = prior_by_id.get(source_store_id)
+                if previous:
+                    prior_scopes[(previous["retailer"], previous.get("country", "Australia"))] -= 1
+            for excluded_store_id in publication_exclusions():
+                previous = prior_by_id.get(excluded_store_id)
                 if previous:
                     prior_scopes[(previous["retailer"], previous.get("country", "Australia"))] -= 1
             baseline_label = "latest generated network"
@@ -758,6 +918,7 @@ def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     freshness = read_freshness()
     stores = load_stores(freshness)
+    coordinate_override_count = apply_coordinate_overrides(stores)
     centre_memberships = load_centre_memberships()
     overrides = load_overrides()
     area_overrides = load_area_overrides()
@@ -813,6 +974,8 @@ def main() -> None:
         "source_freshness": freshness,
         "retailer_counts": summary["by_retailer"],
         "classification_types": ["Shopping Centre", "Main Street / Street-front", "Other", "Unclassified"],
+        "coordinate_override_count": coordinate_override_count,
+        "publication_exclusion_count": len(publication_exclusions()),
     }
     OUTPUT_GEOJSON.write_text(
         json.dumps({"type": "FeatureCollection", "metadata": metadata, "features": features}, indent=2) + "\n",
@@ -837,6 +1000,7 @@ def main() -> None:
     print(f"Location types: {summary['by_location_type']}")
     print(f"Review queue: {len(review)} stores")
     print(f"Multi-brand reviewed venues: {len(summary['multi_brand_venues'])}")
+    print(f"Reviewed coordinate corrections: {coordinate_override_count}")
 
 
 if __name__ == "__main__":

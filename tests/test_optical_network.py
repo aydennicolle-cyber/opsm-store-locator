@@ -6,6 +6,7 @@ from __future__ import annotations
 import csv
 import json
 import math
+import re
 import unittest
 from pathlib import Path
 
@@ -117,6 +118,11 @@ class OpticalNetworkTests(unittest.TestCase):
             source = remap["source_store_id"]
             retailer = next(item for item in registry if source.startswith(f"{item['slug']}-"))
             expected[retailer["name"]] -= 1
+        with (ROOT / "data" / "store_publication_exclusions.csv").open(newline="", encoding="utf-8") as handle:
+            exclusions = list(csv.DictReader(handle))
+        for exclusion in exclusions:
+            retailer = next(item for item in registry if exclusion["store_id"].startswith(f"{item['slug']}-"))
+            expected[retailer["name"]] -= 1
         self.assertEqual(counts, expected)
         countries = {country: sum(row["country"] == country for row in self.rows) for country in ("Australia", "New Zealand")}
         self.assertEqual(sum(countries.values()), len(self.rows))
@@ -125,6 +131,58 @@ class OpticalNetworkTests(unittest.TestCase):
         ]
         self.assertEqual(len(bailey_nz), 14)
         self.assertTrue(all(row["status"] == "Active" for row in bailey_nz))
+
+    def test_same_retailer_does_not_publish_exact_duplicate_addresses(self) -> None:
+        seen = {}
+        for row in self.rows:
+            normalized = "".join(character for character in row["full_address"].lower() if character.isalnum())
+            if len(normalized) < 14 or normalized in {"australia", "newzealand"}:
+                continue
+            key = (row["retailer"], normalized)
+            self.assertNotIn(key, seen, f"{seen.get(key)} duplicates {row['store_id']}")
+            seen[key] = row["store_id"]
+
+    def test_same_retailer_distinct_addresses_do_not_share_exact_coordinates(self) -> None:
+        groups = {}
+        for row in self.rows:
+            key = (row["retailer"], round(float(row["latitude"]), 6), round(float(row["longitude"]), 6))
+            groups.setdefault(key, []).append(row)
+        for colocated in groups.values():
+            normalized_addresses = {
+                "".join(character for character in row["full_address"].lower() if character.isalnum())
+                for row in colocated
+                if len("".join(character for character in row["full_address"].lower() if character.isalnum())) >= 14
+            }
+            accepted_venues = {row["venue_id"] for row in colocated if row["venue_id"]}
+            venue_keys = {
+                re.sub(
+                    r"[^a-z0-9]+",
+                    "",
+                    re.sub(r"\b(?:level|lvl?|floor|shop|unit)\s*[a-z0-9.-]+\b", " ", row["venue_name"].lower()),
+                )
+                for row in colocated
+                if row["venue_name"]
+            }
+            self.assertLessEqual(
+                len(normalized_addresses) if len(accepted_venues) != 1 and len(venue_keys) != 1 else 1,
+                1,
+                f"Distinct stores share one exact marker: {[row['store_id'] for row in colocated]}",
+            )
+
+    def test_known_source_coordinate_collisions_are_separated(self) -> None:
+        by_id = {row["store_id"]: row for row in self.rows}
+        for first, second in (
+            ("opsm-2297", "opsm-2296"),
+            ("opsm-1304", "opsm-1177"),
+            ("opsm-2943", "opsm-1384"),
+            ("opsm-1057", "opsm-2261"),
+            ("opsm-1589", "opsm-1472"),
+            ("opsm-1472", "opsm-1091"),
+        ):
+            self.assertNotEqual(
+                (by_id[first]["latitude"], by_id[first]["longitude"]),
+                (by_id[second]["latitude"], by_id[second]["longitude"]),
+            )
 
     def test_retailer_registry_and_identity_remaps(self) -> None:
         registry = json.loads((ROOT / "data" / "retailer_registry.json").read_text(encoding="utf-8"))["retailers"]
@@ -151,6 +209,32 @@ class OpticalNetworkTests(unittest.TestCase):
         self.assertTrue(remaps)
         self.assertTrue(all(row["source_store_id"] not in ids for row in remaps))
         self.assertTrue(all(row["canonical_store_id"] in ids for row in remaps))
+
+        with (ROOT / "data" / "store_publication_exclusions.csv").open(newline="", encoding="utf-8") as handle:
+            exclusions = list(csv.DictReader(handle))
+        self.assertTrue(exclusions)
+        self.assertTrue(all(row["store_id"] not in ids for row in exclusions))
+        self.assertTrue(all(row["reason"] and row["evidence_url"].startswith("https://") for row in exclusions))
+
+    def test_same_brand_multiple_tenancies_are_demonstrably_distinct(self) -> None:
+        """Do not mistake verified multi-store centres for duplicate records."""
+        by_id = {row["store_id"]: row for row in self.rows}
+        for first, second in (
+            ("specsavers-3417", "specsavers-3559"),
+            ("specsavers-3625", "specsavers-3385"),
+            ("specsavers-3521", "specsavers-3209"),
+            ("specsavers-3218", "specsavers-3272"),
+            ("specsavers-3286", "specsavers-3507"),
+        ):
+            self.assertNotEqual(by_id[first]["phone"], by_id[second]["phone"])
+            self.assertNotEqual(by_id[first]["official_url"], by_id[second]["official_url"])
+            self.assertNotEqual(by_id[first]["full_address"], by_id[second]["full_address"])
+
+        with (ROOT / "data" / "store_identity_decisions.csv").open(newline="", encoding="utf-8") as handle:
+            decisions = list(csv.DictReader(handle))
+        self.assertTrue(decisions)
+        self.assertTrue(all(row["outcome"] == "Distinct" for row in decisions))
+        self.assertTrue(all(row["evidence_url"].startswith("https://") for row in decisions))
 
     def test_additional_network_logos_are_local_assets(self) -> None:
         registry = json.loads((ROOT / "data" / "retailer_registry.json").read_text(encoding="utf-8"))["retailers"]

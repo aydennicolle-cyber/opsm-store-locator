@@ -2,6 +2,8 @@
 
 Public-source network, centre, demographic and site-selection intelligence for Australian and New Zealand optical retail.
 
+Plain-English definitions used in the application are maintained in the [leasing intelligence glossary](docs/GLOSSARY.md).
+
 Live map:
 
 https://aydennicolle-cyber.github.io/opsm-store-locator/
@@ -15,7 +17,7 @@ Historical baseline captured in July 2026 (not a current completeness target):
 - Independent / Other optical: 425 community-mapped locations
 - Combined: 1,491 locations (1,269 Australia; 222 New Zealand)
 
-The local working draft now separates store usability, source freshness, location setting and canonical place mapping. As of 3 September 2026 it contains 2,210 unique stores, including 1,552 usable named-network stores, plus 736 canonical centres/plazas and 834 high-street corridors. All 1,552 named-network stores have an accepted location setting and place mapping, with no promoted mapping reviews outstanding. The 6,192 unpromoted map records remain background discovery leads rather than consultant review work.
+The local working draft now separates store usability, source freshness, location setting and canonical place mapping. As of 3 September 2026 it contains 2,151 unique stores, including 1,550 usable named-network stores, plus 691 canonical centres/plazas and 812 high-street corridors. All 1,550 named-network stores have an accepted location setting and place mapping, with no promoted mapping reviews outstanding. The 6,192 unpromoted map records remain background discovery leads rather than consultant review work.
 
 These counts are generated, not hard-coded. `data/data_health.json` reports each health dimension separately and keeps 6,192 unpromoted discovery leads informational. Six core retailer groups are selected by default: OPSM, Specsavers, Bailey Nelson, Oscar Wylee, George & Matilda and Eyecare Plus. Smaller named groups remain optional filters in the same Network view; their markers appear from zoom level 8 to prevent national-map crowding. Independent/Other appears from zoom level 10.
 
@@ -197,6 +199,8 @@ Classification uses official names and addresses. Proximity is never used to ass
 The centre audit may use distance, matching names and verified centre addresses to find review candidates, but it never changes published classifications. Add a centre to `data/shopping_centres.csv` and its source-backed store memberships to `data/centre_store_memberships.csv` only after checking an official centre directory, retailer page or equivalent authoritative source. These reviewed memberships survive future retailer refreshes.
 
 ## Local Preview
+
+Moving development from Windows to an Intel Mac? Follow the [Intel Mac development handover](docs/MAC_HANDOVER.md) before retiring the original checkout.
 
 ```bash
 python3 -m http.server 8000 --bind 127.0.0.1

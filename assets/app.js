@@ -174,6 +174,7 @@
     lookalikes: { metadata: {}, rankings: {}, bailey_benchmarks: [] },
     placeTenants: [],
     placeTenantMetadata: {},
+    glossary: [],
     developmentSignals: [],
     developmentMetadata: {},
     placeIdRemaps: {},
@@ -1915,6 +1916,7 @@
       location_setting_coverage: "Location setting coverage",
       place_mapping_coverage: "Place mapping coverage",
       review_reconciliation: "Promoted review reconciliation",
+      store_identity_integrity: "Duplicate store identity integrity",
       research_coverage: "Property research coverage",
       relationship_freshness: "Property relationship freshness",
       centre_class_coverage: "Centre class coverage",
@@ -1925,6 +1927,8 @@
       bailey_anchor_coverage: "Bailey accepted-anchor coverage",
       bailey_multi_category_coverage: "Bailey accepted multi-category coverage",
       evidence_freshness: "Co-tenancy evidence freshness",
+      bailey_corridor_baseline_coverage: "Bailey corridor baseline coverage",
+      bailey_corridor_retail_mix_coverage: "Bailey corridor retail-mix coverage",
     }[key] || key;
   }
 
@@ -1939,6 +1943,7 @@
     const lowestDimension = Math.min(...Object.values(health.dimensions));
     const propertyHealth = health.property_intelligence || { dimensions: {}, counts: {} };
     const coTenancyHealth = health.co_tenancy || { dimensions: {}, counts: {} };
+    const highStreetHealth = health.high_street_research || { dimensions: {}, counts: {} };
     const independentStores = state.allStores.filter((store) => store.retailer === "Independent / Other optical");
     const independentProfiles = {
       websites: independentStores.filter((store) => store.website_url).length,
@@ -2005,6 +2010,15 @@
           <div><strong>${formatNumber(coTenancyHealth.counts?.bailey_multi_category_profiled || 0)}/${formatNumber(coTenancyHealth.counts?.bailey_centres || 0)}</strong><span>Bailey accepted multi-category profiles</span></div>
         </div>
         <p>${escapeHtml(coTenancyHealth.coverage_statement || "Co-tenancy coverage is reported separately.")}</p>
+      </section>
+      <section class="health-overview property-health">
+        <div class="section-heading"><h2>Bailey high-street research</h2><span>corridor baseline versus broader retail mix</span></div>
+        <div class="health-dimensions">${Object.entries(highStreetHealth.dimensions || {}).map(([key, value]) => `<div><span>${escapeHtml(healthDimensionLabel(key))}</span><strong>${Number(value).toFixed(1)}%</strong><i><b style="width:${Number(value)}%"></b></i></div>`).join("")}</div>
+        <div class="compact-metrics">
+          <div><strong>${formatNumber(highStreetHealth.counts?.baseline_researched || 0)}/${formatNumber(highStreetHealth.counts?.bailey_corridors || 0)}</strong><span>corridor baselines checked</span></div>
+          <div><strong>${formatNumber(highStreetHealth.counts?.key_tenant_profiled || 0)}/${formatNumber(highStreetHealth.counts?.bailey_corridors || 0)}</strong><span>broader retail-mix profiles</span></div>
+        </div>
+        <p>${escapeHtml(highStreetHealth.coverage_statement || "High-street research coverage is reported separately.")}</p>
       </section>
       <section class="health-overview property-health">
         <div class="section-heading"><h2>Intelligence layer roadmap</h2><span>public automation versus known gaps</span></div>
@@ -2446,7 +2460,7 @@
     const storeRows = (records, label) => records.map((record) => `<button type="button" class="competition-store-row" data-store-id="${escapeHtml(record.store_id)}">
       <span>${escapeHtml(record.name)}</span><b>${escapeHtml(label)}${Number.isFinite(Number(record.distance_km)) ? ` · ${escapeHtml(Intel.formatDistance(Number(record.distance_km)))}` : ""}</b>
     </button>`).join("");
-    return `<div class="competitor-context">${brands.map(({ brand, values }) => `<div><strong>${brandMarkHtml(brand, "compact")}${escapeHtml(brand)}</strong>
+    return `<div class="competitor-context">${brands.map(({ brand, values }) => `<div><strong>${brandMarkHtml(brand, "compact")}<span class="competitor-brand-name">${escapeHtml(brand)}</span></strong>
         <span>${values.in_centre.length ? `${values.in_centre.length} IN ${placeLabel}` : `Not mapped in ${placeLabelLower}`}</span>
         ${values.nearby_unverified.length ? `<small>${values.nearby_unverified.length} NEARBY ≤250M — NOT VERIFIED IN ${placeLabel}</small>` : ""}
         ${values.catchment_2km.length ? `<small>${values.catchment_2km.length} elsewhere within 2 km straight-line catchment</small>` : ""}
@@ -2503,13 +2517,36 @@
     const tenants = tenantsForPlace(centre.place_id);
     const keyTenants = tenants.filter((row) => row.category !== "Optical");
     if (!keyTenants.length) {
-      return `<p class="empty-note">Key co-tenancy research has not yet been completed for this place. This does not mean those tenant categories are absent.</p>`;
+      const wording = centre.location_setting === "High Street"
+        ? "A broader street-retail mix has not yet been curated for this corridor. This does not mean those tenant categories are absent."
+        : "Key co-tenancy research has not yet been completed for this place. This does not mean those tenant categories are absent.";
+      return `<p class="empty-note">${wording}</p>`;
     }
     const grouped = Object.groupBy
       ? Object.groupBy(keyTenants, (row) => row.category)
       : keyTenants.reduce((result, row) => ((result[row.category] ||= []).push(row), result), {});
     return `<div class="co-tenancy-profile">${Object.entries(grouped).sort(([a], [b]) => a.localeCompare(b)).map(([category, rows]) => `<div><strong>${escapeHtml(category)}</strong><span>${rows.map((row) => `<a href="${escapeHtml(row.source_url)}" target="_blank" rel="noopener" title="${escapeHtml(row.source_date ? `Source dated ${formatDate(row.source_date)}` : `Checked ${formatDate(row.verified_at)}`)}">${escapeHtml(row.tenant_name)}${row.anchor_flag ? " · anchor" : ""}${row.status === "Uncertain" ? " · uncertain" : ""}</a>`).join("")}</span></div>`).join("")}</div>
       <p class="empty-note">Curated key co-tenants only—not a complete centre directory. Evidence checked ${escapeHtml(formatDate(state.placeTenantMetadata.verified_at))}; stale or uncertain records are labelled individually.</p>`;
+  }
+
+  function highStreetProfileHtml(centre) {
+    if (centre.location_setting !== "High Street") return "";
+    const tenants = tenantsForPlace(centre.place_id);
+    const exactOptical = tenants.filter((row) => row.category === "Optical");
+    const opticalCompetitors = exactOptical.filter((row) => row.retailer !== "Bailey Nelson");
+    const keyTenants = tenants.filter((row) => row.category !== "Optical");
+    const researched = (state.placeTenantMetadata.researched_bailey_corridor_place_ids || []).includes(centre.place_id);
+    return `<section class="detail-section high-street-profile">
+      <div class="section-title-row"><h3>High-street research profile</h3><span class="source-pill">${researched ? "Baseline checked" : "Not checked"}</span></div>
+      <div class="data-grid">
+        <div class="data-point"><span>Comparison boundary</span><strong>800 m indicative corridor</strong></div>
+        <div class="data-point"><span>Accepted optical tenants</span><strong>${formatNumber(exactOptical.length)}</strong></div>
+        <div class="data-point"><span>Optical competitors</span><strong>${formatNumber(opticalCompetitors.length)}</strong></div>
+        <div class="data-point"><span>Curated key co-tenants</span><strong>${formatNumber(keyTenants.length)}</strong></div>
+      </div>
+      <p>${researched ? "Bailey Nelson’s published address and the accepted optical memberships have been reconciled to this canonical street-and-locality corridor." : "This corridor still needs its Bailey Nelson address and accepted optical memberships reconciled."}</p>
+      <p class="empty-note">Exact corridor membership is address-based; proximity alone is never used. High streets usually lack a single authoritative directory, so broader fashion, hospitality, visitation and footfall coverage remains explicit when unavailable.</p>
+    </section>`;
   }
 
   function developmentSignalsHtml(centre) {
@@ -2548,6 +2585,9 @@
       property_groups: propertyGroupNames(centre).join(" | "), leasing_arrangement: centre.leasing_arrangement || "Unknown",
       portfolio_overlap: overlapLabel(centre.portfolio_overlap_status, centre.location_setting === "High Street" ? "corridor" : "centre"),
       optical_store_count: centre.optical_store_count || 0, retailers: (centre.retailers || []).join(" | "),
+      high_street_baseline_status: centre.location_setting === "High Street" && (state.placeTenantMetadata.researched_bailey_corridor_place_ids || []).includes(centre.place_id) ? "Baseline checked" : "",
+      exact_place_optical_tenant_count: tenantsForPlace(centre.place_id).filter((row) => row.category === "Optical").length,
+      key_cotenancy_count: tenantsForPlace(centre.place_id).filter((row) => row.category !== "Optical").length,
       place_evidence_date: centre.source_date || "", property_evidence_latest: verifiedDates.at(-1) || "", official_url: centre.official_url || centre.source_url || "",
     };
   }
@@ -2638,6 +2678,7 @@
       <section class="detail-section"><h3>Optical competition context</h3>${competitorContextHtml(centre)}
         <p class="empty-note">The map is focused on the competition shown above. IN ${isCorridor ? "CORRIDOR" : "CENTRE"} requires the same accepted canonical place ID; distance alone never establishes membership.</p>
       </section>
+      ${highStreetProfileHtml(centre)}
       <section class="detail-section"><h3>Key co-tenancy profile</h3>${keyCoTenancyHtml(centre)}</section>
       ${developmentSignalsHtml(centre)}
       <section class="detail-section"><h3>Ownership, management and leasing</h3>
@@ -3572,6 +3613,7 @@
       if (match) openPropertyGroupDetail(decodeURIComponent(match[1]));
     });
     document.getElementById("resetButton").addEventListener("click", resetAll);
+    document.getElementById("glossaryButton").addEventListener("click", openGlossaryDetail);
     document.getElementById("layersButton").addEventListener("click", () => {
       elements.layerPanel.hidden = !elements.layerPanel.hidden;
     });
@@ -3629,6 +3671,19 @@
     window.addEventListener("resize", () => map.invalidateSize());
   }
 
+  function openGlossaryDetail() {
+    elements.detailContent.innerHTML = `
+      <header class="detail-header glossary-header" style="--brand-color:#168095">
+        <span class="retailer-tag"><i data-lucide="book-open"></i>Plain-English reference</span>
+        <h2>Leasing intelligence glossary</h2>
+        <address>Definitions used throughout the public tool.</address>
+      </header>
+      <section class="detail-section glossary-intro"><p>These definitions explain how the tool uses each term. They are working leasing-intelligence definitions, not legal or accounting advice.</p></section>
+      <section class="detail-section"><dl class="glossary-list">${state.glossary.map((item) => `<div><dt>${escapeHtml(item.term)}</dt><dd>${escapeHtml(item.definition)}</dd></div>`).join("")}</dl></section>`;
+    openDetailPanel();
+    refreshIcons();
+  }
+
   async function loadJson(path) {
     const response = await fetch(path, { cache: "no-store" });
     if (!response.ok) throw new Error(`${path} returned ${response.status}`);
@@ -3637,7 +3692,7 @@
 
   async function initialise() {
     try {
-      const [stores, markets, places, links, events, profiles, dataHealth, lookalikes, propertyIntelligence, retailerRegistry, placeTenants, developmentSignals] = await Promise.all([
+      const [stores, markets, places, links, events, profiles, dataHealth, lookalikes, propertyIntelligence, retailerRegistry, placeTenants, developmentSignals, glossary] = await Promise.all([
         loadJson("data/optical_stores.geojson"),
         loadJson("data/sa2_market.geojson"),
         loadJson("data/retail_places.json"),
@@ -3650,6 +3705,7 @@
         loadJson("data/retailer_registry.json"),
         loadJson("data/place_tenants.json"),
         loadJson("data/growth_development_signals.json"),
+        loadJson("data/glossary.json"),
       ]);
       configureRetailers(retailerRegistry);
       state.metadata = stores.metadata || {};
@@ -3669,6 +3725,7 @@
       state.placeTenantMetadata = placeTenants.metadata || {};
       state.developmentSignals = developmentSignals.signals || [];
       state.developmentMetadata = developmentSignals.metadata || {};
+      state.glossary = glossary.terms || [];
       loadLocalPlaces();
       state.storeLinks = links.links;
       state.events = events;

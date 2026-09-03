@@ -8,9 +8,9 @@ Use the tool as a public-data decision screen: find a potential market, understa
 
 As of 3 September 2026 the working census contains:
 
-- 2,210 observed optical store records across Australia and New Zealand.
-- 1,570 canonical retail places: 736 shopping centres and 834 high-street corridors.
-- Complete location-setting and place mapping for 1,552 named-network stores.
+- 2,151 observed optical store records across Australia and New Zealand.
+- 1,503 canonical retail places: 691 shopping centres and 812 high-street corridors.
+- Complete location-setting and place mapping for 1,550 named-network stores.
 - 6,192 unpromoted map leads retained as background discovery evidence rather than manual-review failures.
 
 Counts are generated from reconciled sources. They are not hard-coded targets. Independent coverage remains less complete than named-network coverage.
@@ -73,11 +73,20 @@ Australia uses ABS SA2 data: 2025 estimated resident population plus selected 20
 **Key co-tenancy profile**  
 A curated list of important anchors and Bailey-relevant tenant categories. The fixed top-ten opportunity pilot remains available, and every currently mapped Bailey shopping centre has now received an initial official-source research pass. It is not a complete centre directory.
 
+**Anchor tenant**
+
+A major retailer that helps draw regular visits to a shopping centre, such as a supermarket or department store. It describes the centre environment; it does not prove that an optical store will succeed.
+
+**Co-tenancy**
+
+The mix of other retailers trading in the same centre or corridor. It helps describe the shopping mission and likely customer environment. The full glossary is available from the book icon in the app header.
+
 ## Known limitations to state openly
 
 - New Zealand stores and places do not yet have directly comparable official demographic rankings in this public build.
 - The broader centre census is materially ahead of property ownership/class research; unknown property facts remain visible.
-- All 45 currently mapped Bailey shopping centres have an initial co-tenancy research pass. As of 3 September 2026, 37 have an accepted active anchor profile and 36 have accepted tenants across at least three tracked categories; older or ambiguous evidence remains visibly qualified.
+- All 50 currently mapped Bailey shopping centres have an initial co-tenancy research pass. As of 3 September 2026, 47 have an accepted active anchor profile and 38 have accepted tenants across at least three tracked categories; older or ambiguous evidence remains visibly qualified.
+- All 32 Bailey high-street corridors have a checked address-and-optical-membership baseline. Broader non-optical retail-mix profiles are not yet complete and are reported separately rather than implied.
 - Independent optical coverage and independent website/social-link enrichment are still incomplete.
 - Catchments are indicative straight-line and area-apportioned estimates rather than drive-time trade areas or customer-origin analysis.
 - Public centre directories change. Every tenant and relationship should be rechecked before commercial decisions.

@@ -80,7 +80,8 @@ button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px s
 .portfolio-overlap small { color: var(--muted); }
 .competitor-context { display: grid; gap: 7px; }
 .competitor-context > div { display: grid; grid-template-columns: minmax(130px, 1fr) 1fr; gap: 4px 10px; padding: 8px 0; border-bottom: 1px solid var(--line); }
-.competitor-context strong { display: flex; align-items: center; gap: 6px; }
+.competitor-context strong { min-width: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: center; gap: 10px; }
+.competitor-context .competitor-brand-name { min-width: 0; line-height: 1.15; overflow-wrap: anywhere; }
 .competitor-context span { font-size: 10px; font-weight: 700; }
 .competitor-context small { grid-column: 2; color: var(--muted); font-size: 9px; }
 .competition-store-list { grid-column: 1 / -1; display: grid; gap: 3px; margin-top: 3px; }
@@ -127,8 +128,8 @@ legend, .select-grid label > span, .service-field > span, .opportunity-form labe
 .retailer-option .retailer-logo { grid-column: 1 / 3; grid-row: 1; justify-self: center; }
 .retailer-option > span:nth-of-type(2) { min-width: 0; grid-column: 1; grid-row: 2; overflow: hidden; font-size: 8px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; }
 .retailer-option output { grid-column: 2; grid-row: 2; color: var(--muted); font-size: 9px; }
-.retailer-logo { position: relative; width: 34px; height: 20px; display: inline-grid; place-items: center; flex: 0 0 auto; font-weight: 700; line-height: 1; filter: drop-shadow(0 1px 3px rgb(23 27 31 / 28%)); }
-.retailer-logo > span { position: relative; z-index: 2; white-space: nowrap; }
+.retailer-logo { position: relative; width: 34px; height: 20px; display: inline-grid; place-items: center; flex: 0 0 auto; overflow: hidden; box-sizing: border-box; font-weight: 700; line-height: 1; filter: drop-shadow(0 1px 3px rgb(23 27 31 / 28%)); }
+.retailer-logo > span { position: relative; z-index: 2; max-width: 100%; white-space: nowrap; }
 .retailer-logo.opsm { border-radius: 50%; background: #211d1b; color: white; font-family: Georgia, "Times New Roman", serif; font-size: 8px; font-weight: 400; }
 .retailer-logo.specsavers { width: 52px; height: 21px; background: transparent; color: white; font-size: 8px; font-weight: 700; letter-spacing: -.2px; }
 .retailer-logo.specsavers::before, .retailer-logo.specsavers::after { position: absolute; top: 1px; width: 30px; height: 19px; border-radius: 50%; background: #009b55; content: ""; }
@@ -137,7 +138,7 @@ legend, .select-grid label > span, .service-field > span, .opportunity-form labe
 .retailer-logo.bailey-nelson { width: 44px; height: 21px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 1px 3px rgb(23 27 31 / 24%)); }
 .retailer-logo.bailey-nelson .bn-letter { width: 21px; height: 21px; display: grid; place-items: center; border: 2px solid #171717; border-radius: 50%; background: white; color: #171717; font-size: 9px; font-weight: 700; }
 .retailer-logo.bailey-nelson i { width: 4px; height: 2px; flex: 0 0 auto; background: #171717; }
-.retailer-logo.oscar-wylee { width: 50px; height: 20px; border: 1px solid #2848a7; background: white; color: #2848a7; font-family: Georgia, "Times New Roman", serif; font-size: 7px; font-weight: 600; }
+.retailer-logo.oscar-wylee { width: 50px; height: 20px; padding: 0 3px; border: 1px solid #2848a7; background: white; color: #2848a7; font-family: Georgia, "Times New Roman", serif; font-size: 6.5px; font-weight: 600; }
 .retailer-logo.independent-other { width: 32px; height: 20px; border: 1px solid #6b5b4b; border-radius: 3px; background: #6b5b4b; color: white; font-size: 7px; font-weight: 850; }
 .retailer-logo.brand-asset { width: var(--brand-logo-width); height: 22px; padding: 2px 4px; border: 1px solid rgb(23 27 31 / 18%); border-radius: 3px; background: white; }
 .retailer-logo.brand-asset img { width: 100%; height: 100%; display: block; object-fit: contain; }
@@ -165,7 +166,7 @@ legend, .select-grid label > span, .service-field > span, .opportunity-form labe
 .retailer-logo.table.specsavers::before, .retailer-logo.table.specsavers::after,
 .retailer-logo.tray.specsavers::before, .retailer-logo.tray.specsavers::after { top: 1px; width: 25px; height: 16px; }
 .retailer-logo.compact.bailey-nelson, .retailer-logo.summary.bailey-nelson, .retailer-logo.table.bailey-nelson, .retailer-logo.tray.bailey-nelson { width: 36px; height: 18px; }
-.retailer-logo.compact.oscar-wylee, .retailer-logo.summary.oscar-wylee, .retailer-logo.table.oscar-wylee, .retailer-logo.tray.oscar-wylee { width: 42px; height: 18px; font-size: 6px; }
+.retailer-logo.compact.oscar-wylee, .retailer-logo.summary.oscar-wylee, .retailer-logo.table.oscar-wylee, .retailer-logo.tray.oscar-wylee { width: 42px; height: 18px; padding-inline: 2px; font-size: 5.5px; }
 .retailer-logo.compact.independent-other, .retailer-logo.summary.independent-other, .retailer-logo.table.independent-other, .retailer-logo.tray.independent-other { width: 28px; height: 18px; font-size: 6px; }
 .retailer-logo.brand-asset.compact, .retailer-logo.brand-asset.summary, .retailer-logo.brand-asset.table, .retailer-logo.brand-asset.tray { width: min(var(--brand-logo-width), 52px); height: 18px; padding: 2px 3px; }
 .retailer-logo.compact.bailey-nelson .bn-letter, .retailer-logo.summary.bailey-nelson .bn-letter,
@@ -408,6 +409,14 @@ select, .service-field input, .opportunity-form input { width: 100%; height: 36p
 .co-tenancy-profile > div > strong { font-size: 8px; text-transform: uppercase; }
 .co-tenancy-profile > div > span { display: flex; flex-wrap: wrap; gap: 5px; }
 .co-tenancy-profile a { padding: 3px 5px; border: 1px solid var(--line); color: var(--ink); font-size: 8px; text-decoration: none; }
+.high-street-profile { background: #f2f8f8; }
+.high-street-profile .data-grid { margin-top: 10px; }
+.glossary-header { background: #eef7f8; }
+.glossary-intro { background: #fafcfc; color: var(--muted); }
+.glossary-list { display: grid; gap: 10px; margin: 0; }
+.glossary-list > div { padding: 11px 12px; border: 1px solid var(--line); background: #fbfcfc; }
+.glossary-list dt { margin-bottom: 5px; color: var(--teal); font-size: 10px; font-weight: 850; }
+.glossary-list dd { margin: 0; color: #4e5a60; font-size: 9px; line-height: 1.55; }
 .technical-details { border-bottom: 1px solid var(--line); background: #f7f8f8; }
 .technical-details > summary { padding: 14px 24px; color: var(--muted); font-size: 9px; font-weight: 800; cursor: pointer; text-transform: uppercase; }
 .technical-details[open] > summary { border-bottom: 1px solid var(--line); }
