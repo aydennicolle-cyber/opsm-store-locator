@@ -49,8 +49,8 @@
   const VIEW_CONFIG = {
     network: {
       eyebrow: "Retail footprint",
-      title: "Network",
-      subtitle: "Filter, inspect and compare the trans-Tasman optical network.",
+      title: "Stores",
+      subtitle: "Explore the optical footprint, then open a store to understand its market.",
     },
     centres: {
       eyebrow: "Landlord intelligence",
@@ -59,8 +59,8 @@
     },
     opportunity: {
       eyebrow: "Lookalike screening",
-      title: "Opportunity",
-      subtitle: "Find centres and corridors that resemble Bailey Nelson's current footprint.",
+      title: "Opportunities",
+      subtitle: "Prioritise Bailey-free centres and corridors, with the evidence behind every rank.",
     },
     trends: {
       eyebrow: "Network movement",
@@ -588,21 +588,31 @@
   }
 
   function retailerOptionsHtml() {
-    let previousType = "";
-    return BRAND_ORDER.map((retailer) => {
+    const groups = [
+      { type: "primary", label: "Major retail brands", hint: "Always visible", open: true },
+      { type: "additional", label: "Other brands and banners", hint: "Markers appear from zoom 8" },
+      { type: "background", label: "Independent discovery", hint: "Markers appear from zoom 10" },
+    ];
+    const optionHtml = (retailer) => {
       const config = BRAND_CONFIG[retailer];
       const count = state.allStores.filter(
         (store) => store.retailer === retailer && storeMatchesFilters(store, true)
       ).length;
-      const heading = config.networkType !== previousType
-        ? `<span class="retailer-group-label">${config.networkType === "primary" ? "Core networks" : config.networkType === "additional" ? "Additional networks · markers from zoom 8" : "Background discovery · markers from zoom 10"}</span>`
-        : "";
-      previousType = config.networkType;
-      return `${heading}<label class="retailer-option" data-retailer="${escapeHtml(retailer)}">
+      return `<label class="retailer-option" data-retailer="${escapeHtml(retailer)}">
         <input type="checkbox" value="${escapeHtml(retailer)}" ${state.filters.retailers.has(retailer) ? "checked" : ""} />
         ${brandMarkHtml(retailer, "filter")}
         <span title="${escapeHtml(retailer)}">${escapeHtml(retailer)}</span><output>${count}</output>
       </label>`;
+    };
+    return groups.map((group) => {
+      const retailers = BRAND_ORDER.filter((retailer) => BRAND_CONFIG[retailer].networkType === group.type);
+      if (!retailers.length) return "";
+      const selected = retailers.filter((retailer) => state.filters.retailers.has(retailer)).length;
+      const options = retailers.map(optionHtml).join("");
+      if (group.open) {
+        return `<section class="retailer-group" data-network-type="${group.type}"><header><span><strong>${group.label}</strong><small>${group.hint}</small></span><b data-selection-count>${selected}/${retailers.length} selected</b></header><div class="retailer-option-grid">${options}</div></section>`;
+      }
+      return `<details class="retailer-group" data-network-type="${group.type}" ${selected ? "open" : ""}><summary><span><strong>${group.label}</strong><small>${group.hint}</small></span><b data-selection-count>${selected}/${retailers.length} selected</b><i data-lucide="chevron-down"></i></summary><div class="retailer-option-grid">${options}</div></details>`;
     }).join("");
   }
 
@@ -624,7 +634,7 @@
         <label class="search-field"><i data-lucide="search"></i><span class="sr-only">Search stores</span>
           <input id="searchInput" type="search" value="${escapeHtml(state.filters.search)}" placeholder="Store, suburb or postcode" autocomplete="off" />
         </label>
-        <fieldset class="retailer-filter"><legend>Retailer</legend>
+        <fieldset class="retailer-filter"><legend>Retail brands</legend>
           <div class="retailer-filter-actions">
             <button id="selectAllRetailers" type="button">Select all</button>
             <button id="clearAllRetailers" type="button">Clear all</button>
@@ -688,6 +698,12 @@
             store.retailer === option.dataset.retailer && storeMatchesFilters(store, true)
         )
         .length.toLocaleString("en-AU");
+    });
+    document.querySelectorAll(".retailer-group[data-network-type]").forEach((group) => {
+      const retailers = BRAND_ORDER.filter((retailer) => BRAND_CONFIG[retailer].networkType === group.dataset.networkType);
+      const selected = retailers.filter((retailer) => state.filters.retailers.has(retailer)).length;
+      const output = group.querySelector("[data-selection-count]");
+      if (output) output.textContent = `${selected}/${retailers.length} selected`;
     });
   }
 
@@ -3702,8 +3718,20 @@
   }
 
   function bindGlobalEvents() {
+    const overflowMenus = [...document.querySelectorAll(".nav-overflow, .toolbar-overflow")];
+    overflowMenus.forEach((menu) => menu.addEventListener("toggle", () => {
+      if (!menu.open) return;
+      overflowMenus.filter((candidate) => candidate !== menu).forEach((candidate) => candidate.removeAttribute("open"));
+    }));
+    document.addEventListener("click", (event) => {
+      if (event.target.closest(".nav-overflow, .toolbar-overflow")) return;
+      overflowMenus.forEach((menu) => menu.removeAttribute("open"));
+    });
     document.querySelectorAll("[data-view]").forEach((button) =>
-      button.addEventListener("click", () => setView(button.dataset.view))
+      button.addEventListener("click", () => {
+        button.closest("details")?.removeAttribute("open");
+        setView(button.dataset.view);
+      })
     );
     document.getElementById("panelClose").addEventListener("click", closeDetail);
     elements.detailContent.addEventListener("click", (event) => {
@@ -3751,10 +3779,10 @@
     document.getElementById("candidateDockClose").addEventListener("click", () => {
       elements.candidateDock.hidden = true;
     });
-    document.getElementById("saveViewButton").addEventListener("click", saveView);
-    document.getElementById("shareButton").addEventListener("click", () => updateShareUrl(true));
-    document.getElementById("reportButton").addEventListener("click", generateContextReport);
-    document.getElementById("downloadButton").addEventListener("click", downloadContextCsv);
+    document.getElementById("saveViewButton").addEventListener("click", () => { document.querySelector(".toolbar-overflow")?.removeAttribute("open"); saveView(); });
+    document.getElementById("shareButton").addEventListener("click", () => { document.querySelector(".toolbar-overflow")?.removeAttribute("open"); updateShareUrl(true); });
+    document.getElementById("reportButton").addEventListener("click", () => { document.querySelector(".toolbar-overflow")?.removeAttribute("open"); generateContextReport(); });
+    document.getElementById("downloadButton").addEventListener("click", () => { document.querySelector(".toolbar-overflow")?.removeAttribute("open"); downloadContextCsv(); });
     map.on("click", (event) => {
       if (state.candidateDropMode) dropCandidate(event.latlng);
     });
