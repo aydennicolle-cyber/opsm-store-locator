@@ -79,6 +79,7 @@
     },
   };
   const STORE_RADII = [0.5, 1, 2, 5, 10];
+  const MAX_CANDIDATE_BRAND_DISTANCE_KM = 100;
   const CATCHMENT_RADII = [1, 3, 5, 10];
   const AUSTRALIA_VIEW = { center: [-25.8, 134.4], zoom: 4 };
   const NEW_ZEALAND_VIEW = { center: [-41.15, 172.7], zoom: 5 };
@@ -1169,7 +1170,7 @@
   function renderOpportunityView() {
     const rows = performanceAdjustedLookalikes();
     elements.visibleTotal.textContent = rows.length.toLocaleString("en-AU");
-    elements.visibleTotalLabel.textContent = "Bailey-free places visible";
+    elements.visibleTotalLabel.textContent = "mapped Bailey-free places visible";
     const retailerChoices = BRAND_ORDER.filter((retailer) => retailer !== "Bailey Nelson");
     const retailerFilterCount = Number(state.opportunityFilters.require_any_retailer)
       + state.opportunityFilters.must_have_retailers.size
@@ -1188,7 +1189,7 @@
         : "All current Bailey Nelson stores, compared within each location setting";
     const settingLabel = state.opportunityFilters.setting || "All settings";
     elements.viewContent.innerHTML = `
-      <section class="experimental-banner"><i data-lucide="scan-search"></i><div><strong>Lookalike screening rank</strong><span>Transparent leasing screen, not a probability of store success. Stale sources and missing evidence remain visible in completeness.</span></div></section>
+      <section class="experimental-banner"><i data-lucide="scan-search"></i><div><strong>Lookalike screening rank</strong><span>Ranks mapped shopping centres and high-street corridors with no accepted Bailey Nelson tenancy; it is not every possible retail location. The result is a leasing screen, not a probability of store success, and missing evidence remains visible in completeness.</span></div></section>
       <section class="opportunity-form ranking-controls">
         <div class="select-grid">
           <label><span>Country</span><select id="lookalikeCountry">${filterOptions(["Australia", "New Zealand"], state.opportunityFilters.country, "Country")}</select></label>
@@ -1219,7 +1220,7 @@
         <p class="form-note"><strong>Optional:</strong> load a CSV with <code>store_id</code> or <code>store_name</code>, plus <code>rank</code> or <code>performance_score</code>. With at least five Bailey matches, the best ten become the lookalike benchmark. The file and raw values stay in browser memory only and are never uploaded, saved, exported or added to a share URL.</p>
       </section>
       <section class="result-section lookalike-section">
-        <div class="section-heading"><h2>${escapeHtml(`${state.opportunityFilters.country} · ${settingLabel}`)}</h2><span>${rows.length} Bailey-free places</span></div>
+        <div class="section-heading"><h2>${escapeHtml(`${state.opportunityFilters.country} · ${settingLabel}`)}</h2><span>${rows.length} mapped Bailey-free places</span></div>
         ${opportunityShortlistHtml()}
         <div class="lookalike-list" id="lookalikeList">${rows.length ? rows.slice(0, 150).map(lookalikeRowHtml).join("") : '<div class="empty-state"><strong>No places match these filters</strong><span>Change the location setting or retailer presence requirements.</span></div>'}</div>
       </section>
@@ -1391,9 +1392,11 @@
   }
 
   function renderCompareView() {
+    elements.visibleTotal.textContent = state.candidates.length.toLocaleString("en-AU");
+    elements.visibleTotalLabel.textContent = "manual candidates to compare";
     elements.viewContent.innerHTML = `
       <section class="compare-intro">
-        <div class="workflow-note"><i data-lucide="info"></i><p><strong>Compare hypothetical sites here.</strong> Add a candidate, then click its exact map point so the tool can attach the containing public demographic area and nearby network evidence. To inspect a known store or retail place, click its marker instead; that opens its existing detail and surrounding competition without creating a candidate.</p></div>
+        <div class="workflow-note"><i data-lucide="info"></i><p><strong>Where to compare sites:</strong> the Candidate evidence table below is the side-by-side comparison. Each candidate is a column and each evidence measure is a row. Add a candidate, then click its exact map point so the tool can attach the containing public demographic area and nearby network evidence. Store distance is a separate two-store check shown in the map tray.</p></div>
         <div class="compact-metrics">
           <div><strong>${state.candidates.length}</strong><span>candidates</span></div>
           <div><strong>${state.compareStores.length}</strong><span>stores selected</span></div>
@@ -1406,6 +1409,7 @@
       </section>
       <section class="comparison-table-wrap">
         <h2>Candidate evidence</h2>
+        <p class="comparison-note"><strong>Screening index (0–100)</strong> combines the available public evidence for each manual site: local market demand, competitor white space, verified centre strength, accessibility, network spacing and tenancy-size fit. Missing evidence reduces completeness. It is a comparison aid, not a sales forecast.</p>
         ${
           state.candidates.length
             ? candidateComparisonTable(state.candidates)
@@ -2069,7 +2073,7 @@
   function candidateComparisonTable(candidates) {
     const models = candidates.map((candidate) => ({ candidate, model: scoreCandidate(candidate) }));
     const rows = [
-      ["Screening index", (item) => item.model.score ?? "-"],
+      ["Screening index (0–100)", (item) => item.model.score ?? "-"],
       ["Completeness", (item) => `${item.model.coverage}%`],
       ["Market demand", (item) => componentValue(item.model, "market_demand")],
       ["White space", (item) => componentValue(item.model, "competitive_white_space")],
@@ -2135,9 +2139,17 @@
     return { distances, nearestByBrand, radiusCounts, sameCentre };
   }
 
-  function nearestBrandHtml(model) {
-    return BRAND_ORDER.map((brand) => {
-      const entry = model.nearestByBrand[brand];
+  function nearestBrandHtml(model, options = {}) {
+    const maximumDistance = Number.isFinite(options.maxDistanceKm) ? options.maxDistanceKm : null;
+    const entries = BRAND_ORDER.map((brand) => ({ brand, entry: model.nearestByBrand[brand] }))
+      .filter(({ entry }) => maximumDistance === null || (entry && entry.distance <= maximumDistance));
+    if (options.sortByDistance) {
+      entries.sort((left, right) => (left.entry?.distance ?? Infinity) - (right.entry?.distance ?? Infinity) || left.brand.localeCompare(right.brand));
+    }
+    if (!entries.length) {
+      return `<p class="empty-note">No mapped brand locations within ${escapeHtml(maximumDistance)} km.</p>`;
+    }
+    return entries.map(({ brand, entry }) => {
       return `<div class="nearest-brand">${brandMarkHtml(brand, "summary")}<span class="sr-only">${escapeHtml(
         brand
       )}</span><strong>${
@@ -2902,6 +2914,7 @@
           <strong>${model.score ?? "-"}</strong><span>screening index</span>
         </div>
         <div><strong>${model.coverage}% screening completeness</strong>
+          <p><strong>Screening index:</strong> a 0–100 comparison of available public evidence for this manual site, including demand, competition, verified centre context, accessibility, network spacing and tenancy-size fit. It is not a sales forecast.</p>
           <p>${model.reliable ? "The index meets the 70% completeness threshold." : "Directional only. Required evidence is unavailable."}</p>
           <span class="confidence">${model.reliable ? "Screening complete" : "Low completeness"}</span>
         </div>
@@ -2928,8 +2941,8 @@
       <section class="detail-section"><h3>Catchment estimates</h3>${catchmentTableHtml(catchments)}
         <p class="empty-note">Population is apportioned by the share of each SA2 polygon inside the straight-line radius. It assumes population is evenly distributed within each SA2 and is not a drive-time or customer-origin trade area.</p>
       </section>
-      <section class="detail-section"><h3>Nearest brand locations</h3><div class="proximity-summary">${nearestBrandHtml(
-        proximity
+      <section class="detail-section"><h3>Nearest brand locations within 100 km</h3><div class="proximity-summary">${nearestBrandHtml(
+        proximity, { maxDistanceKm: MAX_CANDIDATE_BRAND_DISTANCE_KM, sortByDistance: true }
       )}</div>${radiusTableHtml(proximity)}</section>
       <section class="detail-section"><div class="button-row">
         <button class="detail-action primary" id="candidateReport" type="button"><i data-lucide="file-down"></i>Client report</button>
@@ -3443,7 +3456,7 @@
       </div></section>
       <section><h3>Transparent score</h3>${scoreComponentsHtml(model)}</section>
       <section><h3>Straight-line catchments</h3>${catchmentTableHtml(catchments)}</section>
-      <section><h3>Nearest networks</h3><div class="proximity-summary">${nearestBrandHtml(proximity)}</div></section>
+      <section><h3>Nearest networks within 100 km</h3><div class="proximity-summary">${nearestBrandHtml(proximity, { maxDistanceKm: MAX_CANDIDATE_BRAND_DISTANCE_KM, sortByDistance: true })}</div></section>
       <section><h3>Risks and gaps</h3><ul>
         <li>${model.reliable ? "Evidence coverage meets the ranking threshold." : "Evidence coverage is below the 70% ranking threshold."}</li>
         <li>${target.area_sqm ? "Available area has been supplied for format testing." : "Available tenancy area has not been supplied."}</li>
