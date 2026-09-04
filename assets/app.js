@@ -1194,6 +1194,7 @@
   }
 
   function renderOpportunityView() {
+    const retailerFiltersWasOpen = Boolean(elements.viewContent.querySelector(".opportunity-retailer-filters")?.open);
     const rows = performanceAdjustedLookalikes();
     elements.visibleTotal.textContent = rows.length.toLocaleString("en-AU");
     elements.visibleTotalLabel.textContent = "mapped Bailey-free places visible";
@@ -1225,7 +1226,7 @@
             <option value="High Street" ${state.opportunityFilters.setting === "High Street" ? "selected" : ""}>High streets</option>
           </select></label>
         </div>
-        <details class="opportunity-retailer-filters" ${retailerFilterCount ? "open" : ""}>
+        <details class="opportunity-retailer-filters" ${retailerFilterCount || retailerFiltersWasOpen ? "open" : ""}>
           <summary><span><strong>Retailer presence</strong><small>${escapeHtml(retailerFilterLabel)}</small></span><i data-lucide="chevron-down"></i></summary>
           <label class="opportunity-any-retailer"><input id="opportunityAnyRetailer" type="checkbox" ${state.opportunityFilters.require_any_retailer ? "checked" : ""} />
             <span><strong>At least one mapped optical retailer</strong><small>Any brand; useful for centres or corridors with existing optical validation.</small></span>

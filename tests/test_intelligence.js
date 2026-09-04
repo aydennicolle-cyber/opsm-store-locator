@@ -188,4 +188,6 @@ assert.ok(appSource.includes('state.view === "opportunity"'));
 assert.ok(appSource.includes('id="selectAllRetailers"'));
 assert.ok(appSource.includes('id="clearAllRetailers"'));
 assert.ok(appSource.includes("applyFilters(false);\n        renderNetworkResults();"));
+assert.ok(appSource.includes('const retailerFiltersWasOpen = Boolean(elements.viewContent.querySelector(".opportunity-retailer-filters")?.open);'));
+assert.ok(appSource.includes('retailerFilterCount || retailerFiltersWasOpen ? "open" : ""'));
 console.log("Intelligence tests passed");
