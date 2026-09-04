@@ -460,8 +460,9 @@
     centreMarkerById.forEach(resetMarkerPosition);
     if (map.getZoom() < 16) return;
 
+    const mapStores = storesForActiveMapView();
     const groupedStores = new Map();
-    state.filteredStores.forEach((store) => {
+    mapStores.forEach((store) => {
       const key = store.place_id || `${Number(store.latitude).toFixed(5)}:${Number(store.longitude).toFixed(5)}`;
       if (!groupedStores.has(key)) groupedStores.set(key, []);
       groupedStores.get(key).push(store);
@@ -492,7 +493,7 @@
       const place = state.centres.find((item) => item.place_id === placeId);
       const base = L.latLng(marker.options.baseLatitude, marker.options.baseLongitude);
       const point = map.latLngToLayerPoint(base);
-      const mappedStoreCount = state.filteredStores.filter((store) => store.place_id === placeId).length;
+      const mappedStoreCount = mapStores.filter((store) => store.place_id === placeId).length;
       const distance = mappedStoreCount > 4 ? 110 : mappedStoreCount > 1 ? 90 : 58;
       const offset = place?.location_setting === "High Street" ? L.point(distance, 0) : L.point(-distance, 0);
       marker.setLatLng(map.layerPointToLatLng(point.add(offset)));
@@ -510,6 +511,30 @@
       const marker = centreMarkerById.get(venueId);
       if (marker) centreLayer.addLayer(marker);
     });
+    window.requestAnimationFrame(repositionCloseZoomMarkers);
+  }
+
+  function storesForActiveMapView() {
+    if (state.storeCompareMode) return state.filteredStores;
+    if (state.view === "centres") {
+      const placeIds = new Set(filteredPlaces().map((place) => place.place_id));
+      return state.allStores.filter((store) => store.place_id && placeIds.has(store.place_id));
+    }
+    if (state.view === "opportunity") {
+      const placeIds = new Set(performanceAdjustedLookalikes().map((place) => place.place_id));
+      return state.allStores.filter((store) => store.place_id && placeIds.has(store.place_id));
+    }
+    if (state.view === "compare" && state.candidates.length && !state.storeCompareMode) {
+      return state.allStores.filter((store) => state.candidates.some((candidate) => Intel.haversine(candidate, store) <= MAX_CANDIDATE_BRAND_DISTANCE_KM));
+    }
+    return state.filteredStores;
+  }
+
+  function refreshActiveMapContext(clearFocus = false) {
+    if (clearFocus && state.focusedPlaceId) clearPlaceFocus(false);
+    refreshStoreMarkerVisibility();
+    updateCentreMarkersForFilters();
+    updateSaturationLayer();
     window.requestAnimationFrame(repositionCloseZoomMarkers);
   }
 
@@ -548,7 +573,7 @@
     }
     updateToolbarContext();
     renderView();
-    updateCentreMarkersForFilters();
+    refreshActiveMapContext(true);
     updateShareUrl(false);
   }
 
@@ -762,14 +787,12 @@
 
   function applyFilters(render = true) {
     state.filteredStores = state.allStores.filter((store) => storeMatchesFilters(store));
-    refreshStoreMarkerVisibility();
-    updateCentreMarkersForFilters();
+    refreshActiveMapContext();
     if (state.view === "network") {
       elements.visibleTotal.textContent = state.filteredStores.length.toLocaleString("en-AU");
       elements.visibleTotalLabel.textContent = `selected of ${(Number(state.metadata.store_count) || state.allStores.length).toLocaleString("en-AU")} census stores`;
     }
     if (render && state.view === "network") renderNetworkView();
-    updateSaturationLayer();
     updateShareUrl(false);
     window.requestAnimationFrame(repositionCloseZoomMarkers);
   }
@@ -778,7 +801,9 @@
     storeClusters.clearLayers();
     if (state.focusedPlaceId) return;
     const zoom = map.getZoom();
-    state.filteredStores.forEach((store) => {
+    const placeScopedView = state.view === "centres" || state.view === "opportunity";
+    if (placeScopedView && zoom < 8) return;
+    storesForActiveMapView().forEach((store) => {
       if (zoom < (BRAND_CONFIG[store.retailer]?.minMarkerZoom || 0)) return;
       const marker = markerById.get(store.store_id);
       if (marker) storeClusters.addLayer(marker);
@@ -922,6 +947,7 @@
           <label><span>Sort results</span><select id="placeSort">${filterOptions(["name", "optical_tenants", "household_income", "nearest_bailey", "portfolio_white_space"], state.placeFilters.sort, "Sort by")}</select></label>
         </div>
         <fieldset class="place-retailer-filter"><legend>Require every selected retailer</legend>${BRAND_ORDER.filter((brand) => BRAND_CONFIG[brand].networkType !== "background").map((brand) => `<label><input type="checkbox" value="${escapeHtml(brand)}" ${state.placeFilters.retailers.has(brand) ? "checked" : ""} />${brandMarkHtml(brand, "compact")}<span>${escapeHtml(brand)}</span></label>`).join("")}</fieldset>
+        <p class="form-note"><strong>Map:</strong> place pins follow these filters. Accepted tenant stores for the matching places appear from zoom level 8; Network-tab retailer selections do not carry into this view.</p>
         <div class="button-row place-actions">
           <button class="secondary-command" id="exportCorrections" type="button"><i data-lucide="download"></i>Export local corrections (${state.consultantCorrections.length})</button>
           <button class="secondary-command" id="importCorrections" type="button"><i data-lucide="upload"></i>Import corrections CSV</button>
@@ -1021,7 +1047,7 @@
     count.textContent = `${centres.length.toLocaleString("en-AU")} results`;
     elements.visibleTotal.textContent = centres.length.toLocaleString("en-AU");
     elements.visibleTotalLabel.textContent = "retail places visible";
-    updateCentreMarkersForFilters();
+    refreshActiveMapContext(true);
     list.innerHTML = centres
       .slice(0, 300)
       .map(
@@ -1218,6 +1244,7 @@
           <input id="performanceFile" type="file" accept=".csv,text/csv" hidden />
         </div>
         <p class="form-note"><strong>Optional:</strong> load a CSV with <code>store_id</code> or <code>store_name</code>, plus <code>rank</code> or <code>performance_score</code>. With at least five Bailey matches, the best ten become the lookalike benchmark. The file and raw values stay in browser memory only and are never uploaded, saved, exported or added to a share URL.</p>
+        <p class="form-note"><strong>Map:</strong> place pins follow the Opportunity filters above. Accepted tenant stores for matching places appear from zoom level 8; Network and Places filters do not control this view.</p>
       </section>
       <section class="result-section lookalike-section">
         <div class="section-heading"><h2>${escapeHtml(`${state.opportunityFilters.country} · ${settingLabel}`)}</h2><span>${rows.length} mapped Bailey-free places</span></div>
@@ -1267,12 +1294,12 @@
     document.getElementById("lookalikeCountry").addEventListener("change", (event) => {
       state.opportunityFilters.country = event.target.value;
       renderOpportunityView();
-      updateCentreMarkersForFilters();
+      refreshActiveMapContext(true);
     });
     document.getElementById("lookalikeSetting").addEventListener("change", (event) => {
       state.opportunityFilters.setting = event.target.value;
       renderOpportunityView();
-      updateCentreMarkersForFilters();
+      refreshActiveMapContext(true);
     });
     document.querySelectorAll("[data-opportunity-retailer]").forEach((input) => {
       input.addEventListener("change", () => {
@@ -1286,20 +1313,20 @@
           target.delete(input.value);
         }
         renderOpportunityView();
-        updateCentreMarkersForFilters();
+        refreshActiveMapContext(true);
       });
     });
     document.getElementById("opportunityAnyRetailer").addEventListener("change", (event) => {
       state.opportunityFilters.require_any_retailer = event.target.checked;
       renderOpportunityView();
-      updateCentreMarkersForFilters();
+      refreshActiveMapContext(true);
     });
     document.getElementById("clearOpportunityRetailers")?.addEventListener("click", () => {
       state.opportunityFilters.require_any_retailer = false;
       state.opportunityFilters.must_have_retailers.clear();
       state.opportunityFilters.must_not_have_retailers.clear();
       renderOpportunityView();
-      updateCentreMarkersForFilters();
+      refreshActiveMapContext(true);
     });
     document.getElementById("performanceImportButton").addEventListener("click", () => document.getElementById("performanceFile").click());
     document.getElementById("performanceFile").addEventListener("change", (event) => {
@@ -3037,6 +3064,7 @@
     elements.modeNotice.textContent = active
       ? "Select any two stores from the map or network list to compare straight-line distance."
       : "";
+    refreshActiveMapContext();
   }
 
   function addCompareStore(store) {
@@ -3115,6 +3143,7 @@
     closeDetail();
     renderCandidateDock();
     renderView();
+    refreshActiveMapContext();
     updateShareUrl(false);
   }
 
@@ -3254,7 +3283,7 @@
     saturationLayer = null;
     if (!state.activeLayers.has("saturation") || !window.L.heatLayer) return;
     saturationLayer = L.heatLayer(
-      state.filteredStores.map((store) => [store.latitude, store.longitude, 0.55]),
+      storesForActiveMapView().map((store) => [store.latitude, store.longitude, 0.55]),
       { radius: 24, blur: 19, maxZoom: 11, gradient: { 0.2: "#f6d55c", 0.55: "#ed8b45", 0.85: "#b23a48" } }
     ).addTo(map);
   }
