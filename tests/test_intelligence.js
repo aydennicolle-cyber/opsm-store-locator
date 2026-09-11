@@ -191,6 +191,18 @@ assert.ok(/applyFilters\(false\);\r?\n\s+renderNetworkResults\(\);/.test(appSour
 assert.ok(indexSource.includes('class="nav-overflow"'));
 assert.ok(indexSource.includes('class="toolbar-overflow"'));
 assert.ok(indexSource.includes("<span>Opportunities</span>"));
+assert.ok(indexSource.includes("<span>Locations</span>"));
 assert.ok(appSource.includes("Major retail brands"));
 assert.ok(appSource.includes("Other brands and banners"));
+assert.ok(appSource.includes('id="networkControls"'));
+assert.ok(appSource.includes("independent-featured"));
+assert.equal(appSource.includes('id="serviceInput"'), false);
+assert.ok(appSource.includes('id="toggleShortlistView"'));
+assert.ok(appSource.includes('id="showOpportunityDiscovery"'));
+assert.ok(appSource.includes('id="shortlistNotice"'));
+assert.ok(appSource.includes("visibleOpportunityRows"));
+assert.ok(appSource.includes("shortlistedOpportunityRows"));
+assert.ok(appSource.includes("opportunityDashboardHtml"));
+assert.ok(appSource.includes("shortlistDashboardHtml"));
+assert.ok(appSource.includes("shortlistProfileHtml"));
 console.log("Intelligence tests passed");

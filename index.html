@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="assets/styles.css?v=20260904b" />
+    <link rel="stylesheet" href="assets/styles.css?v=20260904g" />
   </head>
   <body>
     <header class="app-header">
@@ -23,7 +23,7 @@
       </div>
       <nav class="task-nav" aria-label="Leasing intelligence views">
         <button class="active" type="button" data-view="network"><i data-lucide="store"></i><span>Stores</span></button>
-        <button type="button" data-view="centres"><i data-lucide="building-2"></i><span>Places</span></button>
+        <button type="button" data-view="centres"><i data-lucide="building-2"></i><span>Locations</span></button>
         <button type="button" data-view="opportunity"><i data-lucide="scan-search"></i><span>Opportunities</span></button>
         <button type="button" data-view="compare"><i data-lucide="columns-3"></i><span>Compare</span></button>
         <details class="nav-overflow">
@@ -91,13 +91,19 @@
               <path d="M3 6h18"></path>
               <path d="M16 10a4 4 0 0 1-8 0"></path>
             </svg>
-            Retail places
+            Retail locations
           </span></label>
           <div class="layer-rule"></div>
           <label><input type="checkbox" data-layer="health" /><span><i data-lucide="cross"></i>Health retailers</span></label>
           <label><input type="checkbox" data-layer="transport" /><span><i data-lucide="train-front"></i>Public transport</span></label>
           <label><input type="checkbox" data-layer="parking" /><span><i data-lucide="square-parking"></i>Parking</span></label>
           <p>ABS layers use 2025 population and 2021 Census age and equivalised-income measures. Development signals are selective public evidence, not a complete pipeline. Income is not consumer spending; no spending layer is currently loaded.</p>
+        </aside>
+
+        <aside class="site-finder-panel" id="siteFinderPanel" hidden aria-label="Find an area for a candidate site">
+          <header><div><strong>Find the next site</strong><small>Search a place, store or suburb, then click the exact map position.</small></div><button class="icon-button" id="siteFinderClose" type="button" aria-label="Cancel adding a site"><i data-lucide="x"></i></button></header>
+          <label class="search-field"><i data-lucide="search"></i><span class="sr-only">Find a place, store or suburb</span><input id="siteFinderSearch" type="search" placeholder="e.g. Northcote, Westfield Penrith" autocomplete="off" /></label>
+          <div class="site-finder-results" id="siteFinderResults"><p>Search to move the map. Site-placement mode stays active until you add or cancel.</p></div>
         </aside>
 
         <div class="mode-notice" id="modeNotice" hidden></div>
@@ -121,7 +127,7 @@
         <section class="candidate-dock" id="candidateDock" hidden aria-label="Candidate comparison">
           <header>
             <div><span>Candidate shortlist</span><strong id="candidateDockCount">0 sites</strong></div>
-            <button class="icon-button" id="candidateDockClose" type="button" aria-label="Close candidate comparison"><i data-lucide="chevron-down"></i></button>
+            <div class="candidate-dock-actions"><button id="candidateDockAdd" type="button"><i data-lucide="map-pin-plus"></i>Add another site</button><button class="icon-button" id="candidateDockClose" type="button" aria-label="Close candidate comparison"><i data-lucide="chevron-down"></i></button></div>
           </header>
           <div class="candidate-cards" id="candidateCards"></div>
         </section>
@@ -129,7 +135,7 @@
         <div class="loading-state" id="loadingState">
           <span class="loading-mark"></span>
           <strong>Building leasing intelligence</strong>
-          <span>Stores, retail places and public market indicators</span>
+          <span>Stores, retail locations and public market indicators</span>
         </div>
         <div class="toast" id="toast" hidden role="status"></div>
       </section>
@@ -150,6 +156,6 @@
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
     <script src="assets/intelligence.js?v=20260903g"></script>
-    <script src="assets/app.js?v=20260904c"></script>
+    <script src="assets/app.js?v=20260904g"></script>
   </body>
 </html>
