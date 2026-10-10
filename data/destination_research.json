@@ -1,0 +1,574 @@
+{
+  "metadata": {
+    "schema_version": 1,
+    "directory_sha256": "5686b8f4b6c4fe53abc9c8011f62e772cdf6664eed5ba02ea8283993110eaac1",
+    "census_sha256": "13d5569d5b9b54c8453619be28bfcf8ce80f986e321c6925d225328ea007aab6",
+    "purpose": "Public research summaries; no census admissions or score changes."
+  },
+  "profiles": [
+    {
+      "place_id": "corridor-au-sa-glenelg-jetty-road",
+      "name": "Jetty Road",
+      "research_status": "Directory captured; limitations retained",
+      "observed_at": "2026-10-08",
+      "source_effective_date": null,
+      "source_listing_count": 291,
+      "in_scope_non_optical_listings": 143,
+      "coming_soon_listings": 0,
+      "held_scope_listings": 8,
+      "outside_or_unresolved_address_listings": 139,
+      "rows_with_exceptions": 15,
+      "unclassified_listings": 0,
+      "categories": [
+        {
+          "name": "Food and dining",
+          "listing_count": 42,
+          "examples": [
+            {
+              "name": "1990co The Little Vietnam - Glenelg",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/1990co-the-little-vietnam-glenelg"
+            },
+            {
+              "name": "Ballet Wine Bar",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/ballet-wine-bar"
+            },
+            {
+              "name": "Beach Burrito Company",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/beach-burrito-company"
+            }
+          ]
+        },
+        {
+          "name": "Fashion and accessories",
+          "listing_count": 30,
+          "examples": [
+            {
+              "name": "Adelaide Exchange Jeweller",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/adelaide-exchange-jeweller"
+            },
+            {
+              "name": "Adelaide Instyle",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/adelaide-instyle"
+            },
+            {
+              "name": "Attitudes Boutique",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/attitudes-boutique"
+            }
+          ]
+        },
+        {
+          "name": "Beauty",
+          "listing_count": 18,
+          "examples": [
+            {
+              "name": "Angel Nail Spa & Beauty",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/angel-nail-spa-beauty"
+            },
+            {
+              "name": "Aspire Hair Salon",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/aspire-hair-hairdressing"
+            },
+            {
+              "name": "Beleza Hair Artistry",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/beleza-hair-artistry"
+            }
+          ]
+        },
+        {
+          "name": "Entertainment and services (combined source category)",
+          "listing_count": 18,
+          "examples": [
+            {
+              "name": "Amplified Accounting Pty Ltd",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/amplified-accounting-pty-ltd"
+            },
+            {
+              "name": "ANZ Banking Group Limited",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/anz-banking-group-limited"
+            },
+            {
+              "name": "Bank SA",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/bank-sa"
+            }
+          ]
+        },
+        {
+          "name": "Health and wellbeing",
+          "listing_count": 14,
+          "examples": [
+            {
+              "name": "Aleenta Barre",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/aleenta-barre"
+            },
+            {
+              "name": "Amplifon",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/amplifon"
+            },
+            {
+              "name": "Anytime Fitness",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/anytime-fitness-1"
+            }
+          ]
+        },
+        {
+          "name": "Home and lifestyle",
+          "listing_count": 13,
+          "examples": [
+            {
+              "name": "A little Retail Therapy",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/a-little-retail-therapy"
+            },
+            {
+              "name": "Adelaide Exchange Jeweller",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/adelaide-exchange-jeweller"
+            },
+            {
+              "name": "Attitudes Boutique",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/attitudes-boutique"
+            }
+          ]
+        },
+        {
+          "name": "Grocery and fresh food",
+          "listing_count": 11,
+          "examples": [
+            {
+              "name": "Bakers Delight - Glenelg",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/bakers-delight-glenelg"
+            },
+            {
+              "name": "Bay Fish Shop",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/bay-fish-shop"
+            },
+            {
+              "name": "Bay Junction Florist",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/bay-junction-florists"
+            }
+          ]
+        },
+        {
+          "name": "Accommodation",
+          "listing_count": 2,
+          "examples": [
+            {
+              "name": "Stamford Grand Adelaide",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/stamford-grand-adelaide"
+            },
+            {
+              "name": "The Colley Hotel",
+              "source_url": "https://www.jettyroadglenelg.com.au/stores-services/colley-hotel"
+            }
+          ]
+        }
+      ],
+      "scope": "Published district directory, restricted for comparison to explicit Jetty Road/Glenelg addresses. Address conflicts and unclear identities remain held.",
+      "coverage_limitations": [
+        "Directory-listed businesses have not all been independently checked for current trading.",
+        "Listing counts are not unique brands, occupied tenancies, frontage exposure or floor-area shares.",
+        "A listing may have more than one category; category counts must not be added as a total.",
+        "Source categories may be broad or inconsistent; unclassified and combined categories remain visible.",
+        "Optical competition uses the separately validated census, including accepted concessions missing from directories."
+      ],
+      "tenancy_count_share": null,
+      "floor_area_share": null,
+      "share_unavailable_reason": "No compatible occupied-tenancy or category-floor-area denominator.",
+      "source_urls": [
+        "https://www.jettyroadglenelg.com.au/directory/stores-services"
+      ]
+    },
+    {
+      "place_id": "place-au-nsw-ed-square-town-centre",
+      "name": "Ed.Square Town Centre",
+      "research_status": "Directory captured; limitations retained",
+      "observed_at": "2026-10-08",
+      "source_effective_date": null,
+      "source_listing_count": 97,
+      "in_scope_non_optical_listings": 95,
+      "coming_soon_listings": 0,
+      "held_scope_listings": 0,
+      "outside_or_unresolved_address_listings": 0,
+      "rows_with_exceptions": 2,
+      "unclassified_listings": 0,
+      "categories": [
+        {
+          "name": "Food and dining",
+          "listing_count": 35,
+          "examples": [
+            {
+              "name": "At Mex",
+              "source_url": "https://edsquare.shopping/store-directory/at-mex/"
+            },
+            {
+              "name": "Auntie Tang",
+              "source_url": "https://edsquare.shopping/store-directory/auntie-tang/"
+            },
+            {
+              "name": "Baby Bao",
+              "source_url": "https://edsquare.shopping/store-directory/baby-bao/"
+            }
+          ]
+        },
+        {
+          "name": "Services",
+          "listing_count": 19,
+          "examples": [
+            {
+              "name": "AusRealty",
+              "source_url": "https://edsquare.shopping/store-directory/ausrealty/"
+            },
+            {
+              "name": "Cursed Canvas",
+              "source_url": "https://edsquare.shopping/store-directory/cursed-canvas/"
+            },
+            {
+              "name": "Ed Mobile",
+              "source_url": "https://edsquare.shopping/store-directory/ed-mobile/"
+            }
+          ]
+        },
+        {
+          "name": "Beauty",
+          "listing_count": 15,
+          "examples": [
+            {
+              "name": "Amelia Jacobs Hair and Beauty",
+              "source_url": "https://edsquare.shopping/store-directory/amelia-jacobs-hair-and-beauty/"
+            },
+            {
+              "name": "Blush Nails and Beauty",
+              "source_url": "https://edsquare.shopping/store-directory/blush-nails-and-beauty/"
+            },
+            {
+              "name": "Brow Designers",
+              "source_url": "https://edsquare.shopping/store-directory/brow-designers/"
+            }
+          ]
+        },
+        {
+          "name": "Health and wellbeing",
+          "listing_count": 14,
+          "examples": [
+            {
+              "name": "Anytime Fitness",
+              "source_url": "https://edsquare.shopping/store-directory/anytime-fitness/"
+            },
+            {
+              "name": "Back In Focus",
+              "source_url": "https://edsquare.shopping/store-directory/back-in-focus/"
+            },
+            {
+              "name": "CareScan Medical Imaging",
+              "source_url": "https://edsquare.shopping/store-directory/carescan-medical-imaging/"
+            }
+          ]
+        },
+        {
+          "name": "Grocery and fresh food",
+          "listing_count": 7,
+          "examples": [
+            {
+              "name": "AKAR Meats",
+              "source_url": "https://edsquare.shopping/store-directory/akar-meats/"
+            },
+            {
+              "name": "Ambeys Big Apple",
+              "source_url": "https://edsquare.shopping/store-directory/ambeys-big-apple/"
+            },
+            {
+              "name": "Coles",
+              "source_url": "https://edsquare.shopping/store-directory/coles/"
+            }
+          ]
+        },
+        {
+          "name": "Fashion and accessories",
+          "listing_count": 6,
+          "examples": [
+            {
+              "name": "BNAH",
+              "source_url": "https://edsquare.shopping/store-directory/bnah/"
+            },
+            {
+              "name": "Brow Designers",
+              "source_url": "https://edsquare.shopping/store-directory/brow-designers/"
+            },
+            {
+              "name": "Manhattan Jewellery",
+              "source_url": "https://edsquare.shopping/store-directory/manhattan-jewellery/"
+            }
+          ]
+        },
+        {
+          "name": "Home and lifestyle",
+          "listing_count": 4,
+          "examples": [
+            {
+              "name": "EdSquare Sales Centre",
+              "source_url": "https://edsquare.shopping/store-directory/edsquare-sales-centre/"
+            },
+            {
+              "name": "Little Prince Flower Shop",
+              "source_url": "https://edsquare.shopping/store-directory/little-prince-flower-shop/"
+            },
+            {
+              "name": "Red Dollar",
+              "source_url": "https://edsquare.shopping/store-directory/red-dollar/"
+            }
+          ]
+        },
+        {
+          "name": "Entertainment",
+          "listing_count": 2,
+          "examples": [
+            {
+              "name": "Event Cinemas",
+              "source_url": "https://edsquare.shopping/store-directory/event-cinemas/"
+            },
+            {
+              "name": "iPlay",
+              "source_url": "https://edsquare.shopping/store-directory/iplay/"
+            }
+          ]
+        }
+      ],
+      "scope": "Published official centre directory. Listings include services and may include internal outlets or concessions.",
+      "coverage_limitations": [
+        "Directory-listed businesses have not all been independently checked for current trading.",
+        "Listing counts are not unique brands, occupied tenancies, frontage exposure or floor-area shares.",
+        "A listing may have more than one category; category counts must not be added as a total.",
+        "Source categories may be broad or inconsistent; unclassified and combined categories remain visible.",
+        "Optical competition uses the separately validated census, including accepted concessions missing from directories."
+      ],
+      "tenancy_count_share": null,
+      "floor_area_share": null,
+      "share_unavailable_reason": "No compatible occupied-tenancy or category-floor-area denominator.",
+      "source_urls": [
+        "https://edsquare.shopping/stores/"
+      ]
+    },
+    {
+      "place_id": "place-au-wa-karrinyup-shopping-centre",
+      "name": "Karrinyup Shopping Centre",
+      "research_status": "Directory captured; limitations retained",
+      "observed_at": "2026-10-08",
+      "source_effective_date": null,
+      "source_listing_count": 315,
+      "in_scope_non_optical_listings": 302,
+      "coming_soon_listings": 5,
+      "held_scope_listings": 0,
+      "outside_or_unresolved_address_listings": 0,
+      "rows_with_exceptions": 2,
+      "unclassified_listings": 2,
+      "categories": [
+        {
+          "name": "Fashion and accessories",
+          "listing_count": 117,
+          "examples": [
+            {
+              "name": "Adidas",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/adidas"
+            },
+            {
+              "name": "Aje",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/aje"
+            },
+            {
+              "name": "Angus & Coote",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/angus-coote"
+            }
+          ]
+        },
+        {
+          "name": "Health and beauty (combined source category)",
+          "listing_count": 59,
+          "examples": [
+            {
+              "name": "Aesop",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/aesop"
+            },
+            {
+              "name": "Afterglo Pilates",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/afterglo-pilates"
+            },
+            {
+              "name": "Alchemy Saunas",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/alchemy-saunas"
+            }
+          ]
+        },
+        {
+          "name": "Food and dining",
+          "listing_count": 57,
+          "examples": [
+            {
+              "name": "3 Panda's Noodle & Dumpling House",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/3-panda-s-noodle-dumpling-house"
+            },
+            {
+              "name": "Arirang Korean BBQ",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/arirang-korean-bbq"
+            },
+            {
+              "name": "Asian Fusion Delight",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/thaitan-thai-cuisine"
+            }
+          ]
+        },
+        {
+          "name": "Services",
+          "listing_count": 25,
+          "examples": [
+            {
+              "name": "ANZ",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/anz"
+            },
+            {
+              "name": "Australia Post",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/australia-post"
+            },
+            {
+              "name": "BUPA",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/bupa"
+            }
+          ]
+        },
+        {
+          "name": "Home and technology (combined source category)",
+          "listing_count": 19,
+          "examples": [
+            {
+              "name": "Adairs",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/adairs"
+            },
+            {
+              "name": "Bed Bath N' Table",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/bed-bath-n-table"
+            },
+            {
+              "name": "Coco Republic",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/coco-republic"
+            }
+          ]
+        },
+        {
+          "name": "Grocery and fresh food",
+          "listing_count": 14,
+          "examples": [
+            {
+              "name": "Aldi",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/aldi"
+            },
+            {
+              "name": "Bakers Delight",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/bakers-delight"
+            },
+            {
+              "name": "Breadtop",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/breadtop"
+            }
+          ]
+        },
+        {
+          "name": "Toys and hobbies",
+          "listing_count": 11,
+          "examples": [
+            {
+              "name": "David Jones",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/david-jones"
+            },
+            {
+              "name": "Games World",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/games-world"
+            },
+            {
+              "name": "Juno Kids",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/juno-kids"
+            }
+          ]
+        },
+        {
+          "name": "Books and stationery",
+          "listing_count": 7,
+          "examples": [
+            {
+              "name": "David Jones",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/david-jones"
+            },
+            {
+              "name": "Dymocks",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/dymocks"
+            },
+            {
+              "name": "Full Hand Lottery Kiosk",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/full-hand-lottery-kiosk"
+            }
+          ]
+        },
+        {
+          "name": "General retail",
+          "listing_count": 7,
+          "examples": [
+            {
+              "name": "David Jones",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/david-jones"
+            },
+            {
+              "name": "MiYu Japan",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/miyu-japan"
+            },
+            {
+              "name": "Mooii",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/mooii"
+            }
+          ]
+        },
+        {
+          "name": "Entertainment",
+          "listing_count": 5,
+          "examples": [
+            {
+              "name": "Archie Brothers",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/archie-brothers-cirque-electriq"
+            },
+            {
+              "name": "Hijinx Hotel",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/hijinx-hotel"
+            },
+            {
+              "name": "Holey Moley",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/holey-moley"
+            }
+          ]
+        },
+        {
+          "name": "Unclassified directory listing",
+          "listing_count": 2,
+          "examples": [
+            {
+              "name": "Alter it",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/alter-it"
+            },
+            {
+              "name": "Audika Hearing Clinic",
+              "source_url": "https://www.karrinyupcentre.com.au/stores-services/audika-hearing-clinic"
+            }
+          ]
+        }
+      ],
+      "scope": "Published official centre directory. Listings include services and may include internal outlets or concessions.",
+      "coverage_limitations": [
+        "Directory-listed businesses have not all been independently checked for current trading.",
+        "Listing counts are not unique brands, occupied tenancies, frontage exposure or floor-area shares.",
+        "A listing may have more than one category; category counts must not be added as a total.",
+        "Source categories may be broad or inconsistent; unclassified and combined categories remain visible.",
+        "Optical competition uses the separately validated census, including accepted concessions missing from directories."
+      ],
+      "tenancy_count_share": null,
+      "floor_area_share": null,
+      "share_unavailable_reason": "No compatible occupied-tenancy or category-floor-area denominator.",
+      "source_urls": [
+        "https://www.karrinyupcentre.com.au/stores-services"
+      ]
+    }
+  ]
+}

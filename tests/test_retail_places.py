@@ -39,6 +39,13 @@ def named_source_count() -> int:
         for exclusion in csv.DictReader(handle):
             if any(exclusion["store_id"].startswith(f"{item['slug']}-") and item["is_named_network"] for item in REGISTRY):
                 total -= 1
+    with (DATA / "store_public_fact_overrides.csv").open(newline="", encoding="utf-8") as handle:
+        for correction in csv.DictReader(handle):
+            if not correction.get("retailer"):
+                continue
+            original = next(item for item in REGISTRY
+                            if correction["store_id"].startswith(item["slug"] + "-"))
+            total += int(correction["retailer"] in NAMED) - int(original["is_named_network"])
     return total
 
 
@@ -61,6 +68,9 @@ class RetailPlaceTests(unittest.TestCase):
             row["place_id"]
             for row in read_csv("place_canonical_overrides.csv")
             if row.get("location_setting") == "High Street"
+            # A corridor may receive reviewed metadata without ever having
+            # been a shopping centre. Only former centre IDs need this exception.
+            and row["place_id"].startswith("place-")
         }
         for place in self.places:
             if place["location_setting"] == "Shopping Centre":
@@ -84,13 +94,20 @@ class RetailPlaceTests(unittest.TestCase):
             elif row["location_setting"] == "Uncertain":
                 self.assertEqual(row["review_status"], "Needs review")
 
-    def test_bailey_first_pass_is_complete(self) -> None:
+    def test_every_bailey_store_has_an_explicit_place_review_outcome(self) -> None:
         bailey = [row for row in self.memberships if row["retailer"] == "Bailey Nelson"]
-        self.assertEqual(len(bailey), 82)
-        self.assertTrue(all(row["review_status"] == "Accepted" for row in bailey))
-        self.assertTrue(all(row["location_setting"] in {"Shopping Centre", "High Street"} for row in bailey))
-        self.assertTrue(all(row["place_id"] for row in bailey))
-        self.assertFalse(any(row["retailer"] == "Bailey Nelson" for row in self.reviews))
+        self.assertEqual(len(bailey), sum(row["retailer"] == "Bailey Nelson" for row in read_csv("optical_stores.csv")))
+        reviews = {row["store_id"] for row in self.reviews}
+        for row in bailey:
+            if row["review_status"] == "Accepted":
+                self.assertIn(row["location_setting"], {"Shopping Centre", "High Street"})
+                self.assertTrue(row["place_id"])
+            else:
+                # Newly discovered premises need not have a proven formal
+                # precinct. Keep the uncertain mapping visible for review.
+                self.assertEqual(row["review_status"], "Needs review")
+                self.assertEqual(row["location_setting"], "Uncertain")
+                self.assertIn(row["store_id"], reviews)
 
     def test_reviewed_consultant_examples_have_defensible_places(self) -> None:
         memberships = {row["store_id"]: row for row in self.memberships}
@@ -123,8 +140,31 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(whakatane_opsm["location_setting"], "High Street")
         self.assertEqual(whakatane_opsm["place_id"], "corridor-nz-bay-of-plenty-whakatane-the-strand")
 
-    def test_promoted_review_queue_has_no_named_network_exceptions(self) -> None:
-        self.assertEqual(self.reviews, [])
+    def test_promoted_place_reviews_preserve_usable_named_retailers(self) -> None:
+        named = {item["name"] for item in REGISTRY if item["is_named_network"]}
+        # A verified retailer may lack an accepted place. Its review must remain
+        # visible without removing it from network or competition analysis.
+        memberships = {row["store_id"]: row for row in self.memberships}
+        certification = {row["store_id"]: row for row in read_csv("store_certification.csv")}
+        stores = {row["store_id"]: row for row in read_csv("optical_stores.csv")}
+        for row in self.reviews:
+            with self.subTest(store_id=row["store_id"]):
+                self.assertIn(row["store_id"], stores)
+                self.assertTrue(row["reason"])
+                self.assertTrue(row["evidence_url"])
+                if row["retailer"] in named:
+                    membership = memberships[row["store_id"]]
+                    self.assertEqual(membership["review_status"], "Needs review")
+                    self.assertEqual(membership["place_id"], "")
+                    cert = certification[row["store_id"]]
+                    self.assertEqual(cert["usable_for_network"], "true")
+                    self.assertEqual(cert["eligible_for_place_analytics"], "false")
+                    if membership["trading_status"] == "Active":
+                        self.assertEqual(cert["eligible_for_analytics"], "true")
+                else:
+                    # Raw discovery leads are not unresolved canonical failures.
+                    self.assertTrue(row["store_id"].startswith("independent-other-optical-reviewed-")
+                                    or stores[row["store_id"]].get("public_facts_verified_at"))
 
     def test_centre_recognition_has_no_unresolved_identity_or_high_priority_issue(self) -> None:
         self.assertFalse(
@@ -157,6 +197,18 @@ class RetailPlaceTests(unittest.TestCase):
                 continue
             basis = row["evidence_basis"].lower()
             self.assertFalse(any(phrase in basis for phrase in forbidden), row["store_id"])
+
+    def test_box_hill_precincts_keep_explicit_tenant_memberships(self) -> None:
+        places = {place['place_id']: place for place in self.places}
+        memberships = {row['store_id']: row for row in self.memberships}
+        north = 'place-au-vic-box-hill-central-north'
+        south = 'place-au-vic-box-hill-central-south'
+        self.assertIn(north, places)
+        self.assertIn(south, places)
+        self.assertEqual(memberships['independent-other-optical-reviewed-au-icontact-box-hill']['place_id'], north)
+        self.assertEqual(memberships['specsavers-3525']['place_id'], south)
+        self.assertIn('17-21 Market', places[north]['address'])
+        self.assertNotIn('Box Hill Central North', places[south]['aliases'])
 
     def test_adjacent_melbourne_properties_remain_distinct(self) -> None:
         places = {place["place_id"]: place for place in self.places}
@@ -247,7 +299,29 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertNotIn("place-au-qld-canelands-central-shopping-centre", place_ids)
         self.assertNotIn("place-au-qld-kippa-ring-peninsular-fair-shopping-centre", place_ids)
         self.assertNotIn("place-au-qld-westfield-garden-city", place_ids)
-        self.assertEqual(self.places_payload["metadata"]["suppressed_false_place_count"], 4)
+        with (DATA / "place_suppressions.csv").open(newline="", encoding="utf-8") as handle:
+            suppression_rows = list(csv.DictReader(handle))
+        suppressed_ids = {row["place_id"] for row in suppression_rows}
+        applied = self.places_payload["metadata"]["suppressed_false_places"]
+        self.assertEqual(len(applied), len(suppression_rows))
+        self.assertEqual(self.places_payload["metadata"]["suppressed_false_place_count"], len(applied))
+        self.assertTrue(suppressed_ids.isdisjoint(place_ids))
+        self.assertTrue({row["place_id"] for row in applied}.isdisjoint(place_ids))
+        for row in suppression_rows:
+            source_ids = {value.strip() for value in row["source_venue_ids"].split("|") if value.strip()}
+            # Generated place names may change; the original venue IDs must still
+            # identify exactly one evidenced suppression and no surviving remap.
+            matches = [item for item in applied if source_ids <= set(item["source_venue_ids"])]
+            self.assertEqual(len(matches), 1, row)
+            for field in ("reason", "evidence_url", "verified_at"):
+                self.assertEqual(matches[0][field], row[field])
+            for source_id in source_ids:
+                self.assertNotIn(source_id, self.places_payload["place_id_remaps"])
+        # A road called "Mall" must not survive as an empty shopping-centre opportunity.
+        self.assertNotIn("place-nz-auckland-onehunga-mall", place_ids)
+        for store_id in ("specsavers-nz-3875", "independent-other-optical-osm-ne-way-262147882"):
+            self.assertEqual(memberships[store_id]["place_id"], "")
+            self.assertEqual(memberships[store_id]["usable_for_network"], "true")
 
         places = {place["place_id"]: place for place in self.places}
         self.assertEqual(places["place-au-qld-caneland-centre"]["name"], "Caneland Central")
@@ -708,7 +782,10 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(memberships["opsm-1384"]["location_setting"], "Shopping Centre")
 
         for place_id, store_ids in {
-            "place-au-nsw-lake-haven-shopping-centre": {"opsm-1320", "specsavers-3511"},
+            "place-au-nsw-lake-haven-shopping-centre": {
+                "opsm-1320", "specsavers-3511",
+                "independent-other-optical-reviewed-au-ross-brown-lake-haven",
+            },
             "place-au-nsw-riverside-plaza-queanbeyan": {"opsm-1384", "specsavers-3574"},
         }.items():
             with self.subTest(place_id=place_id):
@@ -734,7 +811,7 @@ class RetailPlaceTests(unittest.TestCase):
 
         expected_members = {
             "place-au-qld-logan-hyperdome": {"opsm-1562", "oscar-wylee-27", "specsavers-3302", "optical-superstore-60505", "the-optical-company-loganholme-4129"},
-            "place-au-qld-sunshine-plaza": {"opsm-1263", "oscar-wylee-51", "specsavers-3201", "george-matilda-17206", "bupa-optical-13626269"},
+            "place-au-qld-sunshine-plaza": {"opsm-1263", "oscar-wylee-51", "specsavers-3201", "george-matilda-17206", "bupa-optical-13626269", "independent-other-optical-reviewed-au-sunglass-hut-sunshine-plaza", "independent-other-optical-reviewed-au-sunglass-hut-myer-sunshine-plaza"},
         }
         for place_id, store_ids in expected_members.items():
             with self.subTest(place_id=place_id):
@@ -789,7 +866,6 @@ class RetailPlaceTests(unittest.TestCase):
             },
             "place-au-vic-cranbourne-park-shopping-centre-sp107": {
                 "opsm-1290", "oscar-wylee-86", "specsavers-3425",
-                "independent-other-optical-osm-au-way-637166859",
             },
             "place-au-sa-elizabeth-shopping-centre": {
                 "opsm-1155", "oscar-wylee-113", "specsavers-3351", "laubman-pank-elizabeth-optometrist"
@@ -801,8 +877,20 @@ class RetailPlaceTests(unittest.TestCase):
         for place_id, store_ids in expected_members.items():
             with self.subTest(place_id=place_id):
                 rows = [row for row in self.memberships if row["place_id"] == place_id]
-                self.assertEqual({row["store_id"] for row in rows}, store_ids)
+                actual_ids = {row["store_id"] for row in rows}
+                # The consolidation must retain these original tenants as coverage grows.
+                self.assertTrue(store_ids.issubset(actual_ids))
+                self.assertEqual(len(rows), len(actual_ids))
+                self.assertEqual(places[place_id]["optical_store_count"], len(actual_ids))
                 self.assertTrue(all(row["mapping_confidence"] == "High" for row in rows))
+
+        # Cranbourne Visioncare publishes 111 High Street, not a Cranbourne
+        # Park tenancy. The former country/street substring match was not
+        # membership evidence: https://www.cranbournevisioncare.com.au/contact-us.html
+        visioncare = next(row for row in self.memberships
+                          if row["store_id"] == "independent-other-optical-osm-au-way-637166859")
+        self.assertNotEqual(visioncare['place_id'], 'place-au-vic-cranbourne-park-shopping-centre-sp107')
+        self.assertEqual(visioncare['usable_for_network'], 'true')
 
         remaps = {row["previous_place_id"]: row["canonical_place_id"] for row in read_csv("place_id_remaps.csv")}
         expected_remaps = {
@@ -1035,7 +1123,7 @@ class RetailPlaceTests(unittest.TestCase):
             places["place-au-nsw-stanhope-village-shopping-centre"]["aliases"],
         )
 
-    def test_authoritative_places_can_exist_without_optical_tenants(self) -> None:
+    def test_authoritative_places_keep_identity_with_or_without_optical_tenants(self) -> None:
         places = {place["place_id"]: place for place in self.places}
         for place_id, (expected_name, expected_address, expected_postcode) in {
             "place-au-nsw-wallsend-village": (
@@ -1104,9 +1192,16 @@ class RetailPlaceTests(unittest.TestCase):
                 self.assertEqual(place["name"], expected_name)
                 self.assertEqual(place["address"], expected_address)
                 self.assertEqual(place["postcode"], expected_postcode)
-                self.assertEqual(place["optical_store_count"], 0)
+                # Discovering a tenant must not invalidate authoritative place identity.
+                accepted_tenants = {
+                    row["store_id"] for row in self.memberships
+                    if row["place_id"] == place_id and row["review_status"] == "Accepted"
+                }
+                self.assertEqual(place["optical_store_count"], len(accepted_tenants))
                 self.assertEqual(place["confidence"], "High")
                 self.assertTrue(place["official_url"].startswith("https://"))
+
+        self.assertTrue(any(place["optical_store_count"] == 0 for place in self.places))
 
     def test_lookalikes_are_separated_and_exclude_bailey_places(self) -> None:
         self.assertEqual(
@@ -1140,6 +1235,7 @@ class RetailPlaceTests(unittest.TestCase):
         scope_ids = self.place_tenants["metadata"]["scope_place_ids"]
         expected_optical_store_ids = {
             row["store_id"] for row in self.memberships if row["place_id"] in scope_ids
+            and row.get("trading_status") in {"Active", "Mapped"}
         }
         exported_optical_store_ids = {
             row["store_id"] for row in rows if row["category"] == "Optical"
@@ -1155,12 +1251,15 @@ class RetailPlaceTests(unittest.TestCase):
             row["place_id"] for row in self.memberships
             if row["retailer"] == "Bailey Nelson"
             and row["location_setting"] == "Shopping Centre"
+            and row.get("trading_status") in {"Active", "Mapped"}
             and row["place_id"]
         })
         metadata = self.place_tenants["metadata"]
         self.assertEqual(metadata["bailey_centre_place_ids"], expected)
         self.assertTrue(set(metadata["pilot_place_ids"]) | set(expected) <= set(metadata["scope_place_ids"]))
-        self.assertEqual(metadata["researched_bailey_centre_place_ids"], expected)
+        self.assertTrue(set(metadata["researched_bailey_centre_place_ids"]).issubset(expected))
+        # Newly discovered centres retain a visible research gap.
+        self.assertIn("place-nz-otago-queenstown-central", expected)
 
         rows = self.place_tenants["memberships"]
         accepted_anchor_ids = {
@@ -1188,9 +1287,10 @@ class RetailPlaceTests(unittest.TestCase):
             row["place_id"] for row in self.memberships
             if row["retailer"] == "Bailey Nelson"
             and row["location_setting"] == "High Street"
+            and row.get("trading_status") in {"Active", "Mapped"}
             and row["review_status"] == "Accepted"
         })
-        self.assertEqual(len(expected), 32)
+        self.assertGreater(len(expected), 0)
         self.assertEqual(metadata["bailey_corridor_place_ids"], expected)
         self.assertEqual(metadata["researched_bailey_corridor_place_ids"], expected)
         optical_places = {

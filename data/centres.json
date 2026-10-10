@@ -1,8 +1,66 @@
 {
   "metadata": {
-    "centre_count": 552,
+    "centre_count": 550,
     "enriched_count": 2,
-    "generated_at": "2026-09-03T09:16:32.874949+00:00"
+    "generated_at": "2026-09-27T08:26:46.584880+00:00",
+    "incremental_coordinate_review": {
+      "centre_id": "nt-casuarina-square",
+      "checked_at": "2026-10-02T15:59:16.255509+00:00",
+      "basis": "Recomputed existing derived reference point from explicitly accepted current tenant venue IDs after branch-coordinate repairs; not surveyed centre geometry or a membership inference."
+    },
+    "census_incremental_reviews": [
+      {
+        "batch": "2026-10-02/batch-14",
+        "checked_at": "2026-10-02T16:30:29.674090+00:00",
+        "centre_ids": [
+          "nsw-shellharbour-stockland",
+          "qld-bay-hervey-stockland",
+          "qld-capalaba-park",
+          "sa-hollywood-plaza"
+        ],
+        "basis": "Recompute existing affected source-centre tenant summaries after explicitly evidenced relocations and premises-point repair. New accepted centres are defined by store-place evidence overrides. Derived reference points are approximate, not surveyed geometry."
+      },
+      {
+        "batch": "2026-10-02/batch-15",
+        "checked_at": "2026-10-02T17:04:36.283698+00:00",
+        "centre_ids": [
+          "nt-alice-plaza",
+          "nt-gateway",
+          "qld-arana-hills-plaza",
+          "qld-australia-fair",
+          "qld-bay-deception-mkt-square",
+          "qld-canelands-mackay",
+          "qld-castletown-townsville",
+          "qld-central-grand",
+          "qld-elanora-pines-the",
+          "qld-fair-kippa-peninsular-ring",
+          "qld-gravatt-mt-plaza",
+          "qld-hyperdome",
+          "qld-inala-plaza",
+          "qld-marketplace-road-robinson",
+          "qld-morayfield",
+          "qld-rockhampton-stockland",
+          "qld-square-taigum",
+          "sa-mitcham-square",
+          "sa-southgate",
+          "vic-city-knox",
+          "vic-gardens-waverley"
+        ],
+        "removed_unsupported_source_centres": [
+          "nsw-junction-st",
+          "wa-business-gateway-the"
+        ],
+        "basis": "Recompute affected existing source-centre summaries after branch repairs. Remove two unsupported shopping-centre entities generated solely from a road name and a business-centre address; their original source rows remain archived. No operator premises or raw store identities are deleted. Derived reference points remain approximate."
+      },
+      {
+        "batch": "2026-10-02/batch-16",
+        "checked_at": "2026-10-02T17:40:48.511703+00:00",
+        "centre_ids": [
+          "auckland-lynnmall"
+        ],
+        "basis": "Recompute existing affected source-centre tenant summaries after explicitly evidenced relocations and premises-point repair. New accepted centres are defined by store-place evidence overrides. Derived reference points are approximate, not surveyed geometry."
+      }
+    ]
   },
   "centres": [
     {
@@ -368,16 +426,17 @@
     },
     {
       "centre_id": "auckland-lynnmall",
-      "name": "LynnMall Shopping Centre",
+      "name": "LynnMall",
       "country": "New Zealand",
       "state": "Auckland",
       "suburb": "New Lynn",
-      "latitude": -36.90767,
-      "longitude": 174.68604,
+      "latitude": -36.907834,
+      "longitude": 174.685208,
       "retailers": [
+        "Independent / Other optical",
         "Specsavers"
       ],
-      "optical_store_count": 1,
+      "optical_store_count": 2,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -699,13 +758,12 @@
       "country": "New Zealand",
       "state": "Canterbury",
       "suburb": "Christchurch",
-      "latitude": -43.530876,
-      "longitude": 172.597717,
+      "latitude": -43.530746,
+      "longitude": 172.59802,
       "retailers": [
-        "Oscar Wylee",
         "Specsavers"
       ],
-      "optical_store_count": 2,
+      "optical_store_count": 1,
       "owner": "",
       "manager": "Scentre Group",
       "centre_type": "",
@@ -2970,33 +3028,6 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "nsw-junction-st",
-      "name": "Junction St",
-      "country": "Australia",
-      "state": "NSW",
-      "suburb": "Nowra",
-      "latitude": -34.874256,
-      "longitude": 150.602129,
-      "retailers": [
-        "Optical Superstore"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "",
-      "metrics_date": "",
-      "confidence": "Base",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
       "centre_id": "nsw-kareela-village",
       "name": "Kareela Village",
       "country": "Australia",
@@ -4402,18 +4433,17 @@
     },
     {
       "centre_id": "nsw-shellharbour-stockland",
-      "name": "Shellharbour \u2013 Stockland",
+      "name": "Shellharbour Stockland",
       "country": "Australia",
       "state": "NSW",
-      "suburb": "Shellharbour",
-      "latitude": -34.565289,
-      "longitude": 150.83756,
+      "suburb": "Shellharbour City",
+      "latitude": -34.56426,
+      "longitude": 150.838164,
       "retailers": [
-        "Optical Superstore",
         "Oscar Wylee",
         "Specsavers"
       ],
-      "optical_store_count": 3,
+      "optical_store_count": 2,
       "owner": "",
       "manager": "Stockland",
       "centre_type": "",
@@ -4819,8 +4849,8 @@
       "country": "Australia",
       "state": "NT",
       "suburb": "Alice Springs",
-      "latitude": -23.698236,
-      "longitude": 133.883058,
+      "latitude": -23.697606,
+      "longitude": 133.883383,
       "retailers": [
         "Optical Superstore"
       ],
@@ -4846,14 +4876,16 @@
       "country": "Australia",
       "state": "NT",
       "suburb": "Casuarina",
-      "latitude": -12.375368,
-      "longitude": 130.869964,
+      "latitude": -12.375327,
+      "longitude": 130.881199,
       "retailers": [
+        "Independent / Other optical",
+        "OPSM",
         "Optical Superstore",
         "Oscar Wylee",
         "Specsavers"
       ],
-      "optical_store_count": 3,
+      "optical_store_count": 6,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -4875,12 +4907,13 @@
       "country": "Australia",
       "state": "NT",
       "suburb": "Palmerston City",
-      "latitude": -12.472263,
-      "longitude": 130.982933,
+      "latitude": -12.470915,
+      "longitude": 130.983134,
       "retailers": [
+        "Independent / Other optical",
         "Optical Superstore"
       ],
-      "optical_store_count": 1,
+      "optical_store_count": 2,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -5253,8 +5286,8 @@
       "country": "Australia",
       "state": "QLD",
       "suburb": "Arana Hills",
-      "latitude": -27.411966,
-      "longitude": 152.954983,
+      "latitude": -27.399448,
+      "longitude": 152.958454,
       "retailers": [
         "Optical Superstore"
       ],
@@ -5361,8 +5394,8 @@
       "country": "Australia",
       "state": "QLD",
       "suburb": "Southport",
-      "latitude": -27.96752,
-      "longitude": 153.411564,
+      "latitude": -27.968522,
+      "longitude": 153.415596,
       "retailers": [
         "George & Matilda",
         "Optical Superstore",
@@ -5390,8 +5423,8 @@
       "country": "Australia",
       "state": "QLD",
       "suburb": "Deception Bay",
-      "latitude": -27.185932,
-      "longitude": 153.020645,
+      "latitude": -27.194256,
+      "longitude": 153.029352,
       "retailers": [
         "Optical Superstore"
       ],
@@ -5413,15 +5446,15 @@
     },
     {
       "centre_id": "qld-bay-hervey-stockland",
-      "name": "Stocklands Hervey Bay",
+      "name": "Stockland Hervey Bay",
       "country": "Australia",
       "state": "QLD",
       "suburb": "Hervey Bay",
       "latitude": -25.290052,
       "longitude": 152.835074,
       "retailers": [
+        "Independent / Other optical",
         "OPSM",
-        "Optical Superstore",
         "Specsavers"
       ],
       "optical_store_count": 3,
@@ -5554,12 +5587,13 @@
       "country": "Australia",
       "state": "QLD",
       "suburb": "Beenleigh",
-      "latitude": -27.717701,
-      "longitude": 153.20769,
+      "latitude": -27.71772,
+      "longitude": 153.207651,
       "retailers": [
+        "Independent / Other optical",
         "Specsavers"
       ],
-      "optical_store_count": 1,
+      "optical_store_count": 2,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -6096,7 +6130,7 @@
     },
     {
       "centre_id": "qld-canelands-mackay",
-      "name": "Mackay \u2013 Canelands Shopping Centre",
+      "name": "Caneland Central",
       "country": "Australia",
       "state": "QLD",
       "suburb": "Mackay",
@@ -6155,14 +6189,13 @@
       "country": "Australia",
       "state": "QLD",
       "suburb": "Capalaba",
-      "latitude": -27.525508,
-      "longitude": 153.192552,
+      "latitude": -27.52608,
+      "longitude": 153.193403,
       "retailers": [
         "Laubman & Pank",
-        "Optical Superstore",
         "Specsavers"
       ],
-      "optical_store_count": 3,
+      "optical_store_count": 2,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -6267,7 +6300,7 @@
     },
     {
       "centre_id": "qld-castletown-townsville",
-      "name": "Townsville \u2013 Castletown Shopping Centre",
+      "name": "Castletown",
       "country": "Australia",
       "state": "QLD",
       "suburb": "Hyde Park",
@@ -6298,13 +6331,15 @@
       "country": "Australia",
       "state": "QLD",
       "suburb": "Toowoomba",
-      "latitude": -27.560932,
-      "longitude": 151.950085,
+      "latitude": -27.561,
+      "longitude": 151.949602,
       "retailers": [
         "Bupa Optical",
-        "Laubman & Pank"
+        "Independent / Other optical",
+        "Laubman & Pank",
+        "Optical Superstore"
       ],
-      "optical_store_count": 3,
+      "optical_store_count": 5,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -6788,12 +6823,12 @@
     },
     {
       "centre_id": "qld-elanora-pines-the",
-      "name": "Elanora \u2013 The Pines Shopping Centre",
+      "name": "The Pines Shopping Centre",
       "country": "Australia",
       "state": "QLD",
-      "suburb": "Elenora",
-      "latitude": -28.133942,
-      "longitude": 153.468128,
+      "suburb": "Elanora",
+      "latitude": -28.133483,
+      "longitude": 153.468263,
       "retailers": [
         "Optical Superstore"
       ],
@@ -6815,12 +6850,12 @@
     },
     {
       "centre_id": "qld-fair-kippa-peninsular-ring",
-      "name": "Kippa-Ring \u2013 Peninsular Fair Shopping Centre",
+      "name": "Peninsula Fair",
       "country": "Australia",
       "state": "QLD",
       "suburb": "Kippa-Ring",
-      "latitude": -27.22699,
-      "longitude": 153.08905,
+      "latitude": -27.226175,
+      "longitude": 153.087904,
       "retailers": [
         "Optical Superstore"
       ],
@@ -6957,8 +6992,8 @@
       "country": "Australia",
       "state": "QLD",
       "suburb": "Mount Gravatt",
-      "latitude": -27.539167,
-      "longitude": 153.082251,
+      "latitude": -27.53906,
+      "longitude": 153.0827,
       "retailers": [
         "OPSM",
         "Optical Superstore"
@@ -7147,12 +7182,12 @@
     },
     {
       "centre_id": "qld-hyperdome",
-      "name": "Hyperdome Shopping Centre",
+      "name": "Hyperdome",
       "country": "Australia",
       "state": "QLD",
       "suburb": "Loganholme",
-      "latitude": -27.658234,
-      "longitude": 153.170601,
+      "latitude": -27.657844,
+      "longitude": 153.171221,
       "retailers": [
         "Optical Superstore"
       ],
@@ -7229,10 +7264,10 @@
     },
     {
       "centre_id": "qld-inala-plaza",
-      "name": "Inala Plaza Shopping Centre",
+      "name": "Inala Plaza",
       "country": "Australia",
       "state": "QLD",
-      "suburb": "156 Inala Avenue,",
+      "suburb": "Inala",
       "latitude": -27.598165,
       "longitude": 152.974013,
       "retailers": [
@@ -7484,8 +7519,8 @@
       "country": "Australia",
       "state": "QLD",
       "suburb": "Aspley",
-      "latitude": -27.385023,
-      "longitude": 153.032038,
+      "latitude": -27.364474,
+      "longitude": 153.023882,
       "retailers": [
         "Optical Superstore"
       ],
@@ -7592,15 +7627,16 @@
       "country": "Australia",
       "state": "QLD",
       "suburb": "Morayfield",
-      "latitude": -27.103373,
-      "longitude": 152.949544,
+      "latitude": -27.103411,
+      "longitude": 152.949526,
       "retailers": [
+        "Independent / Other optical",
         "Laubman & Pank",
         "Optical Superstore",
         "Oscar Wylee",
         "Specsavers"
       ],
-      "optical_store_count": 4,
+      "optical_store_count": 5,
       "owner": "",
       "manager": "",
       "centre_type": "",
@@ -8196,15 +8232,16 @@
       "country": "Australia",
       "state": "QLD",
       "suburb": "North Rockhampton",
-      "latitude": -23.359176,
-      "longitude": 150.522131,
+      "latitude": -23.358063,
+      "longitude": 150.522285,
       "retailers": [
+        "Independent / Other optical",
         "Laubman & Pank",
         "Optical Superstore",
         "Oscar Wylee",
         "Specsavers"
       ],
-      "optical_store_count": 4,
+      "optical_store_count": 5,
       "owner": "",
       "manager": "Stockland",
       "centre_type": "",
@@ -8280,8 +8317,8 @@
       "country": "Australia",
       "state": "QLD",
       "suburb": "Taigum",
-      "latitude": -27.350632,
-      "longitude": 153.048195,
+      "latitude": -27.350259,
+      "longitude": 153.048018,
       "retailers": [
         "Optical Superstore",
         "Specsavers"
@@ -8636,8 +8673,8 @@
       "country": "Australia",
       "state": "QLD",
       "suburb": "Gladstone",
-      "latitude": -23.872819,
-      "longitude": 151.256466,
+      "latitude": -23.870971,
+      "longitude": 151.241859,
       "retailers": [
         "Independent / Other optical"
       ],
@@ -8712,13 +8749,13 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "sa-aldinga",
-      "name": "Aldinga Shopping Centre",
+      "centre_id": "sa-aldinga-central",
+      "name": "Aldinga Central Shopping Centre",
       "country": "Australia",
       "state": "SA",
-      "suburb": "Aldinga Beach",
-      "latitude": -35.278148,
-      "longitude": 138.476819,
+      "suburb": "Aldinga",
+      "latitude": -35.277502,
+      "longitude": 138.459894,
       "retailers": [
         "Independent / Other optical"
       ],
@@ -9341,8 +9378,8 @@
       "country": "Australia",
       "state": "SA",
       "suburb": "Salisbury Downs",
-      "latitude": -34.767852,
-      "longitude": 138.624231,
+      "latitude": -34.76786,
+      "longitude": 138.624962,
       "retailers": [
         "Optical Superstore"
       ],
@@ -9508,8 +9545,8 @@
       "country": "Australia",
       "state": "SA",
       "suburb": "Torrens Park",
-      "latitude": -34.975528,
-      "longitude": 138.610544,
+      "latitude": -34.976044,
+      "longitude": 138.610705,
       "retailers": [
         "Optical Superstore"
       ],
@@ -9860,12 +9897,12 @@
     },
     {
       "centre_id": "sa-southgate",
-      "name": "Southgate Shopping Centre",
+      "name": "Southgate Plaza",
       "country": "Australia",
       "state": "SA",
       "suburb": "Morphett Vale",
-      "latitude": -35.106674,
-      "longitude": 138.520877,
+      "latitude": -35.106143,
+      "longitude": 138.520595,
       "retailers": [
         "Optical Superstore"
       ],
@@ -11390,19 +11427,19 @@
     },
     {
       "centre_id": "vic-city-knox",
-      "name": "Knox City Shopping Centre",
+      "name": "Westfield Knox Shopping Centre",
       "country": "Australia",
       "state": "VIC",
       "suburb": "Wantirna South",
-      "latitude": -37.8686,
-      "longitude": 145.239323,
+      "latitude": -37.868687,
+      "longitude": 145.23892,
       "retailers": [
         "Optical Superstore",
         "Specsavers"
       ],
       "optical_store_count": 2,
       "owner": "",
-      "manager": "",
+      "manager": "Scentre Group",
       "centre_type": "",
       "gla_sqm": null,
       "annual_visits": null,
@@ -11411,9 +11448,9 @@
       "tenancy_count": null,
       "redevelopment_activity": "",
       "leasing_contact": "",
-      "public_url": "",
+      "public_url": "https://www.westfield.com.au/",
       "metrics_date": "",
-      "confidence": "Base",
+      "confidence": "Medium",
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
@@ -11801,13 +11838,13 @@
       "source_basis": "Centre entity derived from reviewed store venue IDs"
     },
     {
-      "centre_id": "vic-eden-rise",
-      "name": "Eden Rise Shopping Centre",
+      "centre_id": "vic-eden-rise-village",
+      "name": "Eden Rise Village",
       "country": "Australia",
       "state": "VIC",
       "suburb": "Berwick",
-      "latitude": -38.030918,
-      "longitude": 145.346115,
+      "latitude": -38.061651,
+      "longitude": 145.339647,
       "retailers": [
         "Independent / Other optical"
       ],
@@ -12023,8 +12060,8 @@
       "country": "Australia",
       "state": "VIC",
       "suburb": "Mulgrave",
-      "latitude": -37.936234,
-      "longitude": 145.190828,
+      "latitude": -37.935723,
+      "longitude": 145.189759,
       "retailers": [
         "Optical Superstore",
         "Specsavers"
@@ -13011,8 +13048,8 @@
       "country": "Australia",
       "state": "VIC",
       "suburb": "Wallan",
-      "latitude": -37.412033,
-      "longitude": 144.978666,
+      "latitude": -37.411547,
+      "longitude": 144.978644,
       "retailers": [
         "Independent / Other optical"
       ],
@@ -13640,33 +13677,6 @@
       "longitude": 115.66005,
       "retailers": [
         "OPSM"
-      ],
-      "optical_store_count": 1,
-      "owner": "",
-      "manager": "",
-      "centre_type": "",
-      "gla_sqm": null,
-      "annual_visits": null,
-      "trade_area_population": null,
-      "anchors": [],
-      "tenancy_count": null,
-      "redevelopment_activity": "",
-      "leasing_contact": "",
-      "public_url": "",
-      "metrics_date": "",
-      "confidence": "Base",
-      "source_basis": "Centre entity derived from reviewed store venue IDs"
-    },
-    {
-      "centre_id": "wa-business-gateway-the",
-      "name": "The Gateway Business Centre",
-      "country": "Australia",
-      "state": "WA",
-      "suburb": "Booragoon",
-      "latitude": -32.03522,
-      "longitude": 115.833705,
-      "retailers": [
-        "Optical Superstore"
       ],
       "optical_store_count": 1,
       "owner": "",

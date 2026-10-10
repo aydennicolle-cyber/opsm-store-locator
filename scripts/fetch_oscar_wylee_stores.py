@@ -114,6 +114,7 @@ def clean_store(item: dict) -> dict:
         full_address, city, state, postcode = address_parts(item.get("address", ""))
     location = item.get("Latlng") or {}
     official_url = urllib.parse.urljoin(LIST_URL, item.get("storeUrl", ""))
+    official_url = official_url.replace("/locations/locations/", "/locations/")
     return {
         "name": tidy(item.get("name", "")),
         "id": store_id,

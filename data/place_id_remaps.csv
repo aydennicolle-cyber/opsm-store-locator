@@ -1,29 +1,46 @@
 previous_place_id,canonical_place_id,reason
 act-belconnen-westfield,place-au-act-westfield-belconnen,Canonical centre consolidation
 act-canberra,place-au-act-canberra-centre,Canonical centre consolidation
+act-cooleman-court,place-au-act-cooleman-court,Canonical centre consolidation
 act-m,place-au-act-m-centre,Canonical centre consolidation
 act-point-south,place-au-act-south-point-shopping-centre,Canonical centre consolidation
 act-square-tuggeranong,place-au-act-tuggeranong-square,Canonical centre consolidation
 act-westfield-woden,place-au-act-westfield-woden,Canonical centre consolidation
 auckland-albany-westfield,place-nz-auckland-westfield-albany,Canonical centre consolidation
+auckland-auckland-dress-smart,place-nz-auckland-dress-smart-auckland,Canonical centre consolidation
 auckland-botany-town,place-nz-auckland-botany-town-centre,Canonical centre consolidation
 auckland-city-manukau-westfield,place-nz-auckland-manukau-westfield,Canonical centre consolidation
+auckland-eastridge,place-nz-auckland-eastridge-shopping-centre,Canonical centre consolidation
 auckland-glenfield,place-nz-auckland-glenfield-mall,Canonical centre consolidation
 auckland-lukes-st-westfield,place-nz-auckland-westfield-st-lukes,Canonical centre consolidation
 auckland-lynn,place-nz-auckland-lynnmall-shopping-centre,Canonical centre consolidation
 auckland-lynnmall,place-nz-auckland-lynnmall-shopping-centre,Canonical centre consolidation
 auckland-manukau-westfield,place-nz-auckland-manukau-westfield,Canonical centre consolidation
+auckland-milford,place-nz-auckland-milford-centre,Canonical centre consolidation
 auckland-newmarket-westfield,place-nz-auckland-newmarket-westfield,Canonical centre consolidation
 auckland-northwest,place-nz-auckland-northwest-shopping-centre,Canonical centre consolidation
-auckland-onehunga,place-nz-auckland-onehunga-mall,Canonical centre consolidation
 auckland-ormiston-town,place-nz-auckland-ormiston-town-centre,Canonical centre consolidation
 auckland-park-sylvia,place-nz-auckland-sylvia-park-mall,Canonical centre consolidation
 auckland-waitakere-westcity,place-nz-auckland-westcity-waitakere-shopping-centre,Canonical centre consolidation
 bay-of-plenty-bayfair,place-nz-bay-of-plenty-bayfair-shopping-centre,Canonical centre consolidation
+canterbury-barrington,place-nz-canterbury-barrington,Canonical centre consolidation
 canterbury-hornby-hub-the,place-nz-canterbury-the-hub-hornby-mall,Canonical centre consolidation
 canterbury-northlands,place-nz-canterbury-northlands-mall,Canonical centre consolidation
 canterbury-palms-the,place-nz-canterbury-the-palms-shopping-centre,Canonical centre consolidation
 canterbury-riccarton-westfield,place-nz-canterbury-riccarton-westfield,Canonical centre consolidation
+corridor-au-nsw-bankstown-bankstown-city-plaza,place-au-nsw-bankstown-city-plaza,Evidence-backed place identity consolidation
+corridor-au-nsw-charlestown-pacific-highway,corridor-au-nsw-charlestown-pacific-highway-2,Evidence-backed place identity consolidation
+corridor-au-nsw-cronulla-cronulla-mall,place-au-nsw-cronulla-mall,Evidence-backed place identity consolidation
+corridor-au-nsw-oran-park-oran-park-drive-1,place-au-unknown-oran-park-podium,Evidence-backed place identity consolidation
+corridor-au-nsw-oran-park-oran-park-drive-2,place-au-unknown-oran-park-podium,Evidence-backed place identity consolidation
+corridor-au-vic-camberwell-burwood-village,place-au-vic-toorak-road-burwood-village,Evidence-backed place identity consolidation
+corridor-au-vic-vic-bay-street,corridor-au-vic-port-melbourne-bay-street,Evidence-backed place identity consolidation
+corridor-au-vic-vic-clarendon-street,corridor-au-vic-south-melbourne-clarendon-street,Evidence-backed place identity consolidation
+corridor-au-vic-vic-high-street-2,corridor-au-vic-vic-high-street,Evidence-backed place identity consolidation
+corridor-nz-hawke-s-bay-napier-hastings-street,corridor-nz-hawke-s-bay-hawke-s-bay-hastings-street,Evidence-backed place identity consolidation
+corridor-nz-otago-dunedin-king-edward-street,corridor-nz-otago-dunedin-king-edward-street-1,Evidence-backed place identity consolidation
+corridor-nz-otago-dunedin-king-edward-street-2,corridor-nz-otago-dunedin-king-edward-street-1,Evidence-backed place identity consolidation
+corridor-nz-tasman-richmond-queen-street,corridor-nz-tasman-tasman-queen-street,Evidence-backed place identity consolidation
 corridor-nz-wellington-te-aro-cuba-street,place-nz-wellington-cnr-cuba-mall-and-dixon-street,Evidence-backed place identity consolidation
 manawatu-whanganui-levin,place-nz-manawatu-whanganui-levin-shopping-centre,Canonical centre consolidation
 manawatu-whanganui-north-palmerston-plaza-the,place-nz-manawatu-whanganui-the-plaza-palmerston-north,Canonical centre consolidation
@@ -34,16 +51,22 @@ nelson-richmond,place-nz-tasman-richmond-mall,Canonical centre consolidation
 northland-butler-john,place-nz-northland-john-butler-centre,Canonical centre consolidation
 nsw-109-129-2112-blaxland-city-nsw-road-ryde-top,place-au-nsw-top-ryde-city-shopping-centre,Canonical centre consolidation
 nsw-2-lv-miranda-westfield,place-au-nsw-westfield-miranda,Canonical centre consolidation
+nsw-2vm-arcade,place-au-nsw-2vm-arcade,Canonical centre consolidation
 nsw-alstonville-plaza,place-au-nsw-alstonville-plaza,Canonical centre consolidation
 nsw-arcade-moss-vale,place-au-nsw-moss-vale-arcade,Canonical centre consolidation
+nsw-arcade-pottsville-the,place-au-nsw-the-arcade-pottsville,Canonical centre consolidation
 nsw-arcade-strand-the,place-au-nsw-the-strand-arcade,Canonical centre consolidation
 nsw-ashfield,place-au-nsw-ashfield-mall,Canonical centre consolidation
 nsw-balgowlah,place-au-nsw-balgowlah-shopping-centre,Canonical centre consolidation
+nsw-ballina-fair,place-au-unknown-ballina-fair,Canonical centre consolidation
 nsw-bankstown-city-plaza,place-au-nsw-bankstown-city-plaza,Canonical centre consolidation
 nsw-bass-hill-plaza,place-au-nsw-bass-hill-plaza,Canonical centre consolidation
 nsw-bateau-bay-square,place-au-nsw-bateau-bay-square,Canonical centre consolidation
+nsw-batemans-bay-village,place-au-nsw-village-centre-batemans-bay,Canonical centre consolidation
 nsw-bathurst-city,place-au-nsw-bathurst-city-centre,Canonical centre consolidation
+nsw-bay-central,place-au-unknown-bay-central,Canonical centre consolidation
 nsw-bay-village-warners,place-au-nsw-warners-bay-village,Canonical centre consolidation
+nsw-beach-park-plaza,place-au-nsw-park-beach-plaza,Canonical centre consolidation
 nsw-belmont-citi,place-au-nsw-belmont-citi-centre,Canonical centre consolidation
 nsw-belmore-the,place-au-nsw-the-belmore-centre,Canonical centre consolidation
 nsw-blacktown-westpoint,place-au-nsw-westpoint-shopping-centre,Canonical centre consolidation
@@ -52,17 +75,25 @@ nsw-bondi-junction,place-au-nsw-bondi-junction-westfield,Canonical centre consol
 nsw-bondi-junction-westfield,place-au-nsw-bondi-junction-westfield,Canonical centre consolidation
 nsw-bonnyrigg-plaza,place-au-nsw-bonnyrigg-plaza,Canonical centre consolidation
 nsw-broadway,place-au-nsw-broadway-shopping-centre,Canonical centre consolidation
+nsw-burwood-plaza,place-au-nsw-burwood-plaza,Canonical centre consolidation
 nsw-burwood-westfield,place-au-nsw-westfield-burwood,Canonical centre consolidation
+nsw-campbelltown,place-au-unknown-campbelltown-mall,Canonical centre consolidation
+nsw-carlingford-court,place-au-nsw-carlingford-court,Canonical centre consolidation
 nsw-carnes-hill-marketplace,place-au-nsw-carnes-hill-marketplace,Canonical centre consolidation
+nsw-castle,place-au-nsw-castle-mall,Canonical centre consolidation
 nsw-castle-towers,place-au-nsw-castle-towers,Canonical centre consolidation
 nsw-casula,place-au-nsw-casula-mall,Canonical centre consolidation
 nsw-central-griffith,place-au-nsw-griffith-central-shopping-centre,Canonical centre consolidation
+nsw-central-miller,place-au-nsw-miller-central,Canonical centre consolidation
 nsw-central-orange,place-au-nsw-orange-central-square,Canonical centre consolidation
 nsw-central-orange-square,place-au-nsw-orange-central-square,Canonical centre consolidation
 nsw-cessnock-plaza,place-au-nsw-cessnock-plaza-shopping-centre,Canonical centre consolidation
 nsw-charlestown-square,place-au-nsw-charlestown-square,Canonical centre consolidation
 nsw-chase-chatswood,place-au-nsw-chatswood-chase,Canonical centre consolidation
 nsw-chatswood-westfield,place-au-nsw-westfield-chatswood,Canonical centre consolidation
+nsw-cherrybrook-village,place-au-nsw-cherrybrook-village-shopping-centre,Canonical centre consolidation
+nsw-chester-square,place-au-unknown-chester-square,Canonical centre consolidation
+nsw-chipping-market-norton-plaza,place-au-nsw-market-plaza-chipping-norton,Canonical centre consolidation
 nsw-chullora-market-place,place-au-nsw-chullora-marketplace,Canonical centre consolidation
 nsw-chullora-marketplace,place-au-nsw-chullora-marketplace,Canonical centre consolidation
 nsw-circuit-town,place-au-nsw-salamander-shopping-centre,Canonical centre consolidation
@@ -73,10 +104,13 @@ nsw-city-settlement,place-au-nsw-settlement-city-shopping-centre,Canonical centr
 nsw-city-tweed,place-au-nsw-tweed-city-shopping-centre,Canonical centre consolidation
 nsw-civic-plaza,place-au-nsw-civic-plaza,Canonical centre consolidation
 nsw-corrimal,place-au-nsw-corrimal-shopping-centre,Canonical centre consolidation
+nsw-cosmopolitan,place-au-nsw-cosmopolitan-centre,Canonical centre consolidation
+nsw-creek-eastern-quarter,place-au-nsw-eastern-creek-quarter,Canonical centre consolidation
 nsw-cronulla,place-au-nsw-cronulla-mall,Canonical centre consolidation
 nsw-crown-st,place-au-nsw-crown-st-mall,Canonical centre consolidation
 nsw-dapto,place-au-nsw-dapto-mall,Canonical centre consolidation
 nsw-deepwater-plaza,place-au-nsw-deepwater-plaza-centre,Canonical centre consolidation
+nsw-dfo-homebush,place-au-unknown-dfo-homebush,Canonical centre consolidation
 nsw-drive-plaza-rockdale,place-au-nsw-rockdale-plaza-drive,Canonical centre consolidation
 nsw-druitt-mt-westfield,place-au-nsw-mt-druitt-westfield,Canonical centre consolidation
 nsw-dubbo-square,place-au-nsw-dubbo-square,Canonical centre consolidation
@@ -85,14 +119,20 @@ nsw-eastgardens-westfield,place-au-nsw-westfield-eastgardens,Canonical centre co
 nsw-eastpoint,place-au-nsw-eastpoint-centre,Canonical centre consolidation
 nsw-edgeworth-square-town,place-au-nsw-edgeworth-town-square,Canonical centre consolidation
 nsw-erina-fair,place-au-nsw-erina-fair,Canonical centre consolidation
+nsw-fairfield-forum,place-au-unknown-fairfield-forum,Canonical centre consolidation
+nsw-fashion-spree,place-au-nsw-fashion-spree,Canonical centre consolidation
 nsw-figtree-grove,place-au-nsw-figtree-grove-shopping-centre,Canonical centre consolidation
 nsw-forster-stockland,place-au-nsw-forster-stockland,Canonical centre consolidation
+nsw-gables-stockland,place-au-nsw-stockland-gables,Canonical centre consolidation
+nsw-galeries-the,place-au-nsw-the-galeries,Canonical centre consolidation
 nsw-glendale-stockland,place-au-nsw-glendale-stockland-shopping-centre,Canonical centre consolidation
 nsw-glenmore-park-town,place-au-nsw-glenmore-park-town-centre,Canonical centre consolidation
 nsw-glenrose-village,place-au-nsw-glenrose-village-shopping-centre,Canonical centre consolidation
 nsw-grafton,place-au-nsw-grafton-shoppingworld,Canonical centre consolidation
 nsw-green-hills-stockland,place-au-nsw-stockland-green-hills-shopping-centre,Canonical centre consolidation
 nsw-greenwood-plaza,place-au-nsw-greenwood-plaza,Canonical centre consolidation
+nsw-gregory-hills-town,place-au-nsw-gregory-hills-town-centre,Canonical centre consolidation
+nsw-greystanes,place-au-unknown-greystanes-shopping-centre,Canonical centre consolidation
 nsw-grove-square,place-au-nsw-grove-square,Canonical centre consolidation
 nsw-grove-warilla,place-au-nsw-warilla-grove-shopping-centre,Canonical centre consolidation
 nsw-haven-lake,place-au-nsw-lake-haven-shopping-centre,Canonical centre consolidation
@@ -100,15 +140,19 @@ nsw-highlands-marketplace,place-au-nsw-highlands-marketplace,Canonical centre co
 nsw-hill-rouse-town,place-au-nsw-rouse-hill-town-centre,Canonical centre consolidation
 nsw-hills-plaza-seven,place-au-nsw-seven-hills-plaza,Canonical centre consolidation
 nsw-hills-winston,place-au-nsw-winston-hills-mall,Canonical centre consolidation
+nsw-homeco-vincentia,place-au-nsw-homeco-vincentia,Canonical centre consolidation
 nsw-hornsby-westfield,place-au-nsw-westfield-hornsby,Canonical centre consolidation
+nsw-huntlee,place-au-nsw-huntlee-shopping-centre,Canonical centre consolidation
 nsw-hurstville-westfield,place-au-nsw-westfield-hurstville,Canonical centre consolidation
+nsw-illawong,place-au-nsw-illawong-shopping-centre,Canonical centre consolidation
 nsw-imperial,place-au-nsw-imperial-shopping-centre,Canonical centre consolidation
 nsw-ingworld,place-au-nsw-ingworld,Canonical centre consolidation
 nsw-ives-st,place-au-nsw-st-ives-shopping-centre,Canonical centre consolidation
 nsw-ives-st-village,place-au-nsw-st-ives-shopping-centre,Canonical centre consolidation
-nsw-junction-maroubra,place-au-nsw-maroubra-junction,Canonical centre consolidation
-nsw-junction-st,place-au-nsw-junction-st,Canonical centre consolidation
+nsw-junction-maroubra,place-au-nsw-pacific-square-shopping-centre,Canonical centre consolidation
 nsw-kareela-village,place-au-nsw-kareela-village,Canonical centre consolidation
+nsw-kellyville-village,place-au-unknown-kellyville-village,Canonical centre consolidation
+nsw-kiaora-place,place-au-nsw-kiaora-place,Canonical centre consolidation
 nsw-kings-langley,place-au-nsw-kings-langley-shopping-centre,Canonical centre consolidation
 nsw-kingscliff-village,place-au-nsw-kingscliff-shopping-village,Canonical centre consolidation
 nsw-kogarah-square-town,place-au-nsw-kogarah-town-square,Canonical centre consolidation
@@ -123,30 +167,38 @@ nsw-liverpool-westfield,place-au-nsw-westfield-liverpool,Canonical centre consol
 nsw-macarthur-square,place-au-nsw-macarthur-square,Canonical centre consolidation
 nsw-macquarie,place-au-nsw-macquarie-centre,Canonical centre consolidation
 nsw-macquarie-centre,place-au-nsw-macquarie-centre,Canonical centre consolidation
+nsw-marina-square,place-au-nsw-marina-square,Canonical centre consolidation
 nsw-market-place,place-au-nsw-market-place,Canonical centre consolidation
 nsw-marketown,place-au-nsw-marketown-shopping-centre,Canonical centre consolidation
 nsw-marketplace-menai,place-au-nsw-menai-marketplace-shopping-centre,Canonical centre consolidation
 nsw-marketplace-orana,place-au-nsw-orana-mall-marketplace,Canonical centre consolidation
+nsw-marketplace-pemulwuy,place-au-nsw-pemulwuy-marketplace,Canonical centre consolidation
 nsw-marketplace-plumpton,place-au-nsw-plumpton-marketplace,Canonical centre consolidation
 nsw-marketplace-raymond-terrace,place-au-nsw-raymond-terrace-marketplace,Canonical centre consolidation
 nsw-marketplace-richmond,place-au-nsw-richmond-marketplace,Canonical centre consolidation
+nsw-marketplace-ryde-west,place-au-nsw-west-ryde-marketplace,Canonical centre consolidation
 nsw-marketplace-sapphire,place-au-nsw-sapphire-marketplace,Canonical centre consolidation
 nsw-marketplace-wagga,place-au-nsw-wagga-wagga-marketplace,Canonical centre consolidation
 nsw-marys-st-village,place-au-nsw-st-marys-village-shopping-centre,Canonical centre consolidation
 nsw-merrylands-stockland,place-au-nsw-stockland-merrylands,Canonical centre consolidation
+nsw-minto,place-au-unknown-minto-marketplace,Canonical centre consolidation
 nsw-miranda-westfield,place-au-nsw-westfield-miranda,Canonical centre consolidation
+nsw-moorebank-village,place-au-nsw-moorebank-shopping-village,Canonical centre consolidation
+nsw-morisset,place-au-nsw-morisset-shopping-centre,Canonical centre consolidation
 nsw-morisset-square,place-au-nsw-morisset-square,Canonical centre consolidation
 nsw-narellan-town,place-au-nsw-narellan-town-centre,Canonical centre consolidation
 nsw-nepean-village,place-au-nsw-nepean-village,Canonical centre consolidation
 nsw-north-rocks,place-au-nsw-north-rocks-shopping-centre,Canonical centre consolidation
 nsw-northmead-plaza,place-au-nsw-northmead-plaza,Canonical centre consolidation
 nsw-nowra-plaza,place-au-nsw-nowra-plaza,Canonical centre consolidation
+nsw-ocean-shores,place-au-nsw-ocean-shores-shopping-centre,Canonical centre consolidation
 nsw-pacific-square,place-au-nsw-pacific-square-shopping-centre,Canonical centre consolidation
 nsw-park-beach-plaza,place-au-nsw-park-beach-plaza,Canonical centre consolidation
 nsw-park-stockland-wetherill,place-au-nsw-stockland-wetherill-park,Canonical centre consolidation
 nsw-parramatta-westfield,place-au-nsw-westfield-parramatta,Canonical centre consolidation
 nsw-penrith-plaza,place-au-nsw-westfield-penrith,Canonical centre consolidation
 nsw-penrith-westfield,place-au-nsw-westfield-penrith,Canonical centre consolidation
+nsw-phillip,place-au-nsw-phillip-centre,Canonical centre consolidation
 nsw-pitt-street,place-au-nsw-pitt-street-mall,Canonical centre consolidation
 nsw-place-sutton,place-au-nsw-sutton-place-shopping-centre,Canonical centre consolidation
 nsw-plaza-queanbeyan-riverside,place-au-nsw-riverside-plaza-queanbeyan,Canonical centre consolidation
@@ -167,6 +219,7 @@ nsw-square-warriewood,place-au-nsw-warriewood-square,Canonical centre consolidat
 nsw-square-world,place-au-nsw-world-square,Canonical centre consolidation
 nsw-stanhope-village,place-au-nsw-stanhope-village-shopping-centre,Canonical centre consolidation
 nsw-stockland,place-au-nsw-stockland-mall,Canonical centre consolidation
+nsw-sydney-westfield,place-au-nsw-westfield-sydney,Canonical centre consolidation
 nsw-tuggerah-westfield,place-au-nsw-westfield-tuggerah,Canonical centre consolidation
 nsw-tweed,place-au-nsw-tweed-mall,Canonical centre consolidation
 nsw-ulladulla,place-au-nsw-ulladulla-shopping-centre,Canonical centre consolidation
@@ -176,90 +229,142 @@ nsw-warringah-westfield,place-au-nsw-westfield-warringah-mall,Canonical centre c
 nsw-westpoint,place-au-nsw-westpoint-shopping-centre,Canonical centre consolidation
 nt-alice-plaza,place-au-nt-alice-plaza-shopping-centre,Canonical centre consolidation
 nt-casuarina-square,place-au-nt-casuarina-square,Canonical centre consolidation
+nt-darwin-galleria,place-au-nt-galleria-darwin,Canonical centre consolidation
 nt-gateway,place-au-nt-gateway-shopping-centre,Canonical centre consolidation
 nt-hibiscus,place-au-nt-hibiscus-shoppingtown,Canonical centre consolidation
 nt-oasis,place-au-nt-oasis-shopping-centre,Canonical centre consolidation
+nt-yeperenye,place-au-nt-yeperenye-shopping-centre,Canonical centre consolidation
 otago-meridian,place-nz-otago-meridian-mall,Canonical centre consolidation
 otago-park-remarkables-town,place-nz-otago-remarkables-park-town-centre,Canonical centre consolidation
+place-au-act-cooleman-court-weston-creek,place-au-act-cooleman-court,Evidence-backed place identity consolidation
+place-au-nsw-ballina-fair,place-au-unknown-ballina-fair,Canonical centre consolidation
+place-au-nsw-bay-central,place-au-unknown-bay-central,Evidence-backed place identity consolidation
 place-au-nsw-blacktown-westpoint-shopping-centre,place-au-nsw-westpoint-shopping-centre,Evidence-backed place identity consolidation
+place-au-nsw-campbelltown-mall,place-au-unknown-campbelltown-mall,Evidence-backed place identity consolidation
+place-au-nsw-chester-square,place-au-unknown-chester-square,Canonical centre consolidation
 place-au-nsw-chullora-market-place,place-au-nsw-chullora-marketplace,Evidence-backed place identity consolidation
+place-au-nsw-dfo-homebush,place-au-unknown-dfo-homebush,Canonical centre consolidation
+place-au-nsw-eastern-creek-quarter-eastern-creek,place-au-nsw-eastern-creek-quarter,Evidence-backed place identity consolidation
+place-au-nsw-fairfield-forum,place-au-unknown-fairfield-forum,Canonical centre consolidation
+place-au-nsw-greystanes-shopping-centre,place-au-unknown-greystanes-shopping-centre,Canonical centre consolidation
 place-au-nsw-homeco-plumpton-marketplace,place-au-nsw-plumpton-marketplace,Evidence-backed place identity consolidation
+place-au-nsw-kellyville-village,place-au-unknown-kellyville-village,Canonical centre consolidation
 place-au-nsw-lake-haven-centre,place-au-nsw-lake-haven-shopping-centre,Evidence-backed place identity consolidation
 place-au-nsw-lismore-square,place-au-nsw-lismore-shopping-centre,Evidence-backed place identity consolidation
 place-au-nsw-marketplace-raymond-terrace,place-au-nsw-raymond-terrace-marketplace,Evidence-backed place identity consolidation
+place-au-nsw-maroubra-junction,place-au-nsw-pacific-square-shopping-centre,Evidence-backed place identity consolidation
 place-au-nsw-menai-marketplace,place-au-nsw-menai-marketplace-shopping-centre,Canonical centre consolidation
+place-au-nsw-minto-mall,place-au-unknown-minto-marketplace,Evidence-backed place identity consolidation
+place-au-nsw-oran-park-podium,place-au-unknown-oran-park-podium,Evidence-backed place identity consolidation
 place-au-nsw-st-ives-shopping-village,place-au-nsw-st-ives-shopping-centre,Evidence-backed place identity consolidation
 place-au-nsw-stockland-shellharbour,place-au-nsw-shellharbour-stockland,Evidence-backed place identity consolidation
+place-au-nsw-thornleigh-marketplace,place-au-unknown-thornleigh-marketplace,Canonical centre consolidation
 place-au-nsw-town-centre-circuit,place-au-nsw-salamander-shopping-centre,Evidence-backed place identity consolidation
 place-au-nsw-warringah-mall,place-au-nsw-westfield-warringah-mall,Evidence-backed place identity consolidation
 place-au-qld-australia-fair,place-au-qld-australia-fair-shopping-centre,Evidence-backed place identity consolidation
-place-au-qld-booval-fair-shopping-centre,place-au-unknown-booval-fair-shopping-centre,Canonical centre consolidation
+place-au-qld-booval-fair,place-au-unknown-booval-fair-shopping-centre,Evidence-backed place identity consolidation
+place-au-qld-booval-fair-shopping-centre,place-au-unknown-booval-fair-shopping-centre,Evidence-backed place identity consolidation
 place-au-qld-cairns-central-shopping-centre,place-au-qld-cairns-shopping-centre,Evidence-backed place identity consolidation
 place-au-qld-caneland-centre,place-au-qld-caneland-centre,Canonical centre consolidation
 place-au-qld-canelands-central-shopping-centre,place-au-qld-caneland-centre,Evidence-backed place identity consolidation
 place-au-qld-capalaba-park-shopping-centre-corner-redland-bay-mt-cotton-roads-capalaba-qld-4157,place-au-qld-capalaba-park-shopping-centre,Evidence-backed place identity consolidation
 place-au-qld-carindale,place-au-qld-westfield-carindale,Evidence-backed place identity consolidation
-place-au-qld-castletown-shopping-centre,place-au-qld-castletown-shoppingworld,Canonical centre consolidation
+place-au-qld-castletown,place-au-qld-castletown-shoppingworld,Canonical centre consolidation
 place-au-qld-chermside,place-au-qld-westfield-chermside,Evidence-backed place identity consolidation
 place-au-qld-cleveland-central,place-au-qld-cleveland-shopping-centre,Evidence-backed place identity consolidation
+place-au-qld-dfo-brisbane,place-au-unknown-skygate-dfo,Canonical centre consolidation
 place-au-qld-elanora-the-pines-shopping-centre,place-au-qld-the-pines-shopping-centre,Evidence-backed place identity consolidation
 place-au-qld-gold-coast-pacific-fair,place-au-qld-pacific-fair,Canonical centre consolidation
 place-au-qld-grand-central-shopping-centre,place-au-qld-toowoomba-grand-central-shopping-centre,Evidence-backed place identity consolidation
+place-au-qld-grand-plaza,place-au-qld-browns-plains-grand-plaza-shopping-centre,Evidence-backed place identity consolidation
+place-au-qld-grand-plaza-shopping-centre-browns-plains-qld-4118,place-au-qld-browns-plains-grand-plaza-shopping-centre,Evidence-backed place identity consolidation
 place-au-qld-hearing-carindale,place-au-qld-westfield-carindale,Evidence-backed place identity consolidation
 place-au-qld-hearing-chermside,place-au-qld-westfield-chermside,Evidence-backed place identity consolidation
 place-au-qld-hearing-indooroopilly,place-au-qld-indooroopilly,Evidence-backed place identity consolidation
+place-au-qld-hyperdome,place-au-qld-logan-hyperdome,Evidence-backed place identity consolidation
 place-au-qld-hyperdome-loganholme,place-au-qld-logan-hyperdome,Evidence-backed place identity consolidation
 place-au-qld-hyperdome-shopping-centre,place-au-qld-logan-hyperdome,Evidence-backed place identity consolidation
-place-au-qld-inala-town-plaza,place-au-qld-optometrists-inala-plaza,Canonical centre consolidation
+place-au-qld-inala-plaza,place-au-qld-optometrists-inala-plaza,Canonical centre consolidation
 place-au-qld-indooroopilly-shopping-centre,place-au-qld-indooroopilly,Evidence-backed place identity consolidation
 place-au-qld-kingaroy-mall,place-au-qld-kingaroy-plaza,Evidence-backed place identity consolidation
 place-au-qld-kippa-ring-peninsular-fair-shopping-centre,place-au-qld-peninsula-fair-shopping-centre,Evidence-backed place identity consolidation
 place-au-qld-mackay-canelands-shopping-centre,place-au-qld-caneland-centre,Evidence-backed place identity consolidation
+place-au-qld-market-square-deception-bay,place-au-qld-mkt-square-shopping-centre-deception-bay,Evidence-backed place identity consolidation
 place-au-qld-maroochydore-sunshine-plaza,place-au-qld-sunshine-plaza,Evidence-backed place identity consolidation
+place-au-qld-mount-sheridan-plaza,place-au-unknown-mount-sheridan-plaza,Evidence-backed place identity consolidation
+place-au-qld-nerang-mall-shopping-centre,place-au-unknown-nerang-mall-shopping-centre,Evidence-backed place identity consolidation
+place-au-qld-pacific-fair-new-location,place-au-qld-pacific-fair,Evidence-backed place identity consolidation
+place-au-qld-peninsula-fair,place-au-qld-peninsula-fair-shopping-centre,Canonical centre consolidation
 place-au-qld-riverlink-shopping-centre,place-au-qld-ipswich-riverlink-shopping-centre,Evidence-backed place identity consolidation
+place-au-qld-robina-town-centre,place-au-qld-robina-town-centre-dr,Evidence-backed place identity consolidation
 place-au-qld-rockhampton-stockland,place-au-qld-stockland-rockhampton-shopping-centre,Evidence-backed place identity consolidation
 place-au-qld-rockhampton-stockland-shopping-centre,place-au-qld-stockland-rockhampton-shopping-centre,Evidence-backed place identity consolidation
 place-au-qld-runaway-bay-centre,place-au-qld-runaway-bay-shopping-village,Evidence-backed place identity consolidation
 place-au-qld-shop-319-sunshine-plaza,place-au-qld-sunshine-plaza,Evidence-backed place identity consolidation
 place-au-qld-smithfield-shopping-centre,place-au-qld-cairns-smithfield-centre,Evidence-backed place identity consolidation
+place-au-qld-stafford-city,place-au-qld-stafford-city-shopping-centre-stafford-qld-4053,Evidence-backed place identity consolidation
+place-au-qld-stockland-hervey-bay,place-au-qld-stocklands-hervey-bay,Evidence-backed place identity consolidation
 place-au-qld-stockland-rockhampton,place-au-qld-stockland-rockhampton-shopping-centre,Evidence-backed place identity consolidation
 place-au-qld-sunny-park-shopping-centre,place-au-unknown-sunny-park-shopping-centre,Canonical centre consolidation
 place-au-qld-sunnybank-hills-shoppingtown,place-au-unknown-sunnybank-hills-shoppingtown,Canonical centre consolidation
+place-au-qld-sydney-street-markets,place-au-qld-sydney-street-markets,Canonical centre consolidation
+place-au-qld-the-mall-beenleigh,place-au-qld-the-mall,Evidence-backed place identity consolidation
+place-au-qld-the-plaza-emerald,place-au-qld-centro-emerald-market-plaza,Evidence-backed place identity consolidation
 place-au-qld-upper-mt-gravatt-westfield,place-au-qld-mt-gravatt-westfield,Evidence-backed place identity consolidation
 place-au-qld-westfield-garden-city,place-au-qld-mt-gravatt-westfield,Evidence-backed place identity consolidation
+place-au-qld-willows-shopping-centre,place-au-qld-townsville-willows-shopping-centre,Evidence-backed place identity consolidation
+place-au-qld-yeerongpilly-green-riverside-village,place-au-unknown-yeerongpilly-green-riverside-village,Evidence-backed place identity consolidation
+place-au-sa-aldinga-central-shopping-centre,place-au-unknown-aldinga-central-shopping-centre,Evidence-backed place identity consolidation
+place-au-sa-aldinga-shopping-centre,place-au-unknown-aldinga-central-shopping-centre,Evidence-backed place identity consolidation
+place-au-sa-burnside-village-shopping-centre,place-au-unknown-burnside-village-shopping-centre,Canonical centre consolidation
 place-au-sa-elizabeth-city-centre,place-au-sa-elizabeth-shopping-centre,Evidence-backed place identity consolidation
 place-au-sa-ingle-farm-shopping-centre,place-au-sa-ingle-farm-plaza,Evidence-backed place identity consolidation
 place-au-sa-marion-east-westfield-lvl-2,place-au-sa-westfield-marion,Evidence-backed place identity consolidation
 place-au-sa-mitcham-square,place-au-sa-mitcham-shopping-centre,Canonical centre consolidation
 place-au-sa-north-mall,place-au-sa-elizabeth-shopping-centre,Evidence-backed place identity consolidation
 place-au-sa-tea-tree-plaza,place-au-sa-westfield-tea-tree-plaza,Evidence-backed place identity consolidation
+place-au-sa-westfield-west-lakes,place-au-sa-westfield-west-lakes,Canonical centre consolidation
 place-au-tas-rosny-park-eastlands-shopping-centre,place-au-tas-hobart-eastlands,Evidence-backed place identity consolidation
 place-au-unknown-casuarina-square,place-au-nt-casuarina-square,Evidence-backed place identity consolidation
 place-au-unknown-cs-square-shopping-centre,place-au-vic-caroline-springs-square,Evidence-backed place identity consolidation
 place-au-unknown-riverlink-shopping-centre,place-au-qld-ipswich-riverlink-shopping-centre,Evidence-backed place identity consolidation
 place-au-unknown-westfield-fountain-gate-shopping-centre,place-au-vic-westfield-fountain-gate,Evidence-backed place identity consolidation
 place-au-vic-bayside-centre,place-au-vic-frankston-bayside-centre,Evidence-backed place identity consolidation
+place-au-vic-bentons-square,place-au-unknown-bentons-square,Canonical centre consolidation
 place-au-vic-broadmeadows-central,place-au-vic-broadmeadows-shopping-centre,Evidence-backed place identity consolidation
 place-au-vic-cnr-centre-valley-rd-princes-dr,place-au-vic-mid-valley-shopping-centre,Evidence-backed place identity consolidation
 place-au-vic-cranbourne-park-shopping-centre,place-au-vic-cranbourne-park-shopping-centre-sp107,Evidence-backed place identity consolidation
+place-au-vic-croydon-central,place-au-unknown-croydon-central,Canonical centre consolidation
+place-au-vic-dfo-essendon,place-au-unknown-dfo-essendon,Canonical centre consolidation
+place-au-vic-dfo-moorabbin,place-au-unknown-dfo-moorabbin,Canonical centre consolidation
+place-au-vic-eden-rise-shopping-centre,place-au-vic-berwick-eden-rise-shopping-centre,Evidence-backed place identity consolidation
+place-au-vic-eden-rise-village,place-au-vic-berwick-eden-rise-shopping-centre,Evidence-backed place identity consolidation
 place-au-vic-gateway-shopping-village,place-au-unknown-the-gateway-shopping-centre,Evidence-backed place identity consolidation
 place-au-vic-hearing-southland,place-au-vic-westfield-southland,Evidence-backed place identity consolidation
 place-au-vic-melbourne-central-shopping-centre-ground-level,place-au-vic-melbourne-central-shopping-centre,Evidence-backed place identity consolidation
+place-au-vic-oakleigh-central,place-au-vic-oakleigh-central,Canonical centre consolidation
 place-au-vic-pacific-werribee,place-au-vic-werribee-plaza,Evidence-backed place identity consolidation
 place-au-vic-pacific-werribee-shopping-centre,place-au-vic-werribee-plaza,Evidence-backed place identity consolidation
+place-au-vic-qv,place-au-unknown-qv,Evidence-backed place identity consolidation
 place-au-vic-rosebud-plaza,place-au-vic-rosebud-plaza-shopping-centre,Evidence-backed place identity consolidation
 place-au-vic-southland,place-au-vic-westfield-southland,Evidence-backed place identity consolidation
+place-au-vic-strath-village-bendigo,place-au-vic-strath-village,Evidence-backed place identity consolidation
 place-au-vic-watergardens-shopping-centre,place-au-vic-watergardens-town-centre,Evidence-backed place identity consolidation
 place-au-vic-westfield-doncaster-619-doncaster-road-cnr-williamsons-road,place-au-vic-westfield-doncaster,Evidence-backed place identity consolidation
 place-au-wa-belmont-forum-shopping-centre,place-au-wa-belmont-forum,Evidence-backed place identity consolidation
+place-au-wa-broome-boulevard,place-au-unknown-broome-boulevard,Canonical centre consolidation
 place-au-wa-carousel,place-au-wa-westfield-carousel,Evidence-backed place identity consolidation
 place-au-wa-carousel-cannington,place-au-wa-westfield-carousel,Evidence-backed place identity consolidation
 place-au-wa-galleria-shopping-centre,place-au-wa-morley-galleria,Evidence-backed place identity consolidation
+place-au-wa-gateways-shopping-centre,place-au-wa-cockburn-gateway-shopping-centre,Evidence-backed place identity consolidation
 place-au-wa-maddington-central,place-au-wa-maddington-centro-shopping-centre,Evidence-backed place identity consolidation
 place-au-wa-morley-galleria-ground-floor,place-au-wa-morley-galleria,Evidence-backed place identity consolidation
 place-au-wa-ocean-keys-shopping-centre,place-au-wa-clarkson-ocean-keys-shopping-centre,Canonical centre consolidation
 place-au-wa-riverton-forum,place-au-wa-riverton-stockland,Evidence-backed place identity consolidation
+place-au-wa-roselea-shopping-centre-stirling,place-au-wa-roselea-shopping-centre,Evidence-backed place identity consolidation
+place-au-wa-westfield-whitford-city,place-au-wa-westfield-whitford-city,Canonical centre consolidation
 place-nz-auckland-lynn-mall,place-nz-auckland-lynnmall-shopping-centre,Evidence-backed place identity consolidation
+place-nz-auckland-lynnmall,place-nz-auckland-lynnmall-shopping-centre,Evidence-backed place identity consolidation
 place-nz-auckland-manukau-supa-centa,place-nz-auckland-manukau-city-centre,Evidence-backed place identity consolidation
 place-nz-manawatu-whanganui-the-plaza,place-nz-manawatu-whanganui-the-plaza-palmerston-north,Evidence-backed place identity consolidation
 place-nz-nelson-richmond-mall,place-nz-tasman-richmond-mall,Evidence-backed place identity consolidation
@@ -267,15 +372,18 @@ place-nz-wellington-the-plaza,place-nz-manawatu-whanganui-the-plaza-palmerston-n
 qld-01c-1050x-28-4566-civic-creek-eenie-noosa-noosaville-qld-rd-tp,place-au-qld-noosa-civic-shopping-centre,Canonical centre consolidation
 qld-25-fairfield-gardens,place-au-qld-25-fairfield-gardens-shopping-centre,Canonical centre consolidation
 qld-4053-city-qld-stafford,place-au-qld-stafford-city-shopping-centre-stafford-qld-4053,Canonical centre consolidation
-qld-4118-browns-grand-plains-plaza-qld,place-au-qld-grand-plaza-shopping-centre-browns-plains-qld-4118,Canonical centre consolidation
+qld-4118-browns-grand-plains-plaza-qld,place-au-qld-browns-plains-grand-plaza-shopping-centre,Canonical centre consolidation
 qld-4157-and-bay-capalaba-corner-cotton-mt-park-qld-redland-roads,place-au-qld-capalaba-park-shopping-centre,Canonical centre consolidation
 qld-4350-central-city-grand-margaret-qld-st-toowoomba,place-au-qld-toowoomba-grand-central-shopping-centre,Canonical centre consolidation
 qld-albany-creek-village,place-au-qld-albany-creek-village,Canonical centre consolidation
 qld-alexandra-hills,place-au-qld-alexandra-hills-shopping-centre,Canonical centre consolidation
 qld-allenstown-square,place-au-qld-allenstown-square,Canonical centre consolidation
 qld-arana-hills-plaza,place-au-qld-arana-hills-plaza,Canonical centre consolidation
+qld-arcade-merino,place-au-qld-merino-arcade,Canonical centre consolidation
 qld-arndale,place-au-qld-arndale-shopping-centre,Canonical centre consolidation
 qld-arundel-plaza,place-au-qld-arundel-plaza,Canonical centre consolidation
+qld-ashmore-city,place-au-qld-ashmore-city-shopping-centre,Canonical centre consolidation
+qld-ashmore-plaza,place-au-qld-ashmore-shopping-plaza,Canonical centre consolidation
 qld-aspley-hypermarket,place-au-qld-aspley-hypermarket,Canonical centre consolidation
 qld-australia-fair,place-au-qld-australia-fair-shopping-centre,Canonical centre consolidation
 qld-bay-deception-mkt-square,place-au-qld-mkt-square-shopping-centre-deception-bay,Canonical centre consolidation
@@ -285,6 +393,7 @@ qld-bay-runaway,place-au-qld-runaway-bay-shopping-village,Canonical centre conso
 qld-bay-runaway-village,place-au-qld-runaway-bay-shopping-village,Canonical centre consolidation
 qld-beaudesert-central,place-au-qld-beaudesert-central-shopping-centre,Canonical centre consolidation
 qld-beenleigh-marketplace,place-au-qld-beenleigh-marketplace,Canonical centre consolidation
+qld-beenleigh-the,place-au-qld-the-mall,Canonical centre consolidation
 qld-beerwah-village,place-au-qld-beerwah-village,Canonical centre consolidation
 qld-benowa-gardens-s,place-au-qld-benowa-gardens-s-centre,Canonical centre consolidation
 qld-blvd-chancellor-village,place-au-qld-chancellor-village-blvd,Canonical centre consolidation
@@ -292,52 +401,78 @@ qld-booval-fair,place-au-unknown-booval-fair-shopping-centre,Canonical centre co
 qld-boyne-plaza,place-au-qld-boyne-plaza,Canonical centre consolidation
 qld-bribie-island,place-au-qld-bribie-island-shopping-centre,Canonical centre consolidation
 qld-brickworks,place-au-qld-brickworks-centre,Canonical centre consolidation
+qld-brisbane-dfo,place-au-unknown-skygate-dfo,Canonical centre consolidation
 qld-brookside,place-au-qld-brookside-shopping-centre,Canonical centre consolidation
 qld-browns-grand-plains-plaza,place-au-qld-browns-plains-grand-plaza-shopping-centre,Canonical centre consolidation
 qld-buderim-marketplace,place-au-qld-buderim-marketplace,Canonical centre consolidation
 qld-burleigh-heads-stockland,place-au-qld-burleigh-heads-stockland,Canonical centre consolidation
 qld-burpengary-plaza,place-au-qld-burpengary-plaza,Canonical centre consolidation
+qld-caboolture-square,place-au-qld-caboolture-square,Canonical centre consolidation
 qld-cairns,place-au-qld-cairns-shopping-centre,Canonical centre consolidation
 qld-cairns-central,place-au-qld-cairns-shopping-centre,Canonical centre consolidation
+qld-cairns-dfo,place-au-qld-dfo-cairns,Canonical centre consolidation
 qld-cairns-smithfield,place-au-qld-cairns-smithfield-centre,Canonical centre consolidation
+qld-calamvale-central,place-au-qld-calamvale-central,Canonical centre consolidation
 qld-caloundra,place-au-qld-caloundra-shopping-centre,Canonical centre consolidation
 qld-camp-hill-marketplace,place-au-qld-camp-hill-marketplace,Canonical centre consolidation
 qld-caneland,place-au-qld-caneland-centre,Canonical centre consolidation
+qld-caneland-central,place-au-qld-caneland-centre,Canonical centre consolidation
 qld-canelands-central,place-au-qld-caneland-centre,Canonical centre consolidation
 qld-canelands-mackay,place-au-qld-caneland-centre,Canonical centre consolidation
 qld-cannon-hill-kmart-plaza,place-au-qld-cannon-hill-kmart-plaza,Canonical centre consolidation
+qld-capalaba-central,place-au-qld-capalaba-central-shopping-centre,Canonical centre consolidation
 qld-capalaba-park,place-au-qld-capalaba-park-shopping-centre,Canonical centre consolidation
+qld-capri-on-roma-via,place-au-qld-capri-on-via-roma,Canonical centre consolidation
 qld-carindale,place-au-qld-westfield-carindale,Canonical centre consolidation
 qld-carindale-westfield,place-au-qld-westfield-carindale,Canonical centre consolidation
 qld-castletown,place-au-qld-castletown-shoppingworld,Canonical centre consolidation
 qld-castletown-townsville,place-au-qld-castletown-shoppingworld,Canonical centre consolidation
+qld-cedar-park-village,place-au-qld-cedar-park-shopping-village,Canonical centre consolidation
+qld-central-chatswood,place-au-qld-chatswood-central-shopping-centre,Canonical centre consolidation
+qld-central-coolum,place-au-qld-coolum-central,Canonical centre consolidation
 qld-central-grand,place-au-qld-toowoomba-grand-central-shopping-centre,Canonical centre consolidation
 qld-central-grand-toowoomba,place-au-qld-toowoomba-grand-central-shopping-centre,Canonical centre consolidation
+qld-central-macarthur,place-au-qld-macarthur-central,Canonical centre consolidation
+qld-central-oakey,place-au-qld-oakey-central-shopping-centre,Canonical centre consolidation
 qld-central-yeppoon,place-au-qld-yeppoon-central-shopping-centre,Canonical centre consolidation
+qld-centrepoint-plaza,place-au-qld-centrepoint-shopping-plaza,Canonical centre consolidation
 qld-centro-emerald-market-plaza,place-au-qld-centro-emerald-market-plaza,Canonical centre consolidation
 qld-chermside,place-au-qld-westfield-chermside,Canonical centre consolidation
 qld-chermside-westfield,place-au-qld-westfield-chermside,Canonical centre consolidation
 qld-city-garden-westfield,place-au-qld-mt-gravatt-westfield,Canonical centre consolidation
 qld-city-logan,place-au-qld-logan-city-centre,Canonical centre consolidation
+qld-city-pimpama,place-au-qld-pimpama-city-shopping-centre,Canonical centre consolidation
 qld-city-rose,place-au-qld-rose-city-shoppingworld,Canonical centre consolidation
+qld-city-stafford,place-au-qld-stafford-city-shopping-centre-stafford-qld-4053,Canonical centre consolidation
 qld-civic-noosa,place-au-qld-noosa-civic-shopping-centre,Canonical centre consolidation
 qld-cleveland,place-au-qld-cleveland-shopping-centre,Canonical centre consolidation
 qld-clifford-gardens,place-au-qld-clifford-gardens-shopping-centre,Canonical centre consolidation
 qld-clifton-village,place-au-qld-clifton-village-shopping-centre,Canonical centre consolidation
 qld-coast-fair-gold-pacific,place-au-qld-pacific-fair,Canonical centre consolidation
 qld-coles-karalee-village,place-au-qld-coles-karalee-shopping-village,Canonical centre consolidation
+qld-coomera-square,place-au-qld-coomera-square,Canonical centre consolidation
 qld-coomera-westfield,place-au-qld-westfield-coomera,Canonical centre consolidation
 qld-dalby,place-au-qld-dalby-shoppingworld,Canonical centre consolidation
+qld-dfo-jindalee,place-au-qld-dfo-jindalee,Canonical centre consolidation
 qld-dr-robina-town,place-au-qld-robina-town-centre-dr,Canonical centre consolidation
+qld-earlville-town,place-au-qld-earlville-shopping-town,Canonical centre consolidation
 qld-elanora-pines-the,place-au-qld-the-pines-shopping-centre,Canonical centre consolidation
+qld-eli-waters,place-au-qld-eli-waters-shopping-centre,Canonical centre consolidation
+qld-emerald-plaza-the,place-au-qld-centro-emerald-market-plaza,Canonical centre consolidation
 qld-fair-kippa-peninsular-ring,place-au-qld-peninsula-fair-shopping-centre,Canonical centre consolidation
+qld-fair-location-new-pacific,place-au-qld-pacific-fair,Canonical centre consolidation
 qld-fair-pacific,place-au-qld-pacific-fair,Canonical centre consolidation
 qld-fair-peninsula,place-au-qld-peninsula-fair-shopping-centre,Canonical centre consolidation
+qld-forest-lake,place-au-qld-forest-lake-shopping-centre,Canonical centre consolidation
 qld-gladstone-plaza,place-au-qld-gladstone-centre-plaza,Canonical centre consolidation
 qld-gladstone-square,place-au-qld-gladstone-square-shopping-centre,Canonical centre consolidation
+qld-grand-plaza,place-au-qld-browns-plains-grand-plaza-shopping-centre,Canonical centre consolidation
 qld-gravatt-mt-plaza,place-au-qld-mt-gravatt-plaza,Canonical centre consolidation
 qld-gravatt-mt-upper-westfield,place-au-qld-mt-gravatt-westfield,Canonical centre consolidation
 qld-gravatt-mt-westfield,place-au-qld-mt-gravatt-westfield,Canonical centre consolidation
+qld-green-riverside-village-yeerongpilly,place-au-unknown-yeerongpilly-green-riverside-village,Canonical centre consolidation
+qld-greenslopes,place-au-qld-greenslopes-mall,Canonical centre consolidation
+qld-helensvale-homeworld,place-au-qld-homeworld-helensvale,Canonical centre consolidation
 qld-helensvale-westfield,place-au-qld-helensvale-westfield,Canonical centre consolidation
 qld-highfields-plaza,place-au-qld-highfields-plaza-shopping-centre,Canonical centre consolidation
 qld-hills-sunnybank,place-au-unknown-sunnybank-hills-shoppingtown,Canonical centre consolidation
@@ -350,24 +485,32 @@ qld-inala-plaza-town,place-au-qld-optometrists-inala-plaza,Canonical centre cons
 qld-indooroopilly,place-au-qld-indooroopilly,Canonical centre consolidation
 qld-ipswich-riverlink,place-au-qld-ipswich-riverlink-shopping-centre,Canonical centre consolidation
 qld-kawana,place-au-qld-kawana-shoppingworld,Canonical centre consolidation
+qld-kenmore-plaza,place-au-qld-kenmore-plaza,Canonical centre consolidation
 qld-kenmore-village,place-au-qld-kenmore-village-shopping-centre,Canonical centre consolidation
 qld-kingaroy-plaza,place-au-qld-kingaroy-plaza,Canonical centre consolidation
 qld-lakes-north-westfield,place-au-qld-westfield-north-lakes,Canonical centre consolidation
 qld-mackay-mt-pleasant,place-au-qld-mackay-mt-pleasant-shopping-centre,Canonical centre consolidation
+qld-market-plaza,place-au-qld-market-plaza,Canonical centre consolidation
+qld-market-square-sunnybank,place-au-qld-market-square-sunnybank,Canonical centre consolidation
 qld-marketplace-road-robinson,place-au-qld-robinson-road-marketplace,Canonical centre consolidation
 qld-marketplace-underwood,place-au-qld-underwood-marketplace,Canonical centre consolidation
 qld-maroochydore-plaza-sunshine,place-au-qld-sunshine-plaza,Canonical centre consolidation
+qld-metro-middle-park,place-au-qld-metro-middle-park,Canonical centre consolidation
 qld-miami-one,place-au-qld-miami-one-shopping-centre,Canonical centre consolidation
 qld-morayfield,place-au-qld-morayfield-shopping-centre,Canonical centre consolidation
+qld-mount-plaza-sheridan,place-au-unknown-mount-sheridan-plaza,Canonical centre consolidation
 qld-mt-ommaney,place-au-qld-mt-ommaney-centre,Canonical centre consolidation
 qld-nambour-plaza,place-au-qld-nambour-plaza,Canonical centre consolidation
 qld-nerang-town,place-au-qld-nerang-town-centre,Canonical centre consolidation
 qld-north-square-tamborine,place-au-qld-north-tamborine-shopping-square,Canonical centre consolidation
 qld-optiko-queen-st,place-au-qld-optiko-queen-st-mall,Canonical centre consolidation
+qld-park-ridge-town,place-au-qld-park-ridge-town-centre,Canonical centre consolidation
 qld-park-southport,place-au-qld-southport-park-shopping-centre,Canonical centre consolidation
 qld-park-sunny,place-au-unknown-sunny-park-shopping-centre,Canonical centre consolidation
+qld-pelican-village-waters,place-au-qld-pelican-waters-shopping-village,Canonical centre consolidation
 qld-pines-the,place-au-qld-the-pines-shopping-centre,Canonical centre consolidation
 qld-plaza-redbank,place-au-qld-redbank-plaza,Canonical centre consolidation
+qld-plaza-sugarland,place-au-qld-sugarland-shoppingtown,Canonical centre consolidation
 qld-plaza-sunnybank,place-au-qld-sunnybank-plaza,Canonical centre consolidation
 qld-plaza-sunshine,place-au-qld-sunshine-plaza,Canonical centre consolidation
 qld-plaza-toowoomba,place-au-qld-toowoomba-plaza,Canonical centre consolidation
@@ -376,6 +519,7 @@ qld-plaza-westlands,place-au-qld-westlands-plaza,Canonical centre consolidation
 qld-plaza-whitsunday,place-au-qld-whitsunday-plaza,Canonical centre consolidation
 qld-plaza-wynnum,place-au-qld-wynnum-plaza,Canonical centre consolidation
 qld-point-victoria,place-au-qld-victoria-point-shopping-centre,Canonical centre consolidation
+qld-q-super,place-au-qld-super-centre,Canonical centre consolidation
 qld-range-the,place-au-qld-the-range-shopping-centre,Canonical centre consolidation
 qld-riverlink,place-au-qld-ipswich-riverlink-shopping-centre,Canonical centre consolidation
 qld-riverside,place-au-qld-riverside-centre,Canonical centre consolidation
@@ -390,18 +534,23 @@ qld-strathpine,place-au-qld-strathpine-centre,Canonical centre consolidation
 qld-sugarland,place-au-qld-sugarland-shoppingtown,Canonical centre consolidation
 qld-super,place-au-qld-super-centre,Canonical centre consolidation
 qld-the,place-au-qld-the-mall,Canonical centre consolidation
+qld-the-village-yeronga,place-au-qld-the-yeronga-village,Canonical centre consolidation
 qld-toowong-village,place-au-qld-toowong-village,Canonical centre consolidation
 qld-townsville,place-au-qld-stockland-townsville,Canonical centre consolidation
 qld-townsville-willows,place-au-qld-townsville-willows-shopping-centre,Canonical centre consolidation
 qld-village-windermere,place-au-qld-windermere-village,Canonical centre consolidation
 qld-whitsunday,place-au-qld-whitsunday-shopping-centre,Canonical centre consolidation
+qld-willows,place-au-qld-townsville-willows-shopping-centre,Canonical centre consolidation
 qld-windmill,place-au-qld-windmill-shopping-centre,Canonical centre consolidation
 sa-adelaide-arcade,place-au-sa-adelaide-arcade,Canonical centre consolidation
+sa-adelaide-plaza-port,place-au-sa-port-adelaide-plaza,Canonical centre consolidation
 sa-adelaide-rundle,place-au-sa-rundle-mall,Canonical centre consolidation
-sa-aldinga,place-au-sa-aldinga-shopping-centre,Canonical centre consolidation
+sa-aldgate-village,place-au-sa-aldgate-village,Canonical centre consolidation
+sa-aldinga-central,place-au-unknown-aldinga-central-shopping-centre,Canonical centre consolidation
 sa-barker-plaza,place-au-sa-barker-plaza,Canonical centre consolidation
 sa-barossa-central,place-au-sa-barossa-central-shopping-centre,Canonical centre consolidation
 sa-barossa-co-op-the,place-au-sa-the-barossa-co-op-shopping-centre,Canonical centre consolidation
+sa-bayside-village,place-au-sa-bayside-village-shopping-centre,Canonical centre consolidation
 sa-beach-christies,place-au-sa-christies-beach-shopping-centre,Canonical centre consolidation
 sa-berri-central-plaza-riverland,place-au-sa-berri-riverland-central-plaza,Canonical centre consolidation
 sa-blvd-lakes-west,place-au-sa-westfield-west-lakes,Canonical centre consolidation
@@ -438,6 +587,7 @@ sa-plaza-sefton,place-au-sa-sefton-plaza-shopping-centre,Canonical centre consol
 sa-plaza-southgate,place-au-sa-southgate-plaza,Canonical centre consolidation
 sa-plaza-tea-tree,place-au-sa-westfield-tea-tree-plaza,Canonical centre consolidation
 sa-plaza-tea-tree-westfield,place-au-sa-westfield-tea-tree-plaza,Canonical centre consolidation
+sa-port,place-au-sa-port-mall,Canonical centre consolidation
 sa-rundle,place-au-sa-rundle-mall,Canonical centre consolidation
 sa-seaford,place-au-sa-seaford-shopping-centre,Canonical centre consolidation
 sa-southgate,place-au-sa-southgate-plaza,Canonical centre consolidation
@@ -467,6 +617,7 @@ vic-619-cnr-doncaster-road-westfield-williamsons,place-au-vic-westfield-doncaste
 vic-airport-west-westfield,place-au-vic-westfield-airport-west,Canonical centre consolidation
 vic-altona-central-meadows-square,place-au-vic-altona-meadows-central-square,Canonical centre consolidation
 vic-altona-gate,place-au-vic-altona-gate-shopping-centre,Canonical centre consolidation
+vic-arcade-block-the,place-au-vic-the-block-arcade,Canonical centre consolidation
 vic-arcade-camberwell,place-au-vic-camberwell-arcade,Canonical centre consolidation
 vic-arcade-walkers,place-au-vic-walkers-arcade,Canonical centre consolidation
 vic-bacchus-marsh-the-village,place-au-vic-the-village-bacchus-marsh-shopping-centre,Canonical centre consolidation
@@ -483,9 +634,11 @@ vic-bulleen-plaza,place-au-vic-bulleen-plaza-shopping-centre,Canonical centre co
 vic-burwood-ctr-heights,place-au-vic-burwood-heights-shopping-ctr,Canonical centre consolidation
 vic-burwood-road-toorak-village,place-au-vic-toorak-road-burwood-village,Canonical centre consolidation
 vic-business-hill-wheelers,place-au-vic-wheelers-hill-business-centre,Canonical centre consolidation
+vic-carnegie-central,place-au-vic-carnegie-central,Canonical centre consolidation
 vic-caroline-springs-square,place-au-vic-caroline-springs-square,Canonical centre consolidation
 vic-carrum-downs,place-au-vic-carrum-downs-shop-centre,Canonical centre consolidation
 vic-casey-central,place-au-vic-casey-central-shopping-centre,Canonical centre consolidation
+vic-central-croydon,place-au-unknown-croydon-central,Canonical centre consolidation
 vic-central-ground-level-melbourne,place-au-vic-melbourne-central-shopping-centre,Canonical centre consolidation
 vic-central-marketplace-pakenham,place-au-vic-pakenham-central-marketplace,Canonical centre consolidation
 vic-central-melbourne,place-au-vic-melbourne-central-shopping-centre,Canonical centre consolidation
@@ -506,11 +659,15 @@ vic-creek-diamond-plaza,place-au-vic-diamond-creek-plaza,Canonical centre consol
 vic-ctr-lakes-sanctuary,place-au-vic-sanctuary-lakes-shopping-ctr,Canonical centre consolidation
 vic-curlewis-town-woolworths,place-au-vic-woolworths-curlewis-town-centre,Canonical centre consolidation
 vic-dandenong-square,place-au-vic-dandenong-square,Canonical centre consolidation
+vic-dfo-essendon,place-au-unknown-dfo-essendon,Canonical centre consolidation
+vic-dfo-hill-uni,place-au-vic-dfo-uni-hill,Canonical centre consolidation
+vic-dfo-moorabbin,place-au-unknown-dfo-moorabbin,Canonical centre consolidation
+vic-dfo-south-wharf,place-au-vic-dfo-south-wharf,Canonical centre consolidation
 vic-doncaster-east-pines-the,place-au-vic-doncaster-east-the-pines-shopping-centre,Canonical centre consolidation
 vic-doncaster-westfield,place-au-vic-westfield-doncaster,Canonical centre consolidation
 vic-downs-keilor,place-au-vic-keilor-downs-shopping-centre,Canonical centre consolidation
 vic-eastland,place-au-vic-eastland,Canonical centre consolidation
-vic-eden-rise,place-au-vic-eden-rise-shopping-centre,Canonical centre consolidation
+vic-eden-rise-village,place-au-vic-berwick-eden-rise-shopping-centre,Canonical centre consolidation
 vic-emporium,place-au-vic-emporium-shopping-centre,Canonical centre consolidation
 vic-endeavour-hills,place-au-vic-endeavour-hills-shopping-centre,Canonical centre consolidation
 vic-evans-square-street-sunbury,place-au-vic-sunbury-square-shopping-centre,Canonical centre consolidation
@@ -536,20 +693,25 @@ vic-lakeview,place-au-vic-lakeview-shopping-centre,Canonical centre consolidatio
 vic-laurimar,place-au-vic-laurimar-shopping-centre,Canonical centre consolidation
 vic-marketplace-shepparton,place-au-vic-shepparton-marketplace,Canonical centre consolidation
 vic-marketplace-sunshine,place-au-vic-sunshine-marketplace,Canonical centre consolidation
+vic-melbourne-strand-the,place-au-vic-the-strand-melbourne,Canonical centre consolidation
 vic-mid-valley,place-au-vic-mid-valley-shopping-centre,Canonical centre consolidation
 vic-mill-park-plaza,place-au-vic-mill-park-plaza,Canonical centre consolidation
 vic-northcote-plaza,place-au-vic-northcote-plaza,Canonical centre consolidation
 vic-northland,place-au-vic-northland,Canonical centre consolidation
+vic-outlet-spencer,place-au-vic-spencer-outlet-centre,Canonical centre consolidation
 vic-pacific-werribee,place-au-vic-werribee-plaza,Canonical centre consolidation
+vic-pakington-strand,place-au-vic-pakington-strand,Canonical centre consolidation
 vic-park-stud,place-au-vic-stud-park-shopping-centre,Canonical centre consolidation
 vic-plaza-rosebud,place-au-vic-rosebud-plaza-shopping-centre,Canonical centre consolidation
 vic-plaza-werribee,place-au-vic-werribee-plaza,Canonical centre consolidation
 vic-plaza-wodonga,place-au-vic-wodonga-plaza,Canonical centre consolidation
 vic-plenty-valley-westfield,place-au-vic-plenty-valley-westfield,Canonical centre consolidation
 vic-ponds-waurn,place-au-vic-waurn-ponds-shopping-centre,Canonical centre consolidation
+vic-qv,place-au-unknown-qv,Canonical centre consolidation
 vic-ramlegh-springs-village,place-au-vic-ramlegh-springs-village,Canonical centre consolidation
 vic-rd,place-au-vic-centre-rd,Canonical centre consolidation
 vic-road,place-au-vic-centre-road,Canonical centre consolidation
+vic-southgate,place-au-vic-southgate-centre,Canonical centre consolidation
 vic-southland,place-au-vic-westfield-southland,Canonical centre consolidation
 vic-southland-westfield,place-au-vic-westfield-southland,Canonical centre consolidation
 vic-square-sunbury,place-au-vic-sunbury-square-shopping-centre,Canonical centre consolidation
@@ -557,6 +719,7 @@ vic-square-tunstall,place-au-vic-tunstall-square,Canonical centre consolidation
 vic-square-wellington,place-au-vic-wellington-square-shopping-centre,Canonical centre consolidation
 vic-stables-the,place-au-vic-the-stables-shopping-centre,Canonical centre consolidation
 vic-stockland-wendouree,place-au-vic-wendouree-stockland,Canonical centre consolidation
+vic-strath-village,place-au-vic-strath-village,Canonical centre consolidation
 vic-summerhill,place-au-vic-summerhill-shopping-centre,Canonical centre consolidation
 vic-the,place-au-vic-the-mall,Canonical centre consolidation
 vic-town-watergardens,place-au-vic-watergardens-town-centre,Canonical centre consolidation
@@ -572,12 +735,12 @@ wa-baldivis-stockland,place-au-wa-stockland-baldivis,Canonical centre consolidat
 wa-bassendean-village,place-au-wa-bassendean-village,Canonical centre consolidation
 wa-belmont-forum,place-au-wa-belmont-forum,Canonical centre consolidation
 wa-booragoon-westfield,place-au-wa-westfield-booragoon,Canonical centre consolidation
+wa-boulevard-broome,place-au-unknown-broome-boulevard,Canonical centre consolidation
 wa-boulevard-northam,place-au-wa-northam-boulevard-shopping-centre,Canonical centre consolidation
 wa-boulevarde-homeco-southlands,place-au-wa-homeco-southlands-boulevarde,Canonical centre consolidation
 wa-broadway-fair,place-au-wa-broadway-fair-shopping-centre,Canonical centre consolidation
 wa-bunbury-centrepoint,place-au-wa-bunbury-centrepoint,Canonical centre consolidation
 wa-bunbury-forum,place-au-wa-bunbury-forum,Canonical centre consolidation
-wa-business-gateway-the,place-au-wa-the-gateway-business-centre,Canonical centre consolidation
 wa-cannington-carousel,place-au-wa-westfield-carousel,Canonical centre consolidation
 wa-carousel,place-au-wa-westfield-carousel,Canonical centre consolidation
 wa-carousel-westfield,place-au-wa-westfield-carousel,Canonical centre consolidation
@@ -591,18 +754,20 @@ wa-city-westfield-whitford,place-au-wa-westfield-whitford-city,Canonical centre 
 wa-clarkson-keys-ocean,place-au-wa-clarkson-ocean-keys-shopping-centre,Canonical centre consolidation
 wa-cloisters-square,place-au-wa-cloisters-square,Canonical centre consolidation
 wa-cockburn-gateway,place-au-wa-cockburn-gateway-shopping-centre,Canonical centre consolidation
+wa-dfo-perth,place-au-wa-dfo-perth,Canonical centre consolidation
 wa-dog-swamp,place-au-wa-dog-swamp-shopping-centre,Canonical centre consolidation
 wa-duncraig,place-au-wa-duncraig-shopping-centre,Canonical centre consolidation
 wa-eaton-fair,place-au-wa-eaton-fair-shopping-centre,Canonical centre consolidation
 wa-floor-galleria-ground-morley,place-au-wa-morley-galleria,Canonical centre consolidation
 wa-forest-forum-lakes,place-au-wa-forest-lakes-forum,Canonical centre consolidation
+wa-forest-lakes-forum,place-au-wa-forest-lakes-forum,Canonical centre consolidation
 wa-forum-leeming,place-au-wa-leeming-shopping-forum,Canonical centre consolidation
 wa-forum-mandurah,place-au-wa-mandurah-forum,Canonical centre consolidation
 wa-galleria,place-au-wa-morley-galleria,Canonical centre consolidation
 wa-galleria-morley,place-au-wa-morley-galleria,Canonical centre consolidation
 wa-gate-midland,place-au-wa-midland-gate-shopping-centre,Canonical centre consolidation
 wa-gateway-morley,place-au-wa-morley-gateway-shopping-centre,Canonical centre consolidation
-wa-gateways,place-au-wa-gateways-shopping-centre,Canonical centre consolidation
+wa-gateways,place-au-wa-cockburn-gateway-shopping-centre,Canonical centre consolidation
 wa-green-village-waterford,place-au-wa-waterford-village-green,Canonical centre consolidation
 wa-harrisdale-stockland,place-au-wa-harrisdale-stockland-shopping-centre,Canonical centre consolidation
 wa-innaloo-westfield,place-au-wa-westfield-innaloo,Canonical centre consolidation
@@ -620,11 +785,14 @@ wa-murray-st,place-au-wa-murray-st-mall,Canonical centre consolidation
 wa-northgate,place-au-wa-northgate-shopping-centre,Canonical centre consolidation
 wa-riverton-stockland,place-au-wa-riverton-stockland,Canonical centre consolidation
 wa-rockingham,place-au-wa-rockingham-centre,Canonical centre consolidation
+wa-roselea,place-au-wa-roselea-shopping-centre,Canonical centre consolidation
 wa-village-winthrop,place-au-wa-winthrop-village-shopping-centre,Canonical centre consolidation
 wa-warnbro,place-au-wa-warnbro-centre,Canonical centre consolidation
 wa-westfield-booragoon,place-au-wa-westfield-booragoon,Canonical centre consolidation
 waikato-chartwell,place-nz-waikato-chartwell-shopping-centre,Canonical centre consolidation
+waikato-flagstaff,place-nz-waikato-flagstaff-shopping-centre,Canonical centre consolidation
 waikato-goldfields,place-nz-waikato-goldfields-shopping-centre,Canonical centre consolidation
+waikato-rototuna,place-nz-waikato-rototuna-shopping-centre,Canonical centre consolidation
 wellington-and-cnr-cuba-dixon-street,place-nz-wellington-cnr-cuba-mall-and-dixon-street,Canonical centre consolidation
 wellington-city-north,place-nz-wellington-north-city-shopping-centre,Canonical centre consolidation
 wellington-coastlands,place-nz-wellington-coastlands-shoppingtown,Canonical centre consolidation

@@ -81,13 +81,13 @@ class MarketIntelligenceTests(unittest.TestCase):
         self.assertTrue(all(link["sa2_code"] for link in australian))
         self.assertTrue(all(not link["sa2_code"] for link in new_zealand))
 
-    def test_bailey_benchmark_uses_accepted_member_sa2_consensus_when_place_point_misses(self) -> None:
+    def test_bailey_benchmark_uses_authoritative_sa2_when_display_polygon_misses(self) -> None:
         fitzroy = next(
             row
             for row in self.lookalikes["bailey_benchmarks"]
             if row["store_id"] == "bailey-nelson-fitzroy"
         )
-        self.assertEqual(fitzroy["market_match_basis"], "Accepted member-store SA2 consensus")
+        self.assertEqual(fitzroy["market_match_basis"], "ABS authoritative point query")
         self.assertEqual(fitzroy["market_features"]["population_2025"], 12135)
         self.assertEqual(
             fitzroy["market_features"]["median_equivalised_household_income_weekly_2021"],

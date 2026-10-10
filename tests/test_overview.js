@@ -1,0 +1,23 @@
+const assert = require('node:assert/strict');
+const {summarise} = require('../assets/overview.js');
+const centre=(state,has_bailey,retailers=[])=>({country:'Australia',state,place_type:'Shopping Centre',has_bailey,retailers,optical_store_count:retailers.length});
+const store=(state,extra={})=>({country:'Australia',state,status:'Active',usable_for_network:true,current_source:true,...extra});
+const places=[centre('QLD',false,['OPSM','OPSM','Specsavers']),centre('QLD',true,['Bailey Nelson']),centre('NSW',false),{country:'Australia',state:'QLD',place_type:'High Street Corridor'}, {...centre('QLD',false),country:'New Zealand'}];
+const stores=[store('QLD'),store('NSW',{current_source:false}),store('QLD',{status:'Closed'}),store('QLD',{usable_for_network:false}),store('Auckland',{country:'New Zealand'})];
+const all=summarise(stores,places);
+assert.equal(all.network.length,2);
+assert.equal(all.centres.length,3);
+assert.equal(all.absent.length,2);
+assert.equal(all.withBN,1);
+assert.equal(all.validatedWhitespace,1);
+assert.equal(all.distribution.reduce((sum,r)=>sum+r.count,0),all.centres.length);
+assert.equal(all.distribution.find(r=>r.label==='3 optical outlets').count,1);
+assert.equal(all.brands.find(r=>r.label==='OPSM').count,1);
+assert.equal(all.stale,1);
+const qld=summarise(stores,places,'QLD');
+assert.equal(qld.network.length,1);
+assert.equal(qld.centres.length,2);
+assert.equal(qld.corridors.length,1);
+assert.equal(qld.states.reduce((n,r)=>n+r.count,0),2); // National context stays national.
+assert.equal(summarise([],[]).centres.length,0);
+console.log('Overview population, scope, uniqueness and exclusion tests passed');

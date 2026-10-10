@@ -14,6 +14,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
+from public_trading_status import infer_public_trading_status
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -89,8 +90,9 @@ def map_coordinates(url: str) -> tuple[float, float, str]:
         try:
             _, resolved = fetch_text(url, timeout=45)
             exact = re.search(r"!3d(-?\d+(?:\.\d+)?)!4d(-?\d+(?:\.\d+)?)", resolved)
-            fallback = re.search(r"@(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)", resolved)
-            match = exact or fallback
+            # The @ pair is the map camera, which can be kilometres from the
+            # named store. Only use the business feature's explicit point.
+            match = exact
             if not match:
                 raise ValueError(f"Coordinates missing from resolved map URL: {resolved}")
             return float(match.group(1)), float(match.group(2)), resolved
@@ -179,6 +181,25 @@ def visible_address(page_html: str) -> dict[str, str]:
     return result
 
 
+def australian_phone(page_html: str, structured_phone: str | None) -> str:
+    """Use a published complete number; never repair a missing digit by guess."""
+    def valid(value: str) -> bool:
+        digits = re.sub(r"\D", "", value)
+        return bool(re.fullmatch(r"(?:61[23478]\d{8}|0[23478]\d{8}|1[38]00\d{6}|13\d{4})", digits))
+
+    supplied = (structured_phone or "").strip()
+    if valid(supplied):
+        return supplied
+    candidates = {}
+    for label in re.findall(r'<a\b[^>]*href=["\']tel:[^"\']*["\'][^>]*>(.*?)</a>', page_html, re.I | re.S):
+        value = html_lib.unescape(re.sub(r"<[^>]+>", "", label)).strip()
+        if valid(value):
+            digits = re.sub(r"\D", "", value)
+            key = "0" + digits[2:] if digits.startswith("61") else digits
+            candidates[key] = value
+    return next(iter(candidates.values())) if len(candidates) == 1 else ""
+
+
 def clean_store(url: str) -> tuple[dict, dict]:
     page_html, resolved_page_url = fetch_text(url)
     parser = PageParser()
@@ -225,12 +246,12 @@ def clean_store(url: str) -> tuple[dict, dict]:
     store = {
         "id": slug,
         "name": structured.get("name", f"Bailey Nelson {slug.replace('-', ' ').title()}"),
-        "status": "Active",
+        "status": infer_public_trading_status(page_html, structured),
         "state": state,
         "city": address.get("addressLocality", ""),
         "postal_code": address.get("postalCode", ""),
         "full_address": full_address,
-        "phone": structured.get("telephone", ""),
+        "phone": australian_phone(page_html, structured.get("telephone")),
         "latitude": latitude,
         "longitude": longitude,
         "official_url": resolved_page_url,
@@ -282,6 +303,7 @@ def write_csv(stores: list[dict]) -> None:
         "map_url",
         "coordinate_source",
     ]
+    fields += sorted({key for store in stores for key in store} - set(fields))
     with CSV_PATH.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
@@ -318,6 +340,16 @@ def write_geojson(stores: list[dict], fetched_at: str) -> None:
     )
 
 
+def unlisted_prior_stores(stores: list[dict], prior: list[dict], prior_date: str) -> list[dict]:
+    """A locator omission is not closure; retain dated previously known premises."""
+    current_ids = {store["id"] for store in stores}
+    retained = []
+    for row in prior:
+        if row["id"] not in current_ids:
+            retained.append({**row, "fetched_at": row.get("fetched_at") or prior_date})
+    return retained
+
+
 def main() -> None:
     fetched_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     list_html, _ = fetch_text(LIST_URL)
@@ -341,6 +373,22 @@ def main() -> None:
     raw_pages.sort(key=lambda item: item["source_url"])
     validate(stores, len(urls))
 
+    prior_snapshot = json.loads(RAW_PATH.read_text()) if RAW_PATH.exists() else {}
+    prior_rows = []
+    if CSV_PATH.exists():
+        with CSV_PATH.open(newline="") as handle:
+            prior_rows = list(csv.DictReader(handle))
+    retained = unlisted_prior_stores(stores, prior_rows, prior_snapshot.get("fetched_at", ""))
+    if any(not row["fetched_at"] for row in retained):
+        raise ValueError("Unlisted prior branch lacks an observation date; review before refresh")
+    for row in retained:
+        row["latitude"], row["longitude"] = float(row["latitude"]), float(row["longitude"])
+    stores.extend(retained)
+    stores.sort(key=lambda item: (item["state"], item["city"], item["name"]))
+    retained_urls = {row["official_url"] for row in retained}
+    old_sources = prior_snapshot.get("stores", []) + prior_snapshot.get("retained_unlisted_sources", [])
+    retained_sources = [row for row in old_sources if row.get("source_url", row.get("official_url")) in retained_urls]
+
     RETAILER_DIR.mkdir(parents=True, exist_ok=True)
     snapshot = {
         "source_url": LIST_URL,
@@ -348,6 +396,9 @@ def main() -> None:
         "list_count": len(urls),
         "store_count": len(stores),
         "stores": raw_pages,
+        "retained_unlisted_records": retained,
+        "retained_unlisted_sources": retained_sources,
+        "retained_unlisted_basis": "Locator omission does not establish closure. Preserve each prior observation date pending explicit reconciliation.",
     }
     RAW_PATH.write_text(json.dumps(snapshot, indent=2) + "\n", encoding="utf-8")
     write_csv(stores)

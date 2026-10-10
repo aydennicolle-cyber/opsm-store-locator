@@ -1,0 +1,439 @@
+{
+  "metadata": {
+    "scope": "Three-destination pilot; public evidence only. No national coverage claim.",
+    "vintage_policy": "Verification date does not replace source reference period.",
+    "geography_policy": "Coordinate-bound public ABS receipts reused; resident SA2 is not a customer catchment."
+  },
+  "profiles": [
+    {
+      "place_id": "place-au-wa-karrinyup-shopping-centre",
+      "extent": "Official shopping-centre directory scope; accepted optical membership is separately evidenced. The map point is not a property boundary.",
+      "extent_evidence": {
+        "source_url": "https://www.karrinyupcentre.com.au/centre-info/about-us",
+        "checked_at": "2026-10-08T08:53:07.127934+00:00",
+        "source_date": null,
+        "capture_sha256": "1fbcea597429a45ee3085786e1c5fa580a494b11765fb5dbf6601958ff481663"
+      },
+      "access": [
+        {
+          "label": "Parking",
+          "value": "Centre reports over 4,800 car bays and road access via Karrinyup Road, Francis Avenue, Davenport Street and Jeanes Road.",
+          "source_url": "https://www.karrinyupcentre.com.au/centre-info/location-parking",
+          "checked_at": "2026-10-08T08:53:07.147004+00:00",
+          "source_date": null,
+          "capture_sha256": "6ac46a5895aa255cbf6c484a80299b7af757b2c0aca8f94acce86ba57d6f9710"
+        },
+        {
+          "label": "Public transport",
+          "value": "Nearest rail station is Stirling; onward bus connection serves the centre bus port less than 100 metres from the centre. This is not direct rail access.",
+          "source_url": "https://www.karrinyupcentre.com.au/centre-info/location-parking",
+          "checked_at": "2026-10-08T08:53:07.147004+00:00",
+          "source_date": null,
+          "capture_sha256": "6ac46a5895aa255cbf6c484a80299b7af757b2c0aca8f94acce86ba57d6f9710"
+        }
+      ],
+      "property_facts": [
+        {
+          "label": "Ownership and management",
+          "value": "UniSuper owner; GPT manager, as reported in July 2025.",
+          "source_url": "https://www.gpt.com.au/news-insights/media-releases/karrinyup-achieves-1-billion-annual-sales-spurred-demand-retail",
+          "checked_at": "2026-10-08T08:53:07.689933+00:00",
+          "source_date": "2025-07-09",
+          "capture_sha256": "452bc0e7531718460a3a041fa78afde65135269d97d5cc8ccff210866d6518d9"
+        },
+        {
+          "label": "Historical visits",
+          "value": "13.4 million customers in the preceding year, reported July 2025; exact visit-period end is not separately specified. Not a current 2026 footfall measure.",
+          "source_url": "https://www.gpt.com.au/news-insights/media-releases/karrinyup-achieves-1-billion-annual-sales-spurred-demand-retail",
+          "checked_at": "2026-10-08T08:53:07.689933+00:00",
+          "source_date": "2025-07-09",
+          "capture_sha256": "452bc0e7531718460a3a041fa78afde65135269d97d5cc8ccff210866d6518d9"
+        },
+        {
+          "label": "Retailer count wording",
+          "value": "Over 300 retailers; not an exact occupied-tenancy denominator.",
+          "source_url": "https://www.gpt.com.au/news-insights/media-releases/karrinyup-achieves-1-billion-annual-sales-spurred-demand-retail",
+          "checked_at": "2026-10-08T08:53:07.689933+00:00",
+          "source_date": "2025-07-09",
+          "capture_sha256": "452bc0e7531718460a3a041fa78afde65135269d97d5cc8ccff210866d6518d9"
+        },
+        {
+          "label": "Gross lettable area",
+          "value": "109,000 m², GPT Listed Investor Tour October 2025, page 18. Independently checked against the PDF page.",
+          "source_url": "https://www.gpt.com.au/sites/default/files/inline-uploads/GPT%20Retail%20presentation%20and%20Rouse%20Hill%20Town%20Centre%20tour.pdf",
+          "source_period": "2025-10",
+          "source_date": null,
+          "checked_at": "2026-10-08",
+          "capture_sha256": "23c9ee16de9612856bbfe75033a7ecc5ceac3bac4cbab172a1e876b2de72a8ef"
+        }
+      ],
+      "material_optical_note": "The accepted census includes a separately identified Sunglass Hut concession in Myer that is absent from the centre directory. Do not delete it or treat a directory omission as closure.",
+      "decision_use": "Use as a large, established multi-anchor destination with substantial observed optical competition. Resident-area income and demographics help frame questions but do not describe the full customer catchment.",
+      "next_questions": [
+        "Which available frontage or entry route has relevant pedestrian exposure relative to the existing optical stores?",
+        "Can the owner supply current footfall, customer origins and an occupied-tenancy schedule?"
+      ],
+      "limitations": [
+        "No current occupied-tenancy or category floor-area denominator.",
+        "No verified available-unit inventory, unit economics or customer catchment."
+      ],
+      "profile_status": "Partial: bounded public research complete; commercial and coverage gaps explicit",
+      "checked_at": "2026-10-08",
+      "demographic_boundary_evidence": {
+        "latitude": -31.876927,
+        "longitude": 115.777398,
+        "match_status": "Unique",
+        "sa2_code": "505021089",
+        "sa2_name": "Karrinyup - Gwelup - Carine",
+        "match_count": 1,
+        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.777398%2C-31.876927&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+        "checked_at": "2026-09-27T21:58:22.781427+00:00"
+      }
+    },
+    {
+      "place_id": "place-au-nsw-ed-square-town-centre",
+      "extent": "Official Ed.Square Town Centre directory scope; nearby residential development is contextual and is not added to centre membership.",
+      "extent_evidence": {
+        "source_url": "https://edsquare.shopping/about/",
+        "checked_at": "2026-10-08T08:53:13.191330+00:00",
+        "source_date": null,
+        "capture_sha256": "4759be74fb1816681a528c11febeeac89f46bd6ff8afe44dfac1037ea4ae5170"
+      },
+      "access": [
+        {
+          "label": "Station access",
+          "value": "Opposite Edmondson Park station and bus stops. Walking directions cross Henderson Road and follow Sergeant Street about 70 m to the entrance. This is an access description, not measured footfall.",
+          "source_url": "https://edsquare.shopping/visit/",
+          "source_date": null,
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "52e5128d176f5fbcd8f55c57f6dc8f36c32f3a4573f4ab2dbc6ddbde99eb9981",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/visit.json"
+        },
+        {
+          "label": "Parking capacity",
+          "value": "926 spaces, reported April 2026.",
+          "source_url": "https://www.cbre.com.au/press-releases/sydney-s-thriving-ed-square-town-centre-provides-highly-sought-after-retail-investment-opportunity",
+          "source_date": "2026-04-01",
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "2d0132325ff5c6c2447987053ef2fffb264858db414fc93f9510166248b30fe6",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/cbre.json"
+        },
+        {
+          "label": "Parking and accessibility",
+          "value": "The centre publishes three-hour free parking with conditions, accessible and pram bays, and EV charging. Re-entry wording conflicts, so check posted conditions.",
+          "source_url": "https://edsquare.shopping/visit/",
+          "source_date": null,
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "52e5128d176f5fbcd8f55c57f6dc8f36c32f3a4573f4ab2dbc6ddbde99eb9981",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/visit.json"
+        }
+      ],
+      "property_facts": [
+        {
+          "label": "Reported owners",
+          "value": "Assembly Funds Management and PGIM Real Estate. Joint acquisition announced July 2026 and corroborated by a later JLL management statement; exact settlement date, legal holding entities and ownership split remain unverified.",
+          "source_url": "https://www.linkedin.com/posts/nortonrebecca_jllretail-activity-7508277736021557248-6HoM",
+          "source_date": null,
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "b1b63dd14934a313ed199462d93e60fb213927679cd3ac0a76c1a8a07444e52b",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/jll.json"
+        },
+        {
+          "label": "Management",
+          "value": "JLL. Current official centre contact corroborates the public management appointment.",
+          "source_url": "https://edsquare.shopping/contact-us/",
+          "source_date": null,
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "1b3473ca39eb3b6691d00f31e34102cd460559a7119a18a67256c84c50456b62",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/contact.json"
+        },
+        {
+          "label": "Centre format",
+          "value": "Neighbourhood retail destination, described by PGIM as convenience and leisure based.",
+          "source_url": "https://www.pgim.com/global/en/borrower/about/newsroom/press-releases/PGIM-and-AFM-to-acquire-A248M-south-west-Sydney-retail-seed-asset-for-new-partnership",
+          "source_date": "2026-07-02",
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "7c4e45bbd97b3afd6a3147c511ad7d3abedda4062137d9b8ed53a3e7eef844db",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/pgim.json"
+        },
+        {
+          "label": "Gross lettable area",
+          "value": "24,502 m², explicitly reported in the April 2026 sale campaign. Later approximate 28,000 m² wording is not reconciled; 40,000 m² legacy completion figure is not current operating GLA.",
+          "source_url": "https://www.cbre.com.au/press-releases/sydney-s-thriving-ed-square-town-centre-provides-highly-sought-after-retail-investment-opportunity",
+          "source_date": "2026-04-01",
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "2d0132325ff5c6c2447987053ef2fffb264858db414fc93f9510166248b30fe6",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/cbre.json"
+        },
+        {
+          "label": "Historical occupancy",
+          "value": "96.5% in FY2025; 95.3% in FY2024. No current vacancy schedule inferred.",
+          "source_url": "https://www.frasersproperty.com/content/dam/frasersproperty/feature/project/frasers-corporate/annual-report/2025/FY25%20FPL%20Annual%20Report.pdf",
+          "source_date": null,
+          "source_period": "FY2025, ending 30 September 2025 (FY2024 comparator where shown)",
+          "checked_at": "2026-10-10",
+          "capture_sha256": "cbd7668dc9dcde998d90041cec193d50108204026efa1184b8f9947d81409959",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/report.json"
+        },
+        {
+          "label": "Historical lettable area",
+          "value": "25,100 m² estimated total lettable area in FY2025 report. Definition and period differ from April 2026 GLA.",
+          "source_url": "https://www.frasersproperty.com/content/dam/frasersproperty/feature/project/frasers-corporate/annual-report/2025/FY25%20FPL%20Annual%20Report.pdf",
+          "source_date": null,
+          "source_period": "FY2025, ending 30 September 2025 (FY2024 comparator where shown)",
+          "checked_at": "2026-10-10",
+          "capture_sha256": "cbd7668dc9dcde998d90041cec193d50108204026efa1184b8f9947d81409959",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/report.json"
+        },
+        {
+          "label": "Tenant-count scope",
+          "value": "PGIM reports three named anchors, nine mini-majors and 78 specialty stores. The 97 directory listings are a different source unit; not an occupied-tenancy denominator.",
+          "source_url": "https://www.pgim.com/global/en/borrower/about/newsroom/press-releases/PGIM-and-AFM-to-acquire-A248M-south-west-Sydney-retail-seed-asset-for-new-partnership",
+          "source_date": "2026-07-02",
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "7c4e45bbd97b3afd6a3147c511ad7d3abedda4062137d9b8ed53a3e7eef844db",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/pgim.json"
+        }
+      ],
+      "material_optical_note": "Two accepted optical businesses: Eye Concepts and Medispecs. Back In Focus is a physiotherapy/chiropractic business, not an additional optical retailer.",
+      "decision_use": "Compare candidate frontages against station routes, supermarket access and the two accepted optical businesses. Public evidence now establishes destination format and scale, but does not establish achievable sales, rents or unmet optical demand.",
+      "next_questions": [
+        "Obtain the current leasing plan with available unit areas and pedestrian routes.",
+        "Confirm post-acquisition holding entities and the permanent leasing contact or agency mandate.",
+        "Request dated footfall and customer-origin evidence plus the trade-area boundary.",
+        "Reconcile marketing GLA against the latest tenancy schedule and asset-area definition."
+      ],
+      "limitations": [
+        "Annual centre visits, pedestrian counts, retailer sales and customer-origin evidence were not established from the checked public sources.",
+        "Exact legal owner entities, ownership percentages and settlement date remain unverified; reported acquisition and current management are separately sourced.",
+        "Permanent leasing mandate, available units, rent, incentives and lease expiry schedule require further evidence.",
+        "GLA and approximate whole-asset area descriptions differ; dated definitions are retained rather than combined.",
+        "No occupied-tenancy denominator or tenant-category floor-area shares; directory entries may include related outlets.",
+        "Directory baseline remains 8 October 2026; classifications reviewed 10 October. A complete new directory fetch failed; individual public pages were checked where available.",
+        "Published trade-area boundaries were not obtained. ABS resident statistics are not centre customers."
+      ],
+      "profile_status": "Partial: public research pass completed 10 October 2026; unresolved items explicitly recorded",
+      "checked_at": "2026-10-10",
+      "demographic_boundary_evidence": {
+        "latitude": -33.9704639,
+        "longitude": 150.8578009,
+        "match_status": "Unique",
+        "sa2_code": "127031730",
+        "sa2_name": "Edmondson Park",
+        "match_count": 1,
+        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=150.8578009%2C-33.9704639&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+        "checked_at": "2026-09-27T21:58:23.240116+00:00"
+      },
+      "display_address": "52 Soldiers Parade, Edmondson Park NSW 2174",
+      "leasing_evidence": [
+        {
+          "label": "Permanent leasing",
+          "value": "Use the official centre leasing enquiry form. No public unit schedule, rent, incentive, lease-expiry schedule or exclusive permanent agency mandate was established.",
+          "source_url": "https://edsquare.shopping/leasing/",
+          "source_date": null,
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "05f50a14084010d2b586822d60fb1bd1c18779d2dfdfea01bbe27fa71d70d85d",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/leasing.json"
+        },
+        {
+          "label": "Casual leasing",
+          "value": "The centre directs pop-up and kiosk enquiries to Location X JLL. This does not establish permanent leasing control.",
+          "source_url": "https://edsquare.shopping/leasing/",
+          "source_date": null,
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "05f50a14084010d2b586822d60fb1bd1c18779d2dfdfea01bbe27fa71d70d85d",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/leasing.json"
+        }
+      ],
+      "trade_area_evidence": [
+        {
+          "label": "Published trade area",
+          "value": "CBRE reports 208,850 residents in the total trade area (2024), and 72,160 in the main trade area (year not separately stated). Boundaries were not supplied on the page; neither figure is substituted for the mapped ABS SA2.",
+          "source_url": "https://www.cbre.com.au/press-releases/sydney-s-thriving-ed-square-town-centre-provides-highly-sought-after-retail-investment-opportunity",
+          "source_date": "2026-04-01",
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "2d0132325ff5c6c2447987053ef2fffb264858db414fc93f9510166248b30fe6",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/cbre.json"
+        }
+      ],
+      "census_context": [
+        {
+          "label": "Resident Census context",
+          "value": "Edmondson Park SA2, 2021: 12,080 people; median age 31; average household 3.4 people; median weekly household income $2,562. Census counts and unadjusted income differ from ERP and equivalised income used in screening.",
+          "source_url": "https://www.abs.gov.au/census/find-census-data/quickstats/2021/127031730",
+          "source_date": null,
+          "source_period": "2021",
+          "checked_at": "2026-10-10",
+          "capture_sha256": "96cd33b2fec30925bb26705fdd52d0f99b7dd06cd034e81ad0817e8ca3184a0c",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/abs.json"
+        }
+      ],
+      "anchors": [
+        {
+          "name": "Coles",
+          "source_url": "https://www.pgim.com/global/en/borrower/about/newsroom/press-releases/PGIM-and-AFM-to-acquire-A248M-south-west-Sydney-retail-seed-asset-for-new-partnership",
+          "source_date": "2026-07-02"
+        },
+        {
+          "name": "TK Maxx",
+          "source_url": "https://www.pgim.com/global/en/borrower/about/newsroom/press-releases/PGIM-and-AFM-to-acquire-A248M-south-west-Sydney-retail-seed-asset-for-new-partnership",
+          "source_date": "2026-07-02"
+        },
+        {
+          "name": "Event Cinemas",
+          "source_url": "https://www.pgim.com/global/en/borrower/about/newsroom/press-releases/PGIM-and-AFM-to-acquire-A248M-south-west-Sydney-retail-seed-asset-for-new-partnership",
+          "source_date": "2026-07-02"
+        }
+      ],
+      "completion_review": {
+        "reviewed_at": "2026-10-10",
+        "status": "Public-source pass complete; commercial due diligence incomplete",
+        "source_checks": [
+          {
+            "source_url": "https://www.pgim.com/global/en/borrower/about/newsroom/press-releases/PGIM-and-AFM-to-acquire-A248M-south-west-Sydney-retail-seed-asset-for-new-partnership",
+            "source_date_or_period": "2026-07-02",
+            "finding": "PGIM and Assembly announced a joint venture acquisition for AUD248m. The centre is described as a convenience and leisure-based neighbourhood destination, over 24,500 sqm, with Coles, TK Maxx, Event Cinemas, nine mini-majors and 78 specialty stores. This announcement alone does not establish settlement or ownership percentages."
+          },
+          {
+            "source_url": "https://www.cbre.com.au/press-releases/sydney-s-thriving-ed-square-town-centre-provides-highly-sought-after-retail-investment-opportunity",
+            "source_date_or_period": "2026-04-01",
+            "finding": "Sales campaign reports 24,502 sqm GLA, 89 specialty stores and 926 parking spaces. Total trade area 208,850 residents (2024); main trade area 72,160, reference year not separately specified. Boundaries not supplied on page. CBRE acts on sale; this does not establish an ongoing leasing appointment."
+          },
+          {
+            "source_url": "https://www.linkedin.com/posts/nortonrebecca_jllretail-activity-7508277736021557248-6HoM",
+            "source_date_or_period": null,
+            "finding": "Indexed public statement by JLL representative Rebecca Norton reports management appointment following Assembly and PGIM acquisition. Approximate 28,000 sqm description differs from earlier GLA disclosure. Exact appointment and settlement dates, holding entities and ownership split are not established."
+          },
+          {
+            "source_url": "https://edsquare.shopping/contact-us/",
+            "source_date_or_period": null,
+            "finding": "Official centre contact page uses a JLL centre-management mailbox and confirms 52 Soldiers Parade, Edmondson Park NSW2174. Corroborates the public JLL management appointment statement."
+          },
+          {
+            "source_url": "https://edsquare.shopping/leasing/",
+            "source_date_or_period": null,
+            "finding": "Official leasing page offers a permanent leasing enquiry form and separately links casual mall leasing to Location X JLL. No unit inventory or commercial terms provided. Permanent exclusive agency appointment not specified."
+          },
+          {
+            "source_url": "https://edsquare.shopping/visit/",
+            "source_date_or_period": null,
+            "finding": "Centre is opposite Edmondson Park station and bus stops, with a signed walking approach via Henderson Road and Sergeant Street. Three-hour free parking published with conditions; re-entry wording conflicts between 30 and 60 minutes. Accessible bays, pram bays and EV charging described."
+          },
+          {
+            "source_url": "https://www.frasersproperty.com/content/dam/frasersproperty/feature/project/frasers-corporate/annual-report/2025/FY25%20FPL%20Annual%20Report.pdf",
+            "source_date_or_period": "2025-09-30",
+            "finding": "FY2025 annual report printed page51 (PDF page53) reports Ed.Square Retail effective share100%, estimated total lettable area25.1 thousand sqm, occupancy96.5% FY25 and95.3% FY24. Historical Frasers interest predates2026 sale announcement. Estimated lettable area is not substituted for GLA."
+          },
+          {
+            "source_url": "https://www.frasersproperty.com.au/Portfolio/Retail/NSW/Ed-Square-Town-Centre?sc_site=corporate",
+            "source_date_or_period": null,
+            "finding": "Legacy property page identifies Frasers as developer owner operator, lists40,000 sqm on completion and900+ parking. Current transaction evidence supersedes ownership wording; completion area is not operating GLA."
+          },
+          {
+            "source_url": "https://www.abs.gov.au/census/find-census-data/quickstats/2021/127031730",
+            "source_date_or_period": "2021",
+            "finding": "2021 Census QuickStats for Edmondson Park SA2:12,080 people, median age 31, household size3.4, median weekly household income2562. This differs in concept from estimated resident population and equivalised household income already used by the tool."
+          },
+          {
+            "source_url": "https://edsquare.shopping/store-directory/tk-maxx/",
+            "source_date_or_period": null,
+            "finding": "Official retailer page describes fashion for men women and children, footwear handbags cosmetics and homewares. Shop AGMM02 Ground Floor. Supports a reviewed cross-category classification."
+          }
+        ],
+        "remaining_actions": [
+          "Obtain the current leasing plan with available unit areas and pedestrian routes.",
+          "Confirm post-acquisition holding entities and the permanent leasing contact or agency mandate.",
+          "Request dated footfall and customer-origin evidence plus the trade-area boundary.",
+          "Reconcile marketing GLA against the latest tenancy schedule and asset-area definition."
+        ]
+      }
+    },
+    {
+      "place_id": "corridor-au-sa-glenelg-jetty-road",
+      "extent": "Canonical Jetty Road street scope. The council describes an approximately one-kilometre street and a wider precinct with side streets; its improvement project also includes Colley Terrace. The wider precinct and project boundary do not establish canonical street membership.",
+      "extent_evidence": {
+        "source_url": "https://www.yourholdfast.com/transforming-jetty-road-glenelg/transforming-jetty-road-glenelg-faqs",
+        "checked_at": "2026-10-08T09:52:37.745678+00:00",
+        "source_date": null,
+        "capture_sha256": "12436860cc2291bb1a505b679dea55cd880a4f2a856ba9ade9a09ccd6085d583"
+      },
+      "access": [
+        {
+          "label": "Precinct access",
+          "value": "Council describes tram/bus access and more than 3,000 car parks within a four-minute walk of Jetty Road. This is a council precinct statement, not an audited parking inventory or a live service check.",
+          "source_url": "https://www.yourholdfast.com/transforming-jetty-road-glenelg/transforming-jetty-road-glenelg-faqs",
+          "checked_at": "2026-10-08T09:52:37.745678+00:00",
+          "source_date": null,
+          "capture_sha256": "12436860cc2291bb1a505b679dea55cd880a4f2a856ba9ade9a09ccd6085d583"
+        }
+      ],
+      "property_facts": [
+        {
+          "label": "Public-realm works",
+          "value": "Council currently reports all major construction works complete, with final inspections, quality assurance and some minor remedial work remaining. Full project completion is not yet asserted.",
+          "source_url": "https://www.yourholdfast.com/transforming-jetty-road-glenelg",
+          "checked_at": "2026-10-08T09:52:37.274942+00:00",
+          "source_date": null,
+          "capture_sha256": "1ea7f3e9029d359ac590ee5f2aca7d6e074ac9a7b44cb1dd77cdc1dccf9741b9"
+        },
+        {
+          "label": "Business-count scope",
+          "value": "Council describes more than 300 businesses across the street and side-street precinct. This is not a denominator for the narrower Jetty Road listing set.",
+          "source_url": "https://www.yourholdfast.com/transforming-jetty-road-glenelg/transforming-jetty-road-glenelg-faqs",
+          "checked_at": "2026-10-08T09:52:37.745678+00:00",
+          "source_date": null,
+          "capture_sha256": "12436860cc2291bb1a505b679dea55cd880a4f2a856ba9ade9a09ccd6085d583"
+        }
+      ],
+      "material_optical_note": "OPSM belongs to Bayside Village Shopping Centre; Sunglass Hut is at Shop 9, 1 Colley Terrace. Both remain nearby competitors, not additional accepted Jetty Road street members. Historical directory addresses are retained as conflicting evidence.",
+      "decision_use": "Compare specific street segments and post-works pedestrian movement. Older resident-area demographics and a coastal visitor offer warrant separate resident/visitor questions; neither establishes customer mix.",
+      "next_questions": [
+        "Which street segment and frontage benefits from pedestrian routes after the works?",
+        "What evidence separates year-round resident demand from visitor seasonality?",
+        "Do the remaining address/identity conflicts matter to a specific candidate unit?"
+      ],
+      "limitations": [
+        "The district directory extends well beyond Jetty Road; held and out-of-scope records remain visible.",
+        "No defensible single precinct GLA, occupied-tenancy denominator or current visitation series.",
+        "No measured visitor share or customer catchment; transport alerts were not checked."
+      ],
+      "profile_status": "Partial: bounded public research complete; commercial and coverage gaps explicit",
+      "checked_at": "2026-10-08",
+      "demographic_boundary_evidence": {
+        "latitude": -34.979577,
+        "longitude": 138.518904,
+        "match_status": "Unique",
+        "sa2_code": "403011057",
+        "sa2_name": "Glenelg (SA)",
+        "match_count": 1,
+        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.518904%2C-34.979577&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+        "checked_at": "2026-10-08T08:44:21.846050+00:00"
+      }
+    }
+  ]
+}

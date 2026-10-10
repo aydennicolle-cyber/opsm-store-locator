@@ -10,8 +10,15 @@ import re
 import unicodedata
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
+
+from reviewed_independents import ID_PREFIX as REVIEWED_INDEPENDENT_PREFIX
+from reviewed_place_points import apply_place_point_reviews
+from store_rules import meaningful_address, valid_store_point, current_competitor
 from statistics import median
+from market_points import resolve_market, authoritative_link
+from build_property_intelligence import load_groups, load_portfolio_assets, portfolio_metrics
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -81,6 +88,11 @@ GENERIC_PLACE_WORDS = {
 DISTINCTIVE_OWNERS = {"westfield", "stockland", "eastgate", "vicinity", "homeco", "qic"}
 KNOWN_DISTINCT_PLACE_PAIRS = {
     frozenset({"silverdale-mall", "silverdale-centre"}),
+    # Vicinity publishes separate North and South assets; shared branding is not identity.
+    frozenset({"box-hill-central-north", "box-hill-central-south"}),
+    # Separate official properties: Block Arcade at 282 Collins / 96 Elizabeth,
+    # Collins Arcade at 260 Collins. Their shared street and 'arcade' are not aliases.
+    frozenset({"the-block-arcade", "collins-arcade"}),
 }
 STREET_TYPES = {
     "rd": "Road", "road": "Road", "st": "Street", "street": "Street", "ave": "Avenue",
@@ -93,7 +105,7 @@ STREET_TYPES = {
 MEMBERSHIP_FIELDS = [
     "store_id", "retailer", "country", "state", "store_name", "place_id", "place_name",
     "location_setting", "mapping_confidence", "evidence_basis", "evidence_url", "verified_at",
-    "previous_venue_id", "review_status", "usable_for_network",
+    "previous_venue_id", "review_status", "usable_for_network", "trading_status",
 ]
 
 
@@ -325,7 +337,10 @@ def build_development_signals(places: list[dict], old_to_new: dict[str, str], ge
     }, indent=2) + "\n", encoding="utf-8")
 
 
-def apply_place_consolidations(places: list[dict], old_to_new: dict[str, str]) -> dict[str, str]:
+def apply_place_consolidations(
+    places: list[dict], old_to_new: dict[str, str],
+    rows: list[dict] | None = None, *, defer_missing: bool = False,
+) -> dict[str, str]:
     """Apply evidence-backed identity merges; never infer them from proximity."""
     by_id = {place["place_id"]: place for place in places}
     reviewed_target_settings = {
@@ -335,12 +350,16 @@ def apply_place_consolidations(places: list[dict], old_to_new: dict[str, str]) -
         and (row.get("location_setting") or "").strip()
     }
     remaps: dict[str, str] = {}
-    for row in read_csv(CONSOLIDATIONS_PATH):
+    for row in read_csv(CONSOLIDATIONS_PATH) if rows is None else rows:
         previous = row.get("previous_place_id", "").strip()
         canonical = row.get("canonical_place_id", "").strip()
         if not previous or not canonical or previous == canonical:
             raise ValueError(f"Invalid place consolidation: {row}")
         source, target = by_id.get(previous), by_id.get(canonical)
+        if defer_missing and not source and not target:
+            # Derived street corridors do not exist until the membership pass.
+            # The caller must retry these rows after creating those corridors.
+            continue
         if not source and target:
             # A broader refreshed store set can make the normaliser collapse an
             # already-reviewed alias before this explicit remap is applied.
@@ -441,7 +460,9 @@ def apply_canonical_place_overrides(places: list[dict], old_to_new: dict[str, st
                 place["aliases"].append(alias)
         place["name"] = current_name
         place["canonical_name"] = current_name
-        place["official_url"] = row.get("official_url", "").strip() or evidence_url
+        # A tenant or directory can evidence the place without being its website.
+        # An explicitly blank reviewed field means no centre website is known.
+        place["official_url"] = row.get("official_url", "").strip()
         place["source_url"] = evidence_url
         place["source_date"] = verified_at
         place["source_basis"] = row.get("reason", "").strip() or "Evidence-backed current canonical place name"
@@ -522,7 +543,7 @@ def apply_place_suppressions(
 
 
 def add_official_retail_places(places: list[dict]) -> None:
-    """Promote public, authoritative centre records without assigning store membership."""
+    """Promote authoritative centres or streets without assigning store membership."""
     by_id = {place["place_id"]: place for place in places}
     for row in read_csv(OFFICIAL_PLACES_PATH):
         place_id = row.get("place_id", "").strip()
@@ -557,7 +578,7 @@ def add_official_retail_places(places: list[dict]) -> None:
             "canonical_name": name,
             "aliases": aliases,
             "place_type": row.get("place_type", "Shopping Centre").strip() or "Shopping Centre",
-            "location_setting": "Shopping Centre",
+            "location_setting": "High Street" if row.get("place_type", "").strip() == "High Street Corridor" else "Shopping Centre",
             "country": row.get("country", "").strip(),
             "state": row.get("state", "").strip(),
             "locality": row.get("locality", "").strip(),
@@ -655,7 +676,7 @@ def official_address_place_match(store: dict, places: list[dict]) -> dict | None
     """
 
     store_address = normalise_address(store.get("full_address", ""))
-    if not store_address:
+    if not numbered_street_address(store.get("full_address", "")):
         return None
     matches = []
     for place in places:
@@ -663,16 +684,31 @@ def official_address_place_match(store: dict, places: list[dict]) -> dict | None
         if (
             place.get("location_setting") != "Shopping Centre"
             or not place.get("official_url")
-            or not place_address
+            or not numbered_street_address(place.get("address", ""))
             or place.get("country") != store.get("country")
             or (place.get("state") and store.get("state") and place.get("state") != store.get("state"))
             or (place.get("postcode") and store.get("postcode") and place.get("postcode") != store.get("postcode"))
         ):
             continue
-        address_matches = place_address in store_address or store_address in place_address
+        # Token boundaries prevent 9 High Street from matching 19 High Street.
+        address_matches = (
+            f" {place_address} " in f" {store_address} "
+            or f" {store_address} " in f" {place_address} "
+        )
         if address_matches and haversine(store, place) <= 0.5:
             matches.append(place)
     return matches[0] if len(matches) == 1 else None
+
+
+@lru_cache(maxsize=8192)
+def numbered_street_address(value: str) -> bool:
+    """Require premises-level evidence; a country, road or intersection is insufficient."""
+    street_types = "|".join(re.escape(word) for word in STREET_TYPES)
+    return bool(re.search(
+        rf"\b\d+[a-z]?(?:\s*[-/]\s*\d+[a-z]?)?\s+"
+        rf"(?:[a-zÀ-ž][a-zÀ-ž'’.-]*\s+){{0,8}}(?:{street_types})\b",
+        str(value or ""), flags=re.I,
+    ))
 
 
 def validate_place_integrity(places: list[dict], memberships: list[dict], stores: list[dict]) -> None:
@@ -846,7 +882,62 @@ def point_from_osm(element: dict) -> tuple[float | None, float | None]:
         return None, None
 
 
-def add_broad_osm_centres(places: list[dict]) -> None:
+@lru_cache(maxsize=1)
+def reviewed_place_aliases() -> tuple[dict[str, str], dict[str, set[str]]]:
+    """Read explicit identity decisions, never aliases produced by spatial matching."""
+    remaps = {
+        row["previous_place_id"]: row["canonical_place_id"]
+        for row in read_csv(CONSOLIDATIONS_PATH)
+    }
+    labels: dict[str, set[str]] = defaultdict(set)
+    for row in read_csv(CANONICAL_OVERRIDES_PATH):
+        labels[row["place_id"]].update(
+            slug(clean_name(name))
+            for name in [row["canonical_name"], *row.get("aliases", "").split("|")]
+            if name
+        )
+    for row in read_csv(DATA / "property_portfolio_assets.csv"):
+        if row.get("preferred_place_id") and row.get("source_url"):
+            labels[row["preferred_place_id"]].update(
+                slug(clean_name(name))
+                for name in [row["canonical_name"], *row.get("aliases", "").split("|")]
+                if name
+            )
+    return remaps, labels
+
+
+def reviewed_place_id(key: str) -> str:
+    remaps, _ = reviewed_place_aliases()
+    visited = set()
+    while key in remaps:
+        if key in visited:
+            raise ValueError(f"Cyclic reviewed place identity: {key}")
+        visited.add(key)
+        key = remaps[key]
+    return key
+
+
+def reviewed_osm_place_match(candidate: dict, place: dict) -> bool:
+    """Match an OSM property by a name or a reviewed identity, not shared words."""
+    if candidate["country"] != place["country"]:
+        return False
+    if candidate.get("state") and place.get("state") and slug(candidate["state"]) != slug(place["state"]):
+        return False
+    left, right = (slug(clean_name(row["name"])) for row in (candidate, place))
+    if frozenset({left, right}) in KNOWN_DISTINCT_PLACE_PAIRS:
+        return False
+    if left == right:
+        return bool(tokens(candidate["name"]) - DISTINCTIVE_OWNERS)
+    _, labels = reviewed_place_aliases()
+    target = reviewed_place_id(place["place_id"])
+    proposed = centre_place_id(candidate["country"], candidate.get("state") or place.get("state") or "unknown", candidate["name"])
+    if reviewed_place_id(proposed) == target:
+        return True
+    return any(left in names and reviewed_place_id(key) == target for key, names in labels.items())
+
+
+def add_broad_osm_centres(places: list[dict]) -> list[dict]:
+    identity_leads = []
     for path, country, code in OSM_DISCOVERY:
         if not path.exists():
             continue
@@ -858,31 +949,52 @@ def add_broad_osm_centres(places: list[dict]) -> None:
             latitude, longitude = point_from_osm(element)
             if tags.get("shop") != "mall" or not website or not name or latitude is None:
                 continue
-            candidate = {"latitude": latitude, "longitude": longitude, "country": country, "state": tags.get("addr:state", "")}
-            duplicate = next(
-                (
-                    place for place in places
-                    if place["place_type"] == "Shopping Centre"
-                    and place["country"] == country
-                    and (
-                        (
-                            slug(clean_name(name)) == slug(clean_name(place["name"]))
-                            and haversine(candidate, place) <= 1.0
-                        )
-                        or (
-                            haversine(candidate, place) <= 0.2
-                            and (tokens(name) & tokens(place["name"]))
-                        )
-                    )
-                ),
-                None,
-            )
+            candidate = {"name": name, "latitude": latitude, "longitude": longitude, "country": country, "state": tags.get("addr:state", "")}
+            explicit_matches = [
+                place for place in places
+                if place["place_type"] == "Shopping Centre"
+                and place["country"] == country
+                and reviewed_osm_place_match(candidate, place)
+                and haversine(candidate, place) <= 1.0
+            ]
+            canonical_matches = {reviewed_place_id(place["place_id"]) for place in explicit_matches}
+            duplicate = None
+            if len(canonical_matches) == 1:
+                # Several intermediate aliases may already have one reviewed
+                # destination. They are not distinct ambiguous properties.
+                target_id = next(iter(canonical_matches))
+                duplicate = next((p for p in explicit_matches if p["place_id"] == target_id), explicit_matches[0])
             if duplicate:
                 if website and not duplicate.get("official_url"):
                     duplicate["official_url"] = website
                     duplicate["source_url"] = website
                 if name != duplicate["name"] and name not in duplicate["aliases"]:
                     duplicate["aliases"].append(name)
+                continue
+            possible_matches = sorted(set([place["place_id"] for place in explicit_matches] + [
+                place["place_id"] for place in places
+                if place["place_type"] == "Shopping Centre"
+                and place["country"] == country
+                and haversine(candidate, place) <= 0.2
+                and tokens(name) & tokens(place["name"])
+                and frozenset({slug(clean_name(name)), slug(clean_name(place['name']))})
+                not in KNOWN_DISTINCT_PLACE_PAIRS
+            ]))
+            if possible_matches:
+                identity_leads.append({
+                    "source_id": f"osm-{code}-{element['type']}-{element['id']}",
+                    **candidate,
+                    "source_url": f"https://www.openstreetmap.org/{element['type']}/{element['id']}",
+                    "website_url": website,
+                    "source_fetched_at": payload.get("fetched_at", ""),
+                    "candidate_place_ids": possible_matches,
+                    "review_status": "Unpromoted discovery lead",
+                    "reason": (
+                        "More than one canonical property matches the reviewed name; identity is ambiguous."
+                        if len(canonical_matches) > 1 else
+                        "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+                    ),
+                })
                 continue
             state = tags.get("addr:state", "")
             place_id = centre_place_id(country, state or "unknown", name)
@@ -925,6 +1037,7 @@ def add_broad_osm_centres(places: list[dict]) -> None:
                     "old_centre_ids": [],
                 }
             )
+    return identity_leads
 
 
 def parse_street(address: str) -> str:
@@ -1140,9 +1253,12 @@ def main() -> None:
             place_by_id[proposed["place_id"]] = proposed
             override["place_id"] = proposed["place_id"]
 
-    add_broad_osm_centres(places)
+    osm_identity_leads = add_broad_osm_centres(places)
     add_official_retail_places(places)
-    consolidation_remaps = apply_place_consolidations(places, old_to_new)
+    consolidation_rows = read_csv(CONSOLIDATIONS_PATH)
+    consolidation_remaps = apply_place_consolidations(
+        places, old_to_new, consolidation_rows, defer_missing=True
+    )
     apply_canonical_place_overrides(places, old_to_new)
     promote_store_named_centres(stores, places, old_to_new)
     suppressions = apply_place_suppressions(places, old_to_new, stores, overrides)
@@ -1161,10 +1277,7 @@ def main() -> None:
     exceptions = []
     for store in stores:
         named = store["retailer"] in NAMED_RETAILERS
-        usable = named or (
-            bool(store.get("suburb") and store.get("postcode"))
-            and store.get("full_address") not in {"Australia", "New Zealand"}
-        )
+        usable = valid_store_point(store) and meaningful_address(store)
         setting = "Uncertain"
         place_id = ""
         confidence = "Uncertain"
@@ -1180,6 +1293,10 @@ def main() -> None:
             basis = override["evidence_basis"]
             evidence_url = override["official_url"]
             verified_at = override["source_date"]
+        elif (store["store_id"].startswith(REVIEWED_INDEPENDENT_PREFIX) or store.get("public_facts_verified_at")) and store.get("location_type") == "Unclassified":
+            # A verified storefront can be usable while its setting is unknown.
+            # Do not override an explicit review with street/address heuristics.
+            basis = "Reviewed storefront; centre or street setting still requires evidence"
         elif store["store_id"] in SOURCE_DISAGREEMENTS:
             disagreement = SOURCE_DISAGREEMENTS[store["store_id"]]
             setting, confidence, basis = "Uncertain", "Uncertain", disagreement["reason"]
@@ -1196,7 +1313,10 @@ def main() -> None:
             confidence = "High"
             basis = "Official store address matches the authoritative canonical place address"
             evidence_url = address_place.get("official_url") or evidence_url
-            verified_at = address_place.get("source_date") or verified_at
+            # An automated address match is only as fresh as this retailer's
+            # premises evidence. Reviewing the centre or another tenant must
+            # not advance this store's observation date.
+            verified_at = (store.get("public_facts_verified_at") or verified_at)[:10]
         elif store.get("location_type") == "Other":
             setting, confidence, basis = "Other", store.get("classification_confidence") or "Medium", store["classification_basis"]
         elif store.get("location_type") == "Main Street / Street-front":
@@ -1290,13 +1410,37 @@ def main() -> None:
             for entry in cluster:
                 entry["place_id"] = place_id
 
+    # Coordinate/address repairs can merge or rename a derived street cluster,
+    # and named-store promotion can introduce a previously absent source ID.
+    # Apply explicit historical-ID remaps after those entities exist, then
+    # bind every affected membership to the retained canonical ID. Unknown
+    # targets still fail here; no remap is inferred from distance or a name.
+    generated_ids = {place["place_id"] for place in places}
+    deferred = [
+        row for row in consolidation_rows
+        if row["previous_place_id"] not in consolidation_remaps
+        or row["previous_place_id"] in generated_ids
+    ]
+    corridor_remaps = apply_place_consolidations(places, old_to_new, deferred)
+    consolidation_remaps.update(corridor_remaps)
+    for item in preliminary:
+        place_id = item["place_id"]
+        visited = set()
+        while place_id in corridor_remaps:
+            if place_id in visited:
+                raise ValueError(f"Cyclic corridor consolidation: {place_id}")
+            visited.add(place_id)
+            place_id = corridor_remaps[place_id]
+        item["place_id"] = place_id
+    place_by_id = {place["place_id"]: place for place in places}
+
     memberships = []
     for item in preliminary:
         store = item["store"]
         place_id = item["place_id"]
         place = place_by_id.get(place_id)
         review_status = "Accepted" if item["confidence"] in {"High", "Medium"} and (place_id or item["setting"] == "Other") else "Needs review"
-        if review_status == "Needs review" and store["retailer"] in NAMED_RETAILERS:
+        if review_status == "Needs review" and (store["retailer"] in NAMED_RETAILERS or store["store_id"].startswith(REVIEWED_INDEPENDENT_PREFIX) or store.get("public_facts_verified_at")):
             exceptions.append(
                 {
                     "priority": "High" if item["setting"] == "Uncertain" else "Medium",
@@ -1330,11 +1474,12 @@ def main() -> None:
                 "previous_venue_id": store.get("venue_id", ""),
                 "review_status": review_status,
                 "usable_for_network": str(item["usable"]).lower(),
+                "trading_status": store.get("status", "Unknown"),
             }
         )
 
     for place in places:
-        members = [row for row in memberships if row["place_id"] == place["place_id"]]
+        members = [row for row in memberships if row["place_id"] == place["place_id"] and row["trading_status"] in {"Active", "Mapped"}]
         place["retailers"] = sorted({row["retailer"] for row in members})
         place["optical_store_count"] = len(members)
         place["has_bailey"] = any(row["retailer"] == "Bailey Nelson" for row in members)
@@ -1346,6 +1491,7 @@ def main() -> None:
         place["evidence_tier"] = "Official" if place["official_url"] else "Derived"
         place.pop("old_centre_ids", None)
 
+    apply_place_point_reviews(places, stores, memberships, read_csv(DATA / "place_coordinate_overrides.csv"))
     validate_place_integrity(places, memberships, stores)
     places.sort(key=lambda item: (item["country"], item["state"], item["place_type"], item["name"]))
     with MEMBERSHIPS_PATH.open("w", newline="", encoding="utf-8") as handle:
@@ -1371,22 +1517,30 @@ def main() -> None:
             "centre_count": sum(place["location_setting"] == "Shopping Centre" for place in places),
             "corridor_count": sum(place["location_setting"] == "High Street" for place in places),
             "membership_count": len(memberships),
-            "named_network_review_count": len(exceptions),
+            "named_network_review_count": sum(row["retailer"] in NAMED_RETAILERS for row in exceptions),
+            "promoted_store_review_count": len(exceptions),
             "suppressed_false_place_count": len(suppressions),
             "suppressed_false_places": suppressions,
+            "unpromoted_osm_identity_leads": len(osm_identity_leads),
             "coverage_note": "Canonical places use official public evidence where available and best-available mappings with visible confidence elsewhere.",
         },
         "place_id_remaps": dict(sorted(old_to_new.items())),
         "places": places,
     }
     PLACES_PATH.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
-    build_place_tenants(places, memberships, old_to_new, generated_at)
+    (DATA / "discovery" / "retail_place_identity_leads.json").write_text(json.dumps({
+        "generated_at": generated_at,
+        "coverage_note": "Unpromoted property-identity discovery evidence; not accepted aliases, store memberships or manual-review failures.",
+        "leads": osm_identity_leads,
+    }, indent=2) + "\n", encoding="utf-8")
+    current_memberships = [row for row in memberships if row["trading_status"] in {"Active", "Mapped"}]
+    build_place_tenants(places, current_memberships, old_to_new, generated_at)
     build_development_signals(places, old_to_new, generated_at)
-    build_lookalikes(places, memberships, stores, generated_at)
+    build_lookalikes(places, current_memberships, [store for store in stores if current_competitor(store)], generated_at)
     print(
         f"Built {len(places)} canonical places ({payload['metadata']['centre_count']} centres, "
         f"{payload['metadata']['corridor_count']} corridors), {len(memberships)} memberships, "
-        f"{len(exceptions)} named-network exceptions"
+        f"{len(exceptions)} promoted store classification reviews"
     )
 
 
@@ -1418,10 +1572,7 @@ def point_in_geometry(longitude: float, latitude: float, geometry: dict) -> bool
 
 
 def market_for_point(point: dict, markets: list[dict]) -> dict | None:
-    if point.get("country") != "Australia":
-        return None
-    longitude, latitude = float(point["longitude"]), float(point["latitude"])
-    return next((feature["properties"] for feature in markets if point_in_geometry(longitude, latitude, feature["geometry"])), None)
+    return resolve_market(point, markets)[0]
 
 
 def closeness(value: float | None, baseline: list[float]) -> float | None:
@@ -1439,6 +1590,11 @@ def average_available(values: list[float | None]) -> float | None:
 
 
 def build_lookalikes(places: list[dict], memberships: list[dict], stores: list[dict], generated_at: str) -> None:
+    # Read validated source assets against this build's canonical places. Reading
+    # property_intelligence.json here would depend on a previous build's output.
+    _, property_groups, _, _ = load_groups()
+    assets, _, _, _, _ = load_portfolio_assets({place["place_id"]: place for place in places}, property_groups)
+    property_metrics = portfolio_metrics(assets)
     markets = json.loads(MARKETS_PATH.read_text(encoding="utf-8")).get("features", [])
     market_links = json.loads(LINKS_PATH.read_text(encoding="utf-8")).get("links", {})
     market_by_code = {
@@ -1454,11 +1610,13 @@ def build_lookalikes(places: list[dict], memberships: list[dict], stores: list[d
     stores_by_id = {row["store_id"]: row for row in stores}
     market_basis_by_place: dict[str, str] = {}
     for place in places:
-        place["market"] = market_for_point(place, markets)
+        place["market"], match_basis = resolve_market(place, markets)
         if place["market"]:
-            market_basis_by_place[place["place_id"]] = "Place point in SA2"
+            market_basis_by_place[place["place_id"]] = match_basis
             continue
         if place.get("country") != "Australia":
+            continue
+        if authoritative_link(place) is not None:
             continue
         member_codes = {
             str(link.get("sa2_code"))
@@ -1495,6 +1653,8 @@ def build_lookalikes(places: list[dict], memberships: list[dict], stores: list[d
                         for field in (
                             "population_2025",
                             "population_growth_2021_2025_pct",
+                            "population_2021",
+                            "population_growth_2021_2025_number",
                             "age_45_plus_pct_2021",
                             "median_equivalised_household_income_weekly_2021",
                         )
@@ -1523,11 +1683,12 @@ def build_lookalikes(places: list[dict], memberships: list[dict], stores: list[d
         whitespace = min(100.0, nearest_bailey * 5) if nearest_bailey is not None else None
         competitors = [brand for brand in place["retailers"] if brand != "Bailey Nelson"]
         optical_validation = min(100.0, len(set(competitors)) * 22 + int(place["optical_store_count"]) * 7) if competitors else None
+        retail_metrics = {**place, **property_metrics.get(place["place_id"], {})}
         if place["location_setting"] == "Shopping Centre":
             context = average_available([
-                min(100.0, number(place.get("gla_sqm")) / 1800) if number(place.get("gla_sqm")) is not None else None,
-                min(100.0, number(place.get("annual_visits")) / 200000) if number(place.get("annual_visits")) is not None else None,
-                min(100.0, number(place.get("tenancy_count")) / 2) if number(place.get("tenancy_count")) is not None else None,
+                min(100.0, number(retail_metrics.get("gla_sqm")) / 1800) if number(retail_metrics.get("gla_sqm")) is not None else None,
+                min(100.0, number(retail_metrics.get("annual_visits")) / 200000) if number(retail_metrics.get("annual_visits")) is not None else None,
+                min(100.0, number(retail_metrics.get("tenancy_count")) / 2) if number(retail_metrics.get("tenancy_count")) is not None else None,
             ])
         else:
             context = min(100.0, int(place["optical_store_count"]) * 20) if place["optical_store_count"] else None
@@ -1553,8 +1714,13 @@ def build_lookalikes(places: list[dict], memberships: list[dict], stores: list[d
                 "score": score,
                 "screening_completeness": completeness,
                 "components": components,
+                "retail_context_metrics": {
+                    field: number(retail_metrics.get(field))
+                    for field in ("gla_sqm", "annual_visits", "tenancy_count")
+                } if place["location_setting"] == "Shopping Centre" else {},
+                "retail_context_evidence": property_metrics.get(place["place_id"], {}).get("metric_evidence", {}),
                 "market_features": {
-                    field: number((place.get("market") or {}).get(field)) for field in fields
+                    field: number((place.get("market") or {}).get(field)) for field in (*fields, "population_2021", "population_growth_2021_2025_number")
                 },
                 "market_match_basis": market_basis_by_place.get(place["place_id"], "Unavailable"),
                 "nearest_bailey_km": round(nearest_bailey, 1) if nearest_bailey is not None else None,
@@ -1587,3 +1753,5 @@ def build_lookalikes(places: list[dict], memberships: list[dict], stores: list[d
 
 if __name__ == "__main__":
     main()
+    from build_destination_research import build as build_destination_research
+    build_destination_research()

@@ -66,6 +66,10 @@ REQUIRED_FIELDS = {
     "area_source",
     "area_date",
     "area_confidence",
+    "business_type", "identity_reviewed", "coordinates_reviewed",
+    "status_evidence_url", "status_verified_at", "status_reason", "coordinate_confidence",
+    "coordinate_evidence_url", "coordinates_verified_at", "coordinate_reason",
+    "public_facts_verified_at", "public_facts_evidence_url", "public_facts_reason",
 }
 
 
@@ -123,14 +127,23 @@ class OpticalNetworkTests(unittest.TestCase):
         for exclusion in exclusions:
             retailer = next(item for item in registry if exclusion["store_id"].startswith(f"{item['slug']}-"))
             expected[retailer["name"]] -= 1
+        with (ROOT / "data" / "store_public_fact_overrides.csv").open(newline="", encoding="utf-8") as handle:
+            for correction in csv.DictReader(handle):
+                if not correction.get("retailer"):
+                    continue
+                original = next(item["name"] for item in registry
+                                if correction["store_id"].startswith(item["slug"] + "-"))
+                expected[original] -= 1
+                expected[correction["retailer"]] += 1
         self.assertEqual(counts, expected)
         countries = {country: sum(row["country"] == country for row in self.rows) for country in ("Australia", "New Zealand")}
         self.assertEqual(sum(countries.values()), len(self.rows))
         bailey_nz = [
             row for row in self.rows if row["retailer"] == "Bailey Nelson" and row["country"] == "New Zealand"
         ]
-        self.assertEqual(len(bailey_nz), 14)
-        self.assertTrue(all(row["status"] == "Active" for row in bailey_nz))
+        self.assertEqual(len(bailey_nz), sum(1 for _ in csv.DictReader((ROOT / "retailers/bailey-nelson-nz/stores.csv").open())))
+        self.assertEqual(next(row for row in bailey_nz if row["store_id"] == "bailey-nelson-nz-optometrist-queenstown")["status"], "Active")
+        self.assertEqual(next(row for row in bailey_nz if row["store_id"] == "bailey-nelson-nz-optometrist-nelson")["status"], "Opening Soon")
 
     def test_same_retailer_does_not_publish_exact_duplicate_addresses(self) -> None:
         seen = {}
@@ -193,8 +206,8 @@ class OpticalNetworkTests(unittest.TestCase):
             "EyeQ Optometrists", "Laubman & Pank",
         }.issubset(names))
         additional = [item for item in registry if item["network_type"] == "additional"]
-        self.assertTrue(all(not item["default_visible"] for item in additional))
-        self.assertTrue(all(item["min_marker_zoom"] >= 8 for item in additional))
+        self.assertTrue(all(item["default_visible"] for item in additional))
+        self.assertTrue(all(item["min_marker_zoom"] == 0 for item in additional))
         primary = [item for item in registry if item["network_type"] == "primary"]
         self.assertEqual(
             {item["name"] for item in primary},
@@ -274,10 +287,40 @@ class OpticalNetworkTests(unittest.TestCase):
             row for row in self.rows
             if "optical-company-network" in row["affiliations"].split("|")
         ]
+        named_brands = {"Optical Warehouse", "The Optical Company"}
+        named_ids = {
+            row["store_id"] for row in self.rows if row["retailer"] in named_brands
+        }
+        with (ROOT / "retailers" / "reviewed-independents" / "stores.csv").open(
+            newline="", encoding="utf-8-sig"
+        ) as handle:
+            reviewed_members = {
+                "independent-other-optical-reviewed-" + row["id"]: row
+                for row in csv.DictReader(handle)
+                if "optical-company-network" in row["affiliations"].split("|")
+            }
+        # The group also owns practices trading under local names. They must
+        # have an explicit reviewed affiliation, retain their own identity and
+        # never create a second group-branded store at the same premises.
+        with (ROOT / "data" / "store_public_fact_overrides.csv").open(
+            newline="", encoding="utf-8-sig"
+        ) as handle:
+            reviewed_existing_members = {
+                row["store_id"]: row for row in csv.DictReader(handle)
+                if "optical-company-network" in row.get("affiliations", "").split("|")
+            }
+        for review in reviewed_existing_members.values():
+            self.assertTrue(review["evidence_url"].startswith("https://"))
+            self.assertTrue(review["reason"])
+            self.assertTrue(review["verified_at"])
         self.assertEqual(
-            {row["retailer"] for row in optical_company},
-            {"Optical Warehouse", "The Optical Company"},
+            {row["store_id"] for row in optical_company},
+            named_ids | set(reviewed_members) | set(reviewed_existing_members),
         )
+        for row in optical_company:
+            if row["store_id"] in reviewed_members:
+                self.assertEqual(row["retailer"], "Independent / Other optical")
+                self.assertEqual(row["name"], reviewed_members[row["store_id"]]["name"])
 
     def test_independent_public_profiles_are_explicit_and_safe(self) -> None:
         independent = [

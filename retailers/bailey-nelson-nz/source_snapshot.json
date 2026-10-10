@@ -2,7 +2,7 @@
   "source_url": "https://baileynelson.co.nz/pages/optometrist-near-me",
   "fetched_at": "2026-09-01T07:43:01+00:00",
   "list_count": 15,
-  "store_count": 14,
+  "store_count": 16,
   "collection_method": "Official store list, Schema.org store pages and official map links",
   "stores": [
     {
@@ -812,107 +812,6 @@
       }
     },
     {
-      "official_url": "https://baileynelson.co.nz/pages/optometrist-queenstown",
-      "map_url": "",
-      "resolved_map_url": "",
-      "structured_data": {
-        "@context": "https://schema.org",
-        "@type": "Optician",
-        "@id": "https://baileynelson.co.nz/pages/optometrist-queenstown#localbusiness",
-        "name": "Bailey Nelson Queenstown - NOW OPEN",
-        "url": "https://baileynelson.co.nz/pages/optometrist-queenstown",
-        "image": "https://images.prismic.io/baileynelson/qknVzsZUSXU6003T_Bailey-Nelson-Queenstown.jpg?auto=format,compress",
-        "email": "queenstown@baileynelson.co.nz",
-        "address": {
-          "@type": "PostalAddress",
-          "extendedAddress": "Shop C-09",
-          "streetAddress": "19 Grant Road",
-          "addressLocality": "Frankton",
-          "addressRegion": "Queenstown",
-          "postalCode": "9300",
-          "addressCountry": "NZ"
-        },
-        "parentOrganization": {
-          "@type": "Organization",
-          "name": "Bailey Nelson",
-          "url": "https://baileynelson.co.nz"
-        },
-        "makesOffer": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Optometry Services"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Comprehensive Eye Tests"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Contact Lens Eye Tests"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Visual Fields Testing"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Ultra-wide retinal imaging"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Optical & Sunglass styling"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Free frame adjustments"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Prescription glasses"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Sunglasses"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Contact lenses"
-            }
-          }
-        ]
-      },
-      "excluded_reason": "Coming Soon location has no confirmed map position"
-    },
-    {
       "official_url": "https://baileynelson.co.nz/pages/optometrist-riccarton",
       "map_url": "https://maps.app.goo.gl/VjPZzZdZjRJZN36A9",
       "resolved_map_url": "https://www.google.com/maps/place/Bailey+Nelson+Optometrist+-+Riccarton/@-43.5308029,172.598759,15z/data=!4m6!3m5!1s0x6d318af313a35d49:0x54b6ff83b9186230!8m2!3d-43.5308029!4d172.598759!16s%2Fg%2F11b86cy_py?sa=X&ved=1t:2428&ictx=111&coh=219816&entry=tts&g_ep=EgoyMDI0MDgxMi4wKgBIAVAD",
@@ -1511,6 +1410,209 @@
           }
         ]
       }
+    },
+    {
+      "official_url": "https://baileynelson.co.nz/pages/optometrist-queenstown",
+      "map_url": "",
+      "resolved_map_url": "https://baileynelson.co.nz/booking",
+      "structured_data": {
+        "@context": "https://schema.org",
+        "@type": "Optician",
+        "@id": "https://baileynelson.co.nz/pages/optometrist-queenstown#localbusiness",
+        "name": "Bailey Nelson Queenstown - NOW OPEN",
+        "url": "https://baileynelson.co.nz/pages/optometrist-queenstown",
+        "image": "https://images.prismic.io/baileynelson/qknVzsZUSXU6003T_Bailey-Nelson-Queenstown.jpg?auto=format,compress",
+        "email": "queenstown@baileynelson.co.nz",
+        "address": {
+          "@type": "PostalAddress",
+          "extendedAddress": "Shop C-09",
+          "streetAddress": "19 Grant Road",
+          "addressLocality": "Frankton",
+          "addressRegion": "Queenstown",
+          "postalCode": "9300",
+          "addressCountry": "NZ"
+        },
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Bailey Nelson",
+          "url": "https://baileynelson.co.nz"
+        },
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optometry Services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Comprehensive Eye Tests"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Contact Lens Eye Tests"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Visual Fields Testing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ultra-wide retinal imaging"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optical & Sunglass styling"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Free frame adjustments"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Prescription glasses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Sunglasses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Contact lenses"
+            }
+          }
+        ]
+      },
+      "reviewed_at": "2026-09-12"
+    },
+    {
+      "official_url": "https://baileynelson.co.nz/pages/optometrist-nelson",
+      "map_url": "",
+      "resolved_map_url": "https://baileynelson.co.nz/booking",
+      "structured_data": {
+        "@context": "https://schema.org",
+        "@type": "Optician",
+        "@id": "https://baileynelson.co.nz/pages/optometrist-nelson#localbusiness",
+        "name": "Bailey Nelson Nelson",
+        "url": "https://baileynelson.co.nz/pages/optometrist-nelson",
+        "image": "https://images.prismic.io/baileynelson/Zt-6GRoQrfVKl4Sv_24-BN-NSO-WebAssets-Comingsoon.jpg?auto=format,compress",
+        "email": "nelson@baileynelson.co.nz",
+        "address": {
+          "@type": "PostalAddress",
+          "extendedAddress": "Shop 234",
+          "streetAddress": "216 Queen Street, Richmond Mall",
+          "addressLocality": "Richmond",
+          "addressRegion": "Nelson",
+          "postalCode": "7020",
+          "addressCountry": "NZ"
+        },
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Bailey Nelson",
+          "url": "https://baileynelson.co.nz"
+        },
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optometry Services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Comprehensive Eye Tests"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Contact Lens Eye Tests"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Visual Fields Testing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ultra-wide retinal imaging"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optical & Sunglass styling"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Free frame adjustments"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Prescription glasses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Sunglasses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Contact lenses"
+            }
+          }
+        ]
+      },
+      "reviewed_at": "2026-09-12"
     }
-  ]
+  ],
+  "supplemental_review_date": "2026-09-12"
 }

@@ -1,7 +1,7 @@
 {
   "source_url": "https://www.laubmanandpank.com.au/store-finder",
   "fetched_at": "2026-09-02T12:40:25.820359+00:00",
-  "store_count": 40,
+  "store_count": 42,
   "scope": "Australia",
   "method": "Bounded official public store locator",
   "retained_fields": [
@@ -19,7 +19,8 @@
     "official_url",
     "services",
     "audiology",
-    "source_url"
+    "source_url",
+    "fetched_at"
   ],
   "excluded_fields": [
     "email",
@@ -65,7 +66,79 @@
     "morley-optometrist",
     "rockingham-city-optometrist",
     "cockburn-optometrist",
-    "forest-lakes-optometrist"
+    "forest-lakes-optometrist",
+    "west-lakes-optometrist",
+    "whitford-city-optometrist"
   ],
-  "coordinate_corrections": []
+  "coordinate_corrections": [],
+  "locator_pages": [
+    "https://www.laubmanandpank.com.au/store-finder",
+    "https://www.laubmanandpank.com.au/store-finder?page=1"
+  ],
+  "metadata_refreshed_at": "2026-10-08T01:45:10.234113+00:00",
+  "source_notices": [
+    {
+      "store_id": "lismore",
+      "official_url": "https://www.laubmanandpank.com.au/store/lismore",
+      "notices": [
+        "\u201cIf you are a customer of Eyecare Casino the store is temporarily closed and you have been redirected to the nearest store, Laubman & Pank Lismore for your eyecare and eyewear needs.\u201d"
+      ]
+    }
+  ],
+  "incremental_reviews": [
+    {
+      "reviewed_at": "2026-10-08",
+      "method": "Full advertised locator pagination and individual branch profiles reviewed. Append omitted source rows with their capture dates; preserve all original source rows and fallback fetched_at. Apply canonical corrections through reviewed overrides.",
+      "new_source_ids": [
+        "west-lakes-optometrist",
+        "whitford-city-optometrist"
+      ],
+      "reviewed_source_ids": [
+        "adelaide-optometrist",
+        "albany-optometrist",
+        "armadale-optometrist",
+        "belmont-optometrist",
+        "brookside-optometrist",
+        "bunbury-optometrist",
+        "cairns-optometrist",
+        "capalaba-optometrist",
+        "carindale-optometrist",
+        "carousel-optometrist",
+        "chermside-optometrist",
+        "clarkson-optometrist",
+        "cockburn-optometrist",
+        "durkinblack-optometrists-part-laubmanpank-grand-central",
+        "durkinblack-optometrists-part-laubmanpank-wilsonton",
+        "elizabeth-optometrist",
+        "eyecare-redbank-plains-part-laubmanpank",
+        "forest-lakes-optometrist",
+        "garden-city-booragoon-optometrist",
+        "garden-city-qld-optometrist",
+        "indooroopilly-optometrist",
+        "ingle-farm-optometrist",
+        "ipswich-optometrist",
+        "joondalup-optometrist",
+        "karrinyup-optometrist",
+        "lismore",
+        "mackay-caneland-optometrist",
+        "mackay-optometrist",
+        "mandurah-optometrist",
+        "marion-optometrist",
+        "midland-gate-optometrist",
+        "morayfield-optometrist",
+        "morley-optometrist",
+        "mt-ommaney-optometrist",
+        "naracoorte-optometrist",
+        "rockhampton-optometrist",
+        "rockingham-city-optometrist",
+        "tea-tree-plaza-optometrist",
+        "toowoomba-clifford-gardens-optometrist",
+        "toowoomba-optometrist",
+        "west-lakes-optometrist",
+        "whitford-city-optometrist"
+      ],
+      "evidence_receipt": "output/census-validation-20261001/batch-64/operator-reconciliation.json",
+      "source_field_conflicts": "output/census-validation-20261001/batch-64/coverage-notes.json"
+    }
+  ]
 }

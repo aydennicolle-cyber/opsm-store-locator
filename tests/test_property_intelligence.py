@@ -1747,7 +1747,7 @@ class PropertyIntelligenceTests(unittest.TestCase):
             ),
             "place-nz-manawatu-whanganui-the-plaza-palmerston-north": (
                 "Partial", "Regional", "Inferred", ["New Zealand Retail Property Group"],
-                ["New Zealand Retail Property Group"], "Unknown", 32237, 90,
+                ["New Zealand Retail Property Group"], "Unknown", None, None,
             ),
         }
         for place_id, values in expected.items():
@@ -1780,11 +1780,28 @@ class PropertyIntelligenceTests(unittest.TestCase):
         self.assertNotIn("place-nz-auckland-lynn-mall", places)
         self.assertNotIn("place-nz-manawatu-whanganui-the-plaza", places)
         self.assertNotIn("place-nz-wellington-the-plaza", places)
-        self.assertEqual(
-            places["place-nz-auckland-lynnmall-shopping-centre"]["optical_store_count"], 3,
-        )
-        self.assertEqual(
-            places["place-nz-manawatu-whanganui-the-plaza-palmerston-north"]["optical_store_count"], 3,
+        lynnmall_id = "place-nz-auckland-lynnmall-shopping-centre"
+        lynnmall_tenants = {
+            store["store_id"]
+            for retailer in self.payload["property_summaries"][lynnmall_id]["competitor_context"]["by_retailer"].values()
+            for store in retailer["in_centre"]
+        }
+        # Current operator and centre directories confirm Vision Centre W513.
+        # Preserve the accepted property identity as evidenced coverage grows.
+        self.assertTrue({
+            "opsm-nz-1686", "oscar-wylee-nz-optometrist-new-lynn", "specsavers-nz-3808",
+            "independent-other-optical-osm-ne-node-10086117777",
+        }.issubset(lynnmall_tenants))
+        self.assertEqual(places[lynnmall_id]["optical_store_count"], len(lynnmall_tenants))
+        plaza_id = "place-nz-manawatu-whanganui-the-plaza-palmerston-north"
+        plaza = self.payload["property_summaries"][plaza_id]
+        self.assertIn("disagree", plaza["research_evidence"]["public_note"])
+        # A directory-verified eyewear retailer is distinct from the optometrists;
+        # growth in a verified census must not resurrect a fixed historical count.
+        eyewear = plaza["competitor_context"]["by_retailer"]["Independent / Other optical"]["in_centre"]
+        self.assertIn(
+            "independent-other-optical-reviewed-nz-sunglass-style-the-plaza",
+            {store["store_id"] for store in eyewear},
         )
 
     def test_next_new_zealand_centres_use_current_property_evidence(self) -> None:

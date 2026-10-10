@@ -2,6 +2,41 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const Intel = require("../assets/intelligence.js");
 
+const selectedRow = {
+  country: "New Zealand", location_setting: "Shopping Centre",
+  market_features: { population_2025: null, population_growth_2021_2025_pct: null },
+  components: { bailey_footprint_similarity: 95, bailey_whitespace: 80, optical_market_validation: 60, accessibility_retail_context: 40 },
+};
+const reference = (features, overrides = {}) => ({ country: selectedRow.country, location_setting: selectedRow.location_setting, market_features: features, ...overrides });
+const absentDemographics = Intel.selectedBenchmarkLookalike(selectedRow, [reference({ population_2025: null }), reference({ population_2025: "" })]);
+assert.equal(absentDemographics.components.bailey_footprint_similarity, null, "Missing NZ values must not become a perfect zero-to-zero match or retain an unrelated default score");
+assert.equal(absentDemographics.screening_completeness, 60);
+assert.equal(absentDemographics.score, 67, "Reweight only the remaining observed components");
+assert.equal(selectedRow.components.bailey_footprint_similarity, 95, "Selected comparisons must not mutate the standard public screen");
+const observedRow = { ...selectedRow, market_features: { population_2025: 100, population_growth_2021_2025_pct: 0 } };
+const partialComparison = Intel.selectedBenchmarkLookalike(observedRow, [
+  reference({ population_2025: 100, population_growth_2021_2025_pct: 0 }),
+  reference({ population_2025: "100", population_growth_2021_2025_pct: "0" }),
+  reference({ population_2025: null, population_growth_2021_2025_pct: "" }),
+]);
+assert.equal(partialComparison.components.bailey_footprint_similarity, 100, "Missing peers must not drag the median toward zero; observed zero growth is valid");
+assert.equal(partialComparison.footprint_comparison.available_fields, 2);
+assert.equal(partialComparison.footprint_comparison.comparisons[0].reference_count, 2);
+assert.equal(Intel.selectedBenchmarkLookalike(observedRow, [reference({ population_2025: 100 }), reference({ population_2025: null })]).components.bailey_footprint_similarity, null, "One usable peer is not a two-store comparison");
+assert.equal(Intel.selectedBenchmarkLookalike(observedRow, [reference({ population_2025: 100 }, { country: "Australia" }), reference({ population_2025: 100 }, { location_setting: "High Street" })]).components.bailey_footprint_similarity, null, "Do not borrow evidence across countries or settings");
+assert.equal(Intel.selectedBenchmarkLookalike({ ...selectedRow, components: {}, market_features: {} }, []).score, null, "No observed components means no score, not zero");
+
+const boundaryPoint = {latitude: 0.5, longitude: 0.5};
+const boundaryFeatures = [
+  {properties: {sa2_code: "coarse"}, geometry: {type: "Polygon", coordinates: [[[0,0],[1,0],[1,1],[0,1],[0,0]]]}},
+  {properties: {sa2_code: "official"}, geometry: {type: "Polygon", coordinates: [[[2,2],[3,2],[3,3],[2,3],[2,2]]]}}
+];
+const boundaryLinks = {"0.5000000,0.5000000": {match_status: "Unique", sa2_code: "official"}};
+assert.equal(Intel.findMarketFeature(boundaryPoint, boundaryFeatures, boundaryLinks).properties.sa2_code, "official");
+assert.equal(Intel.findMarketFeature({...boundaryPoint, latitude: 0.51}, boundaryFeatures, boundaryLinks).properties.sa2_code, "coarse", "Moved points must not reuse an old coordinate assignment");
+assert.equal(Intel.findMarketFeature(boundaryPoint, boundaryFeatures, {"0.5000000,0.5000000": {match_status: "Ambiguous"}}), null);
+assert.equal(Intel.findMarketFeature(boundaryPoint, [boundaryFeatures[0], boundaryFeatures[0]]), null);
+
 assert.deepEqual(
   Intel.normalisePlaceShortlist(["old-a", "current", "old-a", "missing"], {"old-a": "middle", "middle": "current"}),
   ["current", "missing"],
@@ -141,6 +176,49 @@ const propertyContext = Intel.competitorPropertyContext(
 );
 assert.equal(propertyContext.by_retailer.OPSM.in_centre.length, 1);
 assert.equal(propertyContext.by_retailer.OPSM.nearby_unverified.length, 1);
+
+const independentBrand = "Independent / Other optical";
+const localRetailers = [independentBrand, "OPSM", "Specsavers"];
+const inspectedPractice = {store_id: "practice", retailer: independentBrand, latitude: 0, longitude: 0, place_id: "centre", eligible_for_analytics: true};
+const nearbyPractices = [
+  inspectedPractice,
+  {store_id: "another-independent", retailer: independentBrand, latitude: 0, longitude: 0.001, place_id: "centre", eligible_for_analytics: true},
+  {store_id: "unassigned-independent", retailer: independentBrand, latitude: 0, longitude: 0.002, place_id: "", eligible_for_analytics: true},
+  {store_id: "opsm", retailer: "OPSM", latitude: 0, longitude: 0.003, place_id: "centre", eligible_for_analytics: true},
+  {store_id: "unverified", retailer: independentBrand, latitude: 0, longitude: 0.001, place_id: "centre", eligible_for_analytics: false},
+  {store_id: "distant", retailer: "Specsavers", latitude: 1, longitude: 1, place_id: "elsewhere", eligible_for_analytics: true},
+];
+const independentCompetition = Intel.proximityModel(inspectedPractice, nearbyPractices, localRetailers, [0.5], inspectedPractice, true);
+assert.equal(independentCompetition.radiusCounts[0].counts[independentBrand], 2, "other independent practices must remain competitors, including unassigned settings");
+assert.equal(independentCompetition.radiusCounts[0].total, 3);
+assert.deepEqual(independentCompetition.sameCentre.map((store) => store.store_id), ["another-independent", "opsm"], "only matching accepted place IDs establish co-tenancy");
+assert.equal(independentCompetition.distances.some((entry) => entry.store.store_id === "practice" || entry.store.store_id === "unverified"), false);
+assert.equal(independentCompetition.nearestByBrand[independentBrand].store.store_id, "another-independent");
+const unmappedPractice = {...inspectedPractice, place_id: ""};
+assert.deepEqual(Intel.proximityModel(unmappedPractice, nearbyPractices, localRetailers, [0.5], unmappedPractice, true).sameCentre, []);
+const chainPractice = {...inspectedPractice, retailer: "OPSM"};
+const chainCompetition = Intel.proximityModel(chainPractice, nearbyPractices, localRetailers, [0.5], chainPractice, true);
+assert.equal(chainCompetition.radiusCounts[0].counts.OPSM, 0, "another branch of the same named chain is still excluded from competitor counts");
+assert.equal(chainCompetition.radiusCounts[0].counts[independentBrand], 2);
+assert.deepEqual(chainCompetition.sameCentre.map((store) => store.store_id), ["another-independent"]);
+const proposedSiteCompetition = Intel.proximityModel(inspectedPractice, nearbyPractices, localRetailers, [0.5], null, true);
+assert.equal(proposedSiteCompetition.radiusCounts[0].total, 4, "a hypothetical site has no existing store identity to exclude");
+
+// The store-detail call uses default eligibility. A mappable unknown practice
+// must not become a current competitor merely because it has coordinates.
+const statusNeighbours = ["Unknown", "Closed", "Opening Soon", "Temporarily Closed"].map((status, index) => ({
+  store_id: `non-current-${index}`, retailer: independentBrand, status,
+  latitude: 0, longitude: 0.0001 * (index + 1), place_id: "centre",
+  usable_for_network: true, eligible_for_analytics: false,
+}));
+const staleCurrent = {store_id: "stale-current", retailer: independentBrand, status: "Mapped", latitude: 0, longitude: 0.002,
+  place_id: "centre", current_source: false, usable_for_network: true, eligible_for_analytics: true};
+const defaultCompetition = Intel.proximityModel(inspectedPractice, [inspectedPractice, ...statusNeighbours, staleCurrent], localRetailers, [0.5], inspectedPractice);
+assert.equal(defaultCompetition.radiusCounts[0].total, 1, "default store competition excludes non-current records but retains eligible stale-source stores");
+assert.equal(defaultCompetition.nearestByBrand[independentBrand].store.store_id, "stale-current");
+assert.deepEqual(defaultCompetition.distances.map((entry) => entry.store.store_id), ["stale-current"]);
+assert.deepEqual(defaultCompetition.sameCentre.map((store) => store.store_id), ["stale-current"]);
+
 assert.equal(Intel.placeMatchesRetailerFilters(
   {retailers: ["OPSM", "Specsavers"]},
   new Set(["OPSM", "Specsavers"]),
@@ -175,7 +253,7 @@ const appSource = fs.readFileSync(require.resolve("../assets/app.js"), "utf8");
 const indexSource = fs.readFileSync(require.resolve("../index.html"), "utf8");
 assert.ok(appSource.includes("const CENTRE_BAG_SVG"));
 assert.ok(appSource.match(/CENTRE_BAG_SVG/g).length >= 4);
-assert.ok(indexSource.includes("centre-bag-icon centre-layer-icon"));
+assert.ok(indexSource.includes('data-layer="centres"'));
 assert.ok(indexSource.includes('data-view="health"'));
 assert.ok(appSource.includes("renderDataHealthView"));
 assert.ok(appSource.includes("eligible_for_analytics"));
@@ -187,22 +265,55 @@ assert.ok(appSource.includes("placeFocusLayer"));
 assert.ok(appSource.includes('state.view === "opportunity"'));
 assert.ok(appSource.includes('id="selectAllRetailers"'));
 assert.ok(appSource.includes('id="clearAllRetailers"'));
-assert.ok(/applyFilters\(false\);\r?\n\s+renderNetworkResults\(\);/.test(appSource));
+assert.ok(appSource.includes("Map and results update automatically"));
+assert.equal(appSource.includes("Search / Apply"), false);
 assert.ok(indexSource.includes('class="nav-overflow"'));
 assert.ok(indexSource.includes('class="toolbar-overflow"'));
-assert.ok(indexSource.includes("<span>Opportunities</span>"));
-assert.ok(indexSource.includes("<span>Locations</span>"));
+assert.ok(indexSource.includes("<span>Site planning</span>"));
+assert.ok(indexSource.includes("<span>Map</span>"));
+assert.equal(indexSource.includes('data-view="centres"'), false);
 assert.ok(appSource.includes("Major retail brands"));
 assert.ok(appSource.includes("Other brands and banners"));
 assert.ok(appSource.includes('id="networkControls"'));
 assert.ok(appSource.includes("independent-featured"));
 assert.equal(appSource.includes('id="serviceInput"'), false);
-assert.ok(appSource.includes('id="toggleShortlistView"'));
-assert.ok(appSource.includes('id="showOpportunityDiscovery"'));
+assert.ok(appSource.includes('data-planning-mode="shortlist"'));
+assert.ok(appSource.includes('data-planning-mode="discover"'));
 assert.ok(appSource.includes('id="shortlistNotice"'));
 assert.ok(appSource.includes("visibleOpportunityRows"));
 assert.ok(appSource.includes("shortlistedOpportunityRows"));
 assert.ok(appSource.includes("opportunityDashboardHtml"));
 assert.ok(appSource.includes("shortlistDashboardHtml"));
 assert.ok(appSource.includes("shortlistProfileHtml"));
+require("node:child_process").execFileSync(process.execPath,
+  [require("node:path").join(__dirname, "test_oscar_wylee_nz_importer.mjs")], { stdio: "inherit" });
 console.log("Intelligence tests passed");
+
+// Old links default to both public record layers; explicit empty arrays stay empty.
+assert.deepEqual(Intel.sanitiseLayers(undefined), ["stores", "centres"]);
+assert.deepEqual(Intel.sanitiseLayers([]), []);
+assert.deepEqual(Intel.sanitiseLayers(["stores", "private", "stores", "centres"]), ["stores", "centres"]);
+const explorationShare = Intel.sanitiseShareState({view:"centres", activeLayers:new Set(["centres", "private"]), filters:{search:"applied", audiology:"true", status:"Active"}, placeFilters:{state:"WA"}, drafts:{search:"private draft"}, map:{}, candidates:[]});
+assert.deepEqual(explorationShare.layers, ["centres"]);
+assert.equal(explorationShare.filters.search, "applied");
+assert.equal(explorationShare.filters.audiology, "true");
+assert.equal(explorationShare.filters.status, "Active");
+assert.equal(explorationShare.place_filters.state, "WA");
+assert.equal(explorationShare.drafts, undefined);
+
+// Named groups keep an independent public snapshot, including point-analysis settings.
+const comparisonOriginal = [{id:'one', name:'First', latitude:-33.9, longitude:151.1, place_id:'place-one', target_min_sqm:100, target_max_sqm:150, private_note:'excluded'}, {id:'two', name:'Second', latitude:-34, longitude:151.2}];
+const comparisonCopy = Intel.comparisonSnapshot(comparisonOriginal);
+comparisonOriginal[0].name = 'Edited';
+assert.equal(comparisonCopy[0].name, 'First');
+assert.equal(comparisonCopy[0].target_min_sqm, 100);
+assert.equal(comparisonCopy[0].private_note, undefined);
+assert.equal(Intel.comparisonSnapshot([{latitude:null,longitude:10},{latitude:91,longitude:10}]).length,0);
+assert.equal(Intel.comparisonConnections([]).length,0);
+assert.equal(Intel.comparisonConnections(comparisonCopy.slice(0,1)).length,0);
+const comparisonEdges = Intel.comparisonConnections(comparisonCopy);
+assert.equal(comparisonEdges.length,1);
+assert.ok(Math.abs(comparisonEdges[0].distance - Intel.haversine(comparisonCopy[0], comparisonCopy[1])) < 0.00001);
+const fivePoints = Array.from({length:5}, (_,i)=>({id:String(i), latitude:-33-i/100, longitude:151}));
+assert.equal(Intel.comparisonConnections(fivePoints).length,10);
+assert.equal(Intel.comparisonConnections([fivePoints[0], {...fivePoints[0],id:'same-position'}])[0].distance,0);

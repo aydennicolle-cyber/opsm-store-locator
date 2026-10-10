@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "schema_version": 1,
+    "directory_sha256": "5686b8f4b6c4fe53abc9c8011f62e772cdf6664eed5ba02ea8283993110eaac1",
+    "census_sha256": "13d5569d5b9b54c8453619be28bfcf8ce80f986e321c6925d225328ea007aab6",
+    "purpose": "Public research summaries; no census admissions or score changes."
+  },
+  "comparisons": [
+    {
+      "left_place_id": "corridor-au-sa-glenelg-jetty-road",
+      "right_place_id": "place-au-nsw-ed-square-town-centre",
+      "left_name": "Jetty Road",
+      "right_name": "Ed.Square Town Centre",
+      "shared_normalized_names": [
+        {
+          "name_key": "anytime fitness",
+          "left_records": [
+            "corridor-au-sa-glenelg-jetty-road::anytime-fitness-1"
+          ],
+          "right_records": [
+            "place-au-nsw-ed-square-town-centre::19973"
+          ]
+        }
+      ],
+      "method": "Exact normalized listing-name intersection; punctuation/case/accents and ampersand normalized. Branch-name variants are not silently merged.",
+      "interpretation": "A lower-bound name overlap within declared directory scope, not an attractiveness score, predictive benchmark or proof of common tenancy economics."
+    },
+    {
+      "left_place_id": "corridor-au-sa-glenelg-jetty-road",
+      "right_place_id": "place-au-wa-karrinyup-shopping-centre",
+      "left_name": "Jetty Road",
+      "right_name": "Karrinyup Shopping Centre",
+      "shared_normalized_names": [
+        {
+          "name_key": "blue illusion",
+          "left_records": [
+            "corridor-au-sa-glenelg-jetty-road::blue-illusion"
+          ],
+          "right_records": [
+            "place-au-wa-karrinyup-shopping-centre::181e5b06-e957-4063-8611-75a4426370e8"
+          ]
+        },
+        {
+          "name_key": "chatime",
+          "left_records": [
+            "corridor-au-sa-glenelg-jetty-road::chatime"
+          ],
+          "right_records": [
+            "place-au-wa-karrinyup-shopping-centre::0fe5c242-5544-41e3-b4ca-7638443b0ab5"
+          ]
+        },
+        {
+          "name_key": "cotton on",
+          "left_records": [
+            "corridor-au-sa-glenelg-jetty-road::cotton-on"
+          ],
+          "right_records": [
+            "place-au-wa-karrinyup-shopping-centre::eb842ba2-b952-4fb0-a208-294de71150f0"
+          ]
+        },
+        {
+          "name_key": "endota spa",
+          "left_records": [
+            "corridor-au-sa-glenelg-jetty-road::endota-spa"
+          ],
+          "right_records": [
+            "place-au-wa-karrinyup-shopping-centre::c50293ad-8815-44a0-8a30-7b0e65c06c70"
+          ]
+        },
+        {
+          "name_key": "national australia bank",
+          "left_records": [
+            "corridor-au-sa-glenelg-jetty-road::national-australia-bank"
+          ],
+          "right_records": [
+            "place-au-wa-karrinyup-shopping-centre::0dd8f51a-801f-4803-b83c-51c7c44172c0"
+          ]
+        },
+        {
+          "name_key": "sportsgirl",
+          "left_records": [
+            "corridor-au-sa-glenelg-jetty-road::sportsgirl"
+          ],
+          "right_records": [
+            "place-au-wa-karrinyup-shopping-centre::78146e58-f06b-40d9-8f12-2f5b65a4cd51"
+          ]
+        }
+      ],
+      "method": "Exact normalized listing-name intersection; punctuation/case/accents and ampersand normalized. Branch-name variants are not silently merged.",
+      "interpretation": "A lower-bound name overlap within declared directory scope, not an attractiveness score, predictive benchmark or proof of common tenancy economics."
+    },
+    {
+      "left_place_id": "place-au-nsw-ed-square-town-centre",
+      "right_place_id": "place-au-wa-karrinyup-shopping-centre",
+      "left_name": "Ed.Square Town Centre",
+      "right_name": "Karrinyup Shopping Centre",
+      "shared_normalized_names": [
+        {
+          "name_key": "boost juice",
+          "left_records": [
+            "place-au-nsw-ed-square-town-centre::20244"
+          ],
+          "right_records": [
+            "place-au-wa-karrinyup-shopping-centre::d4fd0870-8bed-4a22-80c3-8db1a4da3537"
+          ]
+        },
+        {
+          "name_key": "coles",
+          "left_records": [
+            "place-au-nsw-ed-square-town-centre::20370"
+          ],
+          "right_records": [
+            "place-au-wa-karrinyup-shopping-centre::403bcf44-c6de-4ade-a628-d9a3f91e70ae"
+          ]
+        },
+        {
+          "name_key": "liquorland",
+          "left_records": [
+            "place-au-nsw-ed-square-town-centre::21755"
+          ],
+          "right_records": [
+            "place-au-wa-karrinyup-shopping-centre::c0189ab7-a6be-47d4-9295-ae949408c580"
+          ]
+        },
+        {
+          "name_key": "sushi hub",
+          "left_records": [
+            "place-au-nsw-ed-square-town-centre::22119"
+          ],
+          "right_records": [
+            "place-au-wa-karrinyup-shopping-centre::9828f966-26d5-4dd3-a1f3-0ecf722991ed"
+          ]
+        }
+      ],
+      "method": "Exact normalized listing-name intersection; punctuation/case/accents and ampersand normalized. Branch-name variants are not silently merged.",
+      "interpretation": "A lower-bound name overlap within declared directory scope, not an attractiveness score, predictive benchmark or proof of common tenancy economics."
+    }
+  ]
+}

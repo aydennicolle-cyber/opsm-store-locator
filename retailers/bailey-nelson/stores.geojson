@@ -4,7 +4,8 @@
     "retailer": "Bailey Nelson",
     "source": "https://baileynelson.com.au/pages/optometrist-near-me",
     "fetched_at": "2026-09-01T07:42:35+00:00",
-    "store_count": 68
+    "store_count": 71,
+    "incremental_review_date": "2026-10-04"
   },
   "features": [
     {
@@ -1705,6 +1706,117 @@
         "audiology": "false",
         "map_url": "https://www.google.com/maps/place/Bailey+Nelson+Optometrist+-+St+George's+Terrace/@-31.9555478,115.8600234,15z/data=!4m6!3m5!1s0x2a32bb29de59a847:0x9d8dab4cd674b73a!8m2!3d-31.9555478!4d115.8600234!16s%2Fg%2F11cp5r4kps?sa=X&ved=1t:2428&ictx=111&coh=219816&entry=tts&g_ep=EgoyMDI0MDgwNS4wKgBIAVAD",
         "coordinate_source": "Official Google Maps link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.857256,
+          -32.131264
+        ]
+      },
+      "properties": {
+        "id": "cockburn",
+        "name": "Bailey Nelson Cockburn",
+        "status": "Opening Soon",
+        "country": "Australia",
+        "state": "WA",
+        "full_address": "Tenancy G033 Cockburn Gateway Shopping City, 816 Beeliar Dr, Success, WA, 6164",
+        "phone": "(08) 6149 9473",
+        "official_url": "https://baileynelson.com.au/pages/optometrist-cockburn",
+        "services": "",
+        "business_type": "Planned optical retailer",
+        "source_url": "https://baileynelson.com.au/booking",
+        "city": "Success",
+        "postal_code": "6164",
+        "audiology": "false",
+        "fetched_at": "2026-10-04",
+        "identity_reviewed": "true",
+        "coordinates_reviewed": "true",
+        "verified_at": "2026-10-04",
+        "status_evidence_url": "https://baileynelson.bamboohr.com/careers/3934",
+        "coordinate_evidence_url": "https://baileynelson.com.au/booking",
+        "coordinate_confidence": "Medium \u2014 operator booking premises point; exact shop frontage unverified",
+        "evidence_notes": "Official public booking sourceID083 names this branch and full premises address. Public employer announcement establishesOpeningSoon (early November2026); planned timing is indicative,not an actual opening date. Exclude from current competition. Preserve raw booking/source IDs and do not infer trading from booking-page presence or image filenames. Structured+61phone omits the area digit; use the complete explicitly visible08number,without guessing a digit.",
+        "map_url": "https://baileynelson.com.au/booking",
+        "coordinate_source": "Public operator booking premises point",
+        "booking_source_id": "083"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.749401,
+          -31.796516
+        ]
+      },
+      "properties": {
+        "id": "whitford",
+        "name": "Bailey Nelson Whitford",
+        "status": "Opening Soon",
+        "country": "Australia",
+        "state": "WA",
+        "full_address": "Shop 224B Westfield Whitford City, Cnr Marmion & Whitfords Ave, Hillarys, WA, 6025",
+        "phone": "(08) 6149 9472",
+        "official_url": "https://baileynelson.com.au/pages/optometrist-whitford",
+        "services": "",
+        "business_type": "Planned optical retailer",
+        "source_url": "https://baileynelson.com.au/booking",
+        "city": "Hillarys",
+        "postal_code": "6025",
+        "audiology": "false",
+        "fetched_at": "2026-10-04",
+        "identity_reviewed": "true",
+        "coordinates_reviewed": "true",
+        "verified_at": "2026-10-04",
+        "status_evidence_url": "https://baileynelson.bamboohr.com/careers/3933",
+        "coordinate_evidence_url": "https://baileynelson.com.au/booking",
+        "coordinate_confidence": "Low \u2014 approximate operator centre point; named directions point conflicts; shop frontage unverified",
+        "evidence_notes": "Official public booking sourceID085 names this branch and full premises address. Public employer announcement establishesOpeningSoon (late October2026); planned timing is indicative,not an actual opening date. Exclude from current competition. Preserve raw booking/source IDs and do not infer trading from booking-page presence or image filenames. Branch and booking agreeShop224B. Official directions resolve a named map about470metres east of the booking/centre location; use the operator booking point as an approximate centre location,not an exact tenancy pin. Both conflicting points remain in evidence. Structured+61phone omits the area digit; use the complete explicitly visible08number,without guessing a digit.",
+        "map_url": "https://baileynelson.com.au/booking",
+        "coordinate_source": "Public operator booking premises point",
+        "booking_source_id": "085"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.0361357605559,
+          -37.81936409293845
+        ]
+      },
+      "properties": {
+        "id": "hawthorn",
+        "name": "Bailey Nelson Hawthorn",
+        "status": "Opening Soon",
+        "country": "Australia",
+        "state": "VIC",
+        "full_address": "732 Glenferrie Rd, Hawthorn, VIC, 3122",
+        "phone": "",
+        "official_url": "https://baileynelson.com.au/booking/087-hawthorn",
+        "services": "",
+        "business_type": "Planned optical retailer",
+        "source_url": "https://baileynelson.com.au/booking",
+        "city": "Hawthorn",
+        "postal_code": "3122",
+        "audiology": "false",
+        "fetched_at": "2026-10-04",
+        "identity_reviewed": "true",
+        "coordinates_reviewed": "true",
+        "verified_at": "2026-10-04",
+        "status_evidence_url": "https://baileynelson.bamboohr.com/careers/3929",
+        "coordinate_evidence_url": "https://baileynelson.com.au/booking",
+        "coordinate_confidence": "Medium \u2014 operator booking premises point; exact shop frontage unverified",
+        "evidence_notes": "Official public booking sourceID087 names this branch and full premises address. Public employer announcement establishesOpeningSoon (early November2026); planned timing is indicative,not an actual opening date. Exclude from current competition. Preserve raw booking/source IDs and do not infer trading from booking-page presence or image filenames. Hawthorn is absent from the main locator but present as booking087 and in employer recruitment. No contact phone or formal canonical precinct membership is established.",
+        "map_url": "https://baileynelson.com.au/booking",
+        "coordinate_source": "Public operator booking premises point",
+        "booking_source_id": "087"
       }
     }
   ]

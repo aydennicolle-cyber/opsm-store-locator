@@ -1,0 +1,1 @@
+/* Retired compatibility asset for cached pages. Private review data stays offline. */

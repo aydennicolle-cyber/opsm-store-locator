@@ -1,8 +1,6 @@
 name: Publish map
 
 on:
-  push:
-    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -21,6 +19,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Public publishing paused pending protected hosting
+        run: |
+          echo "Publishing is paused: this GitHub Pages target is public."
+          echo "Configure and verify authenticated hosting before re-enabling deployment."
+          echo "See docs/PROTECTED_PUBLISHING.md. This guard does not protect an already published site."
+          exit 1
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Python

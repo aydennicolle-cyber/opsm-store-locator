@@ -9,9 +9,12 @@ import json
 import os
 from collections import Counter
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 
 from audit_store_identities import main as audit_store_identities
+from reviewed_independents import ID_PREFIX as REVIEWED_INDEPENDENT_PREFIX, SOURCE_ID as REVIEWED_SOURCE_ID
+from store_rules import current_competitor
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -130,9 +133,20 @@ def source_results(manifest: dict, as_of: datetime, metadata: dict) -> list[dict
     return results
 
 
+@lru_cache(maxsize=1)
+def source_retailer_prefixes() -> tuple:
+    registry = json.loads((DATA / 'retailer_registry.json').read_text())['retailers']
+    return tuple((item['slug'] + '-', item['name']) for item in registry)
+
+
 def source_id_for_store(store: dict) -> str:
     country = "nz" if store["country"] == "New Zealand" else "au"
-    if store["retailer"] == "Independent / Other optical":
+    # A reviewed brand change does not replace the record's source or its age.
+    source_retailer = next((name for prefix, name in source_retailer_prefixes()
+                            if store['store_id'].startswith(prefix)), store['retailer'])
+    if source_retailer == "Independent / Other optical":
+        if store["store_id"].startswith(REVIEWED_INDEPENDENT_PREFIX):
+            return REVIEWED_SOURCE_ID
         return "provision-affiliation" if "provision" in store.get("affiliations", "").split("|") else "osm-opticians"
     retailer = {
         "OPSM": "opsm", "Specsavers": "specsavers", "Bailey Nelson": "bailey-nelson",
@@ -147,7 +161,7 @@ def source_id_for_store(store: dict) -> str:
         "The Optical Company": "the-optical-company",
         "Optical by National Pharmacies": "national-pharmacies-optical",
         "Matthews Eyecare": "matthews-eyecare",
-    }[store["retailer"]]
+    }[source_retailer]
     return f"{retailer}-{country}"
 
 
@@ -167,6 +181,7 @@ def main() -> None:
     membership_by_id = {row["store_id"]: row for row in memberships}
     places_payload = json.loads(PLACE_PATH.read_text(encoding="utf-8"))
     places = places_payload["places"]
+    canonical_place_ids = {place["place_id"] for place in places}
     property_intelligence = json.loads(PROPERTY_INTELLIGENCE_PATH.read_text(encoding="utf-8"))
     place_tenants = json.loads(PLACE_TENANTS_PATH.read_text(encoding="utf-8"))
     reviews = read_csv(REVIEW_PATH)
@@ -189,8 +204,20 @@ def main() -> None:
         usable = membership.get("usable_for_network") == "true"
         setting_complete = membership.get("location_setting") not in {"", "Uncertain"}
         place_complete = setting_complete and (membership.get("location_setting") == "Other" or bool(membership.get("place_id")))
+        # An evidenced Other setting can be operationally usable without a
+        # retail place. Place-specific analysis still needs an accepted mapping.
+        accepted_place = (
+            membership.get("review_status") == "Accepted"
+            and membership.get("place_id") in canonical_place_ids
+        )
         current_source = source["fresh"] and source["complete"]
+        if source_id == REVIEWED_SOURCE_ID:
+            reviewed_at = parse_date(store.get("fetched_at"))
+            current_source = bool(reviewed_at and source["complete"] and source["available"] and 0 <= (as_of - reviewed_at).days <= source["max_age_days"])
         issues = []
+        current_trading = current_competitor(store)
+        if not current_trading:
+            issues.append(f"{store.get('status', 'Unknown')}; excluded from current competition counts")
         if not usable:
             issues.append("record lacks a meaningful public storefront address")
         if not setting_complete:
@@ -205,11 +232,12 @@ def main() -> None:
             "location_setting": membership.get("location_setting", "Uncertain"), "place_id": membership.get("place_id", ""),
             "mapping_confidence": membership.get("mapping_confidence", "Uncertain"), "operational_status": status,
             "usable_for_network": str(usable).lower(), "current_source": str(current_source).lower(),
-            "eligible_for_analytics": str(usable).lower(), "eligible_for_place_analytics": str(usable and place_complete).lower(),
+            "eligible_for_analytics": str(usable and current_trading).lower(), "eligible_for_place_analytics": str(usable and place_complete and accepted_place and current_trading).lower(),
             "source_id": source_id, "issues": "; ".join(issues),
         })
 
     named_rows = [row for row in certification_rows if row["retailer"] in NAMED_RETAILERS]
+    promoted_rows = [row for row in certification_rows if row["retailer"] in NAMED_RETAILERS or row["store_id"].startswith(REVIEWED_INDEPENDENT_PREFIX)]
     usable_named = sum(row["usable_for_network"] == "true" for row in named_rows)
     setting_named = sum(row["location_setting"] != "Uncertain" for row in named_rows)
     mapped_named = sum(row["location_setting"] != "Uncertain" and (row["location_setting"] == "Other" or bool(row["place_id"])) for row in named_rows)
@@ -221,7 +249,7 @@ def main() -> None:
         "usable_store_coverage": percent(usable_named, len(named_rows)),
         "location_setting_coverage": percent(setting_named, len(named_rows)),
         "place_mapping_coverage": percent(mapped_named, len(named_rows)),
-        "review_reconciliation": percent(len(named_rows) - len(pending_reviews), len(named_rows)),
+        "review_reconciliation": percent(len(promoted_rows) - len(pending_reviews), len(promoted_rows)),
         "store_identity_integrity": 100.0 if not pending_identity_reviews else 0.0,
     }
     complete = all(value == 100.0 for value in dimensions.values())
@@ -392,6 +420,12 @@ def main() -> None:
         writer = csv.DictWriter(handle, fieldnames=list(certification_rows[0]), lineterminator="\n")
         writer.writeheader(); writer.writerows(certification_rows)
     HEALTH_PATH.write_text(json.dumps(health, indent=2) + "\n", encoding="utf-8")
+    # Environment search must use the certification produced by this build.
+    try:
+        from .build_retail_environments import build as build_environments
+    except ImportError:
+        from build_retail_environments import build as build_environments
+    build_environments(DATA)
     print(f"Named-network stores usable: {usable_named}/{len(named_rows)}; setting mapped: {setting_named}; place mapped: {mapped_named}")
     print(f"Places: {len(places)}; promoted mapping reviews: {len(pending_reviews)}; background leads: {len(background_leads)}")
     print(f"Health dimensions: {dimensions}; status: {status}")

@@ -11,6 +11,8 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
+from functools import lru_cache
+from public_trading_status import infer_public_trading_status
 
 from fetch_bailey_nelson_stores import PageParser, fetch_text, local_business, map_coordinates
 
@@ -18,6 +20,7 @@ from fetch_bailey_nelson_stores import PageParser, fetch_text, local_business, m
 ROOT = Path(__file__).resolve().parents[1]
 RETAILER_DIR = ROOT / "retailers" / "bailey-nelson-nz"
 LIST_URL = "https://baileynelson.co.nz/pages/optometrist-near-me"
+BOOKING_URL = "https://baileynelson.co.nz/booking"
 CSV_PATH = RETAILER_DIR / "stores.csv"
 GEOJSON_PATH = RETAILER_DIR / "stores.geojson"
 SNAPSHOT_PATH = RETAILER_DIR / "source_snapshot.json"
@@ -54,6 +57,40 @@ def store_urls(page_html: str) -> list[str]:
     return sorted(urls)
 
 
+def booking_stores(page: str) -> list[dict]:
+    """Read the public booking page's embedded store objects, not image names."""
+    chunks = [page]
+    for encoded in re.findall(r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)', page):
+        chunks.append(json.loads(encoded))
+    result = {}
+    for chunk in chunks:
+        for match in re.finditer(r'\{"id":"N\d+","slug":', chunk):
+            row, _ = json.JSONDecoder().raw_decode(chunk[match.start():])
+            if row.get('latitude') and row.get('longitude') and row.get('address'):
+                result[row['id']] = row
+    return list(result.values())
+
+
+@lru_cache(maxsize=1)
+def public_booking_stores():
+    return booking_stores(fetch_text(BOOKING_URL)[0])
+
+
+def booking_coordinate_match(url, address, records):
+    slug = urllib.parse.urlparse(url).path.rsplit('/', 1)[-1].replace('optometrist-', '')
+    matches = [r for r in records if (r['slug'] == slug or re.sub(r'^n\d+-', '', r['slug']) == slug)
+               and str(r['address'].get('postalCode', '')) == str(address.get('postalCode', ''))]
+    # Require the same numbered street in addition to branch and postcode.
+    from reconcile_luc_records import street_key
+    matches = [r for r in matches if street_key(r['address'].get('streetName', ''))
+               and street_key(r['address']['streetName']) == street_key(address.get('streetAddress', ''))]
+    if len(matches) != 1:
+        return None
+    r = matches[0]
+    lat, lon = float(r['latitude']), float(r['longitude'])
+    return (lat, lon, BOOKING_URL) if -48 <= lat <= -33.5 and 165 <= lon <= 179.5 else None
+
+
 def region_for(locality: str, full_address: str) -> str:
     value = f" {locality} {full_address} ".lower()
     rules = (
@@ -63,6 +100,8 @@ def region_for(locality: str, full_address: str) -> str:
         ("Bay of Plenty", ("tauranga", "mount maunganui")),
         ("Canterbury", ("christchurch", "riccarton", "cashel street")),
         ("Otago", ("dunedin", "queenstown", "frankton")),
+        ("Tasman", ("richmond",)),
+        ("Nelson", ("nelson",)),
     )
     for region, terms in rules:
         if any(term in value for term in terms):
@@ -105,18 +144,20 @@ def clean_store(url: str) -> tuple[dict | None, dict]:
         address.get("postalCode", ""),
     ]
     full_address = tidy(", ".join(part for part in address_parts if part))
-    if not map_links:
+    booking_match = booking_coordinate_match(url, address, public_booking_stores()) if not map_links else None
+    if not map_links and not booking_match:
         return None, {
             "official_url": resolved_url,
             "map_url": "",
             "resolved_map_url": "",
             "structured_data": business,
-            "excluded_reason": "Coming Soon location has no confirmed map position",
+            "excluded_reason": "Premises coordinates unresolved; absence of a map link does not establish trading status",
+            "trading_status": infer_public_trading_status(page_html, business),
         }
     if map_links:
         latitude, longitude, resolved_map = map_coordinates(map_links[0])
     else:
-        latitude, longitude, resolved_map = geocode_address(full_address)
+        latitude, longitude, resolved_map = booking_match
     name = tidy(business.get("name", ""))
     store = {
         "name": name,
@@ -132,7 +173,7 @@ def clean_store(url: str) -> tuple[dict | None, dict]:
         "official_url": resolved_url,
         "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
         "audiology": "false",
-        "status": "Active",
+        "status": infer_public_trading_status(page_html, business),
     }
     snapshot = {
         "official_url": resolved_url,
@@ -157,7 +198,7 @@ def validate(stores: list[dict]) -> None:
 def main() -> None:
     fetched_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     list_html, _ = fetch_text(LIST_URL)
-    urls = store_urls(list_html)
+    urls = sorted(set(store_urls(list_html)) | {r["official_url"] for r in csv.DictReader(CSV_PATH.open())}) if CSV_PATH.exists() else store_urls(list_html)
     if not 12 <= len(urls) <= 20:
         raise ValueError(f"Unexpected Bailey Nelson New Zealand public list count: {len(urls)}")
     stores = []

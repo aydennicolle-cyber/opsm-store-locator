@@ -13,6 +13,35 @@
     return Number.isFinite(parsed) ? parsed : null;
   }
 
+  function selectedBenchmarkLookalike(row, benchmarks) {
+    const result = { ...row, components: { ...row.components } };
+    const fields = ["population_2025", "population_growth_2021_2025_pct", "age_45_plus_pct_2021", "median_equivalised_household_income_weekly_2021"];
+    const values = (benchmarks || []).filter((item) => item.country === row.country && item.location_setting === row.location_setting);
+    const comparisons = fields.map((field) => {
+      const value = number(row.market_features?.[field]);
+      const observed = values.map((item) => number(item.market_features?.[field]))
+        .filter((item) => item !== null).sort((a, b) => a - b);
+      const middle = Math.floor(observed.length / 2);
+      // Two selected stores must actually supply this field. Missing values
+      // cannot become zero or quietly restore the all-store benchmark.
+      const target = observed.length < 2 ? null : observed.length % 2
+        ? observed[middle] : (observed[middle - 1] + observed[middle]) / 2;
+      const similarity = value === null || target === null ? null
+        : Math.max(0, 100 - (Math.abs(value - target) / Math.max(Math.abs(target), 1)) * 100);
+      return { field, value, target, reference_count: observed.length, similarity };
+    });
+    const availableSimilarities = comparisons.map((item) => item.similarity).filter((value) => value !== null);
+    result.components.bailey_footprint_similarity = availableSimilarities.length
+      ? Math.round(availableSimilarities.reduce((sum, value) => sum + value, 0) / availableSimilarities.length) : null;
+    result.footprint_comparison = { reference_count: values.length, available_fields: availableSimilarities.length, total_fields: fields.length, comparisons };
+    const weights = { bailey_footprint_similarity: 40, bailey_whitespace: 30, optical_market_validation: 20, accessibility_retail_context: 10 };
+    const available = Object.keys(weights).filter((key) => number(result.components[key]) !== null);
+    result.screening_completeness = available.reduce((sum, key) => sum + weights[key], 0);
+    result.score = result.screening_completeness
+      ? Math.round(available.reduce((sum, key) => sum + number(result.components[key]) * weights[key], 0) / result.screening_completeness) : null;
+    return result;
+  }
+
   function haversine(first, second) {
     const toRadians = (degrees) => (degrees * Math.PI) / 180;
     const lat1 = toRadians(Number(first.latitude));
@@ -72,8 +101,15 @@
     return false;
   }
 
-  function findMarketFeature(point, features) {
-    return features.find((feature) => pointInGeometry(point, feature.geometry)) || null;
+  function findMarketFeature(point, features, pointLinks = {}) {
+    const key = `${Number(point.latitude).toFixed(7)},${Number(point.longitude).toFixed(7)}`;
+    const verified = pointLinks[key];
+    if (verified) {
+      if (verified.match_status !== "Unique") return null;
+      return features.find((feature) => feature.properties.sa2_code === verified.sa2_code) || null;
+    }
+    const matches = features.filter((feature) => pointInGeometry(point, feature.geometry));
+    return matches.length === 1 ? matches[0] : null;
   }
 
   function pointToSegmentKm(point, first, second) {
@@ -422,6 +458,35 @@
     return [...effective.values()];
   }
 
+  function proximityModel(point, stores, brands, radii, baseStore = null, certifiedOnly = true) {
+    const eligible = stores.filter((store) =>
+      (!baseStore || store.store_id !== baseStore.store_id) &&
+      (!certifiedOnly || store.eligible_for_analytics)
+    );
+    // The independent bucket groups distinct retailers, not one retail network.
+    const isCompetitor = (store) => !baseStore ||
+      baseStore.retailer === "Independent / Other optical" ||
+      store.retailer !== baseStore.retailer;
+    const distances = eligible
+      .map((store) => ({ store, distance: haversine(point, store) }))
+      .sort((a, b) => a.distance - b.distance || a.store.store_id.localeCompare(b.store.store_id));
+    const nearestByBrand = Object.fromEntries(
+      brands.map((brand) => [brand, distances.find((entry) => entry.store.retailer === brand) || null])
+    );
+    const radiusCounts = radii.map((radius) => {
+      const inside = distances.filter((entry) => entry.distance <= radius && isCompetitor(entry.store));
+      return {
+        radius,
+        counts: Object.fromEntries(brands.map((brand) => [brand, inside.filter((entry) => entry.store.retailer === brand).length])),
+        total: inside.length,
+      };
+    });
+    const sameCentre = baseStore?.place_id
+      ? eligible.filter((store) => isCompetitor(store) && store.place_id === baseStore.place_id)
+      : [];
+    return { distances, nearestByBrand, radiusCounts, sameCentre };
+  }
+
   function competitorPropertyContext(place, stores) {
     const byRetailer = {};
     (stores || []).forEach((store) => {
@@ -462,9 +527,15 @@
       && Array.from(mustNotHave || []).every((retailer) => !retailers.has(retailer));
   }
 
+  function sanitiseLayers(layers) {
+    const allowed = ["stores", "centres", "demographic", "growth", "development", "saturation", "health", "transport", "parking"];
+    return Array.isArray(layers) ? [...new Set(layers.filter(layer => allowed.includes(layer)))] : ["stores", "centres"];
+  }
+
   function sanitiseShareState(state) {
     return {
       view: state.view || "network",
+      layers: sanitiseLayers(state.activeLayers ? Array.from(state.activeLayers) : state.layers),
       filters: {
         retailers: Array.from(state.filters?.retailers || []),
         country: state.filters?.country || "",
@@ -472,10 +543,13 @@
         location: state.filters?.location || "",
         search: state.filters?.search || "",
         affiliation: state.filters?.affiliation || "",
+        audiology: state.filters?.audiology || "",
+        status: state.filters?.status || "",
       },
       place_filters: {
         search: state.placeFilters?.search || "",
         country: state.placeFilters?.country || "",
+        state: state.placeFilters?.state || "",
         type: state.placeFilters?.type || "",
         bailey: state.placeFilters?.bailey || "",
         retailers: Array.from(state.placeFilters?.retailers || []),
@@ -512,7 +586,27 @@
     };
   }
 
+  function comparisonSnapshot(candidates = []) {
+    return candidates.filter(candidate => number(candidate.latitude) !== null && number(candidate.longitude) !== null && Math.abs(Number(candidate.latitude)) <= 90 && Math.abs(Number(candidate.longitude)) <= 180).map(candidate => ({
+      id: String(candidate.id || ''), name: String(candidate.name || 'Unnamed place'),
+      latitude: Number(candidate.latitude), longitude: Number(candidate.longitude),
+      place_id: String(candidate.place_id || ''), profile_id: String(candidate.profile_id || 'generic-optical'),
+      area_sqm: number(candidate.area_sqm), target_min_sqm: number(candidate.target_min_sqm), target_max_sqm: number(candidate.target_max_sqm),
+    }));
+  }
+
+  function comparisonConnections(candidates = []) {
+    const points = comparisonSnapshot(candidates);
+    const pairs = [];
+    points.forEach((from, index) => points.slice(index + 1).forEach(to => pairs.push({from, to, distance: haversine(from, to)})));
+    return pairs;
+  }
+
   return {
+    comparisonSnapshot,
+    comparisonConnections,
+    sanitiseLayers,
+    selectedBenchmarkLookalike,
     haversine,
     formatDistance,
     normalisePlaceShortlist,
@@ -529,6 +623,7 @@
     deriveLeasingArrangement,
     portfolioOverlapStatus,
     effectivePropertyRelationships,
+    proximityModel,
     competitorPropertyContext,
     placeMatchesRetailerFilters,
     sanitiseShareState,

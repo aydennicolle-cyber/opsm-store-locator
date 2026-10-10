@@ -1,0 +1,582 @@
+{
+  "generated_at": "2026-10-10T13:16:04+00:00",
+  "coverage_note": "Unpromoted property-identity discovery evidence; not accepted aliases, store memberships or manual-review failures.",
+  "leads": [
+    {
+      "source_id": "osm-au-way-135807003",
+      "name": "Meadow Mews",
+      "latitude": -41.4670579,
+      "longitude": 147.158951,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/135807003",
+      "website_url": "https://www.meadowmews.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-tas-meadow-mews-plaza"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-38065748",
+      "name": "Belmont Village",
+      "latitude": -38.1694708,
+      "longitude": 144.3491942,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/38065748",
+      "website_url": "https://belmontvillage.com.au",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-belmont-shopping-centre"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-82261062",
+      "name": "Gateway Plaza Shopping Centre",
+      "latitude": -38.1853949,
+      "longitude": 144.4535365,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/82261062",
+      "website_url": "https://www.gatewayplazaleopold.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-gateway-plaza"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-109539212",
+      "name": "Sanctuary Lakes Shopping Centre",
+      "latitude": -37.8956824,
+      "longitude": 144.7526782,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/109539212",
+      "website_url": "www.sanctuarylakesshoppingcentre.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-sanctuary-lakes-shopping-ctr"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-165189556",
+      "name": "Central Square Shopping Centre",
+      "latitude": -37.8728143,
+      "longitude": 144.7758872,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/165189556",
+      "website_url": "https://www.centralsquareshopping.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-altona-meadows-central-square"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-266761433",
+      "name": "Burnside Shopping Centre",
+      "latitude": -37.7592639,
+      "longitude": 144.753866,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/266761433",
+      "website_url": "http://www.burnsideshoppingcentre.com/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-burnside-hub"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-28224673",
+      "name": "Brimbank Shopping Centre",
+      "latitude": -37.7510815,
+      "longitude": 144.7746823,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/28224673",
+      "website_url": "https://www.brimbankshoppingcentre.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-brimbank-central"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-46218297",
+      "name": "Emporium",
+      "latitude": -37.8124138,
+      "longitude": 144.9638481,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/46218297",
+      "website_url": "https://www.emporiummelbourne.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-emporium-shopping-centre"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-46854371",
+      "name": "Melbourne's GPO",
+      "latitude": -37.8135937,
+      "longitude": 144.9633067,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/46854371",
+      "website_url": "https://www.melbournesgpo.com/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-the-strand-melbourne"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-212225792",
+      "name": "Camberwell Place",
+      "latitude": -37.8290063,
+      "longitude": 145.0563666,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/212225792",
+      "website_url": "https://www.camberwellplace.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-camberwell-arcade"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-62061375",
+      "name": "Northland Shopping Centre",
+      "latitude": -37.7385333,
+      "longitude": 145.0303722,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/62061375",
+      "website_url": "https://www.northlandshopping.com.au",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-northland"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-109682942",
+      "name": "Warringal Shopping Centre",
+      "latitude": -37.755733,
+      "longitude": 145.0685467,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/109682942",
+      "website_url": "https://warringal.net.au",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-heidelberg-warringal-shopping-centre"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-312743673",
+      "name": "Bulleen Plaza",
+      "latitude": -37.7659318,
+      "longitude": 145.0918845,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/312743673",
+      "website_url": "https://bulleenplaza.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-bulleen-plaza-shopping-centre"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-150432346",
+      "name": "Bacchus Marsh Village Shopping Centre",
+      "latitude": -37.6750657,
+      "longitude": 144.4395392,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/150432346",
+      "website_url": "www.bmvsc.com",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-the-village-bacchus-marsh-shopping-centre"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-137280015",
+      "name": "Keilor Central Shopping Centre",
+      "latitude": -37.7269376,
+      "longitude": 144.8073293,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/137280015",
+      "website_url": "https://www.keilorcentral.com.au",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-keilor-downs-shopping-centre"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-242914505",
+      "name": "Westfield Airport West Shopping Centre",
+      "latitude": -37.7138261,
+      "longitude": 144.8855099,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/242914505",
+      "website_url": "https://www.westfield.com.au/airportwest",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-westfield-airport-west"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-32482514",
+      "name": "Carrum Downs Shopping Centre",
+      "latitude": -38.1019922,
+      "longitude": 145.1848374,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/32482514",
+      "website_url": "https://www.carrumdownssc.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-carrum-downs-shop-centre"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-213934856",
+      "name": "Wheelers Hill Shopping Centre",
+      "latitude": -37.9105017,
+      "longitude": 145.1894535,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/213934856",
+      "website_url": "http://www.whbc.com.au/?page=shopping",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-wheelers-hill-business-centre"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-24026232",
+      "name": "Westfield Knox",
+      "latitude": -37.8690024,
+      "longitude": 145.2414956,
+      "country": "Australia",
+      "state": "VIC",
+      "source_url": "https://www.openstreetmap.org/way/24026232",
+      "website_url": "https://www.westfield.com.au/knox/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-westfield-knox-shopping-centre"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-13858786",
+      "name": "Bunbury Forum Shopping Centre",
+      "latitude": -33.3374907,
+      "longitude": 115.6608947,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/13858786",
+      "website_url": "https://bunburyforum.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-wa-bunbury-forum"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-8051846",
+      "name": "Southlands Boulevarde",
+      "latitude": -32.0574906,
+      "longitude": 115.8804628,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/8051846",
+      "website_url": "https://www.southlands.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-wa-homeco-southlands-boulevarde"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-69709319",
+      "name": "Hawaiian's The Mezz",
+      "latitude": -31.9212787,
+      "longitude": 115.8394851,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/69709319",
+      "website_url": "https://www.hawaiian.com.au/the-mezz/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-wa-the-mezz"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-647885279",
+      "name": "The Co-op",
+      "latitude": -34.4740156,
+      "longitude": 138.993816,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/647885279",
+      "website_url": "https://barossa.coop/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-sa-the-barossa-co-op-shopping-centre"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-221689004",
+      "name": "Riverland Central Plaza",
+      "latitude": -34.2803452,
+      "longitude": 140.6090419,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/221689004",
+      "website_url": "https://www.riverlandcentral.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-sa-berri-riverland-central-plaza"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-265204608",
+      "name": "Lansell Square",
+      "latitude": -36.8105529,
+      "longitude": 144.2423736,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/265204608",
+      "website_url": "https://www.lansellsquare.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-kangaroo-flat-lansell-plaza"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-397729616",
+      "name": "Lederer Corrimal",
+      "latitude": -34.3740911,
+      "longitude": 150.8976039,
+      "country": "Australia",
+      "state": "NSW",
+      "source_url": "https://www.openstreetmap.org/way/397729616",
+      "website_url": "http://lederer1.compcodigital.net/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-nsw-corrimal-shopping-centre"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-22697727",
+      "name": "Lennox Village Shopping Centre",
+      "latitude": -33.7527905,
+      "longitude": 150.6581274,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/22697727",
+      "website_url": "https://www.lennoxvillage.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-nsw-lennox-village"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-182460914",
+      "name": "Liverpool Plaza",
+      "latitude": -33.9215868,
+      "longitude": 150.9232467,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/182460914",
+      "website_url": "https://www.liverpoolplaza.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-nsw-westfield-liverpool"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-214486193",
+      "name": "Erina Fair Shopping Centre",
+      "latitude": -33.4373073,
+      "longitude": 151.3922228,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/214486193",
+      "website_url": "https://www.erinafair.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-nsw-erina-fair"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-185936837",
+      "name": "Westfield Tuggerah Shopping Centre",
+      "latitude": -33.3080896,
+      "longitude": 151.4121619,
+      "country": "Australia",
+      "state": "NSW",
+      "source_url": "https://www.openstreetmap.org/way/185936837",
+      "website_url": "https://www.westfield.com.au/tuggerah",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-nsw-westfield-tuggerah"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-17956861",
+      "name": "Pacific Fair",
+      "latitude": -28.0365422,
+      "longitude": 153.4276823,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/17956861",
+      "website_url": "https://www.pacificfair.com.au",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-qld-gold-coast-pacific-fair"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-269114823",
+      "name": "Skygate DFO",
+      "latitude": -27.416365,
+      "longitude": 153.0802202,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/269114823",
+      "website_url": "https://skygate.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-qld-dfo-brisbane"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-1202499069",
+      "name": "Bli Bli Village Town Centre",
+      "latitude": -26.6221577,
+      "longitude": 153.0410318,
+      "country": "Australia",
+      "state": "QLD",
+      "source_url": "https://www.openstreetmap.org/way/1202499069",
+      "website_url": "https://bliblivillage.com.au/town-centre/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-qld-bli-bli-village-river-markets"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-214724377",
+      "name": "Canelands Central",
+      "latitude": -21.1382803,
+      "longitude": 149.1780824,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/214724377",
+      "website_url": "https://www.canelandcentral.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-qld-canelands-central-shopping-centre"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-way-194918344",
+      "name": "Northern Beaches Central Shopping Centre",
+      "latitude": -21.065233,
+      "longitude": 149.1596053,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/194918344",
+      "website_url": "https://www.northernbeachescentral.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-qld-northern-beaches-central"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
+      "source_id": "osm-au-relation-14717600",
+      "name": "Peninsula Fair Shopping Centre",
+      "latitude": -27.225543,
+      "longitude": 153.0884218,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/relation/14717600",
+      "website_url": "https://www.penfair.com.au/",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-qld-peninsula-fair"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    }
+  ]
+}

@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import math
@@ -13,6 +14,10 @@ import urllib.request
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+
+from reviewed_independents import ID_PREFIX as REVIEWED_INDEPENDENT_PREFIX
+from store_rules import current_competitor, meaningful_address, valid_store_point
+from market_points import authoritative_link
 
 try:
     from openpyxl import load_workbook
@@ -71,6 +76,10 @@ def whole_or_decimal(value):
     if value is None:
         return None
     return int(value) if float(value).is_integer() else round(float(value), 2)
+
+
+def population_change(current, baseline):
+    return whole_or_decimal(current - baseline) if current is not None and baseline is not None else None
 
 
 def workbook_rows(path: Path, years: set[int], columns: dict[str, tuple[int, str]]) -> dict[str, dict[int, dict]]:
@@ -274,6 +283,8 @@ def build_market_features() -> list[dict]:
                     "centroid_longitude": centre_lon,
                     "centroid_latitude": centre_lat,
                     "population_2025": whole_or_decimal(population_current),
+                    "population_2021": whole_or_decimal(population_baseline),
+                    "population_growth_2021_2025_number": population_change(population_current, population_baseline),
                     "population_growth_2021_2025_pct": whole_or_decimal(growth),
                     "population_density_2025": whole_or_decimal(current.get("density")),
                     "median_age_2021": whole_or_decimal(census.get("median_age")),
@@ -320,7 +331,7 @@ def query_sa2_for_point(longitude: float, latitude: float) -> dict:
     with urllib.request.urlopen(request, timeout=30) as response:
         payload = json.load(response)
     matches = payload.get("features", [])
-    return matches[0]["attributes"] if matches else {}
+    return matches[0]["attributes"] if len(matches) == 1 else {}
 
 
 def point_to_segment_km(
@@ -368,6 +379,22 @@ def link_stores_to_market(stores: list[dict], features: list[dict]) -> dict[str,
             continue
         longitude = float(store["longitude"])
         latitude = float(store["latitude"])
+        verified = authoritative_link(store)
+        if verified is not None:
+            unique = verified.get("match_status") == "Unique"
+            links[store["store_id"]] = {
+                "sa2_code": verified.get("sa2_code") if unique else "",
+                "sa2_name": verified.get("sa2_name") if unique else "",
+                "match_confidence": "High" if unique else "Unmatched",
+                "match_method": "Point in SA2" if unique else "Authoritative boundary match unresolved",
+                "boundary_distance_km": None,
+                "boundary_source": "ABS authoritative point query",
+                "source_url": verified["source_url"],
+                "checked_at": verified["checked_at"],
+                "queried_latitude": latitude,
+                "queried_longitude": longitude,
+            }
+            continue
         match = None
         for bounds, feature in spatial:
             min_x, min_y, max_x, max_y = bounds
@@ -413,7 +440,7 @@ def link_stores_to_market(stores: list[dict], features: list[dict]) -> dict[str,
 def build_centres(stores: list[dict]) -> list[dict]:
     grouped: dict[str, list[dict]] = defaultdict(list)
     for store in stores:
-        if store.get("venue_id"):
+        if store.get("venue_id") and current_competitor(store) and meaningful_address(store) and valid_store_point(store):
             grouped[store["venue_id"]].append(store)
     overrides = {row["venue_id"]: row for row in read_csv(PROFILE_CSV)}
     registry = {row["venue_id"]: row for row in read_csv(CENTRE_REGISTRY_CSV)}
@@ -534,6 +561,7 @@ def build_history(stores: list[dict]) -> dict:
         }
     events = []
     coverage_baselines_added = []
+    discovery_records_added = []
     baseline_date = snapshot_date
     if prior_paths:
         prior_payload = json.loads(prior_paths[-1].read_text(encoding="utf-8"))
@@ -549,6 +577,10 @@ def build_history(stores: list[dict]) -> dict:
         ]
         for store_id in sorted(current.keys() - prior.keys()):
             store = current[store_id]
+            if store_id.startswith(REVIEWED_INDEPENDENT_PREFIX):
+                # First inclusion after research is not evidence of an opening.
+                discovery_records_added.append(store_id)
+                continue
             if (store["retailer"], store["country"]) in prior_scopes:
                 events.append({"type": "Opened", "date": snapshot_date, **store})
         for store_id in sorted(prior.keys() - current.keys()):
@@ -580,6 +612,7 @@ def build_history(stores: list[dict]) -> dict:
         "event_count": len(events),
         "events": events,
         "coverage_baselines_added": coverage_baselines_added,
+        "discovery_records_added": discovery_records_added,
         "note": (
             "This is the first archived baseline; changes will appear after the next successful refresh."
             if not prior_paths
@@ -593,10 +626,20 @@ def build_history(stores: list[dict]) -> dict:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--reuse-market-data", action="store_true", help="Relink stores using the checked-in ABS feature snapshot without downloading or refreshing demographics")
+    args = parser.parse_args()
     if not STORE_CSV.exists() or not BRAND_PROFILES.exists():
         raise SystemExit("Run scripts/build_optical_network.py before building market intelligence.")
     stores = read_csv(STORE_CSV)
-    features = build_market_features()
+    if args.reuse_market_data:
+        if not SA2_OUTPUT.exists():
+            raise SystemExit("No existing market features; run a full market build first.")
+        features = json.loads(SA2_OUTPUT.read_text(encoding="utf-8")).get("features", [])
+        if not features or any(not feature.get("geometry") or not feature.get("properties", {}).get("sa2_code") for feature in features):
+            raise SystemExit("Existing market feature snapshot is incomplete.")
+    else:
+        features = build_market_features()
     links = link_stores_to_market(stores, features)
     centres = build_centres(stores)
     history = build_history(stores)
@@ -614,6 +657,8 @@ def main() -> None:
                     "boundary_source": SA2_SERVICE.rsplit("/query", 1)[0],
                     "field_definitions": {
                         "population_2025": "ABS estimated resident population",
+                        "population_2021": "ABS estimated resident population baseline, 2021",
+                        "population_growth_2021_2025_number": "2025 population minus the published 2021 baseline; missing if either is unavailable",
                         "population_growth_2021_2025_pct": "Change in ABS estimated resident population; suppressed where the 2021 population is below 100",
                         "median_equivalised_household_income_weekly_2021": "ABS Census median equivalised total household income per week; this is not consumer spending",
                     },

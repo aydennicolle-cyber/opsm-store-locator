@@ -11,6 +11,7 @@ import unicodedata
 from collections import Counter, defaultdict
 from datetime import date, datetime, timezone
 from pathlib import Path
+from market_points import resolve_market
 from urllib.parse import urlparse
 
 
@@ -324,6 +325,13 @@ def load_portfolio_assets(places: dict[str, dict], groups: dict[str, dict]) -> t
         parse_date(asset.get("last_verified_at", ""), f"{asset_id}.last_verified_at", True)
         if asset.get("confidence") not in CONFIDENCE or asset.get("status") not in {"ACTIVE", "RETIRED", "DEVELOPMENT"}:
             raise ValueError(f"Invalid portfolio asset status/confidence: {asset_id}")
+        if asset.get("gla_source_url"):
+            require_url(asset["gla_source_url"], f"{asset_id}.gla_source_url")
+            parse_date(asset.get("gla_source_date", ""), f"{asset_id}.gla_source_date", False)
+            parse_date(asset.get("gla_last_verified_at", ""), f"{asset_id}.gla_last_verified_at", True)
+            period = asset.get("gla_source_period", "")
+            if period and not re.fullmatch(r"\d{4}-(0[1-9]|1[0-2])", period):
+                raise ValueError(f"Invalid GLA source month: {asset_id}")
         roles = [role for role in asset.get("roles", "").split("|") if role]
         if not roles or any(role not in ROLES for role in roles):
             raise ValueError(f"Invalid portfolio asset roles: {asset_id}")
@@ -515,10 +523,13 @@ def derive_arrangement(relationships: list[dict], groups: dict[str, dict]) -> st
 
 
 def load_stores() -> list[dict]:
+    from store_rules import current_competitor
     memberships = {row["store_id"]: row for row in read_csv(MEMBERSHIPS_PATH)}
     stores: list[dict] = []
     for row in read_csv(STORES_PATH):
         membership = memberships.get(row.get("store_id", ""), {})
+        if not current_competitor(row) or membership.get("usable_for_network") != "true":
+            continue
         try:
             latitude, longitude = float(row["latitude"]), float(row["longitude"])
         except (KeyError, TypeError, ValueError):
@@ -560,20 +571,58 @@ def competitor_context(place: dict, stores: list[dict]) -> dict:
 
 
 def market_for_place(place: dict, market_features: list[dict]) -> dict:
-    for feature in market_features:
-        geometry = feature.get("geometry") or {}
-        if point_in_geometry(float(place["longitude"]), float(place["latitude"]), geometry):
-            props = feature.get("properties", {})
-            return {
+    props, basis = resolve_market(place, market_features)
+    if props:
+        return {
                 "sa2_code": props.get("sa2_code") or props.get("SA2_CODE21") or props.get("code") or "",
                 "sa2_name": props.get("sa2_name") or props.get("SA2_NAME21") or props.get("name") or "",
                 "population_2025": props.get("population_2025"),
+                "population_2021": props.get("population_2021"),
+                "population_growth_number": props.get("population_growth_2021_2025_number"),
                 "population_growth_pct": props.get("population_growth_2021_2025_pct"),
                 "median_household_income": props.get("median_equivalised_household_income_weekly_2021"),
                 "age_45_plus_pct": props.get("age_45_plus_pct_2021"),
                 "retail_businesses": props.get("retail_businesses_2025"),
+                "match_basis": basis,
             }
     return {}
+
+
+def portfolio_metrics(assets: list[dict]) -> dict[str, dict]:
+    """Use the same accepted, active asset metrics in property and screening builds."""
+    by_place: dict[str, dict] = defaultdict(dict)
+    for asset in assets:
+        place_id = asset.get("matched_place_id", "")
+        if not place_id or asset.get("status") != "ACTIVE":
+            continue
+        metrics = by_place[place_id]
+        for source_field, field, multiplier in (
+            ("gla_sqm", "gla_sqm", 1),
+            ("tenancy_count", "tenancy_count", 1),
+            ("annual_visits_m", "annual_visits", 1_000_000),
+        ):
+            raw = asset.get(source_field)
+            if raw in (None, "") or field in metrics:
+                continue
+            value = float(raw) * multiplier
+            if not math.isfinite(value) or value < 0:
+                raise ValueError(f"Invalid portfolio metric: {asset['portfolio_asset_id']}.{source_field}")
+            if field == "tenancy_count" and not value.is_integer():
+                raise ValueError(f"Non-integer tenancy count: {asset['portfolio_asset_id']}")
+            metrics[field] = int(value) if field == "tenancy_count" else value
+            evidence = {key: asset.get(key, "") for key in (
+                "portfolio_asset_id", "source_url", "source_date", "last_verified_at", "confidence"
+            )}
+            if source_field == "gla_sqm" and asset.get("gla_source_url"):
+                # A metric can have a different source/vintage from ownership evidence.
+                evidence.update(source_url=asset["gla_source_url"],
+                                source_date=asset.get("gla_source_date", ""),
+                                source_period=asset.get("gla_source_period", ""),
+                                last_verified_at=asset.get("gla_last_verified_at", ""))
+            metrics.setdefault("metric_evidence", {})[field] = evidence
+            for key in ("source_url", "source_date", "last_verified_at"):
+                metrics.setdefault(key, evidence[key])
+    return dict(by_place)
 
 
 def main() -> None:
@@ -595,21 +644,7 @@ def main() -> None:
     market_payload = json.loads(MARKETS_PATH.read_text(encoding="utf-8")) if MARKETS_PATH.exists() else {"features": []}
     market_features = market_payload.get("features", [])
 
-    portfolio_metrics_by_place: dict[str, dict] = defaultdict(dict)
-    for asset in portfolio_assets:
-        place_id = asset.get("matched_place_id", "")
-        if not place_id:
-            continue
-        metrics = portfolio_metrics_by_place[place_id]
-        for field in ("gla_sqm", "tenancy_count"):
-            if asset.get(field) and not metrics.get(field):
-                metrics[field] = float(asset[field]) if field == "gla_sqm" else int(float(asset[field]))
-        if asset.get("annual_visits_m") and not metrics.get("annual_visits"):
-            metrics["annual_visits"] = float(asset["annual_visits_m"]) * 1_000_000
-        if any(asset.get(field) for field in ("gla_sqm", "tenancy_count", "annual_visits_m")):
-            metrics.setdefault("source_url", asset["source_url"])
-            metrics.setdefault("source_date", asset["source_date"])
-            metrics.setdefault("last_verified_at", asset["last_verified_at"])
+    portfolio_metrics_by_place = portfolio_metrics(portfolio_assets)
 
     relationships_by_place: dict[str, list[dict]] = defaultdict(list)
     for relationship in relationships:

@@ -1,85 +1,16 @@
 #!/usr/bin/env node
 /** Collect Oscar Wylee New Zealand stores through its rendered public pages. */
 
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, writeFile, readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { chromium } from "playwright";
+import { resolveBusinessPoint, branchStatus, validateLocator } from "./operator_business_map.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const RETAILER_DIR = path.join(ROOT, "retailers", "oscar-wylee-nz");
 const LIST_URL = "https://www.oscarwylee.co.nz/locations/";
 const CHROME_PATH = process.env.CHROME_PATH || (process.platform === "darwin" ? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" : "");
 const BROWSER_OPTIONS = CHROME_PATH ? { executablePath: CHROME_PATH } : { channel: "chrome" };
-const KNOWN_ADDRESSES = {
-  "https://www.oscarwylee.co.nz/locations/optometrist-auckland-cbd.html":
-    "Shop S9, 163 Queen Street, Auckland CBD, Auckland 1010",
-  "https://www.oscarwylee.co.nz/locations/optometrist-new-lynn.html":
-    "LynnMall, 3058 Great North Road, New Lynn, Auckland 0600",
-  "https://www.oscarwylee.co.nz/locations/optometrist-manukau.html":
-    "Westfield Manukau City, Shop S-041, 1 Leyton Way, Manukau City Centre, Auckland 2104",
-  "https://www.oscarwylee.co.nz/locations/optometrist-northlands.html":
-    "Northlands Mall, Shop 070, 55 Main North Road, Papanui, Christchurch 8052",
-  "https://www.oscarwylee.co.nz/locations/optometrist-queensgate.html":
-    "Queensgate Shopping Centre, Shop 128, Cnr Queens Drive and Bunny Street, Lower Hutt, Wellington 5011",
-  "https://www.oscarwylee.co.nz/locations/optometrist-palmerston-north.html":
-    "The Plaza, Shop 48-A, 84 The Square, Palmerston North 4410",
-  "https://www.oscarwylee.co.nz/locations/optometrist-wellington-central.html":
-    "G01, 18 Willis Street, Wellington, Central Wellington 6011",
-  "https://www.oscarwylee.co.nz/locations/optometrist-albany.html":
-    "Westfield Albany, Shop S229, 219 Don McKinnon Drive, Albany, Auckland 0632",
-  "https://www.oscarwylee.co.nz/locations/stlukes.html":
-    "Westfield St Lukes, Level 1, 80 St Lukes Road, Mount Albert, Auckland 1025",
-};
-const KNOWN_PHONES = {
-  "https://www.oscarwylee.co.nz/locations/optometrist-auckland-cbd.html": "09 282 0368",
-  "https://www.oscarwylee.co.nz/locations/optometrist-new-lynn.html": "09 282 0421",
-  "https://www.oscarwylee.co.nz/locations/optometrist-manukau.html": "(09) 217 6391",
-  "https://www.oscarwylee.co.nz/locations/optometrist-northlands.html": "(03) 926 0069",
-  "https://www.oscarwylee.co.nz/locations/optometrist-queensgate.html": "04 280 0058",
-  "https://www.oscarwylee.co.nz/locations/optometrist-palmerston-north.html": "06 280 0014",
-  "https://www.oscarwylee.co.nz/locations/optometrist-wellington-central.html": "04 280 0120",
-  "https://www.oscarwylee.co.nz/locations/optometrist-albany.html": "09 281 0674",
-  "https://www.oscarwylee.co.nz/locations/stlukes.html": "09 280 1877",
-};
-const KNOWN_COORDINATES = {
-  "https://www.oscarwylee.co.nz/locations/optometrist-auckland-cbd.html": {
-    latitude: -36.847641330406674,
-    longitude: 174.76513282605924,
-  },
-  "https://www.oscarwylee.co.nz/locations/optometrist-new-lynn.html": {
-    latitude: -36.906516079926845,
-    longitude: 174.68280191529288,
-  },
-  "https://www.oscarwylee.co.nz/locations/optometrist-manukau.html": {
-    latitude: -36.991585,
-    longitude: 174.8817606,
-  },
-  "https://www.oscarwylee.co.nz/locations/optometrist-northlands.html": {
-    latitude: -43.49404827912709,
-    longitude: 172.6063809154926,
-  },
-  "https://www.oscarwylee.co.nz/locations/optometrist-queensgate.html": {
-    latitude: -41.2100157,
-    longitude: 174.905966,
-  },
-  "https://www.oscarwylee.co.nz/locations/optometrist-palmerston-north.html": {
-    latitude: -40.35688817937212,
-    longitude: 175.6110683153941,
-  },
-  "https://www.oscarwylee.co.nz/locations/optometrist-wellington-central.html": {
-    latitude: -41.28677447927353,
-    longitude: 174.7736222154227,
-  },
-  "https://www.oscarwylee.co.nz/locations/optometrist-albany.html": {
-    latitude: -36.728246379963444,
-    longitude: 174.7074882152879,
-  },
-  "https://www.oscarwylee.co.nz/locations/stlukes.html": {
-    latitude: -36.882475279931676,
-    longitude: 174.73083761506345,
-  },
-};
 const LOCALITIES = {
   "optometrist-auckland-cbd.html": "Auckland CBD",
   "optometrist-new-lynn.html": "New Lynn",
@@ -126,13 +57,7 @@ function csvCell(value) {
   return /[",\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
 }
 
-function coordinates(mapUrl) {
-  const match = mapUrl.match(/!2d(-?\d+(?:\.\d+)?)!3d(-?\d+(?:\.\d+)?)/);
-  if (!match) throw new Error(`Map coordinates missing: ${mapUrl}`);
-  return { latitude: Number(match[2]), longitude: Number(match[1]) };
-}
-
-async function collectStore(page, link) {
+export async function collectStore(page, link) {
   await page.goto(link.official_url, { waitUntil: "domcontentloaded", timeout: 60000 });
   await page.locator("h1").first().waitFor({ state: "attached", timeout: 20000 });
   const details = await page.evaluate(() => {
@@ -142,19 +67,25 @@ async function collectStore(page, link) {
     const map = document.querySelector('iframe[src*="google.com/maps"]');
     return {
       heading: (heading?.textContent || "").trim(),
+      status_headings: [...document.querySelectorAll("h1,h2")].map(el => el.textContent).join(" "),
+      main_text: (document.querySelector("main")?.innerText || ""),
       address: (address?.innerText || address?.textContent || "").trim(),
       phone: (phone?.getAttribute("href") || "").replace(/^tel:/, ""),
       map_url: map?.getAttribute("src") || "",
     };
   });
   const filename = new URL(link.official_url).pathname.split("/").pop();
-  const address = (details.address || KNOWN_ADDRESSES[link.official_url] || "")
+  const address = (details.address || "")
     .replace(/\s*\n\s*/g, ", ")
     .replace(/\s+/g, " ")
     .trim();
   const postcode = address.match(/\b(\d{4})\b(?!.*\b\d{4}\b)/)?.[1] || "";
-  const point = details.map_url ? coordinates(details.map_url) : KNOWN_COORDINATES[link.official_url];
-  if (!point) throw new Error(`No reviewed coordinates for ${link.official_url}`);
+  const status = branchStatus(details);
+  const point = await resolveBusinessPoint(details.map_url, async url => {
+    const response = await page.request.get(url, { timeout: 30000 });
+    if (!response.ok()) throw new Error(`Business map request failed: ${response.status()}`);
+    return response.text();
+  }, { allowClosed: status === 'Closed' });
   return {
     store: {
       name: `Oscar Wylee ${link.list_name}`,
@@ -164,19 +95,20 @@ async function collectStore(page, link) {
       city: LOCALITIES[filename],
       postal_code: postcode,
       full_address: address,
-      phone: details.phone || KNOWN_PHONES[link.official_url] || "",
+      phone: details.phone || "",
       latitude: point.latitude,
       longitude: point.longitude,
       official_url: link.official_url,
       services: "Comprehensive eye tests, Prescription glasses, Sunglasses",
       audiology: "false",
-      status: "Active",
+      status,
     },
-    source: { ...link, ...details },
+    source: { ...link, ...details, coordinate_evidence: point },
   };
 }
 
 async function main() {
+  const { chromium } = await import("playwright");
   const browser = await chromium.launch({
     ...BROWSER_OPTIONS,
     headless: process.env.HEADLESS === "1",
@@ -202,9 +134,14 @@ async function main() {
         ).values()
       )
     );
-    if (links.length < 9 || links.length > 12) {
-      throw new Error(`Unexpected Oscar Wylee New Zealand list count: ${links.length}`);
+    let priorUrls = [];
+    try {
+      const prior = JSON.parse(await readFile(path.join(RETAILER_DIR, 'source_snapshot.json'), 'utf8'));
+      priorUrls = (prior.stores || []).map(store => store.official_url);
+    } catch (error) {
+      if (error.code !== 'ENOENT') throw error;
     }
+    validateLocator(links, priorUrls);
     const page = await context.newPage();
     const collected = [];
     for (const link of links) collected.push(await collectStore(page, link));
@@ -215,6 +152,9 @@ async function main() {
         !store.state ||
         !store.city ||
         !store.postal_code ||
+        !store.full_address ||
+        !Number.isFinite(store.latitude) ||
+        !Number.isFinite(store.longitude) ||
         store.latitude < -48 ||
         store.latitude > -33.5 ||
         store.longitude < 165 ||
@@ -290,7 +230,7 @@ async function main() {
   }
 }
 
-main().catch((error) => {
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main().catch((error) => {
   process.stderr.write(`${error.stack || error}\n`);
   process.exitCode = 1;
 });

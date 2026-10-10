@@ -1,0 +1,2669 @@
+{
+  "source": {
+    "source_id": "qld-health-spectacle-dispensers-html",
+    "url": "https://www.health.qld.gov.au/mass/prescribe/spectacles/spectacle-dispensers",
+    "title": "Spectacle Dispensers — Queensland Health",
+    "source_last_updated": "2026-07-16",
+    "checked_at": "2026-10-02",
+    "capture_method": "Rendered public HTML table; Items per page set to All; all five identity/contact columns captured from 221 visible rows. Fee column not imported.",
+    "raw_tsv_sha256": "d77d53f94dbb6d4a0b32564f0ed2e142bf3804fa4aea37f1e03d120753e00b24",
+    "raw_tsv_bytes": 20009,
+    "transfer_integrity": "Visible-DOM TSV and archived TSV agree: FNV1a32 92c322da and 20009 bytes.",
+    "source_identifier_basis": "Directory exposes no stable provider identifier. Content-derived source IDs and row numbers preserve the captured source identities; changing rows require new evidence and explicit reconciliation.",
+    "retrieval_limitation": "Direct shell HTTP403; normal browser-rendered public table available. No claim of whole-market completeness or provider trading verification."
+  },
+  "records": [
+    {
+      "source_id": "qld-health-dispenser:3b2c64c6ccf408bc49364952be165838b4ca752c836109d047735f8f4f1f4cff",
+      "source_row_number": 1,
+      "source_record_hash": "3b2c64c6ccf408bc49364952be165838b4ca752c836109d047735f8f4f1f4cff",
+      "raw": {
+        "name": "20/20 Eyewear",
+        "address": "Burpengary Plaza Shop 2/179 Station Road",
+        "suburb": "BURPENGARY",
+        "postcode": "4505",
+        "phone": "07 3888 5442"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:3974b73db5406e5e6066b869f2ba3e8b74218c2a53d8d94c1a7cd53536a32daf",
+      "source_row_number": 2,
+      "source_record_hash": "3974b73db5406e5e6066b869f2ba3e8b74218c2a53d8d94c1a7cd53536a32daf",
+      "raw": {
+        "name": "A+ Eyecare",
+        "address": "C/O Dr Le Surgery Suite 1G/156 Inala Avenue",
+        "suburb": "INALA",
+        "postcode": "4077",
+        "phone": "07 3879 9641"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:3108745f9b91d2b5032de313985aee23297bdc771e1fc7bbbe3f18c1bf51e074",
+      "source_row_number": 3,
+      "source_record_hash": "3108745f9b91d2b5032de313985aee23297bdc771e1fc7bbbe3f18c1bf51e074",
+      "raw": {
+        "name": "Absolute Vision Nambour",
+        "address": "Westpac House Shop 3/2-4 Ann Street",
+        "suburb": "NAMBOUR",
+        "postcode": "4560",
+        "phone": "07 5476 1411"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:aad5b67767c3a7c57ae3ca332d9bd94d374c58bd6c1c5e059389d69166809097",
+      "source_row_number": 4,
+      "source_record_hash": "aad5b67767c3a7c57ae3ca332d9bd94d374c58bd6c1c5e059389d69166809097",
+      "raw": {
+        "name": "Alan Ming Optometrist",
+        "address": "7/1 Bell Place",
+        "suburb": "MUDGEERABA",
+        "postcode": "4213",
+        "phone": "07 5569 2929"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:69b3c7118e3d801acae838cf031f2378b14ff9e9f83dd2e133142a1f904eabd0",
+      "source_row_number": 5,
+      "source_record_hash": "69b3c7118e3d801acae838cf031f2378b14ff9e9f83dd2e133142a1f904eabd0",
+      "raw": {
+        "name": "All About Eyes",
+        "address": "216 Mary Street",
+        "suburb": "GYMPIE",
+        "postcode": "4570",
+        "phone": "07 5482 1072"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:a77aa0ed4832d7afc520d9e656fe41dd64de8c7d8bdfc4e474f4c994b6fe5640",
+      "source_row_number": 6,
+      "source_record_hash": "a77aa0ed4832d7afc520d9e656fe41dd64de8c7d8bdfc4e474f4c994b6fe5640",
+      "raw": {
+        "name": "Altitude Eyewear",
+        "address": "Thursday Island Hospital 163 Douglas Street",
+        "suburb": "THURSDAY ISLAND",
+        "postcode": "4875",
+        "phone": "0418 731 810"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:5a2aecb3214c6ed4062ed185f699a7c73c173f98d3442936394a3ae0af700f6d",
+      "source_row_number": 7,
+      "source_record_hash": "5a2aecb3214c6ed4062ed185f699a7c73c173f98d3442936394a3ae0af700f6d",
+      "raw": {
+        "name": "Anita Salter Eyecare Plus",
+        "address": "39 Williams Street",
+        "suburb": "GATTON",
+        "postcode": "4343",
+        "phone": "07 5462 3222"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:aaef43eae9bf4b43bebb2f3ced530282dade0f7a4c8025b55839c50a0411467a",
+      "source_row_number": 8,
+      "source_record_hash": "aaef43eae9bf4b43bebb2f3ced530282dade0f7a4c8025b55839c50a0411467a",
+      "raw": {
+        "name": "Ascot Optical",
+        "address": "3/137 Racecourse Road",
+        "suburb": "ASCOT 4007",
+        "postcode": "4007",
+        "phone": "07 3268 1822"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:159e5fd6ad8843f0e41d0d7a649d6c21b75a7c18a8aadc26b3fb84738d41d480",
+      "source_row_number": 9,
+      "source_record_hash": "159e5fd6ad8843f0e41d0d7a649d6c21b75a7c18a8aadc26b3fb84738d41d480",
+      "raw": {
+        "name": "Ashmore Optical",
+        "address": "Ashmore City Shopping Centre Shop 26/206 Currumburra Street",
+        "suburb": "ASHMORE",
+        "postcode": "4214",
+        "phone": "07 5539 2702"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:9655e95aed50228a0e349a70cbf9853e80cb88b0bb338646a9a07a3a544b24fd",
+      "source_row_number": 10,
+      "source_record_hash": "9655e95aed50228a0e349a70cbf9853e80cb88b0bb338646a9a07a3a544b24fd",
+      "raw": {
+        "name": "Better Vision Eyecare",
+        "address": "Centrepoint Shopping Plaza Shop 5/50 Bulcock Street",
+        "suburb": "CALOUNDRA",
+        "postcode": "4551",
+        "phone": "07 5492 8033"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:7635a0653bc8dd0a3f458f00136ac40ba639c2f04e6796bc1e786a9c1ada3dcd",
+      "source_row_number": 11,
+      "source_record_hash": "7635a0653bc8dd0a3f458f00136ac40ba639c2f04e6796bc1e786a9c1ada3dcd",
+      "raw": {
+        "name": "Bill Evans Optometrists",
+        "address": "Shop 4/11-13 Birtwill Street",
+        "suburb": "COOLUM BEACH",
+        "postcode": "4573",
+        "phone": "07 5446 5411"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:40d2032d47e778c26ced16c48074fd2e7a5e19eadc2058053d07f52c14704209",
+      "source_row_number": 12,
+      "source_record_hash": "40d2032d47e778c26ced16c48074fd2e7a5e19eadc2058053d07f52c14704209",
+      "raw": {
+        "name": "Biloela Optical",
+        "address": "Biloela Shopping World Shop 7/2-16 Gladstone Road",
+        "suburb": "BILOELA",
+        "postcode": "4715",
+        "phone": "07 4992 2122"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:6381fa411b1a885de3776d777e0776b2e3dab18d9ed886500b56e27f8b1c934a",
+      "source_row_number": 13,
+      "source_record_hash": "6381fa411b1a885de3776d777e0776b2e3dab18d9ed886500b56e27f8b1c934a",
+      "raw": {
+        "name": "Birkdale Optical",
+        "address": "Birkdale Place 9/120 Birkdale Road",
+        "suburb": "BIRKDALE",
+        "postcode": "4159",
+        "phone": "07 3207 5099"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:e041384bb8428b8461d185880aad28030ca935e745d066d8cceadf508d4179b3",
+      "source_row_number": 14,
+      "source_record_hash": "e041384bb8428b8461d185880aad28030ca935e745d066d8cceadf508d4179b3",
+      "raw": {
+        "name": "Boonah Eyecare",
+        "address": "2/2 Railway Street",
+        "suburb": "BOONAH",
+        "postcode": "4310",
+        "phone": "07 5463 2833"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:793aa80d74426838e7d5072d4e11d68969d4574cd1013a6e605c30ca59907196",
+      "source_row_number": 15,
+      "source_record_hash": "793aa80d74426838e7d5072d4e11d68969d4574cd1013a6e605c30ca59907196",
+      "raw": {
+        "name": "Boyne Optical",
+        "address": "Boyne Plaza Shop 6C/4 Centenary Drive",
+        "suburb": "BOYNE ISLAND",
+        "postcode": "4680",
+        "phone": "07 4973 9533"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:877526842b8a23dc35911f13c9c4400ec7350397210a4c5540d66463ebf0ef3b",
+      "source_row_number": 16,
+      "source_record_hash": "877526842b8a23dc35911f13c9c4400ec7350397210a4c5540d66463ebf0ef3b",
+      "raw": {
+        "name": "Bupa Optical Townsville",
+        "address": "Castletown Shoppingworld Shop 98/35 Kings Road",
+        "suburb": "PIMLICO",
+        "postcode": "4812",
+        "phone": "07 4771 2417"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:b46e1a68563b899ab0f07855f01c03171e94611bfb17c84be25a888f89dab5d2",
+      "source_row_number": 17,
+      "source_record_hash": "b46e1a68563b899ab0f07855f01c03171e94611bfb17c84be25a888f89dab5d2",
+      "raw": {
+        "name": "Burdekin Optical Services",
+        "address": "150 Queen Street",
+        "suburb": "AYR",
+        "postcode": "4807",
+        "phone": "07 4783 3631"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:50d3ca7d4bed13c280acfe4861430daed48ca395fd0f00ec0966e2767ae84ba7",
+      "source_row_number": 18,
+      "source_record_hash": "50d3ca7d4bed13c280acfe4861430daed48ca395fd0f00ec0966e2767ae84ba7",
+      "raw": {
+        "name": "Byrnes Optometrists",
+        "address": "6 Ormuz Avenue",
+        "suburb": "CALOUNDRA",
+        "postcode": "4551",
+        "phone": "07 5309 5261"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:aae5e97e7e0b6614d972919f5c65817c865b6da6a6f87cabc3ebe274995bfa90",
+      "source_row_number": 19,
+      "source_record_hash": "aae5e97e7e0b6614d972919f5c65817c865b6da6a6f87cabc3ebe274995bfa90",
+      "raw": {
+        "name": "Catherine O'Connor Optometrist",
+        "address": "6/713 Sandgate Road",
+        "suburb": "CLAYFIELD",
+        "postcode": "4011",
+        "phone": "07 3256 0799"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:c68a647bcb0b2f99629a2de4f447b039b141861c10cde7756d741dc378f6d6a0",
+      "source_row_number": 20,
+      "source_record_hash": "c68a647bcb0b2f99629a2de4f447b039b141861c10cde7756d741dc378f6d6a0",
+      "raw": {
+        "name": "Central Highlands Optical",
+        "address": "Leichhardt House Medical Centre 1/2 Saint Francis Drive",
+        "suburb": "MORANBAH",
+        "postcode": "4744",
+        "phone": "07 4941 8562"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:cc2bd290f0bde918b10a19ac94c72df0ad058e0410c27b7483552cf583555bee",
+      "source_row_number": 21,
+      "source_record_hash": "cc2bd290f0bde918b10a19ac94c72df0ad058e0410c27b7483552cf583555bee",
+      "raw": {
+        "name": "Chas Sankey Fraser - EyecarePlus Stanthorpe",
+        "address": "Shop 2/62 Maryland Street",
+        "suburb": "STANTHORPE",
+        "postcode": "4380",
+        "phone": "07 4681 4581"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:2adb0f8eb965617978f6637ad1411852a17f97f7890e75a9f86ed96a08854f29",
+      "source_row_number": 22,
+      "source_record_hash": "2adb0f8eb965617978f6637ad1411852a17f97f7890e75a9f86ed96a08854f29",
+      "raw": {
+        "name": "Chas Sankey Fraser Optometrist-EyecarePlus Warwick",
+        "address": "56A Palmerin Street",
+        "suburb": "WARWICK",
+        "postcode": "4370",
+        "phone": "07 4661 1701"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:646afbb673d724b0a8172926bc0f315633b0b7626fa0c8f9ea4bd75dedaf9e02",
+      "source_row_number": 23,
+      "source_record_hash": "646afbb673d724b0a8172926bc0f315633b0b7626fa0c8f9ea4bd75dedaf9e02",
+      "raw": {
+        "name": "Chas Sankey Fraser Roma",
+        "address": "Westlands Plaza Shop 13/67 Wyndham Street",
+        "suburb": "ROMA",
+        "postcode": "4455",
+        "phone": "07 4622 3000"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:4537cac392b1aa08d0d2b0102b8f6ac1cdc95db0ad9c14a44bb55a9287243ed2",
+      "source_row_number": 24,
+      "source_record_hash": "4537cac392b1aa08d0d2b0102b8f6ac1cdc95db0ad9c14a44bb55a9287243ed2",
+      "raw": {
+        "name": "Clarity Optometrist (See CHILDREN ONLY)",
+        "address": "1/134 Oxford Street",
+        "suburb": "BULIMBA",
+        "postcode": "4171",
+        "phone": "07 3899 4044"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:0d9b8861b4a6061423b55a8d710f0b3eeab4f07e94e56d1e347143572aed6ff2",
+      "source_row_number": 25,
+      "source_record_hash": "0d9b8861b4a6061423b55a8d710f0b3eeab4f07e94e56d1e347143572aed6ff2",
+      "raw": {
+        "name": "Cooper & Smith Optometrists",
+        "address": "43 Marshall Street",
+        "suburb": "GOONDIWINDI",
+        "postcode": "4390",
+        "phone": "07 4671 1550"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:0496e9cb24e6a34b3ead48cf777753bf1c6373e818ef1c461a7346872d50f2d2",
+      "source_row_number": 26,
+      "source_record_hash": "0496e9cb24e6a34b3ead48cf777753bf1c6373e818ef1c461a7346872d50f2d2",
+      "raw": {
+        "name": "Coral Sea Eyecare",
+        "address": "24/22 Warner Street",
+        "suburb": "PORT DOUGLAS",
+        "postcode": "4877",
+        "phone": "07 4099 5100"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:5bfa59fc8440a3ccf2f0d54920b7e3d26f0dec972c8bb8412d53afe35af08c62",
+      "source_row_number": 27,
+      "source_record_hash": "5bfa59fc8440a3ccf2f0d54920b7e3d26f0dec972c8bb8412d53afe35af08c62",
+      "raw": {
+        "name": "Darling Downs Optometrist",
+        "address": "355 Ruthven Street",
+        "suburb": "TOOWOOMBA CITY",
+        "postcode": "4350",
+        "phone": "07 4638 8828"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:80851507904e8d0c393fe4f31d34a1c90f567c520a0d6586ae5fc1a38d589b6a",
+      "source_row_number": 28,
+      "source_record_hash": "80851507904e8d0c393fe4f31d34a1c90f567c520a0d6586ae5fc1a38d589b6a",
+      "raw": {
+        "name": "David Stephensen Optometrist",
+        "address": "Shop 15/197 Beaudesert Road",
+        "suburb": "MOOROOKA",
+        "postcode": "4105",
+        "phone": "07 3848 8979"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:ec4f130ee89507d7da8f33c93dd8af12b63ba75583796dd2012fa5d72fc1c6df",
+      "source_row_number": 29,
+      "source_record_hash": "ec4f130ee89507d7da8f33c93dd8af12b63ba75583796dd2012fa5d72fc1c6df",
+      "raw": {
+        "name": "Dean Samarkouski Optometrist",
+        "address": "2/24 Station Road",
+        "suburb": "INDOOROOPILLY",
+        "postcode": "4068",
+        "phone": "07 3162 5597"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:f484dedb86e476746b53fee5ff9a4ad34cb2cc592b7460055b9635b3e2a53247",
+      "source_row_number": 30,
+      "source_record_hash": "f484dedb86e476746b53fee5ff9a4ad34cb2cc592b7460055b9635b3e2a53247",
+      "raw": {
+        "name": "East Vision Optometry",
+        "address": "242 Hawthorne Road",
+        "suburb": "HAWTHORNE",
+        "postcode": "4171",
+        "phone": "07 3558 8818"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:f6d3036b1641e2d1445299a678381dfbc961ef4f68efe89f69d83aa993435c29",
+      "source_row_number": 31,
+      "source_record_hash": "f6d3036b1641e2d1445299a678381dfbc961ef4f68efe89f69d83aa993435c29",
+      "raw": {
+        "name": "Eye Contact",
+        "address": "110 Monaco Street",
+        "suburb": "BROADBEACH WATERS",
+        "postcode": "4218",
+        "phone": "07 5538 0144"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:2a29957d875f53671c15ca2ccc5646e3fdbbbf49463ea2dfcfff04b801d95117",
+      "source_row_number": 32,
+      "source_record_hash": "2a29957d875f53671c15ca2ccc5646e3fdbbbf49463ea2dfcfff04b801d95117",
+      "raw": {
+        "name": "Eye Select Browns Plains",
+        "address": "Grand Plaza Shop 43/27-49 Browns Plains Road",
+        "suburb": "BROWNS PLAINS",
+        "postcode": "4118",
+        "phone": "07 3800 8700"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:c2916e1b28f511e3aa5c80b7e867a074afc696222ca7c7e244b5307b169bbe58",
+      "source_row_number": 33,
+      "source_record_hash": "c2916e1b28f511e3aa5c80b7e867a074afc696222ca7c7e244b5307b169bbe58",
+      "raw": {
+        "name": "Eyebright Optometry",
+        "address": "Nerang Mall Shop 26G New Street",
+        "suburb": "NERANG",
+        "postcode": "4211",
+        "phone": "07 5527 3535"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:9f808fb4dbbcbe472e09bd226f13d47b200c053aecf10ca82ef55e63442a4f12",
+      "source_row_number": 34,
+      "source_record_hash": "9f808fb4dbbcbe472e09bd226f13d47b200c053aecf10ca82ef55e63442a4f12",
+      "raw": {
+        "name": "Eyecare Eyewear Chinchilla",
+        "address": "Chinchilla Central Shop 3/44 Middle Street",
+        "suburb": "CHINCHILLA",
+        "postcode": "4413",
+        "phone": "07 4668 9888"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:6e552ac8c663b05c1f615823990fc15586ca7de7e4100e4a5bfa05ba7fcf1ae4",
+      "source_row_number": 35,
+      "source_record_hash": "6e552ac8c663b05c1f615823990fc15586ca7de7e4100e4a5bfa05ba7fcf1ae4",
+      "raw": {
+        "name": "Eyecare Eyewear Dalby",
+        "address": "87 Cunningham Street",
+        "suburb": "DALBY",
+        "postcode": "4405",
+        "phone": "07 4669 7072"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:6a6fc6cd03f377627b8e079551f7e9da7be0e68e13f90333c941066fe31056da",
+      "source_row_number": 36,
+      "source_record_hash": "6a6fc6cd03f377627b8e079551f7e9da7be0e68e13f90333c941066fe31056da",
+      "raw": {
+        "name": "Eyecare Eyewear Tara",
+        "address": "1 Day Street",
+        "suburb": "TARA",
+        "postcode": "4421",
+        "phone": "07 4669 7072"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:516401364b46831ab218cfc3d619cada148f82aab384f0ed558f43887a16e822",
+      "source_row_number": 37,
+      "source_record_hash": "516401364b46831ab218cfc3d619cada148f82aab384f0ed558f43887a16e822",
+      "raw": {
+        "name": "Eyecare Plus Ayr",
+        "address": "137 Queen Street",
+        "suburb": "AYR",
+        "postcode": "4807",
+        "phone": "07 4783 1361"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:c621f1e6f56e704477428cc4c8cd265bce5ac070e7a1099d701c20616857aec4",
+      "source_row_number": 38,
+      "source_record_hash": "c621f1e6f56e704477428cc4c8cd265bce5ac070e7a1099d701c20616857aec4",
+      "raw": {
+        "name": "Eyecare Plus Charters Towers",
+        "address": "258 Gill Street",
+        "suburb": "CHARTERS TOWERS",
+        "postcode": "4820",
+        "phone": "07 4787 8122"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:6749abf182703b56ed81b501c33391d51e9960bb3f1412afa7080ffde00ad05e",
+      "source_row_number": 39,
+      "source_record_hash": "6749abf182703b56ed81b501c33391d51e9960bb3f1412afa7080ffde00ad05e",
+      "raw": {
+        "name": "Eyecare Plus Miami",
+        "address": "Miami One Shopping Centre Shop 29/1930 Gold Coast Highway",
+        "suburb": "MIAMI",
+        "postcode": "4220",
+        "phone": "07 5535 1121"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:836a5c5086a79e16f59c617c62f71b34b872867260b8d7f4dcbc59f98e27dcf6",
+      "source_row_number": 40,
+      "source_record_hash": "836a5c5086a79e16f59c617c62f71b34b872867260b8d7f4dcbc59f98e27dcf6",
+      "raw": {
+        "name": "Eyecare Plus Nundah",
+        "address": "1190 Sandgate Road",
+        "suburb": "NUNDAH",
+        "postcode": "4012",
+        "phone": "07 3266 6444"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:fc844a316f225229b7960ed7f0bc8ae7f6dbc355292332845072ba8e5232169c",
+      "source_row_number": 41,
+      "source_record_hash": "fc844a316f225229b7960ed7f0bc8ae7f6dbc355292332845072ba8e5232169c",
+      "raw": {
+        "name": "Eyecatch Optical",
+        "address": "Warrigal Square Shop 2/261 Warrigal Road",
+        "suburb": "EIGHT MILE PLAINS",
+        "postcode": "4113",
+        "phone": "07 3841 0519"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:049c3035623bd45c85dcc0c8f3236f4af602cada5a547847e8441ca2170bfcc4",
+      "source_row_number": 42,
+      "source_record_hash": "049c3035623bd45c85dcc0c8f3236f4af602cada5a547847e8441ca2170bfcc4",
+      "raw": {
+        "name": "Eyecatcher Vision Care",
+        "address": "3/153 Old Cleveland Road",
+        "suburb": "CAPALABA",
+        "postcode": "4157",
+        "phone": "07 3245 3499"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:677f714aeccca1004d411e9aadfc42213950438b6cc1ebb305d4ff15b29fa9aa",
+      "source_row_number": 43,
+      "source_record_hash": "677f714aeccca1004d411e9aadfc42213950438b6cc1ebb305d4ff15b29fa9aa",
+      "raw": {
+        "name": "EyeCU",
+        "address": "Shop 2/33 Currie Street",
+        "suburb": "NAMBOUR",
+        "postcode": "4560",
+        "phone": "07 5457 3333"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:8d3cc7abd67586669ba67cbb1123efac73bfcc3cadc5bcfa8b9bf551809e1f7e",
+      "source_row_number": 44,
+      "source_record_hash": "8d3cc7abd67586669ba67cbb1123efac73bfcc3cadc5bcfa8b9bf551809e1f7e",
+      "raw": {
+        "name": "EYEdear Optical",
+        "address": "Shop 5/76 Scarborough Street",
+        "suburb": "SOUTHPORT",
+        "postcode": "4215",
+        "phone": "07 5531 0420"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:a63a58c59eea8271690588eda5ec91e7a02c902be09f6a15876375a12a9eaa5b",
+      "source_row_number": 45,
+      "source_record_hash": "a63a58c59eea8271690588eda5ec91e7a02c902be09f6a15876375a12a9eaa5b",
+      "raw": {
+        "name": "Eyedentity Optical Cairns",
+        "address": "500 Mulgrave Road",
+        "suburb": "EARLVILLE",
+        "postcode": "4870",
+        "phone": "07 4033 7575"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:8491978b08da429e5d561d10b16c4acdb6e8cf373613a8068729bd0b0081d4da",
+      "source_row_number": 46,
+      "source_record_hash": "8491978b08da429e5d561d10b16c4acdb6e8cf373613a8068729bd0b0081d4da",
+      "raw": {
+        "name": "Eyemode Eyewear",
+        "address": "219 Brisbane Street",
+        "suburb": "IPSWICH",
+        "postcode": "4305",
+        "phone": "07 3812 1315"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:83017e464c2248b3ccc378f5fb3b7bc91d8125c5ff0345732864470b84d1b563",
+      "source_row_number": 47,
+      "source_record_hash": "83017e464c2248b3ccc378f5fb3b7bc91d8125c5ff0345732864470b84d1b563",
+      "raw": {
+        "name": "Eyes on Brassall",
+        "address": "Brassall Shopping Centre Shop 6/64-68 Hunter Street",
+        "suburb": "BRASSALL",
+        "postcode": "4305",
+        "phone": "07 3201 6111"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:7d01abfc7d7d876a869c22e35def00c2105d79615dee4adbb28ac18f86f57b46",
+      "source_row_number": 48,
+      "source_record_hash": "7d01abfc7d7d876a869c22e35def00c2105d79615dee4adbb28ac18f86f57b46",
+      "raw": {
+        "name": "Eyes on U Optical",
+        "address": "Coomera Square Shop C3/31-39 Kristins Lane",
+        "suburb": "UPPER COOMERA",
+        "postcode": "4209",
+        "phone": "07 5529 7899"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:58f04a5364960e1705763bdf55a8d0e80e91eb4b8cd403882170cebb2dc02df1",
+      "source_row_number": 49,
+      "source_record_hash": "58f04a5364960e1705763bdf55a8d0e80e91eb4b8cd403882170cebb2dc02df1",
+      "raw": {
+        "name": "Eyes Perfect",
+        "address": "Inala Civic Centre Shop 7/1 Kittyhawk Avenue",
+        "suburb": "INALA",
+        "postcode": "4077",
+        "phone": "0434 608 088"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:6d42f0e06812a4f8955f14dfc486a4eaa0bb209dd03c67014a4b4bef7a79ca00",
+      "source_row_number": 50,
+      "source_record_hash": "6d42f0e06812a4f8955f14dfc486a4eaa0bb209dd03c67014a4b4bef7a79ca00",
+      "raw": {
+        "name": "Eyeselect Forest Lake",
+        "address": "Forest Lake Shopping Centre Shop 54-55/235 Forest Lake Boulevard",
+        "suburb": "FOREST LAKE",
+        "postcode": "4078",
+        "phone": "07 3278 7341"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:62483bd3e5f2882f83c8a52ad59dc6b6756f388739919e7c3d75b3ac4474a859",
+      "source_row_number": 51,
+      "source_record_hash": "62483bd3e5f2882f83c8a52ad59dc6b6756f388739919e7c3d75b3ac4474a859",
+      "raw": {
+        "name": "Fernvale Optical",
+        "address": "4C/1456 Brisbane Valley Highway",
+        "suburb": "FERNVALE",
+        "postcode": "4306",
+        "phone": "07 5426 7055"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:a7e745153e8fa82927f54d2eb92f9a6d1b0f109666504a464f6072f1fdaf4765",
+      "source_row_number": 52,
+      "source_record_hash": "a7e745153e8fa82927f54d2eb92f9a6d1b0f109666504a464f6072f1fdaf4765",
+      "raw": {
+        "name": "Fitzpatrick Optometrists Kingaroy",
+        "address": "188 Kingaroy Street",
+        "suburb": "KINGAROY",
+        "postcode": "4610",
+        "phone": "07 4162 1855"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:fbe70cada61804f866cd1803f339cd05139a5075fa0d57080643989bc77aaa4e",
+      "source_row_number": 53,
+      "source_record_hash": "fbe70cada61804f866cd1803f339cd05139a5075fa0d57080643989bc77aaa4e",
+      "raw": {
+        "name": "Fitzpatrick Optometrists Longreach",
+        "address": "Merino Arcade 2 Eagle Street",
+        "suburb": "LONGREACH",
+        "postcode": "4730",
+        "phone": "07 5443 8722"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:285291a708ef4069a634e33d67de4cb85a5ec77e4742ee83e100d87ca5815337",
+      "source_row_number": 54,
+      "source_record_hash": "285291a708ef4069a634e33d67de4cb85a5ec77e4742ee83e100d87ca5815337",
+      "raw": {
+        "name": "Fitzpatrick Optometrists Maroochydore",
+        "address": "Suite 4 Corner Second Avenue and the Esplanade",
+        "suburb": "MAROOCHYDORE",
+        "postcode": "4558",
+        "phone": "07 5443 8722"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:6b4507cb3c676f5d63febef86e7e8a295f6b43b1519951a08331b93025c49869",
+      "source_row_number": 55,
+      "source_record_hash": "6b4507cb3c676f5d63febef86e7e8a295f6b43b1519951a08331b93025c49869",
+      "raw": {
+        "name": "Gareth Edwards Optometrist",
+        "address": "113 Russell Street",
+        "suburb": "TOOWOOMBA CITY",
+        "postcode": "4350",
+        "phone": "07 4646 4944"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:4ded73c2f0e2ac44d3806a89b03ee758ecb5f2e73600b5ead135aab69d79167a",
+      "source_row_number": 56,
+      "source_record_hash": "4ded73c2f0e2ac44d3806a89b03ee758ecb5f2e73600b5ead135aab69d79167a",
+      "raw": {
+        "name": "George & Matilda Eyecare Main Beach",
+        "address": "1/17 Tedder Avenue",
+        "suburb": "MAIN BEACH",
+        "postcode": "4217",
+        "phone": "07 5531 1185"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:855b7245e22635316a10920ad464c7891b5d8ddcfbfd75ffdeb0fb9ec0131099",
+      "source_row_number": 57,
+      "source_record_hash": "855b7245e22635316a10920ad464c7891b5d8ddcfbfd75ffdeb0fb9ec0131099",
+      "raw": {
+        "name": "George & Matilda Eyecare Noosa",
+        "address": "Suite 4/1 Gibson Road",
+        "suburb": "NOOSAVILLE",
+        "postcode": "4566",
+        "phone": "07 5474 4000"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:2ceda7b2a42715468535b7af4e540dedb4c2ef61d91f2aa2e4205ffd191845a7",
+      "source_row_number": 58,
+      "source_record_hash": "2ceda7b2a42715468535b7af4e540dedb4c2ef61d91f2aa2e4205ffd191845a7",
+      "raw": {
+        "name": "Gidgee Healing Optometry",
+        "address": "121 Marian Street",
+        "suburb": "MOUNT ISA",
+        "postcode": "4825",
+        "phone": "07 4437 1609"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:59bc2a8faf1a6779a24ec3d5677cd036bebae3ac4543a2ef4617166287140605",
+      "source_row_number": 59,
+      "source_record_hash": "59bc2a8faf1a6779a24ec3d5677cd036bebae3ac4543a2ef4617166287140605",
+      "raw": {
+        "name": "Gladstone Optical Centre",
+        "address": "Gladstone Square Shopping Centre Shop 1F/184 Goondoon Street",
+        "suburb": "GLADSTONE",
+        "postcode": "4680",
+        "phone": "07 4972 1150"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:e3b14844f5333544b2ce0110229ded92922c3208a3b0ff8cf2ac98d35754b67d",
+      "source_row_number": 60,
+      "source_record_hash": "e3b14844f5333544b2ce0110229ded92922c3208a3b0ff8cf2ac98d35754b67d",
+      "raw": {
+        "name": "Glenn Pearson Optom Ashmore",
+        "address": "Ashmore Plaza Shop 47/160 Cotlew Street",
+        "suburb": "ASHMORE",
+        "postcode": "4214",
+        "phone": "07 5597 2037"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:843b44e84bd4150733c6003af59ac22cdd3ac71f3f3ca09db3f8454127f716d4",
+      "source_row_number": 61,
+      "source_record_hash": "843b44e84bd4150733c6003af59ac22cdd3ac71f3f3ca09db3f8454127f716d4",
+      "raw": {
+        "name": "Global Eyes",
+        "address": "Shop 1/18 Nash Street",
+        "suburb": "ROSALIE",
+        "postcode": "4064",
+        "phone": "07 3369 7500"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:bab3f1034e54cf7c587ae119c3e09fc22afd093652ef74233ad95806f9b8a84a",
+      "source_row_number": 62,
+      "source_record_hash": "bab3f1034e54cf7c587ae119c3e09fc22afd093652ef74233ad95806f9b8a84a",
+      "raw": {
+        "name": "Global Eyes Ipswich",
+        "address": "Nolan's Plaza Shop 9/44 East Street",
+        "suburb": "IPSWICH",
+        "postcode": "4305",
+        "phone": "07 3281 1773"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:e40613672c25b15364a199c4fd231bf07c74c724200c220cc4334314adc40f36",
+      "source_row_number": 63,
+      "source_record_hash": "e40613672c25b15364a199c4fd231bf07c74c724200c220cc4334314adc40f36",
+      "raw": {
+        "name": "Greenfield's Optometrist Fairfield",
+        "address": "Fairfield Central Shopping Centre Shop 16/2-30 Lakeside Drive",
+        "suburb": "IDALIA",
+        "postcode": "4811",
+        "phone": "07 4729 0208"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:c9a7e575924660a90cccc6f8a584fbaa9aaa3de771f7923751b0fb28aaba8b9f",
+      "source_row_number": 64,
+      "source_record_hash": "c9a7e575924660a90cccc6f8a584fbaa9aaa3de771f7923751b0fb28aaba8b9f",
+      "raw": {
+        "name": "Greg Rowe Optometrist",
+        "address": "Shop 14/512-514 Warwick Road",
+        "suburb": "YAMANTO",
+        "postcode": "4305",
+        "phone": "07 3294 1360"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:4d8ec456e1c5713b9e4fad79c85b618a30e794d9d057c0c03045df49f71d50c6",
+      "source_row_number": 65,
+      "source_record_hash": "4d8ec456e1c5713b9e4fad79c85b618a30e794d9d057c0c03045df49f71d50c6",
+      "raw": {
+        "name": "Gurriny Yealamucka Optometry",
+        "address": "1 Bukki Road",
+        "suburb": "YARRABAH",
+        "postcode": "4871",
+        "phone": "0439 261 276"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:4a8d62d5497c3f4e99917ddfe6ed7f558377df41b631376ee694f5d91ff8122a",
+      "source_row_number": 66,
+      "source_record_hash": "4a8d62d5497c3f4e99917ddfe6ed7f558377df41b631376ee694f5d91ff8122a",
+      "raw": {
+        "name": "Hammond Optometry",
+        "address": "38 Lowe Street",
+        "suburb": "NAMBOUR",
+        "postcode": "4560",
+        "phone": "07 5476 2333"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:9c9242e2912884967b2a84857d7a13d9551e3ef5051fd686ba7308261a0da681",
+      "source_row_number": 67,
+      "source_record_hash": "9c9242e2912884967b2a84857d7a13d9551e3ef5051fd686ba7308261a0da681",
+      "raw": {
+        "name": "Harry Melides Optometry Trust",
+        "address": "Shop A/132 Beaudesert Road",
+        "suburb": "MOOROOKA",
+        "postcode": "4105",
+        "phone": "07 3848 6673"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:d437a41ba5e9a7068795656af43939921b58b1f9a85ae132c834a440a8014ab1",
+      "source_row_number": 68,
+      "source_record_hash": "d437a41ba5e9a7068795656af43939921b58b1f9a85ae132c834a440a8014ab1",
+      "raw": {
+        "name": "Hinchinbrook Optical",
+        "address": "8-10 Lannercost Street",
+        "suburb": "INGHAM",
+        "postcode": "4850",
+        "phone": "07 4776 5444"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:0db78c90288b99de1f92f005b0b9521c6cd0c4b55bb6f09093f622dab8c6fedb",
+      "source_row_number": 69,
+      "source_record_hash": "0db78c90288b99de1f92f005b0b9521c6cd0c4b55bb6f09093f622dab8c6fedb",
+      "raw": {
+        "name": "Hodgson Optical",
+        "address": "https://www.hodgsonoptical.com/free-spectacles.html PRESCRIPTION REQUIRED",
+        "suburb": "TOWNSVILLE",
+        "postcode": "4810",
+        "phone": "0438 062 768"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:a9b7003971cbf252328d94f0a879e1fb63ac1e659cdb146454971fb5b80fb57b",
+      "source_row_number": 70,
+      "source_record_hash": "a9b7003971cbf252328d94f0a879e1fb63ac1e659cdb146454971fb5b80fb57b",
+      "raw": {
+        "name": "Holland Park Eyecare",
+        "address": "1/970 Logan Road",
+        "suburb": "HOLLAND PARK WEST",
+        "postcode": "4121",
+        "phone": "07 3394 2412"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:f6e22cefc63af5f9f69c7ca1292d18128b002749d3b1425f874ccd239b4f7717",
+      "source_row_number": 71,
+      "source_record_hash": "f6e22cefc63af5f9f69c7ca1292d18128b002749d3b1425f874ccd239b4f7717",
+      "raw": {
+        "name": "i.Holics Optician & Optometrist",
+        "address": "Shop 26/662 Compton Road",
+        "suburb": "CALAMVALE",
+        "postcode": "4116",
+        "phone": "07 3532 8673"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:95b56142ae9fe7fc3ae366a95ce42d8198371dafa9f344bf26cefc2a76136e80",
+      "source_row_number": 72,
+      "source_record_hash": "95b56142ae9fe7fc3ae366a95ce42d8198371dafa9f344bf26cefc2a76136e80",
+      "raw": {
+        "name": "iContact Optometrist",
+        "address": "G1B/49 Station Road",
+        "suburb": "INDOOROOPILLY",
+        "postcode": "4068",
+        "phone": "07 3378 3278"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:3c77ff9c34d574bdb856f977e755f85d38fad9356c68a8a53d832c7f05b0472d",
+      "source_row_number": 73,
+      "source_record_hash": "3c77ff9c34d574bdb856f977e755f85d38fad9356c68a8a53d832c7f05b0472d",
+      "raw": {
+        "name": "ICU Optometrists",
+        "address": "1/64 MacGregor Terrace",
+        "suburb": "BARDON",
+        "postcode": "4065",
+        "phone": "07 3368 3644"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:6f7a26b0478998782c9c36b005c7cc38782eb08a0016080bfaaf1bb0e9df94c8",
+      "source_row_number": 74,
+      "source_record_hash": "6f7a26b0478998782c9c36b005c7cc38782eb08a0016080bfaaf1bb0e9df94c8",
+      "raw": {
+        "name": "Image Eyewear Yeronga",
+        "address": "The Yeronga Village Shop 1.4/419-429 Fairfield Road",
+        "suburb": "YERONGA",
+        "postcode": "4104",
+        "phone": "07 3392 6899"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:7f7e2da42279c77a503a240e55fe8553e027bf44786d374381c343dc28d51188",
+      "source_row_number": 75,
+      "source_record_hash": "7f7e2da42279c77a503a240e55fe8553e027bf44786d374381c343dc28d51188",
+      "raw": {
+        "name": "John Holme Optom Malanda",
+        "address": "15 Catherine Street",
+        "suburb": "MALANDA",
+        "postcode": "4885",
+        "phone": "07 4096 5460"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:99ef842325b19c208be401d5b1a64c61123150a4ec7424f276b6850346c54ca4",
+      "source_row_number": 76,
+      "source_record_hash": "99ef842325b19c208be401d5b1a64c61123150a4ec7424f276b6850346c54ca4",
+      "raw": {
+        "name": "John Holme Optom Mareeba",
+        "address": "12 Herberton Street",
+        "suburb": "MAREEBA",
+        "postcode": "4880",
+        "phone": "07 4092 1655"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:8b47056c7614be59dd84abaae68f9a4d32435349f5070384f59511b096c22c04",
+      "source_row_number": 77,
+      "source_record_hash": "8b47056c7614be59dd84abaae68f9a4d32435349f5070384f59511b096c22c04",
+      "raw": {
+        "name": "Judi Coey Optometrist",
+        "address": "13 Bunya Street",
+        "suburb": "MALENY",
+        "postcode": "4552",
+        "phone": "07 5494 2877"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:d388faf65f774ec4c73046ac127d665f1c00a1d4454aeb9d5461193260f37e88",
+      "source_row_number": 78,
+      "source_record_hash": "d388faf65f774ec4c73046ac127d665f1c00a1d4454aeb9d5461193260f37e88",
+      "raw": {
+        "name": "Julie Weir Optometrist",
+        "address": "82 Bundah Street",
+        "suburb": "CAMP HILL",
+        "postcode": "4152",
+        "phone": "0421 599 336"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:65ab8cd8437698de7153b2867dc628d9c42efbf71cd340a9086a5568c6077f4a",
+      "source_row_number": 79,
+      "source_record_hash": "65ab8cd8437698de7153b2867dc628d9c42efbf71cd340a9086a5568c6077f4a",
+      "raw": {
+        "name": "Kenmore Plaza Optometrist",
+        "address": "Kenmore Tavern Plaza Shop 7/841 Moggill Road",
+        "suburb": "KENMORE",
+        "postcode": "4069",
+        "phone": "07 3378 1677"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:1c1adde1f79e0ba2b81b9ef07f0b900726044d876c8b647607ba19fb481a6199",
+      "source_row_number": 80,
+      "source_record_hash": "1c1adde1f79e0ba2b81b9ef07f0b900726044d876c8b647607ba19fb481a6199",
+      "raw": {
+        "name": "Khim Chandler Optometrist",
+        "address": "Chatswood Central Shopping Centre T130/2-16 Magellan Road",
+        "suburb": "SPRINGWOOD",
+        "postcode": "4127",
+        "phone": "07 3805 4011"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:217aa5347a25cafdb1a6fa8316ad40fffeb8644db2d80929b5aecfd33d77a0ef",
+      "source_row_number": 81,
+      "source_record_hash": "217aa5347a25cafdb1a6fa8316ad40fffeb8644db2d80929b5aecfd33d77a0ef",
+      "raw": {
+        "name": "Knights and Associates Eyecare",
+        "address": "The Mall Beenleigh Kiosk 7/40-68 Main Street",
+        "suburb": "BEENLEIGH",
+        "postcode": "4207",
+        "phone": "07 3287 5334"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:964d3c6696d1b703cf6deb93b0103a3304b5e1034a664054ae0555c858c00c4b",
+      "source_row_number": 82,
+      "source_record_hash": "964d3c6696d1b703cf6deb93b0103a3304b5e1034a664054ae0555c858c00c4b",
+      "raw": {
+        "name": "Kon Penklis Optometrists",
+        "address": "Greenslopes Mall Shop 3/700 Logan Road",
+        "suburb": "GREENSLOPES",
+        "postcode": "4120",
+        "phone": "07 3394 4240"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:08079ba18f3a223da5fe9ee20056df8c3a57606a5198b675146742956f65e305",
+      "source_row_number": 83,
+      "source_record_hash": "08079ba18f3a223da5fe9ee20056df8c3a57606a5198b675146742956f65e305",
+      "raw": {
+        "name": "L'Estrange Optoms Redcliffe",
+        "address": "Jetty Arcade 139-141 Redcliffe Parade",
+        "suburb": "REDCLIFFE",
+        "postcode": "4020",
+        "phone": "07 3284 2825"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:12cc58ce1d959bbe87c6f87f266276f9d9186b608da388f343a25b7fd4eaf2a5",
+      "source_row_number": 84,
+      "source_record_hash": "12cc58ce1d959bbe87c6f87f266276f9d9186b608da388f343a25b7fd4eaf2a5",
+      "raw": {
+        "name": "Laraghy & Chan Optometrists",
+        "address": "Market Central Lutwyche Shopping Centre Shop 50B/543 Lutwyche Road",
+        "suburb": "LUTWYCHE",
+        "postcode": "4030",
+        "phone": "07 3357 6800"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:5d0db2172ce2ad13d6d6a83c2ddb72cae97717bf3c86ff3272fda941b92cd72f",
+      "source_row_number": 85,
+      "source_record_hash": "5d0db2172ce2ad13d6d6a83c2ddb72cae97717bf3c86ff3272fda941b92cd72f",
+      "raw": {
+        "name": "Laubman & Pank Brookside",
+        "address": "Brookside Shopping Centre Shop 76B/159 Osborne Road",
+        "suburb": "MITCHELTON",
+        "postcode": "4053",
+        "phone": "07 3855 2566"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:35f13a18ce0d2649529efaac798716a61c23ed5a98604a8c5ae28eda4eb0d073",
+      "source_row_number": 86,
+      "source_record_hash": "35f13a18ce0d2649529efaac798716a61c23ed5a98604a8c5ae28eda4eb0d073",
+      "raw": {
+        "name": "Laubman & Pank Cairns",
+        "address": "Cairns Central Shopping Centre Shop 134/1-21 McLeod Street",
+        "suburb": "CAIRNS CITY",
+        "postcode": "4870",
+        "phone": "07 4051 7776"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:9ba2d2b78dff8800acad4cbf365597b96ae1c0545c2276ae97feea52b944941a",
+      "source_row_number": 87,
+      "source_record_hash": "9ba2d2b78dff8800acad4cbf365597b96ae1c0545c2276ae97feea52b944941a",
+      "raw": {
+        "name": "Laubman & Pank Carindale Westfield",
+        "address": "Westfield Carindale Shop 1230-1231/1151 Creek Road",
+        "suburb": "CARINDALE",
+        "postcode": "4152",
+        "phone": "07 3324 8914"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:7ccfd21dfce191a57c07b2a9aeb92394c989dc16c7778bd8319aea73ff691aff",
+      "source_row_number": 88,
+      "source_record_hash": "7ccfd21dfce191a57c07b2a9aeb92394c989dc16c7778bd8319aea73ff691aff",
+      "raw": {
+        "name": "Laubman & Pank Chermside Westfield",
+        "address": "Westfield Chermside Shop 236/395 Hamilton Road",
+        "suburb": "CHERMSIDE CENTRE",
+        "postcode": "4032",
+        "phone": "07 3359 2411"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:f805a89ced1e6df12f04022496bb7ded35f72d7837590e7dda6aec30e76b907c",
+      "source_row_number": 89,
+      "source_record_hash": "f805a89ced1e6df12f04022496bb7ded35f72d7837590e7dda6aec30e76b907c",
+      "raw": {
+        "name": "Laubman & Pank Clifford Gardens Toowoomba",
+        "address": "Clifford Gardens Shopping Centre Shop 34/100-124 Anzac Avenue",
+        "suburb": "NEWTOWN 4350",
+        "postcode": "4350",
+        "phone": "07 4633 0401"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:8af7050351c0ac34517513ab28854a951fca44372f8d2ab7949a120058801509",
+      "source_row_number": 90,
+      "source_record_hash": "8af7050351c0ac34517513ab28854a951fca44372f8d2ab7949a120058801509",
+      "raw": {
+        "name": "Laubman & Pank Durkin Black Toowoomba",
+        "address": "Grand Central Shopping Centre Shop 38/244-252 Margaret Street",
+        "suburb": "TOOWOOMBA CITY",
+        "postcode": "4350",
+        "phone": "07 4637 8892"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:2cc2b216cd02ffdba24196b5a6ae6f8cb6090e90218df0a02d761cfa62dc8aa2",
+      "source_row_number": 91,
+      "source_record_hash": "2cc2b216cd02ffdba24196b5a6ae6f8cb6090e90218df0a02d761cfa62dc8aa2",
+      "raw": {
+        "name": "Laubman & Pank Eyecare Redbank Plains",
+        "address": "Town Square Redbank Plains Shopping Centre Shop 10/357-381 Redbank Plains Road",
+        "suburb": "REDBANK PLAINS",
+        "postcode": "4301",
+        "phone": "07 3028 9462"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:69de1293ae7ec962f8a8197c243b12ae75fd8987a62d30bc4f1e8bfc8a531d22",
+      "source_row_number": 92,
+      "source_record_hash": "69de1293ae7ec962f8a8197c243b12ae75fd8987a62d30bc4f1e8bfc8a531d22",
+      "raw": {
+        "name": "Laubman & Pank Ipswich Riverlink",
+        "address": "Riverlink Shopping Centre Shop 26/2 The Terrace",
+        "suburb": "NORTH IPSWICH",
+        "postcode": "4305",
+        "phone": "07 3281 1505"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:3138f81a3737c242f815efa75821c90e5756d829e0ed05e9aeb462dfef127255",
+      "source_row_number": 93,
+      "source_record_hash": "3138f81a3737c242f815efa75821c90e5756d829e0ed05e9aeb462dfef127255",
+      "raw": {
+        "name": "Laubman & Pank Judith Cooper Optometrists",
+        "address": "Valley Plaza Shop 10/45 Tank Street",
+        "suburb": "GLADSTONE CENTRAL",
+        "postcode": "4680",
+        "phone": "07 4972 3308"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:1321426a7d63e555b9658bd2befe3bf8bf010f33d2ba9f0fef9d90323cdfb2bc",
+      "source_row_number": 94,
+      "source_record_hash": "1321426a7d63e555b9658bd2befe3bf8bf010f33d2ba9f0fef9d90323cdfb2bc",
+      "raw": {
+        "name": "Laubman & Pank Lawrie & Taylor Allenstown",
+        "address": "171 Fitzroy Street",
+        "suburb": "ALLENSTOWN",
+        "postcode": "4700",
+        "phone": "07 4922 0688"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:f66a3ebe5aac301fa9f95549a70190f18b06691f212375571c7b1bb35f9aed80",
+      "source_row_number": 95,
+      "source_record_hash": "f66a3ebe5aac301fa9f95549a70190f18b06691f212375571c7b1bb35f9aed80",
+      "raw": {
+        "name": "Laubman & Pank Lawrie & Taylor Park Avenue",
+        "address": "318 Richardson Road",
+        "suburb": "PARK AVENUE",
+        "postcode": "4701",
+        "phone": "07 4928 0650"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:627138d8751f499c52e6962f9e862a82012f6cdf8837f62fcc7b8dd82cbc43eb",
+      "source_row_number": 96,
+      "source_record_hash": "627138d8751f499c52e6962f9e862a82012f6cdf8837f62fcc7b8dd82cbc43eb",
+      "raw": {
+        "name": "Laubman & Pank Mackay",
+        "address": "Sydney Street Markets Shop 13-14/31 Gordon Street",
+        "suburb": "MACKAY",
+        "postcode": "4740",
+        "phone": "07 4953 1444"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:83ce44cc1f6a0c0c99273d8b5b9df772984b5351e3adbea034eaae613db2e19b",
+      "source_row_number": 97,
+      "source_record_hash": "83ce44cc1f6a0c0c99273d8b5b9df772984b5351e3adbea034eaae613db2e19b",
+      "raw": {
+        "name": "Laubman & Pank Mackay Caneland",
+        "address": "Caneland Central Shop GD 2445/2 Mangrove Road",
+        "suburb": "MACKAY",
+        "postcode": "4740",
+        "phone": "07 4953 2739"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:3dc9d714510e10a91c3231a8d31284d7b8cb379bd74e8d8a7ef760ff46eb1710",
+      "source_row_number": 98,
+      "source_record_hash": "3dc9d714510e10a91c3231a8d31284d7b8cb379bd74e8d8a7ef760ff46eb1710",
+      "raw": {
+        "name": "Laubman & Pank Morayfield Shopping Centre",
+        "address": "Morayfield Shopping Centre Shop 74/171 Morayfield Road",
+        "suburb": "MORAYFIELD",
+        "postcode": "4506",
+        "phone": "07 5498 9422"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:e5ca00264301133204fb36fec3697381001f79e298ff74d1390170da58fd024b",
+      "source_row_number": 99,
+      "source_record_hash": "e5ca00264301133204fb36fec3697381001f79e298ff74d1390170da58fd024b",
+      "raw": {
+        "name": "Laubman & Pank Mt Ommaney",
+        "address": "Mount Ommaney Centre Shop 34/171 Dandenong Road",
+        "suburb": "MOUNT OMMANEY",
+        "postcode": "4074",
+        "phone": "07 3376 5307"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:6bbaaf40cf39222d76ebfc0ee84d6831a8f13a56bf986e926dfb1ec47513088f",
+      "source_row_number": 100,
+      "source_record_hash": "6bbaaf40cf39222d76ebfc0ee84d6831a8f13a56bf986e926dfb1ec47513088f",
+      "raw": {
+        "name": "Laubman & Pank Rockhampton Stockland",
+        "address": "Stockland Rockhampton Shopping Centre Shop 101A/120-331 Yaamba Road",
+        "suburb": "PARK AVENUE",
+        "postcode": "4701",
+        "phone": "07 4926 1886"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:90cb9e4e4075c906b9d7db874dd4b985e30eb6e274513c594a183765ee2f28f7",
+      "source_row_number": 101,
+      "source_record_hash": "90cb9e4e4075c906b9d7db874dd4b985e30eb6e274513c594a183765ee2f28f7",
+      "raw": {
+        "name": "Laubman & Pank Tannum Eyecare",
+        "address": "Shop 2/3 Garnet Road",
+        "suburb": "TANNUM SANDS",
+        "postcode": "4680",
+        "phone": "07 4973 3111"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:1fc5cb26054914b8c541c203f8010fb3151dccf58940eb4a59905aeb24ef4c65",
+      "source_row_number": 102,
+      "source_record_hash": "1fc5cb26054914b8c541c203f8010fb3151dccf58940eb4a59905aeb24ef4c65",
+      "raw": {
+        "name": "Laubman & Pank Toowoomba GC",
+        "address": "Grand Central Shopping Centre Shop 5/244-252 Margaret Street",
+        "suburb": "TOOWOOMBA CITY",
+        "postcode": "4350",
+        "phone": "07 4632 1666"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:33306fc44a63c5038bdfbc0e997b5152d328b044ee0e98e199fc7be6604a915c",
+      "source_row_number": 103,
+      "source_record_hash": "33306fc44a63c5038bdfbc0e997b5152d328b044ee0e98e199fc7be6604a915c",
+      "raw": {
+        "name": "Le Optique",
+        "address": "Inala Civic Centre Shop 7/57 Corsair Avenue",
+        "suburb": "INALA",
+        "postcode": "4077",
+        "phone": "07 3372 1100"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:236a8ca80f149d511bd3b0cc4e102247403ce5137f25a958c1805c4e3da42cab",
+      "source_row_number": 104,
+      "source_record_hash": "236a8ca80f149d511bd3b0cc4e102247403ce5137f25a958c1805c4e3da42cab",
+      "raw": {
+        "name": "Lees & Henschell",
+        "address": "12 Wongabel Street",
+        "suburb": "KENMORE",
+        "postcode": "4069",
+        "phone": "07 3378 7899"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:3eada294554c450b96402c5d27cc8b608800a3d96d1825c8bea77941b137d57a",
+      "source_row_number": 105,
+      "source_record_hash": "3eada294554c450b96402c5d27cc8b608800a3d96d1825c8bea77941b137d57a",
+      "raw": {
+        "name": "Looking Smart Optometrist",
+        "address": "Pelican Waters Shopping Centre Shop 2/44 Pelican Waters Boulevard",
+        "suburb": "PELICAN WATERS",
+        "postcode": "4551",
+        "phone": "07 5439 7844"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:b7be35f2bf6a2d9540aec13ab92a32ec235eb2ff95e7c89afb991a0d63202aa7",
+      "source_row_number": 106,
+      "source_record_hash": "b7be35f2bf6a2d9540aec13ab92a32ec235eb2ff95e7c89afb991a0d63202aa7",
+      "raw": {
+        "name": "Maleny Optical",
+        "address": "Shop 8/8 Maple Street",
+        "suburb": "MALENY",
+        "postcode": "4552",
+        "phone": "07 5435 2733"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:e347d6e3314cc9087d66a76709f328270ab99ce8580af27967c57bacb706cee1",
+      "source_row_number": 107,
+      "source_record_hash": "e347d6e3314cc9087d66a76709f328270ab99ce8580af27967c57bacb706cee1",
+      "raw": {
+        "name": "Mark Gibson Optometrist",
+        "address": "Shop 8/667 Oxley Road",
+        "suburb": "CORINDA",
+        "postcode": "4075",
+        "phone": "07 3379 5688"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:e3a90bf357d96dfa61646358d6b2c274ab87bd5a890d773c6665aedea55f0fa7",
+      "source_row_number": 108,
+      "source_record_hash": "e3a90bf357d96dfa61646358d6b2c274ab87bd5a890d773c6665aedea55f0fa7",
+      "raw": {
+        "name": "Matthew Senyard Optometrist",
+        "address": "Nerang Fair Shopping Centre Shop 14/74-80 Beaudesert Nerang Road",
+        "suburb": "NERANG",
+        "postcode": "4211",
+        "phone": "07 5596 1544"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:4912b0eb90714dd3217859e475aa39a17a572cacc4d48911992ae9672f7bbc3b",
+      "source_row_number": 109,
+      "source_record_hash": "4912b0eb90714dd3217859e475aa39a17a572cacc4d48911992ae9672f7bbc3b",
+      "raw": {
+        "name": "Michael Young Optometrists",
+        "address": "",
+        "suburb": "CHANDLER",
+        "postcode": "4155",
+        "phone": "07 3245 5510"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:47abcb1fe1f9a7e6678ea131ae769dc7bde4416abce85710f064c4dc1309558c",
+      "source_row_number": 110,
+      "source_record_hash": "47abcb1fe1f9a7e6678ea131ae769dc7bde4416abce85710f064c4dc1309558c",
+      "raw": {
+        "name": "Moore Eyes Rockhampton",
+        "address": "119 Bolsover Street",
+        "suburb": "ROCKHAMPTON CITY",
+        "postcode": "4700",
+        "phone": "07 4927 6111"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:10430d6662c716002c72740873249ff8f30d8c22ce0b0eb42bac8ddcc91b8603",
+      "source_row_number": 111,
+      "source_record_hash": "10430d6662c716002c72740873249ff8f30d8c22ce0b0eb42bac8ddcc91b8603",
+      "raw": {
+        "name": "Moore Eyes Yeppoon",
+        "address": "1A Swordfish Avenue",
+        "suburb": "YEPPOON",
+        "postcode": "4703",
+        "phone": "07 4939 1666"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:d0b93419ddbe64d931b7e63a5cb3d9b7bb109f02b592f2c4f9ee48a305bd0b1a",
+      "source_row_number": 112,
+      "source_record_hash": "d0b93419ddbe64d931b7e63a5cb3d9b7bb109f02b592f2c4f9ee48a305bd0b1a",
+      "raw": {
+        "name": "Morayfield Eyewear",
+        "address": "7/49 Morayfield Road",
+        "suburb": "MORAYFIELD",
+        "postcode": "4506",
+        "phone": "07 5499 3088"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:dcf1a8ec4749d322103dc75569325e1b2d447821361c37a71844a97525d5e535",
+      "source_row_number": 113,
+      "source_record_hash": "dcf1a8ec4749d322103dc75569325e1b2d447821361c37a71844a97525d5e535",
+      "raw": {
+        "name": "Mount Isa Optical",
+        "address": "Isa Square Shop 8/27-31 Simpson Street",
+        "suburb": "MOUNT ISA CITY",
+        "postcode": "4825",
+        "phone": "07 4743 5338"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:098612786b47d8abe251d7d99b60a2ad6b6d36ab9fdb5386243ef0efeaa22760",
+      "source_row_number": 114,
+      "source_record_hash": "098612786b47d8abe251d7d99b60a2ad6b6d36ab9fdb5386243ef0efeaa22760",
+      "raw": {
+        "name": "My2020 Optometrist",
+        "address": "Market Square Sunnybank Level 2 Shop 2/341 Mains Road",
+        "suburb": "SUNNYBANK",
+        "postcode": "4109",
+        "phone": "07 3344 2995"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:332af34790ff9643f70d33192fdf582c184e7b2197c5594764c03d4fd2694b33",
+      "source_row_number": 115,
+      "source_record_hash": "332af34790ff9643f70d33192fdf582c184e7b2197c5594764c03d4fd2694b33",
+      "raw": {
+        "name": "My2020 Optometrists Toowong",
+        "address": "2/31 Sherwood Road",
+        "suburb": "TOOWONG",
+        "postcode": "4066",
+        "phone": "07 2142 1777"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:6706717507d329e12ac6fc0e488f7b1d9924fdb554019d0abddc3a592b500f9e",
+      "source_row_number": 116,
+      "source_record_hash": "6706717507d329e12ac6fc0e488f7b1d9924fdb554019d0abddc3a592b500f9e",
+      "raw": {
+        "name": "My2020 Yeerongpilly",
+        "address": "T13/25 Fig Tree Street",
+        "suburb": "YEERONGPILLY",
+        "postcode": "4105",
+        "phone": "07 2142 0861"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:e08cbc9769e8558babc56dc810db0e7ee02144205bd8dc3daa14abfeca6b525b",
+      "source_row_number": 117,
+      "source_record_hash": "e08cbc9769e8558babc56dc810db0e7ee02144205bd8dc3daa14abfeca6b525b",
+      "raw": {
+        "name": "Neilson Eyecare",
+        "address": "128 Russell Street",
+        "suburb": "TOOWOOMBA CITY",
+        "postcode": "4350",
+        "phone": "07 4638 2377"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:4a4acb75262cc628ac383ad4643a19ba6b8fa820504b12f565961a5533496131",
+      "source_row_number": 118,
+      "source_record_hash": "4a4acb75262cc628ac383ad4643a19ba6b8fa820504b12f565961a5533496131",
+      "raw": {
+        "name": "On Point Eyecare",
+        "address": "14 Discovery Lane",
+        "suburb": "MOUNT PLEASANT 4740",
+        "postcode": "4740",
+        "phone": "07 4863 4781"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:46f1461de771967b785f2e9cde54972eac7662e69eec4028762f711cce24a027",
+      "source_row_number": 119,
+      "source_record_hash": "46f1461de771967b785f2e9cde54972eac7662e69eec4028762f711cce24a027",
+      "raw": {
+        "name": "OPSM Birtinya",
+        "address": "Stockland Birtinya Shopping Centre Shop 008/8 The Avenue",
+        "suburb": "BIRTINYA",
+        "postcode": "4575",
+        "phone": "07 5301 9276"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:2ee9dba3b407c26b36b3e8b0757d1314387ad09438b1ed7ae630cb53f1bb1c66",
+      "source_row_number": 120,
+      "source_record_hash": "2ee9dba3b407c26b36b3e8b0757d1314387ad09438b1ed7ae630cb53f1bb1c66",
+      "raw": {
+        "name": "OPSM Bundaberg Hinkler",
+        "address": "Hinkler Central Shop 48/16 Maryborough Street",
+        "suburb": "BUNDABERG",
+        "postcode": "4670",
+        "phone": "07 4152 4377"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:dd445f09b3835511c0229c66f4c190d44d1fb1c94bb330c05f6af240fb549c85",
+      "source_row_number": 121,
+      "source_record_hash": "dd445f09b3835511c0229c66f4c190d44d1fb1c94bb330c05f6af240fb549c85",
+      "raw": {
+        "name": "OPSM Bundaberg Sugarland",
+        "address": "Sugarland Plaza Bundaberg Shop 312/115-119 Takalvan Street",
+        "suburb": "AVOCA",
+        "postcode": "4670",
+        "phone": "07 4151 7131"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:14bbe52015dfdab2684d9e333d962fa2da23a1ff384f82210dd7c5ee01616780",
+      "source_row_number": 122,
+      "source_record_hash": "14bbe52015dfdab2684d9e333d962fa2da23a1ff384f82210dd7c5ee01616780",
+      "raw": {
+        "name": "OPSM Burleigh Heads",
+        "address": "Stocklands Burleigh Heads Shopping Centre Shop 54/149 West Burleigh Road",
+        "suburb": "BURLEIGH HEADS",
+        "postcode": "4220",
+        "phone": "07 5568 7023"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:ba4306e4ebffb7611a1992350cf36d65ca67b14d92cb0438fdfce46a6bb203bf",
+      "source_row_number": 123,
+      "source_record_hash": "ba4306e4ebffb7611a1992350cf36d65ca67b14d92cb0438fdfce46a6bb203bf",
+      "raw": {
+        "name": "OPSM Fairfield Central",
+        "address": "Fairfield Central Shopping Centre Shop 20/2-30 Lakeside Drive",
+        "suburb": "IDALIA",
+        "postcode": "4811",
+        "phone": "07 4735 8721"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:d2a378971b4c6db965887fe6d59ac6476981d8b241fc07e4529a897e70f585f2",
+      "source_row_number": 124,
+      "source_record_hash": "d2a378971b4c6db965887fe6d59ac6476981d8b241fc07e4529a897e70f585f2",
+      "raw": {
+        "name": "OPSM Gladstone",
+        "address": "Gladstone Centre Plaza Shop 18/75 Dawson Highway",
+        "suburb": "WEST GLADSTONE",
+        "postcode": "4680",
+        "phone": "07 4978 6421"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:cfc5ace7bf43e77d525a2f952753ea37a2bf549deba9f81656ccdf9368877194",
+      "source_row_number": 125,
+      "source_record_hash": "cfc5ace7bf43e77d525a2f952753ea37a2bf549deba9f81656ccdf9368877194",
+      "raw": {
+        "name": "OPSM Helensvale Westfield",
+        "address": "Westfield Helensvale Shop 1015/1-29 Millaroo Drive",
+        "suburb": "HELENSVALE",
+        "postcode": "4212",
+        "phone": "07 5580 3550"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:5abcdce17fcb8040157843493db43406a41015f9db7db4a1ef53a34442d12c9f",
+      "source_row_number": 126,
+      "source_record_hash": "5abcdce17fcb8040157843493db43406a41015f9db7db4a1ef53a34442d12c9f",
+      "raw": {
+        "name": "OPSM Hervey Bay",
+        "address": "Pialba Place Shopping Centre Shop 12/30 Main Street",
+        "suburb": "PIALBA",
+        "postcode": "4655",
+        "phone": "07 4124 2627"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:e66c875160cd2e8d9d8297a9d1f5c82db3c4566d63ae8e3902802e3f6302442d",
+      "source_row_number": 127,
+      "source_record_hash": "e66c875160cd2e8d9d8297a9d1f5c82db3c4566d63ae8e3902802e3f6302442d",
+      "raw": {
+        "name": "OPSM Innisfail",
+        "address": "51-53 Edith Street",
+        "suburb": "INNISFAIL",
+        "postcode": "4860",
+        "phone": "07 4061 4244"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:f4e3c7b6fae12c2c37af5c5a8c50c81a93ae12b3e4a47f8c70fc951ba7e726f0",
+      "source_row_number": 128,
+      "source_record_hash": "f4e3c7b6fae12c2c37af5c5a8c50c81a93ae12b3e4a47f8c70fc951ba7e726f0",
+      "raw": {
+        "name": "OPSM Kingaroy",
+        "address": "Kingaroy Shopping World Shop T38/29-45 Alford Street",
+        "suburb": "KINGAROY",
+        "postcode": "4610",
+        "phone": "07 4162 7444"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:6c9d0db2f20c7fffe8533d29060cd3eff45d918392c0b5545b3ae5332e86985e",
+      "source_row_number": 129,
+      "source_record_hash": "6c9d0db2f20c7fffe8533d29060cd3eff45d918392c0b5545b3ae5332e86985e",
+      "raw": {
+        "name": "OPSM Kippa Ring",
+        "address": "Peninsula Fair Shopping Centre Shop C7A/272 Anzac Avenue",
+        "suburb": "KIPPA-RING",
+        "postcode": "4021",
+        "phone": "07 3284 5811"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:3d5d7dba2c2ff7e8583a290690ef1166fc8f5403995e071ac02c7f209f7f7097",
+      "source_row_number": 130,
+      "source_record_hash": "3d5d7dba2c2ff7e8583a290690ef1166fc8f5403995e071ac02c7f209f7f7097",
+      "raw": {
+        "name": "OPSM Mackay Caneland",
+        "address": "Caneland Central Shop 225/2 Mangrove Road",
+        "suburb": "MACKAY",
+        "postcode": "4740",
+        "phone": "07 4953 0861"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:879412d7a7a8353115a6211b869493a076963f3b862017d22f8407d6014b7692",
+      "source_row_number": 131,
+      "source_record_hash": "879412d7a7a8353115a6211b869493a076963f3b862017d22f8407d6014b7692",
+      "raw": {
+        "name": "OPSM Maryborough",
+        "address": "Station Square Shopping Centre Shop 41-43, 142 Lennox Street",
+        "suburb": "MARYBOROUGH",
+        "postcode": "4650",
+        "phone": "07 4121 3214"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:17b5aff9bf42284e1fd14c095de084dfaff5a4f4727521c8229d1961b046b113",
+      "source_row_number": 132,
+      "source_record_hash": "17b5aff9bf42284e1fd14c095de084dfaff5a4f4727521c8229d1961b046b113",
+      "raw": {
+        "name": "OPSM Morayfield",
+        "address": "Morayfield Shopping Centre Shop 53/171 Morayfield Road",
+        "suburb": "MORAYFIELD",
+        "postcode": "4506",
+        "phone": "07 5498 3755"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:dcbab61bb8eb1a10721ebe3fbab563984c32e71e98f025ed9073eeb3f7aa01be",
+      "source_row_number": 133,
+      "source_record_hash": "dcbab61bb8eb1a10721ebe3fbab563984c32e71e98f025ed9073eeb3f7aa01be",
+      "raw": {
+        "name": "OPSM Mt Isa",
+        "address": "Mount Isa Village 22 Simpson Street",
+        "suburb": "MOUNT ISA CITY",
+        "postcode": "4825",
+        "phone": "07 4743 3839"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:4d95976df2295edfac1c029d26b10ae37bc7f2e577f5d5a6cbe82f424291bf49",
+      "source_row_number": 134,
+      "source_record_hash": "4d95976df2295edfac1c029d26b10ae37bc7f2e577f5d5a6cbe82f424291bf49",
+      "raw": {
+        "name": "OPSM Mt Pleasant",
+        "address": "Mount Pleasant Centre Shop 2/54A Phillip Street",
+        "suburb": "MOUNT PLEASANT 4740",
+        "postcode": "4740",
+        "phone": "07 4942 5161"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:4a09576634988b6ccdc79f77861bb15496cdde6b0dbd298ed4ba4687acf1bf55",
+      "source_row_number": 135,
+      "source_record_hash": "4a09576634988b6ccdc79f77861bb15496cdde6b0dbd298ed4ba4687acf1bf55",
+      "raw": {
+        "name": "OPSM North Lakes",
+        "address": "Westfield North Lakes Shop 1113/1 North Lakes Drive",
+        "suburb": "NORTH LAKES",
+        "postcode": "4509",
+        "phone": "07 3482 2099"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:9d94eea58d1685eaa2f6564323342432d0ed662e93acf67f61339011c2af4231",
+      "source_row_number": 136,
+      "source_record_hash": "9d94eea58d1685eaa2f6564323342432d0ed662e93acf67f61339011c2af4231",
+      "raw": {
+        "name": "OPSM Rockhampton",
+        "address": "Stockland Rockhampton Shopping Centre Shop 238/120-331 Yaamba Road",
+        "suburb": "PARK AVENUE",
+        "postcode": "4701",
+        "phone": "07 4928 0022"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:156b1f394596297cb7b3349ab69ec44a029f6f8b827fbc2624dc2151e5e422ff",
+      "source_row_number": 137,
+      "source_record_hash": "156b1f394596297cb7b3349ab69ec44a029f6f8b827fbc2624dc2151e5e422ff",
+      "raw": {
+        "name": "OPSM Runaway Bay",
+        "address": "Runaway Bay Shopping Centre Shop 55/10-12 Lae Drive",
+        "suburb": "RUNAWAY BAY",
+        "postcode": "4216",
+        "phone": "07 5529 1166"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:f3474e3e502fac38517518da28b0b7dd48463b7eac7ee061193dbc7d017e2b43",
+      "source_row_number": 138,
+      "source_record_hash": "f3474e3e502fac38517518da28b0b7dd48463b7eac7ee061193dbc7d017e2b43",
+      "raw": {
+        "name": "OPSM Stockland Hervey Bay",
+        "address": "Stockland Hervey Bay Shopping Centre Shop 97/6 Central Avenue",
+        "suburb": "HERVEY BAY",
+        "postcode": "4655",
+        "phone": "07 4124 8355"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:4fdf6db42045bbc35ae45b3753fbb90fa8869fb9421d1fed7f9c949ae26d4eae",
+      "source_row_number": 139,
+      "source_record_hash": "4fdf6db42045bbc35ae45b3753fbb90fa8869fb9421d1fed7f9c949ae26d4eae",
+      "raw": {
+        "name": "OPSM Strathpine",
+        "address": "Strathpine Centre Shop 44-45/295 Gympie Road",
+        "suburb": "STRATHPINE",
+        "postcode": "4500",
+        "phone": "07 3881 2899"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:65b1e22a2f1e23fc8016bcb70e36834f473d52be25c890d9de87f1ef2a8de683",
+      "source_row_number": 140,
+      "source_record_hash": "65b1e22a2f1e23fc8016bcb70e36834f473d52be25c890d9de87f1ef2a8de683",
+      "raw": {
+        "name": "Optical Connect Optometrist",
+        "address": "Shop 4/168 Algester Road",
+        "suburb": "CALAMVALE",
+        "postcode": "4116",
+        "phone": "07 3558 8408"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:50942c032ee12479f64ef2d0410d88faaf8b6ec7ace14e4fdcaf80d3f0bcf613",
+      "source_row_number": 141,
+      "source_record_hash": "50942c032ee12479f64ef2d0410d88faaf8b6ec7ace14e4fdcaf80d3f0bcf613",
+      "raw": {
+        "name": "Optical Express Calamvale",
+        "address": "Shop 36/668 Compton Road",
+        "suburb": "CALAMVALE",
+        "postcode": "4116",
+        "phone": "07 3711 4944"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:a2d29a4260d16806c2e0350da9f6ae7909df9ea0f3639658b1d148fb3190ff73",
+      "source_row_number": 142,
+      "source_record_hash": "a2d29a4260d16806c2e0350da9f6ae7909df9ea0f3639658b1d148fb3190ff73",
+      "raw": {
+        "name": "Optical Warehouse Booval",
+        "address": "Shop 24B, Booval Fair Shopping Centre Cnr Brisbane & South Station Road",
+        "suburb": "BOOVAL",
+        "postcode": "4304",
+        "phone": "07 3281 8400"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:c28ea8e34fe8d9bc0b8b5ae50c9624b6f3b68c42169b6f1e395be30d974fbf78",
+      "source_row_number": 143,
+      "source_record_hash": "c28ea8e34fe8d9bc0b8b5ae50c9624b6f3b68c42169b6f1e395be30d974fbf78",
+      "raw": {
+        "name": "Optical Warehouse Browns Plains",
+        "address": "Grand Plaza Shop G107/27-49 Browns Plains Road",
+        "suburb": "BROWNS PLAINS",
+        "postcode": "4118",
+        "phone": "07 3809 0992"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:53857cf3d48736e6a03fab8d51a072c803d2109cac564607fffe070cd6c7e90c",
+      "source_row_number": 144,
+      "source_record_hash": "53857cf3d48736e6a03fab8d51a072c803d2109cac564607fffe070cd6c7e90c",
+      "raw": {
+        "name": "Optical Warehouse Capalaba",
+        "address": "Shop 1/200 Old Cleveland Road",
+        "suburb": "CAPALABA",
+        "postcode": "4157",
+        "phone": "07 3823 3340"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:b988b1e2da822230aede10882205057c10e10d3a69d6fe018cf12f5c4707f766",
+      "source_row_number": 145,
+      "source_record_hash": "b988b1e2da822230aede10882205057c10e10d3a69d6fe018cf12f5c4707f766",
+      "raw": {
+        "name": "Optical Warehouse Maroochydore",
+        "address": "3/25 Maud Street",
+        "suburb": "MAROOCHYDORE",
+        "postcode": "4558",
+        "phone": "07 5443 9930"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:27daaff0b06b4729a35fe51b4f5ab2a3e592225344116d34ba592ed383a982e5",
+      "source_row_number": 146,
+      "source_record_hash": "27daaff0b06b4729a35fe51b4f5ab2a3e592225344116d34ba592ed383a982e5",
+      "raw": {
+        "name": "Optical Warehouse Maryborough",
+        "address": "Comet Place Shop 8/133 Lennox Street",
+        "suburb": "MARYBOROUGH",
+        "postcode": "4650",
+        "phone": "07 4123 5422"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:e9d8757d2fc6b9bfcb94ddc70878bf07da468b72bb6ee4a9a8fdc09db5fc3f3f",
+      "source_row_number": 147,
+      "source_record_hash": "e9d8757d2fc6b9bfcb94ddc70878bf07da468b72bb6ee4a9a8fdc09db5fc3f3f",
+      "raw": {
+        "name": "Optical Warehouse Scarness",
+        "address": "125 Boat Harbour Drive",
+        "suburb": "PIALBA",
+        "postcode": "4655",
+        "phone": "07 4194 2600"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:5f95e09d0abee54737791cee755509b069b4320fb46482983e4ce91e821e9975",
+      "source_row_number": 148,
+      "source_record_hash": "5f95e09d0abee54737791cee755509b069b4320fb46482983e4ce91e821e9975",
+      "raw": {
+        "name": "Optical Warehouse Stafford",
+        "address": "Stafford City Shopping Centre Shop E23/400 Stafford Road",
+        "suburb": "STAFFORD",
+        "postcode": "4053",
+        "phone": "07 3352 5001"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:b863ce31f9d560753f5ffbc6c981ade2e6e75664df61982424fdc0e60c876e54",
+      "source_row_number": 149,
+      "source_record_hash": "b863ce31f9d560753f5ffbc6c981ade2e6e75664df61982424fdc0e60c876e54",
+      "raw": {
+        "name": "Optical Warehouse Strathpine",
+        "address": "Shop 1/424 Gympie Road",
+        "suburb": "STRATHPINE",
+        "postcode": "4500",
+        "phone": "07 3205 9992"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:a98f49fdf20d48f0abc71bbb7ec15bd6943aefa1cf37f3d6aaa59ae8471e4540",
+      "source_row_number": 150,
+      "source_record_hash": "a98f49fdf20d48f0abc71bbb7ec15bd6943aefa1cf37f3d6aaa59ae8471e4540",
+      "raw": {
+        "name": "Options Eyecare Noosaville",
+        "address": "Noosa Homemaker Centre Shop 14/18 Thomas Street",
+        "suburb": "NOOSAVILLE",
+        "postcode": "4566",
+        "phone": "07 5473 0008"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:2d8772f177cad29c454e10b10cde86aff7a1cf1722d10a37bf9dc27dd1732b2e",
+      "source_row_number": 151,
+      "source_record_hash": "2d8772f177cad29c454e10b10cde86aff7a1cf1722d10a37bf9dc27dd1732b2e",
+      "raw": {
+        "name": "Optometrist Warehouse Alexandra Hills",
+        "address": "Alexandra Hills Shopping Centre Shop 43/71 Cambridge Drive",
+        "suburb": "ALEXANDRA HILLS",
+        "postcode": "4161",
+        "phone": "07 3824 1878"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:9ec0ab3759f48623a46a98c4aaafceaee37621d84d9bdcb603221ad4fbdd7345",
+      "source_row_number": 152,
+      "source_record_hash": "9ec0ab3759f48623a46a98c4aaafceaee37621d84d9bdcb603221ad4fbdd7345",
+      "raw": {
+        "name": "Optometry at Cooroy",
+        "address": "62 Maple Street",
+        "suburb": "COOROY",
+        "postcode": "4563",
+        "phone": "07 5442 5555"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:87ee9aeb586fd0fde4e07a4caad51157cae3ecdad21d450dd9fcd0750cb4e927",
+      "source_row_number": 153,
+      "source_record_hash": "87ee9aeb586fd0fde4e07a4caad51157cae3ecdad21d450dd9fcd0750cb4e927",
+      "raw": {
+        "name": "Optometry Outlet",
+        "address": "DFO Jindalee Shop 52/16 Amazons Place",
+        "suburb": "JINDALEE",
+        "postcode": "4074",
+        "phone": "0493 307 525"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:639566be2063ed27fd8d8669b37f37fba4782bf29179c06150ea9087136c92f9",
+      "source_row_number": 154,
+      "source_record_hash": "639566be2063ed27fd8d8669b37f37fba4782bf29179c06150ea9087136c92f9",
+      "raw": {
+        "name": "Outlook Optical",
+        "address": "16/20 Barolin Street",
+        "suburb": "BUNDABERG CENTRAL",
+        "postcode": "4670",
+        "phone": "07 4154 4488"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:b20964d5ae76fbf423abc6af2dce5d121e45568598fc7a5eae793991b3cd41c6",
+      "source_row_number": 155,
+      "source_record_hash": "b20964d5ae76fbf423abc6af2dce5d121e45568598fc7a5eae793991b3cd41c6",
+      "raw": {
+        "name": "Outside Optical",
+        "address": "52 Herbert Street",
+        "suburb": "BOWEN",
+        "postcode": "4805",
+        "phone": "07 4786 2034"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:4a93cfc686536af05921c3183feea26385557d203b2bb5a394928dbb0a0021f1",
+      "source_row_number": 156,
+      "source_record_hash": "4a93cfc686536af05921c3183feea26385557d203b2bb5a394928dbb0a0021f1",
+      "raw": {
+        "name": "Park Ridge Eyewear",
+        "address": "Park Ridge Town Centre Shop 14/3732 Mount Lindesay Highway",
+        "suburb": "PARK RIDGE",
+        "postcode": "4125",
+        "phone": "07 3802 2299"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:f946eb54e3af457e304d1662c352c3ef80a230c2217a9cd657ec4b844475470c",
+      "source_row_number": 157,
+      "source_record_hash": "f946eb54e3af457e304d1662c352c3ef80a230c2217a9cd657ec4b844475470c",
+      "raw": {
+        "name": "Peninsula Eyewear",
+        "address": "Peninsula Fair Shopping Centre Shop G6/272 Anzac Avenue",
+        "suburb": "KIPPA-RING",
+        "postcode": "4021",
+        "phone": "07 3284 0663"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:b777a2822b5bea79292c30a097842a5d1626d2bcfc5d5d1d648d135835a31d50",
+      "source_row_number": 158,
+      "source_record_hash": "b777a2822b5bea79292c30a097842a5d1626d2bcfc5d5d1d648d135835a31d50",
+      "raw": {
+        "name": "Q Super Centre Optometrist",
+        "address": "Q Super Centre Shop 17/Corner Bermuda and Markeri Streets",
+        "suburb": "MERMAID WATERS",
+        "postcode": "4218",
+        "phone": "07 5578 5400"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:9e89d44af0a54d91e07d17401919761dcbf457548d138f21089eab97b6f8c113",
+      "source_row_number": 159,
+      "source_record_hash": "9e89d44af0a54d91e07d17401919761dcbf457548d138f21089eab97b6f8c113",
+      "raw": {
+        "name": "QUT Optometry Clinic",
+        "address": "QUT Health Clinics Ground Floor 44 Musk Avenue",
+        "suburb": "KELVIN GROVE",
+        "postcode": "4059",
+        "phone": "07 3138 9777"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:c0de77015d738c12b5bbe3a4f5be8772341b0f09ff3b5ed03656bd3ff9646f4e",
+      "source_row_number": 160,
+      "source_record_hash": "c0de77015d738c12b5bbe3a4f5be8772341b0f09ff3b5ed03656bd3ff9646f4e",
+      "raw": {
+        "name": "R & T Optometry",
+        "address": "Inala Town Centre Shop 34/156 Inala Avenue",
+        "suburb": "INALA",
+        "postcode": "4077",
+        "phone": "07 3372 7075"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:7f8dfaef51f2a08ba6e0793bda85976acc83742bc1ff34228d11195ad03e6911",
+      "source_row_number": 161,
+      "source_record_hash": "7f8dfaef51f2a08ba6e0793bda85976acc83742bc1ff34228d11195ad03e6911",
+      "raw": {
+        "name": "Radley Optical Image Eyewear",
+        "address": "Shop 2/165 Bloomfield Street",
+        "suburb": "CLEVELAND",
+        "postcode": "4163",
+        "phone": "07 3286 2566"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:d83c6129beab4d19575c3b53a3148352647d800b60342df51880b4d541c773a8",
+      "source_row_number": 162,
+      "source_record_hash": "d83c6129beab4d19575c3b53a3148352647d800b60342df51880b4d541c773a8",
+      "raw": {
+        "name": "Redlands Optometry",
+        "address": "8B Hub 68/58-68 Delancey Street",
+        "suburb": "ORMISTON",
+        "postcode": "4160",
+        "phone": "07 3488 2280"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:6ca7bfc2918909157506d915cfd0c3a7bad2f7e86fd36c0c4d0a7d4254f0b266",
+      "source_row_number": 163,
+      "source_record_hash": "6ca7bfc2918909157506d915cfd0c3a7bad2f7e86fd36c0c4d0a7d4254f0b266",
+      "raw": {
+        "name": "Reel Optics",
+        "address": "44/502 Hope Island Road",
+        "suburb": "HELENSVALE",
+        "postcode": "4212",
+        "phone": "07 5529 7962"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:614684e16b34d67ed2caacc3b9cc13f1631b96056db85d0fc690b8b6d22288f7",
+      "source_row_number": 164,
+      "source_record_hash": "614684e16b34d67ed2caacc3b9cc13f1631b96056db85d0fc690b8b6d22288f7",
+      "raw": {
+        "name": "RM Optical Emerald",
+        "address": "The Plaza at Emerald Shop 5/144 Egerton Street",
+        "suburb": "EMERALD",
+        "postcode": "4720",
+        "phone": "07 4982 4450"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:04eec1ce940b279ef581df68db65a6b3334e6893c5853de73beee081acf20b2b",
+      "source_row_number": 165,
+      "source_record_hash": "04eec1ce940b279ef581df68db65a6b3334e6893c5853de73beee081acf20b2b",
+      "raw": {
+        "name": "RM Optical Toowoomba",
+        "address": "455 Ruthven Street",
+        "suburb": "TOOWOOMBA CITY",
+        "postcode": "4350",
+        "phone": "07 4632 3166"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:eb841c4e4dae2faccf6ff995e0e4f1137253231384bcf5c1f15ecc0ede6bb1c1",
+      "source_row_number": 166,
+      "source_record_hash": "eb841c4e4dae2faccf6ff995e0e4f1137253231384bcf5c1f15ecc0ede6bb1c1",
+      "raw": {
+        "name": "Roberts Alexander Caboolture",
+        "address": "Caboolture Square Shop 27A/60-78 King Street",
+        "suburb": "CABOOLTURE",
+        "postcode": "4510",
+        "phone": "07 5495 2316"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:4a625e316a22203cdd91a1be49e344c09b5641ef2c61a932ae702e06594ce9dd",
+      "source_row_number": 167,
+      "source_record_hash": "4a625e316a22203cdd91a1be49e344c09b5641ef2c61a932ae702e06594ce9dd",
+      "raw": {
+        "name": "Roberts Alexander Strathpine",
+        "address": "345 Gympie Road",
+        "suburb": "STRATHPINE",
+        "postcode": "4500",
+        "phone": "07 3205 1593"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:9ae27a3e525692669ed0362abe4db1be65a566a6ca3e40c2296398fecdd47407",
+      "source_row_number": 168,
+      "source_record_hash": "9ae27a3e525692669ed0362abe4db1be65a566a6ca3e40c2296398fecdd47407",
+      "raw": {
+        "name": "Ronnie Lui Optometrist",
+        "address": "Sunnybank Plaza Shop 32B/358 Mains Road",
+        "suburb": "SUNNYBANK",
+        "postcode": "4109",
+        "phone": "07 3216 9188"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:1f5c13a5a3fede7febbf1a2a981173b4ef5f641f5293d3bea25fe63687e7e1e6",
+      "source_row_number": 169,
+      "source_record_hash": "1f5c13a5a3fede7febbf1a2a981173b4ef5f641f5293d3bea25fe63687e7e1e6",
+      "raw": {
+        "name": "Ross van Haeringen Optometrist",
+        "address": "Shop 6/27 Cordelia Street",
+        "suburb": "SOUTH BRISBANE",
+        "postcode": "4101",
+        "phone": "0451 504 824"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:8928d29e3dc01aec0e49e4d75c8b2dbfca8faf557226011999479d138f0f3f74",
+      "source_row_number": 170,
+      "source_record_hash": "8928d29e3dc01aec0e49e4d75c8b2dbfca8faf557226011999479d138f0f3f74",
+      "raw": {
+        "name": "Russell Cooper Optometrist",
+        "address": "160 Bolsover Street",
+        "suburb": "ROCKHAMPTON CITY",
+        "postcode": "4700",
+        "phone": "07 4922 6996"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:9917d926a699fc6b724dac1fff278ff64f41d7c40c284481094f708792fc16c0",
+      "source_row_number": 171,
+      "source_record_hash": "9917d926a699fc6b724dac1fff278ff64f41d7c40c284481094f708792fc16c0",
+      "raw": {
+        "name": "Sandgate Optical",
+        "address": "Shop 5A/8 Bowser Parade",
+        "suburb": "SANDGATE",
+        "postcode": "4017",
+        "phone": "07 3269 1977"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:d09080688d02f321d743ea5d0265371803ef781ec30a5ba4f4ccf3026d1538d5",
+      "source_row_number": 172,
+      "source_record_hash": "d09080688d02f321d743ea5d0265371803ef781ec30a5ba4f4ccf3026d1538d5",
+      "raw": {
+        "name": "Scenic Rim Optometrists",
+        "address": "Beaudesert Medical Centre 47 William Street",
+        "suburb": "BEAUDESERT",
+        "postcode": "4285",
+        "phone": "07 5541 9510"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:d0617d9aa0b02c9e866dc661e0c0afad953d79404d0ac1add61f15fb78ee87ed",
+      "source_row_number": 173,
+      "source_record_hash": "d0617d9aa0b02c9e866dc661e0c0afad953d79404d0ac1add61f15fb78ee87ed",
+      "raw": {
+        "name": "Simon Clark Optometrist",
+        "address": "18 Old Cleveland Road",
+        "suburb": "STONES CORNER",
+        "postcode": "4120",
+        "phone": "07 3397 0000"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:42d32f4ba480faa6d83a18e68a5f3543dd217dd05e19853d516cc0a6b8af55e0",
+      "source_row_number": 174,
+      "source_record_hash": "42d32f4ba480faa6d83a18e68a5f3543dd217dd05e19853d516cc0a6b8af55e0",
+      "raw": {
+        "name": "SM Weston",
+        "address": "36 James Street",
+        "suburb": "YEPPOON",
+        "postcode": "4703",
+        "phone": "07 4939 4077"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:1906180364d43492d801abcaf446a20c4751ccfeda0c982947f697665b4c0b72",
+      "source_row_number": 175,
+      "source_record_hash": "1906180364d43492d801abcaf446a20c4751ccfeda0c982947f697665b4c0b72",
+      "raw": {
+        "name": "Smart Choice Eyewear Carindale",
+        "address": "Westfield Carindale Shop 1242/1151 Creek Road",
+        "suburb": "CARINDALE",
+        "postcode": "4152",
+        "phone": "07 3395 2345"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:00a791c23324e6720a85a02d7866b39f35ed08dfe49bd36f92810fec3d12c550",
+      "source_row_number": 176,
+      "source_record_hash": "00a791c23324e6720a85a02d7866b39f35ed08dfe49bd36f92810fec3d12c550",
+      "raw": {
+        "name": "Somerville and Merrin Optometrists Hume Street",
+        "address": "428 Hume Street",
+        "suburb": "CENTENARY HEIGHTS 4350",
+        "postcode": "4350",
+        "phone": "07 4635 7340"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:81c8f726533a52997579e91d954e124cf0fa4876f5d4a40618472710ab7ff1e9",
+      "source_row_number": 177,
+      "source_record_hash": "81c8f726533a52997579e91d954e124cf0fa4876f5d4a40618472710ab7ff1e9",
+      "raw": {
+        "name": "Somerville and Merrin Optometrists The Range",
+        "address": "The Range Shopping Centre Shop 10/11 James Street",
+        "suburb": "EAST TOOWOOMBA",
+        "postcode": "4350",
+        "phone": "07 4659 9599"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:194e863465983c1d49573c47225b33c89a7da0c7e54809ae5622e2db4dda0885",
+      "source_row_number": 178,
+      "source_record_hash": "194e863465983c1d49573c47225b33c89a7da0c7e54809ae5622e2db4dda0885",
+      "raw": {
+        "name": "Southside Eyewear",
+        "address": "Shop 18/180 Fairfield Road",
+        "suburb": "FAIRFIELD",
+        "postcode": "4103",
+        "phone": "07 3892 5770"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:088ed1686f8433c30cf4a5256c2ac0aa31308c3a1c59e2beac81a9195d51931c",
+      "source_row_number": 179,
+      "source_record_hash": "088ed1686f8433c30cf4a5256c2ac0aa31308c3a1c59e2beac81a9195d51931c",
+      "raw": {
+        "name": "Specsavers Hervey Bay Central",
+        "address": "Stockland Shopping Centre Shop 88/6 Central Avenue",
+        "suburb": "URRAWEEN",
+        "postcode": "4655",
+        "phone": "07 4124 5602"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:4b27df896294750c0276462758a5dc2ae5e4773b5b1efde0f8c42982f869f01c",
+      "source_row_number": 180,
+      "source_record_hash": "4b27df896294750c0276462758a5dc2ae5e4773b5b1efde0f8c42982f869f01c",
+      "raw": {
+        "name": "Specsavers Hervey Bay Pialba",
+        "address": "Pialba Place Shopping Centre Shop 16/30 Main Street",
+        "suburb": "PIALBA",
+        "postcode": "4655",
+        "phone": "07 4128 4833"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:a0f5e8a505c5266af35a12191b01c65afb9d24b738c045409f737c85febd04d3",
+      "source_row_number": 181,
+      "source_record_hash": "a0f5e8a505c5266af35a12191b01c65afb9d24b738c045409f737c85febd04d3",
+      "raw": {
+        "name": "Specsavers Redbank",
+        "address": "Redbank Plaza Shop 3338/1 Collingwood Drive",
+        "suburb": "REDBANK",
+        "postcode": "4301",
+        "phone": "07 3818 7700"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:38abdbc0f03ee16e76b771688815af7498e886f0615fe37896b9af76d8bc5aa2",
+      "source_row_number": 182,
+      "source_record_hash": "38abdbc0f03ee16e76b771688815af7498e886f0615fe37896b9af76d8bc5aa2",
+      "raw": {
+        "name": "Specsavers Sunnybank",
+        "address": "Sunnybank Plaza Shop 12-13 Corner Mains Road and McCullough Street",
+        "suburb": "SUNNYBANK",
+        "postcode": "4109",
+        "phone": "07 3219 5144"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:571fd26170653a3a2a184b5b3e7bbee6d2657947c5ffaaf8905c4a6b239067ec",
+      "source_row_number": 183,
+      "source_record_hash": "571fd26170653a3a2a184b5b3e7bbee6d2657947c5ffaaf8905c4a6b239067ec",
+      "raw": {
+        "name": "Spectacular Eyez",
+        "address": "3/1061 D'Aguilar Highway",
+        "suburb": "WAMURAN",
+        "postcode": "4512",
+        "phone": "07 5330 3105"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:589d3eb8d1cbdeedaabf4b7d838b6258a27cecb0ddb2a49ba3157e0347b376a4",
+      "source_row_number": 184,
+      "source_record_hash": "589d3eb8d1cbdeedaabf4b7d838b6258a27cecb0ddb2a49ba3157e0347b376a4",
+      "raw": {
+        "name": "Springfield Lakes Eyecare",
+        "address": "Springfield Lakes Village 7A/31 Springfield Lakes Boulevard",
+        "suburb": "SPRINGFIELD LAKES",
+        "postcode": "4300",
+        "phone": "07 3818 9199"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:af243fbf542e9ab06cbf7ae74f75b699bac96e8bc573ec5fc0f6a5857be789be",
+      "source_row_number": 185,
+      "source_record_hash": "af243fbf542e9ab06cbf7ae74f75b699bac96e8bc573ec5fc0f6a5857be789be",
+      "raw": {
+        "name": "Stacey & Stacey Charters Towers",
+        "address": "9 Gill Street",
+        "suburb": "CHARTERS TOWERS",
+        "postcode": "4820",
+        "phone": "07 4787 1401"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:2b4ba0cfd864d92a8f5e6efc2a45ccd39719b4fb5930e73f189ae4adcec9f3b1",
+      "source_row_number": 186,
+      "source_record_hash": "2b4ba0cfd864d92a8f5e6efc2a45ccd39719b4fb5930e73f189ae4adcec9f3b1",
+      "raw": {
+        "name": "Stylish Optometrist",
+        "address": "Woolworths Marketplace Shop 6 Old Northern Road",
+        "suburb": "ALBANY CREEK",
+        "postcode": "4035",
+        "phone": "07 3264 8188"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:6c1f73848047029a8ad3d677c2f6cd292f28b6f93ed9c62d3dd6200f56ef60b6",
+      "source_row_number": 187,
+      "source_record_hash": "6c1f73848047029a8ad3d677c2f6cd292f28b6f93ed9c62d3dd6200f56ef60b6",
+      "raw": {
+        "name": "Sunnybank Optical",
+        "address": "Shop 3/6 Zamia Street",
+        "suburb": "SUNNYBANK",
+        "postcode": "4109",
+        "phone": "07 3711 2111"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:e3c925be2609b7b8a52d764a1a3565f6bb9091730af31fd79f23ff640ef95c32",
+      "source_row_number": 188,
+      "source_record_hash": "e3c925be2609b7b8a52d764a1a3565f6bb9091730af31fd79f23ff640ef95c32",
+      "raw": {
+        "name": "Tamborine Mountain Optometrist",
+        "address": "North Tamborine Shopping Square Shop 3E/17-27 Main Western Road",
+        "suburb": "TAMBORINE MOUNTAIN",
+        "postcode": "4272",
+        "phone": "07 5545 0277"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:43dc4cdfa7060f8e637be51de8b7a4b91f3c954a5834c0d0ca6ee059a0823c04",
+      "source_row_number": 189,
+      "source_record_hash": "43dc4cdfa7060f8e637be51de8b7a4b91f3c954a5834c0d0ca6ee059a0823c04",
+      "raw": {
+        "name": "The Optical Co Helensvale",
+        "address": "Westfield Helensvale Shop 1056/1-29 Millaroo Drive",
+        "suburb": "HELENSVALE",
+        "postcode": "4212",
+        "phone": "07 5556 0500"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:065f4bf0d77d3c62625beec8acf243ac4b5015859dfd19381dbe64ac6687222a",
+      "source_row_number": 190,
+      "source_record_hash": "065f4bf0d77d3c62625beec8acf243ac4b5015859dfd19381dbe64ac6687222a",
+      "raw": {
+        "name": "The Optical Co Loganholme",
+        "address": "Hyperdome Shopping Centre Shop 201B/3828-3846 Pacific Highway",
+        "suburb": "LOGANHOLME",
+        "postcode": "4129",
+        "phone": "07 3806 1711"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:26294db955564070d9dbaedd13ea5afa0cbe75ac4d36d550f78891c3200f1356",
+      "source_row_number": 191,
+      "source_record_hash": "26294db955564070d9dbaedd13ea5afa0cbe75ac4d36d550f78891c3200f1356",
+      "raw": {
+        "name": "The Optical Co Mount Gravatt",
+        "address": "Level 2 1437 Logan Road",
+        "suburb": "MOUNT GRAVATT",
+        "postcode": "4122",
+        "phone": "07 3849 5577"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:07dee9b63b7ddc45406b96b7962febda739989d5ffdc6fbcde5065063e1fe204",
+      "source_row_number": 192,
+      "source_record_hash": "07dee9b63b7ddc45406b96b7962febda739989d5ffdc6fbcde5065063e1fe204",
+      "raw": {
+        "name": "The Optical Co Mount Ommaney",
+        "address": "Mount Ommaney Centre Shop 76/171 Dandenong Road",
+        "suburb": "MOUNT OMMANEY",
+        "postcode": "4074",
+        "phone": "07 3279 4433"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:204e89ec0b49a0e415b9c9b16b4ba070a65466e23958bf435067b84c17400a06",
+      "source_row_number": 193,
+      "source_record_hash": "204e89ec0b49a0e415b9c9b16b4ba070a65466e23958bf435067b84c17400a06",
+      "raw": {
+        "name": "The Optical Co Runaway Bay",
+        "address": "Runaway Bay Shopping Centre Shop 29/10-12 Lae Drive",
+        "suburb": "RUNAWAY BAY",
+        "postcode": "4216",
+        "phone": "07 5537 3665"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:e8233d854dc814ec35dc1d6c6b13d7f35b57b33c001fd98b3781498ec6f4f6a0",
+      "source_row_number": 194,
+      "source_record_hash": "e8233d854dc814ec35dc1d6c6b13d7f35b57b33c001fd98b3781498ec6f4f6a0",
+      "raw": {
+        "name": "The Optical Company Carindale",
+        "address": "Westfield Carindale Shop 1249/1151 Creek Road",
+        "suburb": "CARINDALE",
+        "postcode": "4152",
+        "phone": "07 3395 1299"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:faafac57795aab6c9a2cc9221fb81c97dac6633ac2788b668c14d9b826de36e3",
+      "source_row_number": 195,
+      "source_record_hash": "faafac57795aab6c9a2cc9221fb81c97dac6633ac2788b668c14d9b826de36e3",
+      "raw": {
+        "name": "The Optical Nook",
+        "address": "14 Park Road",
+        "suburb": "MILTON",
+        "postcode": "4064",
+        "phone": "07 3369 8899"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:f1a7d23598503803c96dc5cc94edcc8b9772b2b8da0f4c44c53fd944dc0af18b",
+      "source_row_number": 196,
+      "source_record_hash": "f1a7d23598503803c96dc5cc94edcc8b9772b2b8da0f4c44c53fd944dc0af18b",
+      "raw": {
+        "name": "The Optical Spot",
+        "address": "Market Square Sunnybank Shop 21C/341 Mains Road",
+        "suburb": "SUNNYBANK",
+        "postcode": "4109",
+        "phone": "07 3219 6663"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:5620a35e4072aa93a7b7c1da6e6bcc230e1e0beee162f32f0b2f307f6f03f1cc",
+      "source_row_number": 197,
+      "source_record_hash": "5620a35e4072aa93a7b7c1da6e6bcc230e1e0beee162f32f0b2f307f6f03f1cc",
+      "raw": {
+        "name": "The Optical Superstore Arana Hills",
+        "address": "Arana Hills Plaza Shop 9A /5-11 Patricks Road",
+        "suburb": "ARANA HILLS",
+        "postcode": "4054",
+        "phone": "07 3186 4674"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:dc301a154ec002fbd07bd50d211765fb5e50e1646037dbbe82df261942232b8f",
+      "source_row_number": 198,
+      "source_record_hash": "dc301a154ec002fbd07bd50d211765fb5e50e1646037dbbe82df261942232b8f",
+      "raw": {
+        "name": "The Optical Superstore Deception Bay",
+        "address": "Market Square Deception Bay Shop T1/2 Bay Avenue",
+        "suburb": "DECEPTION BAY",
+        "postcode": "4508",
+        "phone": "07 3186 4670"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:9fa841fe7af660bcdb7bb9d668ff1aadacc9982b3f9955a1dd7f03bddbf751da",
+      "source_row_number": 199,
+      "source_record_hash": "9fa841fe7af660bcdb7bb9d668ff1aadacc9982b3f9955a1dd7f03bddbf751da",
+      "raw": {
+        "name": "The Optical Superstore DFO",
+        "address": "DFO Cairns Shop 218A/274 Mulgrave Road",
+        "suburb": "CAIRNS",
+        "postcode": "4870",
+        "phone": "07 4032 2430"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:a92414917bad88379d0282a070941cda24034ad0dced6a2dd40cab0896f89763",
+      "source_row_number": 200,
+      "source_record_hash": "a92414917bad88379d0282a070941cda24034ad0dced6a2dd40cab0896f89763",
+      "raw": {
+        "name": "The Optical Superstore Inala",
+        "address": "Inala Plaza Shop 18/156 Inala Avenue",
+        "suburb": "INALA",
+        "postcode": "4077",
+        "phone": "07 3548 7958"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:62708b5d3dcdef36956308bf5f434e6e0d9b3209da695f04d8044f95c297ddcf",
+      "source_row_number": 201,
+      "source_record_hash": "62708b5d3dcdef36956308bf5f434e6e0d9b3209da695f04d8044f95c297ddcf",
+      "raw": {
+        "name": "The Optical Superstore Kippa-Ring",
+        "address": "Peninsular Fair Shopping Centre Shop K03/272 Anzac Avenue",
+        "suburb": "KIPPA-RING",
+        "postcode": "4021",
+        "phone": "07 3283 2448"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:496b11e10302ff34b5c05c848446635a0cea7759cb08d5088e151afb1b7fd07f",
+      "source_row_number": 202,
+      "source_record_hash": "496b11e10302ff34b5c05c848446635a0cea7759cb08d5088e151afb1b7fd07f",
+      "raw": {
+        "name": "The Optical Superstore Mt Sheridan",
+        "address": "Mount Sheridan Plaza Shop 37/106 Barnard Drive",
+        "suburb": "MOUNT SHERIDAN",
+        "postcode": "4868",
+        "phone": "07 4033 2777"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:dc2bdc7cefaed6b21e34f8b77b088042fa8b2da75abf78b41268c0a3f22e637f",
+      "source_row_number": 203,
+      "source_record_hash": "dc2bdc7cefaed6b21e34f8b77b088042fa8b2da75abf78b41268c0a3f22e637f",
+      "raw": {
+        "name": "The Optical Superstore Sunnybank Hills",
+        "address": "Sunnybank Hills Shoppingtown Level 4 Shop 3/661 Compton Road",
+        "suburb": "SUNNYBANK HILLS",
+        "postcode": "4109",
+        "phone": "07 3272 2236"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:04fe960581063ae8fd379edd6fc4325345bf6164bdbb12c664a7ccfa11eb6ca5",
+      "source_row_number": 204,
+      "source_record_hash": "04fe960581063ae8fd379edd6fc4325345bf6164bdbb12c664a7ccfa11eb6ca5",
+      "raw": {
+        "name": "The Optical Superstore Taigum",
+        "address": "Taigum Square Shopping Centre Shop 17/217 Beams Road",
+        "suburb": "TAIGUM",
+        "postcode": "4018",
+        "phone": "07 3265 2700"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:0c2f43b4613c4f65983ab12f8c0da7080f5c2451bc6ba1d05416791ef902ffcd",
+      "source_row_number": 205,
+      "source_record_hash": "0c2f43b4613c4f65983ab12f8c0da7080f5c2451bc6ba1d05416791ef902ffcd",
+      "raw": {
+        "name": "The Optical Superstore The Pines",
+        "address": "The Pines Elanora Shop 211/13-31 Guineas Creek Road",
+        "suburb": "ELANORA",
+        "postcode": "4221",
+        "phone": "07 5525 0500"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:d5b032877837f7e28c74b10b5972a03b7777a9e691e3b0b3327e9dea1dc373de",
+      "source_row_number": 206,
+      "source_record_hash": "d5b032877837f7e28c74b10b5972a03b7777a9e691e3b0b3327e9dea1dc373de",
+      "raw": {
+        "name": "The Optical Superstore Yeppoon",
+        "address": "Yeppoon Central Shopping Centre Shop T24/42-44 Park Street",
+        "suburb": "YEPPOON",
+        "postcode": "4703",
+        "phone": "07 4911 9091"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:a0962219c19555004f8f3e8d0562dc0844c7123262165d83a00f38a1f7cc905e",
+      "source_row_number": 207,
+      "source_record_hash": "a0962219c19555004f8f3e8d0562dc0844c7123262165d83a00f38a1f7cc905e",
+      "raw": {
+        "name": "Tony Chapple Optometrist",
+        "address": "Shop 8/618 Deception Bay Road",
+        "suburb": "DECEPTION BAY",
+        "postcode": "4508",
+        "phone": "07 3203 0044"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:2491fcb7a733e8b6ff60f3150fa74b4b5adfd4c5ca0cf9ff3aca2914e02776ad",
+      "source_row_number": 208,
+      "source_record_hash": "2491fcb7a733e8b6ff60f3150fa74b4b5adfd4c5ca0cf9ff3aca2914e02776ad",
+      "raw": {
+        "name": "Tony Collivas Optometrist",
+        "address": "Sunnybank Hills Shoppingtown Level 2 661 Compton Road",
+        "suburb": "SUNNYBANK HILLS",
+        "postcode": "4109",
+        "phone": "07 3273 5311"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:a07fda143852636b849dd3106ebedf5a20c65e6ffbc97670de5b261c414e267b",
+      "source_row_number": 209,
+      "source_record_hash": "a07fda143852636b849dd3106ebedf5a20c65e6ffbc97670de5b261c414e267b",
+      "raw": {
+        "name": "Townsville Aboriginal & IHS",
+        "address": "57-59 Gorden Street",
+        "suburb": "TOWNSVILLE",
+        "postcode": "4810",
+        "phone": "07 4759 4018"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:08a630e81014edfd3b3ecc8e76bce63029bab829e6255359fc39c2ec4a031b37",
+      "source_row_number": 210,
+      "source_record_hash": "08a630e81014edfd3b3ecc8e76bce63029bab829e6255359fc39c2ec4a031b37",
+      "raw": {
+        "name": "Urban Optical",
+        "address": "Stafford City Shopping Centre Shop E18/400 Stafford Road",
+        "suburb": "STAFFORD",
+        "postcode": "4053",
+        "phone": "07 3352 3852"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:0e64a2f49ef67a8874cf7740e162bedcef03c1d19c0d2b251ceda8c81b993b5f",
+      "source_row_number": 211,
+      "source_record_hash": "0e64a2f49ef67a8874cf7740e162bedcef03c1d19c0d2b251ceda8c81b993b5f",
+      "raw": {
+        "name": "Vicky Dispensing Optician",
+        "address": "",
+        "suburb": "PURGA",
+        "postcode": "4306",
+        "phone": "0458 500 533"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:1aa4fd9d26ce4c4c9305242dccdfe5c4133cf306b3a7857f774b21e36b6b40e3",
+      "source_row_number": 212,
+      "source_record_hash": "1aa4fd9d26ce4c4c9305242dccdfe5c4133cf306b3a7857f774b21e36b6b40e3",
+      "raw": {
+        "name": "Vision Michael Hare Optometrist Benowa",
+        "address": "Benowa Gardens Shopping Centre Shop 26/203 Ashmore Road",
+        "suburb": "BENOWA",
+        "postcode": "4217",
+        "phone": "07 5597 0038"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:45a879126716db68b2581c5134a23712fd5cdece4bebb5bc47d4cb0449c23a53",
+      "source_row_number": 213,
+      "source_record_hash": "45a879126716db68b2581c5134a23712fd5cdece4bebb5bc47d4cb0449c23a53",
+      "raw": {
+        "name": "Vision Michael Hare Optometrist Southport",
+        "address": "17A Nerang Street",
+        "suburb": "SOUTHPORT",
+        "postcode": "4215",
+        "phone": "07 5532 9566"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:04eee654dfecd28d41b948f4aecae3e556bb09c4e2306e9bf361b9dd532035c7",
+      "source_row_number": 214,
+      "source_record_hash": "04eee654dfecd28d41b948f4aecae3e556bb09c4e2306e9bf361b9dd532035c7",
+      "raw": {
+        "name": "Vision Optics",
+        "address": "95 Vulture Street",
+        "suburb": "WEST END 4101",
+        "postcode": "4101",
+        "phone": "07 3844 1556"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:fdae39e346321cc8dbab9356ae31fb5877f2c07daff7a91997ff7e212e417430",
+      "source_row_number": 215,
+      "source_record_hash": "fdae39e346321cc8dbab9356ae31fb5877f2c07daff7a91997ff7e212e417430",
+      "raw": {
+        "name": "Vision Precinct Mount Ommaney",
+        "address": "Mount Ommaney Centre Shop 27/171 Dandenong Road",
+        "suburb": "MOUNT OMMANEY",
+        "postcode": "4074",
+        "phone": "07 3077 6900"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:722e0e51bc91f2fe8dc19596fcf346dbd729b5207ffd6eac18c13c99de44c9cd",
+      "source_row_number": 216,
+      "source_record_hash": "722e0e51bc91f2fe8dc19596fcf346dbd729b5207ffd6eac18c13c99de44c9cd",
+      "raw": {
+        "name": "Vision Precinct Pimpama",
+        "address": "Pimpama City Shopping Centre Shop 15B/102 Pimpama Jacobs Well Road",
+        "suburb": "PIMPAMA",
+        "postcode": "4209",
+        "phone": "07 3077 6697"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:c950cf72c9fb130ae30dc9c85ff850f1db882bf83fc5b81f90a85ea5d985d443",
+      "source_row_number": 217,
+      "source_record_hash": "c950cf72c9fb130ae30dc9c85ff850f1db882bf83fc5b81f90a85ea5d985d443",
+      "raw": {
+        "name": "VisionPotential",
+        "address": "25 Oppermann Drive",
+        "suburb": "ORMEAU",
+        "postcode": "4208",
+        "phone": "0418 310 820"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:68add898e6de7b13f13ca7539c443202c8e1b2bcd224b405effbc013e54f6a0a",
+      "source_row_number": 218,
+      "source_record_hash": "68add898e6de7b13f13ca7539c443202c8e1b2bcd224b405effbc013e54f6a0a",
+      "raw": {
+        "name": "Vue Optometrists Palm Beach",
+        "address": "3/15 Palm Beach Avenue",
+        "suburb": "PALM BEACH",
+        "postcode": "4221",
+        "phone": "07 5534 1324"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:a66235571413f6056003ad0721712a0dfcd3fb8a13bfe4649d3bb3b7b765959d",
+      "source_row_number": 219,
+      "source_record_hash": "a66235571413f6056003ad0721712a0dfcd3fb8a13bfe4649d3bb3b7b765959d",
+      "raw": {
+        "name": "Websters Optometrist",
+        "address": "Holm Mall Shop 1/46 Railway Street",
+        "suburb": "GATTON",
+        "postcode": "4343",
+        "phone": "07 5462 2436"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:451816b8bf15030ef8f604a2c655431ab0494a6b9fe1b0c19b3872a520854943",
+      "source_row_number": 220,
+      "source_record_hash": "451816b8bf15030ef8f604a2c655431ab0494a6b9fe1b0c19b3872a520854943",
+      "raw": {
+        "name": "Wilson Family Optometrists",
+        "address": "Shop 1/40 Howard Street",
+        "suburb": "NAMBOUR",
+        "postcode": "4560",
+        "phone": "07 5441 2277"
+      }
+    },
+    {
+      "source_id": "qld-health-dispenser:5f068be169df42d90737b0794bf53620999e1b59ce10a40c25117d1bead87a54",
+      "source_row_number": 221,
+      "source_record_hash": "5f068be169df42d90737b0794bf53620999e1b59ce10a40c25117d1bead87a54",
+      "raw": {
+        "name": "Wuchopperen Health Centre",
+        "address": "6 Moignard Street",
+        "suburb": "MANOORA",
+        "postcode": "4870",
+        "phone": "07 4080 1000"
+      }
+    }
+  ]
+}

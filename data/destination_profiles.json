@@ -1,0 +1,2874 @@
+{
+  "metadata": {
+    "as_of": "2026-10-10",
+    "baseline": "Validated census batch78; no census admissions in this pilot",
+    "input_sha256": {
+      "destination_profile_facts.json": "d035c3a25dcc4df7e7cd7ac271c65bd02467fa49103e5715e13949895913bbd9",
+      "destination_directory.json": "5686b8f4b6c4fe53abc9c8011f62e772cdf6664eed5ba02ea8283993110eaac1",
+      "optical_stores.csv": "13d5569d5b9b54c8453619be28bfcf8ce80f986e321c6925d225328ea007aab6",
+      "store_certification.csv": "e7f8376c30f643cf2d72c6f5e3c45f490b8bc17448c138e25d911bdca48da449",
+      "store_place_memberships.csv": "cc3b6be24ddda894920f47b760c298a1af986db16d343becfc1da8952e2453d5",
+      "sa2_market.geojson": "6c17e753a58f1f3edc4d54145deee91aee7bfbb232ac359498c5429d3fa81714",
+      "retail_places.json": "44f93a3f3ba5be42874f71aead2370022e6cde5abe7b848af7d396cb70443b42"
+    },
+    "limitations": "Partial profiles, preserving source vintages. No inferred tenancy shares, customer catchment or predicted store performance."
+  },
+  "profiles": [
+    {
+      "place_id": "place-au-wa-karrinyup-shopping-centre",
+      "extent": "Official shopping-centre directory scope; accepted optical membership is separately evidenced. The map point is not a property boundary.",
+      "extent_evidence": {
+        "source_url": "https://www.karrinyupcentre.com.au/centre-info/about-us",
+        "checked_at": "2026-10-08T08:53:07.127934+00:00",
+        "source_date": null,
+        "capture_sha256": "1fbcea597429a45ee3085786e1c5fa580a494b11765fb5dbf6601958ff481663"
+      },
+      "access": [
+        {
+          "label": "Parking",
+          "value": "Centre reports over 4,800 car bays and road access via Karrinyup Road, Francis Avenue, Davenport Street and Jeanes Road.",
+          "source_url": "https://www.karrinyupcentre.com.au/centre-info/location-parking",
+          "checked_at": "2026-10-08T08:53:07.147004+00:00",
+          "source_date": null,
+          "capture_sha256": "6ac46a5895aa255cbf6c484a80299b7af757b2c0aca8f94acce86ba57d6f9710"
+        },
+        {
+          "label": "Public transport",
+          "value": "Nearest rail station is Stirling; onward bus connection serves the centre bus port less than 100 metres from the centre. This is not direct rail access.",
+          "source_url": "https://www.karrinyupcentre.com.au/centre-info/location-parking",
+          "checked_at": "2026-10-08T08:53:07.147004+00:00",
+          "source_date": null,
+          "capture_sha256": "6ac46a5895aa255cbf6c484a80299b7af757b2c0aca8f94acce86ba57d6f9710"
+        }
+      ],
+      "property_facts": [
+        {
+          "label": "Ownership and management",
+          "value": "UniSuper owner; GPT manager, as reported in July 2025.",
+          "source_url": "https://www.gpt.com.au/news-insights/media-releases/karrinyup-achieves-1-billion-annual-sales-spurred-demand-retail",
+          "checked_at": "2026-10-08T08:53:07.689933+00:00",
+          "source_date": "2025-07-09",
+          "capture_sha256": "452bc0e7531718460a3a041fa78afde65135269d97d5cc8ccff210866d6518d9"
+        },
+        {
+          "label": "Historical visits",
+          "value": "13.4 million customers in the preceding year, reported July 2025; exact visit-period end is not separately specified. Not a current 2026 footfall measure.",
+          "source_url": "https://www.gpt.com.au/news-insights/media-releases/karrinyup-achieves-1-billion-annual-sales-spurred-demand-retail",
+          "checked_at": "2026-10-08T08:53:07.689933+00:00",
+          "source_date": "2025-07-09",
+          "capture_sha256": "452bc0e7531718460a3a041fa78afde65135269d97d5cc8ccff210866d6518d9"
+        },
+        {
+          "label": "Retailer count wording",
+          "value": "Over 300 retailers; not an exact occupied-tenancy denominator.",
+          "source_url": "https://www.gpt.com.au/news-insights/media-releases/karrinyup-achieves-1-billion-annual-sales-spurred-demand-retail",
+          "checked_at": "2026-10-08T08:53:07.689933+00:00",
+          "source_date": "2025-07-09",
+          "capture_sha256": "452bc0e7531718460a3a041fa78afde65135269d97d5cc8ccff210866d6518d9"
+        },
+        {
+          "label": "Gross lettable area",
+          "value": "109,000 m², GPT Listed Investor Tour October 2025, page 18. Independently checked against the PDF page.",
+          "source_url": "https://www.gpt.com.au/sites/default/files/inline-uploads/GPT%20Retail%20presentation%20and%20Rouse%20Hill%20Town%20Centre%20tour.pdf",
+          "source_period": "2025-10",
+          "source_date": null,
+          "checked_at": "2026-10-08",
+          "capture_sha256": "23c9ee16de9612856bbfe75033a7ecc5ceac3bac4cbab172a1e876b2de72a8ef"
+        }
+      ],
+      "material_optical_note": "The accepted census includes a separately identified Sunglass Hut concession in Myer that is absent from the centre directory. Do not delete it or treat a directory omission as closure.",
+      "decision_use": "Use as a large, established multi-anchor destination with substantial observed optical competition. Resident-area income and demographics help frame questions but do not describe the full customer catchment.",
+      "next_questions": [
+        "Which available frontage or entry route has relevant pedestrian exposure relative to the existing optical stores?",
+        "Can the owner supply current footfall, customer origins and an occupied-tenancy schedule?"
+      ],
+      "limitations": [
+        "No current occupied-tenancy or category floor-area denominator.",
+        "No verified available-unit inventory, unit economics or customer catchment."
+      ],
+      "profile_status": "Partial: bounded public research complete; commercial and coverage gaps explicit",
+      "checked_at": "2026-10-08",
+      "demographic_boundary_evidence": {
+        "latitude": -31.876927,
+        "longitude": 115.777398,
+        "match_status": "Unique",
+        "sa2_code": "505021089",
+        "sa2_name": "Karrinyup - Gwelup - Carine",
+        "match_count": 1,
+        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.777398%2C-31.876927&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+        "checked_at": "2026-09-27T21:58:22.781427+00:00"
+      },
+      "identity": {
+        "place_id": "place-au-wa-karrinyup-shopping-centre",
+        "name": "Karrinyup Shopping Centre",
+        "country": "Australia",
+        "state": "WA",
+        "location_setting": "Shopping Centre",
+        "address": "",
+        "latitude": -31.876927,
+        "longitude": 115.777398,
+        "source_url": "https://www.karrinyupcentre.com.au/",
+        "source_date": ""
+      },
+      "population_context": {
+        "sa2_code": "505021089",
+        "sa2_name": "Karrinyup - Gwelup - Carine",
+        "state": "Western Australia",
+        "area_sqkm": 14.09,
+        "centroid_longitude": 115.7805,
+        "centroid_latitude": -31.865,
+        "population_2025": 24578,
+        "population_growth_2021_2025_pct": 5.03,
+        "population_density_2025": 1744.5,
+        "median_age_2021": 42.5,
+        "age_45_plus_pct_2021": 46.2,
+        "median_equivalised_household_income_weekly_2021": 1439,
+        "unemployment_rate_2021": 3.5,
+        "participation_rate_2021": 64.1,
+        "total_businesses_2025": 1841,
+        "retail_businesses_2025": 97,
+        "health_businesses_2025": 197,
+        "source": "Australian Bureau of Statistics Data by Region 2011-25",
+        "source_url": "https://www.abs.gov.au/methodologies/data-region-methodology/2011-25",
+        "source_release_date": "2026-05-26",
+        "confidence": "High",
+        "small_population_caution": false,
+        "quality_note": "Published ABS indicators; Census measures retain their 2021 reference year",
+        "population_2021": 23402.0,
+        "population_growth_2021_2025_number": 1176,
+        "interpretation": "Resident SA2 context, not a centre trade area or customer catchment.",
+        "boundary_evidence": {
+          "latitude": -31.876927,
+          "longitude": 115.777398,
+          "match_status": "Unique",
+          "sa2_code": "505021089",
+          "sa2_name": "Karrinyup - Gwelup - Carine",
+          "match_count": 1,
+          "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.777398%2C-31.876927&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+          "checked_at": "2026-09-27T21:58:22.781427+00:00"
+        }
+      },
+      "optical_competition": {
+        "accepted_current_members": [
+          {
+            "store_id": "eyeq-optometrists-karrinyup",
+            "retailer": "EyeQ Optometrists",
+            "name": "EyeQ Optometrists Karrinyup",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop 144, Level 1, Karrinyup Shopping Centre, Karrinyup Road, Karrinyup WA 6018",
+            "latitude": "-31.8768081",
+            "longitude": "115.7780564",
+            "source_url": "https://www.eyeq.com.au/find-an-optometrist/",
+            "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+            "status_evidence_url": "https://www.eyeq.com.au/optometrist/karrinyup/",
+            "status_verified_at": "2026-10-05",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "membership_evidence": {
+              "evidence_basis": "Current operator explicitly names this centre and branch tenancy in its written address.",
+              "evidence_url": "https://www.eyeq.com.au/optometrist/karrinyup/",
+              "verified_at": "2026-10-05",
+              "mapping_confidence": "High"
+            }
+          },
+          {
+            "store_id": "independent-other-optical-osm-au-node-11396192032",
+            "retailer": "Independent / Other optical",
+            "name": "Options Optometrists — Karrinyup",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop SP274A, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018",
+            "latitude": "-31.8770744",
+            "longitude": "115.777965",
+            "source_url": "https://www.openstreetmap.org/node/11396192032",
+            "fetched_at": "2026-09-01T07:48:20.085579Z",
+            "status_evidence_url": "https://optionsoptometrists.com.au/locations/",
+            "status_verified_at": "2026-09-24",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "membership_evidence": {
+              "evidence_basis": "The current official Karrinyup directory lists Options Optometrists on the ground floor",
+              "evidence_url": "https://www.karrinyupcentre.com.au/stores-services/options-optometrists-karrinyup",
+              "verified_at": "2026-09-03",
+              "mapping_confidence": "High"
+            }
+          },
+          {
+            "store_id": "independent-other-optical-reviewed-au-sunglass-hut-karrinyup",
+            "retailer": "Independent / Other optical",
+            "name": "Sunglass Hut Karrinyup",
+            "business_type": "Sunglasses retail",
+            "status": "Active",
+            "full_address": "Shop 59B, Ground, Karrinyup Shopping Centre, 200 Karrinyup Rd, Karrinyup WA 6018",
+            "latitude": "-31.8765565",
+            "longitude": "115.7784366",
+            "source_url": "https://stores.sunglasshut.com/au/wa/karrinyup/shop-59b-ground-karrinyup-shopping-centre",
+            "fetched_at": "2026-09-28",
+            "status_evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/shop-59b-ground-karrinyup-shopping-centre",
+            "status_verified_at": "2026-09-28",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "membership_evidence": {
+              "evidence_basis": "Official operator and/or centre directory explicitly names this retail outlet inside the shopping centre; Official operator branch B726 confirms current hours, named centre address and dedicated sunglasses retail; branch-specific geocodedCoordinate supplies an approximate premises point. No eye-test service inferred.",
+              "evidence_url": "https://www.karrinyupcentre.com.au/stores-services/sunglass-hut",
+              "verified_at": "2026-09-28",
+              "mapping_confidence": "High"
+            }
+          },
+          {
+            "store_id": "independent-other-optical-reviewed-au-sunglass-hut-myer-karrinyup-b820",
+            "retailer": "Independent / Other optical",
+            "name": "Sunglass Hut Myer Karrinyup",
+            "business_type": "Sunglasses retail",
+            "status": "Active",
+            "full_address": "Myer, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018",
+            "latitude": "-31.8773623",
+            "longitude": "115.7766448",
+            "source_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
+            "fetched_at": "2026-10-08",
+            "status_evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
+            "status_verified_at": "2026-10-08",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "membership_evidence": {
+              "evidence_basis": "Operator branch address explicitly places its separately identified Myer concession in Karrinyup Shopping Centre.",
+              "evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
+              "verified_at": "2026-10-08",
+              "mapping_confidence": "High"
+            }
+          },
+          {
+            "store_id": "independent-other-optical-osm-au-node-11397913900",
+            "retailer": "Independent / Other optical",
+            "name": "Vision West",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop SP0003, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018",
+            "latitude": "-31.8763318",
+            "longitude": "115.778465",
+            "source_url": "https://www.openstreetmap.org/node/11397913900",
+            "fetched_at": "2026-09-01T07:48:20.085579Z",
+            "status_evidence_url": "https://www.visionwest.com.au/contact/",
+            "status_verified_at": "2026-09-28",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "membership_evidence": {
+              "evidence_basis": "Official practice contact explicitly identifies Shop SP0003 in Karrinyup Shopping Centre and describes its external courtyard entrance.",
+              "evidence_url": "https://www.visionwest.com.au/contact/",
+              "verified_at": "2026-09-28",
+              "mapping_confidence": "High"
+            }
+          },
+          {
+            "store_id": "laubman-pank-karrinyup-optometrist",
+            "retailer": "Laubman & Pank",
+            "name": "Laubman & Pank Karrinyup",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop G18B Karrinyup Shoping Centre, 200 Karrinyup Rd, Karrinyup, WA, 6018",
+            "latitude": "-31.8765311",
+            "longitude": "115.7780643",
+            "source_url": "https://www.laubmanandpank.com.au/store-finder",
+            "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+            "status_evidence_url": "https://www.laubmanandpank.com.au/store/karrinyup-optometrist",
+            "status_verified_at": "2026-10-08",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "membership_evidence": {
+              "evidence_basis": "Canonicalised from the store's named retail-place evidence",
+              "evidence_url": "https://www.laubmanandpank.com.au/store/karrinyup-optometrist",
+              "verified_at": "2026-09-02",
+              "mapping_confidence": "High"
+            }
+          },
+          {
+            "store_id": "opsm-1370",
+            "retailer": "OPSM",
+            "name": "OPSM Karrinyup",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "200 Karrinyup Rd, Karrinyup, WA, 6018",
+            "latitude": "-31.87684",
+            "longitude": "115.77838",
+            "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
+            "fetched_at": "2026-09-01T07:42:23+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "membership_evidence": {
+              "evidence_basis": "The current official Karrinyup directory lists OPSM on the ground floor",
+              "evidence_url": "https://www.karrinyupcentre.com.au/stores-services/opsm",
+              "verified_at": "2026-09-03",
+              "mapping_confidence": "High"
+            }
+          },
+          {
+            "store_id": "oscar-wylee-134",
+            "retailer": "Oscar Wylee",
+            "name": "Karrinyup",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Karrinyup Shopping Centre, Shop SPO284, 200 Karrinyup Rd, Karrinyup WA 6018",
+            "latitude": "-31.876505088594",
+            "longitude": "115.77607600055",
+            "source_url": "https://www.oscarwylee.com.au/locations/optometrist-karrinyup.html",
+            "fetched_at": "2026-09-01T07:43:15+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "membership_evidence": {
+              "evidence_basis": "Canonicalised from the store's named retail-place evidence",
+              "evidence_url": "https://www.oscarwylee.com.au/locations/optometrist-karrinyup.html",
+              "verified_at": "2026-09-01",
+              "mapping_confidence": "High"
+            }
+          },
+          {
+            "store_id": "specsavers-3436",
+            "retailer": "Specsavers",
+            "name": "Karrinyup S/C",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "200 Karrinyup Road, SPO230/1 Karrinyup Shopping Centre, Karrinyup, WA, 6018",
+            "latitude": "-31.877384",
+            "longitude": "115.77818",
+            "source_url": "https://www.specsavers.com.au/stores/karrinyup",
+            "fetched_at": "2026-09-01T23:21:29.969Z",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "membership_evidence": {
+              "evidence_basis": "Canonicalised from the store's named retail-place evidence",
+              "evidence_url": "https://www.specsavers.com.au/stores/karrinyup",
+              "verified_at": "2026-09-01",
+              "mapping_confidence": "High"
+            }
+          }
+        ],
+        "accepted_member_count": 9,
+        "nearby_current_non_bn": [
+          {
+            "store_id": "independent-other-optical-osm-au-node-11396192032",
+            "retailer": "Independent / Other optical",
+            "name": "Options Optometrists — Karrinyup",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop SP274A, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018",
+            "latitude": "-31.8770744",
+            "longitude": "115.777965",
+            "source_url": "https://www.openstreetmap.org/node/11396192032",
+            "fetched_at": "2026-09-01T07:48:20.085579Z",
+            "status_evidence_url": "https://optionsoptometrists.com.au/locations/",
+            "status_verified_at": "2026-09-24",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "distance_km": 0.05599162717745361,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "eyeq-optometrists-karrinyup",
+            "retailer": "EyeQ Optometrists",
+            "name": "EyeQ Optometrists Karrinyup",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop 144, Level 1, Karrinyup Shopping Centre, Karrinyup Road, Karrinyup WA 6018",
+            "latitude": "-31.8768081",
+            "longitude": "115.7780564",
+            "source_url": "https://www.eyeq.com.au/find-an-optometrist/",
+            "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+            "status_evidence_url": "https://www.eyeq.com.au/optometrist/karrinyup/",
+            "status_verified_at": "2026-10-05",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 0.06355981239154608,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "laubman-pank-karrinyup-optometrist",
+            "retailer": "Laubman & Pank",
+            "name": "Laubman & Pank Karrinyup",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop G18B Karrinyup Shoping Centre, 200 Karrinyup Rd, Karrinyup, WA, 6018",
+            "latitude": "-31.8765311",
+            "longitude": "115.7780643",
+            "source_url": "https://www.laubmanandpank.com.au/store-finder",
+            "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+            "status_evidence_url": "https://www.laubmanandpank.com.au/store/karrinyup-optometrist",
+            "status_verified_at": "2026-10-08",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 0.07678750384733177,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "independent-other-optical-reviewed-au-sunglass-hut-myer-karrinyup-b820",
+            "retailer": "Independent / Other optical",
+            "name": "Sunglass Hut Myer Karrinyup",
+            "business_type": "Sunglasses retail",
+            "status": "Active",
+            "full_address": "Myer, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018",
+            "latitude": "-31.8773623",
+            "longitude": "115.7766448",
+            "source_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
+            "fetched_at": "2026-10-08",
+            "status_evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
+            "status_verified_at": "2026-10-08",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "distance_km": 0.08602932872917647,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "specsavers-3436",
+            "retailer": "Specsavers",
+            "name": "Karrinyup S/C",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "200 Karrinyup Road, SPO230/1 Karrinyup Shopping Centre, Karrinyup, WA, 6018",
+            "latitude": "-31.877384",
+            "longitude": "115.77818",
+            "source_url": "https://www.specsavers.com.au/stores/karrinyup",
+            "fetched_at": "2026-09-01T23:21:29.969Z",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 0.0896363012585204,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "opsm-1370",
+            "retailer": "OPSM",
+            "name": "OPSM Karrinyup",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "200 Karrinyup Rd, Karrinyup, WA, 6018",
+            "latitude": "-31.87684",
+            "longitude": "115.77838",
+            "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
+            "fetched_at": "2026-09-01T07:42:23+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 0.09322879396628944,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "independent-other-optical-reviewed-au-sunglass-hut-karrinyup",
+            "retailer": "Independent / Other optical",
+            "name": "Sunglass Hut Karrinyup",
+            "business_type": "Sunglasses retail",
+            "status": "Active",
+            "full_address": "Shop 59B, Ground, Karrinyup Shopping Centre, 200 Karrinyup Rd, Karrinyup WA 6018",
+            "latitude": "-31.8765565",
+            "longitude": "115.7784366",
+            "source_url": "https://stores.sunglasshut.com/au/wa/karrinyup/shop-59b-ground-karrinyup-shopping-centre",
+            "fetched_at": "2026-09-28",
+            "status_evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/shop-59b-ground-karrinyup-shopping-centre",
+            "status_verified_at": "2026-09-28",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "distance_km": 0.1063720293126886,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "independent-other-optical-osm-au-node-11397913900",
+            "retailer": "Independent / Other optical",
+            "name": "Vision West",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop SP0003, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018",
+            "latitude": "-31.8763318",
+            "longitude": "115.778465",
+            "source_url": "https://www.openstreetmap.org/node/11397913900",
+            "fetched_at": "2026-09-01T07:48:20.085579Z",
+            "status_evidence_url": "https://www.visionwest.com.au/contact/",
+            "status_verified_at": "2026-09-28",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "distance_km": 0.12054536057068362,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "oscar-wylee-134",
+            "retailer": "Oscar Wylee",
+            "name": "Karrinyup",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Karrinyup Shopping Centre, Shop SPO284, 200 Karrinyup Rd, Karrinyup WA 6018",
+            "latitude": "-31.876505088594",
+            "longitude": "115.77607600055",
+            "source_url": "https://www.oscarwylee.com.au/locations/optometrist-karrinyup.html",
+            "fetched_at": "2026-09-01T07:43:15+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 0.13335501651230044,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "independent-other-optical-reviewed-au-specs-smart-gwelup",
+            "retailer": "Independent / Other optical",
+            "name": "Specs Smart Optometrist",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop 9, 707 North Beach Road, Gwelup WA 6018",
+            "latitude": "-31.8757537873521",
+            "longitude": "115.797818288356",
+            "source_url": "https://www.specssmart.vision/",
+            "fetched_at": "2026-09-24",
+            "status_evidence_url": "https://www.specssmart.vision/",
+            "status_verified_at": "2026-09-24",
+            "stale_source_warning": false,
+            "quality_notes": "location setting needs review",
+            "distance_km": 1.9326086998850514,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "independent-other-optical-provision-17843",
+            "retailer": "Independent / Other optical",
+            "name": "Cooper and Lourie Family Optometrists",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Shop 1126, Westfield Innaloo, 388 Scarborough Beach Road, Innaloo, Western Australia, 6018",
+            "latitude": "-31.9013058",
+            "longitude": "115.79906860000006",
+            "source_url": "https://www.provision.com.au/search-results/",
+            "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 3.3962447653901897,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "oscar-wylee-149",
+            "retailer": "Oscar Wylee",
+            "name": "Westfield Innaloo",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Westfield Innaloo, Shop 1-1067/8, Ellen Stirling Blvd Innaloo, WA 6018",
+            "latitude": "-31.900849402226",
+            "longitude": "115.79980644498",
+            "source_url": "https://www.oscarwylee.com.au/locations/optometrist-innaloo.html",
+            "fetched_at": "2026-09-01T07:43:15+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 3.3987998365414596,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "specsavers-3473",
+            "retailer": "Specsavers",
+            "name": "Innaloo Westfield",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Innaloo Westfield, Ellen Stirling Boulevard, Innaloo, WA, 6018",
+            "latitude": "-31.901112",
+            "longitude": "115.799706",
+            "source_url": "https://www.specsavers.com.au/stores/innaloo",
+            "fetched_at": "2026-09-01T23:21:29.969Z",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 3.4158437489998255,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "opsm-1361",
+            "retailer": "OPSM",
+            "name": "OPSM Innaloo",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Ellen Sterling Boulevard, Innaloo, WA, 6018",
+            "latitude": "-31.9013",
+            "longitude": "115.79995",
+            "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
+            "fetched_at": "2026-09-01T07:42:23+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 3.446508497248229,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "independent-other-optical-reviewed-au-specs-sensation-stirling",
+            "retailer": "Independent / Other optical",
+            "name": "Specs Sensation",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Tenancy 11, Roselea Shopping Centre, 732 Karrinyup Road, Stirling WA 6021",
+            "latitude": "-31.8898734",
+            "longitude": "115.8212211",
+            "source_url": "https://specssensation.com.au/contact/",
+            "fetched_at": "2026-10-08",
+            "status_evidence_url": "https://specssensation.com.au/contact/",
+            "status_verified_at": "2026-10-08",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "distance_km": 4.380985293473179,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "opsm-1077",
+            "retailer": "OPSM",
+            "name": "OPSM Warwick",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Cnr Beach Rd & Ernidale Rd, Warwick, WA, 6024",
+            "latitude": "-31.844",
+            "longitude": "115.81088",
+            "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
+            "fetched_at": "2026-09-01T07:42:23+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 4.837787430623364,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "specsavers-3462",
+            "retailer": "Specsavers",
+            "name": "Warwick Grove",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Shop SP010 Warwick Grove, Beach Road, Warwick, WA, 6024",
+            "latitude": "-31.844387",
+            "longitude": "115.81181",
+            "source_url": "https://www.specsavers.com.au/stores/warwick",
+            "fetched_at": "2026-09-01T23:21:29.969Z",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 4.863543960324832,
+            "accepted_destination_member": false
+          }
+        ],
+        "within_2km": 10,
+        "within_5km": 17,
+        "method": "Current non-BN competitors at <=2/5 km straight-line distance from the recorded point. All settings eligible. Radius does not establish membership or customer catchment; observed counts may be incomplete. Stale-source warnings remain separate."
+      },
+      "directory_summary": {
+        "place_id": "place-au-wa-karrinyup-shopping-centre",
+        "name": "Karrinyup Shopping Centre",
+        "research_status": "Directory captured; limitations retained",
+        "observed_at": "2026-10-08",
+        "source_effective_date": null,
+        "source_listing_count": 315,
+        "in_scope_non_optical_listings": 302,
+        "coming_soon_listings": 5,
+        "held_scope_listings": 0,
+        "outside_or_unresolved_address_listings": 0,
+        "rows_with_exceptions": 2,
+        "unclassified_listings": 2,
+        "categories": [
+          {
+            "name": "Fashion and accessories",
+            "listing_count": 117,
+            "examples": [
+              {
+                "name": "Adidas",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/adidas"
+              },
+              {
+                "name": "Aje",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/aje"
+              },
+              {
+                "name": "Angus & Coote",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/angus-coote"
+              }
+            ]
+          },
+          {
+            "name": "Health and beauty (combined source category)",
+            "listing_count": 59,
+            "examples": [
+              {
+                "name": "Aesop",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/aesop"
+              },
+              {
+                "name": "Afterglo Pilates",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/afterglo-pilates"
+              },
+              {
+                "name": "Alchemy Saunas",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/alchemy-saunas"
+              }
+            ]
+          },
+          {
+            "name": "Food and dining",
+            "listing_count": 57,
+            "examples": [
+              {
+                "name": "3 Panda's Noodle & Dumpling House",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/3-panda-s-noodle-dumpling-house"
+              },
+              {
+                "name": "Arirang Korean BBQ",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/arirang-korean-bbq"
+              },
+              {
+                "name": "Asian Fusion Delight",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/thaitan-thai-cuisine"
+              }
+            ]
+          },
+          {
+            "name": "Services",
+            "listing_count": 25,
+            "examples": [
+              {
+                "name": "ANZ",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/anz"
+              },
+              {
+                "name": "Australia Post",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/australia-post"
+              },
+              {
+                "name": "BUPA",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/bupa"
+              }
+            ]
+          },
+          {
+            "name": "Home and technology (combined source category)",
+            "listing_count": 19,
+            "examples": [
+              {
+                "name": "Adairs",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/adairs"
+              },
+              {
+                "name": "Bed Bath N' Table",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/bed-bath-n-table"
+              },
+              {
+                "name": "Coco Republic",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/coco-republic"
+              }
+            ]
+          },
+          {
+            "name": "Grocery and fresh food",
+            "listing_count": 14,
+            "examples": [
+              {
+                "name": "Aldi",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/aldi"
+              },
+              {
+                "name": "Bakers Delight",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/bakers-delight"
+              },
+              {
+                "name": "Breadtop",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/breadtop"
+              }
+            ]
+          },
+          {
+            "name": "Toys and hobbies",
+            "listing_count": 11,
+            "examples": [
+              {
+                "name": "David Jones",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/david-jones"
+              },
+              {
+                "name": "Games World",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/games-world"
+              },
+              {
+                "name": "Juno Kids",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/juno-kids"
+              }
+            ]
+          },
+          {
+            "name": "Books and stationery",
+            "listing_count": 7,
+            "examples": [
+              {
+                "name": "David Jones",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/david-jones"
+              },
+              {
+                "name": "Dymocks",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/dymocks"
+              },
+              {
+                "name": "Full Hand Lottery Kiosk",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/full-hand-lottery-kiosk"
+              }
+            ]
+          },
+          {
+            "name": "General retail",
+            "listing_count": 7,
+            "examples": [
+              {
+                "name": "David Jones",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/david-jones"
+              },
+              {
+                "name": "MiYu Japan",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/miyu-japan"
+              },
+              {
+                "name": "Mooii",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/mooii"
+              }
+            ]
+          },
+          {
+            "name": "Entertainment",
+            "listing_count": 5,
+            "examples": [
+              {
+                "name": "Archie Brothers",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/archie-brothers-cirque-electriq"
+              },
+              {
+                "name": "Hijinx Hotel",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/hijinx-hotel"
+              },
+              {
+                "name": "Holey Moley",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/holey-moley"
+              }
+            ]
+          },
+          {
+            "name": "Unclassified directory listing",
+            "listing_count": 2,
+            "examples": [
+              {
+                "name": "Alter it",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/alter-it"
+              },
+              {
+                "name": "Audika Hearing Clinic",
+                "source_url": "https://www.karrinyupcentre.com.au/stores-services/audika-hearing-clinic"
+              }
+            ]
+          }
+        ],
+        "scope": "Published official centre directory. Listings include services and may include internal outlets or concessions.",
+        "coverage_limitations": [
+          "Directory-listed businesses have not all been independently checked for current trading.",
+          "Listing counts are not unique brands, occupied tenancies, frontage exposure or floor-area shares.",
+          "A listing may have more than one category; category counts must not be added as a total.",
+          "Source categories may be broad or inconsistent; unclassified and combined categories remain visible.",
+          "Optical competition uses the separately validated census, including accepted concessions missing from directories."
+        ],
+        "tenancy_count_share": null,
+        "floor_area_share": null,
+        "share_unavailable_reason": "No compatible occupied-tenancy or category-floor-area denominator.",
+        "source_urls": [
+          "https://www.karrinyupcentre.com.au/stores-services"
+        ]
+      },
+      "directory_record_ids": [
+        "place-au-wa-karrinyup-shopping-centre::8e253397-5577-4d72-95cb-ba8b6b45d328",
+        "place-au-wa-karrinyup-shopping-centre::fcc3ecef-7789-4851-bdff-4151c8d65a37",
+        "place-au-wa-karrinyup-shopping-centre::df69adfe-2b7f-4ed1-baa2-38b12fea4360",
+        "place-au-wa-karrinyup-shopping-centre::02f829a4-d086-4de4-a6d5-ef5eadf8eded",
+        "place-au-wa-karrinyup-shopping-centre::ec2219f9-2c54-4463-b244-8f3f9b24ddc6",
+        "place-au-wa-karrinyup-shopping-centre::ffbd3182-4398-4f5c-907b-6b5f22348acb",
+        "place-au-wa-karrinyup-shopping-centre::9fadd4b9-9b4d-4d36-b905-75511a25c170",
+        "place-au-wa-karrinyup-shopping-centre::aa7aae6c-9587-41d8-8520-ffdeca01b2f8",
+        "place-au-wa-karrinyup-shopping-centre::62a21308-c8f9-4721-9bb3-c756cd463154",
+        "place-au-wa-karrinyup-shopping-centre::80a16490-bc7c-4869-ac3d-77120deccd91",
+        "place-au-wa-karrinyup-shopping-centre::bf2e5811-6b79-4e75-b38d-623c1ab5b5fc",
+        "place-au-wa-karrinyup-shopping-centre::d2e4f642-58d5-45a6-ad39-f93d9d06e400",
+        "place-au-wa-karrinyup-shopping-centre::a687ff5d-0fa0-4a82-8a45-e0279c230426",
+        "place-au-wa-karrinyup-shopping-centre::405e2e37-7dcf-4599-8a8f-ccffc30633ce",
+        "place-au-wa-karrinyup-shopping-centre::447336af-47e6-4b20-a292-f9627a936a13",
+        "place-au-wa-karrinyup-shopping-centre::7f4fd151-aafc-4046-9a0d-a63daebac748",
+        "place-au-wa-karrinyup-shopping-centre::f41fc295-9887-49f0-bb84-e4cb5a3320bd",
+        "place-au-wa-karrinyup-shopping-centre::45015ea6-4102-4427-a0fc-2fb7eac607f7",
+        "place-au-wa-karrinyup-shopping-centre::4dfff03e-638e-4cd2-bfde-14b57f3eb087",
+        "place-au-wa-karrinyup-shopping-centre::00fb815c-10e6-4a95-b0dd-e7d0e38f7422",
+        "place-au-wa-karrinyup-shopping-centre::90260e84-6eb4-49f5-b4c2-0fb4b8e07afc",
+        "place-au-wa-karrinyup-shopping-centre::facd2e6d-e9b3-46f1-9ec3-943598b78aaa",
+        "place-au-wa-karrinyup-shopping-centre::8cca88d8-806c-4abc-bc03-ad18d5964084",
+        "place-au-wa-karrinyup-shopping-centre::fbbe4592-0f88-4d7d-8f5a-07aec3d6f056",
+        "place-au-wa-karrinyup-shopping-centre::8e28f03d-16fc-4503-9d87-ba47cd8a6329",
+        "place-au-wa-karrinyup-shopping-centre::8435bb05-1f38-457f-9c9f-c4b0b953e3ec",
+        "place-au-wa-karrinyup-shopping-centre::eaabaae2-3eff-49f3-94e3-dc6162e26c3b",
+        "place-au-wa-karrinyup-shopping-centre::e5e98879-25c8-4b87-97b5-04bf3cd4e2ef",
+        "place-au-wa-karrinyup-shopping-centre::6771683a-8d65-49a7-b5c2-b7883ccadb05",
+        "place-au-wa-karrinyup-shopping-centre::80f430b6-14bd-4ea0-9aec-b530b0a7d115",
+        "place-au-wa-karrinyup-shopping-centre::f75e9d82-766e-4111-83cb-0e5df3a488fc",
+        "place-au-wa-karrinyup-shopping-centre::181e5b06-e957-4063-8611-75a4426370e8",
+        "place-au-wa-karrinyup-shopping-centre::aadeb524-d54b-4a0f-94bb-f1d105ea34d0",
+        "place-au-wa-karrinyup-shopping-centre::399b42d8-e55f-4dba-937b-073a39a78467",
+        "place-au-wa-karrinyup-shopping-centre::d4fd0870-8bed-4a22-80c3-8db1a4da3537",
+        "place-au-wa-karrinyup-shopping-centre::d94e0433-78b0-45f5-b4ec-2a23a6cbf2d0",
+        "place-au-wa-karrinyup-shopping-centre::c6943ace-efd9-45e5-a0be-6c85b6d949f8",
+        "place-au-wa-karrinyup-shopping-centre::42d111fb-0d42-410a-a120-17098875bd9f",
+        "place-au-wa-karrinyup-shopping-centre::a382d57f-86b9-49e1-9ab0-11327fe3960c",
+        "place-au-wa-karrinyup-shopping-centre::dc1529f0-476f-4e5b-8c6d-be4defaf16e4",
+        "place-au-wa-karrinyup-shopping-centre::5c4c775a-8aab-4943-bcad-fd0513ebebd5",
+        "place-au-wa-karrinyup-shopping-centre::7de57236-4643-4250-bf53-22edad80f76a",
+        "place-au-wa-karrinyup-shopping-centre::a2a1be28-62ee-4861-af70-c3627ff29a32",
+        "place-au-wa-karrinyup-shopping-centre::13c5a7a9-a316-4e12-96f5-64ca0bdf6342",
+        "place-au-wa-karrinyup-shopping-centre::4eafa5ec-5124-4fb6-85a1-f7ea410448b8",
+        "place-au-wa-karrinyup-shopping-centre::2475caab-82a3-4094-9141-5cfe864a82ba",
+        "place-au-wa-karrinyup-shopping-centre::66cb8629-b0af-4a3a-82f0-650663aaee30",
+        "place-au-wa-karrinyup-shopping-centre::225c9575-5d58-4715-8ebe-346306ca2035",
+        "place-au-wa-karrinyup-shopping-centre::0fe5c242-5544-41e3-b4ca-7638443b0ab5",
+        "place-au-wa-karrinyup-shopping-centre::7d967a22-07fb-4ade-b8cb-53adaa6c120d",
+        "place-au-wa-karrinyup-shopping-centre::358dff6b-ef73-4c7f-b9cd-f574652af788",
+        "place-au-wa-karrinyup-shopping-centre::c5296b07-173a-4834-8b31-c1c4bc6141eb",
+        "place-au-wa-karrinyup-shopping-centre::158674f6-d819-4b9e-8015-177cecd9aeef",
+        "place-au-wa-karrinyup-shopping-centre::887b4725-8c51-440f-b738-65fa964670a0",
+        "place-au-wa-karrinyup-shopping-centre::5d8bf2eb-81f6-41af-a18d-7f46a50a890e",
+        "place-au-wa-karrinyup-shopping-centre::29c16914-4a27-4388-9b3f-ea4e837cd0c5",
+        "place-au-wa-karrinyup-shopping-centre::403bcf44-c6de-4ade-a628-d9a3f91e70ae",
+        "place-au-wa-karrinyup-shopping-centre::8a13a673-8b41-4b1c-a2aa-6634bc06db40",
+        "place-au-wa-karrinyup-shopping-centre::649f2645-8080-4300-b8cb-0073910e779c",
+        "place-au-wa-karrinyup-shopping-centre::818f3a15-a637-4138-833b-81beaa55bd8b",
+        "place-au-wa-karrinyup-shopping-centre::eb842ba2-b952-4fb0-a208-294de71150f0",
+        "place-au-wa-karrinyup-shopping-centre::1c2ef5bc-7e5a-4907-9804-efce2fac3a42",
+        "place-au-wa-karrinyup-shopping-centre::5e315548-3718-449d-9533-4523c959e73a",
+        "place-au-wa-karrinyup-shopping-centre::3236dbff-4c81-4d87-b59f-eb346a98c77d",
+        "place-au-wa-karrinyup-shopping-centre::7a05170e-62c7-4ff6-a7ef-7e39a324d5ea",
+        "place-au-wa-karrinyup-shopping-centre::78fb465c-5eb6-49ee-9949-0b443ba58b6d",
+        "place-au-wa-karrinyup-shopping-centre::b73dc95f-3687-4d63-ae86-f161f274e6ad",
+        "place-au-wa-karrinyup-shopping-centre::6cfb07df-fc20-46bd-b115-72bb3e69e120",
+        "place-au-wa-karrinyup-shopping-centre::e3d2c92d-a317-4c51-a396-9f4a82a40428",
+        "place-au-wa-karrinyup-shopping-centre::3696e914-a0d0-4985-ab0e-e0deaef4698d",
+        "place-au-wa-karrinyup-shopping-centre::cb86ac0e-d588-46b2-b55d-66531a1484d8",
+        "place-au-wa-karrinyup-shopping-centre::17c291a3-95bd-491f-b0d8-61e96b30ddef",
+        "place-au-wa-karrinyup-shopping-centre::a65ddaf0-b047-4138-bf66-8f8b07d29c50",
+        "place-au-wa-karrinyup-shopping-centre::d8d1c273-019b-4720-88c6-40bd62c1e07d",
+        "place-au-wa-karrinyup-shopping-centre::051cb323-b9a9-4f3c-b7b2-bd9f90e53418",
+        "place-au-wa-karrinyup-shopping-centre::24fc210e-7fb4-44a1-b94a-db9d9f9abd10",
+        "place-au-wa-karrinyup-shopping-centre::af18c2f1-b939-4763-9288-7d969189b280",
+        "place-au-wa-karrinyup-shopping-centre::4c07f14b-ef62-4bd3-ae8b-6c559c0b52b0",
+        "place-au-wa-karrinyup-shopping-centre::c91cf98d-8a26-4cd5-92a5-0d75c94d2545",
+        "place-au-wa-karrinyup-shopping-centre::c50293ad-8815-44a0-8a30-7b0e65c06c70",
+        "place-au-wa-karrinyup-shopping-centre::0d3d1d64-267c-460e-bfe8-3c36e68da55d",
+        "place-au-wa-karrinyup-shopping-centre::d75afc1d-a5b4-47f5-a00e-1a1aa4916543",
+        "place-au-wa-karrinyup-shopping-centre::92b411ab-7b1f-4670-b1f2-3aa41a10fbc4",
+        "place-au-wa-karrinyup-shopping-centre::e75ced49-bfdc-4f93-a06e-3e951dcd0aba",
+        "place-au-wa-karrinyup-shopping-centre::bc2aee8f-83fb-4af5-8be5-8a70cfe9e4c5",
+        "place-au-wa-karrinyup-shopping-centre::9393ef80-0f59-41e3-9c71-000885e49115",
+        "place-au-wa-karrinyup-shopping-centre::89951a37-a05b-49f6-8bb4-744733570bcf",
+        "place-au-wa-karrinyup-shopping-centre::43f142a3-8a74-450c-8e0e-bef93f61e63d",
+        "place-au-wa-karrinyup-shopping-centre::eefce111-c68b-4121-9af1-e21686952012",
+        "place-au-wa-karrinyup-shopping-centre::3b02e337-224c-4198-8bf8-e09d94865980",
+        "place-au-wa-karrinyup-shopping-centre::a0e9cebc-b3c1-43cc-a44d-d193bd019010",
+        "place-au-wa-karrinyup-shopping-centre::a2394c65-0566-4cd4-a1ff-b3913406ed65",
+        "place-au-wa-karrinyup-shopping-centre::3c41bba8-34f2-4942-b1b7-62d42c28ae99",
+        "place-au-wa-karrinyup-shopping-centre::7cbd072c-ac0e-4c6c-8aec-7db1e2479f24",
+        "place-au-wa-karrinyup-shopping-centre::b6cad401-1179-482b-946f-4dd58de0ae9a",
+        "place-au-wa-karrinyup-shopping-centre::8ed3194c-21d9-44b5-bc02-25338942561c",
+        "place-au-wa-karrinyup-shopping-centre::e6a2a430-82e6-438f-bb55-e0aca83b1ffa",
+        "place-au-wa-karrinyup-shopping-centre::6ce49f1b-775c-4c42-810c-19f27385fffe",
+        "place-au-wa-karrinyup-shopping-centre::ff9593fb-41a1-48f6-944e-3ce44e8f80b7",
+        "place-au-wa-karrinyup-shopping-centre::8724d799-524a-4092-9bf3-77f156f0116e",
+        "place-au-wa-karrinyup-shopping-centre::20418965-1e00-436b-918b-ca0ef69684b2",
+        "place-au-wa-karrinyup-shopping-centre::39de6670-2781-485c-8efc-f4ed0197fffd",
+        "place-au-wa-karrinyup-shopping-centre::b8c41b6f-5765-4628-a29a-6bc16d34345a",
+        "place-au-wa-karrinyup-shopping-centre::fc56a9f4-9c7f-4d09-ab97-dc9beb4ab543",
+        "place-au-wa-karrinyup-shopping-centre::275f8131-855e-4379-825f-0430d69f9185",
+        "place-au-wa-karrinyup-shopping-centre::3c127978-3ed7-49e5-977f-de7551018a9e",
+        "place-au-wa-karrinyup-shopping-centre::ab64a8e5-ef11-40ab-b75c-b1b07efc6c3d",
+        "place-au-wa-karrinyup-shopping-centre::22983391-73e4-4420-867b-4b36fc0cc966",
+        "place-au-wa-karrinyup-shopping-centre::c3b4d415-c3fc-4246-a549-92f44d0965ae",
+        "place-au-wa-karrinyup-shopping-centre::450e2b9e-a7b1-42bc-9c88-1bb81e0a89f7",
+        "place-au-wa-karrinyup-shopping-centre::25304256-986b-445a-87e6-7163f2fd23b6",
+        "place-au-wa-karrinyup-shopping-centre::f8210701-9acf-4f88-a582-06c9dde6d3f6",
+        "place-au-wa-karrinyup-shopping-centre::0dc410dc-b281-4083-9c8b-bb2ab26a6c35",
+        "place-au-wa-karrinyup-shopping-centre::f1926c67-6e46-4988-9315-030072648332",
+        "place-au-wa-karrinyup-shopping-centre::6a4d85ef-3398-4121-a5cf-9f95854f91b6",
+        "place-au-wa-karrinyup-shopping-centre::73282e23-0b94-49e5-bd0a-167373ef4ead",
+        "place-au-wa-karrinyup-shopping-centre::b51f2604-2e43-4245-802a-348daf907fae",
+        "place-au-wa-karrinyup-shopping-centre::38a36f6b-9e1c-4bff-9b44-5f33583f30bd",
+        "place-au-wa-karrinyup-shopping-centre::717d6752-ba9e-48c7-bbd1-51725080eac5",
+        "place-au-wa-karrinyup-shopping-centre::2c9f9481-ecfb-4994-956a-dc5d5e41e2ba",
+        "place-au-wa-karrinyup-shopping-centre::5869dbd6-dab0-403f-bf73-da173a18543e",
+        "place-au-wa-karrinyup-shopping-centre::727fdf0c-ce5c-48d6-a12d-0f56884e5d49",
+        "place-au-wa-karrinyup-shopping-centre::8f66ca8c-4071-44dc-96c2-0d5535053e14",
+        "place-au-wa-karrinyup-shopping-centre::e6e87806-bfde-4399-ace7-d01f7df212d4",
+        "place-au-wa-karrinyup-shopping-centre::ad338155-fd7c-44ed-bdf4-fe4fcd72b489",
+        "place-au-wa-karrinyup-shopping-centre::a387f9b9-a5b4-498e-b232-2f1109690019",
+        "place-au-wa-karrinyup-shopping-centre::9e18eb17-f65d-49fe-b2ff-0409c5eca490",
+        "place-au-wa-karrinyup-shopping-centre::8cd70670-cbbb-47ea-a3dc-01614ce034be",
+        "place-au-wa-karrinyup-shopping-centre::2d50cc01-4fd4-4f6f-bbd8-8414f138d9f9",
+        "place-au-wa-karrinyup-shopping-centre::319bc98b-73cb-4efc-88fa-1561f632dbea",
+        "place-au-wa-karrinyup-shopping-centre::ce7efbe1-3094-40a1-b0f1-2833cf2f57c1",
+        "place-au-wa-karrinyup-shopping-centre::83baf069-a31d-4918-8e37-55bb981873cc",
+        "place-au-wa-karrinyup-shopping-centre::5b35df97-efd7-4754-849c-838189cdd779",
+        "place-au-wa-karrinyup-shopping-centre::15f13a7d-e9cd-4cb8-9b1c-5085d8f25f66",
+        "place-au-wa-karrinyup-shopping-centre::2ad4fcb1-3cfb-40e8-8c5a-5acaa52da3d2",
+        "place-au-wa-karrinyup-shopping-centre::bec52f74-4c6c-406f-8336-9037ab02707a",
+        "place-au-wa-karrinyup-shopping-centre::3b91c2a4-af4b-4c60-8bbf-5e4dde59576f",
+        "place-au-wa-karrinyup-shopping-centre::b3848951-68b7-41da-9ba2-6eeda8344687",
+        "place-au-wa-karrinyup-shopping-centre::0746e473-119f-48b8-8b2b-e7de795a69b1",
+        "place-au-wa-karrinyup-shopping-centre::4c86443e-4239-4059-ac7a-a6b6fe3599c5",
+        "place-au-wa-karrinyup-shopping-centre::e37d227c-7a32-4e9d-8577-168792e31f0a",
+        "place-au-wa-karrinyup-shopping-centre::80ec1e41-9a26-4e5d-b07a-9d74ea2c3d1e",
+        "place-au-wa-karrinyup-shopping-centre::ea36cafa-66fc-44a2-9b07-26e17c598493",
+        "place-au-wa-karrinyup-shopping-centre::fcf4024a-33d4-44b5-af49-81f5c0554220",
+        "place-au-wa-karrinyup-shopping-centre::38e29e06-b1ff-4835-b3d2-ffd1a3f0965d",
+        "place-au-wa-karrinyup-shopping-centre::6f229e12-1f92-457d-9f14-a23d0c9d32ee",
+        "place-au-wa-karrinyup-shopping-centre::16a79617-e36e-4475-b5db-1faf698c8f6c",
+        "place-au-wa-karrinyup-shopping-centre::c0189ab7-a6be-47d4-9295-ae949408c580",
+        "place-au-wa-karrinyup-shopping-centre::6cead261-d87b-43ff-81f5-908aa931acfd",
+        "place-au-wa-karrinyup-shopping-centre::ccc913a6-215f-4caf-9c99-c84863029d1a",
+        "place-au-wa-karrinyup-shopping-centre::78a1461f-ce40-4f47-9c57-e8a6bbcc8585",
+        "place-au-wa-karrinyup-shopping-centre::7ae2e0bb-7a28-4d8d-af2f-3093873adf86",
+        "place-au-wa-karrinyup-shopping-centre::3d9b6504-11d4-4292-9a1f-77ce3056573e",
+        "place-au-wa-karrinyup-shopping-centre::673cfe72-1c56-4e1d-896e-1004cbf3959f",
+        "place-au-wa-karrinyup-shopping-centre::0d4e7786-d4f7-4eeb-b997-ea32d3197281",
+        "place-au-wa-karrinyup-shopping-centre::83b58360-b000-45be-be7f-692e3473667a",
+        "place-au-wa-karrinyup-shopping-centre::1aebf226-cc93-4b12-8f96-13d443fb59e0",
+        "place-au-wa-karrinyup-shopping-centre::7bb261f1-2b5f-46fb-a339-bd12fe3c7bf9",
+        "place-au-wa-karrinyup-shopping-centre::3dbe78f6-31f7-4bd6-b5bd-13f159439a0f",
+        "place-au-wa-karrinyup-shopping-centre::574da91a-69b4-46c9-ae32-531f87af5dd9",
+        "place-au-wa-karrinyup-shopping-centre::f77ec86b-196e-405b-b3fa-cc24da8b047e",
+        "place-au-wa-karrinyup-shopping-centre::bd288bc8-25b6-4126-8a0d-63d67292bfd3",
+        "place-au-wa-karrinyup-shopping-centre::7b7bcb58-3023-476a-880c-1b1ad35bc4ad",
+        "place-au-wa-karrinyup-shopping-centre::23340bae-2779-4bcd-87c1-3b3c9d64d215",
+        "place-au-wa-karrinyup-shopping-centre::69981685-ff1c-4aa5-a00f-0eb2dfe97842",
+        "place-au-wa-karrinyup-shopping-centre::1241e3ad-4141-4179-8a20-43411dea7d54",
+        "place-au-wa-karrinyup-shopping-centre::4440c586-15b9-4acd-bd74-0cbff0258e8b",
+        "place-au-wa-karrinyup-shopping-centre::22d927a6-f470-47f5-ba15-b0260d884355",
+        "place-au-wa-karrinyup-shopping-centre::d79170bb-2679-4c6e-bebc-d6132d620ba7",
+        "place-au-wa-karrinyup-shopping-centre::a652bb1f-1f27-45d2-8b84-44d2e8cd3711",
+        "place-au-wa-karrinyup-shopping-centre::10df404d-e139-49cf-8e7a-0d3ec2be59f9",
+        "place-au-wa-karrinyup-shopping-centre::5cd62723-cab0-42e2-a755-0fd4b53c2ae6",
+        "place-au-wa-karrinyup-shopping-centre::662529f4-b200-4f31-ac31-4247cd2c412b",
+        "place-au-wa-karrinyup-shopping-centre::3826a0ca-5ac4-4082-806e-cb4bb130d8e2",
+        "place-au-wa-karrinyup-shopping-centre::4f769710-3955-45b0-bcdc-d8f2e7324a05",
+        "place-au-wa-karrinyup-shopping-centre::445614cd-c5e2-42de-84a1-f14f29a80264",
+        "place-au-wa-karrinyup-shopping-centre::39988522-010f-4002-98a5-2ed77cacf014",
+        "place-au-wa-karrinyup-shopping-centre::a949a053-77e7-4344-b234-70df19f3cc0e",
+        "place-au-wa-karrinyup-shopping-centre::4a3ac323-9751-4c64-8814-51ce7de7513a",
+        "place-au-wa-karrinyup-shopping-centre::0dd8f51a-801f-4803-b83c-51c7c44172c0",
+        "place-au-wa-karrinyup-shopping-centre::f1d4ea63-e3b6-4b72-a7d1-c698e94c57c1",
+        "place-au-wa-karrinyup-shopping-centre::6c5b811c-9588-4395-bcca-bcfff726b128",
+        "place-au-wa-karrinyup-shopping-centre::42d57614-27b8-44b5-9db8-e8ac97f560be",
+        "place-au-wa-karrinyup-shopping-centre::43f6e615-1eea-474e-b063-054e172de8ad",
+        "place-au-wa-karrinyup-shopping-centre::7cc308f3-0bb6-494d-a0cb-a69faa30508b",
+        "place-au-wa-karrinyup-shopping-centre::5d269b84-0ca1-4d1a-9619-9de8ac50dbad",
+        "place-au-wa-karrinyup-shopping-centre::7b298f35-e067-459a-b65f-f8ff92be5e2f",
+        "place-au-wa-karrinyup-shopping-centre::ffc359ea-1086-47e4-968a-5b3033ea203d",
+        "place-au-wa-karrinyup-shopping-centre::ff9cf520-deb5-4072-a11b-cad063e930c9",
+        "place-au-wa-karrinyup-shopping-centre::ec8d88b4-7ca2-4cd1-9591-d6c877135044",
+        "place-au-wa-karrinyup-shopping-centre::6d1a21d8-cf7b-4a38-87e0-fccf237f9f98",
+        "place-au-wa-karrinyup-shopping-centre::b9aabf2b-5081-45cf-b7ad-493c86c6a046",
+        "place-au-wa-karrinyup-shopping-centre::ce9fde8a-2302-48ff-93ab-319671aef4e7",
+        "place-au-wa-karrinyup-shopping-centre::aec7df9f-83bd-44e8-8b29-edf10b3c872b",
+        "place-au-wa-karrinyup-shopping-centre::b238dbb9-1778-4d44-b894-a11fb236af8c",
+        "place-au-wa-karrinyup-shopping-centre::70e33853-5f4b-490a-bcd9-23aae2d92295",
+        "place-au-wa-karrinyup-shopping-centre::d768a252-d9ae-4f3d-a5ad-5810749bc802",
+        "place-au-wa-karrinyup-shopping-centre::1e84d572-e24a-49b4-9999-16e1c2d430d9",
+        "place-au-wa-karrinyup-shopping-centre::be9d4282-856a-45a8-986d-488e286505e7",
+        "place-au-wa-karrinyup-shopping-centre::0900d523-ccb9-4837-8d2d-a2f0ada9bc1a",
+        "place-au-wa-karrinyup-shopping-centre::702c2fa3-f843-488b-98bd-63a6ef5e5749",
+        "place-au-wa-karrinyup-shopping-centre::5b293e7c-49d7-4d27-b148-d4acf970435a",
+        "place-au-wa-karrinyup-shopping-centre::348acd27-f7d8-48f4-bcf8-fe87559a612d",
+        "place-au-wa-karrinyup-shopping-centre::6ff5f55b-a22d-4106-beb2-d0b4eeae6181",
+        "place-au-wa-karrinyup-shopping-centre::02e218e6-2a2d-437d-a152-a5da1b6cb4d6",
+        "place-au-wa-karrinyup-shopping-centre::bba47345-8ecf-4546-87d9-bdf55a76c6c5",
+        "place-au-wa-karrinyup-shopping-centre::a1a542e7-747b-44e9-938d-0dd758c9af49",
+        "place-au-wa-karrinyup-shopping-centre::7cb8584b-5a38-4677-b65e-c0773d9f953e",
+        "place-au-wa-karrinyup-shopping-centre::875da931-df45-4e82-977a-53e459e56187",
+        "place-au-wa-karrinyup-shopping-centre::b0d937f0-b5ae-4281-b0b9-302202f6675c",
+        "place-au-wa-karrinyup-shopping-centre::feb34bc5-2718-45cb-a7de-a0e9484957bd",
+        "place-au-wa-karrinyup-shopping-centre::44d994e6-2b10-4ed5-b042-f37f72c93b21",
+        "place-au-wa-karrinyup-shopping-centre::54fc89d0-eb04-497d-a56e-679169cfa308",
+        "place-au-wa-karrinyup-shopping-centre::092a8007-5946-4973-a17a-a2cd5f770824",
+        "place-au-wa-karrinyup-shopping-centre::1b8d86d0-3028-4da6-846f-23194c5c3c9e",
+        "place-au-wa-karrinyup-shopping-centre::60bac9b3-322a-46f3-ab13-0f97d3303309",
+        "place-au-wa-karrinyup-shopping-centre::9371ddb1-6b41-4846-8857-2d8e01966cc4",
+        "place-au-wa-karrinyup-shopping-centre::28a430b0-7ba8-42f4-b7b1-aaa135b03e07",
+        "place-au-wa-karrinyup-shopping-centre::49e64c81-4402-4dad-a627-e0e307d25cb5",
+        "place-au-wa-karrinyup-shopping-centre::b2fa940b-3b27-4a31-b698-3e9ae484faec",
+        "place-au-wa-karrinyup-shopping-centre::5e5d8546-19c9-4b04-a7e5-9cf6789eb21e",
+        "place-au-wa-karrinyup-shopping-centre::422fe6f2-d965-45e3-a135-f4844833c629",
+        "place-au-wa-karrinyup-shopping-centre::ab4e4a0d-3f36-4554-939c-80f30b6ed491",
+        "place-au-wa-karrinyup-shopping-centre::335adb2b-3a99-4d9b-bb00-8c1fe88b8428",
+        "place-au-wa-karrinyup-shopping-centre::f39af086-7547-428d-b42d-210cf26caf68",
+        "place-au-wa-karrinyup-shopping-centre::45164433-2d81-4218-8286-c3810e6105ca",
+        "place-au-wa-karrinyup-shopping-centre::07e22d45-0fcf-41f7-a65e-36be2ea4a507",
+        "place-au-wa-karrinyup-shopping-centre::762517b0-b599-4056-9023-ecefcf252809",
+        "place-au-wa-karrinyup-shopping-centre::6b9cc1a7-3639-4836-b0ea-d10484c75931",
+        "place-au-wa-karrinyup-shopping-centre::d4ed0848-f759-4bef-a646-b76773823e32",
+        "place-au-wa-karrinyup-shopping-centre::810821c4-1a55-448e-8109-55571beb048a",
+        "place-au-wa-karrinyup-shopping-centre::04f5f9c7-f34e-42bd-ba7b-a83420607b04",
+        "place-au-wa-karrinyup-shopping-centre::8049fd37-a778-4029-9d36-bd44a4df0280",
+        "place-au-wa-karrinyup-shopping-centre::1e554729-3222-4fab-b97d-b3cb3bb71bdb",
+        "place-au-wa-karrinyup-shopping-centre::dfb8d5df-3dac-4de7-abd6-f557d9942ad5",
+        "place-au-wa-karrinyup-shopping-centre::29e7e55a-2b36-4375-a0e2-41e09ad72c1c",
+        "place-au-wa-karrinyup-shopping-centre::7a7f93e7-349d-493e-80a8-fec8046f32a3",
+        "place-au-wa-karrinyup-shopping-centre::191d0860-f687-4925-b008-6b042009eefe",
+        "place-au-wa-karrinyup-shopping-centre::d0e2bea3-d728-47bf-a5dc-88985cb06f79",
+        "place-au-wa-karrinyup-shopping-centre::f9312810-f0ab-4ca9-8c90-e5e20726fd63",
+        "place-au-wa-karrinyup-shopping-centre::6ee30e12-63df-4e53-bd1e-53df9a954986",
+        "place-au-wa-karrinyup-shopping-centre::7e07ff21-2e67-4fbf-a451-9212c2864f4e",
+        "place-au-wa-karrinyup-shopping-centre::7f3f7b1e-1beb-4a9c-8530-bc9341be9ab0",
+        "place-au-wa-karrinyup-shopping-centre::e8fc6e78-f213-478a-aafe-d476e77517b1",
+        "place-au-wa-karrinyup-shopping-centre::f246aa4e-f58e-42f3-a4bf-faf57b1c5375",
+        "place-au-wa-karrinyup-shopping-centre::374f8f77-041b-414a-ab44-9839e9621fa0",
+        "place-au-wa-karrinyup-shopping-centre::c9cab488-44d9-4a00-b660-3801d5ce1d56",
+        "place-au-wa-karrinyup-shopping-centre::d6a7e44a-9caf-4736-bca7-2ab8ee16e274",
+        "place-au-wa-karrinyup-shopping-centre::26380ef5-7ed7-4615-9a02-28b58132dd6d",
+        "place-au-wa-karrinyup-shopping-centre::b408e169-178b-40b0-a101-0f8d7d849974",
+        "place-au-wa-karrinyup-shopping-centre::1cd587b0-850c-494a-b683-cdd714ef35e0",
+        "place-au-wa-karrinyup-shopping-centre::cc767f09-23e0-48e4-ad23-1ae679bc2598",
+        "place-au-wa-karrinyup-shopping-centre::fa87d6eb-fdd0-4e89-aa51-0300866cd19a",
+        "place-au-wa-karrinyup-shopping-centre::e0c54f3c-fceb-4c2e-9f92-7661bb370b00",
+        "place-au-wa-karrinyup-shopping-centre::28aac067-c7db-4080-8c91-257de54572e0",
+        "place-au-wa-karrinyup-shopping-centre::361458d9-86ad-48be-b755-a942f81b2bfd",
+        "place-au-wa-karrinyup-shopping-centre::78146e58-f06b-40d9-8f12-2f5b65a4cd51",
+        "place-au-wa-karrinyup-shopping-centre::ab6a3032-50f7-4b68-92c7-8ef5f4c47cfe",
+        "place-au-wa-karrinyup-shopping-centre::181450aa-3942-4c4d-b471-b68d377d79da",
+        "place-au-wa-karrinyup-shopping-centre::1f87468b-b8ca-4273-9d62-1aec9a65d158",
+        "place-au-wa-karrinyup-shopping-centre::9ee5617f-84c1-4d07-88d4-8ac995154a35",
+        "place-au-wa-karrinyup-shopping-centre::2ce5e8ff-048b-4fc7-be79-578e65d4e3b4",
+        "place-au-wa-karrinyup-shopping-centre::5ef91b0a-bcf7-49d1-8b02-a1486bdffdff",
+        "place-au-wa-karrinyup-shopping-centre::64b5f851-76dc-4efc-b709-8aab642b2ac5",
+        "place-au-wa-karrinyup-shopping-centre::7c4d846c-3455-4d41-83c3-b8802341a7b5",
+        "place-au-wa-karrinyup-shopping-centre::9828f966-26d5-4dd3-a1f3-0ecf722991ed",
+        "place-au-wa-karrinyup-shopping-centre::9c69dbc1-56f6-4b0a-a40a-298b38646eab",
+        "place-au-wa-karrinyup-shopping-centre::4fc4ebdf-8b4c-4760-90e4-4d1461ff66be",
+        "place-au-wa-karrinyup-shopping-centre::ff66a47d-49dc-42ac-80b2-7d81ac9a4ed8",
+        "place-au-wa-karrinyup-shopping-centre::adb957d0-7f61-4499-bcc8-bda5ad9dd3fd",
+        "place-au-wa-karrinyup-shopping-centre::00f50a8a-5c56-42ac-8abb-fe818680b2b1",
+        "place-au-wa-karrinyup-shopping-centre::0b058bf2-1c3f-4d2d-b573-ca2ecab999e3",
+        "place-au-wa-karrinyup-shopping-centre::fc017a06-9693-4929-a5fc-643cd74d0dd0",
+        "place-au-wa-karrinyup-shopping-centre::d3eea134-4d8b-4a41-969a-e7b84d8bbf44",
+        "place-au-wa-karrinyup-shopping-centre::471e6b89-7b27-408a-9b99-e3ccc70b5c71",
+        "place-au-wa-karrinyup-shopping-centre::1f6715b0-4128-49c6-9dbb-3b2caf55a224",
+        "place-au-wa-karrinyup-shopping-centre::f46cc85b-cba7-4c76-81ae-3c6003cdcea3",
+        "place-au-wa-karrinyup-shopping-centre::0da17a8c-e714-4a0d-9452-fbbda3b3183d",
+        "place-au-wa-karrinyup-shopping-centre::0ed20c4f-9c55-4a77-9852-543211967f46",
+        "place-au-wa-karrinyup-shopping-centre::07eb974e-8309-428c-9fdc-4819536ed0a3",
+        "place-au-wa-karrinyup-shopping-centre::746b3d6d-0753-4cc2-86cd-0b089897bf92",
+        "place-au-wa-karrinyup-shopping-centre::3ee6cf97-f5d3-41ab-92c4-102e7b877d9d",
+        "place-au-wa-karrinyup-shopping-centre::646f0e3d-abd7-4fc1-b54e-9609e9bbb2ec",
+        "place-au-wa-karrinyup-shopping-centre::9261b337-dbe1-4c65-a089-2bd314f6b3e6",
+        "place-au-wa-karrinyup-shopping-centre::643dd8d0-b89c-4906-bcdf-bd9b1d207ad7",
+        "place-au-wa-karrinyup-shopping-centre::290f6f94-d127-44fd-a922-30c455d02fd4",
+        "place-au-wa-karrinyup-shopping-centre::399c105a-fa40-44a1-88dd-354fc54e656f",
+        "place-au-wa-karrinyup-shopping-centre::ccbf0958-8633-44e3-b38b-152ab3ab9bfd",
+        "place-au-wa-karrinyup-shopping-centre::c014ac66-c24f-4a24-8d03-d7a7e9906eb7",
+        "place-au-wa-karrinyup-shopping-centre::46173285-9adf-4dce-b49f-3e1d5887ab92",
+        "place-au-wa-karrinyup-shopping-centre::1f6bb236-6f78-4fa7-bcfc-d6b3e3d4cea3",
+        "place-au-wa-karrinyup-shopping-centre::3fbc862d-478b-4881-ace1-37566f904259",
+        "place-au-wa-karrinyup-shopping-centre::0b768216-23b5-46d5-a11e-1a9019f68b13",
+        "place-au-wa-karrinyup-shopping-centre::c995f46d-6358-4847-8497-aca94df979ba",
+        "place-au-wa-karrinyup-shopping-centre::815007c3-dcca-4a46-8f4d-bc450bbdac42",
+        "place-au-wa-karrinyup-shopping-centre::8a4620b8-920a-4505-a96b-7b0554298b1b",
+        "place-au-wa-karrinyup-shopping-centre::9accaf9c-1451-4c0b-9d27-f5a26e5770e2",
+        "place-au-wa-karrinyup-shopping-centre::b9e9f042-4538-4008-a9d6-b22e96101487",
+        "place-au-wa-karrinyup-shopping-centre::8be51906-a9b5-4b29-9350-58ae0d7f940d",
+        "place-au-wa-karrinyup-shopping-centre::f9ab2e63-8bbe-4d3a-9fe6-4da88d638019",
+        "place-au-wa-karrinyup-shopping-centre::09d395ab-b24e-4e61-b57e-8263b51a20e4",
+        "place-au-wa-karrinyup-shopping-centre::02fb6e92-dbbf-40c1-ab0a-d2b13b967b78",
+        "place-au-wa-karrinyup-shopping-centre::0c1cfa51-1bea-4746-acf3-4f54743d4f81",
+        "place-au-wa-karrinyup-shopping-centre::2adf7d1f-7450-440b-9298-d273e63315bc",
+        "place-au-wa-karrinyup-shopping-centre::1f9f908b-48d8-40a0-9f44-b031fccf9756",
+        "place-au-wa-karrinyup-shopping-centre::f475a52c-f777-464a-aef6-a2a87ea10412",
+        "place-au-wa-karrinyup-shopping-centre::7177341a-0ea4-474f-8a3c-48caa113b142",
+        "place-au-wa-karrinyup-shopping-centre::6f26097c-ac3d-4bc9-849c-6d66b914a878",
+        "place-au-wa-karrinyup-shopping-centre::a127f0e8-43da-4660-81e4-aa60825012c0",
+        "place-au-wa-karrinyup-shopping-centre::cabda4ed-3335-4d49-9272-ea524dd4f54a",
+        "place-au-wa-karrinyup-shopping-centre::869120d5-f428-4f2b-9476-d042cb866361",
+        "place-au-wa-karrinyup-shopping-centre::d0799087-94d3-40e2-b9ed-b62342ff7820",
+        "place-au-wa-karrinyup-shopping-centre::985b5b53-8263-4a37-97af-8dbbe688228c",
+        "place-au-wa-karrinyup-shopping-centre::427c6569-4025-4aa1-ae4b-ce4d50b446b5",
+        "place-au-wa-karrinyup-shopping-centre::12ece727-6c33-4cb6-bbeb-05854393b41b"
+      ],
+      "directory_database": "destination_directory.json"
+    },
+    {
+      "place_id": "place-au-nsw-ed-square-town-centre",
+      "extent": "Official Ed.Square Town Centre directory scope; nearby residential development is contextual and is not added to centre membership.",
+      "extent_evidence": {
+        "source_url": "https://edsquare.shopping/about/",
+        "checked_at": "2026-10-08T08:53:13.191330+00:00",
+        "source_date": null,
+        "capture_sha256": "4759be74fb1816681a528c11febeeac89f46bd6ff8afe44dfac1037ea4ae5170"
+      },
+      "access": [
+        {
+          "label": "Station access",
+          "value": "Opposite Edmondson Park station and bus stops. Walking directions cross Henderson Road and follow Sergeant Street about 70 m to the entrance. This is an access description, not measured footfall.",
+          "source_url": "https://edsquare.shopping/visit/",
+          "source_date": null,
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "52e5128d176f5fbcd8f55c57f6dc8f36c32f3a4573f4ab2dbc6ddbde99eb9981",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/visit.json"
+        },
+        {
+          "label": "Parking capacity",
+          "value": "926 spaces, reported April 2026.",
+          "source_url": "https://www.cbre.com.au/press-releases/sydney-s-thriving-ed-square-town-centre-provides-highly-sought-after-retail-investment-opportunity",
+          "source_date": "2026-04-01",
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "2d0132325ff5c6c2447987053ef2fffb264858db414fc93f9510166248b30fe6",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/cbre.json"
+        },
+        {
+          "label": "Parking and accessibility",
+          "value": "The centre publishes three-hour free parking with conditions, accessible and pram bays, and EV charging. Re-entry wording conflicts, so check posted conditions.",
+          "source_url": "https://edsquare.shopping/visit/",
+          "source_date": null,
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "52e5128d176f5fbcd8f55c57f6dc8f36c32f3a4573f4ab2dbc6ddbde99eb9981",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/visit.json"
+        }
+      ],
+      "property_facts": [
+        {
+          "label": "Reported owners",
+          "value": "Assembly Funds Management and PGIM Real Estate. Joint acquisition announced July 2026 and corroborated by a later JLL management statement; exact settlement date, legal holding entities and ownership split remain unverified.",
+          "source_url": "https://www.linkedin.com/posts/nortonrebecca_jllretail-activity-7508277736021557248-6HoM",
+          "source_date": null,
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "b1b63dd14934a313ed199462d93e60fb213927679cd3ac0a76c1a8a07444e52b",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/jll.json"
+        },
+        {
+          "label": "Management",
+          "value": "JLL. Current official centre contact corroborates the public management appointment.",
+          "source_url": "https://edsquare.shopping/contact-us/",
+          "source_date": null,
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "1b3473ca39eb3b6691d00f31e34102cd460559a7119a18a67256c84c50456b62",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/contact.json"
+        },
+        {
+          "label": "Centre format",
+          "value": "Neighbourhood retail destination, described by PGIM as convenience and leisure based.",
+          "source_url": "https://www.pgim.com/global/en/borrower/about/newsroom/press-releases/PGIM-and-AFM-to-acquire-A248M-south-west-Sydney-retail-seed-asset-for-new-partnership",
+          "source_date": "2026-07-02",
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "7c4e45bbd97b3afd6a3147c511ad7d3abedda4062137d9b8ed53a3e7eef844db",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/pgim.json"
+        },
+        {
+          "label": "Gross lettable area",
+          "value": "24,502 m², explicitly reported in the April 2026 sale campaign. Later approximate 28,000 m² wording is not reconciled; 40,000 m² legacy completion figure is not current operating GLA.",
+          "source_url": "https://www.cbre.com.au/press-releases/sydney-s-thriving-ed-square-town-centre-provides-highly-sought-after-retail-investment-opportunity",
+          "source_date": "2026-04-01",
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "2d0132325ff5c6c2447987053ef2fffb264858db414fc93f9510166248b30fe6",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/cbre.json"
+        },
+        {
+          "label": "Historical occupancy",
+          "value": "96.5% in FY2025; 95.3% in FY2024. No current vacancy schedule inferred.",
+          "source_url": "https://www.frasersproperty.com/content/dam/frasersproperty/feature/project/frasers-corporate/annual-report/2025/FY25%20FPL%20Annual%20Report.pdf",
+          "source_date": null,
+          "source_period": "FY2025, ending 30 September 2025 (FY2024 comparator where shown)",
+          "checked_at": "2026-10-10",
+          "capture_sha256": "cbd7668dc9dcde998d90041cec193d50108204026efa1184b8f9947d81409959",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/report.json"
+        },
+        {
+          "label": "Historical lettable area",
+          "value": "25,100 m² estimated total lettable area in FY2025 report. Definition and period differ from April 2026 GLA.",
+          "source_url": "https://www.frasersproperty.com/content/dam/frasersproperty/feature/project/frasers-corporate/annual-report/2025/FY25%20FPL%20Annual%20Report.pdf",
+          "source_date": null,
+          "source_period": "FY2025, ending 30 September 2025 (FY2024 comparator where shown)",
+          "checked_at": "2026-10-10",
+          "capture_sha256": "cbd7668dc9dcde998d90041cec193d50108204026efa1184b8f9947d81409959",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/report.json"
+        },
+        {
+          "label": "Tenant-count scope",
+          "value": "PGIM reports three named anchors, nine mini-majors and 78 specialty stores. The 97 directory listings are a different source unit; not an occupied-tenancy denominator.",
+          "source_url": "https://www.pgim.com/global/en/borrower/about/newsroom/press-releases/PGIM-and-AFM-to-acquire-A248M-south-west-Sydney-retail-seed-asset-for-new-partnership",
+          "source_date": "2026-07-02",
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "7c4e45bbd97b3afd6a3147c511ad7d3abedda4062137d9b8ed53a3e7eef844db",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/pgim.json"
+        }
+      ],
+      "material_optical_note": "Two accepted optical businesses: Eye Concepts and Medispecs. Back In Focus is a physiotherapy/chiropractic business, not an additional optical retailer.",
+      "decision_use": "Compare candidate frontages against station routes, supermarket access and the two accepted optical businesses. Public evidence now establishes destination format and scale, but does not establish achievable sales, rents or unmet optical demand.",
+      "next_questions": [
+        "Obtain the current leasing plan with available unit areas and pedestrian routes.",
+        "Confirm post-acquisition holding entities and the permanent leasing contact or agency mandate.",
+        "Request dated footfall and customer-origin evidence plus the trade-area boundary.",
+        "Reconcile marketing GLA against the latest tenancy schedule and asset-area definition."
+      ],
+      "limitations": [
+        "Annual centre visits, pedestrian counts, retailer sales and customer-origin evidence were not established from the checked public sources.",
+        "Exact legal owner entities, ownership percentages and settlement date remain unverified; reported acquisition and current management are separately sourced.",
+        "Permanent leasing mandate, available units, rent, incentives and lease expiry schedule require further evidence.",
+        "GLA and approximate whole-asset area descriptions differ; dated definitions are retained rather than combined.",
+        "No occupied-tenancy denominator or tenant-category floor-area shares; directory entries may include related outlets.",
+        "Directory baseline remains 8 October 2026; classifications reviewed 10 October. A complete new directory fetch failed; individual public pages were checked where available.",
+        "Published trade-area boundaries were not obtained. ABS resident statistics are not centre customers."
+      ],
+      "profile_status": "Partial: public research pass completed 10 October 2026; unresolved items explicitly recorded",
+      "checked_at": "2026-10-10",
+      "demographic_boundary_evidence": {
+        "latitude": -33.9704639,
+        "longitude": 150.8578009,
+        "match_status": "Unique",
+        "sa2_code": "127031730",
+        "sa2_name": "Edmondson Park",
+        "match_count": 1,
+        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=150.8578009%2C-33.9704639&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+        "checked_at": "2026-09-27T21:58:23.240116+00:00"
+      },
+      "display_address": "52 Soldiers Parade, Edmondson Park NSW 2174",
+      "leasing_evidence": [
+        {
+          "label": "Permanent leasing",
+          "value": "Use the official centre leasing enquiry form. No public unit schedule, rent, incentive, lease-expiry schedule or exclusive permanent agency mandate was established.",
+          "source_url": "https://edsquare.shopping/leasing/",
+          "source_date": null,
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "05f50a14084010d2b586822d60fb1bd1c18779d2dfdfea01bbe27fa71d70d85d",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/leasing.json"
+        },
+        {
+          "label": "Casual leasing",
+          "value": "The centre directs pop-up and kiosk enquiries to Location X JLL. This does not establish permanent leasing control.",
+          "source_url": "https://edsquare.shopping/leasing/",
+          "source_date": null,
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "05f50a14084010d2b586822d60fb1bd1c18779d2dfdfea01bbe27fa71d70d85d",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/leasing.json"
+        }
+      ],
+      "trade_area_evidence": [
+        {
+          "label": "Published trade area",
+          "value": "CBRE reports 208,850 residents in the total trade area (2024), and 72,160 in the main trade area (year not separately stated). Boundaries were not supplied on the page; neither figure is substituted for the mapped ABS SA2.",
+          "source_url": "https://www.cbre.com.au/press-releases/sydney-s-thriving-ed-square-town-centre-provides-highly-sought-after-retail-investment-opportunity",
+          "source_date": "2026-04-01",
+          "source_period": null,
+          "checked_at": "2026-10-10",
+          "capture_sha256": "2d0132325ff5c6c2447987053ef2fffb264858db414fc93f9510166248b30fe6",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/cbre.json"
+        }
+      ],
+      "census_context": [
+        {
+          "label": "Resident Census context",
+          "value": "Edmondson Park SA2, 2021: 12,080 people; median age 31; average household 3.4 people; median weekly household income $2,562. Census counts and unadjusted income differ from ERP and equivalised income used in screening.",
+          "source_url": "https://www.abs.gov.au/census/find-census-data/quickstats/2021/127031730",
+          "source_date": null,
+          "source_period": "2021",
+          "checked_at": "2026-10-10",
+          "capture_sha256": "96cd33b2fec30925bb26705fdd52d0f99b7dd06cd034e81ad0817e8ca3184a0c",
+          "capture_type": "Analyst evidence receipt",
+          "capture_path": "output/edsquare-completion-20261010/evidence/abs.json"
+        }
+      ],
+      "anchors": [
+        {
+          "name": "Coles",
+          "source_url": "https://www.pgim.com/global/en/borrower/about/newsroom/press-releases/PGIM-and-AFM-to-acquire-A248M-south-west-Sydney-retail-seed-asset-for-new-partnership",
+          "source_date": "2026-07-02"
+        },
+        {
+          "name": "TK Maxx",
+          "source_url": "https://www.pgim.com/global/en/borrower/about/newsroom/press-releases/PGIM-and-AFM-to-acquire-A248M-south-west-Sydney-retail-seed-asset-for-new-partnership",
+          "source_date": "2026-07-02"
+        },
+        {
+          "name": "Event Cinemas",
+          "source_url": "https://www.pgim.com/global/en/borrower/about/newsroom/press-releases/PGIM-and-AFM-to-acquire-A248M-south-west-Sydney-retail-seed-asset-for-new-partnership",
+          "source_date": "2026-07-02"
+        }
+      ],
+      "completion_review": {
+        "reviewed_at": "2026-10-10",
+        "status": "Public-source pass complete; commercial due diligence incomplete",
+        "source_checks": [
+          {
+            "source_url": "https://www.pgim.com/global/en/borrower/about/newsroom/press-releases/PGIM-and-AFM-to-acquire-A248M-south-west-Sydney-retail-seed-asset-for-new-partnership",
+            "source_date_or_period": "2026-07-02",
+            "finding": "PGIM and Assembly announced a joint venture acquisition for AUD248m. The centre is described as a convenience and leisure-based neighbourhood destination, over 24,500 sqm, with Coles, TK Maxx, Event Cinemas, nine mini-majors and 78 specialty stores. This announcement alone does not establish settlement or ownership percentages."
+          },
+          {
+            "source_url": "https://www.cbre.com.au/press-releases/sydney-s-thriving-ed-square-town-centre-provides-highly-sought-after-retail-investment-opportunity",
+            "source_date_or_period": "2026-04-01",
+            "finding": "Sales campaign reports 24,502 sqm GLA, 89 specialty stores and 926 parking spaces. Total trade area 208,850 residents (2024); main trade area 72,160, reference year not separately specified. Boundaries not supplied on page. CBRE acts on sale; this does not establish an ongoing leasing appointment."
+          },
+          {
+            "source_url": "https://www.linkedin.com/posts/nortonrebecca_jllretail-activity-7508277736021557248-6HoM",
+            "source_date_or_period": null,
+            "finding": "Indexed public statement by JLL representative Rebecca Norton reports management appointment following Assembly and PGIM acquisition. Approximate 28,000 sqm description differs from earlier GLA disclosure. Exact appointment and settlement dates, holding entities and ownership split are not established."
+          },
+          {
+            "source_url": "https://edsquare.shopping/contact-us/",
+            "source_date_or_period": null,
+            "finding": "Official centre contact page uses a JLL centre-management mailbox and confirms 52 Soldiers Parade, Edmondson Park NSW2174. Corroborates the public JLL management appointment statement."
+          },
+          {
+            "source_url": "https://edsquare.shopping/leasing/",
+            "source_date_or_period": null,
+            "finding": "Official leasing page offers a permanent leasing enquiry form and separately links casual mall leasing to Location X JLL. No unit inventory or commercial terms provided. Permanent exclusive agency appointment not specified."
+          },
+          {
+            "source_url": "https://edsquare.shopping/visit/",
+            "source_date_or_period": null,
+            "finding": "Centre is opposite Edmondson Park station and bus stops, with a signed walking approach via Henderson Road and Sergeant Street. Three-hour free parking published with conditions; re-entry wording conflicts between 30 and 60 minutes. Accessible bays, pram bays and EV charging described."
+          },
+          {
+            "source_url": "https://www.frasersproperty.com/content/dam/frasersproperty/feature/project/frasers-corporate/annual-report/2025/FY25%20FPL%20Annual%20Report.pdf",
+            "source_date_or_period": "2025-09-30",
+            "finding": "FY2025 annual report printed page51 (PDF page53) reports Ed.Square Retail effective share100%, estimated total lettable area25.1 thousand sqm, occupancy96.5% FY25 and95.3% FY24. Historical Frasers interest predates2026 sale announcement. Estimated lettable area is not substituted for GLA."
+          },
+          {
+            "source_url": "https://www.frasersproperty.com.au/Portfolio/Retail/NSW/Ed-Square-Town-Centre?sc_site=corporate",
+            "source_date_or_period": null,
+            "finding": "Legacy property page identifies Frasers as developer owner operator, lists40,000 sqm on completion and900+ parking. Current transaction evidence supersedes ownership wording; completion area is not operating GLA."
+          },
+          {
+            "source_url": "https://www.abs.gov.au/census/find-census-data/quickstats/2021/127031730",
+            "source_date_or_period": "2021",
+            "finding": "2021 Census QuickStats for Edmondson Park SA2:12,080 people, median age 31, household size3.4, median weekly household income2562. This differs in concept from estimated resident population and equivalised household income already used by the tool."
+          },
+          {
+            "source_url": "https://edsquare.shopping/store-directory/tk-maxx/",
+            "source_date_or_period": null,
+            "finding": "Official retailer page describes fashion for men women and children, footwear handbags cosmetics and homewares. Shop AGMM02 Ground Floor. Supports a reviewed cross-category classification."
+          }
+        ],
+        "remaining_actions": [
+          "Obtain the current leasing plan with available unit areas and pedestrian routes.",
+          "Confirm post-acquisition holding entities and the permanent leasing contact or agency mandate.",
+          "Request dated footfall and customer-origin evidence plus the trade-area boundary.",
+          "Reconcile marketing GLA against the latest tenancy schedule and asset-area definition."
+        ]
+      },
+      "identity": {
+        "place_id": "place-au-nsw-ed-square-town-centre",
+        "name": "Ed.Square Town Centre",
+        "country": "Australia",
+        "state": "NSW",
+        "location_setting": "Shopping Centre",
+        "address": "Shop AG26, Ed.Square Town Centre, 52 Soldiers Parade, Edmondson Park NSW 2174, Australia",
+        "latitude": -33.9704639,
+        "longitude": 150.8578009,
+        "source_url": "https://www.edsquare.shopping/",
+        "source_date": "2026-09-27"
+      },
+      "population_context": {
+        "sa2_code": "127031730",
+        "sa2_name": "Edmondson Park",
+        "state": "New South Wales",
+        "area_sqkm": 6.06,
+        "centroid_longitude": 150.859,
+        "centroid_latitude": -33.966,
+        "population_2025": 18038,
+        "population_growth_2021_2025_pct": 48.63,
+        "population_density_2025": 2978.4,
+        "median_age_2021": 30.8,
+        "age_45_plus_pct_2021": 21.1,
+        "median_equivalised_household_income_weekly_2021": 1338,
+        "unemployment_rate_2021": 5.2,
+        "participation_rate_2021": 66.5,
+        "total_businesses_2025": 1193,
+        "retail_businesses_2025": 90,
+        "health_businesses_2025": 130,
+        "source": "Australian Bureau of Statistics Data by Region 2011-25",
+        "source_url": "https://www.abs.gov.au/methodologies/data-region-methodology/2011-25",
+        "source_release_date": "2026-05-26",
+        "confidence": "High",
+        "small_population_caution": false,
+        "quality_note": "Published ABS indicators; Census measures retain their 2021 reference year",
+        "population_2021": 12136.0,
+        "population_growth_2021_2025_number": 5902,
+        "interpretation": "Resident SA2 context, not a centre trade area or customer catchment.",
+        "boundary_evidence": {
+          "latitude": -33.9704639,
+          "longitude": 150.8578009,
+          "match_status": "Unique",
+          "sa2_code": "127031730",
+          "sa2_name": "Edmondson Park",
+          "match_count": 1,
+          "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=150.8578009%2C-33.9704639&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+          "checked_at": "2026-09-27T21:58:23.240116+00:00"
+        }
+      },
+      "optical_competition": {
+        "accepted_current_members": [
+          {
+            "store_id": "independent-other-optical-reviewed-au-eye-concepts-edmondson-park",
+            "retailer": "Independent / Other optical",
+            "name": "Eye Concepts — Edmondson Park",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop AG26, Ed.Square Town Centre, 52 Soldiers Parade, Edmondson Park NSW 2174, Australia",
+            "latitude": "-33.9704639",
+            "longitude": "150.8578009",
+            "source_url": "https://www.eyeconcepts.com.au/edmondson-park",
+            "fetched_at": "2026-09-27",
+            "status_evidence_url": "https://www.eyeconcepts.com.au/edmondson-park",
+            "status_verified_at": "2026-09-27",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "membership_evidence": {
+              "evidence_basis": "Official operator branch address explicitly names this centre and shop. Operator uses the centre label Edmondson Square; the official Ed.Square Town Centre tenant page confirms Shop AG26, ground floor, the same phone and stocked frames, sunglasses and contact lenses. Centre page was readable through the web reader after direct DNS failure; its indexed copy is older and is corroborating evidence, not a current row-level verification date.",
+              "evidence_url": "https://www.edsquare.shopping/Stores/Eye-Concepts",
+              "verified_at": "2026-09-27",
+              "mapping_confidence": "High"
+            }
+          },
+          {
+            "store_id": "independent-other-optical-reviewed-au-medispecs-ed-square",
+            "retailer": "Independent / Other optical",
+            "name": "Medispecs Ed.Square",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop AG53, 52 Soldiers Parade, Ed.Square Town Centre, Edmondson Park NSW 2174",
+            "latitude": "-33.9714506",
+            "longitude": "150.8586573",
+            "source_url": "https://www.medispecsedsquare.com.au/",
+            "fetched_at": "2026-09-28",
+            "status_evidence_url": "https://www.medispecsedsquare.com.au/",
+            "status_verified_at": "2026-09-28",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "membership_evidence": {
+              "evidence_basis": "Official practice and centre pages agree on Shop AG53 and phone; current appointment service and eyewear range. Separate from Eye Concepts AG26 and Medispecs Camden.",
+              "evidence_url": "https://www.edsquare.shopping/stores/medispecs",
+              "verified_at": "2026-09-28",
+              "mapping_confidence": "High"
+            }
+          }
+        ],
+        "accepted_member_count": 2,
+        "nearby_current_non_bn": [
+          {
+            "store_id": "independent-other-optical-reviewed-au-eye-concepts-edmondson-park",
+            "retailer": "Independent / Other optical",
+            "name": "Eye Concepts — Edmondson Park",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop AG26, Ed.Square Town Centre, 52 Soldiers Parade, Edmondson Park NSW 2174, Australia",
+            "latitude": "-33.9704639",
+            "longitude": "150.8578009",
+            "source_url": "https://www.eyeconcepts.com.au/edmondson-park",
+            "fetched_at": "2026-09-27",
+            "status_evidence_url": "https://www.eyeconcepts.com.au/edmondson-park",
+            "status_verified_at": "2026-09-27",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "distance_km": 0.0,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "independent-other-optical-reviewed-au-medispecs-ed-square",
+            "retailer": "Independent / Other optical",
+            "name": "Medispecs Ed.Square",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop AG53, 52 Soldiers Parade, Ed.Square Town Centre, Edmondson Park NSW 2174",
+            "latitude": "-33.9714506",
+            "longitude": "150.8586573",
+            "source_url": "https://www.medispecsedsquare.com.au/",
+            "fetched_at": "2026-09-28",
+            "status_evidence_url": "https://www.medispecsedsquare.com.au/",
+            "status_verified_at": "2026-09-28",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "distance_km": 0.13518341095386885,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "specsavers-3344",
+            "retailer": "Specsavers",
+            "name": "Ingleburn",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "3/30-32 Oxford Rd, Ingleburn, NSW, 2565",
+            "latitude": "-33.998306",
+            "longitude": "150.86618",
+            "source_url": "https://www.specsavers.com.au/stores/ingleburn",
+            "fetched_at": "2026-09-01T23:21:29.969Z",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 3.190844234711833,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "specsavers-3586",
+            "retailer": "Specsavers",
+            "name": "Carnes Hill",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Shop B10, Carnes Hill Marketplace, Cnr Cowpasture & Kurrajong Roads, Horningsea Park, NSW, 2171",
+            "latitude": "-33.93744",
+            "longitude": "150.84517",
+            "source_url": "https://www.specsavers.com.au/stores/carneshill",
+            "fetched_at": "2026-09-01T23:21:29.969Z",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 3.8524705430269885,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "eyecare-plus-584",
+            "retailer": "Eyecare Plus",
+            "name": "Eyecare Plus Optometrists Carnes Hill",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop B29 Carnes Hill Marketplace, 245 Cowpasture Road, Carnes Hill, NSW, 2171",
+            "latitude": "-33.937241",
+            "longitude": "150.845495",
+            "source_url": "https://www.eyecareplus.com.au/find-optometrist/",
+            "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 3.8646585973415672,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "specsavers-3558",
+            "retailer": "Specsavers",
+            "name": "Casula",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Casula Mall, 1 Ingham Dr, Casula, NSW, 2170",
+            "latitude": "-33.94762",
+            "longitude": "150.90007",
+            "source_url": "https://www.specsavers.com.au/stores/casula",
+            "fetched_at": "2026-09-01T23:21:29.969Z",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 4.652974631988281,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "independent-other-optical-reviewed-au-eye-mechanics-leppington",
+            "retailer": "Independent / Other optical",
+            "name": "Eye Mechanics — Leppington",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop 7, 108 Ingleburn Road, Leppington NSW 2179",
+            "latitude": "-33.9620769",
+            "longitude": "150.8063303",
+            "source_url": "https://eyemechanics.com.au/locations/optometrist-leppington-sydney/",
+            "fetched_at": "2026-10-04",
+            "status_evidence_url": "https://eyemechanics.com.au/locations/optometrist-leppington-sydney/",
+            "status_verified_at": "2026-10-04",
+            "stale_source_warning": false,
+            "quality_notes": "location setting needs review",
+            "distance_km": 4.837442079373791,
+            "accepted_destination_member": false
+          }
+        ],
+        "within_2km": 2,
+        "within_5km": 7,
+        "method": "Current non-BN competitors at <=2/5 km straight-line distance from the recorded point. All settings eligible. Radius does not establish membership or customer catchment; observed counts may be incomplete. Stale-source warnings remain separate."
+      },
+      "directory_summary": {
+        "place_id": "place-au-nsw-ed-square-town-centre",
+        "name": "Ed.Square Town Centre",
+        "research_status": "Directory captured; limitations retained",
+        "observed_at": "2026-10-08",
+        "source_effective_date": null,
+        "source_listing_count": 97,
+        "in_scope_non_optical_listings": 95,
+        "coming_soon_listings": 0,
+        "held_scope_listings": 0,
+        "outside_or_unresolved_address_listings": 0,
+        "rows_with_exceptions": 2,
+        "unclassified_listings": 0,
+        "categories": [
+          {
+            "name": "Food and dining",
+            "listing_count": 35,
+            "examples": [
+              {
+                "name": "At Mex",
+                "source_url": "https://edsquare.shopping/store-directory/at-mex/"
+              },
+              {
+                "name": "Auntie Tang",
+                "source_url": "https://edsquare.shopping/store-directory/auntie-tang/"
+              },
+              {
+                "name": "Baby Bao",
+                "source_url": "https://edsquare.shopping/store-directory/baby-bao/"
+              }
+            ]
+          },
+          {
+            "name": "Services",
+            "listing_count": 19,
+            "examples": [
+              {
+                "name": "AusRealty",
+                "source_url": "https://edsquare.shopping/store-directory/ausrealty/"
+              },
+              {
+                "name": "Cursed Canvas",
+                "source_url": "https://edsquare.shopping/store-directory/cursed-canvas/"
+              },
+              {
+                "name": "Ed Mobile",
+                "source_url": "https://edsquare.shopping/store-directory/ed-mobile/"
+              }
+            ]
+          },
+          {
+            "name": "Beauty",
+            "listing_count": 15,
+            "examples": [
+              {
+                "name": "Amelia Jacobs Hair and Beauty",
+                "source_url": "https://edsquare.shopping/store-directory/amelia-jacobs-hair-and-beauty/"
+              },
+              {
+                "name": "Blush Nails and Beauty",
+                "source_url": "https://edsquare.shopping/store-directory/blush-nails-and-beauty/"
+              },
+              {
+                "name": "Brow Designers",
+                "source_url": "https://edsquare.shopping/store-directory/brow-designers/"
+              }
+            ]
+          },
+          {
+            "name": "Health and wellbeing",
+            "listing_count": 14,
+            "examples": [
+              {
+                "name": "Anytime Fitness",
+                "source_url": "https://edsquare.shopping/store-directory/anytime-fitness/"
+              },
+              {
+                "name": "Back In Focus",
+                "source_url": "https://edsquare.shopping/store-directory/back-in-focus/"
+              },
+              {
+                "name": "CareScan Medical Imaging",
+                "source_url": "https://edsquare.shopping/store-directory/carescan-medical-imaging/"
+              }
+            ]
+          },
+          {
+            "name": "Grocery and fresh food",
+            "listing_count": 7,
+            "examples": [
+              {
+                "name": "AKAR Meats",
+                "source_url": "https://edsquare.shopping/store-directory/akar-meats/"
+              },
+              {
+                "name": "Ambeys Big Apple",
+                "source_url": "https://edsquare.shopping/store-directory/ambeys-big-apple/"
+              },
+              {
+                "name": "Coles",
+                "source_url": "https://edsquare.shopping/store-directory/coles/"
+              }
+            ]
+          },
+          {
+            "name": "Fashion and accessories",
+            "listing_count": 6,
+            "examples": [
+              {
+                "name": "BNAH",
+                "source_url": "https://edsquare.shopping/store-directory/bnah/"
+              },
+              {
+                "name": "Brow Designers",
+                "source_url": "https://edsquare.shopping/store-directory/brow-designers/"
+              },
+              {
+                "name": "Manhattan Jewellery",
+                "source_url": "https://edsquare.shopping/store-directory/manhattan-jewellery/"
+              }
+            ]
+          },
+          {
+            "name": "Home and lifestyle",
+            "listing_count": 4,
+            "examples": [
+              {
+                "name": "EdSquare Sales Centre",
+                "source_url": "https://edsquare.shopping/store-directory/edsquare-sales-centre/"
+              },
+              {
+                "name": "Little Prince Flower Shop",
+                "source_url": "https://edsquare.shopping/store-directory/little-prince-flower-shop/"
+              },
+              {
+                "name": "Red Dollar",
+                "source_url": "https://edsquare.shopping/store-directory/red-dollar/"
+              }
+            ]
+          },
+          {
+            "name": "Entertainment",
+            "listing_count": 2,
+            "examples": [
+              {
+                "name": "Event Cinemas",
+                "source_url": "https://edsquare.shopping/store-directory/event-cinemas/"
+              },
+              {
+                "name": "iPlay",
+                "source_url": "https://edsquare.shopping/store-directory/iplay/"
+              }
+            ]
+          }
+        ],
+        "scope": "Published official centre directory. Listings include services and may include internal outlets or concessions.",
+        "coverage_limitations": [
+          "Directory-listed businesses have not all been independently checked for current trading.",
+          "Listing counts are not unique brands, occupied tenancies, frontage exposure or floor-area shares.",
+          "A listing may have more than one category; category counts must not be added as a total.",
+          "Source categories may be broad or inconsistent; unclassified and combined categories remain visible.",
+          "Optical competition uses the separately validated census, including accepted concessions missing from directories."
+        ],
+        "tenancy_count_share": null,
+        "floor_area_share": null,
+        "share_unavailable_reason": "No compatible occupied-tenancy or category-floor-area denominator.",
+        "source_urls": [
+          "https://edsquare.shopping/stores/"
+        ]
+      },
+      "directory_record_ids": [
+        "place-au-nsw-ed-square-town-centre::22382",
+        "place-au-nsw-ed-square-town-centre::22378",
+        "place-au-nsw-ed-square-town-centre::22352",
+        "place-au-nsw-ed-square-town-centre::22327",
+        "place-au-nsw-ed-square-town-centre::22323",
+        "place-au-nsw-ed-square-town-centre::22315",
+        "place-au-nsw-ed-square-town-centre::22305",
+        "place-au-nsw-ed-square-town-centre::22264",
+        "place-au-nsw-ed-square-town-centre::22223",
+        "place-au-nsw-ed-square-town-centre::22184",
+        "place-au-nsw-ed-square-town-centre::22170",
+        "place-au-nsw-ed-square-town-centre::22156",
+        "place-au-nsw-ed-square-town-centre::22151",
+        "place-au-nsw-ed-square-town-centre::22148",
+        "place-au-nsw-ed-square-town-centre::22119",
+        "place-au-nsw-ed-square-town-centre::22109",
+        "place-au-nsw-ed-square-town-centre::22098",
+        "place-au-nsw-ed-square-town-centre::22080",
+        "place-au-nsw-ed-square-town-centre::22068",
+        "place-au-nsw-ed-square-town-centre::22064",
+        "place-au-nsw-ed-square-town-centre::22029",
+        "place-au-nsw-ed-square-town-centre::22021",
+        "place-au-nsw-ed-square-town-centre::22012",
+        "place-au-nsw-ed-square-town-centre::22000",
+        "place-au-nsw-ed-square-town-centre::21974",
+        "place-au-nsw-ed-square-town-centre::21967",
+        "place-au-nsw-ed-square-town-centre::21904",
+        "place-au-nsw-ed-square-town-centre::21903",
+        "place-au-nsw-ed-square-town-centre::21890",
+        "place-au-nsw-ed-square-town-centre::21886",
+        "place-au-nsw-ed-square-town-centre::21884",
+        "place-au-nsw-ed-square-town-centre::21880",
+        "place-au-nsw-ed-square-town-centre::21870",
+        "place-au-nsw-ed-square-town-centre::21859",
+        "place-au-nsw-ed-square-town-centre::21849",
+        "place-au-nsw-ed-square-town-centre::21843",
+        "place-au-nsw-ed-square-town-centre::21839",
+        "place-au-nsw-ed-square-town-centre::21790",
+        "place-au-nsw-ed-square-town-centre::21778",
+        "place-au-nsw-ed-square-town-centre::21774",
+        "place-au-nsw-ed-square-town-centre::21769",
+        "place-au-nsw-ed-square-town-centre::21762",
+        "place-au-nsw-ed-square-town-centre::21755",
+        "place-au-nsw-ed-square-town-centre::21741",
+        "place-au-nsw-ed-square-town-centre::21717",
+        "place-au-nsw-ed-square-town-centre::21707",
+        "place-au-nsw-ed-square-town-centre::21662",
+        "place-au-nsw-ed-square-town-centre::21643",
+        "place-au-nsw-ed-square-town-centre::21636",
+        "place-au-nsw-ed-square-town-centre::21630",
+        "place-au-nsw-ed-square-town-centre::21627",
+        "place-au-nsw-ed-square-town-centre::21620",
+        "place-au-nsw-ed-square-town-centre::21618",
+        "place-au-nsw-ed-square-town-centre::21605",
+        "place-au-nsw-ed-square-town-centre::21598",
+        "place-au-nsw-ed-square-town-centre::21588",
+        "place-au-nsw-ed-square-town-centre::21481",
+        "place-au-nsw-ed-square-town-centre::21467",
+        "place-au-nsw-ed-square-town-centre::21443",
+        "place-au-nsw-ed-square-town-centre::21416",
+        "place-au-nsw-ed-square-town-centre::21420",
+        "place-au-nsw-ed-square-town-centre::21407",
+        "place-au-nsw-ed-square-town-centre::21378",
+        "place-au-nsw-ed-square-town-centre::21370",
+        "place-au-nsw-ed-square-town-centre::21363",
+        "place-au-nsw-ed-square-town-centre::21360",
+        "place-au-nsw-ed-square-town-centre::21347",
+        "place-au-nsw-ed-square-town-centre::21337",
+        "place-au-nsw-ed-square-town-centre::21274",
+        "place-au-nsw-ed-square-town-centre::20651",
+        "place-au-nsw-ed-square-town-centre::20392",
+        "place-au-nsw-ed-square-town-centre::20393",
+        "place-au-nsw-ed-square-town-centre::20377",
+        "place-au-nsw-ed-square-town-centre::20374",
+        "place-au-nsw-ed-square-town-centre::20370",
+        "place-au-nsw-ed-square-town-centre::20360",
+        "place-au-nsw-ed-square-town-centre::20357",
+        "place-au-nsw-ed-square-town-centre::20352",
+        "place-au-nsw-ed-square-town-centre::20343",
+        "place-au-nsw-ed-square-town-centre::20334",
+        "place-au-nsw-ed-square-town-centre::20315",
+        "place-au-nsw-ed-square-town-centre::20293",
+        "place-au-nsw-ed-square-town-centre::20286",
+        "place-au-nsw-ed-square-town-centre::20258",
+        "place-au-nsw-ed-square-town-centre::20244",
+        "place-au-nsw-ed-square-town-centre::20237",
+        "place-au-nsw-ed-square-town-centre::20228",
+        "place-au-nsw-ed-square-town-centre::20005",
+        "place-au-nsw-ed-square-town-centre::19999",
+        "place-au-nsw-ed-square-town-centre::19993",
+        "place-au-nsw-ed-square-town-centre::19986",
+        "place-au-nsw-ed-square-town-centre::19982",
+        "place-au-nsw-ed-square-town-centre::19973",
+        "place-au-nsw-ed-square-town-centre::19946",
+        "place-au-nsw-ed-square-town-centre::19939",
+        "place-au-nsw-ed-square-town-centre::19909",
+        "place-au-nsw-ed-square-town-centre::13877"
+      ],
+      "directory_database": "destination_directory.json"
+    },
+    {
+      "place_id": "corridor-au-sa-glenelg-jetty-road",
+      "extent": "Canonical Jetty Road street scope. The council describes an approximately one-kilometre street and a wider precinct with side streets; its improvement project also includes Colley Terrace. The wider precinct and project boundary do not establish canonical street membership.",
+      "extent_evidence": {
+        "source_url": "https://www.yourholdfast.com/transforming-jetty-road-glenelg/transforming-jetty-road-glenelg-faqs",
+        "checked_at": "2026-10-08T09:52:37.745678+00:00",
+        "source_date": null,
+        "capture_sha256": "12436860cc2291bb1a505b679dea55cd880a4f2a856ba9ade9a09ccd6085d583"
+      },
+      "access": [
+        {
+          "label": "Precinct access",
+          "value": "Council describes tram/bus access and more than 3,000 car parks within a four-minute walk of Jetty Road. This is a council precinct statement, not an audited parking inventory or a live service check.",
+          "source_url": "https://www.yourholdfast.com/transforming-jetty-road-glenelg/transforming-jetty-road-glenelg-faqs",
+          "checked_at": "2026-10-08T09:52:37.745678+00:00",
+          "source_date": null,
+          "capture_sha256": "12436860cc2291bb1a505b679dea55cd880a4f2a856ba9ade9a09ccd6085d583"
+        }
+      ],
+      "property_facts": [
+        {
+          "label": "Public-realm works",
+          "value": "Council currently reports all major construction works complete, with final inspections, quality assurance and some minor remedial work remaining. Full project completion is not yet asserted.",
+          "source_url": "https://www.yourholdfast.com/transforming-jetty-road-glenelg",
+          "checked_at": "2026-10-08T09:52:37.274942+00:00",
+          "source_date": null,
+          "capture_sha256": "1ea7f3e9029d359ac590ee5f2aca7d6e074ac9a7b44cb1dd77cdc1dccf9741b9"
+        },
+        {
+          "label": "Business-count scope",
+          "value": "Council describes more than 300 businesses across the street and side-street precinct. This is not a denominator for the narrower Jetty Road listing set.",
+          "source_url": "https://www.yourholdfast.com/transforming-jetty-road-glenelg/transforming-jetty-road-glenelg-faqs",
+          "checked_at": "2026-10-08T09:52:37.745678+00:00",
+          "source_date": null,
+          "capture_sha256": "12436860cc2291bb1a505b679dea55cd880a4f2a856ba9ade9a09ccd6085d583"
+        }
+      ],
+      "material_optical_note": "OPSM belongs to Bayside Village Shopping Centre; Sunglass Hut is at Shop 9, 1 Colley Terrace. Both remain nearby competitors, not additional accepted Jetty Road street members. Historical directory addresses are retained as conflicting evidence.",
+      "decision_use": "Compare specific street segments and post-works pedestrian movement. Older resident-area demographics and a coastal visitor offer warrant separate resident/visitor questions; neither establishes customer mix.",
+      "next_questions": [
+        "Which street segment and frontage benefits from pedestrian routes after the works?",
+        "What evidence separates year-round resident demand from visitor seasonality?",
+        "Do the remaining address/identity conflicts matter to a specific candidate unit?"
+      ],
+      "limitations": [
+        "The district directory extends well beyond Jetty Road; held and out-of-scope records remain visible.",
+        "No defensible single precinct GLA, occupied-tenancy denominator or current visitation series.",
+        "No measured visitor share or customer catchment; transport alerts were not checked."
+      ],
+      "profile_status": "Partial: bounded public research complete; commercial and coverage gaps explicit",
+      "checked_at": "2026-10-08",
+      "demographic_boundary_evidence": {
+        "latitude": -34.979577,
+        "longitude": 138.518904,
+        "match_status": "Unique",
+        "sa2_code": "403011057",
+        "sa2_name": "Glenelg (SA)",
+        "match_count": 1,
+        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.518904%2C-34.979577&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+        "checked_at": "2026-10-08T08:44:21.846050+00:00"
+      },
+      "identity": {
+        "place_id": "corridor-au-sa-glenelg-jetty-road",
+        "name": "Jetty Road",
+        "country": "Australia",
+        "state": "SA",
+        "location_setting": "High Street",
+        "address": "Jetty Road",
+        "latitude": -34.979577,
+        "longitude": 138.518904,
+        "source_url": "https://holdfastbayoptometry.com.au/",
+        "source_date": "2026-09-02"
+      },
+      "population_context": {
+        "sa2_code": "403011057",
+        "sa2_name": "Glenelg (SA)",
+        "state": "South Australia",
+        "area_sqkm": 7.22,
+        "centroid_longitude": 138.522,
+        "centroid_latitude": -34.9835,
+        "population_2025": 21791,
+        "population_growth_2021_2025_pct": 5.19,
+        "population_density_2025": 3016.8,
+        "median_age_2021": 48.2,
+        "age_45_plus_pct_2021": 53.6,
+        "median_equivalised_household_income_weekly_2021": 1147,
+        "unemployment_rate_2021": 3.9,
+        "participation_rate_2021": 60,
+        "total_businesses_2025": 2514,
+        "retail_businesses_2025": 142,
+        "health_businesses_2025": 270,
+        "source": "Australian Bureau of Statistics Data by Region 2011-25",
+        "source_url": "https://www.abs.gov.au/methodologies/data-region-methodology/2011-25",
+        "source_release_date": "2026-05-26",
+        "confidence": "High",
+        "small_population_caution": false,
+        "quality_note": "Published ABS indicators; Census measures retain their 2021 reference year",
+        "population_2021": 20716.0,
+        "population_growth_2021_2025_number": 1075,
+        "interpretation": "Resident SA2 context, not a centre trade area or customer catchment.",
+        "boundary_evidence": {
+          "latitude": -34.979577,
+          "longitude": 138.518904,
+          "match_status": "Unique",
+          "sa2_code": "403011057",
+          "sa2_name": "Glenelg (SA)",
+          "match_count": 1,
+          "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.518904%2C-34.979577&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+          "checked_at": "2026-10-08T08:44:21.846050+00:00"
+        }
+      },
+      "optical_competition": {
+        "accepted_current_members": [
+          {
+            "store_id": "independent-other-optical-provision-17714",
+            "retailer": "Independent / Other optical",
+            "name": "HoldfastBay Optometry",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "105A Jetty Road, Glenelg, South Australia, 5045",
+            "latitude": "-34.979771",
+            "longitude": "138.518082",
+            "source_url": "https://www.provision.com.au/search-results/",
+            "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "membership_evidence": {
+              "evidence_basis": "Numbered street address without a corroborated centre match",
+              "evidence_url": "https://holdfastbayoptometry.com.au/",
+              "verified_at": "2026-09-02",
+              "mapping_confidence": "Medium"
+            }
+          },
+          {
+            "store_id": "optical-by-national-pharmacies-glenelg-5045",
+            "retailer": "Optical by National Pharmacies",
+            "name": "Optical by National Pharmacies Glenelg",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop 6/108-116 Jetty Road, Glenelg SA 5045, Australia",
+            "latitude": "-34.9793821",
+            "longitude": "138.5197258",
+            "source_url": "https://www.nationalpharmacies.com.au/optical-booking/",
+            "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "membership_evidence": {
+              "evidence_basis": "Numbered street address without a corroborated centre match",
+              "evidence_url": "https://www.nationalpharmacies.com.au/stores/glenelg-optical/",
+              "verified_at": "2026-09-03",
+              "mapping_confidence": "Medium"
+            }
+          }
+        ],
+        "accepted_member_count": 2,
+        "nearby_current_non_bn": [
+          {
+            "store_id": "opsm-1211",
+            "retailer": "OPSM",
+            "name": "OPSM Glenelg",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Shop 20, Bayside Village Shopping Centre, Cnr Brighton Road & Jetty Road, Glenelg SA 5045",
+            "latitude": "-34.97916",
+            "longitude": "138.51955",
+            "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
+            "fetched_at": "2026-09-01T07:42:23+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 0.07492712213960333,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "independent-other-optical-provision-17714",
+            "retailer": "Independent / Other optical",
+            "name": "HoldfastBay Optometry",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "105A Jetty Road, Glenelg, South Australia, 5045",
+            "latitude": "-34.979771",
+            "longitude": "138.518082",
+            "source_url": "https://www.provision.com.au/search-results/",
+            "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 0.07793593186762195,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "optical-by-national-pharmacies-glenelg-5045",
+            "retailer": "Optical by National Pharmacies",
+            "name": "Optical by National Pharmacies Glenelg",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop 6/108-116 Jetty Road, Glenelg SA 5045, Australia",
+            "latitude": "-34.9793821",
+            "longitude": "138.5197258",
+            "source_url": "https://www.nationalpharmacies.com.au/optical-booking/",
+            "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 0.07794635846818895,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "independent-other-optical-reviewed-au-sunglass-hut-glenelg-b742",
+            "retailer": "Independent / Other optical",
+            "name": "Sunglass Hut Jetty Road — Glenelg",
+            "business_type": "Sunglasses retail",
+            "status": "Active",
+            "full_address": "Shop 9, 1 Colley Terrace, Glenelg SA 5045",
+            "latitude": "-34.9801762",
+            "longitude": "138.512709",
+            "source_url": "https://stores.sunglasshut.com/au/sa/glenelg/shop-9",
+            "fetched_at": "2026-10-08",
+            "status_evidence_url": "https://stores.sunglasshut.com/au/sa/glenelg/shop-9",
+            "status_verified_at": "2026-10-08",
+            "stale_source_warning": false,
+            "quality_notes": "location setting needs review",
+            "distance_km": 0.5683335619140939,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "oscar-wylee-38",
+            "retailer": "Oscar Wylee",
+            "name": "Westfield Marion",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Shop 1015, 297 Diagonal Rd, Oaklands Park, SA 5046",
+            "latitude": "-35.0159323",
+            "longitude": "138.5422182",
+            "source_url": "https://www.oscarwylee.com.au/locations/optometrist-marion.html",
+            "fetched_at": "2026-09-01T07:43:15+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 4.566391698375823,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "bupa-optical-13626268",
+            "retailer": "Bupa Optical",
+            "name": "Bupa Optical & Hearing Marion",
+            "business_type": "Prescription eyewear retail",
+            "status": "Active",
+            "full_address": "Shop 2061 Westfield Marion, 297 Diagonal Rd, Oaklands Park, SA, 5046, Australia",
+            "latitude": "-35.015958",
+            "longitude": "138.544902",
+            "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator",
+            "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+            "status_evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-marion",
+            "status_verified_at": "2026-10-08",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 4.687548451617344,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "specsavers-3209",
+            "retailer": "Specsavers",
+            "name": "Marion West Westfield Lvl 2",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Shop 2007, Level 2, Westfield Marion West Shopping Centre, 297 Diagonal Rd, Oaklands Park, SA, 5046",
+            "latitude": "-35.015724",
+            "longitude": "138.54639",
+            "source_url": "https://www.specsavers.com.au/stores/marion",
+            "fetched_at": "2026-09-01T23:21:29.969Z",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 4.735356427913773,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "laubman-pank-marion-optometrist",
+            "retailer": "Laubman & Pank",
+            "name": "Laubman & Pank Marion",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop 1134 Marion Westfield Shopping Centre, 297 Diagonal Rd, Oaklands Park, SA, 5046",
+            "latitude": "-35.0171902",
+            "longitude": "138.5434264",
+            "source_url": "https://www.laubmanandpank.com.au/store-finder",
+            "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+            "status_evidence_url": "https://www.laubmanandpank.com.au/store/marion-optometrist",
+            "status_verified_at": "2026-10-08",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 4.741501321281482,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "optical-by-national-pharmacies-marion-5046",
+            "retailer": "Optical by National Pharmacies",
+            "name": "Optical by National Pharmacies Marion",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Shop 1037, Westfield Marion, 297 Diagonal Road, Oaklands Park, SA, 5046",
+            "latitude": "-35.0163249",
+            "longitude": "138.5455919",
+            "source_url": "https://www.nationalpharmacies.com.au/optical-booking/",
+            "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 4.754620168734003,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "specsavers-3521",
+            "retailer": "Specsavers",
+            "name": "Marion East Westfield Lvl 2",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Shop 2040/297 Diagonal Road, Oaklands Park, SA, 5046",
+            "latitude": "-35.016357",
+            "longitude": "138.54594",
+            "source_url": "https://www.specsavers.com.au/stores/marioneast",
+            "fetched_at": "2026-09-01T23:21:29.969Z",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 4.773966730929835,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "opsm-1254",
+            "retailer": "OPSM",
+            "name": "OPSM Marion",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "297 Diagonal Rd, Oaklands Park, SA, 5046",
+            "latitude": "-35.01659",
+            "longitude": "138.54628",
+            "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
+            "fetched_at": "2026-09-01T07:42:23+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 4.812153959514233,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "opsm-1572",
+            "retailer": "OPSM",
+            "name": "OPSM Edwardstown",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "992 South Rd, Edwardstown, SA, 5039",
+            "latitude": "-34.98117",
+            "longitude": "138.57246",
+            "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
+            "fetched_at": "2026-09-01T07:42:23+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 4.88256839888042,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "specsavers-3369",
+            "retailer": "Specsavers",
+            "name": "Edwardstown Castle Plaza S/C",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Shop GO54, Castle Plaza Shopping Centre, 992 South Road, Edwardstown, SA, 5039",
+            "latitude": "-34.981487",
+            "longitude": "138.5726",
+            "source_url": "https://www.specsavers.com.au/stores/edwardstown",
+            "fetched_at": "2026-09-01T23:21:29.969Z",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 4.8967077763822635,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "optical-superstore-61635",
+            "retailer": "Optical Superstore",
+            "name": "Optical Superstore — Seacombe Gardens",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "209 Sturt Rd, Seacombe Gardens SA 5047",
+            "latitude": "-35.018039",
+            "longitude": "138.546675",
+            "source_url": "https://opticalsuperstore.com.au/find-your-nearest-store/",
+            "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+            "status_evidence_url": "https://opticalsuperstore.com.au/location/marion/",
+            "status_verified_at": "2026-10-02",
+            "stale_source_warning": true,
+            "quality_notes": "location setting needs review; source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 4.9688682390555545,
+            "accepted_destination_member": false
+          }
+        ],
+        "within_2km": 4,
+        "within_5km": 14,
+        "method": "Current non-BN competitors at <=2/5 km straight-line distance from the recorded point. All settings eligible. Radius does not establish membership or customer catchment; observed counts may be incomplete. Stale-source warnings remain separate."
+      },
+      "directory_summary": {
+        "place_id": "corridor-au-sa-glenelg-jetty-road",
+        "name": "Jetty Road",
+        "research_status": "Directory captured; limitations retained",
+        "observed_at": "2026-10-08",
+        "source_effective_date": null,
+        "source_listing_count": 291,
+        "in_scope_non_optical_listings": 143,
+        "coming_soon_listings": 0,
+        "held_scope_listings": 8,
+        "outside_or_unresolved_address_listings": 139,
+        "rows_with_exceptions": 15,
+        "unclassified_listings": 0,
+        "categories": [
+          {
+            "name": "Food and dining",
+            "listing_count": 42,
+            "examples": [
+              {
+                "name": "1990co The Little Vietnam - Glenelg",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/1990co-the-little-vietnam-glenelg"
+              },
+              {
+                "name": "Ballet Wine Bar",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/ballet-wine-bar"
+              },
+              {
+                "name": "Beach Burrito Company",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/beach-burrito-company"
+              }
+            ]
+          },
+          {
+            "name": "Fashion and accessories",
+            "listing_count": 30,
+            "examples": [
+              {
+                "name": "Adelaide Exchange Jeweller",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/adelaide-exchange-jeweller"
+              },
+              {
+                "name": "Adelaide Instyle",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/adelaide-instyle"
+              },
+              {
+                "name": "Attitudes Boutique",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/attitudes-boutique"
+              }
+            ]
+          },
+          {
+            "name": "Beauty",
+            "listing_count": 18,
+            "examples": [
+              {
+                "name": "Angel Nail Spa & Beauty",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/angel-nail-spa-beauty"
+              },
+              {
+                "name": "Aspire Hair Salon",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/aspire-hair-hairdressing"
+              },
+              {
+                "name": "Beleza Hair Artistry",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/beleza-hair-artistry"
+              }
+            ]
+          },
+          {
+            "name": "Entertainment and services (combined source category)",
+            "listing_count": 18,
+            "examples": [
+              {
+                "name": "Amplified Accounting Pty Ltd",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/amplified-accounting-pty-ltd"
+              },
+              {
+                "name": "ANZ Banking Group Limited",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/anz-banking-group-limited"
+              },
+              {
+                "name": "Bank SA",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/bank-sa"
+              }
+            ]
+          },
+          {
+            "name": "Health and wellbeing",
+            "listing_count": 14,
+            "examples": [
+              {
+                "name": "Aleenta Barre",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/aleenta-barre"
+              },
+              {
+                "name": "Amplifon",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/amplifon"
+              },
+              {
+                "name": "Anytime Fitness",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/anytime-fitness-1"
+              }
+            ]
+          },
+          {
+            "name": "Home and lifestyle",
+            "listing_count": 13,
+            "examples": [
+              {
+                "name": "A little Retail Therapy",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/a-little-retail-therapy"
+              },
+              {
+                "name": "Adelaide Exchange Jeweller",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/adelaide-exchange-jeweller"
+              },
+              {
+                "name": "Attitudes Boutique",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/attitudes-boutique"
+              }
+            ]
+          },
+          {
+            "name": "Grocery and fresh food",
+            "listing_count": 11,
+            "examples": [
+              {
+                "name": "Bakers Delight - Glenelg",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/bakers-delight-glenelg"
+              },
+              {
+                "name": "Bay Fish Shop",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/bay-fish-shop"
+              },
+              {
+                "name": "Bay Junction Florist",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/bay-junction-florists"
+              }
+            ]
+          },
+          {
+            "name": "Accommodation",
+            "listing_count": 2,
+            "examples": [
+              {
+                "name": "Stamford Grand Adelaide",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/stamford-grand-adelaide"
+              },
+              {
+                "name": "The Colley Hotel",
+                "source_url": "https://www.jettyroadglenelg.com.au/stores-services/colley-hotel"
+              }
+            ]
+          }
+        ],
+        "scope": "Published district directory, restricted for comparison to explicit Jetty Road/Glenelg addresses. Address conflicts and unclear identities remain held.",
+        "coverage_limitations": [
+          "Directory-listed businesses have not all been independently checked for current trading.",
+          "Listing counts are not unique brands, occupied tenancies, frontage exposure or floor-area shares.",
+          "A listing may have more than one category; category counts must not be added as a total.",
+          "Source categories may be broad or inconsistent; unclassified and combined categories remain visible.",
+          "Optical competition uses the separately validated census, including accepted concessions missing from directories."
+        ],
+        "tenancy_count_share": null,
+        "floor_area_share": null,
+        "share_unavailable_reason": "No compatible occupied-tenancy or category-floor-area denominator.",
+        "source_urls": [
+          "https://www.jettyroadglenelg.com.au/directory/stores-services"
+        ]
+      },
+      "directory_record_ids": [
+        "corridor-au-sa-glenelg-jetty-road::18-street-hot-pot-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::1990co-the-little-vietnam-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::2b-altered",
+        "corridor-au-sa-glenelg-jetty-road::a-little-retail-therapy",
+        "corridor-au-sa-glenelg-jetty-road::adelaide-exchange-jeweller",
+        "corridor-au-sa-glenelg-jetty-road::adelaide-instyle",
+        "corridor-au-sa-glenelg-jetty-road::adelaide-international-motel",
+        "corridor-au-sa-glenelg-jetty-road::adelaide-naturopathic",
+        "corridor-au-sa-glenelg-jetty-road::advanced-plastic-cosmetic-surgery",
+        "corridor-au-sa-glenelg-jetty-road::aleenta-barre",
+        "corridor-au-sa-glenelg-jetty-road::all-that-mobile",
+        "corridor-au-sa-glenelg-jetty-road::amplified-accounting-pty-ltd",
+        "corridor-au-sa-glenelg-jetty-road::amplifon",
+        "corridor-au-sa-glenelg-jetty-road::angel-nail-spa-beauty",
+        "corridor-au-sa-glenelg-jetty-road::anytime-fitness-1",
+        "corridor-au-sa-glenelg-jetty-road::anz-banking-group-limited",
+        "corridor-au-sa-glenelg-jetty-road::aspire-hair-hairdressing",
+        "corridor-au-sa-glenelg-jetty-road::atlantic-tower-motor-inn",
+        "corridor-au-sa-glenelg-jetty-road::attitudes-boutique",
+        "corridor-au-sa-glenelg-jetty-road::audika-hearing-clinic-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::australia-post",
+        "corridor-au-sa-glenelg-jetty-road::bakers-delight-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::ballet-wine-bar",
+        "corridor-au-sa-glenelg-jetty-road::banjos-bakery-cafe",
+        "corridor-au-sa-glenelg-jetty-road::bank-sa",
+        "corridor-au-sa-glenelg-jetty-road::barbs-sew-knits",
+        "corridor-au-sa-glenelg-jetty-road::bay-chambers-physiotherapy-sports-injury",
+        "corridor-au-sa-glenelg-jetty-road::bay-dermatology",
+        "corridor-au-sa-glenelg-jetty-road::bay-discovery-centre",
+        "corridor-au-sa-glenelg-jetty-road::bay-family-dental",
+        "corridor-au-sa-glenelg-jetty-road::bay-fish-shop",
+        "corridor-au-sa-glenelg-jetty-road::bay-junction-florists",
+        "corridor-au-sa-glenelg-jetty-road::bay-newsagency-cards-centre",
+        "corridor-au-sa-glenelg-jetty-road::bayside-village-pharmacy",
+        "corridor-au-sa-glenelg-jetty-road::beach-burrito-company",
+        "corridor-au-sa-glenelg-jetty-road::beach-meats",
+        "corridor-au-sa-glenelg-jetty-road::beachouse-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::beer-wine-spirits",
+        "corridor-au-sa-glenelg-jetty-road::beleza-hair-artistry",
+        "corridor-au-sa-glenelg-jetty-road::bendigo-bank-ltd",
+        "corridor-au-sa-glenelg-jetty-road::bettys-burgers",
+        "corridor-au-sa-glenelg-jetty-road::blazae-fashion-emporium",
+        "corridor-au-sa-glenelg-jetty-road::blondies-bakehouse",
+        "corridor-au-sa-glenelg-jetty-road::blooms-the-chemist-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::blue-illusion",
+        "corridor-au-sa-glenelg-jetty-road::bottega",
+        "corridor-au-sa-glenelg-jetty-road::boujee-crew",
+        "corridor-au-sa-glenelg-jetty-road::brow-threads-lashes",
+        "corridor-au-sa-glenelg-jetty-road::bullet-club",
+        "corridor-au-sa-glenelg-jetty-road::cakeboy-donuts",
+        "corridor-au-sa-glenelg-jetty-road::capriccio-restaurant",
+        "corridor-au-sa-glenelg-jetty-road::carusos-fresh-foods",
+        "corridor-au-sa-glenelg-jetty-road::centrelink",
+        "corridor-au-sa-glenelg-jetty-road::century-21",
+        "corridor-au-sa-glenelg-jetty-road::chalkers-8-ball-centre",
+        "corridor-au-sa-glenelg-jetty-road::chatime",
+        "corridor-au-sa-glenelg-jetty-road::cheeseburger-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::chemist-warehouse-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::choice-the-discount-store",
+        "corridor-au-sa-glenelg-jetty-road::cibo-espresso",
+        "corridor-au-sa-glenelg-jetty-road::closer-record-store",
+        "corridor-au-sa-glenelg-jetty-road::coast-yoga",
+        "corridor-au-sa-glenelg-jetty-road::coco-house-cafe",
+        "corridor-au-sa-glenelg-jetty-road::coco-nails",
+        "corridor-au-sa-glenelg-jetty-road::cold-rock-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::coles-supermarket",
+        "corridor-au-sa-glenelg-jetty-road::collett-wine-group",
+        "corridor-au-sa-glenelg-jetty-road::commonwealth-bank",
+        "corridor-au-sa-glenelg-jetty-road::cotton-on",
+        "corridor-au-sa-glenelg-jetty-road::crystal-healing-sanctuary",
+        "corridor-au-sa-glenelg-jetty-road::cut-snake-barbershop",
+        "corridor-au-sa-glenelg-jetty-road::daisy-hen",
+        "corridor-au-sa-glenelg-jetty-road::dantes-deli",
+        "corridor-au-sa-glenelg-jetty-road::denim-cloth",
+        "corridor-au-sa-glenelg-jetty-road::dominos-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::doughballs-the-pizza-place",
+        "corridor-au-sa-glenelg-jetty-road::durham-serviced-apartments",
+        "corridor-au-sa-glenelg-jetty-road::dymocks-booksellers",
+        "corridor-au-sa-glenelg-jetty-road::ebisu-sushi",
+        "corridor-au-sa-glenelg-jetty-road::el-mexicano-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::elders-insurance-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::elegance-at-the-bay",
+        "corridor-au-sa-glenelg-jetty-road::endota-spa",
+        "corridor-au-sa-glenelg-jetty-road::europa-at-the-bay",
+        "corridor-au-sa-glenelg-jetty-road::extreme-boardriders",
+        "corridor-au-sa-glenelg-jetty-road::ezymart",
+        "corridor-au-sa-glenelg-jetty-road::fassina-liquor-merchants",
+        "corridor-au-sa-glenelg-jetty-road::feed",
+        "corridor-au-sa-glenelg-jetty-road::fella-hamilton",
+        "corridor-au-sa-glenelg-jetty-road::fish-bone-caf%C3%A9",
+        "corridor-au-sa-glenelg-jetty-road::flight-centre-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::foot-leg-centre",
+        "corridor-au-sa-glenelg-jetty-road::fourth",
+        "corridor-au-sa-glenelg-jetty-road::frankie-hair-and-beauty",
+        "corridor-au-sa-glenelg-jetty-road::fruitella",
+        "corridor-au-sa-glenelg-jetty-road::gather-grounds-cafe",
+        "corridor-au-sa-glenelg-jetty-road::gelatissimo",
+        "corridor-au-sa-glenelg-jetty-road::gelato-messina",
+        "corridor-au-sa-glenelg-jetty-road::ghanda",
+        "corridor-au-sa-glenelg-jetty-road::glenelg-allied-health-clinic",
+        "corridor-au-sa-glenelg-jetty-road::glenelg-art-gallery",
+        "corridor-au-sa-glenelg-jetty-road::glenelg-bbq-inn",
+        "corridor-au-sa-glenelg-jetty-road::glenelg-cinemas-by-wallis-entertainment",
+        "corridor-au-sa-glenelg-jetty-road::glenelg-day-surgery",
+        "corridor-au-sa-glenelg-jetty-road::glenelg-dental-centre",
+        "corridor-au-sa-glenelg-jetty-road::glenelg-finance-group-pty-ltd",
+        "corridor-au-sa-glenelg-jetty-road::glenelg-health-wholefoods",
+        "corridor-au-sa-glenelg-jetty-road::glenelg-kebab-yiros-house",
+        "corridor-au-sa-glenelg-jetty-road::mobizone-pty-ltd",
+        "corridor-au-sa-glenelg-jetty-road::glenelg-surf-life-saving-club",
+        "corridor-au-sa-glenelg-jetty-road::glenelg-thai-massage-sa-pty-ltd",
+        "corridor-au-sa-glenelg-jetty-road::glenelg-tiika-talk",
+        "corridor-au-sa-glenelg-jetty-road::glenelg-visitor-information",
+        "corridor-au-sa-glenelg-jetty-road::gloria-jeans-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::good-physio-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::graces-gallery-and-gifts",
+        "corridor-au-sa-glenelg-jetty-road::grand-newsagency",
+        "corridor-au-sa-glenelg-jetty-road::green-tea-house",
+        "corridor-au-sa-glenelg-jetty-road::grundys-shoe-store",
+        "corridor-au-sa-glenelg-jetty-road::h-a-coffee-house",
+        "corridor-au-sa-glenelg-jetty-road::haighs-chocolates",
+        "corridor-au-sa-glenelg-jetty-road::hair-machine-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::haku-massage",
+        "corridor-au-sa-glenelg-jetty-road::happy-herbs",
+        "corridor-au-sa-glenelg-jetty-road::harris-real-estate",
+        "corridor-au-sa-glenelg-jetty-road::head-start-recruitment",
+        "corridor-au-sa-glenelg-jetty-road::healthful-womens-wellness-clinic",
+        "corridor-au-sa-glenelg-jetty-road::healthy-life-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::hello-harry",
+        "corridor-au-sa-glenelg-jetty-road::her-town",
+        "corridor-au-sa-glenelg-jetty-road::holdfast-bay-musculoskeletal-centre",
+        "corridor-au-sa-glenelg-jetty-road::holdfast-bay-optometry",
+        "corridor-au-sa-glenelg-jetty-road::holdfast-medical-centre",
+        "corridor-au-sa-glenelg-jetty-road::homebasics-design",
+        "corridor-au-sa-glenelg-jetty-road::human-kind-studios",
+        "corridor-au-sa-glenelg-jetty-road::ians-shoes",
+        "corridor-au-sa-glenelg-jetty-road::il-kafe",
+        "corridor-au-sa-glenelg-jetty-road::indian-spice-authentic-cuisine",
+        "corridor-au-sa-glenelg-jetty-road::indochine",
+        "corridor-au-sa-glenelg-jetty-road::inkedin-beauty",
+        "corridor-au-sa-glenelg-jetty-road::iron-maidens",
+        "corridor-au-sa-glenelg-jetty-road::jai-thai-massage",
+        "corridor-au-sa-glenelg-jetty-road::james-the-salon",
+        "corridor-au-sa-glenelg-jetty-road::jetty-road-dental-clinic",
+        "corridor-au-sa-glenelg-jetty-road::jetty-road-shoe-repairs",
+        "corridor-au-sa-glenelg-jetty-road::jetty-road-tattoo-studio",
+        "corridor-au-sa-glenelg-jetty-road::job-prospects",
+        "corridor-au-sa-glenelg-jetty-road::kalou-models",
+        "corridor-au-sa-glenelg-jetty-road::kathmandhu",
+        "corridor-au-sa-glenelg-jetty-road::khrma-clothing",
+        "corridor-au-sa-glenelg-jetty-road::kid-sense",
+        "corridor-au-sa-glenelg-jetty-road::kidstuff",
+        "corridor-au-sa-glenelg-jetty-road::krush-hair",
+        "corridor-au-sa-glenelg-jetty-road::kylie-browns-newsagent",
+        "corridor-au-sa-glenelg-jetty-road::kylie-t-hairdressing",
+        "corridor-au-sa-glenelg-jetty-road::leather-and-ugg-boot-hut",
+        "corridor-au-sa-glenelg-jetty-road::lims-chinese-restaurant",
+        "corridor-au-sa-glenelg-jetty-road::lippy-and-more",
+        "corridor-au-sa-glenelg-jetty-road::local-kitchen-co",
+        "corridor-au-sa-glenelg-jetty-road::lucky-vietnamese-cuisine",
+        "corridor-au-sa-glenelg-jetty-road::lumiere-collective",
+        "corridor-au-sa-glenelg-jetty-road::madec-recruitment",
+        "corridor-au-sa-glenelg-jetty-road::mamma-carmela-cafe-pizzeria",
+        "corridor-au-sa-glenelg-jetty-road::massage-on-partridge",
+        "corridor-au-sa-glenelg-jetty-road::massey-espresso-cucina-dolce",
+        "corridor-au-sa-glenelg-jetty-road::max-pritchard-gunner-architects-pty-ltd",
+        "corridor-au-sa-glenelg-jetty-road::mckibbin-real-estate",
+        "corridor-au-sa-glenelg-jetty-road::md-bodycare-massage",
+        "corridor-au-sa-glenelg-jetty-road::medipedi-foot-hand-clinic",
+        "corridor-au-sa-glenelg-jetty-road::mimi-nail-salon",
+        "corridor-au-sa-glenelg-jetty-road::mio-gelato",
+        "corridor-au-sa-glenelg-jetty-road::momo-souffl%C3%A9-pancakes",
+        "corridor-au-sa-glenelg-jetty-road::money-options",
+        "corridor-au-sa-glenelg-jetty-road::morning-bagels",
+        "corridor-au-sa-glenelg-jetty-road::moseley-bar-kitchen",
+        "corridor-au-sa-glenelg-jetty-road::move-beyond-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::muscle-worx-2",
+        "corridor-au-sa-glenelg-jetty-road::naked-by-the-sea",
+        "corridor-au-sa-glenelg-jetty-road::national-australia-bank",
+        "corridor-au-sa-glenelg-jetty-road::national-pharmacies-1",
+        "corridor-au-sa-glenelg-jetty-road::national-pharmacies-optical",
+        "corridor-au-sa-glenelg-jetty-road::news-express-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::mugen-house",
+        "corridor-au-sa-glenelg-jetty-road::noodle-box-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::north-indian-cuisine",
+        "corridor-au-sa-glenelg-jetty-road::nx-newspapers-magazine-ugg-store",
+        "corridor-au-sa-glenelg-jetty-road::oakberry-acai-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::oaks-liberty-towers",
+        "corridor-au-sa-glenelg-jetty-road::oaks-plaza-pier",
+        "corridor-au-sa-glenelg-jetty-road::ok-cafe",
+        "corridor-au-sa-glenelg-jetty-road::ooh-la-la-beauty-boutique",
+        "corridor-au-sa-glenelg-jetty-road::opsm",
+        "corridor-au-sa-glenelg-jetty-road::oz-mart",
+        "corridor-au-sa-glenelg-jetty-road::pa-tea",
+        "corridor-au-sa-glenelg-jetty-road::parlour-hair-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::pastagogo",
+        "corridor-au-sa-glenelg-jetty-road::pear-tree-family-practice",
+        "corridor-au-sa-glenelg-jetty-road::peoples-choice-credit-union",
+        "corridor-au-sa-glenelg-jetty-road::performance-podiatry",
+        "corridor-au-sa-glenelg-jetty-road::peter-shearers-menswear",
+        "corridor-au-sa-glenelg-jetty-road::phil-hoffmann-travel",
+        "corridor-au-sa-glenelg-jetty-road::phonefix",
+        "corridor-au-sa-glenelg-jetty-road::phuket-thai-restaurant",
+        "corridor-au-sa-glenelg-jetty-road::physio-fit",
+        "corridor-au-sa-glenelg-jetty-road::physio-one-1",
+        "corridor-au-sa-glenelg-jetty-road::pmr-financial",
+        "corridor-au-sa-glenelg-jetty-road::pod-fit-podiatry",
+        "corridor-au-sa-glenelg-jetty-road::pokenom",
+        "corridor-au-sa-glenelg-jetty-road::police-station",
+        "corridor-au-sa-glenelg-jetty-road::priceline",
+        "corridor-au-sa-glenelg-jetty-road::pro-health-care",
+        "corridor-au-sa-glenelg-jetty-road::promenade-restaurant",
+        "corridor-au-sa-glenelg-jetty-road::pronto-pilates-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::real-serve",
+        "corridor-au-sa-glenelg-jetty-road::rebuild-physio-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::revive-head-spa-nails-beauty",
+        "corridor-au-sa-glenelg-jetty-road::rim-thang-authentic-thai",
+        "corridor-au-sa-glenelg-jetty-road::rodney-clark",
+        "corridor-au-sa-glenelg-jetty-road::rosa-mexicano-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::royal-copenhagen-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::rspca-op-shop",
+        "corridor-au-sa-glenelg-jetty-road::sa-pathology",
+        "corridor-au-sa-glenelg-jetty-road::safe-hands-sa",
+        "corridor-au-sa-glenelg-jetty-road::saigon-times",
+        "corridor-au-sa-glenelg-jetty-road::salvos-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::scales-and-partners",
+        "corridor-au-sa-glenelg-jetty-road::shadow-baking",
+        "corridor-au-sa-glenelg-jetty-road::sherpa-dining",
+        "corridor-au-sa-glenelg-jetty-road::sheshells-restaurant",
+        "corridor-au-sa-glenelg-jetty-road::silk-laser-clinic",
+        "corridor-au-sa-glenelg-jetty-road::skin-things-natural-salon",
+        "corridor-au-sa-glenelg-jetty-road::skin4u",
+        "corridor-au-sa-glenelg-jetty-road::smokoz",
+        "corridor-au-sa-glenelg-jetty-road::soda-rooftop",
+        "corridor-au-sa-glenelg-jetty-road::somewhere-moseley",
+        "corridor-au-sa-glenelg-jetty-road::spicy-chick",
+        "corridor-au-sa-glenelg-jetty-road::sportsgirl",
+        "corridor-au-sa-glenelg-jetty-road::st-andrews-uniting-church",
+        "corridor-au-sa-glenelg-jetty-road::st-louis-house-of-fine-chocolate",
+        "corridor-au-sa-glenelg-jetty-road::st-marys-memorial-school",
+        "corridor-au-sa-glenelg-jetty-road::stamford-grand-grand-bar",
+        "corridor-au-sa-glenelg-jetty-road::stamford-grand-horizons",
+        "corridor-au-sa-glenelg-jetty-road::stamford-grand-adelaide",
+        "corridor-au-sa-glenelg-jetty-road::status",
+        "corridor-au-sa-glenelg-jetty-road::subway-jetty-road",
+        "corridor-au-sa-glenelg-jetty-road::sukato-massage",
+        "corridor-au-sa-glenelg-jetty-road::sunglass-hut",
+        "corridor-au-sa-glenelg-jetty-road::muscle-worx",
+        "corridor-au-sa-glenelg-jetty-road::surf-dive-n-ski",
+        "corridor-au-sa-glenelg-jetty-road::sushi-date-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::sussan",
+        "corridor-au-sa-glenelg-jetty-road::suzanne-grae",
+        "corridor-au-sa-glenelg-jetty-road::swedish-tarts-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::taft-motor-inn",
+        "corridor-au-sa-glenelg-jetty-road::taking-shape",
+        "corridor-au-sa-glenelg-jetty-road::taplin-real-estate",
+        "corridor-au-sa-glenelg-jetty-road::terra-and-sol",
+        "corridor-au-sa-glenelg-jetty-road::the-amazing-beauty-chinese-massage",
+        "corridor-au-sa-glenelg-jetty-road::the-beachouse-function-room",
+        "corridor-au-sa-glenelg-jetty-road::the-bronze-snake",
+        "corridor-au-sa-glenelg-jetty-road::the-changing-canvas",
+        "corridor-au-sa-glenelg-jetty-road::colley-hotel",
+        "corridor-au-sa-glenelg-jetty-road::the-eyebrow-studio",
+        "corridor-au-sa-glenelg-jetty-road::the-george-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::the-goldsmithery",
+        "corridor-au-sa-glenelg-jetty-road::the-gym-on-moseley",
+        "corridor-au-sa-glenelg-jetty-road::health-hub",
+        "corridor-au-sa-glenelg-jetty-road::the-ivy-room",
+        "corridor-au-sa-glenelg-jetty-road::ottoman-grill",
+        "corridor-au-sa-glenelg-jetty-road::the-royal-moody",
+        "corridor-au-sa-glenelg-jetty-road::the-source-bulk-foods",
+        "corridor-au-sa-glenelg-jetty-road::the-strand-caf%C3%A9-restaurant",
+        "corridor-au-sa-glenelg-jetty-road::the-wash",
+        "corridor-au-sa-glenelg-jetty-road::tim-pine-studio",
+        "corridor-au-sa-glenelg-jetty-road::travel-associates",
+        "corridor-au-sa-glenelg-jetty-road::tsg",
+        "corridor-au-sa-glenelg-jetty-road::umi-sushi",
+        "corridor-au-sa-glenelg-jetty-road::uncle-docs",
+        "corridor-au-sa-glenelg-jetty-road::uniqorn-eats",
+        "corridor-au-sa-glenelg-jetty-road::urban-fresh",
+        "corridor-au-sa-glenelg-jetty-road::vertice-boutique",
+        "corridor-au-sa-glenelg-jetty-road::utzi-glenelg",
+        "corridor-au-sa-glenelg-jetty-road::waffle-king",
+        "corridor-au-sa-glenelg-jetty-road::westpac-bank",
+        "corridor-au-sa-glenelg-jetty-road::wishart-jewellers",
+        "corridor-au-sa-glenelg-jetty-road::woolworths-supermarket",
+        "corridor-au-sa-glenelg-jetty-road::worn-again-op-shop",
+        "corridor-au-sa-glenelg-jetty-road::yo-bar",
+        "corridor-au-sa-glenelg-jetty-road::yo-chi",
+        "corridor-au-sa-glenelg-jetty-road::yum-yum-chap-chap",
+        "corridor-au-sa-glenelg-jetty-road::zambrero"
+      ],
+      "directory_database": "destination_directory.json"
+    }
+  ]
+}

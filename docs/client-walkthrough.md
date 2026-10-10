@@ -29,7 +29,7 @@ Open the question-mark icon in the app header for the built-in five-minute tour.
 
 Normal marker clicks remain inspection actions: a store opens its store detail and nearby network; a place opens exact-place tenants and nearby competition. Candidate mode is deliberately separate so inspecting an existing marker does not accidentally create a candidate.
 
-The optional **Load private Bailey benchmark** control in Opportunity accepts `store_id` or `store_name` plus `rank` or `performance_score`. If at least five Bailey stores match, the best ten temporarily replace the all-Bailey benchmark. The CSV and raw values remain in browser memory and are not uploaded, stored, exported or placed in share URLs.
+**Explore locations** now supports direct brand/category hypotheses, strict ALL/ANY requirements, partial preferred matches and editable saved searches. The earlier private benchmark upload is not available in the public interface. Commercial groups and comparisons use the separate authenticated companion; do not import or save those selections in the public app. See [retail environment methodology](RETAIL_ENVIRONMENTS.md).
 
 ## Suggested 12-minute walkthrough
 

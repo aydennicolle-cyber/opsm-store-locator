@@ -1,7 +1,7 @@
 {
   "source_url": "https://opticalsuperstore.com.au/find-your-nearest-store/",
   "fetched_at": "2026-09-02T12:40:25.820359+00:00",
-  "store_count": 52,
+  "store_count": 53,
   "scope": "Australia",
   "method": "Bounded official public store locator",
   "retained_fields": [
@@ -19,7 +19,8 @@
     "official_url",
     "services",
     "audiology",
-    "source_url"
+    "source_url",
+    "fetched_at"
   ],
   "excluded_fields": [
     "email",
@@ -77,7 +78,18 @@
     "62163",
     "61932",
     "62295",
-    "153507"
+    "153507",
+    "61165"
   ],
-  "coordinate_corrections": []
+  "coordinate_corrections": [],
+  "incremental_reviews": [
+    {
+      "checked_at": "2026-10-02T16:29:04.828300+00:00",
+      "added_source_ids": [
+        "61165"
+      ],
+      "source_url": "https://opticalsuperstore.com.au/wp-admin/admin-ajax.php?action=store_search&lat=-25.2744&lng=133.7751&max_results=500&search_radius=5000&autoload=1",
+      "method": "Append one verified current network branch. Existing raw rows and September snapshot date are preserved; per-row fetched_at records the new observation. Branch corrections are separate evidence-backed overrides."
+    }
+  ]
 }

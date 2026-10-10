@@ -11,6 +11,13 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from reviewed_independents import (
+    SOURCE_LABEL as REVIEWED_SOURCE_LABEL,
+    classifications as reviewed_classifications,
+    read_reviewed_rows,
+)
+from reviewed_store_facts import apply_public_facts
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
@@ -79,6 +86,19 @@ FIELDS = [
     "area_confidence",
     "source_url",
     "fetched_at",
+    "business_type",
+    "identity_reviewed",
+    "coordinates_reviewed",
+    "status_evidence_url",
+    "status_verified_at",
+    "status_reason",
+    "coordinate_confidence",
+    "coordinate_evidence_url",
+    "coordinates_verified_at",
+    "coordinate_reason",
+    "public_facts_verified_at",
+    "public_facts_evidence_url",
+    "public_facts_reason",
 ]
 
 CENTRE_PHRASES = (
@@ -267,6 +287,7 @@ def load_coordinate_overrides() -> dict[str, dict]:
             "coordinate_source": tidy(row.get("coordinate_source", "")),
             "verified_at": verified_at,
             "reason": tidy(row.get("reason", "")),
+            "confidence": tidy(row.get("coordinate_confidence", "")),
         }
     return overrides
 
@@ -280,6 +301,9 @@ def apply_coordinate_overrides(stores: list[dict]) -> int:
             continue
         store["latitude"] = override["latitude"]
         store["longitude"] = override["longitude"]
+        store.update(coordinate_evidence_url=override['evidence_url'], coordinates_verified_at=override['verified_at'], coordinate_reason=override['reason'])
+        if override['confidence']:
+            store['coordinate_confidence'] = override['confidence']
         matched.add(store["store_id"])
     unmatched = set(overrides) - matched
     if unmatched:
@@ -339,6 +363,10 @@ def read_freshness() -> dict[str, str]:
             (ROOT / "retailers" / folder / "source_snapshot.json").read_text(encoding="utf-8")
         )
         freshness[label] = snapshot["fetched_at"]
+    # A new review must not make older practice evidence appear refreshed.
+    freshness[REVIEWED_SOURCE_LABEL] = min(
+        (row["verified_at"] for row in read_reviewed_rows()), default=""
+    )
     return freshness
 
 
@@ -364,8 +392,8 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                 "status": "Active",
                 "country": "Australia",
                 "state": tidy(row["state"]).upper(),
-                "suburb": tidy(row["city"]),
-                "postcode": tidy(row["postal_code"]),
+                "suburb": tidy(row.get("city", "")),
+                "postcode": tidy(row.get("postal_code", "")),
                 "full_address": tidy(row["full_address"]),
                 "phone": tidy(row["phone"]),
                 "latitude": float(row["latitude"]),
@@ -408,8 +436,10 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
         ("Optical by National Pharmacies", "national-pharmacies-optical", "Optical by National Pharmacies Australia", ""),
         ("Matthews Eyecare", "matthews-eyecare", "Matthews Eyecare New Zealand", "nz-"),
         ("Independent / Other optical", "provision", "ProVision Australia", "provision-"),
+        ("Independent / Other optical", "reviewed-independents", REVIEWED_SOURCE_LABEL, "reviewed-"),
     ):
-        for row in read_csv(ROOT / "retailers" / folder / "stores.csv"):
+        source_rows = read_reviewed_rows() if folder == "reviewed-independents" else read_csv(ROOT / "retailers" / folder / "stores.csv")
+        for row in source_rows:
             local_id = tidy(row["id"])
             country = tidy(row.get("country", "")) or "Australia"
             stores.append(
@@ -417,7 +447,8 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                     "retailer": retailer,
                     "store_id": f"{slug(retailer)}-{id_country}{local_id}",
                     "affiliations": (
-                        "provision" if folder == "provision"
+                        tidy(row.get("affiliations", "")) if folder == "reviewed-independents"
+                        else "provision" if folder == "provision"
                         else "optical-company-network" if folder in {"optical-warehouse", "the-optical-company"}
                         else "visique" if retailer == "Independent / Other optical" and re.search(r"\bvisique\b", tidy(row["name"]), re.I)
                         else ""
@@ -426,8 +457,8 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                     "status": tidy(row.get("status", "Active")) or "Active",
                     "country": country,
                     "state": tidy(row["state"]).upper() if country == "Australia" else tidy(row["state"]),
-                    "suburb": tidy(row["city"]),
-                    "postcode": tidy(row["postal_code"]),
+                    "suburb": tidy(row.get("city", "")),
+                    "postcode": tidy(row.get("postal_code", "")),
                     "full_address": tidy(row["full_address"]),
                     "phone": tidy(row.get("phone", "")),
                     "latitude": float(row["latitude"]),
@@ -442,7 +473,20 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                     "services": tidy(row.get("services", "")),
                     "audiology": tidy(row.get("audiology", "false")).lower(),
                     "source_url": tidy(row.get("source_url", "")) or tidy(row["official_url"]),
-                    "fetched_at": freshness[source_key],
+                    "fetched_at": (
+                        row["verified_at"] if folder == "reviewed-independents"
+                        else tidy(row.get("fetched_at", "")) or freshness[source_key]
+                    ),
+                    "business_type": tidy(row.get("business_type", "")),
+                    "identity_reviewed": tidy(row.get("identity_reviewed", "")),
+                    "coordinates_reviewed": tidy(row.get("coordinates_reviewed", "")),
+                    "status_evidence_url": tidy(row.get("status_evidence_url", "")),
+                    "status_verified_at": tidy(row.get("verified_at", "")),
+                    "status_reason": tidy(row.get("evidence_notes", "")),
+                    "coordinate_confidence": tidy(row.get("coordinate_confidence", "")),
+                    "coordinate_evidence_url": tidy(row.get("coordinate_evidence_url", "")),
+                    "coordinates_verified_at": tidy(row.get("verified_at", "")),
+                    "coordinate_reason": tidy(row.get("evidence_notes", "")),
                 }
             )
     for row in read_csv(ROOT / "retailers" / "opsm-nz" / "stores.csv"):
@@ -457,8 +501,8 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
                 "status": tidy(row.get("status", "Active")) or "Active",
                 "country": "New Zealand",
                 "state": tidy(row["state"]),
-                "suburb": tidy(row["city"]),
-                "postcode": tidy(row["postal_code"]),
+                "suburb": tidy(row.get("city", "")),
+                "postcode": tidy(row.get("postal_code", "")),
                 "full_address": tidy(row["full_address"]),
                 "phone": tidy(row.get("phone", "")),
                 "latitude": float(row["latitude"]),
@@ -826,6 +870,14 @@ def validate(stores: list[dict]) -> None:
         if not matched:
             raise ValueError(f"Cannot resolve excluded source retailer: {excluded_store_id}")
         source_counts[matched["name"]] -= 1
+    # Reviewed rebrands retain their original source ID and raw feed. Account
+    # for the transfer without adding a second storefront or rewriting history.
+    for store in stores:
+        original = next((item['name'] for item in registry
+                         if store['store_id'].startswith(f"{item['slug']}-")), None)
+        if original and original != store['retailer']:
+            source_counts[original] -= 1
+            source_counts[store['retailer']] += 1
     if counts != source_counts:
         raise ValueError(f"Combined counts do not reconcile to source files: combined={dict(counts)} source={dict(source_counts)}")
     history_paths = sorted((DATA_DIR / "history").glob("*.json"))
@@ -918,13 +970,22 @@ def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     freshness = read_freshness()
     stores = load_stores(freshness)
+    apply_public_facts(stores, DATA_DIR / "store_public_fact_overrides.csv")
+    for store in stores:
+        if store['retailer'] in {'The Optical Company', 'Optical Warehouse'}:
+            affiliations = set(filter(None, store.get('affiliations', '').split('|')))
+            affiliations.add('optical-company-network')
+            store['affiliations'] = '|'.join(sorted(affiliations))
     coordinate_override_count = apply_coordinate_overrides(stores)
     centre_memberships = load_centre_memberships()
     overrides = load_overrides()
     area_overrides = load_area_overrides()
     matched_memberships = set()
+    reviewed_settings = reviewed_classifications(read_reviewed_rows())
     for store in stores:
         store.update(classify(store))
+        if store["store_id"] in reviewed_settings:
+            store.update(reviewed_settings[store["store_id"]])
         store.update(
             {
                 "store_area_sqm": "",
@@ -946,6 +1007,21 @@ def main() -> None:
         if area_override:
             store.update(area_override)
     unmatched_memberships = set(centre_memberships) - matched_memberships
+    status_path = DATA_DIR / "store_status_overrides.csv"
+    if status_path.exists():
+        from reviewed_independents import public_url
+        from datetime import date
+        by_id = {store["store_id"]: store for store in stores}
+        seen_status_ids = set()
+        for row in read_csv(status_path):
+            if row["store_id"] in seen_status_ids:
+                raise ValueError(f"Duplicate status override: {row['store_id']}")
+            seen_status_ids.add(row["store_id"])
+            if row["store_id"] not in by_id or row["status"] not in {"Active", "Opening Soon", "Unknown", "Temporarily Closed", "Closed"}:
+                raise ValueError(f"Invalid store status override: {row['store_id']}")
+            if not public_url(row["evidence_url"]) or not row["reason"] or date.fromisoformat(row["verified_at"]) > date.today():
+                raise ValueError(f"Status override lacks current public evidence: {row['store_id']}")
+            by_id[row["store_id"]].update(status=row["status"], status_evidence_url=row["evidence_url"], status_verified_at=row["verified_at"], status_reason=row["reason"])
     if unmatched_memberships:
         first = sorted(unmatched_memberships)[0]
         raise ValueError(f"Centre membership store not found: {first[0]} {first[1]}")

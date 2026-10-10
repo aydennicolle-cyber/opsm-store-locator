@@ -19,6 +19,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+from premises_geocoding import context, receipt_matches, rejection, without_unit
 
 ROOT = Path(__file__).resolve().parents[1]
 USER_AGENT = "OpticalLeasingIntelligence/1.0 (bounded public locator refresh)"
@@ -117,23 +118,51 @@ def existing_coordinates(folder: str) -> dict[str, tuple[str, str, str]]:
         }
 
 
-def geocode(query: str, country: str, alternatives: list[str]) -> tuple[str, str]:
-    for candidate in [query, *alternatives]:
+class GeocodingReviewRequired(RuntimeError):
+    def __init__(self, message: str, attempts: list[dict]):
+        super().__init__(message)
+        self.attempts = attempts
+
+
+def geocode(record: dict, alternatives: list[str]) -> dict:
+    query = f"{record['full_address']}, {record['country']}"
+    attempts = []
+    for candidate in dict.fromkeys(tidy(value) for value in [query, *alternatives]):
         if not tidy(candidate):
             continue
         params = urllib.parse.urlencode({
-            "q": tidy(candidate), "format": "jsonv2", "limit": 1,
-            "countrycodes": "au" if country == "Australia" else "nz",
+            "q": candidate, "format": "jsonv2", "limit": 5, "addressdetails": 1,
+            "countrycodes": "au" if record["country"] == "Australia" else "nz",
         })
-        payload = json.loads(fetch_text(f"https://nominatim.openstreetmap.org/search?{params}"))
-        time.sleep(1.05)
-        if payload:
-            return payload[0]["lat"], payload[0]["lon"]
-    raise RuntimeError(f"Geocoder could not resolve official address: {query}")
+        try:
+            payload = json.loads(fetch_text(f"https://nominatim.openstreetmap.org/search?{params}"))
+            if not isinstance(payload, list) or not all(isinstance(row, dict) for row in payload):
+                raise ValueError("Expected an array of geocoding results")
+        except Exception as error:
+            attempts.append({"query": candidate, "error": str(error)})
+            raise GeocodingReviewRequired(f"Geocoding request failed for {record['id']}", attempts) from error
+        finally:
+            time.sleep(1.05)
+        candidates = [{"result": result, "rejection": rejection(result, record)} for result in payload]
+        attempts.append({"query": candidate, "candidates": candidates})
+        accepted = {json.dumps(item["result"], sort_keys=True): item["result"] for item in candidates if not item["rejection"]}
+        if len(accepted) > 1:
+            raise GeocodingReviewRequired(f"Ambiguous premises results for {record['id']}", attempts)
+        if accepted:
+            return {
+                "context": context(record), "query": candidate,
+                "observed_at": datetime.now(timezone.utc).isoformat(),
+                "result": next(iter(accepted.values())), "attempts": attempts,
+                "precision": "Approximate building/POI/address point; no tenancy or trading inference",
+            }
+    raise GeocodingReviewRequired(f"No evidenced premises point for {record['id']}; manual review required", attempts)
 
 
 def add_coordinates(folder: str, records: list[dict]) -> None:
     previous = existing_coordinates(folder)
+    evidence_path = ROOT / "retailers" / folder / "geocoding_evidence.json"
+    receipts = json.loads(evidence_path.read_text()) if evidence_path.exists() else {}
+    unresolved = []
     for record in records:
         override = COORDINATE_OVERRIDES.get(str(record["id"]))
         if override:
@@ -142,21 +171,33 @@ def add_coordinates(folder: str, records: list[dict]) -> None:
         if record.get("latitude") not in (None, "") and record.get("longitude") not in (None, ""):
             continue
         cached = previous.get(str(record["id"]))
-        if cached and tidy(cached[0]) == tidy(record["full_address"]) and cached[1] and cached[2]:
+        receipt = receipts.get(str(record["id"]), {})
+        if cached and receipt_matches(receipt, record, cached):
             record["latitude"], record["longitude"] = cached[1], cached[2]
+            record["_geocoding_evidence"] = receipt
             continue
-        locality = f"{record['city']} {record['state']} {record['postal_code']} {record['country']}"
-        venue = re.sub(
-            r"^(?:shop|suite|unit|level)\s*[^,]+,?\s*", "", record["full_address"],
-            flags=re.I,
-        )
-        address_without_unit = re.sub(
-            r"^(?:shop|suite|unit|level|lower ground floor)\s*[^,]+,?\s*", "",
-            record["full_address"], flags=re.I,
-        )
-        record["latitude"], record["longitude"] = geocode(
-            f"{record['full_address']}, {record['country']}", record["country"],
-            [f"{address_without_unit}, {record['country']}", f"{venue}, {locality}", locality],
+        stripped = without_unit(record["full_address"])
+        try:
+            receipt = geocode(record, [f"{stripped}, {record['country']}"])
+        except GeocodingReviewRequired as error:
+            unresolved.append({
+                "record": {field: record.get(field, "") for field in CSV_FIELDS},
+                "reason": str(error), "attempts": error.attempts,
+                "legacy_cache_present": bool(cached),
+            })
+            continue
+        record["latitude"], record["longitude"] = receipt["result"]["lat"], receipt["result"]["lon"]
+        record["_geocoding_evidence"] = receipt
+    queue = ROOT / "output" / "priority-geocoding-reviews" / f"{folder}.json"
+    queue.parent.mkdir(parents=True, exist_ok=True)
+    queue.write_text(json.dumps({
+        "checked_at": datetime.now(timezone.utc).isoformat(), "unresolved": unresolved,
+        "source_feed_preserved": bool(unresolved),
+        "note": "Unpromoted public leads. Geocoding failure is not a closure or exclusion decision.",
+    }, ensure_ascii=False, indent=2) + "\n")
+    if unresolved:
+        raise GeocodingReviewRequired(
+            f"{len(unresolved)} {folder} address(es) need review; existing source feed preserved; see {queue}", unresolved,
         )
 
 
@@ -173,11 +214,38 @@ def write_source(folder: str, source_url: str, records: list[dict], fetched_at: 
         "scope": sorted({row["country"] for row in records}), "method": method,
         "retained_fields": CSV_FIELDS, "excluded_fields": ["email", "opening_hours"],
         "source_ids": [str(row["id"]) for row in records],
-        "coordinate_note": "Official coordinates retained where supplied; otherwise the official address was rate-limit geocoded. Geocoding does not establish place membership.",
+        "coordinate_note": "Official coordinates and explicit legacy overrides retained where supplied. New address geocodes require premises-level evidence; cached geocodes require a matching evidence receipt. Points remain approximate and do not establish trading or place membership.",
     }
     (target / "source_snapshot.json").write_text(
         json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
+    (target / "geocoding_evidence.json").write_text(json.dumps({
+        str(row["id"]): row["_geocoding_evidence"] for row in records if row.get("_geocoding_evidence")
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def bupa_australian_location(item: dict) -> bool:
+    """Resolve an omitted country only from corroborating Australian fields.
+
+    The Australian locator omits Norwood's country. Do not silently discard
+    that branch, or extend the fallback to an explicitly different country.
+    Ambiguous optical rows stop a refresh for review instead of disappearing.
+    """
+    country = tidy(item.get("country")).casefold()
+    if country:
+        return country in {"australia", "au", "aus"}
+    state = tidy(item.get("state"))
+    state_code = AU_STATE_CODES.get(state.casefold(), state.upper())
+    try:
+        latitude, longitude = float(item["latitude"]), float(item["longitude"])
+    except (KeyError, TypeError, ValueError):
+        latitude = longitude = float("nan")
+    if (state_code in AU_STATE_CODES.values()
+            and re.fullmatch(r"\d{4}", tidy(item.get("postal_code")))
+            and tidy(item.get("city")) and tidy(item.get("address_line_1"))
+            and -44.5 <= latitude <= -9 and 112 <= longitude <= 154.5):
+        return True
+    raise RuntimeError(f"Bupa optical location needs country review: {item.get('id')}")
 
 
 def bupa() -> tuple[str, list[dict]]:
@@ -186,7 +254,7 @@ def bupa() -> tuple[str, list[dict]]:
     records = []
     for item in json.loads(fetch_text(endpoint, source_url)):
         filters = {tidy(value.get("name")).lower() for value in item.get("filters", [])}
-        if "optical" not in filters or tidy(item.get("country")) != "Australia":
+        if "optical" not in filters or not bupa_australian_location(item):
             continue
         state = AU_STATE_CODES.get(tidy(item.get("state")).lower(), tidy(item.get("state")).upper())
         address = tidy(item.get("full_address")) or ", ".join(

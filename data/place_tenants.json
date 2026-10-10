@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-09-04T00:46:42+00:00",
-    "verified_at": "2026-09-04",
+    "generated_at": "2026-10-10T13:16:04+00:00",
+    "verified_at": "2026-10-08",
     "scope": "Locked Australian opportunity pilot plus all currently accepted Bailey Nelson shopping-centre and high-street places",
     "coverage_note": "Curated key co-tenants only; not a complete directory. Optical rows require accepted canonical place membership. Bailey high-street baseline coverage confirms the corridor and its accepted optical tenants; broader retail-mix research remains separately measurable.",
     "pilot_place_ids": [
@@ -17,6 +17,7 @@
       "place-au-unknown-mt-annan-central"
     ],
     "bailey_centre_place_ids": [
+      "place-au-act-canberra-centre",
       "place-au-act-westfield-belconnen",
       "place-au-nsw-bondi-junction-westfield",
       "place-au-nsw-broadway-shopping-centre",
@@ -65,11 +66,11 @@
       "place-nz-bay-of-plenty-bayfair-shopping-centre",
       "place-nz-canterbury-riccarton-westfield",
       "place-nz-otago-meridian-mall",
+      "place-nz-otago-queenstown-central",
       "place-nz-waikato-chartwell-shopping-centre",
       "place-nz-wellington-queensgate-shopping-centre"
     ],
     "bailey_corridor_place_ids": [
-      "corridor-au-act-canberra-bunda-street",
       "corridor-au-nsw-balmain-darling-street",
       "corridor-au-nsw-bondi-beach-curlewis-street",
       "corridor-au-nsw-byron-bay-lawson-street",
@@ -89,7 +90,6 @@
       "corridor-au-vic-malvern-glenferrie-road",
       "corridor-au-vic-melbourne-flinders-lane",
       "corridor-au-vic-moonee-ponds-puckle-street",
-      "corridor-au-vic-mornington-main-street",
       "corridor-au-vic-newtown-pakington-street",
       "corridor-au-vic-richmond-swan-street",
       "corridor-au-vic-south-yarra-chapel-street",
@@ -103,7 +103,6 @@
       "corridor-nz-wellington-wellington-willis-street"
     ],
     "scope_place_ids": [
-      "corridor-au-act-canberra-bunda-street",
       "corridor-au-nsw-balmain-darling-street",
       "corridor-au-nsw-bondi-beach-curlewis-street",
       "corridor-au-nsw-byron-bay-lawson-street",
@@ -123,7 +122,6 @@
       "corridor-au-vic-malvern-glenferrie-road",
       "corridor-au-vic-melbourne-flinders-lane",
       "corridor-au-vic-moonee-ponds-puckle-street",
-      "corridor-au-vic-mornington-main-street",
       "corridor-au-vic-newtown-pakington-street",
       "corridor-au-vic-richmond-swan-street",
       "corridor-au-vic-south-yarra-chapel-street",
@@ -135,6 +133,7 @@
       "corridor-nz-auckland-auckland-ponsonby-road",
       "corridor-nz-canterbury-christchurch-cashel-street",
       "corridor-nz-wellington-wellington-willis-street",
+      "place-au-act-canberra-centre",
       "place-au-act-westfield-belconnen",
       "place-au-nsw-bondi-junction-westfield",
       "place-au-nsw-broadway-shopping-centre",
@@ -193,6 +192,7 @@
       "place-nz-bay-of-plenty-bayfair-shopping-centre",
       "place-nz-canterbury-riccarton-westfield",
       "place-nz-otago-meridian-mall",
+      "place-nz-otago-queenstown-central",
       "place-nz-waikato-chartwell-shopping-centre",
       "place-nz-wellington-queensgate-shopping-centre"
     ],
@@ -406,7 +406,6 @@
       "place-nz-wellington-queensgate-shopping-centre"
     ],
     "researched_bailey_corridor_place_ids": [
-      "corridor-au-act-canberra-bunda-street",
       "corridor-au-nsw-balmain-darling-street",
       "corridor-au-nsw-bondi-beach-curlewis-street",
       "corridor-au-nsw-byron-bay-lawson-street",
@@ -426,7 +425,6 @@
       "corridor-au-vic-malvern-glenferrie-road",
       "corridor-au-vic-melbourne-flinders-lane",
       "corridor-au-vic-moonee-ponds-puckle-street",
-      "corridor-au-vic-mornington-main-street",
       "corridor-au-vic-newtown-pakington-street",
       "corridor-au-vic-richmond-swan-street",
       "corridor-au-vic-south-yarra-chapel-street",
@@ -445,7 +443,6 @@
       "corridor-au-vic-fitzroy-gertrude-street"
     ],
     "key_tenant_count_by_place": {
-      "corridor-au-act-canberra-bunda-street": 0,
       "corridor-au-nsw-balmain-darling-street": 0,
       "corridor-au-nsw-bondi-beach-curlewis-street": 0,
       "corridor-au-nsw-byron-bay-lawson-street": 0,
@@ -465,7 +462,6 @@
       "corridor-au-vic-malvern-glenferrie-road": 0,
       "corridor-au-vic-melbourne-flinders-lane": 0,
       "corridor-au-vic-moonee-ponds-puckle-street": 0,
-      "corridor-au-vic-mornington-main-street": 0,
       "corridor-au-vic-newtown-pakington-street": 0,
       "corridor-au-vic-richmond-swan-street": 0,
       "corridor-au-vic-south-yarra-chapel-street": 0,
@@ -477,6 +473,7 @@
       "corridor-nz-auckland-auckland-ponsonby-road": 0,
       "corridor-nz-canterbury-christchurch-cashel-street": 0,
       "corridor-nz-wellington-wellington-willis-street": 0,
+      "place-au-act-canberra-centre": 0,
       "place-au-act-westfield-belconnen": 4,
       "place-au-nsw-bondi-junction-westfield": 8,
       "place-au-nsw-broadway-shopping-centre": 1,
@@ -535,11 +532,11 @@
       "place-nz-bay-of-plenty-bayfair-shopping-centre": 5,
       "place-nz-canterbury-riccarton-westfield": 10,
       "place-nz-otago-meridian-mall": 4,
+      "place-nz-otago-queenstown-central": 0,
       "place-nz-waikato-chartwell-shopping-centre": 5,
       "place-nz-wellington-queensgate-shopping-centre": 5
     },
     "key_tenant_categories_by_place": {
-      "corridor-au-act-canberra-bunda-street": [],
       "corridor-au-nsw-balmain-darling-street": [],
       "corridor-au-nsw-bondi-beach-curlewis-street": [],
       "corridor-au-nsw-byron-bay-lawson-street": [],
@@ -573,7 +570,6 @@
       "corridor-au-vic-malvern-glenferrie-road": [],
       "corridor-au-vic-melbourne-flinders-lane": [],
       "corridor-au-vic-moonee-ponds-puckle-street": [],
-      "corridor-au-vic-mornington-main-street": [],
       "corridor-au-vic-newtown-pakington-street": [],
       "corridor-au-vic-richmond-swan-street": [],
       "corridor-au-vic-south-yarra-chapel-street": [],
@@ -585,6 +581,7 @@
       "corridor-nz-auckland-auckland-ponsonby-road": [],
       "corridor-nz-canterbury-christchurch-cashel-street": [],
       "corridor-nz-wellington-wellington-willis-street": [],
+      "place-au-act-canberra-centre": [],
       "place-au-act-westfield-belconnen": [
         "Department-store anchor",
         "Design and lifestyle",
@@ -934,6 +931,7 @@
         "Premium fashion",
         "Technology"
       ],
+      "place-nz-otago-queenstown-central": [],
       "place-nz-waikato-chartwell-shopping-centre": [
         "Contemporary fashion",
         "Department-store anchor",
@@ -951,38 +949,6 @@
     }
   },
   "memberships": [
-    {
-      "membership_id": "tenant-membership-corridor-au-act-canberra-bunda-street-bailey-nelson-canberra",
-      "place_id": "corridor-au-act-canberra-bunda-street",
-      "tenant_id": "optical-store-bailey-nelson-canberra",
-      "tenant_name": "Bailey Nelson Canberra City",
-      "retailer": "Bailey Nelson",
-      "store_id": "bailey-nelson-canberra",
-      "category": "Optical",
-      "anchor_flag": false,
-      "selection_basis": "Accepted canonical place membership",
-      "status": "Active",
-      "source_url": "https://baileynelson.com.au/pages/optometrist-canberra",
-      "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-01",
-      "confidence": "Medium"
-    },
-    {
-      "membership_id": "tenant-membership-corridor-au-act-canberra-bunda-street-opsm-1029",
-      "place_id": "corridor-au-act-canberra-bunda-street",
-      "tenant_id": "optical-store-opsm-1029",
-      "tenant_name": "OPSM Canberra",
-      "retailer": "OPSM",
-      "store_id": "opsm-1029",
-      "category": "Optical",
-      "anchor_flag": false,
-      "selection_basis": "Accepted canonical place membership",
-      "status": "Active",
-      "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-      "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-01",
-      "confidence": "Medium"
-    },
     {
       "membership_id": "tenant-membership-corridor-au-nsw-balmain-darling-street-bailey-nelson-balmain",
       "place_id": "corridor-au-nsw-balmain-darling-street",
@@ -1385,7 +1351,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.provision.com.au/practice/thomas-and-mackay-optometrists-norwood/",
+      "source_url": "https://www.thomasandmackay.com.au/locations",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-02",
       "confidence": "Medium"
@@ -1653,22 +1619,6 @@
       "confidence": "High"
     },
     {
-      "membership_id": "tenant-membership-corridor-au-vic-camberwell-burke-road-eyeq-optometrists-camberwell",
-      "place_id": "corridor-au-vic-camberwell-burke-road",
-      "tenant_id": "optical-store-eyeq-optometrists-camberwell",
-      "tenant_name": "EyeQ Optometrists Camberwell",
-      "retailer": "EyeQ Optometrists",
-      "store_id": "eyeq-optometrists-camberwell",
-      "category": "Optical",
-      "anchor_flag": false,
-      "selection_basis": "Accepted canonical place membership",
-      "status": "Active",
-      "source_url": "https://www.eyeq.com.au/optometrist/camberwell/",
-      "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-02",
-      "confidence": "Medium"
-    },
-    {
       "membership_id": "tenant-membership-corridor-au-vic-camberwell-burke-road-opsm-1043",
       "place_id": "corridor-au-vic-camberwell-burke-road",
       "tenant_id": "optical-store-opsm-1043",
@@ -1865,70 +1815,6 @@
       "confidence": "Medium"
     },
     {
-      "membership_id": "tenant-membership-corridor-au-vic-mornington-main-street-independent-other-optical-provision-66541",
-      "place_id": "corridor-au-vic-mornington-main-street",
-      "tenant_id": "optical-store-independent-other-optical-provision-66541",
-      "tenant_name": "20/20 Sight & Style",
-      "retailer": "Independent / Other optical",
-      "store_id": "independent-other-optical-provision-66541",
-      "category": "Optical",
-      "anchor_flag": false,
-      "selection_basis": "Accepted canonical place membership",
-      "status": "Active",
-      "source_url": "https://www.provision.com.au/practice/2020-sight-style-optometrist-mornington/",
-      "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-02",
-      "confidence": "Medium"
-    },
-    {
-      "membership_id": "tenant-membership-corridor-au-vic-mornington-main-street-bailey-nelson-mornington",
-      "place_id": "corridor-au-vic-mornington-main-street",
-      "tenant_id": "optical-store-bailey-nelson-mornington",
-      "tenant_name": "Bailey Nelson Mornington",
-      "retailer": "Bailey Nelson",
-      "store_id": "bailey-nelson-mornington",
-      "category": "Optical",
-      "anchor_flag": false,
-      "selection_basis": "Accepted canonical place membership",
-      "status": "Active",
-      "source_url": "https://baileynelson.com.au/pages/optometrist-mornington",
-      "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-01",
-      "confidence": "Medium"
-    },
-    {
-      "membership_id": "tenant-membership-corridor-au-vic-mornington-main-street-bupa-optical-8139006",
-      "place_id": "corridor-au-vic-mornington-main-street",
-      "tenant_id": "optical-store-bupa-optical-8139006",
-      "tenant_name": "Bupa Optical Mornington",
-      "retailer": "Bupa Optical",
-      "store_id": "bupa-optical-8139006",
-      "category": "Optical",
-      "anchor_flag": false,
-      "selection_basis": "Accepted canonical place membership",
-      "status": "Active",
-      "source_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-mornington",
-      "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-03",
-      "confidence": "Medium"
-    },
-    {
-      "membership_id": "tenant-membership-corridor-au-vic-mornington-main-street-specsavers-3222",
-      "place_id": "corridor-au-vic-mornington-main-street",
-      "tenant_id": "optical-store-specsavers-3222",
-      "tenant_name": "Mornington",
-      "retailer": "Specsavers",
-      "store_id": "specsavers-3222",
-      "category": "Optical",
-      "anchor_flag": false,
-      "selection_basis": "Accepted canonical place membership",
-      "status": "Active",
-      "source_url": "https://www.specsavers.com.au/stores/mornington",
-      "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-01",
-      "confidence": "Medium"
-    },
-    {
       "membership_id": "tenant-membership-corridor-au-vic-newtown-pakington-street-bailey-nelson-geelong",
       "place_id": "corridor-au-vic-newtown-pakington-street",
       "tenant_id": "optical-store-bailey-nelson-geelong",
@@ -2019,7 +1905,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-chapel-st.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-chapel-st.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "Medium"
@@ -2233,20 +2119,52 @@
       "confidence": "Medium"
     },
     {
-      "membership_id": "tenant-membership-corridor-nz-wellington-wellington-willis-street-oscar-wylee-nz-optometrist-wellington-central",
-      "place_id": "corridor-nz-wellington-wellington-willis-street",
-      "tenant_id": "optical-store-oscar-wylee-nz-optometrist-wellington-central",
-      "tenant_name": "Oscar Wylee Wellington Central",
-      "retailer": "Oscar Wylee",
-      "store_id": "oscar-wylee-nz-optometrist-wellington-central",
+      "membership_id": "tenant-membership-place-au-act-canberra-centre-bailey-nelson-canberra",
+      "place_id": "place-au-act-canberra-centre",
+      "tenant_id": "optical-store-bailey-nelson-canberra",
+      "tenant_name": "Bailey Nelson Canberra City",
+      "retailer": "Bailey Nelson",
+      "store_id": "bailey-nelson-canberra",
       "category": "Optical",
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.co.nz/locations/optometrist-wellington-central.html",
+      "source_url": "https://baileynelson.com.au/pages/optometrist-canberra",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-27",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-act-canberra-centre-oscar-wylee-12",
+      "place_id": "place-au-act-canberra-centre",
+      "tenant_id": "optical-store-oscar-wylee-12",
+      "tenant_name": "Canberra Centre",
+      "retailer": "Oscar Wylee",
+      "store_id": "oscar-wylee-12",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-canberra-centre.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
-      "confidence": "Medium"
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-act-canberra-centre-specsavers-3309",
+      "place_id": "place-au-act-canberra-centre",
+      "tenant_id": "optical-store-specsavers-3309",
+      "tenant_name": "Canberra Centre",
+      "retailer": "Specsavers",
+      "store_id": "specsavers-3309",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.specsavers.com.au/stores/canberra",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-01",
+      "confidence": "High"
     },
     {
       "membership_id": "key-belconnen-kmart",
@@ -2357,7 +2275,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-belconnen.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-belconnen.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -2526,7 +2444,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://1001-optical.myshopify.com/pages/bondi-optometrist-westfield",
+      "source_url": "https://1001optometry.com.au/pages/bondi-optometrist-westfield",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-02",
       "confidence": "High"
@@ -2596,6 +2514,22 @@
       "confidence": "High"
     },
     {
+      "membership_id": "tenant-membership-place-au-nsw-bondi-junction-westfield-independent-other-optical-reviewed-au-wendy-ho-bondi-junction",
+      "place_id": "place-au-nsw-bondi-junction-westfield",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-wendy-ho-bondi-junction",
+      "tenant_name": "Wendy Ho Optique",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-wendy-ho-bondi-junction",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.wendyho.com",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-12",
+      "confidence": "High"
+    },
+    {
       "membership_id": "key-bondi-woolworths",
       "place_id": "place-au-nsw-bondi-junction-westfield",
       "tenant_id": "tenant-woolworths",
@@ -2640,9 +2574,9 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://baileynelson.com.au/pages/boutiques",
+      "source_url": "https://baileynelson.com.au/pages/optometrist-broadway",
       "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-03",
+      "verified_at": "2026-10-04",
       "confidence": "High"
     },
     {
@@ -2656,7 +2590,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-broadway.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-broadway.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -2675,6 +2609,22 @@
       "source_url": "https://www.specsavers.com.au/stores/broadway",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-02",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-nsw-broadway-shopping-centre-independent-other-optical-osm-au-node-3977545466",
+      "place_id": "place-au-nsw-broadway-shopping-centre",
+      "tenant_id": "optical-store-independent-other-optical-osm-au-node-3977545466",
+      "tenant_name": "Zoom Optics Broadway",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-osm-au-node-3977545466",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://zoomoptics.com.au/optometrist-broadway/",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-01",
       "confidence": "High"
     },
     {
@@ -2787,7 +2737,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-castle-towers.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-castle-towers.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -2936,7 +2886,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-erina-fair.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-erina-fair.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -2971,6 +2921,38 @@
       "source_url": "https://erinafair.com.au/store-directory/opsm/",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-03",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-nsw-erina-fair-independent-other-optical-reviewed-au-see-optical-erina",
+      "place_id": "place-au-nsw-erina-fair",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-see-optical-erina",
+      "tenant_name": "See Optical",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-see-optical-erina",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://seeoptical.com.au/",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-12",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-nsw-erina-fair-independent-other-optical-reviewed-au-icontact-erina",
+      "place_id": "place-au-nsw-erina-fair",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-icontact-erina",
+      "tenant_name": "iContact Optometrists \u2014 Erina",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-icontact-erina",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.icontact-optometrists.com.au/erina",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-01",
       "confidence": "High"
     },
     {
@@ -3069,7 +3051,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://1001-optical.myshopify.com/pages/north-ryde-optometrist-macquarie-centre",
+      "source_url": "https://1001optometry.com.au/pages/north-ryde-optometrist-macquarie-centre",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-02",
       "confidence": "High"
@@ -3117,7 +3099,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-macquarie-centre.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-macquarie-centre.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -3152,6 +3134,22 @@
       "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-nsw-macquarie-centre-independent-other-optical-reviewed-au-zoom-optics-macquarie",
+      "place_id": "place-au-nsw-macquarie-centre",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-zoom-optics-macquarie",
+      "tenant_name": "Zoom Optics \u2014 Macquarie",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-zoom-optics-macquarie",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://zoomoptics.com.au/optometrist-macquarie/",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-01",
       "confidence": "High"
     },
     {
@@ -3240,6 +3238,38 @@
       "store_id": ""
     },
     {
+      "membership_id": "tenant-membership-place-au-nsw-narellan-town-centre-independent-other-optical-reviewed-au-eye-concepts-narellan",
+      "place_id": "place-au-nsw-narellan-town-centre",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-eye-concepts-narellan",
+      "tenant_name": "Eye Concepts \u2014 Narellan",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-eye-concepts-narellan",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.eyeconcepts.com.au/narellan",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-27",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-nsw-narellan-town-centre-independent-other-optical-reviewed-au-eyeview-narellan",
+      "place_id": "place-au-nsw-narellan-town-centre",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-eyeview-narellan",
+      "tenant_name": "Eyeview Optometrists Narellan",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-eyeview-narellan",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://narellantowncentre.com.au/shop/centre-map?location=_x34_",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-28",
+      "confidence": "High"
+    },
+    {
       "membership_id": "tenant-membership-place-au-nsw-narellan-town-centre-oscar-wylee-84",
       "place_id": "place-au-nsw-narellan-town-centre",
       "tenant_id": "optical-store-oscar-wylee-84",
@@ -3250,7 +3280,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-narellan.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-narellan.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -3284,7 +3314,23 @@
       "status": "Active",
       "source_url": "https://www.narellantowncentre.com.au/",
       "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-03",
+      "verified_at": "2026-09-01",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-nsw-narellan-town-centre-independent-other-optical-reviewed-au-sunglass-hut-narellan",
+      "place_id": "place-au-nsw-narellan-town-centre",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-sunglass-hut-narellan",
+      "tenant_name": "Sunglass Hut Narellan Kiosk",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-sunglass-hut-narellan",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.narellantowncentre.com.au/index.php?id=409&option=com_mapplic&tmpl=component&view=Storedetail",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-28",
       "confidence": "High"
     },
     {
@@ -3451,7 +3497,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.provision.com.au/practice/city-optics-nepean/",
+      "source_url": "https://cityoptics.com.au/pages/nepean",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-02",
       "confidence": "High"
@@ -3599,7 +3645,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-green-hills.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-green-hills.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -3631,9 +3677,9 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.opticalco.com.au/locations-listing/",
+      "source_url": "https://theopticalco.com.au/local-store/green-hills/",
       "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-03",
+      "verified_at": "2026-10-04",
       "confidence": "High"
     },
     {
@@ -3749,7 +3795,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://1001-optical.myshopify.com/pages/chatswood-optometrist-westfield",
+      "source_url": "https://1001optometry.com.au/pages/chatswood-optometrist-westfield",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-02",
       "confidence": "High"
@@ -3784,6 +3830,22 @@
       "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-nsw-westfield-chatswood-the-optical-company-chatswood-2067",
+      "place_id": "place-au-nsw-westfield-chatswood",
+      "tenant_id": "optical-store-the-optical-company-chatswood-2067",
+      "tenant_name": "The Optical Company Chatswood",
+      "retailer": "The Optical Company",
+      "store_id": "the-optical-company-chatswood-2067",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://theopticalco.com.au/local-store/chatswood/",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-04",
       "confidence": "High"
     },
     {
@@ -3831,7 +3893,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://1001-optical.myshopify.com/pages/eastgardens-optometrist-westfield",
+      "source_url": "https://1001optometry.com.au/pages/eastgardens-optometrist-westfield",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-02",
       "confidence": "High"
@@ -3881,7 +3943,7 @@
       "status": "Active",
       "source_url": "https://www.eyeq.com.au/optometrist/eastgardens/",
       "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-02",
+      "verified_at": "2026-10-05",
       "confidence": "High"
     },
     {
@@ -3895,7 +3957,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-eastgardens.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-eastgardens.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -4035,6 +4097,22 @@
       "confidence": "High"
     },
     {
+      "membership_id": "tenant-membership-place-au-nsw-westfield-kotara-independent-other-optical-reviewed-au-city-optics-kotara",
+      "place_id": "place-au-nsw-westfield-kotara",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-city-optics-kotara",
+      "tenant_name": "City Optics \u2014 Kotara",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-city-optics-kotara",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://cityoptics.com.au/pages/kotara",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-01",
+      "confidence": "High"
+    },
+    {
       "membership_id": "tenant-membership-place-au-nsw-westfield-kotara-specsavers-3333",
       "place_id": "place-au-nsw-westfield-kotara",
       "tenant_id": "optical-store-specsavers-3333",
@@ -4077,7 +4155,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-kotara.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-kotara.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -4258,7 +4336,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-miranda.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-miranda.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -4393,7 +4471,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://1001-optical.myshopify.com/pages/penrith-optometrist-westfield",
+      "source_url": "https://1001optometry.com.au/pages/penrith-optometrist-westfield",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-02",
       "confidence": "High"
@@ -4411,7 +4489,7 @@
       "status": "Active",
       "source_url": "https://www.westfield.com.au/penrith",
       "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-03",
+      "verified_at": "2026-10-01",
       "confidence": "High"
     },
     {
@@ -4463,6 +4541,22 @@
       "confidence": "High"
     },
     {
+      "membership_id": "tenant-membership-place-au-nsw-westfield-penrith-independent-other-optical-reviewed-au-sunglass-hut-penrith-kiosk",
+      "place_id": "place-au-nsw-westfield-penrith",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-sunglass-hut-penrith-kiosk",
+      "tenant_name": "Sunglass Hut Penrith \u2014 Kiosk K21",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-sunglass-hut-penrith-kiosk",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/penrith/kiosk-k21-westfield-penrith-shopping-centre",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-28",
+      "confidence": "High"
+    },
+    {
       "membership_id": "tenant-membership-place-au-nsw-westfield-penrith-oscar-wylee-43",
       "place_id": "place-au-nsw-westfield-penrith",
       "tenant_id": "optical-store-oscar-wylee-43",
@@ -4473,7 +4567,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-penrith.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-penrith.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -4716,6 +4810,22 @@
       "confidence": "High"
     },
     {
+      "membership_id": "tenant-membership-place-au-nsw-westfield-sydney-independent-other-optical-provision-16787",
+      "place_id": "place-au-nsw-westfield-sydney",
+      "tenant_id": "optical-store-independent-other-optical-provision-16787",
+      "tenant_name": "Lifestyle Optical \u2014 Westfield Sydney",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-provision-16787",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.lifestyleoptical.com.au/pages/westfield-sydney",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-02",
+      "confidence": "High"
+    },
+    {
       "membership_id": "tenant-membership-place-au-nsw-westfield-sydney-specsavers-3581",
       "place_id": "place-au-nsw-westfield-sydney",
       "tenant_id": "optical-store-specsavers-3581",
@@ -4857,7 +4967,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-warringah-mall.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-warringah-mall.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -5016,6 +5126,22 @@
       "store_id": ""
     },
     {
+      "membership_id": "tenant-membership-place-au-qld-cairns-shopping-centre-independent-other-optical-reviewed-au-brighteyes-cairns-central",
+      "place_id": "place-au-qld-cairns-shopping-centre",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-brighteyes-cairns-central",
+      "tenant_name": "BrightEyes Sunglasses \u2014 Cairns Central",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-brighteyes-cairns-central",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.brighteyes.com.au/d/cairns-central/8",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-02",
+      "confidence": "High"
+    },
+    {
       "membership_id": "tenant-membership-place-au-qld-cairns-shopping-centre-bupa-optical-3870854",
       "place_id": "place-au-qld-cairns-shopping-centre",
       "tenant_id": "optical-store-bupa-optical-3870854",
@@ -5092,7 +5218,7 @@
       "status": "Active",
       "source_url": "https://cairnscentral.com.au/",
       "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-02",
+      "verified_at": "2026-09-01",
       "confidence": "High"
     },
     {
@@ -5230,6 +5356,22 @@
       "source_date": "",
       "retailer": "",
       "store_id": ""
+    },
+    {
+      "membership_id": "tenant-membership-place-au-qld-cairns-smithfield-centre-independent-other-optical-reviewed-au-brighteyes-cairns-smithfield",
+      "place_id": "place-au-qld-cairns-smithfield-centre",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-brighteyes-cairns-smithfield",
+      "tenant_name": "BrightEyes Sunglasses \u2014 Smithfield Centre Cairns",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-brighteyes-cairns-smithfield",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.brighteyes.com.au/d/cairns-smithfield/9",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-02",
+      "confidence": "High"
     },
     {
       "membership_id": "tenant-membership-place-au-qld-cairns-smithfield-centre-bupa-optical-3870853",
@@ -5423,7 +5565,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-indooroopilly.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-indooroopilly.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -5651,9 +5793,25 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-mt-gravatt.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-mt-gravatt.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-qld-mt-gravatt-westfield-independent-other-optical-reviewed-au-icontact-mt-gravatt",
+      "place_id": "place-au-qld-mt-gravatt-westfield",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-icontact-mt-gravatt",
+      "tenant_name": "iContact Optometrists \u2014 Mt Gravatt",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-icontact-mt-gravatt",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.westfield.com.au/mtgravatt/store/5NIzWWJh6MaKsmc46cMS2/icontact-optometrists",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-01",
       "confidence": "High"
     },
     {
@@ -5677,16 +5835,16 @@
       "membership_id": "tenant-membership-place-au-qld-pacific-fair-bailey-nelson-gold-coast",
       "place_id": "place-au-qld-pacific-fair",
       "tenant_id": "optical-store-bailey-nelson-gold-coast",
-      "tenant_name": "Bailey Nelson Gold Coast Pacific Fair",
+      "tenant_name": "Bailey Nelson Pacific Fair \u2014 New Location",
       "retailer": "Bailey Nelson",
       "store_id": "bailey-nelson-gold-coast",
       "category": "Optical",
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://baileynelson.com.au/pages/optometrist-gold-coast",
+      "source_url": "https://baileynelson.com.au/pages/optometrist-near-me",
       "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-01",
+      "verified_at": "2026-09-27",
       "confidence": "High"
     },
     {
@@ -5732,7 +5890,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-pacific-fair.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-pacific-fair.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -5821,6 +5979,22 @@
       "confidence": "High"
     },
     {
+      "membership_id": "tenant-membership-place-au-qld-robina-town-centre-dr-independent-other-optical-reviewed-au-medispecs-robina",
+      "place_id": "place-au-qld-robina-town-centre-dr",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-medispecs-robina",
+      "tenant_name": "Medispecs Optical \u2014 Robina",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-medispecs-robina",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.medispecs.com.au",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-12",
+      "confidence": "High"
+    },
+    {
       "membership_id": "tenant-membership-place-au-qld-robina-town-centre-dr-opsm-1322",
       "place_id": "place-au-qld-robina-town-centre-dr",
       "tenant_id": "optical-store-opsm-1322",
@@ -5847,7 +6021,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-robina.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-robina.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -5879,9 +6053,9 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.opticalco.com.au/locations-listing/",
+      "source_url": "https://robinatowncentre.qicre.com/Shop/Stores/The-Optical-Co",
       "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-03",
+      "verified_at": "2026-10-04",
       "confidence": "High"
     },
     {
@@ -5969,6 +6143,22 @@
       "confidence": "High"
     },
     {
+      "membership_id": "tenant-membership-place-au-qld-toowoomba-grand-central-shopping-centre-independent-other-optical-reviewed-au-brighteyes-toowoomba",
+      "place_id": "place-au-qld-toowoomba-grand-central-shopping-centre",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-brighteyes-toowoomba",
+      "tenant_name": "BrightEyes Sunglasses \u2014 Grand Central Toowoomba",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-brighteyes-toowoomba",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.brighteyes.com.au/d/toowoomba/34",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-02",
+      "confidence": "High"
+    },
+    {
       "membership_id": "tenant-membership-place-au-qld-toowoomba-grand-central-shopping-centre-bupa-optical-13626280",
       "place_id": "place-au-qld-toowoomba-grand-central-shopping-centre",
       "tenant_id": "optical-store-bupa-optical-13626280",
@@ -6011,7 +6201,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-toowoomba.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-toowoomba.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "Medium"
@@ -6049,6 +6239,22 @@
       "confidence": "High"
     },
     {
+      "membership_id": "tenant-membership-place-au-qld-toowoomba-grand-central-shopping-centre-optical-superstore-61225",
+      "place_id": "place-au-qld-toowoomba-grand-central-shopping-centre",
+      "tenant_id": "optical-store-optical-superstore-61225",
+      "tenant_name": "Optical Superstore \u2014 Grand Central Shopping Centre",
+      "retailer": "Optical Superstore",
+      "store_id": "optical-superstore-61225",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://opticalsuperstore.com.au/location/toowoomba/",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-02",
+      "confidence": "High"
+    },
+    {
       "membership_id": "tenant-membership-place-au-qld-toowoomba-grand-central-shopping-centre-specsavers-3416",
       "place_id": "place-au-qld-toowoomba-grand-central-shopping-centre",
       "tenant_id": "optical-store-specsavers-3416",
@@ -6062,22 +6268,6 @@
       "source_url": "https://www.specsavers.com.au/stores/toowoombagrand",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
-      "confidence": "High"
-    },
-    {
-      "membership_id": "tenant-membership-place-au-qld-toowoomba-grand-central-shopping-centre-optical-superstore-61225",
-      "place_id": "place-au-qld-toowoomba-grand-central-shopping-centre",
-      "tenant_id": "optical-store-optical-superstore-61225",
-      "tenant_name": "Toowoomba \u2013 Grand Central",
-      "retailer": "Optical Superstore",
-      "store_id": "optical-superstore-61225",
-      "category": "Optical",
-      "anchor_flag": false,
-      "selection_basis": "Accepted canonical place membership",
-      "status": "Active",
-      "source_url": "https://opticalsuperstore.com.au/find-your-nearest-store/",
-      "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-03",
       "confidence": "High"
     },
     {
@@ -6222,9 +6412,9 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.provision.com.au/practice/smart-choice-eyewear/",
+      "source_url": "https://www.westfield.com.au/carindale/store/2JyAndA6SIi0AQug8yCisS/smart-choice-eyewear",
       "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-02",
+      "verified_at": "2026-10-08",
       "confidence": "High"
     },
     {
@@ -6238,9 +6428,9 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.opticalco.com.au/locations-listing/",
+      "source_url": "https://theopticalco.com.au/local-store/carindale/",
       "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-03",
+      "verified_at": "2026-10-04",
       "confidence": "High"
     },
     {
@@ -6254,7 +6444,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-carindale.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-carindale.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -6486,7 +6676,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-chermside.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-chermside.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -6618,7 +6808,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-coomera.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-coomera.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -6725,6 +6915,38 @@
       "confidence": "High"
     },
     {
+      "membership_id": "tenant-membership-place-au-qld-westfield-north-lakes-independent-other-optical-osm-au-node-10272461284",
+      "place_id": "place-au-qld-westfield-north-lakes",
+      "tenant_id": "optical-store-independent-other-optical-osm-au-node-10272461284",
+      "tenant_name": "BrightEyes Sunglasses \u2014 Westfield North Lakes",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-osm-au-node-10272461284",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.brighteyes.com.au/d/north-lakes/39",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-02",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-qld-westfield-north-lakes-independent-other-optical-osm-au-node-4845383785",
+      "place_id": "place-au-qld-westfield-north-lakes",
+      "tenant_id": "optical-store-independent-other-optical-osm-au-node-4845383785",
+      "tenant_name": "Eye to Eye Optometry",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-osm-au-node-4845383785",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.eyetoeyeoptometry.com.au",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-12",
+      "confidence": "High"
+    },
+    {
       "membership_id": "tenant-membership-place-au-qld-westfield-north-lakes-george-matilda-473",
       "place_id": "place-au-qld-westfield-north-lakes",
       "tenant_id": "optical-store-george-matilda-473",
@@ -6767,9 +6989,9 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.westfield.com.au/northlakes/",
+      "source_url": "https://www.westfield.com.au/northlakes/store/1izBfyVLwaWw2umCACqSES/opsm",
       "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-03",
+      "verified_at": "2026-10-02",
       "confidence": "High"
     },
     {
@@ -6783,7 +7005,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-north-lakes.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-north-lakes.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -6855,6 +7077,22 @@
       "source_date": "2026-09-03",
       "retailer": "",
       "store_id": ""
+    },
+    {
+      "membership_id": "tenant-membership-place-au-sa-adelaide-arcade-independent-other-optical-osm-au-node-13067885816",
+      "place_id": "place-au-sa-adelaide-arcade",
+      "tenant_id": "optical-store-independent-other-optical-osm-au-node-13067885816",
+      "tenant_name": "Aryoo Eyewear",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-osm-au-node-13067885816",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://adelaidearcade.com.au/retailers/aryoo-eyewear/",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-02",
+      "confidence": "High"
     },
     {
       "membership_id": "tenant-membership-place-au-sa-adelaide-arcade-bailey-nelson-adelaide-arcade",
@@ -7096,7 +7334,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-marion.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-marion.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -7601,7 +7839,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-chadstone.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-chadstone.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -7734,7 +7972,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-eastland.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-eastland.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -7769,6 +8007,22 @@
       "source_url": "https://www.specsavers.com.au/stores/ringwood",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-vic-eastland-independent-other-optical-reviewed-au-icontact-eastland",
+      "place_id": "place-au-vic-eastland",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-icontact-eastland",
+      "tenant_name": "iContact Optometrists \u2014 Eastland",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-icontact-eastland",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.icontact.net.au/store-locations/icontact-eastland",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-12",
       "confidence": "High"
     },
     {
@@ -7882,7 +8136,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-frankston.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-frankston.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -8030,7 +8284,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-highpoint.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-highpoint.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -8120,6 +8374,22 @@
       "store_id": ""
     },
     {
+      "membership_id": "tenant-membership-place-au-vic-melbourne-central-shopping-centre-independent-other-optical-reviewed-au-aojo-melbourne-central",
+      "place_id": "place-au-vic-melbourne-central-shopping-centre",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-aojo-melbourne-central",
+      "tenant_name": "AOJO \u2014 Melbourne Central",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-aojo-melbourne-central",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.melbournecentral.com.au/stores-services/aojo",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-02",
+      "confidence": "High"
+    },
+    {
       "membership_id": "tenant-membership-place-au-vic-melbourne-central-shopping-centre-bailey-nelson-melbourne-cbd",
       "place_id": "place-au-vic-melbourne-central-shopping-centre",
       "tenant_id": "optical-store-bailey-nelson-melbourne-cbd",
@@ -8146,7 +8416,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-melbourne-central.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-melbourne-central.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -8312,7 +8582,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-northland.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-northland.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -8494,7 +8764,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-glen-waverley.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-glen-waverley.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -8594,7 +8864,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://1001-optical.myshopify.com/pages/doncaster-optometrist-westfield",
+      "source_url": "https://1001optometry.com.au/pages/doncaster-optometrist-westfield",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-02",
       "confidence": "High"
@@ -8674,9 +8944,25 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-doncaster.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-doncaster.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-vic-westfield-doncaster-independent-other-optical-reviewed-au-icontact-doncaster",
+      "place_id": "place-au-vic-westfield-doncaster",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-icontact-doncaster",
+      "tenant_name": "iContact Optometrists \u2014 Doncaster",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-icontact-doncaster",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.westfield.com.au/doncaster/store/524UfLltZlJ9lN69NJlbuL/icontact-optomoetrists",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-12",
       "confidence": "High"
     },
     {
@@ -8780,6 +9066,22 @@
       "confidence": "High"
     },
     {
+      "membership_id": "tenant-membership-place-au-vic-westfield-southland-independent-other-optical-reviewed-au-eye-concepts-southland",
+      "place_id": "place-au-vic-westfield-southland",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-eye-concepts-southland",
+      "tenant_name": "Eye Concepts \u2014 Southland",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-eye-concepts-southland",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.westfield.com.au/southland/store/Xk1FNDapoqbpGDcuIQsg5/eye-concepts",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-27",
+      "confidence": "High"
+    },
+    {
       "membership_id": "tenant-membership-place-au-vic-westfield-southland-opsm-1407",
       "place_id": "place-au-vic-westfield-southland",
       "tenant_id": "optical-store-opsm-1407",
@@ -8838,7 +9140,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-southland.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-southland.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -8974,7 +9276,7 @@
       "status": "Active",
       "source_url": "https://claremontquarter.com.au/",
       "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-03",
+      "verified_at": "2026-09-01",
       "confidence": "High"
     },
     {
@@ -9138,7 +9440,23 @@
       "status": "Active",
       "source_url": "https://www.lakesidejoondalup.com.au/",
       "source_type": "Accepted store-place evidence",
-      "verified_at": "2026-09-02",
+      "verified_at": "2026-09-01",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-wa-joondalup-lakeside-s-city-independent-other-optical-reviewed-au-options-joondalup",
+      "place_id": "place-au-wa-joondalup-lakeside-s-city",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-options-joondalup",
+      "tenant_name": "Options Optometrists \u2014 Joondalup",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-options-joondalup",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://optionsoptometrists.com.au/locations/",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-24",
       "confidence": "High"
     },
     {
@@ -9234,9 +9552,25 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-booragoon.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-booragoon.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-wa-westfield-booragoon-independent-other-optical-reviewed-au-sigo-booragoon",
+      "place_id": "place-au-wa-westfield-booragoon",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-sigo-booragoon",
+      "tenant_name": "ZEISS Vision Centre by SIGO Eyecare \u2014 Booragoon",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-sigo-booragoon",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.westfield.com.au/booragoon/store/7n1p6G953K7QWVu6QRXh10/zeiss-vision-centre-by-sigo-eyecare",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-10-04",
       "confidence": "High"
     },
     {
@@ -9408,6 +9742,38 @@
       "confidence": "High"
     },
     {
+      "membership_id": "tenant-membership-place-au-wa-westfield-carousel-independent-other-optical-reviewed-au-crystal-vision-carousel",
+      "place_id": "place-au-wa-westfield-carousel",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-crystal-vision-carousel",
+      "tenant_name": "Crystal Vision Optometrists \u2014 Carousel",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-crystal-vision-carousel",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.westfield.com.au/carousel/store/20e8kcTgvGCYK0WYsKuaG6/crystal-vision-optometrist",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-27",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-au-wa-westfield-carousel-independent-other-optical-reviewed-au-dannell-gollop-carousel",
+      "place_id": "place-au-wa-westfield-carousel",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-au-dannell-gollop-carousel",
+      "tenant_name": "Dannell & Gollop Optometrists \u2014 Carousel",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-au-dannell-gollop-carousel",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.westfield.com.au/carousel/store/pccXXFSGNUacaA0e00aGe/dannell-gollop-optometrists",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-27",
+      "confidence": "High"
+    },
+    {
       "membership_id": "tenant-membership-place-au-wa-westfield-carousel-laubman-pank-carousel-optometrist",
       "place_id": "place-au-wa-westfield-carousel",
       "tenant_id": "optical-store-laubman-pank-carousel-optometrist",
@@ -9450,7 +9816,7 @@
       "anchor_flag": false,
       "selection_basis": "Accepted canonical place membership",
       "status": "Active",
-      "source_url": "https://www.oscarwylee.com.au/locations/locations/optometrist-carousel.html",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-carousel.html",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
       "confidence": "High"
@@ -9569,6 +9935,22 @@
       "source_url": "https://www.opsm.co.nz/find-store",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-01",
+      "confidence": "High"
+    },
+    {
+      "membership_id": "tenant-membership-place-nz-auckland-botany-town-centre-independent-other-optical-reviewed-nz-vision-centre-botany",
+      "place_id": "place-nz-auckland-botany-town-centre",
+      "tenant_id": "optical-store-independent-other-optical-reviewed-nz-vision-centre-botany",
+      "tenant_name": "Vision Centre \u2014 Botany",
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-reviewed-nz-vision-centre-botany",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://visioncentre.co.nz/our-locations/optometrist-botany/",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-24",
       "confidence": "High"
     },
     {
@@ -10503,6 +10885,22 @@
       "source_date": "2026-09-03",
       "retailer": "",
       "store_id": ""
+    },
+    {
+      "membership_id": "tenant-membership-place-nz-otago-queenstown-central-bailey-nelson-nz-optometrist-queenstown",
+      "place_id": "place-nz-otago-queenstown-central",
+      "tenant_id": "optical-store-bailey-nelson-nz-optometrist-queenstown",
+      "tenant_name": "Bailey Nelson Queenstown - NOW OPEN",
+      "retailer": "Bailey Nelson",
+      "store_id": "bailey-nelson-nz-optometrist-queenstown",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://baileynelson.co.nz/booking",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-12",
+      "confidence": "High"
     },
     {
       "membership_id": "key-chartwell-h-and-m",

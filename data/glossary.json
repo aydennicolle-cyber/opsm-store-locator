@@ -7,6 +7,14 @@
   },
   "terms": [
     {
+      "term": "Place",
+      "definition": "A shopping centre or high-street corridor being assessed as a retail destination. It can contain multiple stores. In site planning, a selected map point can also be compared, but it is not a verified tenancy or proof of membership."
+    },
+    {
+      "term": "Store",
+      "definition": "An individual optical business outlet. A store can belong to a verified place, such as a shopping centre or high street; proximity alone does not establish that relationship."
+    },
+    {
       "term": "Anchor tenant",
       "definition": "A major retailer that helps draw regular visits to a shopping centre, such as a supermarket or department store. An anchor is evidence about the retail environment, not proof that an optical store will succeed."
     },
@@ -24,7 +32,7 @@
     },
     {
       "term": "Centre class",
-      "definition": "A separate description of a shopping centre's role and scale, such as Regional, Sub-regional, Neighbourhood, Outlet or CBD / Mixed-use. It does not replace the Shopping Centre location setting."
+      "definition": "A separate description of a shopping centre's role and scale, such as Regional, Sub-regional, Neighbourhood, Outlet or CBD / Mixed-use. It does not replace the Shopping Centre place type."
     },
     {
       "term": "Co-tenancy",
@@ -59,7 +67,7 @@
       "definition": "The property group that publicly appears to control leasing decisions for an asset. It may be an owner, manager, operator or separately appointed party."
     },
     {
-      "term": "Location setting",
+      "term": "Place type",
       "definition": "The physical retail context of a store or place: Shopping Centre, High Street, Other or Uncertain. It is separate from centre class and property ownership."
     },
     {

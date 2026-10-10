@@ -20,6 +20,8 @@ from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
+from embedded_business_maps import resolve_operator_map
+
 
 ROOT = Path(__file__).resolve().parents[1]
 USER_AGENT = "OpticalLeasingIntelligence/1.0 (bounded public locator refresh)"
@@ -116,7 +118,16 @@ def write_source(
         "excluded_fields": ["email", "opening_hours"],
         "source_ids": [row["id"] for row in records],
         "coordinate_corrections": coordinate_corrections or [],
+        "coordinate_evidence": [dict(store_id=row["id"], **row["coordinate_evidence"])
+                                for row in records if row.get("coordinate_evidence")],
     }
+    notices = [dict(store_id=row["id"], official_url=row["official_url"], notices=row["source_notices"])
+               for row in records if row.get("source_notices")]
+    if notices:
+        snapshot["source_notices"] = notices
+    locator_pages = sorted({row["locator_page_url"] for row in records if row.get("locator_page_url")})
+    if locator_pages:
+        snapshot["locator_pages"] = locator_pages
     (target / "source_snapshot.json").write_text(
         json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
@@ -247,7 +258,7 @@ def stockist_1001() -> tuple[str, list[dict]]:
             "phone": tidy(item.get("phone")),
             "latitude": item.get("latitude"),
             "longitude": item.get("longitude"),
-            "official_url": custom_fields.get("Find Out More") or source_url,
+            "official_url": custom_fields.get("Find Out More") or tidy(item.get("website")) or source_url,
             "services": "",
             "audiology": "false",
             "source_url": source_url,
@@ -272,16 +283,16 @@ def eyeq() -> tuple[str, list[dict]]:
             text_from_html(match.group("address")), name
         )
         profile = fetch_text(profile_url)
-        coordinate = re.search(r"!2d(1\d{2}\.\d+)!3d(-\d{1,2}\.\d+)", profile)
-        if not coordinate:
-            coordinate = re.search(
-                r"data-lat=[\"'](-\d{1,2}\.\d+)[\"'][^>]+data-lon=[\"'](1\d{2}\.\d+)[\"']",
-                profile,
-            )
-            latitude = coordinate.group(1) if coordinate else ""
-            longitude = coordinate.group(2) if coordinate else ""
-        else:
-            longitude, latitude = coordinate.groups()
+        coordinate = resolve_operator_map(profile, fetch_text)
+        # Use the branch's explicitly labelled telephone, never its fax or map phone.
+        phones = {
+            re.sub(r"\D", "", html.unescape(value))
+            for value in re.findall(r'Tel:\s*<a[^>]+href=[\"\']tel:([^\"\']+)',
+                                    match.group(0), flags=re.I)
+        }
+        phone = next(iter(phones)) if len(phones) == 1 else ""
+        if not re.fullmatch(r"0[2378]\d{8}", phone):
+            phone = ""
         records.append({
             "id": slug(urllib.parse.urlsplit(profile_url).path.rstrip("/").split("/")[-1]),
             "name": f"EyeQ Optometrists {name}",
@@ -291,9 +302,10 @@ def eyeq() -> tuple[str, list[dict]]:
             "city": city,
             "postal_code": postcode,
             "full_address": address,
-            "phone": "",
-            "latitude": latitude,
-            "longitude": longitude,
+            "phone": phone,
+            "latitude": coordinate["latitude"],
+            "longitude": coordinate["longitude"],
+            "coordinate_evidence": dict(coordinate, operator_url=profile_url),
             "official_url": profile_url,
             "services": "",
             "audiology": "false",
@@ -302,9 +314,26 @@ def eyeq() -> tuple[str, list[dict]]:
     return source_url, records
 
 
-def laubman_and_pank() -> tuple[str, list[dict]]:
-    source_url = "https://www.laubmanandpank.com.au/store-finder"
-    page = fetch_text(source_url)
+class LocatorLinksParser(HTMLParser):
+    """Read advertised branch and next-page links, independent of attribute order."""
+    def __init__(self) -> None:
+        super().__init__()
+        self.profiles = set()
+        self.next_pages = set()
+
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() != "a":
+            return
+        values = dict(attrs)
+        href = values.get("href") or ""
+        if href.startswith("/store/"):
+            self.profiles.add(href)
+        if "next" in (values.get("rel") or "").lower().split():
+            self.next_pages.add(href)
+
+
+def laubman_locator_rows(source_url: str) -> list[dict]:
+    """Follow the advertised pager; refuse partial, looping or conflicting rosters."""
     row_pattern = re.compile(
         r"<tr>.*?views-field-title[^>]*>(?P<name>.*?)</td>.*?"
         r"class=['\"]map_data['\"][^>]+data-lat=[\"'](?P<lat>[^\"']+)[\"']"
@@ -312,10 +341,57 @@ def laubman_and_pank() -> tuple[str, list[dict]]:
         r"href=[\"'](?P<url>/store/[^\"']+)[\"']",
         flags=re.IGNORECASE | re.DOTALL,
     )
+    locator = urllib.parse.urlsplit(source_url)
+    page_url = source_url
+    seen_pages = set()
+    by_profile = {}
+    while page_url:
+        if page_url in seen_pages or len(seen_pages) >= 100:
+            raise RuntimeError("Laubman & Pank locator pagination did not terminate")
+        seen_pages.add(page_url)
+        page = fetch_text(page_url)
+        links = LocatorLinksParser()
+        links.feed(page)
+        matches = list(row_pattern.finditer(page))
+        parsed_profiles = {html.unescape(match.group("url")) for match in matches}
+        if not matches or parsed_profiles != links.profiles:
+            raise RuntimeError(f"Laubman & Pank locator page is empty or incomplete: {page_url}")
+        added = 0
+        for match in matches:
+            row = {key: html.unescape(value) for key, value in match.groupdict().items()}
+            row["name"] = text_from_html(row["name"])
+            previous = by_profile.get(row["url"])
+            if previous:
+                if any(previous[key] != value for key, value in row.items()):
+                    raise RuntimeError(f"Conflicting Laubman & Pank branch: {row['url']}")
+                continue
+            by_profile[row["url"]] = dict(row, locator_page_url=page_url)
+            added += 1
+        if not added:
+            raise RuntimeError(f"Laubman & Pank locator page repeats the roster: {page_url}")
+        if len(links.next_pages) > 1:
+            raise RuntimeError("Laubman & Pank locator has ambiguous pagination")
+        if not links.next_pages:
+            break
+        next_url = urllib.parse.urljoin(page_url, next(iter(links.next_pages)))
+        parsed = urllib.parse.urlsplit(next_url)
+        query = urllib.parse.parse_qs(parsed.query, keep_blank_values=True)
+        if (parsed.scheme != locator.scheme or parsed.netloc != locator.netloc
+                or parsed.path.rstrip("/") != locator.path.rstrip("/")
+                or parsed.fragment or set(query) != {"page"}
+                or len(query["page"]) != 1 or not query["page"][0].isdigit()):
+            raise RuntimeError("Laubman & Pank locator has an invalid next-page link")
+        page_url = next_url
+    return list(by_profile.values())
+
+
+def laubman_and_pank() -> tuple[str, list[dict]]:
+    source_url = "https://www.laubmanandpank.com.au/store-finder"
+    roster = laubman_locator_rows(source_url)
     records = []
-    for match in row_pattern.finditer(page):
-        name = text_from_html(match.group("name"))
-        profile_url = urllib.parse.urljoin(source_url, html.unescape(match.group("url")))
+    for match in roster:
+        name = text_from_html(match["name"])
+        profile_url = urllib.parse.urljoin(source_url, html.unescape(match["url"]))
         profile = fetch_text(profile_url)
         def profile_field(field_name: str) -> str:
             field_match = re.search(
@@ -326,16 +402,22 @@ def laubman_and_pank() -> tuple[str, list[dict]]:
             return text_from_html(field_match.group(1)) if field_match else ""
 
         address_one = profile_field("address-one")
+        address_two = profile_field("address-two")
+        source_notices = []
+        street_pattern = (r"\b\d+[A-Za-z/-]*\s+[^,]{2,80}\b"
+                          r"(?:Street|Road|Avenue|Parade|Highway|Drive|Boulevard|Terrace|Place|Mall)\b")
         if len(address_one) > 120:
-            street_addresses = re.findall(
-                r"\b\d+[A-Za-z/-]*\s+[^,]{2,80}\b(?:Street|Road|Avenue|Parade|Highway|Drive|Boulevard|Terrace|Place|Mall)\b",
-                address_one,
-                flags=re.IGNORECASE,
-            )
+            street_addresses = re.findall(street_pattern, address_one, flags=re.IGNORECASE)
+            source_notices.append(address_one)
             if street_addresses:
                 address_one = street_addresses[-1]
+            elif re.search(street_pattern, address_two, flags=re.IGNORECASE):
+                # Keep narrative notices as evidence, not as part of a postal address.
+                address_one = ""
+            else:
+                raise RuntimeError(f"Laubman & Pank profile has an ambiguous address: {profile_url}")
         address_parts = [
-            address_one, profile_field("address-two"),
+            address_one, address_two,
             profile_field("suburb"), profile_field("state"), profile_field("postcode"),
         ]
         address_match = re.search(
@@ -343,15 +425,15 @@ def laubman_and_pank() -> tuple[str, list[dict]]:
             profile,
             flags=re.IGNORECASE | re.DOTALL,
         )
-        if address_parts[0] and all(address_parts[2:]):
-            raw_address = ", ".join(address_parts)
+        if any(address_parts[:2]) and all(address_parts[2:]):
+            raw_address = ", ".join(part for part in address_parts if part)
         elif address_match:
             raw_address = re.sub(r"[\r\n]+", ", ", address_match.group(1))
         else:
             raise RuntimeError(f"Laubman & Pank profile has no official address: {profile_url}")
         address, city, state, postcode = parse_au_address(text_from_html(raw_address), name)
         records.append({
-            "id": slug(match.group("url").rstrip("/").split("/")[-1]),
+            "id": slug(match["url"].rstrip("/").split("/")[-1]),
             "name": name if "laubman" in name.lower() else f"Laubman & Pank {name}",
             "status": "Active",
             "country": "Australia",
@@ -360,12 +442,14 @@ def laubman_and_pank() -> tuple[str, list[dict]]:
             "postal_code": postcode,
             "full_address": address,
             "phone": profile_field("phone"),
-            "latitude": match.group("lat"),
-            "longitude": match.group("lng"),
+            "latitude": match["lat"],
+            "longitude": match["lng"],
             "official_url": profile_url,
             "services": "",
             "audiology": "false",
             "source_url": source_url,
+            "locator_page_url": match["locator_page_url"],
+            "source_notices": source_notices,
         })
     return source_url, records
 

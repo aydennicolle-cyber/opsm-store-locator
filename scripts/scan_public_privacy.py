@@ -27,9 +27,21 @@ PRIVATE_FIELDS = {
     "lease_terms",
     "private_email",
     "private_phone",
+    "committed_fy31",
+    "bn_row",
+    "supplier_status",
+    "revenue_group",
+    "revenue_rank",
+    "cohort_membership",
+    "higher_revenue_group",
+    "lower_revenue_group",
+    "prior_source_store_code",
+    "full_period_trading",
 }
 PUBLIC_JSON = list((ROOT / "data").rglob("*.json")) + [ROOT / "opsm_stores.geojson"]
 PUBLIC_CSV = list((ROOT / "data").rglob("*.csv")) + [ROOT / "opsm_stores.csv"]
+PUBLIC_JSON += list((ROOT / "retailers" / "reviewed-independents").glob("*.json"))
+PUBLIC_CSV += list((ROOT / "retailers" / "reviewed-independents").glob("*.csv"))
 ALLOWED_REMOTE_REQUESTS = {
     "https://overpass-api.de/api/interpreter",
 }
@@ -64,11 +76,15 @@ def scan_structured() -> None:
 
 
 def scan_browser_requests() -> None:
-    source = (ROOT / "assets" / "app.js").read_text(encoding="utf-8")
+    source = "\n".join(p.read_text(encoding="utf-8") for p in (ROOT / "assets").glob("*.js"))
+    if re.search(r"(?:higher|lower)-revenue group", source, re.I):
+        raise ValueError("Commercial cohort labels must stay in the private workspace")
     urls = set(re.findall(r"fetch\(\s*[`\"'](https://[^`\"'${]+)", source))
     unexpected = urls - ALLOWED_REMOTE_REQUESTS
     if unexpected:
         raise ValueError(f"Unexpected remote browser requests: {sorted(unexpected)}")
+    if re.search(r"fetch\(\s*[`\"']/__local__/", source):
+        raise ValueError("Private local review endpoints must not be loaded by the public browser")
     for term in PRIVATE_FIELDS:
         if re.search(rf"[?&]{re.escape(term)}=", source, flags=re.IGNORECASE):
             raise ValueError(f"Private field may enter a share URL or request: {term}")

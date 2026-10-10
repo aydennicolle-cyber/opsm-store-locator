@@ -7,7 +7,7 @@
     ],
     "source_url": "https://baileynelson.co.nz/pages/optometrist-near-me",
     "fetched_at": "2026-09-01T07:43:01+00:00",
-    "store_count": 14
+    "store_count": 16
   },
   "features": [
     {
@@ -344,6 +344,54 @@
         "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
         "audiology": "false",
         "status": "Active"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.74278625797638,
+          -45.01205139727514
+        ]
+      },
+      "properties": {
+        "name": "Bailey Nelson Queenstown - NOW OPEN",
+        "id": "optometrist-queenstown",
+        "country": "New Zealand",
+        "state": "Otago",
+        "city": "Frankton",
+        "postal_code": "9300",
+        "full_address": "Shop C-09, 19 Grant Road, Frankton, Queenstown, 9300",
+        "phone": "",
+        "official_url": "https://baileynelson.co.nz/pages/optometrist-queenstown",
+        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
+        "audiology": "false",
+        "status": "Active"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          173.1860839000293,
+          -41.33947189998824
+        ]
+      },
+      "properties": {
+        "name": "Bailey Nelson Nelson",
+        "id": "optometrist-nelson",
+        "country": "New Zealand",
+        "state": "Tasman",
+        "city": "Richmond",
+        "postal_code": "7020",
+        "full_address": "Shop 234, 216 Queen Street, Richmond Mall, Richmond, Nelson, 7020",
+        "phone": "",
+        "official_url": "https://baileynelson.co.nz/pages/optometrist-nelson",
+        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
+        "audiology": "false",
+        "status": "Unknown"
       }
     }
   ]

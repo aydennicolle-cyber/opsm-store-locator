@@ -1,9 +1,9 @@
 {
   "metadata": {
     "schema_version": 1,
-    "generated_at": "2026-09-04T00:46:42+00:00",
-    "signal_count": 6,
-    "verified_count": 6,
+    "generated_at": "2026-10-10T13:16:04+00:00",
+    "signal_count": 7,
+    "verified_count": 7,
     "lead_count": 0,
     "coverage_note": "Selective public signals, not a complete development pipeline. Leads remain visibly distinct from verified official evidence."
   },
@@ -132,6 +132,31 @@
       "last_verified_at": "2026-09-03",
       "confidence": "High",
       "place_name": "Chadstone Shopping Centre"
+    },
+    {
+      "signal_id": "development-eaton-fair-stage-3",
+      "place_id": "place-au-wa-eaton-fair-shopping-centre",
+      "area_name": "",
+      "country": "Australia",
+      "state": "WA",
+      "latitude": -33.320248,
+      "longitude": 115.71923,
+      "title": "Eaton Fair Stage 3 expansion",
+      "signal_type": "MIXED_USE",
+      "status": "UNDER_CONSTRUCTION",
+      "evidence_status": "Verified",
+      "impact_direction": "Positive",
+      "impact_horizon": "2026 target; completion unconfirmed",
+      "temporary_impact": "Construction and access disruption possible",
+      "long_term_impact": "Expanded retail entertainment and residential offer",
+      "summary": "Project architect reports a 10000 sqm retail extension with entertainment and residential components under construction and a 2026 opening target; the current centre growth page also describes continuing expansion. Completion is not established.",
+      "source_url": "https://buchan.au/projects/eaton-fair/",
+      "source_type": "Project architect",
+      "published_at": "",
+      "expected_completion_date": "",
+      "last_verified_at": "2026-09-27",
+      "confidence": "Medium",
+      "place_name": "Eaton Fair Shopping Centre"
     },
     {
       "signal_id": "development-sylvia-park-resido",
