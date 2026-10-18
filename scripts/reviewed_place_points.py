@@ -3,7 +3,7 @@ from datetime import date
 import math
 from urllib.parse import urlsplit
 
-METHODS={'Named property map','Operator map marker','Operator-linked property map','Accepted tenant reference'}
+METHODS={'Named property map','Operator map marker','Operator-linked property map','Accepted tenant reference','Reviewed street geometry','Reviewed precinct street anchor'}
 
 def apply_place_point_reviews(places, stores, memberships, reviews):
     by_id={r['place_id']:r for r in places};by_store={r['store_id']:r for r in stores}
@@ -24,6 +24,11 @@ def apply_place_point_reviews(places, stores, memberships, reviews):
         except (KeyError,TypeError,ValueError,AssertionError) as exc:
             raise ValueError(f'Invalid place coordinate evidence: {key}') from exc
         reference=row.get('reference_store_id','')
+        if method=='Reviewed street geometry' and place.get('place_type')!='High Street Corridor':
+            raise ValueError(f'Street geometry requires a high street corridor: {key}')
+        if method=='Reviewed precinct street anchor' and (place.get('place_type')!='Retail Precinct'
+                or place.get('location_setting')!='High Street' or confidence!='Low'):
+            raise ValueError(f'Precinct street anchor requires a low-confidence high-street precinct: {key}')
         if method=='Accepted tenant reference':
             member=by_member.get(reference);store=by_store.get(reference)
             if (confidence!='Low' or not store or not member or member['place_id']!=key

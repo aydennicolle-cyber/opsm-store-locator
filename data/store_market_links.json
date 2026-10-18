@@ -6738,11 +6738,12 @@
       "boundary_distance_km": null
     },
     "oscar-wylee-47": {
-      "sa2_code": "117031331",
-      "sa2_name": "Glebe - Forest Lodge",
+      "sa2_code": "117031640",
+      "sa2_name": "Newtown (NSW)",
       "match_confidence": "High",
-      "match_method": "Point in SA2",
-      "boundary_distance_km": null
+      "match_method": "Authoritative ABS SA2 point intersection (2021 boundaries)",
+      "boundary_distance_km": null,
+      "coverage_note": "Requeried official ABS boundary for corrected operator-embedded Newtown branch reference. Resident area is not customer catchment."
     },
     "specsavers-3398": {
       "sa2_code": "125041490",

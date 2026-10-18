@@ -43,6 +43,8 @@
   }
 
   function haversine(first, second) {
+    if (!first || !second || [first.latitude, first.longitude, second.latitude, second.longitude]
+      .some(value => typeof value === "boolean" || number(value) === null)) return NaN;
     const toRadians = (degrees) => (degrees * Math.PI) / 180;
     const lat1 = toRadians(Number(first.latitude));
     const lat2 = toRadians(Number(second.latitude));

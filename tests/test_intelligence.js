@@ -350,3 +350,9 @@ assert.equal(Intel.comparisonConnections([fivePoints[0], {...fivePoints[0],id:'s
     stores.forEach(s=>assert.deepEqual(markers.get(s.store_id).point,[s.latitude,s.longitude]));
   }
 }
+
+// A deliberately withheld coordinate must never become a distance from (0, 0).
+for (const missing of [null, undefined, "", false]) {
+  assert.ok(Number.isNaN(Intel.haversine({latitude:missing,longitude:145}, {latitude:-37,longitude:145})));
+}
+assert.equal(Intel.haversine({latitude:0,longitude:0},{latitude:0,longitude:0}),0);

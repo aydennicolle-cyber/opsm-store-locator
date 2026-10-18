@@ -3,13 +3,13 @@
     "as_of": "2026-10-10",
     "baseline": "Validated census batch78; no census admissions in this pilot",
     "input_sha256": {
-      "destination_profile_facts.json": "d035c3a25dcc4df7e7cd7ac271c65bd02467fa49103e5715e13949895913bbd9",
+      "destination_profile_facts.json": "32bfe45e803cae494d423d8b46a6c8e560bb621d9ffeb1e2a629618c6d4a4813",
       "destination_directory.json": "5686b8f4b6c4fe53abc9c8011f62e772cdf6664eed5ba02ea8283993110eaac1",
-      "optical_stores.csv": "3e946c10e5ce597ae3ed5016bdce00e00f3f782c28f62c159b114b5218ce2458",
-      "store_certification.csv": "074f43bd61495a4fe144fe6756bdccddcb2004aa5e89fc18d530d773e0a15851",
-      "store_place_memberships.csv": "ddb19991b7d96017b639feed134879c294e4773b2603b5361a5e682157ef29c6",
+      "optical_stores.csv": "9474fff8824930d2424bc09e443df516697f7025fccb7fc8f257f8c12e495a36",
+      "store_certification.csv": "c27c5202e82fac647397d70087d69d6e61e5e89da30d83944926f1a424bc4376",
+      "store_place_memberships.csv": "9999fd6ef2d93f99e0703861d71c67f12e65b75f51bd1280617cb60a4bbfdf82",
       "sa2_market.geojson": "259dbc44413737a8c9a33a0c14924a5a1f5688ed9f0f2a5c59354a4f7c3be869",
-      "retail_places.json": "13826e02fa00e49c3ebdf6515c2be0246c31fcb5ee588638eb2677373a32a2c5"
+      "retail_places.json": "39e7d81713155ee504fd676657e8cbec3fe98c8a8b20464bbb576b60fb7cfc19"
     },
     "limitations": "Partial profiles, preserving source vintages. No inferred tenancy shares, customer catchment or predicted store performance."
   },
@@ -2040,15 +2040,27 @@
       "profile_status": "Partial: bounded public research complete; commercial and coverage gaps explicit",
       "checked_at": "2026-10-08",
       "demographic_boundary_evidence": {
-        "latitude": -34.979577,
-        "longitude": 138.518904,
+        "latitude": -34.98008115234058,
+        "longitude": 138.51894180868356,
         "match_status": "Unique",
         "sa2_code": "403011057",
         "sa2_name": "Glenelg (SA)",
         "match_count": 1,
-        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.518904%2C-34.979577&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
-        "checked_at": "2026-10-08T08:44:21.846050+00:00"
+        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.51894180868356%2C-34.98008115234058&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+        "checked_at": "2026-10-18T04:01:43.185697+00:00"
       },
+      "demographic_boundary_evidence_history": [
+        {
+          "latitude": -34.979577,
+          "longitude": 138.518904,
+          "match_status": "Unique",
+          "sa2_code": "403011057",
+          "sa2_name": "Glenelg (SA)",
+          "match_count": 1,
+          "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.518904%2C-34.979577&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+          "checked_at": "2026-10-08T08:44:21.846050+00:00"
+        }
+      ],
       "identity": {
         "place_id": "corridor-au-sa-glenelg-jetty-road",
         "name": "Jetty Road",
@@ -2056,8 +2068,8 @@
         "state": "SA",
         "location_setting": "High Street",
         "address": "Jetty Road",
-        "latitude": -34.979577,
-        "longitude": 138.518904,
+        "latitude": -34.98008115234058,
+        "longitude": 138.51894180868356,
         "source_url": "https://holdfastbayoptometry.com.au/",
         "source_date": "2026-09-02"
       },
@@ -2089,14 +2101,14 @@
         "population_growth_2021_2025_number": 1075,
         "interpretation": "Resident SA2 context, not a centre trade area or customer catchment.",
         "boundary_evidence": {
-          "latitude": -34.979577,
-          "longitude": 138.518904,
+          "latitude": -34.98008115234058,
+          "longitude": 138.51894180868356,
           "match_status": "Unique",
           "sa2_code": "403011057",
           "sa2_name": "Glenelg (SA)",
           "match_count": 1,
-          "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.518904%2C-34.979577&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
-          "checked_at": "2026-10-08T08:44:21.846050+00:00"
+          "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.51894180868356%2C-34.98008115234058&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+          "checked_at": "2026-10-18T04:01:43.185697+00:00"
         }
       },
       "optical_competition": {
@@ -2149,24 +2161,6 @@
         "accepted_member_count": 2,
         "nearby_current_non_bn": [
           {
-            "store_id": "opsm-1211",
-            "retailer": "OPSM",
-            "name": "OPSM Glenelg",
-            "business_type": "",
-            "status": "Active",
-            "full_address": "Shop 20, Bayside Village Shopping Centre, Cnr Brighton Road & Jetty Road, Glenelg SA 5045",
-            "latitude": "-34.97916",
-            "longitude": "138.51955",
-            "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
-            "fetched_at": "2026-09-01T07:42:23+00:00",
-            "status_evidence_url": "",
-            "status_verified_at": "",
-            "stale_source_warning": true,
-            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 0.07492712213960333,
-            "accepted_destination_member": false
-          },
-          {
             "store_id": "independent-other-optical-provision-17714",
             "retailer": "Independent / Other optical",
             "name": "HoldfastBay Optometry",
@@ -2181,7 +2175,7 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 0.07793593186762195,
+            "distance_km": 0.0855910433338613,
             "accepted_destination_member": true
           },
           {
@@ -2199,8 +2193,26 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 0.07794635846818895,
+            "distance_km": 0.10556564220370623,
             "accepted_destination_member": true
+          },
+          {
+            "store_id": "opsm-1211",
+            "retailer": "OPSM",
+            "name": "OPSM Glenelg",
+            "business_type": "",
+            "status": "Active",
+            "full_address": "Shop 20, Bayside Village Shopping Centre, Cnr Brighton Road & Jetty Road, Glenelg SA 5045",
+            "latitude": "-34.97916",
+            "longitude": "138.51955",
+            "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
+            "fetched_at": "2026-09-01T07:42:23+00:00",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 0.1164552635620704,
+            "accepted_destination_member": false
           },
           {
             "store_id": "independent-other-optical-reviewed-au-sunglass-hut-glenelg-b742",
@@ -2217,7 +2229,7 @@
             "status_verified_at": "2026-10-08",
             "stale_source_warning": false,
             "quality_notes": "location setting needs review",
-            "distance_km": 0.5683335619140939,
+            "distance_km": 0.5679557783664337,
             "accepted_destination_member": false
           },
           {
@@ -2235,7 +2247,7 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 4.566391698375823,
+            "distance_km": 4.515217609460574,
             "accepted_destination_member": false
           },
           {
@@ -2253,7 +2265,7 @@
             "status_verified_at": "2026-10-08",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 4.687548451617344,
+            "distance_km": 4.6374946290590415,
             "accepted_destination_member": false
           },
           {
@@ -2271,7 +2283,7 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 4.735356427913773,
+            "distance_km": 4.68602454635541,
             "accepted_destination_member": false
           },
           {
@@ -2289,7 +2301,7 @@
             "status_verified_at": "2026-10-08",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 4.741501321281482,
+            "distance_km": 4.690484909345323,
             "accepted_destination_member": false
           },
           {
@@ -2307,7 +2319,7 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 4.754620168734003,
+            "distance_km": 4.704747615025832,
             "accepted_destination_member": false
           },
           {
@@ -2325,7 +2337,7 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 4.773966730929835,
+            "distance_km": 4.72423284604197,
             "accepted_destination_member": false
           },
           {
@@ -2343,7 +2355,7 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 4.812153959514233,
+            "distance_km": 4.762491400280181,
             "accepted_destination_member": false
           },
           {
@@ -2361,7 +2373,7 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 4.88256839888042,
+            "distance_km": 4.877397558463358,
             "accepted_destination_member": false
           },
           {
@@ -2379,7 +2391,7 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 4.8967077763822635,
+            "distance_km": 4.891138851364701,
             "accepted_destination_member": false
           },
           {
@@ -2397,7 +2409,7 @@
             "status_verified_at": "2026-10-02",
             "stale_source_warning": true,
             "quality_notes": "location setting needs review; source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 4.9688682390555545,
+            "distance_km": 4.9189263906886715,
             "accepted_destination_member": false
           }
         ],

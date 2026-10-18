@@ -405,12 +405,17 @@ def apply_place_consolidations(
     return remaps
 
 
-def apply_canonical_place_overrides(places: list[dict], old_to_new: dict[str, str]) -> None:
+def apply_canonical_place_overrides(places: list[dict], old_to_new: dict[str, str],
+                                    rows=None, defer_missing_corridors=False) -> list[dict]:
     """Apply evidenced current public names while preserving stable canonical IDs."""
     by_id = {place["place_id"]: place for place in places}
-    for row in read_csv(CANONICAL_OVERRIDES_PATH):
+    deferred = []
+    for row in read_csv(CANONICAL_OVERRIDES_PATH) if rows is None else rows:
         place_id = row.get("place_id", "").strip()
         place = by_id.get(place_id)
+        if not place and defer_missing_corridors and place_id.startswith("corridor-"):
+            deferred.append(row)
+            continue
         if not place:
             current_name = clean_name(row.get("canonical_name", ""))
             expected_state = row.get("state", "").strip()
@@ -480,6 +485,7 @@ def apply_canonical_place_overrides(places: list[dict], old_to_new: dict[str, st
                 place[field] = value
                 if field == "locality":
                     place["suburb"] = value
+    return deferred
 
 
 def apply_place_suppressions(
@@ -1259,7 +1265,9 @@ def main() -> None:
     consolidation_remaps = apply_place_consolidations(
         places, old_to_new, consolidation_rows, defer_missing=True
     )
-    apply_canonical_place_overrides(places, old_to_new)
+    deferred_corridor_names = apply_canonical_place_overrides(
+        places, old_to_new, defer_missing_corridors=True
+    )
     promote_store_named_centres(stores, places, old_to_new)
     suppressions = apply_place_suppressions(places, old_to_new, stores, overrides)
     for override in overrides.values():
@@ -1423,6 +1431,7 @@ def main() -> None:
     ]
     corridor_remaps = apply_place_consolidations(places, old_to_new, deferred)
     consolidation_remaps.update(corridor_remaps)
+    apply_canonical_place_overrides(places, old_to_new, rows=deferred_corridor_names)
     for item in preliminary:
         place_id = item["place_id"]
         visited = set()

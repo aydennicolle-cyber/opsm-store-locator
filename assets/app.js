@@ -1482,6 +1482,10 @@
 
   function performanceAdjustedLookalikes() {
     const rows = lookalikeKeys().flatMap((key) => state.lookalikes.rankings?.[key] || [])
+      .filter(row => {
+        const place = state.centres.find(item => item.place_id === resolvePlaceId(row.place_id));
+        return place && place.latitude != null && place.longitude != null;
+      })
       .map((row) => state.performanceBenchmark
         ? Intel.selectedBenchmarkLookalike(row, selectedPerformanceBenchmarks(row.location_setting))
         : { ...row, components: { ...row.components } });
@@ -1574,7 +1578,7 @@
         <div><span>Population</span><strong>${formatNumber(market.population_2025)}</strong></div>
         <div><span>Growth 2021–25</span><strong>${formatNumber(market.population_growth_2021_2025_pct, "%")}</strong></div>
         <div><span>Weekly income</span><strong>${market.median_equivalised_household_income_weekly_2021 ? `$${formatNumber(market.median_equivalised_household_income_weekly_2021)}` : "N/A"}</strong></div>
-        <div><span>Nearest Bailey</span><strong>${Number.isFinite(Number(row.nearest_bailey_km)) ? Intel.formatDistance(Number(row.nearest_bailey_km)) : "Unknown"}</strong></div>
+        <div><span>Nearest Bailey</span><strong>${hasLookalikeComponent(row.nearest_bailey_km) ? Intel.formatDistance(Number(row.nearest_bailey_km)) : "Unknown"}</strong></div>
       </div>
       <div class="shortlist-context-row"><span><i data-lucide="glasses"></i><b>${formatNumber(place.optical_store_count || 0)}</b> exact-place optical</span><span><i data-lucide="store"></i><b>${formatNumber(coTenants.length)}</b> key co-tenants</span></div>
       ${retailers.length ? `<div class="shortlist-chip-row" aria-label="Mapped optical retailers">${retailers.map((retailer) => `<span>${escapeHtml(retailer)}</span>`).join("")}</div>` : '<p class="shortlist-empty-signal">No competitor brand is accepted as an exact-place tenant.</p>'}
@@ -2100,7 +2104,10 @@
   }
 
   function allPublishedLookalikes() {
-    return Object.values(state.lookalikes.rankings || {}).flat();
+    return Object.values(state.lookalikes.rankings || {}).flat().filter(row => {
+      const place = state.centres.find(item => item.place_id === resolvePlaceId(row.place_id));
+      return place && place.latitude != null && place.longitude != null;
+    });
   }
 
   function publishedLookalike(placeId) {
@@ -3097,6 +3104,7 @@
   }
 
   function opportunitySummaryHtml(centre) {
+    if (centre.latitude == null || centre.longitude == null) return `<section class="detail-section opportunity-summary"><h3>Opportunity summary</h3><p>Map position unresolved. Distance-based screening and the previous ranking are withheld until this reference is resolved. Recorded retailer evidence remains available below.</p></section>`;
     const row = publishedLookalike(centre.place_id);
     if (!row) {
       return `<section class="detail-section opportunity-summary"><div class="section-title-row"><h3>Opportunity summary</h3><span class="source-pill">Decision screen</span></div>
@@ -3120,7 +3128,7 @@
         <div class="data-point"><span>Population growth 2021–25</span><strong>${formatNumber(market.population_growth_2021_2025_pct, "%")}</strong></div>
         <div class="data-point"><span>Age 45+ (2021)</span><strong>${formatNumber(market.age_45_plus_pct_2021, "%")}</strong></div>
         <div class="data-point"><span>Equivalised weekly household income (2021)</span><strong>${market.median_equivalised_household_income_weekly_2021 ? `$${formatNumber(market.median_equivalised_household_income_weekly_2021)}` : "N/A"}</strong></div>
-        <div class="data-point"><span>Nearest Bailey Nelson</span><strong>${Number.isFinite(Number(row.nearest_bailey_km)) ? Intel.formatDistance(Number(row.nearest_bailey_km)) : "Unknown"}</strong></div>
+        <div class="data-point"><span>Nearest Bailey Nelson</span><strong>${hasLookalikeComponent(row.nearest_bailey_km) ? Intel.formatDistance(Number(row.nearest_bailey_km)) : "Unknown"}</strong></div>
         <div class="data-point"><span>Exact-place optical stores</span><strong>${formatNumber(row.optical_store_count || 0)}</strong></div>
       </div>
       <p class="evidence-gaps"><strong>Evidence gaps:</strong> ${gaps.length ? escapeHtml(gaps.join(", ")) : "No weighted component is missing."}</p>
@@ -3373,7 +3381,7 @@
         <div class="data-point"><span>Annual visits</span><strong>${formatNumber(centre.annual_visits)}</strong></div>
         <div class="data-point"><span>Retail tenancies</span><strong>${formatNumber(centre.tenancy_count)}</strong></div>
         <div class="data-point"><span>Trade area population</span><strong>${formatNumber(centre.trade_area_population)}</strong></div>`}
-        <div class="data-point"><span>Nearest Bailey Nelson</span><strong>${Number.isFinite(Number(centre.nearest_bailey_km)) ? Intel.formatDistance(Number(centre.nearest_bailey_km)) : "Unknown"}</strong></div>
+        <div class="data-point"><span>Nearest Bailey Nelson</span><strong>${hasLookalikeComponent(centre.nearest_bailey_km) ? Intel.formatDistance(Number(centre.nearest_bailey_km)) : "Unknown"}</strong></div>
       </div>${!isCorridor ? publicMetricSourcesHtml(centre) : ""}</section>`}
       ${state.destinationProfiles?.[centre.place_id]?.completion_review ? `<section class="detail-section"><h3>Research limits and next steps</h3><ul class="profile-research-gaps">${state.destinationProfiles[centre.place_id].limitations.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul></section>` : ''}
       ${centre.coordinate_confidence ? `<section class="detail-section"><h3>Map position</h3><p class="empty-note">${escapeHtml(centre.coordinate_confidence)} confidence. ${escapeHtml(centre.coordinate_reason || "Approximate property reference point.")}</p></section>` : ''}
@@ -4249,7 +4257,7 @@
         <div><span>Growth 2021–25</span><strong>${formatNumber(record.population_growth_2021_2025_pct, "%")}</strong></div>
         <div><span>Age 45+</span><strong>${formatNumber(record.age_45_plus_pct_2021, "%")}</strong></div>
         <div><span>Equivalised weekly household income</span><strong>${record.median_equivalised_household_income_weekly_2021 ? `$${formatNumber(record.median_equivalised_household_income_weekly_2021)}` : "N/A"}</strong></div>
-        <div><span>Nearest Bailey Nelson</span><strong>${Number.isFinite(Number(record.nearest_bailey_km)) ? Intel.formatDistance(Number(record.nearest_bailey_km)) : "Unknown"}</strong></div>
+        <div><span>Nearest Bailey Nelson</span><strong>${hasLookalikeComponent(record.nearest_bailey_km) ? Intel.formatDistance(Number(record.nearest_bailey_km)) : "Unknown"}</strong></div>
         <div><span>Exact-place optical stores</span><strong>${formatNumber(centre.optical_store_count || 0)}</strong></div>
       </div></section>
       <section><h3>Why it ranks</h3>${componentHtml}<p>Lookalike score compares public evidence with Bailey Nelson’s mapped footprint. It is a screening heuristic, not a forecast of store success.</p></section>

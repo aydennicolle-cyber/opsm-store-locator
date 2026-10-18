@@ -425,15 +425,27 @@
       "profile_status": "Partial: bounded public research complete; commercial and coverage gaps explicit",
       "checked_at": "2026-10-08",
       "demographic_boundary_evidence": {
-        "latitude": -34.979577,
-        "longitude": 138.518904,
+        "latitude": -34.98008115234058,
+        "longitude": 138.51894180868356,
         "match_status": "Unique",
         "sa2_code": "403011057",
         "sa2_name": "Glenelg (SA)",
         "match_count": 1,
-        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.518904%2C-34.979577&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
-        "checked_at": "2026-10-08T08:44:21.846050+00:00"
-      }
+        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.51894180868356%2C-34.98008115234058&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+        "checked_at": "2026-10-18T04:01:43.185697+00:00"
+      },
+      "demographic_boundary_evidence_history": [
+        {
+          "latitude": -34.979577,
+          "longitude": 138.518904,
+          "match_status": "Unique",
+          "sa2_code": "403011057",
+          "sa2_name": "Glenelg (SA)",
+          "match_count": 1,
+          "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.518904%2C-34.979577&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+          "checked_at": "2026-10-08T08:44:21.846050+00:00"
+        }
+      ]
     }
   ]
 }

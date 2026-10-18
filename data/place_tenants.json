@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-10-18T03:29:42+00:00",
+    "generated_at": "2026-10-18T05:51:34+00:00",
     "verified_at": "2026-10-15",
     "scope": "Locked Australian opportunity pilot plus all currently accepted Bailey Nelson shopping-centre and high-street places",
     "coverage_note": "Curated key co-tenants only; not a complete directory. Optical rows require accepted canonical place membership. Bailey high-street baseline coverage confirms the corridor and its accepted optical tenants; broader retail-mix research remains separately measurable.",
@@ -1128,6 +1128,22 @@
       "source_url": "https://georgeandmatilda.com.au/stores/optometrist-newtown-nsw/",
       "source_type": "Accepted store-place evidence",
       "verified_at": "2026-09-02",
+      "confidence": "Medium"
+    },
+    {
+      "membership_id": "tenant-membership-corridor-au-nsw-newtown-king-street-1-oscar-wylee-47",
+      "place_id": "corridor-au-nsw-newtown-king-street-1",
+      "tenant_id": "optical-store-oscar-wylee-47",
+      "tenant_name": "Newtown",
+      "retailer": "Oscar Wylee",
+      "store_id": "oscar-wylee-47",
+      "category": "Optical",
+      "anchor_flag": false,
+      "selection_basis": "Accepted canonical place membership",
+      "status": "Active",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-newtown.html",
+      "source_type": "Accepted store-place evidence",
+      "verified_at": "2026-09-01",
       "confidence": "Medium"
     },
     {

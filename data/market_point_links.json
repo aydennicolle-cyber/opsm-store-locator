@@ -10,7 +10,8 @@
     "additional_review_scope": "Six public independent-practice points added and checked on 2026-09-27",
     "incremental_retail_review_at": "2026-09-27T22:48:07.213276+00:00",
     "incremental_place_review_at": "2026-09-28T00:15:49.724936+00:00",
-    "incremental_store_review_at": "2026-09-28T01:30:58.748658+00:00"
+    "incremental_store_review_at": "2026-09-28T01:30:58.748658+00:00",
+    "road_marker_receipt_refresh": "2026-10-18; corrected Australian points rechecked against ABS 2021 SA2 boundary service, where previous authoritative receipts existed. Original point receipts retained."
   },
   "links": {
     "-12.3777350,130.8960600": {
@@ -8772,6 +8773,1026 @@
       "match_count": 1,
       "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.518904%2C-34.979577&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
       "checked_at": "2026-10-08T08:44:21.846050+00:00"
+    },
+    "-37.8311159,145.0567442": {
+      "latitude": -37.83111587664727,
+      "longitude": 145.05674420880962,
+      "match_status": "Unique",
+      "sa2_code": "207011149",
+      "sa2_name": "Camberwell",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.05674420880962%2C-37.83111587664727&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T04:23:08.950885+00:00"
+    },
+    "-37.8166479,144.9663505": {
+      "latitude": -37.81664794200352,
+      "longitude": 144.96635051289942,
+      "match_status": "Unique",
+      "sa2_code": "206041503",
+      "sa2_name": "Melbourne CBD - East",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.96635051289942%2C-37.81664794200352&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T04:23:09.151979+00:00"
+    },
+    "-37.8060355,144.9799208": {
+      "latitude": -37.806035459251326,
+      "longitude": 144.97992075752418,
+      "match_status": "Unique",
+      "sa2_code": "206071142",
+      "sa2_name": "Fitzroy",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.97992075752418%2C-37.806035459251326&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T04:23:09.343323+00:00"
+    },
+    "-27.4574188,153.0407719": {
+      "latitude": -27.457418793568912,
+      "longitude": 153.04077188403423,
+      "match_status": "Unique",
+      "sa2_code": "305011106",
+      "sa2_name": "Fortitude Valley",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=153.04077188403423%2C-27.457418793568912&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T04:23:09.615994+00:00"
+    },
+    "-33.8952424,151.1816927": {
+      "latitude": -33.89524243876715,
+      "longitude": 151.18169268166332,
+      "match_status": "Unique",
+      "sa2_code": "117031640",
+      "sa2_name": "Newtown (NSW)",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.18169268166332%2C-33.89524243876715&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T04:23:09.798129+00:00"
+    },
+    "-33.8251066,151.2421749": {
+      "latitude": -33.82510656440223,
+      "longitude": 151.2421748959895,
+      "match_status": "Unique",
+      "sa2_code": "121041689",
+      "sa2_name": "Mosman - South",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.2421748959895%2C-33.82510656440223&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T04:23:10.005796+00:00"
+    },
+    "-37.7752706,144.9607508": {
+      "latitude": -37.77527059212618,
+      "longitude": 144.96075080359728,
+      "match_status": "Unique",
+      "sa2_code": "206011496",
+      "sa2_name": "Brunswick - South",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.96075080359728%2C-37.77527059212618&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T04:23:10.224687+00:00"
+    },
+    "-35.2789586,149.1361048": {
+      "latitude": -35.278958585901904,
+      "longitude": 149.13610480507361,
+      "match_status": "Unique",
+      "sa2_code": "801051127",
+      "sa2_name": "Reid",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=149.13610480507361%2C-35.278958585901904&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T04:23:10.521124+00:00"
+    },
+    "-21.1456340,149.1871974": {
+      "latitude": -21.145633968480407,
+      "longitude": 149.18719736485167,
+      "match_status": "Unique",
+      "sa2_code": "312021346",
+      "sa2_name": "Mackay",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=149.18719736485167%2C-21.145633968480407&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T04:23:10.727248+00:00"
+    },
+    "-27.4534048,153.0399959": {
+      "latitude": -27.453404840690375,
+      "longitude": 153.03999594282135,
+      "match_status": "Unique",
+      "sa2_code": "305011106",
+      "sa2_name": "Fortitude Valley",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=153.03999594282135%2C-27.453404840690375&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T04:23:10.904777+00:00"
+    },
+    "-33.9396856,151.2391165": {
+      "latitude": -33.93968555333142,
+      "longitude": 151.23911648553423,
+      "match_status": "Unique",
+      "sa2_code": "118021566",
+      "sa2_name": "Maroubra - North",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.23911648553423%2C-33.93968555333142&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:42.937925+00:00"
+    },
+    "-33.8953533,151.1813704": {
+      "latitude": -33.8953533,
+      "longitude": 151.1813704,
+      "match_status": "Unique",
+      "sa2_code": "117031640",
+      "sa2_name": "Newtown (NSW)",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.1813704%2C-33.8953533&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:43.502682+00:00"
+    },
+    "-37.7762653,144.9620818": {
+      "latitude": -37.7762653341352,
+      "longitude": 144.96208184042922,
+      "match_status": "Unique",
+      "sa2_code": "206011496",
+      "sa2_name": "Brunswick - South",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.96208184042922%2C-37.7762653341352&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:44.001818+00:00"
+    },
+    "-24.8667962,152.3491483": {
+      "latitude": -24.866796230159128,
+      "longitude": 152.34914833326962,
+      "match_status": "Unique",
+      "sa2_code": "319011495",
+      "sa2_name": "Bundaberg",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=152.34914833326962%2C-24.866796230159128&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:44.558138+00:00"
+    },
+    "-42.8665153,147.3703592": {
+      "latitude": -42.86651526996008,
+      "longitude": 147.37035916954235,
+      "match_status": "Unique",
+      "sa2_code": "601021004",
+      "sa2_name": "Bellerive - Rosny",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=147.37035916954235%2C-42.86651526996008&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:45.069547+00:00"
+    },
+    "-37.8032324,145.1025639": {
+      "latitude": -37.80323240931493,
+      "longitude": 145.10256386793506,
+      "match_status": "Unique",
+      "sa2_code": "207011147",
+      "sa2_name": "Balwyn",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.10256386793506%2C-37.80323240931493&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:45.579146+00:00"
+    },
+    "-37.6736264,144.9309003": {
+      "latitude": -37.673626412346955,
+      "longitude": 144.9309002697967,
+      "match_status": "Unique",
+      "sa2_code": "210051243",
+      "sa2_name": "Campbellfield - Coolaroo",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.9309002697967%2C-37.673626412346955&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:46.125847+00:00"
+    },
+    "-33.8442964,151.2043610": {
+      "latitude": -33.84429640919161,
+      "longitude": 151.2043609758697,
+      "match_status": "Unique",
+      "sa2_code": "121041417",
+      "sa2_name": "North Sydney - Lavender Bay",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.2043609758697%2C-33.84429640919161&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:46.615269+00:00"
+    },
+    "-37.9055153,145.1634327": {
+      "latitude": -37.90551530940534,
+      "longitude": 145.1634326642228,
+      "match_status": "Unique",
+      "sa2_code": "212051327",
+      "sa2_name": "Wheelers Hill",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.1634326642228%2C-37.90551530940534&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:47.180129+00:00"
+    },
+    "-27.6609227,153.0417407": {
+      "latitude": -27.660922748949652,
+      "longitude": 153.0417406588785,
+      "match_status": "Unique",
+      "sa2_code": "311031312",
+      "sa2_name": "Browns Plains",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=153.0417406588785%2C-27.660922748949652&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:47.677298+00:00"
+    },
+    "-26.8046968,153.1312454": {
+      "latitude": -26.804696802284973,
+      "longitude": 153.1312453956858,
+      "match_status": "Unique",
+      "sa2_code": "316021419",
+      "sa2_name": "Caloundra - Kings Beach",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=153.1312453956858%2C-26.804696802284973&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:48.192138+00:00"
+    },
+    "-27.4741549,153.1557458": {
+      "latitude": -27.474154880924214,
+      "longitude": 153.15574583994808,
+      "match_status": "Unique",
+      "sa2_code": "301031016",
+      "sa2_name": "Manly West",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=153.15574583994808%2C-27.474154880924214&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:48.749423+00:00"
+    },
+    "-37.8935456,145.3089606": {
+      "latitude": -37.893545622963366,
+      "longitude": 145.3089606092424,
+      "match_status": "Unique",
+      "sa2_code": "211011448",
+      "sa2_name": "Ferntree Gully (South) - Upper Ferntree Gully",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.3089606092424%2C-37.893545622963366&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:49.254708+00:00"
+    },
+    "-37.8503167,145.0948586": {
+      "latitude": -37.85031667585612,
+      "longitude": 145.09485855576426,
+      "match_status": "Unique",
+      "sa2_code": "207011149",
+      "sa2_name": "Camberwell",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.09485855576426%2C-37.85031667585612&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:49.771569+00:00"
+    },
+    "-32.0661999,115.8563589": {
+      "latitude": -32.06619986221452,
+      "longitude": 115.85635894939604,
+      "match_status": "Unique",
+      "sa2_code": "507041180",
+      "sa2_name": "Leeming",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.85635894939604%2C-32.06619986221452&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:50.314471+00:00"
+    },
+    "-32.1035453,115.7630497": {
+      "latitude": -32.103545270835795,
+      "longitude": 115.76304972708036,
+      "match_status": "Unique",
+      "sa2_code": "507011158",
+      "sa2_name": "North Coogee",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.76304972708036%2C-32.103545270835795&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:50.819364+00:00"
+    },
+    "-37.8340133,145.1655109": {
+      "latitude": -37.834013313782435,
+      "longitude": 145.16551087073776,
+      "match_status": "Unique",
+      "sa2_code": "211041269",
+      "sa2_name": "Forest Hill",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.16551087073776%2C-37.834013313782435&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:51.362290+00:00"
+    },
+    "-28.0859129,153.4250665": {
+      "latitude": -28.08591290281515,
+      "longitude": 153.4250665180272,
+      "match_status": "Unique",
+      "sa2_code": "309081262",
+      "sa2_name": "Varsity Lakes",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=153.4250665180272%2C-28.08591290281515&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:51.878183+00:00"
+    },
+    "-33.8856883,151.1942457": {
+      "latitude": -33.88568826884977,
+      "longitude": 151.194245729292,
+      "match_status": "Unique",
+      "sa2_code": "117031638",
+      "sa2_name": "Camperdown - Darlington",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.194245729292%2C-33.88568826884977&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:52.400587+00:00"
+    },
+    "-37.9293337,145.1188578": {
+      "latitude": -37.92933372260136,
+      "longitude": 145.11885782152257,
+      "match_status": "Unique",
+      "sa2_code": "212041310",
+      "sa2_name": "Clayton South",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.11885782152257%2C-37.92933372260136&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:52.916046+00:00"
+    },
+    "-33.8914346,151.2120073": {
+      "latitude": -33.8914345942498,
+      "longitude": 151.21200729278283,
+      "match_status": "Unique",
+      "sa2_code": "117031336",
+      "sa2_name": "Surry Hills",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.21200729278283%2C-33.8914345942498&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:53.477495+00:00"
+    },
+    "-37.6591623,145.0306015": {
+      "latitude": -37.659162327269,
+      "longitude": 145.0306014637421,
+      "match_status": "Unique",
+      "sa2_code": "209041432",
+      "sa2_name": "Epping - South",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.0306014637421%2C-37.659162327269&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:53.958378+00:00"
+    },
+    "-33.8617556,151.1712854": {
+      "latitude": -33.86175560177023,
+      "longitude": 151.17128543471406,
+      "match_status": "Unique",
+      "sa2_code": "120021389",
+      "sa2_name": "Lilyfield - Rozelle",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.17128543471406%2C-33.86175560177023&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:54.479281+00:00"
+    },
+    "-37.8559754,144.8975552": {
+      "latitude": -37.855975382501995,
+      "longitude": 144.8975552220371,
+      "match_status": "Unique",
+      "sa2_code": "213021346",
+      "sa2_name": "Williamstown",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.8975552220371%2C-37.855975382501995&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:55.013673+00:00"
+    },
+    "-33.8077273,150.9713660": {
+      "latitude": -33.80772731508887,
+      "longitude": 150.97136603159507,
+      "match_status": "Unique",
+      "sa2_code": "125041589",
+      "sa2_name": "Wentworthville - Westmead",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=150.97136603159507%2C-33.80772731508887&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:55.565190+00:00"
+    },
+    "-33.8988250,151.1736781": {
+      "latitude": -33.898824969924114,
+      "longitude": 151.17367809819572,
+      "match_status": "Unique",
+      "sa2_code": "117031640",
+      "sa2_name": "Newtown (NSW)",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.17367809819572%2C-33.898824969924114&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:56.091927+00:00"
+    },
+    "-37.8037830,144.9495620": {
+      "latitude": -37.80378303989267,
+      "longitude": 144.949561997003,
+      "match_status": "Unique",
+      "sa2_code": "206041506",
+      "sa2_name": "North Melbourne",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.949561997003%2C-37.80378303989267&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:56.582343+00:00"
+    },
+    "-35.3204706,149.1336728": {
+      "latitude": -35.32047058970074,
+      "longitude": 149.13367280242156,
+      "match_status": "Unique",
+      "sa2_code": "801061064",
+      "sa2_name": "Griffith (ACT)",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=149.13367280242156%2C-35.32047058970074&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:57.132137+00:00"
+    },
+    "-33.9674585,151.1053193": {
+      "latitude": -33.96745850418797,
+      "longitude": 151.1053193221832,
+      "match_status": "Unique",
+      "sa2_code": "119031664",
+      "sa2_name": "Hurstville - Central",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.1053193221832%2C-33.96745850418797&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:57.654897+00:00"
+    },
+    "-38.3321102,144.3241914": {
+      "latitude": -38.332110190182824,
+      "longitude": 144.32419142946964,
+      "match_status": "Unique",
+      "sa2_code": "203031053",
+      "sa2_name": "Torquay",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.32419142946964%2C-38.332110190182824&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:58.169663+00:00"
+    },
+    "-28.0464387,153.4353991": {
+      "latitude": -28.046438706722203,
+      "longitude": 153.43539909249554,
+      "match_status": "Unique",
+      "sa2_code": "309011227",
+      "sa2_name": "Mermaid Beach - Broadbeach",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=153.43539909249554%2C-28.046438706722203&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:58.690869+00:00"
+    },
+    "-33.8159897,150.9717720": {
+      "latitude": -33.815989727754385,
+      "longitude": 150.97177200296673,
+      "match_status": "Unique",
+      "sa2_code": "125041589",
+      "sa2_name": "Wentworthville - Westmead",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=150.97177200296673%2C-33.815989727754385&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:59.210842+00:00"
+    },
+    "-37.9408825,145.0018875": {
+      "latitude": -37.940882453492414,
+      "longitude": 145.00188746009295,
+      "match_status": "Unique",
+      "sa2_code": "208011172",
+      "sa2_name": "Hampton",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.00188746009295%2C-37.940882453492414&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:33:59.761390+00:00"
+    },
+    "-37.8633302,145.0790065": {
+      "latitude": -37.86333018127248,
+      "longitude": 145.07900651767528,
+      "match_status": "Unique",
+      "sa2_code": "207011146",
+      "sa2_name": "Ashburton (Vic.)",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.07900651767528%2C-37.86333018127248&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:00.267295+00:00"
+    },
+    "-37.7985041,145.0525024": {
+      "latitude": -37.79850410570728,
+      "longitude": 145.05250237095333,
+      "match_status": "Unique",
+      "sa2_code": "207011154",
+      "sa2_name": "Kew East",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.05250237095333%2C-37.79850410570728&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:00.778670+00:00"
+    },
+    "-37.7989995,144.9846660": {
+      "latitude": -37.79899946896251,
+      "longitude": 144.9846659841497,
+      "match_status": "Unique",
+      "sa2_code": "206071141",
+      "sa2_name": "Collingwood",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.9846659841497%2C-37.79899946896251&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:01.311307+00:00"
+    },
+    "-32.9381777,151.7599286": {
+      "latitude": -32.938177717326056,
+      "longitude": 151.75992856985172,
+      "match_status": "Unique",
+      "sa2_code": "111031228",
+      "sa2_name": "Merewether - The Junction",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.75992856985172%2C-32.938177717326056&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:01.838497+00:00"
+    },
+    "-33.9415414,151.1012563": {
+      "latitude": -33.94154143878648,
+      "longitude": 151.10125633259622,
+      "match_status": "Unique",
+      "sa2_code": "119041377",
+      "sa2_name": "Kingsgrove (South) - Bardwell Park",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.10125633259622%2C-33.94154143878648&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:02.373279+00:00"
+    },
+    "-37.8868700,145.0575064": {
+      "latitude": -37.886870030598686,
+      "longitude": 145.05750641402474,
+      "match_status": "Unique",
+      "sa2_code": "208021176",
+      "sa2_name": "Carnegie",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.05750641402474%2C-37.886870030598686&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:02.868168+00:00"
+    },
+    "-28.1346744,153.4699617": {
+      "latitude": -28.134674424317446,
+      "longitude": 153.46996169103258,
+      "match_status": "Unique",
+      "sa2_code": "309021233",
+      "sa2_name": "Elanora",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=153.46996169103258%2C-28.134674424317446&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:03.418985+00:00"
+    },
+    "-37.9676644,145.1760481": {
+      "latitude": -37.9676643985589,
+      "longitude": 145.17604805374006,
+      "match_status": "Unique",
+      "sa2_code": "212041460",
+      "sa2_name": "Noble Park - West",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.17604805374006%2C-37.9676643985589&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:04.113676+00:00"
+    },
+    "-37.8150196,144.9643141": {
+      "latitude": -37.815019562018755,
+      "longitude": 144.96431413041873,
+      "match_status": "Unique",
+      "sa2_code": "206041503",
+      "sa2_name": "Melbourne CBD - East",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.96431413041873%2C-37.815019562018755&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:04.607458+00:00"
+    },
+    "-37.9898478,145.2143920": {
+      "latitude": -37.9898478,
+      "longitude": 145.214392,
+      "match_status": "Unique",
+      "sa2_code": "212041563",
+      "sa2_name": "Dandenong - North",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.214392%2C-37.9898478&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:05.097564+00:00"
+    },
+    "-27.4790518,153.0420404": {
+      "latitude": -27.479051772620824,
+      "longitude": 153.04204036139265,
+      "match_status": "Unique",
+      "sa2_code": "305021115",
+      "sa2_name": "East Brisbane",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=153.04204036139265%2C-27.479051772620824&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:05.591616+00:00"
+    },
+    "-32.2472803,148.6013177": {
+      "latitude": -32.24728031256592,
+      "longitude": 148.60131766345842,
+      "match_status": "Unique",
+      "sa2_code": "105031101",
+      "sa2_name": "Dubbo - South",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=148.60131766345842%2C-32.24728031256592&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:06.068028+00:00"
+    },
+    "-41.1063333,146.8247664": {
+      "latitude": -41.106333261269974,
+      "longitude": 146.8247664163998,
+      "match_status": "Unique",
+      "sa2_code": "602031059",
+      "sa2_name": "George Town",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=146.8247664163998%2C-41.106333261269974&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:06.578726+00:00"
+    },
+    "-33.9298176,151.1526570": {
+      "latitude": -33.929817581833774,
+      "longitude": 151.15265698653045,
+      "match_status": "Unique",
+      "sa2_code": "119041671",
+      "sa2_name": "Wolli Creek",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.15265698653045%2C-33.929817581833774&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:07.096057+00:00"
+    },
+    "-37.7442274,144.8000311": {
+      "latitude": -37.7442274,
+      "longitude": 144.8000311,
+      "match_status": "Unique",
+      "sa2_code": "213011334",
+      "sa2_name": "St Albans - North",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.8000311%2C-37.7442274&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:08.057114+00:00"
+    },
+    "-35.0675048,138.5551554": {
+      "latitude": -35.06750482504176,
+      "longitude": 138.5551554260033,
+      "match_status": "Unique",
+      "sa2_code": "403041080",
+      "sa2_name": "Happy Valley",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.5551554260033%2C-35.06750482504176&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:08.624561+00:00"
+    },
+    "-35.1125132,138.5224598": {
+      "latitude": -35.11251316925476,
+      "longitude": 138.5224597932074,
+      "match_status": "Unique",
+      "sa2_code": "403041085",
+      "sa2_name": "Morphett Vale - West",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.5224597932074%2C-35.11251316925476&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:09.192022+00:00"
+    },
+    "-37.7956788,145.2814392": {
+      "latitude": -37.7956788187804,
+      "longitude": 145.281439164623,
+      "match_status": "Unique",
+      "sa2_code": "211031450",
+      "sa2_name": "Croydon - East",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.281439164623%2C-37.7956788187804&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:09.708374+00:00"
+    },
+    "-38.0779876,145.4821455": {
+      "latitude": -38.07798764614278,
+      "longitude": 145.48214550542542,
+      "match_status": "Unique",
+      "sa2_code": "212011551",
+      "sa2_name": "Pakenham - South East",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.48214550542542%2C-38.07798764614278&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:10.230037+00:00"
+    },
+    "-31.8961437,115.8282424": {
+      "latitude": -31.89614367671493,
+      "longitude": 115.82824239188882,
+      "match_status": "Unique",
+      "sa2_code": "505021093",
+      "sa2_name": "Stirling - Osborne Park",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.82824239188882%2C-31.89614367671493&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:10.771292+00:00"
+    },
+    "-37.8485210,145.0064834": {
+      "latitude": -37.84852100945098,
+      "longitude": 145.00648340026987,
+      "match_status": "Unique",
+      "sa2_code": "206061138",
+      "sa2_name": "Toorak",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.00648340026987%2C-37.84852100945098&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:11.283340+00:00"
+    },
+    "-37.8974658,145.0045844": {
+      "latitude": -37.897465811311925,
+      "longitude": 145.0045844370647,
+      "match_status": "Unique",
+      "sa2_code": "208011169",
+      "sa2_name": "Brighton (Vic.)",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.0045844370647%2C-37.897465811311925&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:11.804282+00:00"
+    },
+    "-33.9411997,151.1006685": {
+      "latitude": -33.9411997,
+      "longitude": 151.1006685,
+      "match_status": "Unique",
+      "sa2_code": "119041377",
+      "sa2_name": "Kingsgrove (South) - Bardwell Park",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.1006685%2C-33.9411997&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:12.358553+00:00"
+    },
+    "-33.8313525,151.2220153": {
+      "latitude": -33.83135246631629,
+      "longitude": 151.22201531970995,
+      "match_status": "Unique",
+      "sa2_code": "121041416",
+      "sa2_name": "Neutral Bay - Kirribilli",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.22201531970995%2C-33.83135246631629&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:12.865679+00:00"
+    },
+    "-41.0518624,145.9050960": {
+      "latitude": -41.051862396393226,
+      "longitude": 145.90509596919085,
+      "match_status": "Unique",
+      "sa2_code": "604011077",
+      "sa2_name": "Burnie - Wivenhoe",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.90509596919085%2C-41.051862396393226&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:13.388999+00:00"
+    },
+    "-33.8871132,151.1574789": {
+      "latitude": -33.8871132,
+      "longitude": 151.1574789,
+      "match_status": "Unique",
+      "sa2_code": "120021675",
+      "sa2_name": "Leichhardt",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.1574789%2C-33.8871132&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:13.902806+00:00"
+    },
+    "-33.6373679,151.3287546": {
+      "latitude": -33.63736791424186,
+      "longitude": 151.32875464720317,
+      "match_status": "Unique",
+      "sa2_code": "122021420",
+      "sa2_name": "Avalon - Palm Beach",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.32875464720317%2C-33.63736791424186&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:14.417664+00:00"
+    },
+    "-33.8242427,151.1920651": {
+      "latitude": -33.82424265541068,
+      "longitude": 151.19206507778404,
+      "match_status": "Unique",
+      "sa2_code": "121011685",
+      "sa2_name": "Greenwich - Riverview",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.19206507778404%2C-33.82424265541068&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:14.972798+00:00"
+    },
+    "-33.2854382,151.4246348": {
+      "latitude": -33.285438246741236,
+      "longitude": 151.4246348415457,
+      "match_status": "Unique",
+      "sa2_code": "102021057",
+      "sa2_name": "Wyong",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.4246348415457%2C-33.285438246741236&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:15.482104+00:00"
+    },
+    "-38.1393863,144.3485592": {
+      "latitude": -38.13938630434957,
+      "longitude": 144.34855922675237,
+      "match_status": "Unique",
+      "sa2_code": "203021040",
+      "sa2_name": "Geelong West - Hamlyn Heights",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.34855922675237%2C-38.13938630434957&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:15.983808+00:00"
+    },
+    "-26.7030499,153.1282915": {
+      "latitude": -26.7030499,
+      "longitude": 153.1282915,
+      "match_status": "Unique",
+      "sa2_code": "316021423",
+      "sa2_name": "Parrearra - Warana",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=153.1282915%2C-26.7030499&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:16.530558+00:00"
+    },
+    "-37.9383944,145.2023581": {
+      "latitude": -37.93839435990974,
+      "longitude": 145.2023580650588,
+      "match_status": "Unique",
+      "sa2_code": "212051325",
+      "sa2_name": "Mulgrave",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.2023580650588%2C-37.93839435990974&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:17.058020+00:00"
+    },
+    "-16.4834179,145.4630636": {
+      "latitude": -16.483417873923038,
+      "longitude": 145.4630636246485,
+      "match_status": "Unique",
+      "sa2_code": "306041165",
+      "sa2_name": "Port Douglas",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.4630636246485%2C-16.483417873923038&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:17.591403+00:00"
+    },
+    "-34.0427254,151.1204853": {
+      "latitude": -34.04272539357419,
+      "longitude": 151.12048529528568,
+      "match_status": "Unique",
+      "sa2_code": "128011602",
+      "sa2_name": "Caringbah",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.12048529528568%2C-34.04272539357419&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:18.096227+00:00"
+    },
+    "-27.4662534,152.9971711": {
+      "latitude": -27.466253430570337,
+      "longitude": 152.99717107880576,
+      "match_status": "Unique",
+      "sa2_code": "305041135",
+      "sa2_name": "Paddington - Milton",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=152.99717107880576%2C-27.466253430570337&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:18.625187+00:00"
+    },
+    "-12.4406474,130.8401760": {
+      "latitude": -12.44064741198694,
+      "longitude": 130.8401759833061,
+      "match_status": "Unique",
+      "sa2_code": "701011007",
+      "sa2_name": "Parap",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=130.8401759833061%2C-12.44064741198694&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:19.138653+00:00"
+    },
+    "-33.9077349,151.1721773": {
+      "latitude": -33.90773490950358,
+      "longitude": 151.1721773466767,
+      "match_status": "Unique",
+      "sa2_code": "117021636",
+      "sa2_name": "Marrickville - North",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.1721773466767%2C-33.90773490950358&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:19.666553+00:00"
+    },
+    "-27.9798438,153.4248481": {
+      "latitude": -27.97984375338658,
+      "longitude": 153.4248481126367,
+      "match_status": "Unique",
+      "sa2_code": "309101269",
+      "sa2_name": "Main Beach",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=153.4248481126367%2C-27.97984375338658&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:20.194652+00:00"
+    },
+    "-33.9664060,151.1071671": {
+      "latitude": -33.96640600400037,
+      "longitude": 151.1071671465367,
+      "match_status": "Unique",
+      "sa2_code": "119031664",
+      "sa2_name": "Hurstville - Central",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.1071671465367%2C-33.96640600400037&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:20.715165+00:00"
+    },
+    "-37.8386771,144.9893010": {
+      "latitude": -37.83867708034467,
+      "longitude": 144.98930104429024,
+      "match_status": "Unique",
+      "sa2_code": "206061515",
+      "sa2_name": "South Yarra - North",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.98930104429024%2C-37.83867708034467&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:21.240922+00:00"
+    },
+    "-27.6142890,152.7563152": {
+      "latitude": -27.614288966624596,
+      "longitude": 152.75631516848946,
+      "match_status": "Unique",
+      "sa2_code": "310031286",
+      "sa2_name": "Ipswich - Central",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=152.75631516848946%2C-27.614288966624596&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:21.768735+00:00"
+    },
+    "-35.5536732,138.6214566": {
+      "latitude": -35.553673187065996,
+      "longitude": 138.62145663269987,
+      "match_status": "Unique",
+      "sa2_code": "407011148",
+      "sa2_name": "Victor Harbor",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=138.62145663269987%2C-35.553673187065996&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:22.308091+00:00"
+    },
+    "-32.9395405,151.7577950": {
+      "latitude": -32.9395405,
+      "longitude": 151.757795,
+      "match_status": "Unique",
+      "sa2_code": "111031228",
+      "sa2_name": "Merewether - The Junction",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.757795%2C-32.9395405&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:22.811834+00:00"
+    },
+    "-33.9059292,151.1719985": {
+      "latitude": -33.90592916701932,
+      "longitude": 151.17199854465628,
+      "match_status": "Unique",
+      "sa2_code": "117021636",
+      "sa2_name": "Marrickville - North",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.17199854465628%2C-33.90592916701932&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:23.351797+00:00"
+    },
+    "-37.8105120,145.0001286": {
+      "latitude": -37.81051195737439,
+      "longitude": 145.00012862576918,
+      "match_status": "Unique",
+      "sa2_code": "206071139",
+      "sa2_name": "Abbotsford",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.00012862576918%2C-37.81051195737439&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:23.869427+00:00"
+    },
+    "-27.4809500,153.0118920": {
+      "latitude": -27.480949954117037,
+      "longitude": 153.0118919944947,
+      "match_status": "Unique",
+      "sa2_code": "305011112",
+      "sa2_name": "West End",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=153.0118919944947%2C-27.480949954117037&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:24.377163+00:00"
+    },
+    "-37.7942181,145.2354311": {
+      "latitude": -37.79421812405245,
+      "longitude": 145.23543114505404,
+      "match_status": "Unique",
+      "sa2_code": "211031268",
+      "sa2_name": "Ringwood North",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.23543114505404%2C-37.79421812405245&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:24.933684+00:00"
+    },
+    "-37.9039052,145.0861395": {
+      "latitude": -37.903905160190085,
+      "longitude": 145.0861395303391,
+      "match_status": "Unique",
+      "sa2_code": "212051326",
+      "sa2_name": "Oakleigh - Huntingdale",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.0861395303391%2C-37.903905160190085&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:25.422177+00:00"
+    },
+    "-37.7415918,144.9652430": {
+      "latitude": -37.74159177040843,
+      "longitude": 144.96524304004922,
+      "match_status": "Unique",
+      "sa2_code": "206011497",
+      "sa2_name": "Coburg - East",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.96524304004922%2C-37.74159177040843&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:25.969971+00:00"
+    },
+    "-27.4456373,152.9920624": {
+      "latitude": -27.445637345177015,
+      "longitude": 152.99206239245433,
+      "match_status": "Unique",
+      "sa2_code": "305041132",
+      "sa2_name": "Ashgrove",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=152.99206239245433%2C-27.445637345177015&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:26.483097+00:00"
+    },
+    "-38.2666869,145.0133736": {
+      "latitude": -38.2666869,
+      "longitude": 145.0133736,
+      "match_status": "Unique",
+      "sa2_code": "214021382",
+      "sa2_name": "Mount Martha",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.0133736%2C-38.2666869&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:27.019701+00:00"
+    },
+    "-33.8107093,151.1090828": {
+      "latitude": -33.81070926678838,
+      "longitude": 151.1090827629107,
+      "match_status": "Unique",
+      "sa2_code": "126021724",
+      "sa2_name": "Ryde - North",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.1090827629107%2C-33.81070926678838&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:27.549601+00:00"
+    },
+    "-37.8032468,144.9866286": {
+      "latitude": -37.80324678361481,
+      "longitude": 144.98662859944915,
+      "match_status": "Unique",
+      "sa2_code": "206071141",
+      "sa2_name": "Collingwood",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.98662859944915%2C-37.80324678361481&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:28.036329+00:00"
+    },
+    "-31.4310565,152.9114345": {
+      "latitude": -31.43105652622575,
+      "longitude": 152.911434480388,
+      "match_status": "Unique",
+      "sa2_code": "108041619",
+      "sa2_name": "Port Macquarie - East",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=152.911434480388%2C-31.43105652622575&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:28.598403+00:00"
+    },
+    "-41.0508971,145.9059812": {
+      "latitude": -41.05089708952901,
+      "longitude": 145.9059812210882,
+      "match_status": "Unique",
+      "sa2_code": "604011077",
+      "sa2_name": "Burnie - Wivenhoe",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.9059812210882%2C-41.05089708952901&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:29.105337+00:00"
+    },
+    "-41.0516692,145.9065885": {
+      "latitude": -41.05166921146706,
+      "longitude": 145.90658852626842,
+      "match_status": "Unique",
+      "sa2_code": "604011077",
+      "sa2_name": "Burnie - Wivenhoe",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.90658852626842%2C-41.05166921146706&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:29.629704+00:00"
+    },
+    "-35.3197773,149.0394921": {
+      "latitude": -35.31977726515751,
+      "longitude": 149.039492133623,
+      "match_status": "Unique",
+      "sa2_code": "801101135",
+      "sa2_name": "Coombs",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=149.039492133623%2C-35.31977726515751&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:30.148775+00:00"
+    },
+    "-33.8320325,151.2223078": {
+      "latitude": -33.83203250112751,
+      "longitude": 151.22230780453367,
+      "match_status": "Unique",
+      "sa2_code": "121041416",
+      "sa2_name": "Neutral Bay - Kirribilli",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=151.22230780453367%2C-33.83203250112751&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:30.683164+00:00"
+    },
+    "-38.3308345,144.3258012": {
+      "latitude": -38.33083446108177,
+      "longitude": 144.32580120586965,
+      "match_status": "Unique",
+      "sa2_code": "203031053",
+      "sa2_name": "Torquay",
+      "match_count": 1,
+      "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=144.32580120586965%2C-38.33083446108177&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+      "checked_at": "2026-10-18T05:34:31.208634+00:00"
     }
   }
 }

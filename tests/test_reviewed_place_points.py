@@ -32,4 +32,11 @@ class PlacePointReviewsTests(unittest.TestCase):
    initial=copy.deepcopy(self.places)
    with self.assertRaises(ValueError):apply_place_point_reviews(self.places,self.stores,self.members,[self.row,extra])
    self.assertEqual(self.places,initial)
+ def test_precinct_anchor_preserves_format_and_requires_explicit_low_confidence(self):
+  self.places[0].update(place_type='Retail Precinct',location_setting='High Street')
+  with self.assertRaises(ValueError):self.apply(self.row|dict(method='Reviewed street geometry'))
+  with self.assertRaises(ValueError):self.apply(self.row|dict(method='Reviewed precinct street anchor'))
+  self.apply(self.row|dict(method='Reviewed precinct street anchor',confidence='Low'))
+  self.assertEqual(self.places[0]['place_type'],'Retail Precinct')
+  self.assertEqual(self.places[0]['location_setting'],'High Street')
 if __name__=='__main__':unittest.main()

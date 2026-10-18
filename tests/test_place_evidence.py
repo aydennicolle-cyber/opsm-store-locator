@@ -160,5 +160,21 @@ class PlaceEvidenceTests(unittest.TestCase):
                         'Official store address matches the authoritative canonical place address')
 
 
+class DeferredCorridorNameTests(unittest.TestCase):
+    def test_reviewed_name_waits_for_derived_corridor_and_keeps_stable_id(self):
+        row = dict(place_id='corridor-au-vic-example-old-road', canonical_name='Correct Street',
+                   aliases='Old Road', official_url='', evidence_url='https://example.org/road',
+                   verified_at='2026-10-18', reason='Reviewed road name', state='VIC')
+        deferred = places_build.apply_canonical_place_overrides([], {}, rows=[row], defer_missing_corridors=True)
+        self.assertEqual(deferred, [row])
+        place = dict(place_id=row['place_id'], name='Old Road', aliases=[], state='VIC')
+        places_build.apply_canonical_place_overrides([place], {}, rows=deferred)
+        self.assertEqual(place['place_id'], row['place_id'])
+        self.assertEqual(place['name'], 'Correct Street')
+        self.assertIn('Old Road', place['aliases'])
+        with self.assertRaises(ValueError):
+            places_build.apply_canonical_place_overrides([], {}, rows=deferred)
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-18T03:31:24+00:00",
+  "generated_at": "2026-10-18T05:53:03+00:00",
   "coverage_as_of": "2026-10-18",
   "certification_status": "Operational",
   "coverage_statement": "The network uses best-available public store data. Freshness, location setting and canonical place confidence are reported separately.",
@@ -14,13 +14,13 @@
     "usable_stores": 2859,
     "usable_named_network_stores": 1560,
     "current_named_network_stores": 1,
-    "places": 1502,
-    "centres": 787,
-    "corridors": 712
+    "places": 1500,
+    "centres": 788,
+    "corridors": 709
   },
   "changes_from_baseline": {
     "stores": 1396,
-    "places": 1108
+    "places": 1106
   },
   "dimensions": {
     "source_freshness": 3.8,
@@ -157,14 +157,14 @@
     "New Zealand": 351
   },
   "by_location_setting": {
-    "High Street": 863,
-    "Shopping Centre": 1331,
+    "High Street": 861,
+    "Shopping Centre": 1333,
     "Uncertain": 661,
     "Other": 32
   },
   "place_types": {
-    "Shopping Centre": 782,
-    "High Street Corridor": 710,
+    "Shopping Centre": 783,
+    "High Street Corridor": 707,
     "Retail Precinct": 2,
     "Shopping Arcade": 5,
     "Other": 3
@@ -598,7 +598,7 @@
       "required": false,
       "snapshot": "data/property_intelligence.json",
       "completion_status": "partial",
-      "last_success": "2026-10-18T03:31:08.171740+00:00",
+      "last_success": "2026-10-18T05:52:51.196218+00:00",
       "age_days": 0,
       "max_age_days": 180,
       "available": true,
@@ -627,7 +627,7 @@
     "coverage_statement": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
     "portfolio_overlap_note": "Portfolio overlap is derived from public tenancy and property-group evidence; it is not proof of a private commercial relationship.",
     "dimensions": {
-      "research_coverage": 41.2,
+      "research_coverage": 41.1,
       "relationship_freshness": 99.9,
       "centre_class_coverage": 40.4,
       "bailey_centre_research_coverage": 98.1,
@@ -639,7 +639,7 @@
       "relationships": 1052,
       "current_relationships": 1051,
       "stale_relationships": 1,
-      "shopping_centres": 782,
+      "shopping_centres": 783,
       "researched_centres": 322,
       "classed_centres": 316,
       "bailey_centres": 52,
@@ -2997,9 +2997,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-nz-canterbury-christchurch-garlands-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-nz-canterbury-the-tannery",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "opsm-nz-1010": {
@@ -9752,7 +9752,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-newtown-king-street-2",
+      "place_id": "corridor-au-nsw-newtown-king-street-1",
       "mapping_confidence": "Medium",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
@@ -26383,9 +26383,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-mildura-street-deakin-avenue",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-mildura-central",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "eyecare-plus-642": {

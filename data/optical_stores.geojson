@@ -55,7 +55,7 @@
       "Other",
       "Unclassified"
     ],
-    "coordinate_override_count": 457,
+    "coordinate_override_count": 461,
     "publication_exclusion_count": 6
   },
   "features": [
@@ -10129,8 +10129,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          176.167505,
-          -37.6859006
+          176.1352007,
+          -37.7273299
         ]
       },
       "properties": {
@@ -10170,10 +10170,10 @@
         "status_evidence_url": "",
         "status_verified_at": "",
         "status_reason": "",
-        "coordinate_confidence": "",
-        "coordinate_evidence_url": "",
-        "coordinates_verified_at": "",
-        "coordinate_reason": "",
+        "coordinate_confidence": "Medium",
+        "coordinate_evidence_url": "https://nominatim.openstreetmap.org/search?q=157+Chadwick+Road%2CGreerton%2CTauranga+3112%2CNew+Zealand&format=jsonv2&addressdetails=1&polygon_geojson=1&limit=3",
+        "coordinates_verified_at": "2026-10-18",
+        "coordinate_reason": "Retained operator address explicitly names157 Chadwick Road; independent address feature matches house,road,postcode and country. Correct the remote town-centre feed point. Property-level reference; exact shop-front unverified. Current legacy branch URL returned404, which is not closure evidence; no trading-status or source-vintage refresh inferred.",
         "public_facts_verified_at": "",
         "public_facts_evidence_url": "",
         "public_facts_reason": ""
@@ -11119,8 +11119,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          172.6364343,
-          -43.530955
+          172.6802782,
+          -43.5575961
         ]
       },
       "properties": {
@@ -11160,10 +11160,10 @@
         "status_evidence_url": "",
         "status_verified_at": "",
         "status_reason": "",
-        "coordinate_confidence": "",
-        "coordinate_evidence_url": "",
-        "coordinates_verified_at": "",
-        "coordinate_reason": "",
+        "coordinate_confidence": "Low",
+        "coordinate_evidence_url": "https://matthews.co.nz/practices/christchurch/",
+        "coordinates_verified_at": "2026-10-18",
+        "coordinate_reason": "Current operator explicitly places shop50 atTheTannery,3GarlandsRoad. Use the independently named property reference to correct the remote CBD feed point. Low precision: exact shop position/frontage unverified. Raw original point retained in audit; no new trading status or opening date inferred.",
         "public_facts_verified_at": "",
         "public_facts_evidence_url": "",
         "public_facts_reason": ""
@@ -44889,8 +44889,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          151.1771151,
-          -33.8804298
+          151.1813704,
+          -33.8953533
         ]
       },
       "properties": {
@@ -44930,10 +44930,10 @@
         "status_evidence_url": "",
         "status_verified_at": "",
         "status_reason": "",
-        "coordinate_confidence": "",
-        "coordinate_evidence_url": "",
-        "coordinates_verified_at": "",
-        "coordinate_reason": "",
+        "coordinate_confidence": "Medium",
+        "coordinate_evidence_url": "https://www.oscarwylee.com.au/locations/optometrist-newtown.html",
+        "coordinates_verified_at": "2026-10-18",
+        "coordinate_reason": "Official page confirms229KingStreet,Newtown2042 and embeds the named OscarWylee map feature at this public reference. Correct the former off-street feed point about1.7km north. Approximate branch-map reference; exact shop frontage and opening date are not inferred.",
         "public_facts_verified_at": "",
         "public_facts_evidence_url": "",
         "public_facts_reason": ""
@@ -64084,8 +64084,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          170.9697933,
-          -45.0999833
+          170.9825174,
+          -45.0807454
         ]
       },
       "properties": {
@@ -64125,10 +64125,10 @@
         "status_evidence_url": "",
         "status_verified_at": "",
         "status_reason": "",
-        "coordinate_confidence": "",
-        "coordinate_evidence_url": "",
-        "coordinates_verified_at": "",
-        "coordinate_reason": "",
+        "coordinate_confidence": "Medium",
+        "coordinate_evidence_url": "https://nominatim.openstreetmap.org/search?q=413+Thames+Highway%2COamaru+9400%2CNew+Zealand&format=jsonv2&addressdetails=1&polygon_geojson=1&limit=3",
+        "coordinates_verified_at": "2026-10-18",
+        "coordinate_reason": "Retained operator address explicitly names413 Thames Highway; independent address feature matches house,road,postcode and country. Correct the remote town-centre feed point. Property-level reference; exact shop-front unverified. Current legacy branch URL returned404, which is not closure evidence; no trading-status or source-vintage refresh inferred.",
         "public_facts_verified_at": "",
         "public_facts_evidence_url": "",
         "public_facts_reason": ""
