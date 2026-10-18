@@ -76,13 +76,23 @@ class AdmissionTests(unittest.TestCase):
         stores={r['store_id']:r for r in intake.read_csv(ROOT/'data/optical_stores.csv')}
         memberships={r['store_id']:r for r in intake.read_csv(ROOT/'data/store_place_memberships.csv')}
         certificates={r['store_id']:r for r in intake.read_csv(ROOT/'data/store_certification.csv')}
+        overrides={r['store_id']:r for r in intake.read_csv(ROOT/'data/store_place_overrides.csv')}
         for row in reviewed.read_reviewed_rows():
             key=reviewed.ID_PREFIX+row['id']
             with self.subTest(store=key):
                 self.assertEqual(stores[key]['fetched_at'][:10],row['verified_at'])
                 self.assertEqual(certificates[key]['source_id'],reviewed.SOURCE_ID)
                 self.assertEqual(certificates[key]['usable_for_network'],'true')
-                if row['location_setting']=='Uncertain':
+                if row['location_setting']=='Uncertain' and key in overrides:
+                    # A subsequent evidence-backed membership review may resolve
+                    # setting without rewriting the original intake observation.
+                    decision=overrides[key]
+                    self.assertTrue(decision['official_url'].startswith('https://'))
+                    self.assertTrue(decision['evidence_basis'])
+                    self.assertEqual(memberships[key]['location_setting'],decision['location_setting'])
+                    self.assertEqual(memberships[key]['review_status'],'Accepted')
+                    self.assertTrue(memberships[key]['place_id'])
+                elif row['location_setting']=='Uncertain':
                     self.assertEqual(memberships[key]['location_setting'],'Uncertain')
                     self.assertEqual(memberships[key]['place_id'],'')
                     self.assertEqual(certificates[key]['eligible_for_place_analytics'],'false')

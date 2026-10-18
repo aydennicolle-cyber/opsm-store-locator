@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "store_count": 2837,
-    "matched_count": 2488,
+    "store_count": 2887,
+    "matched_count": 2530,
     "source_release_date": "2026-05-26"
   },
   "links": {
@@ -18087,6 +18087,20 @@
       "queried_latitude": -37.8058309,
       "queried_longitude": 144.979956
     },
+    "independent-other-optical-reviewed-au-gertrude-street-optical": {
+      "sa2_code": "206071142",
+      "sa2_name": "Fitzroy",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-seekers-fitzroy": {
+      "sa2_code": "206071142",
+      "sa2_name": "Fitzroy",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
     "independent-other-optical-provision-17164": {
       "sa2_code": "206071143",
       "sa2_name": "Fitzroy North",
@@ -23403,6 +23417,348 @@
       "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
     },
     "independent-other-optical-osm-ne-node-7290149264": {
+      "sa2_code": "",
+      "sa2_name": "",
+      "match_confidence": "Not available",
+      "geography_system": "Stats NZ",
+      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b716": {
+      "sa2_code": "801011002",
+      "sa2_name": "Belconnen",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b788": {
+      "sa2_code": "",
+      "sa2_name": "",
+      "match_confidence": "Unmatched",
+      "match_method": "Authoritative boundary match unresolved",
+      "boundary_distance_km": null,
+      "coverage_note": "Official boundary service unavailable during 2026-10-15 reconciliation; no nearest-area assignment inferred."
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b676": {
+      "sa2_code": "119011571",
+      "sa2_name": "Bankstown - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b772": {
+      "sa2_code": "120031678",
+      "sa2_name": "Burwood (NSW)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b743": {
+      "sa2_code": "123021437",
+      "sa2_name": "Campbelltown - Woodbine",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b723": {
+      "sa2_code": "111011208",
+      "sa2_name": "Charlestown - Dudley",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-e524": {
+      "sa2_code": "119031664",
+      "sa2_name": "Hurstville - Central",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b749": {
+      "sa2_code": "",
+      "sa2_name": "",
+      "match_confidence": "Unmatched",
+      "match_method": "Authoritative boundary match unresolved",
+      "boundary_distance_km": null,
+      "coverage_note": "No unique match in retained boundary geometry; external boundary lookup pending. No nearest-area inference."
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b795": {
+      "sa2_code": "115041625",
+      "sa2_name": "Rouse Hill - Beaumont Hills",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b903": {
+      "sa2_code": "127021517",
+      "sa2_name": "Greenfield Park - Prairiewood",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b665": {
+      "sa2_code": "122031429",
+      "sa2_name": "Freshwater - Brookvale",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b758": {
+      "sa2_code": "117031644",
+      "sa2_name": "Sydney (North) - Millers Point",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b669": {
+      "sa2_code": "318021467",
+      "sa2_name": "Aitkenvale",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b659": {
+      "sa2_code": "306021145",
+      "sa2_name": "Cairns City",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b840": {
+      "sa2_code": "302021028",
+      "sa2_name": "Chermside",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b689": {
+      "sa2_code": "",
+      "sa2_name": "",
+      "match_confidence": "Unmatched",
+      "match_method": "Authoritative boundary match unresolved",
+      "boundary_distance_km": null,
+      "coverage_note": "No unique match in retained boundary geometry; external boundary lookup pending. No nearest-area inference."
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b733": {
+      "sa2_code": "312021346",
+      "sa2_name": "Mackay",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b731": {
+      "sa2_code": "308031214",
+      "sa2_name": "Park Avenue",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b700": {
+      "sa2_code": "314021579",
+      "sa2_name": "North Lakes",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b678": {
+      "sa2_code": "",
+      "sa2_name": "",
+      "match_confidence": "Unmatched",
+      "match_method": "Authoritative boundary match unresolved",
+      "boundary_distance_km": null,
+      "coverage_note": "No unique match in retained boundary geometry; external boundary lookup pending. No nearest-area inference."
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b666": {
+      "sa2_code": "404011096",
+      "sa2_name": "West Lakes",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-f641": {
+      "sa2_code": "202011018",
+      "sa2_name": "Bendigo",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b902": {
+      "sa2_code": "211011260",
+      "sa2_name": "Wantirna South",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b721": {
+      "sa2_code": "503011031",
+      "sa2_name": "Claremont (WA)",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b776": {
+      "sa2_code": "501021012",
+      "sa2_name": "Eaton - Pelican Point",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b705": {
+      "sa2_code": "502011025",
+      "sa2_name": "Mandurah",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b709": {
+      "sa2_code": "507011161",
+      "sa2_name": "Success - Hammond Park",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b693": {
+      "sa2_code": "",
+      "sa2_name": "",
+      "match_confidence": "Unmatched",
+      "match_method": "Authoritative boundary match unresolved",
+      "boundary_distance_km": null,
+      "coverage_note": "No unique match in retained boundary geometry; external boundary lookup pending. No nearest-area inference."
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b699": {
+      "sa2_code": "",
+      "sa2_name": "",
+      "match_confidence": "Unmatched",
+      "match_method": "Authoritative boundary match unresolved",
+      "boundary_distance_km": null,
+      "coverage_note": "No unique match in retained boundary geometry; external boundary lookup pending. No nearest-area inference."
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b736": {
+      "sa2_code": "208041195",
+      "sa2_name": "Malvern East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b687": {
+      "sa2_code": "208041195",
+      "sa2_name": "Malvern East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b791": {
+      "sa2_code": "206041504",
+      "sa2_name": "Melbourne CBD - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-q747": {
+      "sa2_code": "206041504",
+      "sa2_name": "Melbourne CBD - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b739": {
+      "sa2_code": "211031266",
+      "sa2_name": "Ringwood",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b783": {
+      "sa2_code": "505011075",
+      "sa2_name": "Hillarys",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-nz-sunglass-hut-b652": {
+      "sa2_code": "",
+      "sa2_name": "",
+      "match_confidence": "Not available",
+      "geography_system": "Stats NZ",
+      "coverage_note": "New Zealand demographic catchment metrics are not yet published in this build."
+    },
+    "independent-other-optical-reviewed-au-makras-optical-james-street": {
+      "sa2_code": "305011106",
+      "sa2_name": "Fortitude Valley",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-harper-optical-mandurah": {
+      "sa2_code": "502011025",
+      "sa2_name": "Mandurah",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-visionary-optometrists-bankstown": {
+      "sa2_code": "119011571",
+      "sa2_name": "Bankstown - North",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-hcf-eyecare-warringah-mall": {
+      "sa2_code": "122031429",
+      "sa2_name": "Freshwater - Brookvale",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-sunbeat-now-sunshine-plaza": {
+      "sa2_code": "316031427",
+      "sa2_name": "Maroochydore - Kuluin",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-lenz-eyewear-hyde-park": {
+      "sa2_code": "401071023",
+      "sa2_name": "Goodwood - Millswood",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-specs-optical-northcote": {
+      "sa2_code": "206021499",
+      "sa2_name": "Northcote - East",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-owndays-hurstville": {
+      "sa2_code": "119031664",
+      "sa2_name": "Hurstville - Central",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-stacey-stacey-townsville": {
+      "sa2_code": "318021467",
+      "sa2_name": "Aitkenvale",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-health-partners-optical-goodwood": {
+      "sa2_code": "401071023",
+      "sa2_name": "Goodwood - Millswood",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-au-tings-sunglasses-eastland": {
+      "sa2_code": "211031266",
+      "sa2_name": "Ringwood",
+      "match_confidence": "High",
+      "match_method": "Point in SA2",
+      "boundary_distance_km": null
+    },
+    "independent-other-optical-reviewed-nz-sunglass-hut-b637": {
       "sa2_code": "",
       "sa2_name": "",
       "match_confidence": "Not available",

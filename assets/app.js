@@ -287,8 +287,10 @@
     AUSTRALIA_VIEW.zoom
   );
   L.control.zoom({ position: "bottomright" }).addTo(map);
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
+    // OSM requires a referrer. Send only the origin, never saved-search URL data.
+    referrerPolicy: "origin",
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | ABS indicators',
   }).addTo(map);
@@ -522,7 +524,7 @@
     centreLayer.clearLayers();
     centreMarkerById.clear();
     state.centres.forEach((centre) => {
-      if (!Number.isFinite(Number(centre.latitude)) || !Number.isFinite(Number(centre.longitude))) return;
+      if (centre.latitude == null || centre.longitude == null || !Number.isFinite(Number(centre.latitude)) || !Number.isFinite(Number(centre.longitude))) return;
       const isCorridor = centre.location_setting === "High Street";
       const marker = L.marker([centre.latitude, centre.longitude], {
         icon: L.divIcon({
@@ -589,41 +591,19 @@
     if (map.getZoom() < 16) return;
 
     const mapStores = storesForActiveMapView();
-    const groupedStores = new Map();
-    mapStores.forEach((store) => {
-      const key = store.place_id || `${Number(store.latitude).toFixed(5)}:${Number(store.longitude).toFixed(5)}`;
-      if (!groupedStores.has(key)) groupedStores.set(key, []);
-      groupedStores.get(key).push(store);
-    });
-    groupedStores.forEach((stores) => {
-      if (stores.length < 2) return;
-      const centre = state.centres.find((place) => place.place_id === stores[0].place_id);
-      const anchor = centre
-        ? L.latLng(Number(centre.latitude), Number(centre.longitude))
-        : L.latLng(
-            stores.reduce((sum, store) => sum + Number(store.latitude), 0) / stores.length,
-            stores.reduce((sum, store) => sum + Number(store.longitude), 0) / stores.length
-          );
-      const point = map.latLngToLayerPoint(anchor);
-      const radius = stores.length > 4 ? 50 : 38;
-      stores
-        .slice()
-        .sort((left, right) => left.store_id.localeCompare(right.store_id))
-        .forEach((store, index) => {
-          const angle = -Math.PI / 2 + (Math.PI * 2 * index) / stores.length;
-          const offset = L.point(Math.cos(angle) * radius, Math.sin(angle) * radius);
-          markerById.get(store.store_id)?.setLatLng(map.layerPointToLatLng(point.add(offset)));
-        });
-    });
+    // Keep store pins at their recorded coordinates; shared membership is not a shared point.
 
     centreMarkerById.forEach((marker, placeId) => {
       if (!centreLayer.hasLayer(marker)) return;
       const place = state.centres.find((item) => item.place_id === placeId);
+      // A street reference must stay on its mapped road at every zoom level.
+      // Lateral decluttering can otherwise move it into an unrelated property.
+      if (place?.location_setting === "High Street") return;
       const base = L.latLng(marker.options.baseLatitude, marker.options.baseLongitude);
       const point = map.latLngToLayerPoint(base);
       const mappedStoreCount = mapStores.filter((store) => store.place_id === placeId).length;
       const distance = mappedStoreCount > 4 ? 110 : mappedStoreCount > 1 ? 90 : 58;
-      const offset = place?.location_setting === "High Street" ? L.point(distance, 0) : L.point(-distance, 0);
+      const offset = L.point(-distance, 0);
       marker.setLatLng(map.layerPointToLatLng(point.add(offset)));
     });
   }
@@ -1117,7 +1097,7 @@
   function inspectPlace(place, moveMap) {
     beginInspection();
     openCentreDetail(place);
-    if (moveMap && isMapView() && Number.isFinite(Number(place.latitude)) && Number.isFinite(Number(place.longitude))) map.setView([place.latitude,place.longitude],15,{animate:false});
+    if (moveMap && isMapView() && place.latitude != null && place.longitude != null && Number.isFinite(Number(place.latitude)) && Number.isFinite(Number(place.longitude))) map.setView([place.latitude,place.longitude],15,{animate:false});
     if (isMapView()) renderQuickResults();
   }
 
@@ -1273,19 +1253,7 @@
     const place = state.centres.find((item) => item.place_id === state.focusedPlaceId);
     if (!place) return;
     focusedStoreMarkerById.forEach((marker) => resetMarkerPosition(marker));
-    const inPlace = [...focusedStoreMarkerById.values()].filter((marker) => marker.options.focusCategory === "in_centre");
-    if (inPlace.length) {
-      const anchor = L.latLng(Number(place.latitude), Number(place.longitude));
-      const point = map.latLngToLayerPoint(anchor);
-      const radius = inPlace.length > 5 ? 68 : 54;
-      inPlace
-        .sort((left, right) => left.options.storeId.localeCompare(right.options.storeId))
-        .forEach((marker, index) => {
-          const angle = -Math.PI / 2 + (Math.PI * 2 * index) / inPlace.length;
-          const offset = L.point(Math.cos(angle) * radius, Math.sin(angle) * radius);
-          marker.setLatLng(map.layerPointToLatLng(point.add(offset)));
-        });
-    }
+    // Focusing a place must not replace its tenants’ coordinates with a decorative ring.
     const centreMarker = centreMarkerById.get(place.place_id);
     if (centreMarker) centreMarker.setLatLng([Number(place.latitude), Number(place.longitude)]);
   }
@@ -1299,7 +1267,7 @@
   }
 
   function focusPlaceOnMap(place) {
-    if (!place || !Number.isFinite(Number(place.latitude)) || !Number.isFinite(Number(place.longitude))) return;
+    if (!place || place.latitude == null || place.longitude == null || !Number.isFinite(Number(place.latitude)) || !Number.isFinite(Number(place.longitude))) return;
     clearPlaceFocus(false);
     state.focusedPlaceId = place.place_id;
     scheduleOverviewRefresh();
@@ -3093,6 +3061,7 @@
   }
 
   function competitorContextHtml(centre) {
+    if (centre.latitude == null || centre.longitude == null) return '<p class="empty-note">Map point unresolved; nearby distances are unavailable. See the directory evidence for recorded optical listings.</p>';
     const context = centre.competitor_context?.by_retailer || {};
     const placeLabel = centre.location_setting === "High Street" ? "CORRIDOR" : "CENTRE";
     const placeLabelLower = placeLabel.toLowerCase();
@@ -3206,7 +3175,7 @@
     return `<section class="detail-section high-street-profile">
       <div class="section-title-row"><h3>High-street research profile</h3><span class="source-pill">${researched ? "Baseline checked" : "Not checked"}</span></div>
       <div class="data-grid">
-        <div class="data-point"><span>Comparison boundary</span><strong>800 m indicative corridor</strong></div>
+        <div class="data-point"><span>Comparison boundary</span><strong>Named street and locality</strong></div>
         <div class="data-point"><span>Accepted optical tenants</span><strong>${formatNumber(exactOptical.length)}</strong></div>
         <div class="data-point"><span>Optical competitors</span><strong>${formatNumber(opticalCompetitors.length)}</strong></div>
         <div class="data-point"><span>Curated key co-tenants</span><strong>${formatNumber(keyTenants.length)}</strong></div>
@@ -3236,6 +3205,7 @@
   }
 
   function placeSummaryRecord(centre) {
+    const evidence = state.environments?.places.find(p => p.place_id === centre.place_id);
     const row = publishedLookalike(centre.place_id) || {};
     const market = row.market_features || {};
     const relationships = state.propertyRelationships.filter((item) => item.place_id === centre.place_id && Intel.activeRelationship(item));
@@ -3266,10 +3236,13 @@
       optical_store_count: centre.optical_store_count || 0, retailers: (centre.retailers || []).join(" | "),
       high_street_baseline_status: centre.location_setting === "High Street" && (state.placeTenantMetadata.researched_bailey_corridor_place_ids || []).includes(centre.place_id) ? "Baseline checked" : "",
       exact_place_optical_tenant_count: tenantsForPlace(centre.place_id).filter((row) => row.category === "Optical").length,
-      key_cotenancy_count: tenantsForPlace(centre.place_id).filter((row) => row.category !== "Optical").length,
-      directory_research_date: state.destinationResearch[centre.place_id]?.observed_at || "",
-      directory_non_optical_listings: state.destinationResearch[centre.place_id]?.in_scope_non_optical_listings ?? "",
-      directory_scope: state.destinationResearch[centre.place_id]?.scope || "",
+      key_cotenancy_count: evidence?.local_evidence ? evidence.observations.filter(o => o.role !== "Optical").length : tenantsForPlace(centre.place_id).filter((row) => row.category !== "Optical").length,
+      evidence_snapshot: state.environments?.metadata?.snapshot_id || "public build",
+      directory_optical_listings: evidence?.optical_reconciliation?.directory_listed_count ?? "Not assessed",
+      optical_listing_reviews: evidence?.optical_reconciliation?.review_count ?? "Not assessed",
+      directory_research_date: evidence?.local_evidence ? evidence.coverage.observed_dates?.at(-1) || "" : state.destinationResearch[centre.place_id]?.observed_at || "",
+      directory_non_optical_listings: evidence?.local_evidence ? evidence.observations.filter(o => o.role !== "Optical").length : state.destinationResearch[centre.place_id]?.in_scope_non_optical_listings ?? "",
+      directory_scope: evidence?.local_evidence ? evidence.scope : state.destinationResearch[centre.place_id]?.scope || "",
       gla_sqm: centre.gla_sqm || "", annual_visits: centre.annual_visits || "", retail_tenancy_count: centre.tenancy_count || "", trade_area_population: centre.trade_area_population || "",
       place_evidence_date: centre.source_date || "", place_last_verified_at: centre.last_verified_at || "", property_evidence_latest: verifiedDates.at(-1) || "", official_url: centre.official_url || centre.source_url || "",
     };
@@ -3289,13 +3262,16 @@
 
   function exportPlaceTenants(placeIds) {
     const centres = [...new Set(placeIds.map(resolvePlaceId))].map((id) => state.centres.find((item) => item.place_id === id)).filter(Boolean);
-    const records = centres.flatMap((centre) => tenantsForPlace(centre.place_id).map((tenant) => ({
+    const records = centres.flatMap((centre) => {
+      const evidence = state.environments?.places.find(p => p.place_id === centre.place_id && p.local_evidence);
+      const listings = evidence ? evidence.observations.map(o => ({tenant_id:o.source_id, tenant_name:o.name, category:o.role === "Optical" ? "Optical directory listing" : (o.categories || []).join(" | "), selection_basis:o.scope_basis, status:"Directory listed; trading not independently verified", source_url:o.source_url, source_type:"Captured directory evidence", source_date:o.source_date, verified_at:o.observed_at, confidence:"Documented presence"})) : tenantsForPlace(centre.place_id);
+      return listings.map((tenant) => ({
       place_id: centre.place_id, place_name: centre.name, country: centre.country, state: centre.state,
-      membership_type: tenant.category === "Optical" ? "Accepted exact-place optical membership" : "Researched key co-tenant",
+      membership_type: evidence ? "Captured directory listing; census link assessed separately" : tenant.category === "Optical" ? "Accepted exact-place optical membership" : "Researched key co-tenant",
       tenant_id: tenant.tenant_id, tenant_name: tenant.tenant_name, retailer: tenant.retailer || "", category: tenant.category,
       anchor_flag: tenant.anchor_flag ? "true" : "false", selection_basis: tenant.selection_basis, status: tenant.status,
       source_url: tenant.source_url, source_type: tenant.source_type, source_date: tenant.source_date || "", verified_at: tenant.verified_at, confidence: tenant.confidence,
-    })));
+    })); });
     exportRecords(`bailey-place-tenants-${new Date().toISOString().slice(0, 10)}.csv`, records);
   }
 
@@ -3347,6 +3323,7 @@
     const isCorridor = centre.location_setting === "High Street";
     const placeLabel = isCorridor ? "corridor" : "centre";
     const saved = state.placeShortlist.has(resolvePlaceId(centre.place_id));
+    const localEvidence = state.environments?.places.find(p => p.place_id === centre.place_id && p.local_evidence);
     elements.detailContent.innerHTML = `<div class="place-detail-content">
       <header class="detail-header" style="--brand-color:#d29b27">
         <span class="retailer-tag">${centre.location_setting === "High Street" ? '<i data-lucide="route"></i>' : CENTRE_BAG_SVG}${escapeHtml(centre.place_type)}</span>
@@ -3367,15 +3344,15 @@
           ${publicUrl ? `<a class="place-source-link" href="${escapeHtml(publicUrl)}" target="_blank" rel="noopener">Public source <i data-lucide="external-link" aria-hidden="true"></i></a>` : ""}
         </div>
       </header>
-      ${visualDestinationProfile(centre)}
+      ${localEvidence ? window.EnvironmentExplorer.evidencePanel(localEvidence) : visualDestinationProfile(centre)}
       ${researchedPropertyHtml(centre)}
       ${researchedMetricsHtml(centre)}
       ${opportunitySummaryHtml(centre)}
       <section class="detail-section"><h3>Optical competition context</h3>${competitorContextHtml(centre)}
         <p class="empty-note">${isMapView() ? "The map keeps your applied store and retail-place filters." : "The map is focused on the competition shown above."} IN ${isCorridor ? "CORRIDOR" : "CENTRE"} requires the same accepted canonical place ID; distance alone never establishes membership.</p>
       </section>
-      ${highStreetProfileHtml(centre)}
-      ${centre.place_id === "place-au-nsw-ed-square-town-centre" ? "" : destinationResearchHtml(centre) || `<section class="detail-section"><h3>Key co-tenancy profile</h3>${keyCoTenancyHtml(centre)}</section>`}
+      ${localEvidence ? "" : highStreetProfileHtml(centre)}
+      ${localEvidence || centre.place_id === "place-au-nsw-ed-square-town-centre" ? "" : destinationResearchHtml(centre) || `<section class="detail-section"><h3>Key co-tenancy profile</h3>${keyCoTenancyHtml(centre)}</section>`}
       ${developmentSignalsHtml(centre)}
       ${isCorridor ? `<section class="detail-section"><h3>High-street place context</h3><div class="data-grid property-summary-grid">
           <div class="data-point"><span>Place type</span><strong>High Street Corridor</strong></div>
@@ -3391,7 +3368,7 @@
         <small>Portfolio overlap is derived from public property and tenancy evidence. It is not proof of a private commercial relationship.</small>
       </section>`}
       ${state.destinationProfiles?.[centre.place_id]?.completion_review ? "" : `<section class="detail-section"><h3>Public ${isCorridor ? "corridor" : "centre"} metrics</h3><div class="data-grid">
-        ${isCorridor ? `<div class="data-point"><span>Comparison boundary</span><strong>800 m indicative corridor</strong></div>
+        ${isCorridor ? `<div class="data-point"><span>Comparison boundary</span><strong>Named street and locality</strong></div>
         <div class="data-point"><span>Exact mapped optical stores</span><strong>${formatNumber(centre.optical_store_count || 0)}</strong></div>` : `<div class="data-point"><span>Total GLA</span><strong>${centre.gla_sqm ? formatNumber(centre.gla_sqm, " sqm") : "Not yet sourced"}</strong></div>
         <div class="data-point"><span>Annual visits</span><strong>${formatNumber(centre.annual_visits)}</strong></div>
         <div class="data-point"><span>Retail tenancies</span><strong>${formatNumber(centre.tenancy_count)}</strong></div>
@@ -3873,7 +3850,7 @@
     const stores = state.allStores.filter((store) => store.status !== "Closed" && normalise(`${store.name} ${store.retailer} ${store.suburb} ${store.state} ${store.postcode}`).includes(search))
       .slice(0, Math.max(0, 8 - places.length))
       .map((store) => ({ type: "store", id: store.store_id, name: store.name, context: `${store.retailer} · ${store.suburb}, ${store.state}`, latitude: store.latitude, longitude: store.longitude }));
-    const matches = [...places, ...stores].filter((item) => Number.isFinite(Number(item.latitude)) && Number.isFinite(Number(item.longitude)));
+    const matches = [...places, ...stores].filter((item) => item.latitude != null && item.longitude != null && Number.isFinite(Number(item.latitude)) && Number.isFinite(Number(item.longitude)));
     elements.siteFinderResults.innerHTML = matches.length
       ? matches.map((item) => `<button type="button" data-site-finder-type="${item.type}" data-site-finder-id="${escapeHtml(item.id)}" data-latitude="${Number(item.latitude)}" data-longitude="${Number(item.longitude)}"><i data-lucide="${item.type === "place" ? "building-2" : "store"}"></i><span><strong>${escapeHtml(item.name)}</strong><small>${escapeHtml(item.context)}${item.type === "place" ? " · Add to Compare" : " · Move map"}</small></span><i data-lucide="arrow-right"></i></button>`).join("")
       : "<p>No mapped place or store matches that search. Pan the map manually and click the site.</p>";
@@ -4255,6 +4232,7 @@
     if (!centre) return;
     const row = publishedLookalike(centre.place_id) || {};
     const record = placeSummaryRecord(centre);
+    const localEvidence = state.environments?.places.find(p => p.place_id === centre.place_id && p.local_evidence);
     const tenants = tenantsForPlace(centre.place_id);
     const optical = tenants.filter((item) => item.category === "Optical");
     const keyTenants = tenants.filter((item) => item.category !== "Optical");
@@ -4276,7 +4254,7 @@
       </div></section>
       <section><h3>Why it ranks</h3>${componentHtml}<p>Lookalike score compares public evidence with Bailey Nelson’s mapped footprint. It is a screening heuristic, not a forecast of store success.</p></section>
       <section><h3>Exact-place optical tenants</h3><p>${optical.length ? optical.map((item) => escapeHtml(item.tenant_name)).join(" · ") : "No accepted exact-place optical membership is recorded."}</p></section>
-      <section><h3>Key co-tenancy profile</h3><p>${keyTenants.length ? keyTenants.map((item) => `${escapeHtml(item.tenant_name)} (${escapeHtml(item.category)})`).join(" · ") : "Key co-tenancy research has not been completed for this place."}</p></section>
+      ${localEvidence ? window.EnvironmentExplorer.evidencePanel(localEvidence) : `<section><h3>Key co-tenancy profile</h3><p>${keyTenants.length ? keyTenants.map((item) => `${escapeHtml(item.tenant_name)} (${escapeHtml(item.category)})`).join(" · ") : "Key co-tenancy research has not been completed for this place."}</p></section>`}
       ${centre.location_setting === "High Street" ? '<section><h3>High-street place context</h3><p>Centre class, ownership, leasing arrangement and property portfolio overlap are not applied to a whole street corridor.</p></section>' : `<section><h3>Property and leasing</h3><div class="report-grid">
         <div><span>Centre class</span><strong>${escapeHtml(record.centre_class)}</strong></div>
         <div><span>Property groups</span><strong>${escapeHtml(record.property_groups || "Unknown")}</strong></div>
@@ -4789,6 +4767,8 @@
         loadJson("data/retail_environments.json"),
       ]);
       state.environments = environments;
+      state.privateOverlayActive = Boolean(environments.metadata?.local_evidence);
+      if (state.privateOverlayActive) updateShareUrl(false);
       configureRetailers(retailerRegistry);
       state.metadata = stores.metadata || {};
       state.allStores = stores.features.map((feature) => ({
@@ -4858,7 +4838,9 @@
       updateLayerVisibility();
       setView(state.view);
       renderCandidateDock();
-      elements.freshness.textContent = dataHealth.generated_at
+      elements.freshness.textContent = environments.metadata?.local_evidence
+        ? `Unified local evidence · ${environments.metadata.snapshot_id} · source dates vary`
+        : dataHealth.generated_at
         ? `Data built ${formatDate(dataHealth.generated_at)} · source dates vary`
         : "Build date unavailable · source dates vary";
       document.getElementById("evidenceButton").addEventListener("click", () => setView("health"));

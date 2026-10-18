@@ -196,6 +196,8 @@ class RetailPlaceTests(unittest.TestCase):
             if row["review_status"] != "Accepted":
                 continue
             basis = row["evidence_basis"].lower()
+            # An explicit prohibition is not affirmative membership evidence.
+            basis = basis.replace("do not infer membership from proximity", "").replace("not proximity", "")
             self.assertFalse(any(phrase in basis for phrase in forbidden), row["store_id"])
 
     def test_box_hill_precincts_keep_explicit_tenant_memberships(self) -> None:
@@ -810,8 +812,8 @@ class RetailPlaceTests(unittest.TestCase):
         self.assertEqual(sunshine["postcode"], "4558")
 
         expected_members = {
-            "place-au-qld-logan-hyperdome": {"opsm-1562", "oscar-wylee-27", "specsavers-3302", "optical-superstore-60505", "the-optical-company-loganholme-4129"},
-            "place-au-qld-sunshine-plaza": {"opsm-1263", "oscar-wylee-51", "specsavers-3201", "george-matilda-17206", "bupa-optical-13626269", "independent-other-optical-reviewed-au-sunglass-hut-sunshine-plaza", "independent-other-optical-reviewed-au-sunglass-hut-myer-sunshine-plaza"},
+            "place-au-qld-logan-hyperdome": {"opsm-1562", "oscar-wylee-27", "specsavers-3302", "optical-superstore-60505", "the-optical-company-loganholme-4129", "independent-other-optical-reviewed-au-sunglass-hut-b689"},
+            "place-au-qld-sunshine-plaza": {"opsm-1263", "oscar-wylee-51", "specsavers-3201", "george-matilda-17206", "bupa-optical-13626269", "independent-other-optical-reviewed-au-sunglass-hut-sunshine-plaza", "independent-other-optical-reviewed-au-sunglass-hut-myer-sunshine-plaza", "independent-other-optical-reviewed-au-sunbeat-now-sunshine-plaza"},
         }
         for place_id, store_ids in expected_members.items():
             with self.subTest(place_id=place_id):
@@ -1208,7 +1210,11 @@ class RetailPlaceTests(unittest.TestCase):
             set(self.lookalikes["rankings"]),
             {"au-shopping-centre", "au-high-street", "nz-shopping-centre", "nz-high-street"},
         )
-        self.assertEqual(len(self.lookalikes["bailey_benchmarks"]), 82)
+        place_ids = {p["place_id"] for p in self.places}
+        expected_bn = {r["store_id"] for r in self.memberships
+                       if r["retailer"] == "Bailey Nelson" and r["trading_status"] in {"Active", "Mapped"}
+                       and r["place_id"] in place_ids}
+        self.assertEqual({r["store_id"] for r in self.lookalikes["bailey_benchmarks"]}, expected_bn)
         bailey_place_ids = {place["place_id"] for place in self.places if place["has_bailey"]}
         for key, rows in self.lookalikes["rankings"].items():
             country, setting = key.split("-", 1)
@@ -1312,6 +1318,29 @@ class RetailPlaceTests(unittest.TestCase):
             self.assertRegex(row["last_verified_at"], r"^\d{4}-\d{2}-\d{2}$")
             self.assertIn(row["evidence_status"], {"Verified", "Lead"})
             self.assertIn(row["confidence"], {"High", "Medium", "Low"})
+
+    def test_miller_street_marker_and_northpoint_membership_are_separate(self) -> None:
+        places = {p["place_id"]: p for p in self.places}
+        street = places["corridor-au-nsw-north-sydney-miller-street"]
+        member = next(r for r in self.memberships if r["store_id"] == "opsm-2200")
+        self.assertEqual(member["place_id"], "place-au-nsw-northpoint")
+        self.assertEqual(street["optical_store_count"], 0)
+        geometry = json.loads((DATA / "discovery/miller_street_reference_geometry.json").read_text())["geometry"]["coordinates"]
+        self.assertAlmostEqual(street["longitude"], sum(p[0] for p in geometry) / 2)
+        self.assertAlmostEqual(street["latitude"], sum(p[1] for p in geometry) / 2)
+        self.assertNotEqual((street["latitude"], street["longitude"]), (places[member["place_id"]]["latitude"], places[member["place_id"]]["longitude"]))
+
+    def test_te_awa_road_address_does_not_create_a_high_street(self) -> None:
+        target = "place-nz-waikato-te-awa-at-the-base"
+        old = "corridor-nz-waikato-hamilton-wairere-drive"
+        places = {p["place_id"]: p for p in self.places}
+        self.assertNotIn(old, places)
+        self.assertEqual(places[target]["name"], "Te Awa at The Base")
+        memberships = {r["store_id"]: r for r in self.memberships}
+        for store in ["opsm-nz-2956", "specsavers-nz-3845", "independent-other-optical-reviewed-nz-sunglass-hut-b637"]:
+            self.assertEqual(memberships[store]["place_id"], target)
+        remaps = {r["previous_place_id"]: r["canonical_place_id"] for r in read_csv("place_id_remaps.csv")}
+        self.assertEqual(remaps[old], target)
 
     def test_top_ten_pilot_identity_repairs(self) -> None:
         places = {place["place_id"]: place for place in self.places}

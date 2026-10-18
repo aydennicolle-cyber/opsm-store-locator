@@ -317,3 +317,36 @@ assert.ok(Math.abs(comparisonEdges[0].distance - Intel.haversine(comparisonCopy[
 const fivePoints = Array.from({length:5}, (_,i)=>({id:String(i), latitude:-33-i/100, longitude:151}));
 assert.equal(Intel.comparisonConnections(fivePoints).length,10);
 assert.equal(Intel.comparisonConnections([fivePoints[0], {...fivePoints[0],id:'same-position'}])[0].distance,0);
+
+// Exercise close-zoom positioning: a road reference must not drift sideways.
+{
+  const vm = require('node:vm');
+  const source = fs.readFileSync(require.resolve('../assets/app.js'), 'utf8');
+  const start = source.indexOf('  function repositionCloseZoomMarkers()');
+  const end = source.indexOf('  function updateCentreMarkersForFilters()', start);
+  const marker = {options: {baseLatitude: -33.8375901, baseLongitude: 151.2070889}, setLatLng(point) { this.point = point; }};
+  const context = {
+    markerById: new Map(), centreMarkerById: new Map([['street', marker]]),
+    resetMarkerPosition(m) {m.setLatLng([m.options.baseLatitude, m.options.baseLongitude]);},
+    map: {getZoom: () => 19}, storesForActiveMapView: () => [],
+    centreLayer: {hasLayer: () => true},
+    state: {centres: [{place_id: 'street', location_setting: 'High Street'}]},
+    L: {latLng() {throw new Error('Street marker must not enter lateral offset calculation');}}
+  };
+  vm.runInNewContext(source.slice(start, end) + '\nrepositionCloseZoomMarkers();', context);
+  assert.deepEqual(marker.point, [-33.8375901, 151.2070889]);
+}
+
+// Shared place membership must never pull separate premises into a decorative ring.
+{
+  const vm = require('node:vm');
+  const source = fs.readFileSync(require.resolve('../assets/app.js'), 'utf8');
+  const stores = [{store_id:'a', place_id:'street', latitude:-38.219463, longitude:145.03888}, {store_id:'b', place_id:'street', latitude:-38.2212485, longitude:145.0400858}];
+  const markers = new Map(stores.map(s => [s.store_id, {options:{baseLatitude:s.latitude,baseLongitude:s.longitude,storeId:s.store_id,focusCategory:'in_centre'},setLatLng(p){this.point=p;}}]));
+  const context = {markerById:markers,focusedStoreMarkerById:markers,centreMarkerById:new Map(),resetMarkerPosition(m){m.setLatLng([m.options.baseLatitude,m.options.baseLongitude]);},map:{getZoom:()=>19},storesForActiveMapView:()=>stores,state:{focusedPlaceId:'street',centres:[{place_id:'street',location_setting:'High Street',latitude:0,longitude:0}]},L:{latLng(){throw new Error('Store coordinates must not be replaced with place anchor');}}};
+  for (const [fn,end] of [['repositionCloseZoomMarkers','updateCentreMarkersForFilters'],['repositionFocusedPlaceMarkers','clearPlaceFocus']]) {
+    const start=source.indexOf('  function '+fn+'('), stop=source.indexOf('  function '+end+'(',start);
+    vm.runInNewContext(source.slice(start,stop)+'\n'+fn+'();',context);
+    stores.forEach(s=>assert.deepEqual(markers.get(s.store_id).point,[s.latitude,s.longitude]));
+  }
+}

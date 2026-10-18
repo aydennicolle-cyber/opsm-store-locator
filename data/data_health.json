@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-10T13:17:51+00:00",
-  "coverage_as_of": "2026-10-10",
+  "generated_at": "2026-10-18T03:31:24+00:00",
+  "coverage_as_of": "2026-10-18",
   "certification_status": "Operational",
   "coverage_statement": "The network uses best-available public store data. Freshness, location setting and canonical place confidence are reported separately.",
   "baselines": {
@@ -9,38 +9,38 @@
     "places": 394
   },
   "observed": {
-    "stores": 2837,
+    "stores": 2887,
     "named_network_stores": 1560,
-    "usable_stores": 2809,
+    "usable_stores": 2859,
     "usable_named_network_stores": 1560,
     "current_named_network_stores": 1,
-    "places": 1509,
-    "centres": 782,
-    "corridors": 726
+    "places": 1502,
+    "centres": 787,
+    "corridors": 712
   },
   "changes_from_baseline": {
-    "stores": 1346,
-    "places": 1115
+    "stores": 1396,
+    "places": 1108
   },
   "dimensions": {
     "source_freshness": 3.8,
     "usable_store_coverage": 100.0,
     "location_setting_coverage": 96.8,
     "place_mapping_coverage": 96.8,
-    "review_reconciliation": 71.6,
+    "review_reconciliation": 72.8,
     "store_identity_integrity": 100.0
   },
   "blocking_counts": {
     "unusable_named_network_stores": 0,
     "uncertain_named_network_settings": 50,
     "named_network_places_missing": 50,
-    "pending_mapping_reviews": 640,
+    "pending_mapping_reviews": 628,
     "pending_high_priority_identity_reviews": 0,
     "stale_or_incomplete_named_sources": 1559
   },
   "informational_counts": {
     "background_discovery_leads": 6192,
-    "independent_records": 1277
+    "independent_records": 1327
   },
   "by_retailer": {
     "1001 Optometry": {
@@ -92,10 +92,10 @@
       "needs_review": 0
     },
     "Independent / Other optical": {
-      "observed": 1277,
-      "usable": 1249,
-      "current_source": 945,
-      "needs_review": 597
+      "observed": 1327,
+      "usable": 1299,
+      "current_source": 995,
+      "needs_review": 585
     },
     "Laubman & Pank": {
       "observed": 42,
@@ -153,21 +153,21 @@
     }
   },
   "by_country": {
-    "Australia": 2488,
-    "New Zealand": 349
+    "Australia": 2536,
+    "New Zealand": 351
   },
   "by_location_setting": {
-    "High Street": 870,
-    "Shopping Centre": 1264,
-    "Uncertain": 673,
-    "Other": 30
+    "High Street": 863,
+    "Shopping Centre": 1331,
+    "Uncertain": 661,
+    "Other": 32
   },
   "place_types": {
-    "Shopping Centre": 780,
-    "High Street Corridor": 724,
+    "Shopping Centre": 782,
+    "High Street Corridor": 710,
     "Retail Precinct": 2,
-    "Shopping Arcade": 2,
-    "Other": 1
+    "Shopping Arcade": 5,
+    "Other": 3
   },
   "sources": [
     {
@@ -179,7 +179,7 @@
       "required": true,
       "snapshot": "retailers/opsm/source_snapshot.json",
       "last_success": "2026-09-01T07:42:23+00:00",
-      "age_days": 39,
+      "age_days": 46,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -195,7 +195,7 @@
       "required": true,
       "snapshot": "retailers/opsm-nz/source_snapshot.json",
       "last_success": "2026-09-01T07:42:29+00:00",
-      "age_days": 39,
+      "age_days": 46,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -211,7 +211,7 @@
       "required": true,
       "snapshot": "retailers/specsavers/source_snapshot.json",
       "last_success": "2026-09-01T23:21:29.969Z",
-      "age_days": 38,
+      "age_days": 46,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -227,7 +227,7 @@
       "required": true,
       "snapshot": "retailers/specsavers-nz/source_snapshot.json",
       "last_success": "2026-09-01T23:21:29.969Z",
-      "age_days": 38,
+      "age_days": 46,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -243,7 +243,7 @@
       "required": true,
       "snapshot": "retailers/bailey-nelson/source_snapshot.json",
       "last_success": "2026-09-01T07:42:35+00:00",
-      "age_days": 39,
+      "age_days": 46,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -259,7 +259,7 @@
       "required": true,
       "snapshot": "retailers/bailey-nelson-nz/source_snapshot.json",
       "last_success": "2026-09-01T07:43:01+00:00",
-      "age_days": 39,
+      "age_days": 46,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -275,7 +275,7 @@
       "required": true,
       "snapshot": "retailers/oscar-wylee/source_snapshot.json",
       "last_success": "2026-09-01T07:43:15+00:00",
-      "age_days": 39,
+      "age_days": 46,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -291,7 +291,7 @@
       "required": true,
       "snapshot": "retailers/oscar-wylee-nz/source_snapshot.json",
       "last_success": "2026-09-01T07:45:57.558Z",
-      "age_days": 39,
+      "age_days": 46,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -307,7 +307,7 @@
       "required": true,
       "snapshot": "retailers/george-and-matilda/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 38,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -323,7 +323,7 @@
       "required": true,
       "snapshot": "retailers/eyecare-plus/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 38,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -339,7 +339,7 @@
       "required": true,
       "snapshot": "retailers/optical-superstore/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 38,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -355,7 +355,7 @@
       "required": true,
       "snapshot": "retailers/1001-optometry/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 38,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -371,7 +371,7 @@
       "required": true,
       "snapshot": "retailers/eyeq-optometrists/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 38,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -387,7 +387,7 @@
       "required": true,
       "snapshot": "retailers/laubman-and-pank/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 38,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -403,7 +403,7 @@
       "required": true,
       "snapshot": "retailers/bupa-optical/source_snapshot.json",
       "last_success": "2026-09-03T00:05:23.931384+00:00",
-      "age_days": 37,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -419,7 +419,7 @@
       "required": true,
       "snapshot": "retailers/chemist-warehouse-optometry/source_snapshot.json",
       "last_success": "2026-09-03T00:05:23.931384+00:00",
-      "age_days": 37,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -435,7 +435,7 @@
       "required": true,
       "snapshot": "retailers/dresden-vision/source_snapshot.json",
       "last_success": "2026-09-03T00:05:23.931384+00:00",
-      "age_days": 37,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -451,7 +451,7 @@
       "required": true,
       "snapshot": "retailers/optical-warehouse/source_snapshot.json",
       "last_success": "2026-09-03T00:05:23.931384+00:00",
-      "age_days": 37,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -467,7 +467,7 @@
       "required": true,
       "snapshot": "retailers/the-optical-company/source_snapshot.json",
       "last_success": "2026-09-03T00:05:23.931384+00:00",
-      "age_days": 37,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -483,7 +483,7 @@
       "required": true,
       "snapshot": "retailers/national-pharmacies-optical/source_snapshot.json",
       "last_success": "2026-09-03T00:05:23.931384+00:00",
-      "age_days": 37,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -499,7 +499,7 @@
       "required": true,
       "snapshot": "retailers/matthews-eyecare/source_snapshot.json",
       "last_success": "2026-09-03T00:05:23.931384+00:00",
-      "age_days": 37,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -515,7 +515,7 @@
       "required": true,
       "snapshot": "retailers/provision/source_snapshot.json",
       "last_success": "2026-09-02T12:40:25.820359+00:00",
-      "age_days": 38,
+      "age_days": 45,
       "max_age_days": 30,
       "available": true,
       "complete": true,
@@ -531,7 +531,7 @@
       "required": true,
       "snapshot": "retailers/independent-other/source_snapshot.json",
       "last_success": "2026-09-01T07:48:20.085579Z",
-      "age_days": 39,
+      "age_days": 46,
       "max_age_days": 90,
       "available": true,
       "complete": true,
@@ -548,7 +548,7 @@
       "snapshot": "data/discovery/retail_place_discovery_run.json",
       "completion_status": "partial",
       "last_success": "2026-09-01T08:06:07+00:00",
-      "age_days": 39,
+      "age_days": 46,
       "max_age_days": 90,
       "available": true,
       "complete": false,
@@ -598,7 +598,7 @@
       "required": false,
       "snapshot": "data/property_intelligence.json",
       "completion_status": "partial",
-      "last_success": "2026-10-10T13:17:36.956216+00:00",
+      "last_success": "2026-10-18T03:31:08.171740+00:00",
       "age_days": 0,
       "max_age_days": 180,
       "available": true,
@@ -615,7 +615,7 @@
       "required": false,
       "snapshot": "retailers/reviewed-independents/source_snapshot.json",
       "last_success": "2026-09-11",
-      "age_days": 29,
+      "age_days": 37,
       "max_age_days": 90,
       "available": true,
       "complete": true,
@@ -629,18 +629,18 @@
     "dimensions": {
       "research_coverage": 41.2,
       "relationship_freshness": 99.9,
-      "centre_class_coverage": 40.5,
+      "centre_class_coverage": 40.4,
       "bailey_centre_research_coverage": 98.1,
       "bailey_centre_class_coverage": 98.1,
       "conflict_reconciliation": 100.0
     },
     "counts": {
       "groups": 157,
-      "relationships": 1051,
-      "current_relationships": 1050,
+      "relationships": 1052,
+      "current_relationships": 1051,
       "stale_relationships": 1,
-      "shopping_centres": 780,
-      "researched_centres": 321,
+      "shopping_centres": 782,
+      "researched_centres": 322,
       "classed_centres": 316,
       "bailey_centres": 52,
       "researched_bailey_centres": 51,
@@ -679,11 +679,11 @@
     "coverage_statement": "Baseline research reconciles each Bailey Nelson address and accepted optical membership to a canonical street-and-locality corridor. Broader co-tenancy, visitation and footfall research is measured separately because high streets usually have no single authoritative tenant directory.",
     "dimensions": {
       "bailey_corridor_baseline_coverage": 100.0,
-      "bailey_corridor_retail_mix_coverage": 10.0
+      "bailey_corridor_retail_mix_coverage": 9.7
     },
     "counts": {
-      "bailey_corridors": 30,
-      "baseline_researched": 30,
+      "bailey_corridors": 31,
+      "baseline_researched": 31,
       "key_tenant_profiled": 3
     }
   },
@@ -813,6 +813,17 @@
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b716": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-act-westfield-belconnen",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "opsm-1221": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -885,9 +896,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-act-canberra-city-walk",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-act-canberra-centre",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "george-matilda-17217": {
@@ -923,15 +934,26 @@
       "mapping_confidence": "Uncertain",
       "issues": "Unknown; excluded from current competition counts; location setting needs review"
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b788": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-act-canberra-centre",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "opsm-1029": {
       "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-act-canberra-bunda-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-act-canberra-centre",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "optical-superstore-60368": {
@@ -1396,6 +1418,17 @@
       "mapping_confidence": "Medium",
       "issues": ""
     },
+    "independent-other-optical-reviewed-nz-sunglass-hut-b652": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-nz-auckland-northwest-shopping-centre",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "independent-other-optical-reviewed-nz-auckland-university-optometry-clinic": {
       "operational_status": "Needs review",
       "usable_for_network": "true",
@@ -1793,15 +1826,15 @@
       "issues": "location setting needs review"
     },
     "independent-other-optical-reviewed-nz-visique-botany-optometrists": {
-      "operational_status": "Needs review",
+      "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
       "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "location setting needs review"
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Other",
+      "place_id": "corridor-nz-auckland-flat-bush-bishop-gate-business-centre",
+      "mapping_confidence": "Medium",
+      "issues": ""
     },
     "specsavers-nz-3871": {
       "operational_status": "Usable",
@@ -1936,15 +1969,15 @@
       "issues": "location setting needs review"
     },
     "independent-other-optical-reviewed-nz-for-eyes-kumeu": {
-      "operational_status": "Needs review",
+      "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
       "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "location setting needs review"
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-nz-auckland-kumeu-shopping-village",
+      "mapping_confidence": "Medium",
+      "issues": ""
     },
     "independent-other-optical-reviewed-nz-eyewear-direct-manukau": {
       "operational_status": "Needs review",
@@ -2007,9 +2040,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-nz-auckland-massey-maki-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-nz-auckland-northwest-shopping-centre",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-reviewed-nz-howes-brown-meadowbank": {
@@ -2310,15 +2343,15 @@
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-reviewed-nz-eyewear-direct-pakuranga": {
-      "operational_status": "Needs review",
+      "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
       "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "location setting needs review"
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Other",
+      "place_id": "corridor-nz-auckland-pakuranga-pakuranga-medical-centre",
+      "mapping_confidence": "Medium",
+      "issues": ""
     },
     "independent-other-optical-reviewed-nz-lowes-taaffe-bhikoo-pakuranga": {
       "operational_status": "Needs review",
@@ -2777,9 +2810,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-nz-bay-of-plenty-tauranga-taurikura-drive",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-nz-bay-of-plenty-tauranga-crossing",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "specsavers-nz-3812": {
@@ -4141,9 +4174,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-bankstown-north-terrace",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-bankstown-central",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-reviewed-au-better-eyewear-bankstown": {
@@ -4212,6 +4245,28 @@
       "mapping_confidence": "Uncertain",
       "issues": "Unknown; excluded from current competition counts; location setting needs review"
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b676": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-bankstown-central",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
+    "independent-other-optical-reviewed-au-visionary-optometrists-bankstown": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-bankstown-central",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "independent-other-optical-reviewed-au-iwise-bankstown": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -4229,9 +4284,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-bankstown-stacey-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-bankstown-central",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "oscar-wylee-145": {
@@ -4696,6 +4751,28 @@
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b693": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-bondi-junction-westfield",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b699": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-bondi-junction-westfield",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "independent-other-optical-reviewed-au-wendy-ho-bondi-junction": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -4713,8 +4790,8 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-au-nsw-bondi-junction-westfield",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-nsw-bondi-junction-oxford-street",
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
@@ -4905,6 +4982,28 @@
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
+    "independent-other-optical-reviewed-au-hcf-eyecare-warringah-mall": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-westfield-warringah-mall",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b665": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-westfield-warringah-mall",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "opsm-1201": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -5025,6 +5124,17 @@
       "place_id": "",
       "mapping_confidence": "Uncertain",
       "issues": "location setting needs review"
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b772": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-westfield-burwood",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "independent-other-optical-reviewed-au-super-optical-burwood": {
       "operational_status": "Usable",
@@ -5300,6 +5410,17 @@
       "place_id": "",
       "mapping_confidence": "Uncertain",
       "issues": "Unknown; excluded from current competition counts; location setting needs review"
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b743": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-macarthur-square",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "independent-other-optical-reviewed-au-optical-shop-campbelltown": {
       "operational_status": "Needs review",
@@ -5718,6 +5839,17 @@
       "place_id": "corridor-au-nsw-charlestown-smart-street",
       "mapping_confidence": "Medium",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b723": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-charlestown-square",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "opsm-1219": {
       "operational_status": "Usable",
@@ -7699,6 +7831,17 @@
       "mapping_confidence": "Medium",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
+    "independent-other-optical-reviewed-au-owndays-hurstville": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-westfield-hurstville",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "independent-other-optical-reviewed-au-passion-eyecare-hurstville": {
       "operational_status": "Needs review",
       "usable_for_network": "true",
@@ -7709,6 +7852,17 @@
       "place_id": "",
       "mapping_confidence": "Uncertain",
       "issues": "location setting needs review"
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-e524": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-westfield-hurstville",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "independent-other-optical-reviewed-au-icontact-hurstville": {
       "operational_status": "Needs review",
@@ -8701,15 +8855,15 @@
       "issues": "location setting needs review"
     },
     "independent-other-optical-osm-au-way-1104859305": {
-      "operational_status": "Needs review",
+      "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
       "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "location setting needs review"
+      "eligible_for_place_analytics": "true",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-nsw-marrickville-marrickville-road",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "independent-other-optical-provision-16840": {
       "operational_status": "Needs review",
@@ -9707,9 +9861,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-north-sydney-miller-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-northpoint",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "specsavers-3356": {
@@ -9927,9 +10081,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-pagewood-bunnerong-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-westfield-eastgardens",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "oscar-wylee-70": {
@@ -10010,15 +10164,15 @@
       "issues": "location setting needs review"
     },
     "independent-other-optical-reviewed-au-optix-parramatta": {
-      "operational_status": "Needs review",
+      "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
       "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "location setting needs review"
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-mayfair-plaza",
+      "mapping_confidence": "Medium",
+      "issues": ""
     },
     "independent-other-optical-reviewed-au-optometrist-parramatta": {
       "operational_status": "Needs review",
@@ -10030,6 +10184,17 @@
       "place_id": "",
       "mapping_confidence": "Uncertain",
       "issues": "location setting needs review"
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b749": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-westfield-parramatta",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "independent-other-optical-osm-au-node-10624370751": {
       "operational_status": "Needs review",
@@ -10933,6 +11098,17 @@
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b795": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-rouse-hill-town-centre",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "opsm-4633": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -11548,6 +11724,17 @@
       "place_id": "",
       "mapping_confidence": "Uncertain",
       "issues": "location setting needs review"
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b758": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-westfield-sydney",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "independent-other-optical-reviewed-au-you-and-eye-sydney": {
       "operational_status": "Needs review",
@@ -12506,15 +12693,26 @@
       "mapping_confidence": "High",
       "issues": ""
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b903": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-stockland-wetherill-park",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "opsm-1307": {
       "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-nsw-wetherill-park-polding-street",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-nsw-stockland-wetherill-park",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "specsavers-3497": {
@@ -13403,9 +13601,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-nz-otago-queenstown-grant-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-nz-otago-queenstown-central",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "specsavers-nz-3856": {
@@ -13529,15 +13727,37 @@
       "mapping_confidence": "High",
       "issues": ""
     },
+    "independent-other-optical-reviewed-au-stacey-stacey-townsville": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-stockland-townsville",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b669": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-stockland-townsville",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "opsm-1161": {
       "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-aitkenvale-ross-river-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-stockland-townsville",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "optical-superstore-61305": {
@@ -14541,6 +14761,17 @@
       "mapping_confidence": "High",
       "issues": ""
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b659": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-cairns-shopping-centre",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "laubman-pank-cairns-optometrist": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -15013,6 +15244,17 @@
       "place_id": "",
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b840": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-westfield-chermside",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "laubman-pank-chermside-optometrist": {
       "operational_status": "Usable",
@@ -15564,6 +15806,17 @@
       "mapping_confidence": "Medium",
       "issues": ""
     },
+    "independent-other-optical-reviewed-au-makras-optical-james-street": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-qld-fortitude-valley-james-street",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "specsavers-3303": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -15587,15 +15840,15 @@
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-provision-17449": {
-      "operational_status": "Needs review",
+      "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "false",
       "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "location setting needs review; source refresh is stale or incomplete; record remains usable as last-known public data"
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-holm-mall",
+      "mapping_confidence": "Medium",
+      "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-provision-17600": {
       "operational_status": "Usable",
@@ -15702,9 +15955,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-gympie-excelsior-road",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-unknown-gympie-central",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-reviewed-au-east-vision-hawthorne": {
@@ -16345,6 +16598,17 @@
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b689": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-logan-hyperdome",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "optical-superstore-60505": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -16432,6 +16696,17 @@
       "place_id": "corridor-au-qld-mackay-alfred-street",
       "mapping_confidence": "Medium",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b733": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-caneland-centre",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "independent-other-optical-reviewed-au-westfund-mackay": {
       "operational_status": "Usable",
@@ -16576,6 +16851,17 @@
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b700": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-westfield-north-lakes",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "opsm-2968": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -16696,6 +16982,17 @@
       "place_id": "corridor-au-qld-maroochydore-wises-road",
       "mapping_confidence": "Medium",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
+    },
+    "independent-other-optical-reviewed-au-sunbeat-now-sunshine-plaza": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-sunshine-plaza",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "independent-other-optical-reviewed-au-sunglass-hut-sunshine-plaza": {
       "operational_status": "Usable",
@@ -17896,15 +18193,26 @@
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b731": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-stockland-rockhampton-shopping-centre",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "opsm-1064": {
       "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-qld-rockhampton-bruce-highway",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-stockland-rockhampton-shopping-centre",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-reviewed-au-moore-eyes-rockhampton": {
@@ -18271,15 +18579,15 @@
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-reviewed-au-springfield-lakes-eyecare": {
-      "operational_status": "Needs review",
+      "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
       "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "location setting needs review"
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-qld-spring-lake-village",
+      "mapping_confidence": "Medium",
+      "issues": ""
     },
     "opsm-1110": {
       "operational_status": "Usable",
@@ -19832,6 +20140,17 @@
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
+    "independent-other-optical-reviewed-au-health-partners-optical-goodwood": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-sa-hyde-park-king-william-road",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "independent-other-optical-reviewed-au-eyes-vision-goolwa": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -19886,6 +20205,17 @@
       "place_id": "place-au-sa-hilton-plaza",
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
+    },
+    "independent-other-optical-reviewed-au-lenz-eyewear-hyde-park": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-sa-hyde-park-king-william-road",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "laubman-pank-ingle-farm-optometrist": {
       "operational_status": "Usable",
@@ -20064,6 +20394,17 @@
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-reviewed-au-options-tea-tree-plaza": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-sa-westfield-tea-tree-plaza",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b678": {
       "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
@@ -21031,6 +21372,17 @@
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b666": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-sa-westfield-west-lakes",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "laubman-pank-west-lakes-optometrist": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -21060,7 +21412,7 @@
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
       "location_setting": "Shopping Centre",
-      "place_id": "place-au-sa-westlakes-shopping-centre",
+      "place_id": "place-au-sa-westfield-west-lakes",
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
@@ -21191,8 +21543,8 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "Shopping Centre",
-      "place_id": "place-nz-southland-southland",
+      "location_setting": "High Street",
+      "place_id": "corridor-nz-southland-invercargill-kelvin-street",
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
@@ -21642,9 +21994,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-tas-kingston-channel-highway",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-tas-channel-court-shopping-centre",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "george-matilda-17204": {
@@ -22890,6 +23242,17 @@
       "mapping_confidence": "High",
       "issues": ""
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-f641": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-bendigo-marketplace",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "independent-other-optical-provision-17134": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -23527,6 +23890,28 @@
       "place_id": "place-au-vic-chadstone-shopping-centre",
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b736": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-chadstone-shopping-centre",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b687": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-chadstone-shopping-centre",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "opsm-1410": {
       "operational_status": "Usable",
@@ -24550,6 +24935,28 @@
       "place_id": "corridor-au-vic-fitzroy-gertrude-street",
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
+    },
+    "independent-other-optical-reviewed-au-gertrude-street-optical": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-vic-fitzroy-gertrude-street",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
+    "independent-other-optical-reviewed-au-seekers-fitzroy": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-vic-fitzroy-gertrude-street",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "independent-other-optical-provision-17164": {
       "operational_status": "Usable",
@@ -25750,6 +26157,28 @@
       "mapping_confidence": "High",
       "issues": ""
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b791": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-melbourne-central-shopping-centre",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-q747": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-melbourne-central-shopping-centre",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "opsm-1589": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -26139,12 +26568,12 @@
       "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "false",
-      "eligible_for_analytics": "false",
-      "eligible_for_place_analytics": "false",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
       "location_setting": "High Street",
       "place_id": "corridor-au-vic-mornington-main-street",
       "mapping_confidence": "Medium",
-      "issues": "Opening Soon; excluded from current competition counts; source refresh is stale or incomplete; record remains usable as last-known public data"
+      "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "bupa-optical-8139006": {
       "operational_status": "Usable",
@@ -26477,6 +26906,17 @@
       "issues": ""
     },
     "independent-other-optical-osm-au-node-11005509356": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-vic-northcote-high-street",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
+    "independent-other-optical-reviewed-au-specs-optical-northcote": {
       "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
@@ -26938,6 +27378,28 @@
       "mapping_confidence": "Medium",
       "issues": ""
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b739": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-eastland",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
+    "independent-other-optical-reviewed-au-tings-sunglasses-eastland": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-eastland",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "independent-other-optical-osm-au-node-13731460457": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -26966,9 +27428,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-vic-ringwood-maroondah-highway",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-eastland",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "oscar-wylee-45": {
@@ -27676,15 +28138,15 @@
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-reviewed-au-a-g-optique-toorak": {
-      "operational_status": "Needs review",
+      "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
       "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "location setting needs review"
+      "eligible_for_place_analytics": "true",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-vic-toorak-toorak-road",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "independent-other-optical-provision-336794": {
       "operational_status": "Usable",
@@ -27863,6 +28325,17 @@
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-reviewed-au-optimax-knox": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-vic-westfield-knox-shopping-centre",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b902": {
       "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
@@ -29007,15 +29480,15 @@
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-reviewed-au-claremont-optical": {
-      "operational_status": "Needs review",
+      "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
       "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "location setting needs review"
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-claremont-quarter",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "independent-other-optical-osm-au-node-11932057273": {
       "operational_status": "Needs review",
@@ -29027,6 +29500,17 @@
       "place_id": "",
       "mapping_confidence": "Uncertain",
       "issues": "location setting needs review"
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b721": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-claremont-quarter",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "opsm-1418": {
       "operational_status": "Usable",
@@ -29045,9 +29529,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-wa-claremont-bay-view-terrace",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-claremont-quarter",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-reviewed-au-options-clarkson": {
@@ -29270,6 +29754,17 @@
       "mapping_confidence": "Uncertain",
       "issues": "location setting needs review"
     },
+    "independent-other-optical-reviewed-au-sunglass-hut-b776": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-eaton-fair-shopping-centre",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "specsavers-3452": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -29381,26 +29876,26 @@
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-reviewed-au-abernethy-owens-fremantle": {
-      "operational_status": "Needs review",
+      "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
       "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "location setting needs review"
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-adelaide-street-plaza",
+      "mapping_confidence": "Medium",
+      "issues": ""
     },
     "independent-other-optical-reviewed-au-david-shanahan-fremantle": {
-      "operational_status": "Needs review",
+      "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
       "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "location setting needs review"
+      "eligible_for_place_analytics": "true",
+      "location_setting": "High Street",
+      "place_id": "corridor-au-wa-fremantle-market-street",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "independent-other-optical-reviewed-au-for-eyes-fremantle": {
       "operational_status": "Needs review",
@@ -29590,6 +30085,17 @@
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "independent-other-optical-reviewed-au-options-whitfords": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-westfield-whitford-city",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b783": {
       "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
@@ -30128,6 +30634,28 @@
       "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
+    "independent-other-optical-reviewed-au-harper-optical-mandurah": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-mandurah-forum",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b705": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-mandurah-forum",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "laubman-pank-mandurah-optometrist": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -30635,15 +31163,15 @@
       "issues": "location setting needs review"
     },
     "independent-other-optical-osm-au-node-12818357495": {
-      "operational_status": "Needs review",
+      "operational_status": "Usable",
       "usable_for_network": "true",
       "current_source": "true",
       "eligible_for_analytics": "true",
-      "eligible_for_place_analytics": "false",
-      "location_setting": "Uncertain",
-      "place_id": "",
-      "mapping_confidence": "Uncertain",
-      "issues": "location setting needs review"
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-atrium-arcade",
+      "mapping_confidence": "Medium",
+      "issues": ""
     },
     "opsm-1082": {
       "operational_status": "Usable",
@@ -30750,9 +31278,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-au-wa-rockingham-council-avenue",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-rockingham-centre",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "oscar-wylee-112": {
@@ -30941,6 +31469,17 @@
       "place_id": "place-au-wa-cockburn-gateway-shopping-centre",
       "mapping_confidence": "High",
       "issues": "Opening Soon; excluded from current competition counts; source refresh is stale or incomplete; record remains usable as last-known public data"
+    },
+    "independent-other-optical-reviewed-au-sunglass-hut-b709": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-au-wa-cockburn-gateway-shopping-centre",
+      "mapping_confidence": "High",
+      "issues": ""
     },
     "laubman-pank-cockburn-optometrist": {
       "operational_status": "Usable",
@@ -31228,6 +31767,17 @@
       "mapping_confidence": "Uncertain",
       "issues": "location setting needs review"
     },
+    "independent-other-optical-reviewed-nz-sunglass-hut-b637": {
+      "operational_status": "Usable",
+      "usable_for_network": "true",
+      "current_source": "true",
+      "eligible_for_analytics": "true",
+      "eligible_for_place_analytics": "true",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-nz-waikato-te-awa-at-the-base",
+      "mapping_confidence": "High",
+      "issues": ""
+    },
     "matthews-eyecare-nz-120000658": {
       "operational_status": "Usable",
       "usable_for_network": "true",
@@ -31267,9 +31817,9 @@
       "current_source": "false",
       "eligible_for_analytics": "true",
       "eligible_for_place_analytics": "true",
-      "location_setting": "High Street",
-      "place_id": "corridor-nz-waikato-hamilton-wairere-drive",
-      "mapping_confidence": "Medium",
+      "location_setting": "Shopping Centre",
+      "place_id": "place-nz-waikato-te-awa-at-the-base",
+      "mapping_confidence": "High",
       "issues": "source refresh is stale or incomplete; record remains usable as last-known public data"
     },
     "specsavers-nz-3813": {
@@ -32299,20 +32849,6 @@
     },
     {
       "priority": "High",
-      "store_id": "independent-other-optical-reviewed-nz-visique-botany-optometrists",
-      "retailer": "Independent / Other optical",
-      "store_name": "iCare Botany Optometrists",
-      "country": "New Zealand",
-      "state": "Auckland",
-      "address": "11/2 Bishop Dunn Place, Bishop Gate Business Centre , Flat Bush, Auckland 2013",
-      "current_setting": "Uncertain",
-      "candidate_place_id": "",
-      "reason": "Reviewed storefront; centre or street setting still requires evidence",
-      "evidence_url": "https://www.visique-botany.co.nz/",
-      "review_status": "Pending"
-    },
-    {
-      "priority": "High",
       "store_id": "independent-other-optical-reviewed-nz-glen-eden-optometrist",
       "retailer": "Independent / Other optical",
       "store_name": "Glen Eden Optometrist",
@@ -32421,20 +32957,6 @@
       "candidate_place_id": "",
       "reason": "Reviewed storefront; centre or street setting still requires evidence",
       "evidence_url": "https://ocula.co.nz/pages/optometrist-howick-village/",
-      "review_status": "Pending"
-    },
-    {
-      "priority": "High",
-      "store_id": "independent-other-optical-reviewed-nz-for-eyes-kumeu",
-      "retailer": "Independent / Other optical",
-      "store_name": "For Eyes Optometrists",
-      "country": "New Zealand",
-      "state": "Auckland",
-      "address": "90B Main Road, Kumeu Shopping Village, Kumeu, Auckland 0810",
-      "current_setting": "Uncertain",
-      "candidate_place_id": "",
-      "reason": "Reviewed storefront; centre or street setting still requires evidence",
-      "evidence_url": "https://www.foreyes.co.nz/",
       "review_status": "Pending"
     },
     {
@@ -32659,20 +33181,6 @@
       "candidate_place_id": "",
       "reason": "Reviewed storefront; centre or street setting still requires evidence",
       "evidence_url": "https://www.openstreetmap.org/node/4396978791",
-      "review_status": "Pending"
-    },
-    {
-      "priority": "High",
-      "store_id": "independent-other-optical-reviewed-nz-eyewear-direct-pakuranga",
-      "retailer": "Independent / Other optical",
-      "store_name": "Eyewear Direct \u2014 Pakuranga",
-      "country": "New Zealand",
-      "state": "Auckland",
-      "address": "Pakuranga Medical Centre, 11 Cortina Place, Pakuranga, Auckland 2013",
-      "current_setting": "Uncertain",
-      "candidate_place_id": "",
-      "reason": "Reviewed storefront; centre or street setting still requires evidence",
-      "evidence_url": "https://eyewear-direct.co.nz/contact/",
       "review_status": "Pending"
     },
     {
@@ -35547,20 +36055,6 @@
     },
     {
       "priority": "High",
-      "store_id": "independent-other-optical-osm-au-way-1104859305",
-      "retailer": "Independent / Other optical",
-      "store_name": "Optica Eyewear & Eyecare / George Tsenkas Optometrist",
-      "country": "Australia",
-      "state": "NSW",
-      "address": "284 Marrickville Road, Marrickville NSW 2204",
-      "current_setting": "Uncertain",
-      "candidate_place_id": "",
-      "reason": "Reviewed storefront; centre or street setting still requires evidence",
-      "evidence_url": "https://www.openstreetmap.org/way/1104859305",
-      "review_status": "Pending"
-    },
-    {
-      "priority": "High",
       "store_id": "independent-other-optical-provision-16840",
       "retailer": "Independent / Other optical",
       "store_name": "Perfectlook Optometrist",
@@ -35851,20 +36345,6 @@
       "candidate_place_id": "",
       "reason": "Reviewed storefront; centre or street setting still requires evidence",
       "evidence_url": "https://corporate.hcf.com.au/cfal/locations/hcf-centres/hcf-eyecare-centre",
-      "review_status": "Pending"
-    },
-    {
-      "priority": "High",
-      "store_id": "independent-other-optical-reviewed-au-optix-parramatta",
-      "retailer": "Independent / Other optical",
-      "store_name": "Optix Parramatta",
-      "country": "Australia",
-      "state": "NSW",
-      "address": "Shops 12\u201313, Mayfair Plaza, 272 Church Street, Parramatta NSW 2150",
-      "current_setting": "Uncertain",
-      "candidate_place_id": "",
-      "reason": "Reviewed storefront; centre or street setting still requires evidence",
-      "evidence_url": "https://www.optometristparramatta.net.au/",
       "review_status": "Pending"
     },
     {
@@ -37493,20 +37973,6 @@
     },
     {
       "priority": "High",
-      "store_id": "independent-other-optical-provision-17449",
-      "retailer": "Independent / Other optical",
-      "store_name": "Peter Webster Optometrist",
-      "country": "Australia",
-      "state": "QLD",
-      "address": "Shop 1, Holm Mall, 46 Railway Street, Gatton QLD 4343",
-      "current_setting": "Uncertain",
-      "candidate_place_id": "",
-      "reason": "Reviewed storefront; centre or street setting still requires evidence",
-      "evidence_url": "https://www.provision.com.au/practice/peter-webster-optometrist-gatton/",
-      "review_status": "Pending"
-    },
-    {
-      "priority": "High",
       "store_id": "independent-other-optical-reviewed-au-cooper-smith-goondiwindi",
       "retailer": "Independent / Other optical",
       "store_name": "Cooper & Smith Optometrists",
@@ -38133,20 +38599,6 @@
       "candidate_place_id": "",
       "reason": "Reviewed storefront; centre or street setting still requires evidence",
       "evidence_url": "https://www.advancedoptometry.com.au",
-      "review_status": "Pending"
-    },
-    {
-      "priority": "High",
-      "store_id": "independent-other-optical-reviewed-au-springfield-lakes-eyecare",
-      "retailer": "Independent / Other optical",
-      "store_name": "Springfield Lakes Eyecare",
-      "country": "Australia",
-      "state": "QLD",
-      "address": "Shop 7A, Springfield Lakes Village, 31 Springfield Lakes Boulevard, Springfield Lakes QLD 4300",
-      "current_setting": "Uncertain",
-      "candidate_place_id": "",
-      "reason": "Reviewed storefront; centre or street setting still requires evidence",
-      "evidence_url": "https://www.springfieldlakeseyecare.com.au/contact-us/",
       "review_status": "Pending"
     },
     {
@@ -39845,20 +40297,6 @@
     },
     {
       "priority": "High",
-      "store_id": "independent-other-optical-reviewed-au-a-g-optique-toorak",
-      "retailer": "Independent / Other optical",
-      "store_name": "A&G Optique \u2014 Toorak",
-      "country": "Australia",
-      "state": "VIC",
-      "address": "Shop 9, 521 Toorak Road, Toorak VIC 3142, Australia",
-      "current_setting": "Uncertain",
-      "candidate_place_id": "",
-      "reason": "Reviewed storefront; centre or street setting still requires evidence",
-      "evidence_url": "https://www.frenchglasses.com.au/contact",
-      "review_status": "Pending"
-    },
-    {
-      "priority": "High",
       "store_id": "independent-other-optical-reviewed-au-vision-complete",
       "retailer": "Independent / Other optical",
       "store_name": "Vision Complete",
@@ -40083,20 +40521,6 @@
     },
     {
       "priority": "High",
-      "store_id": "independent-other-optical-reviewed-au-claremont-optical",
-      "retailer": "Independent / Other optical",
-      "store_name": "Claremont Optical",
-      "country": "Australia",
-      "state": "WA",
-      "address": "Shop 174, 23 St Quentin Avenue, Claremont WA 6010",
-      "current_setting": "Uncertain",
-      "candidate_place_id": "",
-      "reason": "Reviewed storefront; centre or street setting still requires evidence",
-      "evidence_url": "https://www.claremontoptical.com.au/",
-      "review_status": "Pending"
-    },
-    {
-      "priority": "High",
       "store_id": "independent-other-optical-osm-au-node-11932057273",
       "retailer": "Independent / Other optical",
       "store_name": "Friendlies Eyecare",
@@ -40149,34 +40573,6 @@
       "candidate_place_id": "",
       "reason": "Reviewed storefront; centre or street setting still requires evidence",
       "evidence_url": "https://specspluswa.com.au/locations/east-victoria-park/",
-      "review_status": "Pending"
-    },
-    {
-      "priority": "High",
-      "store_id": "independent-other-optical-reviewed-au-abernethy-owens-fremantle",
-      "retailer": "Independent / Other optical",
-      "store_name": "Abernethy Owens \u2014 Fremantle",
-      "country": "Australia",
-      "state": "WA",
-      "address": "Shop 2, Adelaide Street Plaza, 39 Adelaide Street, Fremantle WA 6160",
-      "current_setting": "Uncertain",
-      "candidate_place_id": "",
-      "reason": "Reviewed storefront; centre or street setting still requires evidence",
-      "evidence_url": "https://www.abernethyowens.com.au/practice/Fremantle-Practice",
-      "review_status": "Pending"
-    },
-    {
-      "priority": "High",
-      "store_id": "independent-other-optical-reviewed-au-david-shanahan-fremantle",
-      "retailer": "Independent / Other optical",
-      "store_name": "David Shanahan Optometrists",
-      "country": "Australia",
-      "state": "WA",
-      "address": "51 Market Street, Fremantle WA 6160",
-      "current_setting": "Uncertain",
-      "candidate_place_id": "",
-      "reason": "Reviewed storefront; centre or street setting still requires evidence",
-      "evidence_url": "https://davidshanahan.com.au/contact-us/",
       "review_status": "Pending"
     },
     {
@@ -40401,20 +40797,6 @@
       "candidate_place_id": "",
       "reason": "Reviewed storefront; centre or street setting still requires evidence",
       "evidence_url": "https://knappoptometrist.com.au/",
-      "review_status": "Pending"
-    },
-    {
-      "priority": "High",
-      "store_id": "independent-other-optical-osm-au-node-12818357495",
-      "retailer": "Independent / Other optical",
-      "store_name": "Specialeyes Optical \u2014 Perth",
-      "country": "Australia",
-      "state": "WA",
-      "address": "Shop 6, Atrium Arcade, King Street, Perth WA 6000",
-      "current_setting": "Uncertain",
-      "candidate_place_id": "",
-      "reason": "Reviewed storefront; centre or street setting still requires evidence",
-      "evidence_url": "https://www.specialeyes.info/contact-us",
       "review_status": "Pending"
     },
     {

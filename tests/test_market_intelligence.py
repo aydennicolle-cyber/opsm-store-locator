@@ -71,14 +71,21 @@ class MarketIntelligenceTests(unittest.TestCase):
         ))
         self.assertIn("not consumer spending", self.markets["metadata"]["field_definitions"]["median_equivalised_household_income_weekly_2021"])
 
-    def test_all_stores_join_to_sa2(self) -> None:
+    def test_all_stores_have_a_demographic_link_or_explicit_unknown(self) -> None:
         store_count = len(json.loads((DATA / "optical_stores.geojson").read_text())["features"])
         self.assertEqual(self.links["metadata"]["store_count"], store_count)
         self.assertEqual(len(self.links["links"]), store_count)
         australian = [link for link in self.links["links"].values() if link.get("geography_system") != "Stats NZ"]
         new_zealand = [link for link in self.links["links"].values() if link.get("geography_system") == "Stats NZ"]
         self.assertEqual(len(australian) + len(new_zealand), store_count)
-        self.assertTrue(all(link["sa2_code"] for link in australian))
+        for link in australian:
+            if not link["sa2_code"]:
+                self.assertEqual(link["sa2_name"], "")
+                self.assertEqual(link["match_confidence"], "Unmatched")
+                self.assertEqual(link["match_method"], "Authoritative boundary match unresolved")
+                self.assertIsNone(link["boundary_distance_km"])
+                self.assertTrue(link.get("coverage_note"), "Unknown joins need an explicit reason")
+        self.assertEqual(self.links["metadata"]["matched_count"], sum(bool(link["sa2_code"]) for link in australian))
         self.assertTrue(all(not link["sa2_code"] for link in new_zealand))
 
     def test_bailey_benchmark_uses_authoritative_sa2_when_display_polygon_misses(self) -> None:
