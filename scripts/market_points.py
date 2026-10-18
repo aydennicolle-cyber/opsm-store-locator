@@ -16,6 +16,8 @@ def load_point_links():
 
 
 def authoritative_link(point, links=None):
+    if point.get("latitude") is None or point.get("longitude") is None:
+        return None
     return (load_point_links() if links is None else links).get(point_key(point))
 
 
@@ -42,6 +44,8 @@ def contains(point, geometry):
 def resolve_market(point, features, links=None):
     if point.get('country', 'Australia') != 'Australia':
         return None, 'Not available'
+    if point.get('latitude') is None or point.get('longitude') is None:
+        return None, 'Map reference unresolved'
     verified = authoritative_link(point, links)
     if verified is not None:
         if verified.get('match_status') != 'Unique':

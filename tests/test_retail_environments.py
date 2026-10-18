@@ -17,15 +17,24 @@ class RetailEnvironmentTests(unittest.TestCase):
     def test_scope_and_unknowns_preserved(self):
         for p in self.places.values():
             self.assertFalse(p['coverage']['complete'])
-            self.assertEqual(p['absent_features'],{})
+            if p['absent_features']:
+                self.assertTrue(p['coverage'].get('directory_complete'))
+                self.assertEqual(p['coverage'].get('format_scope'),'canonical centre')
+                for reviews in p['absent_features'].values():
+                    self.assertTrue(all(r.get('source_url') and r.get('observed_at') and r.get('basis') for r in reviews))
             self.assertEqual(p['coverage']['observations'],len(p['observations']))
             self.assertEqual(p['coverage']['distinct_names'],len({key(r['name']) for r in p['observations']}))
-            if p['format']=='High Street':self.assertIn('Named-street study',p['scope'])
+            if p['format']=='High Street':
+                if p.get('public_directory_evidence'):self.assertEqual(p['coverage']['format_scope'],'named street')
+                else:self.assertIn('Named-street study',p['scope'])
 
     def test_all_features_have_evidence_and_dates(self):
         features={f['id'] for f in self.data['features']}
         for p in self.places.values():
             sources={r['source_id'] for r in p['observations']} | {'optical:'+o['store_id'] for o in p['optical']}
+            sources |= {'directory:'+r['source_id'] for r in p['observations'] if r.get('role')=='Optical'}
+            for r in (p.get('anonymous_counts') or {}).get('evidence',[]):
+                self.assertTrue(r['source_urls']);self.assertTrue(r['observed_at']);self.assertGreater(r['count'],0);sources.add(r['source_id'])
             for fid,refs in p['features'].items():
                 self.assertIn(fid,features);self.assertTrue(set(refs)<=sources)
             for r in p['observations']:
@@ -41,7 +50,11 @@ class RetailEnvironmentTests(unittest.TestCase):
     def test_precinct_directory_is_not_silently_street_membership(self):
         p=self.places['corridor-au-qld-fortitude-valley-james-street']
         self.assertTrue(p['coverage']['held_scope_records'])
-        self.assertFalse(p['observations'])
+        self.assertTrue(p['observations'])
+        held=set(p['coverage']['held_scope_records'])
+        self.assertFalse(held & {r['source_id'] for r in p['observations']})
+        for r in p['observations']:
+            self.assertRegex(r['address'].lower(),r'\bjames (street|st)\b')
 
     def test_tenant_unit_address_withheld(self):
         held=[p for p in self.places.values() if p['address_note']]

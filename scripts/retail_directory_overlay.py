@@ -23,7 +23,11 @@ def apply_captures(public, captures):
             raise ValueError('Duplicate source record identity')
         total = capture.get('source_total')
         complete = capture.get('directory_complete', False)
-        if complete and (total is None or total != len(records)):
+        source_count = capture.get('source_record_count', len(records))
+        anonymous_count = capture.get('anonymous_record_count', 0)
+        if not isinstance(anonymous_count, int) or anonymous_count < 0 or source_count != len(records) + anonymous_count:
+            raise ValueError('Captured source records must reconcile to named and anonymous records')
+        if complete and (total is None or total != source_count):
             raise ValueError('Complete extraction must reconcile to source total')
         features = defaultdict(list)
         observations = []
@@ -64,12 +68,14 @@ def apply_captures(public, captures):
         p['coverage'] = {
             'status': 'Complete directory capture' if complete else 'Partial directory / scope coverage',
             'complete': False, 'directory_complete': complete,
-            'captured_listings': len(records), 'source_total': total,
+            'captured_listings': source_count, 'source_total': total,
+            'anonymous_records': anonymous_count,
             'usable_listings': len(observations), 'observations': len(observations),
             'distinct_names': len({key(r['name']) for r in observations}),
             'held_scope_records': [r['source_id'] for r in records if r.get('scope_status') != 'included'],
             'non_present_listings': [{'name': r['name'], 'status': r['listing_status']} for r in records if r.get('listing_status') != 'listed'],
             'observed_dates': sorted({r['observed_at'] for r in records}),
+            'format_scope': capture['format_scope'],
             'directory_note': capture['limitations'], 'source_urls': capture['source_urls'],
             'capture_method': capture['capture_method'], 'trading_verified': False,
             'ownership_coverage': 'Unknown except explicit source statements; no chain-name heuristic',

@@ -547,6 +547,8 @@ def load_stores() -> list[dict]:
 
 
 def competitor_context(place: dict, stores: list[dict]) -> dict:
+    if place.get("latitude") is None or place.get("longitude") is None:
+        return {"by_retailer": {}, "nearest_by_retailer_km": {}, "independent_2km_count": None, "map_reference_status": "Unresolved"}
     brands: dict[str, dict] = defaultdict(lambda: {"in_centre": [], "nearby_unverified": [], "catchment_2km": []})
     nearest: dict[str, float] = {}
     for store in stores:

@@ -637,6 +637,8 @@ def tokens(value: str) -> set[str]:
 
 
 def haversine(first: dict, second: dict) -> float:
+    if any(p.get(k) is None for p in (first, second) for k in ("latitude", "longitude")):
+        return float("inf")
     radius = 6371.0088
     lat1, lat2 = math.radians(float(first["latitude"])), math.radians(float(second["latitude"]))
     delta_lat = math.radians(float(second["latitude"]) - float(first["latitude"]))
@@ -1261,6 +1263,9 @@ def main() -> None:
 
     osm_identity_leads = add_broad_osm_centres(places)
     add_official_retail_places(places)
+    from public_directory_evidence import add_places
+    add_places(places, DATA)
+    place_by_id.update({p["place_id"]: p for p in places})
     consolidation_rows = read_csv(CONSOLIDATIONS_PATH)
     consolidation_remaps = apply_place_consolidations(
         places, old_to_new, consolidation_rows, defer_missing=True
@@ -1674,7 +1679,7 @@ def build_lookalikes(places: list[dict], memberships: list[dict], stores: list[d
     fields = ("population_2025", "population_growth_2021_2025_pct", "age_45_plus_pct_2021", "median_equivalised_household_income_weekly_2021")
     rankings: dict[str, list[dict]] = defaultdict(list)
     for place in places:
-        if place["has_bailey"] or place["location_setting"] not in {"Shopping Centre", "High Street"}:
+        if place["has_bailey"] or not valid_store_point(place) or place["location_setting"] not in {"Shopping Centre", "High Street"}:
             continue
         base = benchmark.get((place["country"], place["location_setting"]), [])
         baseline_values = {

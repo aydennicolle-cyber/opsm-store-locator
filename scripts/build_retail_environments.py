@@ -135,6 +135,8 @@ def build(data=ROOT / 'data'):
     payload = {'metadata': {'schema_version': 1, 'scope_rule': 'Named street within canonical locality for high streets; canonical property for centres.',
                 'build_is_not_source_refresh': True, 'coverage_is_not_match_strength': True, 'absence_policy': 'Only explicit reviewed absence evidence; directory omissions remain unknown.'},
                'features': sorted(catalogue.values(), key=lambda r: (r['kind'], r['label'].casefold())), 'places': output}
+    from public_directory_evidence import apply as apply_public_directories
+    payload = apply_public_directories(payload, data)
     (data / 'retail_environments.json').write_text(json.dumps(payload, ensure_ascii=False, separators=(',', ':')) + '\n')
     return payload
 

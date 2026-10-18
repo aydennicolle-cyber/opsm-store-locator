@@ -3244,13 +3244,13 @@
       optical_store_count: centre.optical_store_count || 0, retailers: (centre.retailers || []).join(" | "),
       high_street_baseline_status: centre.location_setting === "High Street" && (state.placeTenantMetadata.researched_bailey_corridor_place_ids || []).includes(centre.place_id) ? "Baseline checked" : "",
       exact_place_optical_tenant_count: tenantsForPlace(centre.place_id).filter((row) => row.category === "Optical").length,
-      key_cotenancy_count: evidence?.local_evidence ? evidence.observations.filter(o => o.role !== "Optical").length : tenantsForPlace(centre.place_id).filter((row) => row.category !== "Optical").length,
+      key_cotenancy_count: (evidence?.local_evidence || evidence?.public_directory_evidence) ? evidence.observations.filter(o => o.role !== "Optical").length : tenantsForPlace(centre.place_id).filter((row) => row.category !== "Optical").length,
       evidence_snapshot: state.environments?.metadata?.snapshot_id || "public build",
       directory_optical_listings: evidence?.optical_reconciliation?.directory_listed_count ?? "Not assessed",
       optical_listing_reviews: evidence?.optical_reconciliation?.review_count ?? "Not assessed",
-      directory_research_date: evidence?.local_evidence ? evidence.coverage.observed_dates?.at(-1) || "" : state.destinationResearch[centre.place_id]?.observed_at || "",
-      directory_non_optical_listings: evidence?.local_evidence ? evidence.observations.filter(o => o.role !== "Optical").length : state.destinationResearch[centre.place_id]?.in_scope_non_optical_listings ?? "",
-      directory_scope: evidence?.local_evidence ? evidence.scope : state.destinationResearch[centre.place_id]?.scope || "",
+      directory_research_date: (evidence?.local_evidence || evidence?.public_directory_evidence) ? evidence.coverage.observed_dates?.at(-1) || "" : state.destinationResearch[centre.place_id]?.observed_at || "",
+      directory_non_optical_listings: (evidence?.local_evidence || evidence?.public_directory_evidence) ? evidence.observations.filter(o => o.role !== "Optical").length : state.destinationResearch[centre.place_id]?.in_scope_non_optical_listings ?? "",
+      directory_scope: (evidence?.local_evidence || evidence?.public_directory_evidence) ? evidence.scope : state.destinationResearch[centre.place_id]?.scope || "",
       gla_sqm: centre.gla_sqm || "", annual_visits: centre.annual_visits || "", retail_tenancy_count: centre.tenancy_count || "", trade_area_population: centre.trade_area_population || "",
       place_evidence_date: centre.source_date || "", place_last_verified_at: centre.last_verified_at || "", property_evidence_latest: verifiedDates.at(-1) || "", official_url: centre.official_url || centre.source_url || "",
     };
@@ -3271,7 +3271,7 @@
   function exportPlaceTenants(placeIds) {
     const centres = [...new Set(placeIds.map(resolvePlaceId))].map((id) => state.centres.find((item) => item.place_id === id)).filter(Boolean);
     const records = centres.flatMap((centre) => {
-      const evidence = state.environments?.places.find(p => p.place_id === centre.place_id && p.local_evidence);
+      const evidence = state.environments?.places.find(p => p.place_id === centre.place_id && (p.local_evidence || p.public_directory_evidence));
       const listings = evidence ? evidence.observations.map(o => ({tenant_id:o.source_id, tenant_name:o.name, category:o.role === "Optical" ? "Optical directory listing" : (o.categories || []).join(" | "), selection_basis:o.scope_basis, status:"Directory listed; trading not independently verified", source_url:o.source_url, source_type:"Captured directory evidence", source_date:o.source_date, verified_at:o.observed_at, confidence:"Documented presence"})) : tenantsForPlace(centre.place_id);
       return listings.map((tenant) => ({
       place_id: centre.place_id, place_name: centre.name, country: centre.country, state: centre.state,
@@ -3331,7 +3331,7 @@
     const isCorridor = centre.location_setting === "High Street";
     const placeLabel = isCorridor ? "corridor" : "centre";
     const saved = state.placeShortlist.has(resolvePlaceId(centre.place_id));
-    const localEvidence = state.environments?.places.find(p => p.place_id === centre.place_id && p.local_evidence);
+    const localEvidence = state.environments?.places.find(p => p.place_id === centre.place_id && (p.local_evidence || p.public_directory_evidence));
     elements.detailContent.innerHTML = `<div class="place-detail-content">
       <header class="detail-header" style="--brand-color:#d29b27">
         <span class="retailer-tag">${centre.location_setting === "High Street" ? '<i data-lucide="route"></i>' : CENTRE_BAG_SVG}${escapeHtml(centre.place_type)}</span>
@@ -4240,7 +4240,7 @@
     if (!centre) return;
     const row = publishedLookalike(centre.place_id) || {};
     const record = placeSummaryRecord(centre);
-    const localEvidence = state.environments?.places.find(p => p.place_id === centre.place_id && p.local_evidence);
+    const localEvidence = state.environments?.places.find(p => p.place_id === centre.place_id && (p.local_evidence || p.public_directory_evidence));
     const tenants = tenantsForPlace(centre.place_id);
     const optical = tenants.filter((item) => item.category === "Optical");
     const keyTenants = tenants.filter((item) => item.category !== "Optical");

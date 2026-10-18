@@ -79,8 +79,14 @@ class RetailPlaceTests(unittest.TestCase):
                 self.assertRegex(place["place_id"], r"^place-(au|nz)-[a-z0-9-]+$")
             else:
                 self.assertRegex(place["place_id"], r"^corridor-(au|nz)-[a-z0-9-]+$")
-            self.assertTrue(-90 <= float(place["latitude"]) <= 90)
-            self.assertTrue(-180 <= float(place["longitude"]) <= 180)
+            if place["latitude"] is None or place["longitude"] is None:
+                self.assertIsNone(place["latitude"])
+                self.assertIsNone(place["longitude"])
+                self.assertEqual(place["coordinate_confidence"], "Uncertain")
+                self.assertTrue(place["source_url"].startswith("https://"))
+            else:
+                self.assertTrue(-90 <= float(place["latitude"]) <= 90)
+                self.assertTrue(-180 <= float(place["longitude"]) <= 180)
 
     def test_named_network_is_usable_and_place_safe(self) -> None:
         named = [row for row in self.memberships if row["retailer"] in NAMED]

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-18T05:52:51.196218+00:00",
+  "generated_at": "2026-10-18T07:17:21.913338+00:00",
   "metadata": {
     "coverage_scope": "Shopping centres are the Phase 1 relationship scope; high-street corridors remain Unknown unless explicitly researched.",
     "group_count": 157,
     "relationship_count": 1054,
     "active_relationship_count": 1052,
-    "shopping_centre_count": 783,
+    "shopping_centre_count": 786,
     "researched_property_count": 322,
     "classed_property_count": 316,
     "conflict_count": 0,
@@ -43478,6 +43478,48 @@
         "match_basis": "ABS authoritative point query"
       }
     },
+    "place-au-act-kingston-eyre-st-market": {
+      "place_id": "place-au-act-kingston-eyre-st-market",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "place-au-act-kingston-eyre-st-market",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "place-au-act-kingston-eyre-st-market",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": null,
+      "competitor_context": {
+        "by_retailer": {},
+        "nearest_by_retailer_km": {},
+        "independent_2km_count": null,
+        "map_reference_status": "Unresolved"
+      },
+      "market": {}
+    },
     "place-au-act-gungahlin-village": {
       "place_id": "place-au-act-gungahlin-village",
       "centre_class": "Unknown",
@@ -47800,6 +47842,89 @@
         "median_household_income": 1365,
         "age_45_plus_pct": 50.9,
         "retail_businesses": 154,
+        "match_basis": "Generalised display polygon"
+      }
+    },
+    "corridor-au-nsw-lane-cove-burns-bay-road": {
+      "place_id": "corridor-au-nsw-lane-cove-burns-bay-road",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "corridor-au-nsw-lane-cove-burns-bay-road",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "corridor-au-nsw-lane-cove-burns-bay-road",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 4.07,
+      "competitor_context": {
+        "by_retailer": {
+          "Independent / Other optical": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "independent-other-optical-provision-342859",
+                "name": "Hunters Hill Optical",
+                "distance_km": 1.68
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 1.68,
+          "Bailey Nelson": 4.07,
+          "Bupa Optical": 4.26,
+          "OPSM": 4.08,
+          "Oscar Wylee": 4.18,
+          "Specsavers": 4.02,
+          "George & Matilda": 3.9,
+          "Optical Superstore": 24.81,
+          "Eyecare Plus": 3.96,
+          "EyeQ Optometrists": 10.08,
+          "Matthews Eyecare": 1910.25,
+          "1001 Optometry": 4.09,
+          "Chemist Warehouse Optometry": 8.29,
+          "The Optical Company": 4.09,
+          "Laubman & Pank": 592.73,
+          "Dresden Vision": 4.98,
+          "Optical Warehouse": 707.47,
+          "Optical by National Pharmacies": 1134.87
+        },
+        "independent_2km_count": 1
+      },
+      "market": {
+        "sa2_code": "121011686",
+        "sa2_name": "Lane Cove",
+        "population_2025": 16705,
+        "population_2021": 15937.0,
+        "population_growth_number": 768,
+        "population_growth_pct": 4.82,
+        "median_household_income": 1791,
+        "age_45_plus_pct": 37,
+        "retail_businesses": 123,
         "match_basis": "Generalised display polygon"
       }
     },
@@ -54838,6 +54963,203 @@
         "age_45_plus_pct": 45.8,
         "retail_businesses": 100,
         "match_basis": "ABS authoritative point query"
+      }
+    },
+    "corridor-au-nsw-double-bay-knox-lane": {
+      "place_id": "corridor-au-nsw-double-bay-knox-lane",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "corridor-au-nsw-double-bay-knox-lane",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "corridor-au-nsw-double-bay-knox-lane",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 1.65,
+      "competitor_context": {
+        "by_retailer": {
+          "1001 Optometry": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "1001-optometry-7240052",
+                "name": "1001 Optometry Bondi Junction",
+                "distance_km": 1.79
+              }
+            ]
+          },
+          "Bailey Nelson": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "bailey-nelson-bondi-junction",
+                "name": "Bailey Nelson Bondi Junction",
+                "distance_km": 1.9
+              },
+              {
+                "store_id": "bailey-nelson-paddington",
+                "name": "Bailey Nelson Paddington - New Location",
+                "distance_km": 1.65
+              }
+            ]
+          },
+          "Bupa Optical": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "bupa-optical-3870870",
+                "name": "Bupa Optical Bondi Junction",
+                "distance_km": 1.78
+              }
+            ]
+          },
+          "Independent / Other optical": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "independent-other-optical-reviewed-au-eye-mechanics-double-bay",
+                "name": "Eye Mechanics — Double Bay",
+                "distance_km": 0.13
+              },
+              {
+                "store_id": "independent-other-optical-osm-au-node-11751506892",
+                "name": "The Eye Scene",
+                "distance_km": 0.06
+              }
+            ],
+            "catchment_2km": [
+              {
+                "store_id": "independent-other-optical-reviewed-au-sunglass-hut-b693",
+                "name": "Sunglass Hut Bondi Junction Westfield",
+                "distance_km": 1.77
+              },
+              {
+                "store_id": "independent-other-optical-reviewed-au-sunglass-hut-b699",
+                "name": "Sunglass Hut Bondi Junction Westfield Kiosk",
+                "distance_km": 1.8
+              },
+              {
+                "store_id": "independent-other-optical-reviewed-au-wendy-ho-bondi-junction",
+                "name": "Wendy Ho Optique",
+                "distance_km": 1.75
+              }
+            ]
+          },
+          "OPSM": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "opsm-1103",
+                "name": "OPSM Bondi Junction",
+                "distance_km": 1.85
+              }
+            ]
+          },
+          "Specsavers": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "specsavers-3606",
+                "name": "Bondi Junction Eastgate",
+                "distance_km": 1.88
+              },
+              {
+                "store_id": "specsavers-3399",
+                "name": "Bondi Junction Westfield",
+                "distance_km": 1.9
+              }
+            ]
+          },
+          "George & Matilda": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "george-matilda-480",
+                "name": "George & Matilda Eyecare for Optique",
+                "distance_km": 0.07
+              }
+            ],
+            "catchment_2km": [
+              {
+                "store_id": "george-matilda-481",
+                "name": "George & Matilda Eyecare for Optique",
+                "distance_km": 1.72
+              }
+            ]
+          },
+          "Eyecare Plus": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "eyecare-plus-600",
+                "name": "Eyecare Plus Optometrists Edgecliff",
+                "distance_km": 0.64
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 0.06,
+          "Bailey Nelson": 1.65,
+          "Bupa Optical": 1.78,
+          "OPSM": 1.85,
+          "Oscar Wylee": 3.47,
+          "Specsavers": 1.88,
+          "George & Matilda": 0.07,
+          "Optical Superstore": 23.03,
+          "Eyecare Plus": 0.64,
+          "EyeQ Optometrists": 7.14,
+          "Matthews Eyecare": 1899.84,
+          "1001 Optometry": 1.79,
+          "Chemist Warehouse Optometry": 4.63,
+          "The Optical Company": 3.3,
+          "Laubman & Pank": 595.67,
+          "Dresden Vision": 6.14,
+          "Optical Warehouse": 711.66,
+          "Optical by National Pharmacies": 1142.19
+        },
+        "independent_2km_count": 5
+      },
+      "market": {
+        "sa2_code": "118011650",
+        "sa2_name": "Double Bay - Darling Point",
+        "population_2025": 10216,
+        "population_2021": 10051.0,
+        "population_growth_number": 165,
+        "population_growth_pct": 1.64,
+        "median_household_income": 2120,
+        "age_45_plus_pct": 46.5,
+        "retail_businesses": 146,
+        "match_basis": "Generalised display polygon"
       }
     },
     "corridor-au-nsw-double-bay-knox-street": {
@@ -96546,6 +96868,200 @@
         "match_basis": "ABS authoritative point query"
       }
     },
+    "corridor-au-qld-petrie-terrace-caxton-street": {
+      "place_id": "corridor-au-qld-petrie-terrace-caxton-street",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "corridor-au-qld-petrie-terrace-caxton-street",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "corridor-au-qld-petrie-terrace-caxton-street",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 1.58,
+      "competitor_context": {
+        "by_retailer": {
+          "Dresden Vision": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "dresden-vision-16",
+                "name": "Dresden Vision West End",
+                "distance_km": 1.78
+              }
+            ]
+          },
+          "George & Matilda": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "george-matilda-17218",
+                "name": "Eyes on Edward",
+                "distance_km": 1.87
+              },
+              {
+                "store_id": "george-matilda-17212",
+                "name": "Optiko – Queen St Mall",
+                "distance_km": 1.41
+              },
+              {
+                "store_id": "george-matilda-17210",
+                "name": "Vision Optics",
+                "distance_km": 1.89
+              }
+            ]
+          },
+          "OPSM": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "opsm-1513",
+                "name": "OPSM Albert St Brisbane",
+                "distance_km": 1.47
+              },
+              {
+                "store_id": "opsm-1464",
+                "name": "OPSM Wintergarden",
+                "distance_km": 1.51
+              }
+            ]
+          },
+          "Specsavers": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "specsavers-3527",
+                "name": "Brisbane - Creek Street",
+                "distance_km": 1.66
+              },
+              {
+                "store_id": "specsavers-3432",
+                "name": "Brisbane CBD - Albert St",
+                "distance_km": 1.45
+              }
+            ]
+          },
+          "Bailey Nelson": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "bailey-nelson-brisbane-macarthur",
+                "name": "Bailey Nelson Brisbane MacArthur",
+                "distance_km": 1.58
+              }
+            ]
+          },
+          "Bupa Optical": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "bupa-optical-13626244",
+                "name": "Bupa Optical & Hearing Brisbane",
+                "distance_km": 1.29
+              }
+            ]
+          },
+          "Independent / Other optical": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "independent-other-optical-reviewed-au-2020-optical-brisbane",
+                "name": "2020 Optical — Brisbane Arcade",
+                "distance_km": 1.4
+              },
+              {
+                "store_id": "independent-other-optical-reviewed-au-qut-optometry-kelvin-grove",
+                "name": "QUT Health Clinics — Optometry",
+                "distance_km": 1.17
+              },
+              {
+                "store_id": "independent-other-optical-provision-34551",
+                "name": "The Optical Nook",
+                "distance_km": 1.01
+              },
+              {
+                "store_id": "independent-other-optical-reviewed-au-global-eyes-rosalie",
+                "name": "Global Eyes — Rosalie",
+                "distance_km": 1.55
+              },
+              {
+                "store_id": "independent-other-optical-reviewed-au-advanced-optometry-spring-hill",
+                "name": "Advanced Optometry",
+                "distance_km": 1.36
+              },
+              {
+                "store_id": "independent-other-optical-osm-au-way-1347944904",
+                "name": "For Eyes Only — West Village",
+                "distance_km": 1.5
+              }
+            ]
+          },
+          "Oscar Wylee": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "oscar-wylee-54",
+                "name": "Albert St",
+                "distance_km": 1.4
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 1.01,
+          "Bailey Nelson": 1.58,
+          "Bupa Optical": 1.29,
+          "OPSM": 1.47,
+          "Oscar Wylee": 1.4,
+          "Specsavers": 1.45,
+          "George & Matilda": 1.41,
+          "Optical Superstore": 6.95,
+          "Eyecare Plus": 2.88,
+          "EyeQ Optometrists": 441.01,
+          "Matthews Eyecare": 2161.84,
+          "1001 Optometry": 5.54,
+          "Chemist Warehouse Optometry": 16.81,
+          "The Optical Company": 9.88,
+          "Laubman & Pank": 5.54,
+          "Dresden Vision": 1.78,
+          "Optical Warehouse": 5.84,
+          "Optical by National Pharmacies": 1571.51
+        },
+        "independent_2km_count": 6
+      },
+      "market": {}
+    },
     "corridor-au-qld-varsity-lakes-christine-avenue": {
       "place_id": "corridor-au-qld-varsity-lakes-christine-avenue",
       "centre_class": "Unknown",
@@ -99215,6 +99731,83 @@
         "retail_businesses": 23,
         "match_basis": "Generalised display polygon"
       }
+    },
+    "corridor-au-qld-ascot-lancaster-road": {
+      "place_id": "corridor-au-qld-ascot-lancaster-road",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "corridor-au-qld-ascot-lancaster-road",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "corridor-au-qld-ascot-lancaster-road",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 3.62,
+      "competitor_context": {
+        "by_retailer": {
+          "Independent / Other optical": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "independent-other-optical-provision-17467",
+                "name": "Ascot Optical",
+                "distance_km": 0.49
+              },
+              {
+                "store_id": "independent-other-optical-reviewed-au-laraghy-chan-clayfield",
+                "name": "Laraghy & Chan Optometrists",
+                "distance_km": 1.38
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 0.49,
+          "Bailey Nelson": 3.62,
+          "Bupa Optical": 5.67,
+          "OPSM": 5.25,
+          "Oscar Wylee": 5.57,
+          "Specsavers": 2.76,
+          "George & Matilda": 2.29,
+          "Optical Superstore": 8.21,
+          "Eyecare Plus": 3.12,
+          "EyeQ Optometrists": 444.87,
+          "Matthews Eyecare": 2159.43,
+          "1001 Optometry": 11.6,
+          "Chemist Warehouse Optometry": 18.95,
+          "The Optical Company": 9.0,
+          "Laubman & Pank": 5.84,
+          "Dresden Vision": 7.33,
+          "Optical Warehouse": 5.25,
+          "Optical by National Pharmacies": 1577.58
+        },
+        "independent_2km_count": 2
+      },
+      "market": {}
     },
     "corridor-au-qld-noosa-heads-lanyana-way": {
       "place_id": "corridor-au-qld-noosa-heads-lanyana-way",
@@ -132559,6 +133152,100 @@
         "match_basis": "Generalised display polygon"
       }
     },
+    "corridor-au-sa-prospect-prospect-road": {
+      "place_id": "corridor-au-sa-prospect-prospect-road",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "corridor-au-sa-prospect-prospect-road",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "corridor-au-sa-prospect-prospect-road",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 4.05,
+      "competitor_context": {
+        "by_retailer": {
+          "OPSM": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "opsm-1256",
+                "name": "OPSM North Park",
+                "distance_km": 1.49
+              }
+            ]
+          },
+          "Specsavers": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "specsavers-3211",
+                "name": "Sefton Plaza S/C",
+                "distance_km": 1.47
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 2.37,
+          "Bailey Nelson": 4.05,
+          "Bupa Optical": 4.07,
+          "OPSM": 1.49,
+          "Oscar Wylee": 4.07,
+          "Specsavers": 1.47,
+          "George & Matilda": 67.23,
+          "Optical Superstore": 5.73,
+          "Eyecare Plus": 35.08,
+          "EyeQ Optometrists": 8.81,
+          "Matthews Eyecare": 2718.01,
+          "1001 Optometry": 656.45,
+          "Chemist Warehouse Optometry": 1074.64,
+          "The Optical Company": 656.64,
+          "Laubman & Pank": 4.02,
+          "Dresden Vision": 629.25,
+          "Optical Warehouse": 1570.72,
+          "Optical by National Pharmacies": 2.17
+        },
+        "independent_2km_count": 0
+      },
+      "market": {
+        "sa2_code": "401061021",
+        "sa2_name": "Prospect",
+        "population_2025": 16898,
+        "population_2021": 15950.0,
+        "population_growth_number": 948,
+        "population_growth_pct": 5.94,
+        "median_household_income": 1248,
+        "age_45_plus_pct": 38.5,
+        "retail_businesses": 106,
+        "match_basis": "Generalised display polygon"
+      }
+    },
     "corridor-au-sa-goolwa-railway-terrace": {
       "place_id": "corridor-au-sa-goolwa-railway-terrace",
       "centre_class": "Unknown",
@@ -141458,6 +142145,116 @@
           "Dresden Vision": 377.92,
           "Optical Warehouse": 1618.26,
           "Optical by National Pharmacies": 919.45
+        },
+        "independent_2km_count": 0
+      },
+      "market": {
+        "sa2_code": "604021085",
+        "sa2_name": "Devonport",
+        "population_2025": 14775,
+        "population_2021": 14965.0,
+        "population_growth_number": -190,
+        "population_growth_pct": -1.27,
+        "median_household_income": 743,
+        "age_45_plus_pct": 47.4,
+        "retail_businesses": 100,
+        "match_basis": "Generalised display polygon"
+      }
+    },
+    "corridor-au-tas-devonport-rooke-street-mall": {
+      "place_id": "corridor-au-tas-devonport-rooke-street-mall",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "corridor-au-tas-devonport-rooke-street-mall",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "corridor-au-tas-devonport-rooke-street-mall",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 205.21,
+      "competitor_context": {
+        "by_retailer": {
+          "George & Matilda": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "george-matilda-17203",
+                "name": "Devonport Eyecare",
+                "distance_km": 0.17
+              },
+              {
+                "store_id": "george-matilda-392",
+                "name": "Eyelines Optometrists",
+                "distance_km": 0.08
+              }
+            ],
+            "catchment_2km": []
+          },
+          "OPSM": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "opsm-2294",
+                "name": "OPSM Devonport",
+                "distance_km": 0.19
+              }
+            ],
+            "catchment_2km": []
+          },
+          "Specsavers": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "specsavers-3585",
+                "name": "Devonport",
+                "distance_km": 0.06
+              }
+            ],
+            "catchment_2km": []
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 16.03,
+          "Bailey Nelson": 205.21,
+          "Bupa Optical": 205.51,
+          "OPSM": 0.19,
+          "Oscar Wylee": 71.07,
+          "Specsavers": 0.06,
+          "George & Matilda": 0.08,
+          "Optical Superstore": 350.41,
+          "Eyecare Plus": 353.39,
+          "EyeQ Optometrists": 373.73,
+          "Matthews Eyecare": 1785.43,
+          "1001 Optometry": 388.38,
+          "Chemist Warehouse Optometry": 847.35,
+          "The Optical Company": 392.7,
+          "Laubman & Pank": 674.89,
+          "Dresden Vision": 377.82,
+          "Optical Warehouse": 1618.15,
+          "Optical by National Pharmacies": 919.39
         },
         "independent_2km_count": 0
       },
@@ -154081,6 +154878,137 @@
         "match_basis": "Generalised display polygon"
       }
     },
+    "corridor-au-vic-thornbury-high-street": {
+      "place_id": "corridor-au-vic-thornbury-high-street",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "corridor-au-vic-thornbury-high-street",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "corridor-au-vic-thornbury-high-street",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 3.3,
+      "competitor_context": {
+        "by_retailer": {
+          "Independent / Other optical": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "independent-other-optical-osm-au-way-612405905",
+                "name": "Collin & Kirk",
+                "distance_km": 0.15
+              }
+            ],
+            "catchment_2km": [
+              {
+                "store_id": "independent-other-optical-osm-au-node-11404319140",
+                "name": "Specs",
+                "distance_km": 1.78
+              },
+              {
+                "store_id": "independent-other-optical-osm-au-node-11005509356",
+                "name": "Northcote Optical",
+                "distance_km": 1.82
+              },
+              {
+                "store_id": "independent-other-optical-reviewed-au-specs-optical-northcote",
+                "name": "Specs Optical",
+                "distance_km": 1.78
+              },
+              {
+                "store_id": "independent-other-optical-provision-17161",
+                "name": "Preston Eyecare",
+                "distance_km": 1.86
+              },
+              {
+                "store_id": "independent-other-optical-osm-au-node-5674121273",
+                "name": "Spectacles Galore",
+                "distance_km": 1.93
+              }
+            ]
+          },
+          "OPSM": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "opsm-1286",
+                "name": "OPSM Northcote",
+                "distance_km": 1.4
+              }
+            ]
+          },
+          "Specsavers": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "specsavers-3551",
+                "name": "Northcote",
+                "distance_km": 1.36
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 0.15,
+          "Bailey Nelson": 3.3,
+          "Bupa Optical": 7.07,
+          "OPSM": 1.4,
+          "Oscar Wylee": 3.03,
+          "Specsavers": 1.36,
+          "George & Matilda": 6.98,
+          "Optical Superstore": 24.4,
+          "Eyecare Plus": 3.77,
+          "EyeQ Optometrists": 9.46,
+          "Matthews Eyecare": 2063.05,
+          "1001 Optometry": 7.07,
+          "Chemist Warehouse Optometry": 642.94,
+          "The Optical Company": 7.39,
+          "Laubman & Pank": 386.8,
+          "Dresden Vision": 5.86,
+          "Optical Warehouse": 1341.39,
+          "Optical by National Pharmacies": 619.34
+        },
+        "independent_2km_count": 6
+      },
+      "market": {
+        "sa2_code": "206021112",
+        "sa2_name": "Thornbury",
+        "population_2025": 20234,
+        "population_2021": 19153.0,
+        "population_growth_number": 1081,
+        "population_growth_pct": 5.64,
+        "median_household_income": 1343,
+        "age_45_plus_pct": 37.1,
+        "retail_businesses": 112,
+        "match_basis": "Generalised display polygon"
+      }
+    },
     "corridor-au-vic-vic-hopkins-street": {
       "place_id": "corridor-au-vic-vic-hopkins-street",
       "centre_class": "Unknown",
@@ -162559,6 +163487,83 @@
           "Optical by National Pharmacies": 619.77
         },
         "independent_2km_count": 6
+      },
+      "market": {}
+    },
+    "corridor-au-vic-flemington-racecourse-road": {
+      "place_id": "corridor-au-vic-flemington-racecourse-road",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "corridor-au-vic-flemington-racecourse-road",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "corridor-au-vic-flemington-racecourse-road",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 2.3,
+      "competitor_context": {
+        "by_retailer": {
+          "Independent / Other optical": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "independent-other-optical-reviewed-au-ascot-vale-eyecare",
+                "name": "Ascot Vale Eyecare",
+                "distance_km": 1.32
+              },
+              {
+                "store_id": "independent-other-optical-osm-au-node-1072618097",
+                "name": "Kensington Eyecare",
+                "distance_km": 0.91
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 0.91,
+          "Bailey Nelson": 2.3,
+          "Bupa Optical": 3.4,
+          "OPSM": 2.32,
+          "Oscar Wylee": 2.54,
+          "Specsavers": 2.44,
+          "George & Matilda": 2.31,
+          "Optical Superstore": 28.56,
+          "Eyecare Plus": 5.8,
+          "EyeQ Optometrists": 9.3,
+          "Matthews Eyecare": 2067.01,
+          "1001 Optometry": 4.47,
+          "Chemist Warehouse Optometry": 650.54,
+          "The Optical Company": 4.72,
+          "Laubman & Pank": 380.92,
+          "Dresden Vision": 5.61,
+          "Optical Warehouse": 1348.17,
+          "Optical by National Pharmacies": 614.32
+        },
+        "independent_2km_count": 2
       },
       "market": {}
     },
@@ -185727,6 +186732,94 @@
         "match_basis": "Generalised display polygon"
       }
     },
+    "corridor-au-wa-mount-lawley-beaufort-street": {
+      "place_id": "corridor-au-wa-mount-lawley-beaufort-street",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "corridor-au-wa-mount-lawley-beaufort-street",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "corridor-au-wa-mount-lawley-beaufort-street",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 3.34,
+      "competitor_context": {
+        "by_retailer": {
+          "Independent / Other optical": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "independent-other-optical-reviewed-au-spectacles-mount-lawley",
+                "name": "Spectacles of Mount Lawley",
+                "distance_km": 0.68
+              },
+              {
+                "store_id": "independent-other-optical-osm-au-node-4197216402",
+                "name": "SpexDesign Optometrist",
+                "distance_km": 1.66
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 0.68,
+          "Bailey Nelson": 3.34,
+          "Bupa Optical": 3.43,
+          "OPSM": 3.25,
+          "Oscar Wylee": 4.3,
+          "Specsavers": 3.13,
+          "George & Matilda": 7.68,
+          "Optical Superstore": 4.44,
+          "Eyecare Plus": 21.72,
+          "EyeQ Optometrists": 5.38,
+          "Matthews Eyecare": 4654.83,
+          "1001 Optometry": 2721.05,
+          "Chemist Warehouse Optometry": 2654.39,
+          "The Optical Company": 2721.1,
+          "Laubman & Pank": 4.01,
+          "Dresden Vision": 2670.93,
+          "Optical Warehouse": 3577.74,
+          "Optical by National Pharmacies": 2119.55
+        },
+        "independent_2km_count": 2
+      },
+      "market": {
+        "sa2_code": "503021039",
+        "sa2_name": "Mount Lawley - Inglewood",
+        "population_2025": 19150,
+        "population_2021": 17514.0,
+        "population_growth_number": 1636,
+        "population_growth_pct": 9.34,
+        "median_household_income": 1458,
+        "age_45_plus_pct": 40.4,
+        "retail_businesses": 113,
+        "match_basis": "Generalised display polygon"
+      }
+    },
     "corridor-au-wa-bull-creek-benningfield-road": {
       "place_id": "corridor-au-wa-bull-creek-benningfield-road",
       "centre_class": "Unknown",
@@ -190945,6 +192038,138 @@
         "median_household_income": 1545,
         "age_45_plus_pct": 25.7,
         "retail_businesses": 353,
+        "match_basis": "Generalised display polygon"
+      }
+    },
+    "corridor-au-wa-subiaco-station-street": {
+      "place_id": "corridor-au-wa-subiaco-station-street",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "corridor-au-wa-subiaco-station-street",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "corridor-au-wa-subiaco-station-street",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 3.65,
+      "competitor_context": {
+        "by_retailer": {
+          "Independent / Other optical": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "independent-other-optical-reviewed-au-specialeyes-subiaco",
+                "name": "Specialeyes Optical — Subiaco",
+                "distance_km": 0.16
+              }
+            ],
+            "catchment_2km": [
+              {
+                "store_id": "independent-other-optical-osm-au-node-12841444736",
+                "name": "Looks Optique",
+                "distance_km": 0.33
+              },
+              {
+                "store_id": "independent-other-optical-osm-au-node-9928510956",
+                "name": "Specs Plus",
+                "distance_km": 0.57
+              },
+              {
+                "store_id": "independent-other-optical-provision-17809",
+                "name": "The Focal Point Optometrist",
+                "distance_km": 1.96
+              }
+            ]
+          },
+          "EyeQ Optometrists": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "eyeq-optometrists-subiaco",
+                "name": "EyeQ Optometrists Subiaco",
+                "distance_km": 0.36
+              }
+            ]
+          },
+          "OPSM": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "opsm-1288",
+                "name": "OPSM Subiaco",
+                "distance_km": 0.19
+              }
+            ],
+            "catchment_2km": []
+          },
+          "Specsavers": {
+            "in_centre": [],
+            "nearby_unverified": [
+              {
+                "store_id": "specsavers-3644",
+                "name": "Subiaco",
+                "distance_km": 0.11
+              }
+            ],
+            "catchment_2km": []
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 0.16,
+          "Bailey Nelson": 3.65,
+          "Bupa Optical": 3.42,
+          "OPSM": 0.19,
+          "Oscar Wylee": 5.39,
+          "Specsavers": 0.11,
+          "George & Matilda": 3.2,
+          "Optical Superstore": 9.26,
+          "Eyecare Plus": 26.96,
+          "EyeQ Optometrists": 0.36,
+          "Matthews Eyecare": 4658.0,
+          "1001 Optometry": 2725.05,
+          "Chemist Warehouse Optometry": 2659.71,
+          "The Optical Company": 2725.1,
+          "Laubman & Pank": 8.69,
+          "Dresden Vision": 2674.88,
+          "Optical Warehouse": 3582.7,
+          "Optical by National Pharmacies": 2123.9
+        },
+        "independent_2km_count": 4
+      },
+      "market": {
+        "sa2_code": "503021042",
+        "sa2_name": "Subiaco - Shenton Park",
+        "population_2025": 20645,
+        "population_2021": 18174.0,
+        "population_growth_number": 2471,
+        "population_growth_pct": 13.6,
+        "median_household_income": 1542,
+        "age_45_plus_pct": 44.3,
+        "retail_businesses": 180,
         "match_basis": "Generalised display polygon"
       }
     },
@@ -207838,6 +209063,94 @@
       },
       "market": {}
     },
+    "corridor-nz-canterbury-timaru-stafford-street": {
+      "place_id": "corridor-nz-canterbury-timaru-stafford-street",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "corridor-nz-canterbury-timaru-stafford-street",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "corridor-nz-canterbury-timaru-stafford-street",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": 144.39,
+      "competitor_context": {
+        "by_retailer": {
+          "Independent / Other optical": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "independent-other-optical-reviewed-nz-canon-street-optometrists",
+                "name": "Canon Street Optometrists",
+                "distance_km": 0.38
+              },
+              {
+                "store_id": "independent-other-optical-reviewed-nz-terrace-optometrist-timaru",
+                "name": "The Terrace Optometrist",
+                "distance_km": 0.39
+              }
+            ]
+          },
+          "Specsavers": {
+            "in_centre": [],
+            "nearby_unverified": [],
+            "catchment_2km": [
+              {
+                "store_id": "specsavers-nz-3826",
+                "name": "Timaru",
+                "distance_km": 0.57
+              }
+            ]
+          }
+        },
+        "nearest_by_retailer_km": {
+          "Independent / Other optical": 0.38,
+          "Bailey Nelson": 144.39,
+          "Bupa Optical": 1925.95,
+          "OPSM": 139.06,
+          "Oscar Wylee": 144.29,
+          "Specsavers": 0.57,
+          "George & Matilda": 1909.73,
+          "Optical Superstore": 2052.51,
+          "Eyecare Plus": 2023.32,
+          "EyeQ Optometrists": 2035.12,
+          "Matthews Eyecare": 79.05,
+          "1001 Optometry": 2072.4,
+          "Chemist Warehouse Optometry": 2063.59,
+          "The Optical Company": 2078.82,
+          "Laubman & Pank": 2351.56,
+          "Dresden Vision": 2079.02,
+          "Optical Warehouse": 2467.28,
+          "Optical by National Pharmacies": 2926.36
+        },
+        "independent_2km_count": 2
+      },
+      "market": {}
+    },
     "corridor-nz-canterbury-kaiapoi-williams-street": {
       "place_id": "corridor-nz-canterbury-kaiapoi-williams-street",
       "centre_class": "Unknown",
@@ -208453,6 +209766,48 @@
       "last_verified_at": "2026-09-02",
       "tenancy_count": 178,
       "annual_visits": 10600000.0
+    },
+    "place-nz-canterbury-rolleston-square": {
+      "place_id": "place-nz-canterbury-rolleston-square",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "place-nz-canterbury-rolleston-square",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "place-nz-canterbury-rolleston-square",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": null,
+      "competitor_context": {
+        "by_retailer": {},
+        "nearest_by_retailer_km": {},
+        "independent_2km_count": null,
+        "map_reference_status": "Unresolved"
+      },
+      "market": {}
     },
     "place-nz-canterbury-the-hub-hornby-mall": {
       "place_id": "place-nz-canterbury-the-hub-hornby-mall",
@@ -212371,6 +213726,48 @@
           "Optical by National Pharmacies": 2750.84
         },
         "independent_2km_count": 2
+      },
+      "market": {}
+    },
+    "place-nz-southland-invercargill-central": {
+      "place_id": "place-nz-southland-invercargill-central",
+      "centre_class": "Unknown",
+      "centre_class_method": "",
+      "centre_class_evidence": {
+        "place_id": "place-nz-southland-invercargill-central",
+        "centre_class": "Unknown",
+        "classification_method": "",
+        "source_url": "",
+        "source_type": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": ""
+      },
+      "research_status": "Not researched",
+      "research_evidence": {
+        "place_id": "place-nz-southland-invercargill-central",
+        "research_status": "Not researched",
+        "source_url": "",
+        "last_verified_at": "",
+        "confidence": "",
+        "public_note": "No public property relationship research has been completed"
+      },
+      "leasing_arrangement": "Unknown",
+      "relationship_ids": [],
+      "group_ids": [],
+      "owner_names": [],
+      "manager_names": [],
+      "has_bailey": false,
+      "bailey_store_count": 0,
+      "portfolio_overlap_status": "UNKNOWN",
+      "portfolio_overlap_groups": [],
+      "portfolio_white_space": false,
+      "nearest_bailey_km": null,
+      "competitor_context": {
+        "by_retailer": {},
+        "nearest_by_retailer_km": {},
+        "independent_2km_count": null,
+        "map_reference_status": "Unresolved"
       },
       "market": {}
     },
@@ -226298,6 +227695,47 @@
         }
       }
     },
+    "place-au-act-kingston-eyre-st-market": {
+      "schema_version": 1,
+      "place_id": "place-au-act-kingston-eyre-st-market",
+      "demographic": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-au-act-kingston-eyre-st-market.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "Shopping Centre",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": null,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
     "place-au-act-gungahlin-village": {
       "schema_version": 1,
       "place_id": "place-au-act-gungahlin-village",
@@ -228099,6 +229537,58 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 10.52,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
+    "corridor-au-nsw-lane-cove-burns-bay-road": {
+      "schema_version": 1,
+      "place_id": "corridor-au-nsw-lane-cove-burns-bay-road",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "121011686",
+          "sa2_name": "Lane Cove",
+          "population_2025": 16705,
+          "population_2021": 15937.0,
+          "population_growth_number": 768,
+          "population_growth_pct": 4.82,
+          "median_household_income": 1791,
+          "age_45_plus_pct": 37,
+          "retail_businesses": 123,
+          "match_basis": "Generalised display polygon"
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.corridor-au-nsw-lane-cove-burns-bay-road.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "High Street",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 4.07,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -230959,6 +232449,58 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 8.98,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
+    "corridor-au-nsw-double-bay-knox-lane": {
+      "schema_version": 1,
+      "place_id": "corridor-au-nsw-double-bay-knox-lane",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "118011650",
+          "sa2_name": "Double Bay - Darling Point",
+          "population_2025": 10216,
+          "population_2021": 10051.0,
+          "population_growth_number": 165,
+          "population_growth_pct": 1.64,
+          "median_household_income": 2120,
+          "age_45_plus_pct": 46.5,
+          "retail_businesses": 146,
+          "match_basis": "Generalised display polygon"
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.corridor-au-nsw-double-bay-knox-lane.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "High Street",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 1.65,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -247367,6 +248909,47 @@
         }
       }
     },
+    "corridor-au-qld-petrie-terrace-caxton-street": {
+      "schema_version": 1,
+      "place_id": "corridor-au-qld-petrie-terrace-caxton-street",
+      "demographic": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.corridor-au-qld-petrie-terrace-caxton-street.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "High Street",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 1.58,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
     "corridor-au-qld-varsity-lakes-christine-avenue": {
       "schema_version": 1,
       "place_id": "corridor-au-qld-varsity-lakes-christine-avenue",
@@ -248432,6 +250015,47 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 1055.37,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
+    "corridor-au-qld-ascot-lancaster-road": {
+      "schema_version": 1,
+      "place_id": "corridor-au-qld-ascot-lancaster-road",
+      "demographic": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.corridor-au-qld-ascot-lancaster-road.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "High Street",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 3.62,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -262181,6 +263805,58 @@
         }
       }
     },
+    "corridor-au-sa-prospect-prospect-road": {
+      "schema_version": 1,
+      "place_id": "corridor-au-sa-prospect-prospect-road",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "401061021",
+          "sa2_name": "Prospect",
+          "population_2025": 16898,
+          "population_2021": 15950.0,
+          "population_growth_number": 948,
+          "population_growth_pct": 5.94,
+          "median_household_income": 1248,
+          "age_45_plus_pct": 38.5,
+          "retail_businesses": 106,
+          "match_basis": "Generalised display polygon"
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.corridor-au-sa-prospect-prospect-road.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "High Street",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 4.05,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
     "corridor-au-sa-goolwa-railway-terrace": {
       "schema_version": 1,
       "place_id": "corridor-au-sa-goolwa-railway-terrace",
@@ -266136,6 +267812,58 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 205.11,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
+    "corridor-au-tas-devonport-rooke-street-mall": {
+      "schema_version": 1,
+      "place_id": "corridor-au-tas-devonport-rooke-street-mall",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "604021085",
+          "sa2_name": "Devonport",
+          "population_2025": 14775,
+          "population_2021": 14965.0,
+          "population_growth_number": -190,
+          "population_growth_pct": -1.27,
+          "median_household_income": 743,
+          "age_45_plus_pct": 47.4,
+          "retail_businesses": 100,
+          "match_basis": "Generalised display polygon"
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.corridor-au-tas-devonport-rooke-street-mall.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "High Street",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 205.21,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -271682,6 +273410,58 @@
         }
       }
     },
+    "corridor-au-vic-thornbury-high-street": {
+      "schema_version": 1,
+      "place_id": "corridor-au-vic-thornbury-high-street",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "206021112",
+          "sa2_name": "Thornbury",
+          "population_2025": 20234,
+          "population_2021": 19153.0,
+          "population_growth_number": 1081,
+          "population_growth_pct": 5.64,
+          "median_household_income": 1343,
+          "age_45_plus_pct": 37.1,
+          "retail_businesses": 112,
+          "match_basis": "Generalised display polygon"
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.corridor-au-vic-thornbury-high-street.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "High Street",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 3.3,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
     "corridor-au-vic-vic-hopkins-street": {
       "schema_version": 1,
       "place_id": "corridor-au-vic-vic-hopkins-street",
@@ -275284,6 +277064,47 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 2.08,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
+    "corridor-au-vic-flemington-racecourse-road": {
+      "schema_version": 1,
+      "place_id": "corridor-au-vic-flemington-racecourse-road",
+      "demographic": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.corridor-au-vic-flemington-racecourse-road.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "High Street",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 2.3,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -284442,6 +286263,58 @@
         }
       }
     },
+    "corridor-au-wa-mount-lawley-beaufort-street": {
+      "schema_version": 1,
+      "place_id": "corridor-au-wa-mount-lawley-beaufort-street",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "503021039",
+          "sa2_name": "Mount Lawley - Inglewood",
+          "population_2025": 19150,
+          "population_2021": 17514.0,
+          "population_growth_number": 1636,
+          "population_growth_pct": 9.34,
+          "median_household_income": 1458,
+          "age_45_plus_pct": 40.4,
+          "retail_businesses": 113,
+          "match_basis": "Generalised display polygon"
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.corridor-au-wa-mount-lawley-beaufort-street.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "High Street",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 3.34,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
     "corridor-au-wa-bull-creek-benningfield-road": {
       "schema_version": 1,
       "place_id": "corridor-au-wa-bull-creek-benningfield-road",
@@ -286985,6 +288858,58 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 0.23,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
+    "corridor-au-wa-subiaco-station-street": {
+      "schema_version": 1,
+      "place_id": "corridor-au-wa-subiaco-station-street",
+      "demographic": {
+        "availability": "Available",
+        "values": {
+          "sa2_code": "503021042",
+          "sa2_name": "Subiaco - Shenton Park",
+          "population_2025": 20645,
+          "population_2021": 18174.0,
+          "population_growth_number": 2471,
+          "population_growth_pct": 13.6,
+          "median_household_income": 1542,
+          "age_45_plus_pct": 44.3,
+          "retail_businesses": 180,
+          "match_basis": "Generalised display polygon"
+        }
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.corridor-au-wa-subiaco-station-street.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "High Street",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 3.65,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
@@ -293869,6 +295794,47 @@
         }
       }
     },
+    "corridor-nz-canterbury-timaru-stafford-street": {
+      "schema_version": 1,
+      "place_id": "corridor-nz-canterbury-timaru-stafford-street",
+      "demographic": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.corridor-nz-canterbury-timaru-stafford-street.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "High Street",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": 144.39,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
     "corridor-nz-canterbury-kaiapoi-williams-street": {
       "schema_version": 1,
       "place_id": "corridor-nz-canterbury-kaiapoi-williams-street",
@@ -294076,6 +296042,47 @@
             "group-scentre"
           ],
           "overlap_status": "SAME_CENTRE"
+        }
+      }
+    },
+    "place-nz-canterbury-rolleston-square": {
+      "schema_version": 1,
+      "place_id": "place-nz-canterbury-rolleston-square",
+      "demographic": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-nz-canterbury-rolleston-square.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "Shopping Centre",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": null,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
         }
       }
     },
@@ -295680,6 +297687,47 @@
         "availability": "Not researched",
         "values": {
           "nearest_bailey_km": 156.58,
+          "group_ids": [],
+          "overlap_status": "UNKNOWN"
+        }
+      }
+    },
+    "place-nz-southland-invercargill-central": {
+      "schema_version": 1,
+      "place_id": "place-nz-southland-invercargill-central",
+      "demographic": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "competition": {
+        "availability": "Available",
+        "evidence_pointer": "property_summaries.place-nz-southland-invercargill-central.competitor_context",
+        "values": {
+          "in_centre_rule": "accepted shared canonical place_id",
+          "nearby_rule": "straight-line distance only; never centre membership"
+        }
+      },
+      "retail_environment": {
+        "availability": "Partial",
+        "values": {
+          "location_setting": "Shopping Centre",
+          "centre_class": "Unknown"
+        }
+      },
+      "accessibility": {
+        "availability": "Unavailable",
+        "values": {}
+      },
+      "catchment": {
+        "availability": "Indicative only",
+        "values": {
+          "method": "2 km straight-line competitor context"
+        }
+      },
+      "portfolio": {
+        "availability": "Not researched",
+        "values": {
+          "nearest_bailey_km": null,
           "group_ids": [],
           "overlap_status": "UNKNOWN"
         }
