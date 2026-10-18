@@ -1,6 +1,8 @@
 name: Publish map
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -19,12 +21,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Public publishing paused pending protected hosting
-        run: |
-          echo "Publishing is paused: this GitHub Pages target is public."
-          echo "Configure and verify authenticated hosting before re-enabling deployment."
-          echo "See docs/PROTECTED_PUBLISHING.md. This guard does not protect an already published site."
-          exit 1
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Python
@@ -49,10 +45,18 @@ jobs:
           python scripts/scan_public_privacy.py
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Prepare public website files
+        env:
+          SITE_REVISION: ${{ github.sha }}
+        run: |
+          mkdir _site
+          cp -R assets data retailers _site/
+          cp index.html opsm_stores.csv opsm_stores.geojson .nojekyll _site/
+          python -c 'import json, os; from pathlib import Path; Path("_site/deployment.json").write_text(json.dumps({"revision": os.environ["SITE_REVISION"]}) + "\n")'
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
+          path: _site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
