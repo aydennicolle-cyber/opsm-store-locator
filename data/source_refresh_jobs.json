@@ -1,7 +1,7 @@
 {
   "version": 1,
   "coverage": {
-    "scope": "Optical repository and its City Beach/Ozmosis feeds only. Separate shared-data, Car Wash and Surf repositories are not connected.",
+    "scope": "Optical repository only. City Beach and Ozmosis belong to the separate Surf Retail scan. Separate shared-data, Car Wash and Surf repositories are not connected.",
     "not_automated": [
       "ABS/Stats NZ release ingestion",
       "Shopping-centre directories, public portfolio research and place-membership verification",
@@ -117,48 +117,6 @@
         "retailers/oscar-wylee/stores.csv",
         "retailers/oscar-wylee/stores.geojson",
         "retailers/oscar-wylee/source_snapshot.json"
-      ]
-    },
-    {
-      "id": "city-beach-au",
-      "folders": [
-        "city-beach"
-      ],
-      "commands": [
-        [
-          "python",
-          "scripts/fetch_city_beach_stores.py"
-        ]
-      ],
-      "interval_days": 7,
-      "retry_days": 2,
-      "priority": 3,
-      "timeout_seconds": 240,
-      "outputs": [
-        "retailers/city-beach/stores.csv",
-        "retailers/city-beach/stores.geojson",
-        "retailers/city-beach/city_beach_store_locator_raw.json"
-      ]
-    },
-    {
-      "id": "ozmosis-au",
-      "folders": [
-        "ozmosis"
-      ],
-      "commands": [
-        [
-          "python",
-          "scripts/fetch_ozmosis_stores.py"
-        ]
-      ],
-      "interval_days": 7,
-      "retry_days": 2,
-      "priority": 3,
-      "timeout_seconds": 240,
-      "outputs": [
-        "retailers/ozmosis/stores.csv",
-        "retailers/ozmosis/stores.geojson",
-        "retailers/ozmosis/ozmosis_store_locator_raw.json"
       ]
     },
     {

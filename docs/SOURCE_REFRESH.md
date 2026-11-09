@@ -9,9 +9,9 @@ GitHub-hosted runner usage remains subject to the account's Actions limits.
 
 ## What updates automatically
 
-`data/source_refresh_jobs.json` defines 13 collector jobs, commands, explicit
+`data/source_refresh_jobs.json` defines 11 collector jobs, commands, explicit
 output files, timeouts and intervals. At most three due jobs run each day.
-Core locators and City Beach/Ozmosis run on a seven-day interval; grouped and
+Core locators run on a seven-day interval; grouped and
 browser collectors run on a fourteen-day interval. Unchecked jobs run first;
 failed/review jobs have a two-day backoff. Due dates measure attempts, not success.
 
@@ -71,8 +71,8 @@ centre-directory/property research, place memberships, OSM discovery, reviewed
 independents and eyewear networks without maintained collectors. Their existing
 source freshness remains unchanged. Separate shared-place, Car Wash and Surf
 repositories were not available through the connected GitHub installation and
-are not automatically updated by this workflow. City Beach and Ozmosis here are
-feeds inside the optical repository, not a claim that the Surf tool is connected.
+are not automatically updated by this workflow. City Beach and Ozmosis are excluded from this optical schedule and belong to
+the separate Surf Retail scan; their existing repository files remain available.
 
 Changedetection.io can supplement this system for selected directory or news
 pages needing change alerts. It is not required for the current workflow and no
