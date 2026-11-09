@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_run_at": "2026-11-09T03:54:52.485771+00:00",
+  "last_run_at": "2026-11-09T04:00:16.951444+00:00",
   "ai_calls": 0,
   "jobs": {
     "opsm-au": {
@@ -111,6 +111,186 @@
           "content_sha256": "c8fa40dcb8ca604199f3471f3353efb99570ee5e8d57f70f4a31256a44bee801"
         }
       ]
+    },
+    "bailey-nelson-au": {
+      "last_attempt_at": "2026-11-09T04:00:16.951444+00:00",
+      "status": "needs_review",
+      "feeds": [
+        {
+          "folder": "bailey-nelson",
+          "before_count": 71,
+          "after_count": 71,
+          "added_ids": [],
+          "missing_ids": [],
+          "edits": [
+            {
+              "source_store_id": "chermside",
+              "fields": [
+                "status"
+              ]
+            },
+            {
+              "source_store_id": "cockburn",
+              "fields": [
+                "booking_source_id",
+                "business_type",
+                "coordinate_confidence",
+                "coordinate_evidence_url",
+                "coordinate_source",
+                "coordinates_reviewed",
+                "country",
+                "evidence_notes",
+                "full_address",
+                "identity_reviewed",
+                "latitude",
+                "longitude",
+                "map_url",
+                "services",
+                "source_url",
+                "status",
+                "status_evidence_url"
+              ]
+            },
+            {
+              "source_store_id": "coomera",
+              "fields": [
+                "status"
+              ]
+            },
+            {
+              "source_store_id": "hawthorn",
+              "fields": [
+                "booking_source_id",
+                "business_type",
+                "coordinate_confidence",
+                "coordinate_evidence_url",
+                "coordinate_source",
+                "coordinates_reviewed",
+                "country",
+                "evidence_notes",
+                "identity_reviewed",
+                "latitude",
+                "longitude",
+                "map_url",
+                "name",
+                "official_url",
+                "phone",
+                "services",
+                "source_url",
+                "status_evidence_url"
+              ]
+            },
+            {
+              "source_store_id": "kotara",
+              "fields": [
+                "name"
+              ]
+            },
+            {
+              "source_store_id": "moonee-ponds",
+              "fields": [
+                "coordinate_source",
+                "latitude",
+                "longitude",
+                "map_url",
+                "name"
+              ]
+            },
+            {
+              "source_store_id": "mornington",
+              "fields": [
+                "coordinate_source",
+                "latitude",
+                "longitude",
+                "map_url",
+                "name"
+              ]
+            },
+            {
+              "source_store_id": "north-lakes",
+              "fields": [
+                "name",
+                "status"
+              ]
+            },
+            {
+              "source_store_id": "port-adelaide",
+              "fields": [
+                "coordinate_source",
+                "latitude",
+                "longitude",
+                "map_url"
+              ]
+            },
+            {
+              "source_store_id": "st-kilda",
+              "fields": [
+                "coordinate_source",
+                "latitude",
+                "longitude",
+                "map_url",
+                "name"
+              ]
+            },
+            {
+              "source_store_id": "whitford",
+              "fields": [
+                "booking_source_id",
+                "business_type",
+                "coordinate_confidence",
+                "coordinate_evidence_url",
+                "coordinate_source",
+                "coordinates_reviewed",
+                "country",
+                "evidence_notes",
+                "full_address",
+                "identity_reviewed",
+                "latitude",
+                "longitude",
+                "map_url",
+                "name",
+                "services",
+                "source_url",
+                "status",
+                "status_evidence_url"
+              ]
+            }
+          ],
+          "requires_review": true,
+          "content_sha256": "c92af732e9c019f958038d3f4c70b93ec9ad5091f08f72dafc64e2362bdd49d9"
+        }
+      ]
+    },
+    "bailey-nelson-nz": {
+      "last_attempt_at": "2026-11-09T04:00:16.951444+00:00",
+      "status": "needs_review",
+      "feeds": [
+        {
+          "folder": "bailey-nelson-nz",
+          "before_count": 16,
+          "after_count": 16,
+          "added_ids": [],
+          "missing_ids": [],
+          "edits": [
+            {
+              "source_store_id": "optometrist-nelson",
+              "fields": [
+                "latitude",
+                "longitude",
+                "phone"
+              ]
+            }
+          ],
+          "requires_review": true,
+          "content_sha256": "551f1f4eba809010a03e2848e4490f23d964c2bfd03a8cb21d3cee13def51fa4"
+        }
+      ]
+    },
+    "opsm-nz": {
+      "last_attempt_at": "2026-11-09T04:00:16.951444+00:00",
+      "status": "failed",
+      "feeds": [],
+      "error": "CalledProcessError: collection or validation failed; existing feed retained"
     }
   },
   "coverage": {
@@ -124,5 +304,5 @@
     "policy": "Only unchanged identities and phone/fax/hours changes are automatically adopted. Every other changed feed is retained as a review artifact, never inferred as a closure. Collector receipt dates are separate from publication dates.",
     "changedetection": "Optional supplementary monitor; no hosted service, subscription or AI key is configured."
   },
-  "run_url": ""
+  "run_url": "https://github.com/aydennicolle-cyber/opsm-store-locator/actions/runs/42559346819"
 }
