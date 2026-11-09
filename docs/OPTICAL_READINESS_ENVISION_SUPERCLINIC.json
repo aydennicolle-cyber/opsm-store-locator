@@ -1,0 +1,180 @@
+{
+  "status": "All nine stages and generated outcomes verified; browser property profile and actual Summary/Tenant CSVs verified.",
+  "store_id": "independent-other-optical-provision-223610",
+  "original_store": {
+    "retailer": "Independent / Other optical",
+    "store_id": "independent-other-optical-provision-223610",
+    "affiliations": "provision",
+    "name": "Envision Optical Tweed Heads South",
+    "status": "Active",
+    "country": "Australia",
+    "state": "NSW",
+    "suburb": "Twead Heads South",
+    "postcode": "2486",
+    "full_address": "Shop 4/33-35 Corporation Circuit, Twead Heads South, New South Wales, 2486",
+    "phone": "",
+    "latitude": "-28.2068872",
+    "longitude": "153.53905659999998",
+    "official_url": "https://www.provision.com.au/practice/envision-optical-tweed-heads-south/",
+    "website_url": "",
+    "instagram_url": "",
+    "facebook_url": "",
+    "directory_url": "https://www.provision.com.au/practice/envision-optical-tweed-heads-south/",
+    "services": "",
+    "audiology": "false",
+    "venue_name": "",
+    "venue_id": "",
+    "location_type": "Unclassified",
+    "classification_confidence": "Low",
+    "classification_basis": "Insufficient official venue or street evidence",
+    "store_area_sqm": "",
+    "area_measure": "",
+    "area_source": "",
+    "area_date": "",
+    "area_confidence": "Unknown",
+    "source_url": "https://www.provision.com.au/search-results/",
+    "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+    "business_type": "",
+    "identity_reviewed": "",
+    "coordinates_reviewed": "",
+    "status_evidence_url": "",
+    "status_verified_at": "",
+    "status_reason": "",
+    "coordinate_confidence": "",
+    "coordinate_evidence_url": "",
+    "coordinates_verified_at": "",
+    "coordinate_reason": "",
+    "public_facts_verified_at": "",
+    "public_facts_evidence_url": "",
+    "public_facts_reason": ""
+  },
+  "membership_override": {
+    "store_id": "independent-other-optical-provision-223610",
+    "location_setting": "Other",
+    "canonical_name": "Tweed Health for Everyone SuperClinic",
+    "place_type": "Other",
+    "official_url": "https://www.envisionoptical.com.au/about-us/location/tweed-heads/3259",
+    "evidence_basis": "Operator branch page explicitly names Tweed Health For Everyone Superclinic Shop4 at33-35CorporationCircuit. SuperClinic optometry directory names Envision Optical with matching0755249659. Accepted named clinical property; not a shopping centre or Treetops Plaza in Burleigh Waters.",
+    "confidence": "High",
+    "source_date": "2026-10-27",
+    "owner": "",
+    "manager": "",
+    "place_official_url": "https://www.thesc.com.au/",
+    "canonical_place_id": "place-au-nsw-tweed-heads-south-tweed-health-for-everyone-superclinic"
+  },
+  "property_override": {
+    "place_id": "place-au-nsw-tweed-heads-south-tweed-health-for-everyone-superclinic",
+    "canonical_name": "Tweed Health for Everyone SuperClinic",
+    "aliases": "Tweed Health For Everyone Superclinic",
+    "official_url": "https://www.thesc.com.au/",
+    "evidence_url": "https://www.thesc.com.au/contact",
+    "verified_at": "2026-10-27",
+    "reason": "Named clinical property at33-35CorporationCircuit. Contact page distinguishes Terranora and Allied Hub sites. Operator and clinic directory explicitly establish Envision tenancy. No shopping-centre format, complete tenancy, ownership or boundary claim.",
+    "state": "NSW",
+    "locality": "Tweed Heads South",
+    "postcode": "2486",
+    "address": "33-35 Corporation Circuit",
+    "location_setting": "Other",
+    "address_source_date": "",
+    "address_evidence_url": "https://www.thesc.com.au/contact",
+    "address_checked_at": "2026-10-27",
+    "address_basis": "SuperClinic contact page gives whole-property33-35CorporationCircuit,TweedHeadsSouth2486; optical operator separately givesShop4. Source publication date unknown; business unit retained separately."
+  },
+  "coordinate_override": {
+    "place_id": "place-au-nsw-tweed-heads-south-tweed-health-for-everyone-superclinic",
+    "latitude": "-28.2068872",
+    "longitude": "153.53905659999998",
+    "evidence_url": "https://www.envisionoptical.com.au/about-us/location/tweed-heads/3259",
+    "verified_at": "2026-10-27",
+    "confidence": "Low",
+    "method": "Accepted tenant reference",
+    "reference_store_id": "independent-other-optical-provision-223610",
+    "reason": "Approximate property display reference inherited unchanged from the accepted Envision Optical business point. Not a surveyed centroid, boundary or entrance. Explicit operator and clinic tenancy evidence establishes membership independently of this reference."
+  },
+  "fact_override": {
+    "store_id": "independent-other-optical-provision-223610",
+    "name": "",
+    "full_address": "Shop 4, 33-35 Corporation Circuit, Tweed Heads South NSW 2486",
+    "suburb": "Tweed Heads South",
+    "postcode": "",
+    "phone": "0755249659",
+    "official_url": "",
+    "website_url": "https://www.envisionoptical.com.au/about-us/location/tweed-heads/3259",
+    "services": "",
+    "business_type": "",
+    "evidence_url": "https://www.envisionoptical.com.au/about-us/location/tweed-heads/3259",
+    "verified_at": "2026-10-27",
+    "reason": "Operator Tweed branch explicitly names Shop4 at33-35CorporationCircuit and0755249659; SuperClinic contact page confirms locality spelling Tweed Heads South, correcting source typo Twead. Preserve original ProVision record ID, raw source URL/date, status and point. Clinical property membership recorded separately, not inferred from distance.",
+    "retailer": "",
+    "affiliations": "",
+    "clear_fields": "",
+    "directory_url": ""
+  },
+  "research_sources": [
+    "https://www.envisionoptical.com.au/about-us/location/tweed-heads/3259",
+    "https://www.thesc.com.au/contact",
+    "https://www.thesc.com.au/optometry"
+  ],
+  "research_note": "Standard web reader retrieved operator branch details27October2026; clinic evidence retained in FOLLOWUP_BATCH_THIRTEEN_RESEARCH. Branch operator lists SuperclinicShop4 and0755249659 separately from Burleigh Waters TreetopsShop4B and0755937844.",
+  "raw_store_sha256_before": "85eb8dacd717e2d68f7fe0c9d5f3f347b21b42804b75b708855321d8e3c34769",
+  "staged_comparison": {
+    "independent-other-optical-provision-223610": {
+      "suburb": [
+        "Twead Heads South",
+        "Tweed Heads South"
+      ],
+      "full_address": [
+        "Shop 4/33-35 Corporation Circuit, Twead Heads South, New South Wales, 2486",
+        "Shop 4, 33-35 Corporation Circuit, Tweed Heads South NSW 2486"
+      ],
+      "phone": [
+        "",
+        "0755249659"
+      ],
+      "website_url": [
+        "",
+        "https://www.envisionoptical.com.au/about-us/location/tweed-heads/3259"
+      ],
+      "public_facts_verified_at": [
+        "",
+        "2026-10-27"
+      ],
+      "public_facts_evidence_url": [
+        "",
+        "https://www.envisionoptical.com.au/about-us/location/tweed-heads/3259"
+      ],
+      "public_facts_reason": [
+        "",
+        "Operator Tweed branch explicitly names Shop4 at33-35CorporationCircuit and0755249659; SuperClinic contact page confirms locality spelling Tweed Heads South, correcting source typo Twead. Preserve original ProVision record ID, raw source URL/date, status and point. Clinical property membership recorded separately, not inferred from distance."
+      ]
+    }
+  },
+  "raw_store_sha256_after": "a438244bb1fa1d78ca836db4aecb062eb82ffaabed511d01397185830ad63f8a",
+  "generated_verification": {
+    "accepted_place": true,
+    "setting_other": true,
+    "place_eligible": true,
+    "retail_places": true,
+    "retail_environments": true
+  },
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "browser_verification": {
+    "checked_at": "2026-10-27",
+    "profile": "One Other-format SuperClinic result; selection recentres map. Whole-property33-35CorporationCircuit, source/date, low-confidence point limits and one accepted Envision tenant visible. Co-tenancy missing explicitly unknown.",
+    "summary_export": "/Users/ayden/Downloads/bailey-place-summary-2026-10-27 (5).csv",
+    "tenant_export": "/Users/ayden/Downloads/bailey-place-tenants-2026-10-27 (2).csv",
+    "summary_sha256": "d06e6021039d7675941b783f3394e501942f10a39237e787cff4ee9f419a46b1",
+    "tenant_sha256": "d2fa744413231f0b5348915285418ebfa89da52230b2b88fa32371ff1083c193",
+    "count": 1
+  }
+}

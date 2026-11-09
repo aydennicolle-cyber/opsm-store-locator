@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-10-26",
+  "source_url": "https://www.gentlemonster.com/au/en/stores",
+  "method": "Rendered official directory in browser tab21. Explicitly selected Australia (AU URL initially displayed South Korea). Country city selector listed Melbourne and Sydney. Viewed both city lists: Melbourne one store, Sydney two. Filter dialog showed zero active service filters and all three service checkboxes unchecked.",
+  "matched_records": [
+    {
+      "held_id": "779149709720963067",
+      "name": "GENTLE MONSTER Melbourne Chadstone",
+      "full_address": "Chadstone Shopping Centre, Shop G-011, 1341 Dandenong Rd, Malvern East VIC 3145, Australia",
+      "outcome": "Rendered name and address match held record"
+    },
+    {
+      "held_id": "779149702155858418",
+      "name": "GENTLE MONSTER Sydney David Jones",
+      "full_address": "Elizabeth Street, Ground Floor David Jones, Sydney New South Wales 2000, Australia",
+      "outcome": "Rendered name and address match held record"
+    },
+    {
+      "held_id": "779149678137852858",
+      "name": "GENTLE MONSTER Sydney International Airport",
+      "full_address": "T1 International Terminal, Sydney Airport, Mascot NSW 2020, Australia",
+      "outcome": "Rendered name and address match held record"
+    }
+  ],
+  "roster_outcome": "All three held outlets appear in the two Australian city lists; no additional displayed outlets.",
+  "limitations": [
+    "Compared names and addresses; native IDs, phones and map points were not retrieved from the current rendered directory. Held IDs shown for linkage only.",
+    "Closed/reopens tomorrow is an opening-hours message, not evidence of business closure. No status changes.",
+    "Retain original source and point-review dates and known-outlet coverage limits; no surveyed boundaries, eye-test services or additional memberships established."
+  ],
+  "canonical_changes": []
+}

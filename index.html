@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
     <link rel="stylesheet" href="assets/styles.css?v=20261010-profile-flow" />
     <link rel="stylesheet" href="assets/environment-explorer.css" />
+    <link rel="stylesheet" href="assets/location-news.css" />
   </head>
   <body>
     <header class="app-header">
@@ -30,7 +31,7 @@
           <summary aria-label="Open more intelligence views"><i data-lucide="ellipsis"></i><span>More</span></summary>
           <div class="nav-overflow-menu">
             <button type="button" data-view="coverage"><i data-lucide="chart-no-axes-combined"></i><span><strong>Network & data coverage</strong><small>Inventory, counts and research coverage</small></span></button>
-            <button type="button" data-view="trends"><i data-lucide="chart-no-axes-combined"></i><span><strong>Trends</strong><small>Network changes and source freshness</small></span></button>
+            <button type="button" data-view="trends"><i data-lucide="chart-no-axes-combined"></i><span><strong>News & trends</strong><small>Location histories and database changes</small></span></button>
             <button type="button" data-view="health"><i data-lucide="shield-check"></i><span><strong>Data Health</strong><small>Coverage, evidence and limitations</small></span></button>
           </div>
         </details>
@@ -91,6 +92,8 @@
           <label><input type="checkbox" data-layer="development" /><span><i data-lucide="construction"></i>Growth & development signals</span></label>
           <label><input type="checkbox" data-layer="saturation" /><span><i class="swatch saturation"></i>Competitor saturation</span></label>
           <div class="layer-rule"></div>
+          <label><input type="checkbox" id="showExcludedNearby" checked /><span>Show excluded nearby</span></label>
+          <p id="excludedZoomHint">Appears when zoomed in to a neighbourhood.</p>
           <label><input type="checkbox" data-layer="health" /><span><i data-lucide="cross"></i>Health retailers</span></label>
           <label><input type="checkbox" data-layer="transport" /><span><i data-lucide="train-front"></i>Public transport</span></label>
           <label><input type="checkbox" data-layer="parking" /><span><i data-lucide="square-parking"></i>Parking</span></label>
@@ -146,10 +149,11 @@
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
-    <script src="assets/intelligence.js?v=20261009k"></script>
+    <script src="assets/intelligence.js?v=20261018-store-services"></script>
     <script src="assets/overview.js?v=20261010-overview"></script>
     <script src="assets/environments.js"></script>
+    <script src="assets/location-news.js"></script>
     <script src="assets/environment-explorer.js"></script>
-    <script src="assets/app.js?v=20261010-profile-flow"></script>
+    <script src="assets/app.js?v=20261018-store-services"></script>
   </body>
 </html>

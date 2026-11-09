@@ -1,0 +1,1077 @@
+{
+  "checked_at": "2026-10-26",
+  "source_url": "https://1001optometry.com.au/pages/store-locator",
+  "endpoint": "https://stockist.co/api/v1/u10172/locations/all",
+  "source_count": 16,
+  "held_count": 16,
+  "new_ids": [],
+  "absent_ids": [],
+  "differences": [
+    {
+      "store_id": "1001-optometry-7240052",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 1016, Level 1 Westfield Bondi Junction, 500 Oxford Street, Bondi Junction, NSW, 2022, Australia",
+          "held": "Shop 1016, Level 1, Westfield Bondi Junction, 500 Oxford Street, Bondi Junction, NSW 2022"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/bondi-optometrist-westfield",
+          "held": "https://1001optometry.com.au/pages/bondi-optometrist-westfield"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7240052",
+        "latitude": "-33.89153985",
+        "longitude": "151.25051492",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optical%20Westfield%20Bondi%20Junction",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Retain the existing approximate point, corroborated within 25 metres by the named business feature.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7240052",
+        "name": "1001 Optometry Bondi Junction",
+        "full_address": "Shop 1016, Level 1, Westfield Bondi Junction, 500 Oxford Street, Bondi Junction, NSW 2022",
+        "suburb": "Bondi Junction",
+        "postcode": "2022",
+        "phone": "0293891911",
+        "official_url": "https://1001optometry.com.au/pages/bondi-optometrist-westfield",
+        "website_url": "https://1001optometry.com.au/pages/bondi-optometrist-westfield",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/bondi-optometrist-westfield",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-7298798",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop no. 3-034, Emporium Melbourne, 287 Lonsdale St, Melbourne, VIC, 3000, Australia",
+          "held": "Shop 3-034, Level 3, Emporium Melbourne, 287 Lonsdale Street, Melbourne, VIC 3000"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/optometrist-in-melbourne",
+          "held": "https://1001optometry.com.au/pages/optometrist-in-melbourne"
+        },
+        "latitude": {
+          "current_source": "-37.81208600",
+          "held": "-37.8123362"
+        },
+        "longitude": {
+          "current_source": "144.96369519",
+          "held": "144.9637384"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7298798",
+        "latitude": "-37.8123362",
+        "longitude": "144.9637384",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optical%20Emporium%20Melbourne",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7298798",
+        "name": "1001 Optometry Melbourne - Emporium",
+        "full_address": "Shop 3-034, Level 3, Emporium Melbourne, 287 Lonsdale Street, Melbourne, VIC 3000",
+        "suburb": "Melbourne",
+        "postcode": "3000",
+        "phone": "0393170011",
+        "official_url": "https://1001optometry.com.au/pages/optometrist-in-melbourne",
+        "website_url": "https://1001optometry.com.au/pages/optometrist-in-melbourne",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/optometrist-in-melbourne",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-7298653",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 245, Level 2, Westfield Eastgardens, 152 Bunnerong Road, Eastgardens, NSW, 2036, Australia",
+          "held": "Shop 245, Level 2, Westfield Eastgardens, 152 Bunnerong Road, Eastgardens, NSW 2036"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/eastgardens-optometrist-westfield",
+          "held": "https://1001optometry.com.au/pages/eastgardens-optometrist-westfield"
+        },
+        "latitude": {
+          "current_source": "-33.94481208",
+          "held": "-33.9450659"
+        },
+        "longitude": {
+          "current_source": "151.22425610",
+          "held": "151.2249715"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7298653",
+        "latitude": "-33.9450659",
+        "longitude": "151.2249715",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optical%20Westfield%20Eastgardens",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7298653",
+        "name": "1001 Optometry Eastgardens",
+        "full_address": "Shop 245, Level 2, Westfield Eastgardens, 152 Bunnerong Road, Eastgardens, NSW 2036",
+        "suburb": "Eastgardens",
+        "postcode": "2036",
+        "phone": "0293143331",
+        "official_url": "https://1001optometry.com.au/pages/eastgardens-optometrist-westfield",
+        "website_url": "https://1001optometry.com.au/pages/eastgardens-optometrist-westfield",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/eastgardens-optometrist-westfield",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Operator page structured-data coordinate conflicts with its written premises and the named branch map by approximately 619 metres. Do not import that structured point; retain this source inconsistency.",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-86037479",
+      "differences": {
+        "latitude": {
+          "current_source": "-27.49910870",
+          "held": "-27.499702"
+        },
+        "longitude": {
+          "current_source": "152.97285720",
+          "held": "152.9730189"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-86037479",
+        "latitude": "-27.499702",
+        "longitude": "152.9730189",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optometry%20Indooroopilly%20Shopping%20Centre",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-86037479",
+        "name": "1001 Optometry Indooroopilly",
+        "full_address": "R01-016, Indooroopilly Shopping Centre, 322 Moggill Rd, Indooroopilly, QLD, 4068, Australia",
+        "suburb": "Indooroopilly",
+        "postcode": "4068",
+        "phone": "0733780018",
+        "official_url": "https://1001optometry.com.au/pages/optometrist-indooroopilly-queensland",
+        "website_url": "https://1001optometry.com.au/pages/optometrist-indooroopilly-queensland",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/optometrist-indooroopilly-queensland",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      }
+    },
+    {
+      "store_id": "1001-optometry-7240048",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 1016, Level 1 Westpoint Shopping Centre, 17 Patrick Street, Blacktown, NSW, 2148, Australia",
+          "held": "Westpoint Shopping Centre, Shop 1016, Level 1/17 Patrick St, Blacktown, NSW 2148"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/blacktown-optometrist-westpoint",
+          "held": "https://1001optometry.com.au/pages/blacktown-optometrist-westpoint"
+        },
+        "latitude": {
+          "current_source": "-33.77252131",
+          "held": "-33.769982"
+        },
+        "longitude": {
+          "current_source": "150.90655104",
+          "held": "150.9067827"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7240048",
+        "latitude": "-33.769982",
+        "longitude": "150.9067827",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optical%20Westpoint%20Blacktown",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7240048",
+        "name": "1001 Optometry Blacktown",
+        "full_address": "Westpoint Shopping Centre, Shop 1016, Level 1/17 Patrick St, Blacktown, NSW 2148",
+        "suburb": "Blacktown",
+        "postcode": "2148",
+        "phone": "0296218555",
+        "official_url": "https://1001optometry.com.au/pages/blacktown-optometrist-westpoint",
+        "website_url": "https://1001optometry.com.au/pages/blacktown-optometrist-westpoint",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/blacktown-optometrist-westpoint",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-7298848",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 4036, Level 4, Westfield Parramatta, 159 - 175 Church St, Parramatta, NSW, 2150, Australia",
+          "held": "Shop 4036, Level 4, Westfield Parramatta, 159-175 Church Street, Parramatta, NSW 2150"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/parramatta-optometrist-westfield",
+          "held": "https://1001optometry.com.au/pages/parramatta-optometrist-westfield"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7298848",
+        "latitude": "-33.81770534",
+        "longitude": "151.00211907",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optical%20Westfield%20Parramatta",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Retain the existing approximate point, corroborated within 25 metres by the named business feature.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7298848",
+        "name": "1001 Optometry Parramatta",
+        "full_address": "Shop 4036, Level 4, Westfield Parramatta, 159-175 Church Street, Parramatta, NSW 2150",
+        "suburb": "Parramatta",
+        "postcode": "2150",
+        "phone": "0296873100",
+        "official_url": "https://1001optometry.com.au/pages/parramatta-optometrist-westfield",
+        "website_url": "https://1001optometry.com.au/pages/parramatta-optometrist-westfield",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/parramatta-optometrist-westfield",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Operator page structured-data coordinate conflicts with its written premises and the named branch map by approximately 370 metres. Do not import that structured point; retain this source inconsistency.",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-7297950",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 62, Level 1, Westfield Penrith, 585 Hight St, Penrith, NSW, 2750, Australia",
+          "held": "Shop 62, Level 1, Westfield Penrith, 585 High Street, Penrith, NSW 2750"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/penrith-optometrist-westfield",
+          "held": "https://1001optometry.com.au/pages/penrith-optometrist-westfield"
+        },
+        "latitude": {
+          "current_source": "-33.75193000",
+          "held": "-33.7513421"
+        },
+        "longitude": {
+          "current_source": "150.69149000",
+          "held": "150.6934793"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7297950",
+        "latitude": "-33.7513421",
+        "longitude": "150.6934793",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optical%20Westfield%20Penrith",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7297950",
+        "name": "1001 Optometry Penrith",
+        "full_address": "Shop 62, Level 1, Westfield Penrith, 585 High Street, Penrith, NSW 2750",
+        "suburb": "Penrith",
+        "postcode": "2750",
+        "phone": "0247610640",
+        "official_url": "https://1001optometry.com.au/pages/penrith-optometrist-westfield",
+        "website_url": "https://1001optometry.com.au/pages/penrith-optometrist-westfield",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/penrith-optometrist-westfield",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-7240050",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 257, Level 2, Westfield Chatswood, 1 Anderson St, Chatswood, NSW, 2067, Australia",
+          "held": "Shop 257, Level 2, Westfield Chatswood, 1 Anderson Street, Chatswood, NSW 2067"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/chatswood-optometrist-westfield",
+          "held": "https://1001optometry.com.au/pages/chatswood-optometrist-westfield"
+        },
+        "latitude": {
+          "current_source": "-33.79693511",
+          "held": "-33.7970008"
+        },
+        "longitude": {
+          "current_source": "151.18362583",
+          "held": "151.1842009"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7240050",
+        "latitude": "-33.7970008",
+        "longitude": "151.1842009",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optical%20Westfield%20Chatswood",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7240050",
+        "name": "1001 Optometry Chatswood - Westfield",
+        "full_address": "Shop 257, Level 2, Westfield Chatswood, 1 Anderson Street, Chatswood, NSW 2067",
+        "suburb": "Chatswood",
+        "postcode": "2067",
+        "phone": "0294111114",
+        "official_url": "https://1001optometry.com.au/pages/chatswood-optometrist-westfield",
+        "website_url": "https://1001optometry.com.au/pages/chatswood-optometrist-westfield",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/chatswood-optometrist-westfield",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-7240047",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 1113, Level 1, Westfield Doncaster 619 Doncaster Road (Cnr Williamsons Road), Doncaster, VIC, 3108, Australia",
+          "held": "Shop 1113, Level 1, Westfield Doncaster, 619 Doncaster Road, Doncaster, VIC 3108"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/doncaster-optometrist-westfield",
+          "held": "https://1001optometry.com.au/pages/doncaster-optometrist-westfield"
+        },
+        "latitude": {
+          "current_source": "-37.78341952",
+          "held": "-37.7851115"
+        },
+        "longitude": {
+          "current_source": "145.12776113",
+          "held": "145.1262028"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7240047",
+        "latitude": "-37.7851115",
+        "longitude": "145.1262028",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optical%20Westfield%20Doncaster",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7240047",
+        "name": "1001 Optometry Doncaster",
+        "full_address": "Shop 1113, Level 1, Westfield Doncaster, 619 Doncaster Road, Doncaster, VIC 3108",
+        "suburb": "Doncaster",
+        "postcode": "3108",
+        "phone": "0398401001",
+        "official_url": "https://1001optometry.com.au/pages/doncaster-optometrist-westfield",
+        "website_url": "https://1001optometry.com.au/pages/doncaster-optometrist-westfield",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/doncaster-optometrist-westfield",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-7297952",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 34, Level 1 Upper, Macquarie Centre, Corner Herring & Waterloo Roads, North Ryde, NSW, 2113, Australia",
+          "held": "Shop 34, Level 1 Upper, Macquarie Centre, Corner Herring & Waterloo Roads, North Ryde, NSW 2113"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/north-ryde-optometrist-macquarie-centre",
+          "held": "https://1001optometry.com.au/pages/north-ryde-optometrist-macquarie-centre"
+        },
+        "latitude": {
+          "current_source": "-33.77741995",
+          "held": "-33.7767187"
+        },
+        "longitude": {
+          "current_source": "151.11806007",
+          "held": "151.1205172"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7297952",
+        "latitude": "-33.7767187",
+        "longitude": "151.1205172",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optometry%20Macquarie%20Centre",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7297952",
+        "name": "1001 Optometry North Ryde - Macquarie Centre",
+        "full_address": "Shop 34, Level 1 Upper, Macquarie Centre, Corner Herring & Waterloo Roads, North Ryde, NSW 2113",
+        "suburb": "North Ryde",
+        "postcode": "2113",
+        "phone": "0298898886",
+        "official_url": "https://1001optometry.com.au/pages/north-ryde-optometrist-macquarie-centre",
+        "website_url": "https://1001optometry.com.au/pages/north-ryde-optometrist-macquarie-centre",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/north-ryde-optometrist-macquarie-centre",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-7240051",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop B045, LG Level, Chatswood Chase Shopping Centre, 345 Victoria Avenue, Chatswood, NSW, 2067, Australia",
+          "held": "Shop B045, Lower Ground Level, Chatswood Chase Shopping Centre, 345 Victoria Avenue, Chatswood, NSW 2067"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/chatswood-chase-optometrist",
+          "held": "https://1001optometry.com.au/pages/chatswood-chase-optometrist"
+        },
+        "latitude": {
+          "current_source": "-33.79424818",
+          "held": "-33.7945647"
+        },
+        "longitude": {
+          "current_source": "151.18611557",
+          "held": "151.18613"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7240051",
+        "latitude": "-33.7945647",
+        "longitude": "151.18613",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optometry%20Chatswood%20Chase",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7240051",
+        "name": "1001 Optometry Chatswood Chase",
+        "full_address": "Shop B045, Lower Ground Level, Chatswood Chase Shopping Centre, 345 Victoria Avenue, Chatswood, NSW 2067",
+        "suburb": "Chatswood",
+        "postcode": "2067",
+        "phone": "0294132411",
+        "official_url": "https://1001optometry.com.au/pages/chatswood-chase-optometrist",
+        "website_url": "https://1001optometry.com.au/pages/chatswood-chase-optometrist",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/chatswood-chase-optometrist",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-7298788",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop LG2-1020, Top Ryde City Shopping Centre, Cnr Devlin Street & Blaxland Road, Ryde, NSW, 2112, Australia",
+          "held": "Shop LG2-1020, Top Ryde City Shopping Centre, Cnr Devlin Street & Blaxland Road, Ryde, NSW 2112"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/optometrist-top-ryde-shopping-centre",
+          "held": "https://1001optometry.com.au/pages/optometrist-top-ryde-shopping-centre"
+        },
+        "latitude": {
+          "current_source": "-33.81291995",
+          "held": "-33.8132737"
+        },
+        "longitude": {
+          "current_source": "151.10488011",
+          "held": "151.1063771"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7298788",
+        "latitude": "-33.8132737",
+        "longitude": "151.1063771",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optical%20Top%20Ryde%20City",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7298788",
+        "name": "1001 Optometry Top Ryde",
+        "full_address": "Shop LG2-1020, Top Ryde City Shopping Centre, Cnr Devlin Street & Blaxland Road, Ryde, NSW 2112",
+        "suburb": "Ryde",
+        "postcode": "2112",
+        "phone": "0298077711",
+        "official_url": "https://1001optometry.com.au/pages/optometrist-top-ryde-shopping-centre",
+        "website_url": "https://1001optometry.com.au/pages/optometrist-top-ryde-shopping-centre",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/optometrist-top-ryde-shopping-centre",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Operator page structured-data coordinate conflicts with its written premises and the named branch map by approximately 16936 metres. Do not import that structured point; retain this source inconsistency.",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-7240046",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 117, Box Hill Central, 1 Main St, Box Hill, VIC, 3128, Australia",
+          "held": "Shop 117, Box Hill Central, 1 Main Street, Box Hill, VIC 3128"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/box-hill-optometrist",
+          "held": "https://1001optometry.com.au/pages/box-hill-optometrist"
+        },
+        "latitude": {
+          "current_source": "-37.81919646",
+          "held": "-37.8196529"
+        },
+        "longitude": {
+          "current_source": "145.12203417",
+          "held": "145.1206555"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7240046",
+        "latitude": "-37.8196529",
+        "longitude": "145.1206555",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optical%20Box%20Hill%20Central",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7240046",
+        "name": "1001 Optometry Box Hill",
+        "full_address": "Shop 117, Box Hill Central, 1 Main Street, Box Hill, VIC 3128",
+        "suburb": "Box Hill",
+        "postcode": "3128",
+        "phone": "0398985456",
+        "official_url": "https://1001optometry.com.au/pages/box-hill-optometrist",
+        "website_url": "https://1001optometry.com.au/pages/box-hill-optometrist",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/box-hill-optometrist",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Operator page structured-data coordinate conflicts with its written premises and the named branch map by approximately 459 metres. Do not import that structured point; retain this source inconsistency. Operator and official Box Hill Central directory confirm shopping-centre tenancy, but do not resolve the separate North and South canonical precincts. Remove the unsupported Main Street corridor assignment; keep the retailer usable and promote formal precinct mapping for review.",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-7240049",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 240, Level 1, Westfield Burwood, 100 Burwood Road, Burwood, NSW, 2134, Australia",
+          "held": "Shop 240, Westfield Burwood, 100 Burwood Road, Burwood NSW 2134"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/burwood-optometrist-westfield",
+          "held": "https://1001optometry.com.au/pages/burwood-optometrist-westfield"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7240049",
+        "latitude": "-33.87458051",
+        "longitude": "151.10592676",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optometry%20Westfield%20Burwood",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Retain the existing approximate point, corroborated within 25 metres by the named business feature.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7240049",
+        "name": "1001 Optometry Burwood",
+        "full_address": "Shop 240, Westfield Burwood, 100 Burwood Road, Burwood NSW 2134",
+        "suburb": "Burwood",
+        "postcode": "2134",
+        "phone": "0297440060",
+        "official_url": "https://1001optometry.com.au/pages/burwood-optometrist-westfield",
+        "website_url": "https://1001optometry.com.au/pages/burwood-optometrist-westfield",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/burwood-optometrist-westfield",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Operator lists Level 1 while named map lists Level 2 for the same shop 240. Omit the unresolved floor from the canonical address; both sources identify Westfield Burwood.",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-7297949",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 1026/7, Level 1, Westfield Hornsby, 236 Pacific Highway, Hornsby, NSW, 2077, Australia",
+          "held": "Shop 1026/7, Level 1, Westfield Hornsby, 236 Pacific Highway, Hornsby, NSW 2077"
+        },
+        "official_url": {
+          "current_source": "https://1001-optical.myshopify.com/pages/hornsby-optometrist-westfield",
+          "held": "https://1001optometry.com.au/pages/hornsby-optometrist-westfield"
+        },
+        "latitude": {
+          "current_source": "-33.70473807",
+          "held": "-33.7043415"
+        },
+        "longitude": {
+          "current_source": "151.09958392",
+          "held": "151.1006823"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-7297949",
+        "latitude": "-33.7043415",
+        "longitude": "151.1006823",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optical%20Westfield%20Hornsby",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-7297949",
+        "name": "1001 Optometry Hornsby",
+        "full_address": "Shop 1026/7, Level 1, Westfield Hornsby, 236 Pacific Highway, Hornsby, NSW 2077",
+        "suburb": "Hornsby",
+        "postcode": "2077",
+        "phone": "0299872003",
+        "official_url": "https://1001optometry.com.au/pages/hornsby-optometrist-westfield",
+        "website_url": "https://1001optometry.com.au/pages/hornsby-optometrist-westfield",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/hornsby-optometrist-westfield",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    },
+    {
+      "store_id": "1001-optometry-24622066",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 151, Level 1, Westfield Hurstville, 3 Cross Street & Park Road, Hurstville, NSW, 2220, Australia",
+          "held": "Shop 151, Level 1, Westfield Hurstville, 3 Cross Street and Park Road, Hurstville, NSW 2220"
+        },
+        "official_url": {
+          "current_source": "https://www.1001optical.com.au/pages/optometrist-hurstville-shopping-centre",
+          "held": "https://1001optometry.com.au/pages/optometrist-hurstville-shopping-centre"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "1001-optometry-24622066",
+        "latitude": "-33.96551999",
+        "longitude": "151.10492998",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=1001%20Optometry%20Hurstville%20Westfield",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Retain the existing approximate point, corroborated within 25 metres by the named business feature.",
+        "coordinate_confidence": "Medium \u2014 approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "1001-optometry-24622066",
+        "name": "1001 Optometry Hurstville",
+        "full_address": "Shop 151, Level 1, Westfield Hurstville, 3 Cross Street and Park Road, Hurstville, NSW 2220",
+        "suburb": "Hurstville",
+        "postcode": "2220",
+        "phone": "0291715638",
+        "official_url": "https://1001optometry.com.au/pages/optometrist-hurstville-shopping-centre",
+        "website_url": "https://1001optometry.com.au/pages/optometrist-hurstville-shopping-centre",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://1001optometry.com.au/pages/optometrist-hurstville-shopping-centre",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Use the current official branch URL. The locator exposes its branch link in website rather than the custom Find Out More field; importer fallback repaired. Operator page structured-data coordinate conflicts with its written premises and the named branch map by approximately 11056 metres. Do not import that structured point; retain this source inconsistency.",
+        "retailer": "1001 Optometry",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "address_review": "Same named property, shop and street reference; formatting/abbreviation or supplementary level/corner detail differs. Retain existing reviewed address; no evidence of relocation from this comparison.",
+      "url_review": "Retain reviewed branded operator URL rather than reverting to myshopify hostname in locator."
+    }
+  ],
+  "source_records": [
+    {
+      "id": "7240048",
+      "name": "1001 Optometry Blacktown",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Blacktown",
+      "postal_code": "2148",
+      "full_address": "Shop 1016, Level 1 Westpoint Shopping Centre, 17 Patrick Street, Blacktown, NSW, 2148, Australia",
+      "phone": "(02) 9621 8555",
+      "latitude": "-33.77252131",
+      "longitude": "150.90655104",
+      "official_url": "https://1001-optical.myshopify.com/pages/blacktown-optometrist-westpoint",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "7240052",
+      "name": "1001 Optometry Bondi Junction",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Bondi Junction",
+      "postal_code": "2022",
+      "full_address": "Shop 1016, Level 1 Westfield Bondi Junction, 500 Oxford Street, Bondi Junction, NSW, 2022, Australia",
+      "phone": "(02) 9389 1911",
+      "latitude": "-33.89153985",
+      "longitude": "151.25051492",
+      "official_url": "https://1001-optical.myshopify.com/pages/bondi-optometrist-westfield",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "7240046",
+      "name": "1001 Optometry Box Hill",
+      "status": "Active",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "Box Hill",
+      "postal_code": "3128",
+      "full_address": "Shop 117, Box Hill Central, 1 Main St, Box Hill, VIC, 3128, Australia",
+      "phone": "(03) 9898 5456",
+      "latitude": "-37.81919646",
+      "longitude": "145.12203417",
+      "official_url": "https://1001-optical.myshopify.com/pages/box-hill-optometrist",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "7240049",
+      "name": "1001 Optometry Burwood",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Burwood",
+      "postal_code": "2134",
+      "full_address": "Shop 240, Level 1, Westfield Burwood, 100 Burwood Road, Burwood, NSW, 2134, Australia",
+      "phone": "(02) 9744 0060",
+      "latitude": "-33.87458051",
+      "longitude": "151.10592676",
+      "official_url": "https://1001-optical.myshopify.com/pages/burwood-optometrist-westfield",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "7240050",
+      "name": "1001 Optometry Chatswood - Westfield",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Chatswood",
+      "postal_code": "2067",
+      "full_address": "Shop 257, Level 2, Westfield Chatswood, 1 Anderson St, Chatswood, NSW, 2067, Australia",
+      "phone": "(02) 9411 1114",
+      "latitude": "-33.79693511",
+      "longitude": "151.18362583",
+      "official_url": "https://1001-optical.myshopify.com/pages/chatswood-optometrist-westfield",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "7240051",
+      "name": "1001 Optometry Chatswood Chase",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Chatswood",
+      "postal_code": "2067",
+      "full_address": "Shop B045, LG Level, Chatswood Chase Shopping Centre, 345 Victoria Avenue, Chatswood, NSW, 2067, Australia",
+      "phone": "(02) 9413 2411",
+      "latitude": "-33.79424818",
+      "longitude": "151.18611557",
+      "official_url": "https://1001-optical.myshopify.com/pages/chatswood-chase-optometrist",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "7240047",
+      "name": "1001 Optometry Doncaster",
+      "status": "Active",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "Doncaster",
+      "postal_code": "3108",
+      "full_address": "Shop 1113, Level 1, Westfield Doncaster 619 Doncaster Road (Cnr Williamsons Road), Doncaster, VIC, 3108, Australia",
+      "phone": "(03) 9840 1001",
+      "latitude": "-37.78341952",
+      "longitude": "145.12776113",
+      "official_url": "https://1001-optical.myshopify.com/pages/doncaster-optometrist-westfield",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "7298653",
+      "name": "1001 Optometry Eastgardens",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Eastgardens",
+      "postal_code": "2036",
+      "full_address": "Shop 245, Level 2, Westfield Eastgardens, 152 Bunnerong Road, Eastgardens, NSW, 2036, Australia",
+      "phone": "(02) 9314 3331",
+      "latitude": "-33.94481208",
+      "longitude": "151.22425610",
+      "official_url": "https://1001-optical.myshopify.com/pages/eastgardens-optometrist-westfield",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "7297949",
+      "name": "1001 Optometry Hornsby",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Hornsby",
+      "postal_code": "2077",
+      "full_address": "Shop 1026/7, Level 1, Westfield Hornsby, 236 Pacific Highway, Hornsby, NSW, 2077, Australia",
+      "phone": "(02) 9987 2003",
+      "latitude": "-33.70473807",
+      "longitude": "151.09958392",
+      "official_url": "https://1001-optical.myshopify.com/pages/hornsby-optometrist-westfield",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "24622066",
+      "name": "1001 Optometry Hurstville",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Hurstville",
+      "postal_code": "2220",
+      "full_address": "Shop 151, Level 1, Westfield Hurstville, 3 Cross Street & Park Road, Hurstville, NSW, 2220, Australia",
+      "phone": "(02) 9171 5638",
+      "latitude": "-33.96551999",
+      "longitude": "151.10492998",
+      "official_url": "https://www.1001optical.com.au/pages/optometrist-hurstville-shopping-centre",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "86037479",
+      "name": "1001 Optometry Indooroopilly",
+      "status": "Active",
+      "country": "Australia",
+      "state": "QLD",
+      "city": "Indooroopilly",
+      "postal_code": "4068",
+      "full_address": "R01-016, Indooroopilly Shopping Centre, 322 Moggill Rd, Indooroopilly, QLD, 4068, Australia",
+      "phone": "(07) 3378 0018",
+      "latitude": "-27.49910870",
+      "longitude": "152.97285720",
+      "official_url": "https://1001optometry.com.au/pages/optometrist-indooroopilly-queensland",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "7298798",
+      "name": "1001 Optometry Melbourne - Emporium",
+      "status": "Active",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "Melbourne",
+      "postal_code": "3000",
+      "full_address": "Shop no. 3-034, Emporium Melbourne, 287 Lonsdale St, Melbourne, VIC, 3000, Australia",
+      "phone": "(03) 9317 0011",
+      "latitude": "-37.81208600",
+      "longitude": "144.96369519",
+      "official_url": "https://1001-optical.myshopify.com/pages/optometrist-in-melbourne",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "7297952",
+      "name": "1001 Optometry North Ryde - Macquarie Centre",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "North Ryde",
+      "postal_code": "2113",
+      "full_address": "Shop 34, Level 1 Upper, Macquarie Centre, Corner Herring & Waterloo Roads, North Ryde, NSW, 2113, Australia",
+      "phone": "(02) 9889 8886",
+      "latitude": "-33.77741995",
+      "longitude": "151.11806007",
+      "official_url": "https://1001-optical.myshopify.com/pages/north-ryde-optometrist-macquarie-centre",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "7298848",
+      "name": "1001 Optometry Parramatta",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Parramatta",
+      "postal_code": "2150",
+      "full_address": "Shop 4036, Level 4, Westfield Parramatta, 159 - 175 Church St, Parramatta, NSW, 2150, Australia",
+      "phone": "(02) 9687 3100",
+      "latitude": "-33.81770534",
+      "longitude": "151.00211907",
+      "official_url": "https://1001-optical.myshopify.com/pages/parramatta-optometrist-westfield",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "7297950",
+      "name": "1001 Optometry Penrith",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Penrith",
+      "postal_code": "2750",
+      "full_address": "Shop 62, Level 1, Westfield Penrith, 585 Hight St, Penrith, NSW, 2750, Australia",
+      "phone": "(02) 4761 0640",
+      "latitude": "-33.75193000",
+      "longitude": "150.69149000",
+      "official_url": "https://1001-optical.myshopify.com/pages/penrith-optometrist-westfield",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    },
+    {
+      "id": "7298788",
+      "name": "1001 Optometry Top Ryde",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Ryde",
+      "postal_code": "2112",
+      "full_address": "Shop LG2-1020, Top Ryde City Shopping Centre, Cnr Devlin Street & Blaxland Road, Ryde, NSW, 2112, Australia",
+      "phone": "(02) 9807 7711",
+      "latitude": "-33.81291995",
+      "longitude": "151.10488011",
+      "official_url": "https://1001-optical.myshopify.com/pages/optometrist-top-ryde-shopping-centre",
+      "services": "",
+      "audiology": "false",
+      "source_url": "https://1001optometry.com.au/pages/store-locator"
+    }
+  ],
+  "limitations": "Locator reconciliation, not independent current-trading verification. Reviewed overrides may deliberately differ from locator. Original observation dates unchanged.",
+  "reconciliation_status": "16 identities reconciled, no new/absent IDs, all phones match. All 15 address differences reviewed: no relocation established. Existing reviewed addresses and branded URLs retained; coordinate review still to close."
+}

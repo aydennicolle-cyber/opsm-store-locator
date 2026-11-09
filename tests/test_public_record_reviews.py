@@ -181,7 +181,7 @@ class PublicRecordReviews(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'Invalid public URL'):
                 apply_public_facts([dict(store)], self.csv_file(d, {**base, 'directory_url': 'not a URL'}))
 
-    def test_reviewed_address_repair_remains_visible_with_uncertain_setting(self):
+    def test_reviewed_address_repair_and_separate_membership_evidence(self):
         def rows(name):
             with (ROOT / 'data' / name).open() as f:
                 return {r['store_id']: r for r in csv.DictReader(f)}
@@ -190,11 +190,24 @@ class PublicRecordReviews(unittest.TestCase):
         key = 'independent-other-optical-osm-ne-node-4757538924'
         self.assertIn('1025 Ferry Road', stores[key]['full_address'])
         self.assertEqual(stores[key]['location_type'], 'Unclassified')
-        self.assertEqual(memberships[key]['location_setting'], 'Uncertain')
+        # The raw classification stays intact; later explicit property evidence
+        # establishes membership independently of the address correction.
+        self.assertEqual(memberships[key]['location_setting'], 'Other')
+        self.assertEqual(memberships[key]['place_id'], 'place-nz-canterbury-ferrymead-the-sails')
         self.assertEqual(memberships[key]['usable_for_network'], 'true')
         self.assertEqual(cert[key]['eligible_for_analytics'], 'true')
-        self.assertEqual(cert[key]['eligible_for_place_analytics'], 'false')
-        self.assertIn(key, rows('place_review.csv'))
+        self.assertEqual(cert[key]['eligible_for_place_analytics'], 'true')
+        self.assertNotIn(key, rows('place_review.csv'))
+        # A later visual review establishes standalone setting, not membership.
+        unresolved = 'independent-other-optical-reviewed-nz-papamoa-optometrists'
+        self.assertIn('25 Domain Road', stores[unresolved]['full_address'])
+        self.assertEqual(memberships[unresolved]['location_setting'], 'Other')
+        self.assertEqual(memberships[unresolved]['review_status'], 'Accepted')
+        self.assertIn('25 Domain', rows('store_place_overrides.csv')[unresolved]['evidence_basis'])
+        self.assertEqual(memberships[unresolved]['place_id'], '')
+        self.assertEqual(cert[unresolved]['eligible_for_analytics'], 'true')
+        self.assertEqual(cert[unresolved]['eligible_for_place_analytics'], 'false')
+        self.assertNotIn(unresolved, rows('place_review.csv'))
         # An eyewear retailer inside a medical centre is still included.
         medical = 'independent-other-optical-reviewed-nz-frith-laird-manurewa'
         self.assertEqual(memberships[medical]['location_setting'], 'Other')

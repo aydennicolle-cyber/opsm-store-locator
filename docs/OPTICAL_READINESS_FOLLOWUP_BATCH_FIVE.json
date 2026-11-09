@@ -1,0 +1,131 @@
+{
+  "status": "All nine validation stages passed; four generated outcomes verified. Browser and export verification remains pending.",
+  "raw_store_sha256": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "accepted": [],
+  "unresolved": [
+    {
+      "store_id": "independent-other-optical-reviewed-nz-ts-opticians-belfast",
+      "store_fingerprint": "292b9b093875ba3e2a814d47782ba524fc83ad6b6cba3ff05d673d8c0c2e29a9",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.sight.co.nz/",
+      "reason": "Operator page reviewed 27 October 2026 confirms 554 Main North Road, phone 03 323 7583 and neighbouring About Clean/Dulux. Northwood in its header and Belfast in retained provider evidence are locality variants, not separate practices. Operator still announces a future Bespoke Optical Co rebrand with the same team; no completion date or duplicate outlet is inferred. Focused property research did not establish a named centre or accepted corridor. Canonical place membership remains unresolved; proximity to Northwood retail properties is not tenancy proof."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-lincoln-eye",
+      "store_fingerprint": "d0618dadc5ad23582af07b14864ee2c4b57f5a770f21e8356e877800072718a7",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.lincolneye.co.nz/",
+      "reason": "Operator page reviewed 27 October 2026 confirms 32 Gerald Street, Lincoln 7608 and continuing service for Rolleston Eye clients. Bayleys property listing5526439 explicitly describes the optometrist in the front building of this two-building property on Lincoln main street. This supports street-front premises, not a named centre or surveyed study district. No accepted Gerald Street corridor exists in the current inventory. Keep canonical membership unresolved and preserve the historical Rolleston reconciliation. The property listing is marked Sold, which is not evidence of practice closure or current ownership."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-th-optometrists-bryndwr",
+      "store_fingerprint": "6ba7de7e804a2f32f6d208f03cf9d3bc01409cc23e0cbf0aeeb8ed03112b0a8e",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://thoptometrists.co.nz/contact-us/",
+      "reason": "Operator contact page retrieved 27 October 2026 confirms 276 Wairakei Road, Bryndwyr, phone 03 359 4610 and separates Redcliffs and Ashburton branches. Its named Bryndwyr map marker is approximately 3 metres from the retained manufacturer point, supporting retention of that approximate business reference. The homepage returned a host error, but the contact page succeeded; no closure is inferred. No explicit shopping-centre tenancy or accepted Wairakei corridor was established. Keep canonical membership unresolved; Bryndwr/Bryndwyr spelling does not create another practice."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-anstice-ilam",
+      "store_fingerprint": "ab74f9a5b161fbc009dd1e7757dcad8fb7f547e9c7c36eea09bb3a1c11bf257f",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.anstice.co.nz/Contact/",
+      "reason": "Operator contact page retrieved 27 October 2026 confirms 10 Clyde Road, Upper Riccarton 8041, and distinguishes its postal box. Ilam and Upper Riccarton are retained locality variants. The existing manufacturer point is retained as an approximate business reference: Healthpoint places the same address about 222 metres north (content dated 18 June 2024), while the operator embedded map viewport is about 29 metres south and is not an independently verified storefront marker. Exact frontage remains unverified; do not silently replace the point with either map centre. No named centre or accepted local corridor is established. Keep canonical membership unresolved and do not reuse the unrelated Browns Bay Clyde Road corridor. The one-day Labour Day closure on 26 October is not continuing-closure evidence."
+    }
+  ],
+  "corroborating_sources": [
+    "https://www.bayleys.co.nz/listings/commercial/canterbury/selwyn/32-gerald-street-lincoln-5526439",
+    "https://shamir.com/nz/for-consumers/lenses_and_more/practice-locator/",
+    "https://www.christchurchoptometrist.co.nz/th-optometrists-bryndwr",
+    "https://www.healthpoint.co.nz/eye-care/optometry/anstice-associates-optometrists/"
+  ],
+  "limits": "No raw store dates, status, address or point changed. Provider search excerpt only for T&S; full operator and Bayleys pages retrieved.",
+  "coordinate_investigation": {
+    "anstice": {
+      "held": [
+        -43.529800028847,
+        172.5873299
+      ],
+      "healthpoint": [
+        -43.5278066,
+        172.5873264
+      ],
+      "operator_viewport": [
+        -43.53006449999999,
+        172.5873299
+      ],
+      "outcome": "Retain manufacturer approximate reference; conflicting location and unverified frontage explicitly carried in review reason."
+    },
+    "th_bryndwr": {
+      "held": [
+        -43.4996550350679,
+        172.586643573016
+      ],
+      "operator_named_marker": [
+        -43.49965520000001,
+        172.5866081
+      ],
+      "outcome": "Corroborated within approximately3m; retain original point and original source dates."
+    }
+  },
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": [
+    {
+      "store_id": "independent-other-optical-reviewed-nz-ts-opticians-belfast",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-lincoln-eye",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-th-optometrists-bryndwr",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-anstice-ilam",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    }
+  ]
+}

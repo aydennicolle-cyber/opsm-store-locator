@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-10-27",
+  "status": "Source investigation recorded; membership decisions not yet applied",
+  "method": "Standard web retrieval only; no Firecrawl used",
+  "sources": [
+    {
+      "url": "https://www.catandfiddlearcade.com/wp-content/uploads/2025/08/CF-Directory-Aug25.pdf",
+      "finding": "Official four-page directory PDF retrieved. Identifies Bupa FF9 under Services and Other; optical section lists Oscar Wylee 16, Specsavers 53a and Sunglass Hut 36. Map text includes Myer and MyerLink. Directory omission is not proof of absence; PDF filename indicates August 2025, not current complete coverage."
+    },
+    {
+      "url": "https://stores.sunglasshut.com/au/tas/hobart/55-murray-street",
+      "store_id": "sunglass-hut-B818",
+      "finding": "Full operator page confirms Myer Hobart, 55 Murray Street, Myer Street Entry and phone 03 6213 6108. Distinct host-department-store concession; do not conflate with Cat and Fiddle shop 36. A street-front classification needs reconsideration; PDF Myer connection alone has not settled the canonical parent membership."
+    },
+    {
+      "url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-hobart",
+      "store_id": "bupa-optical-13626262",
+      "finding": "Full operator page confirms optical and hearing branch at 112 Liverpool Street, 03 4108 9411. Do not equate the directory Bupa FF9 name with this optical branch without branch-specific evidence."
+    },
+    {
+      "url": "https://baileynelson.com.au/pages/optometrist-hobart",
+      "store_id": "bailey-nelson-hobart",
+      "finding": "Full operator page confirms 35 Murray Street and 03 6164 0371. Supports retained numbered street address; does not assert Cat and Fiddle tenancy."
+    },
+    {
+      "url": "https://georgeandmatilda.com.au/stores/optometrist-hobart-tas/",
+      "store_id": "george-matilda-395",
+      "finding": "Full operator page confirms 137 Liverpool Street, 03 6231 9801, describing Murray and Liverpool intersection. No explicit arcade tenancy established."
+    },
+    {
+      "url": "https://www.opsm.com.au/stores/tas/hobart/opsm-hobart-collins-st/2293",
+      "store_id": "opsm-2293",
+      "finding": "Search extract confirms 140 Collins Street and 03 6270 6555. Full page still to read before a final review decision."
+    }
+  ],
+  "next_action": "Reconcile Myer concession setting and parent place separately from nearby street businesses. Preserve operator addresses and IDs; record retained street decisions without claiming verified non-tenancy from directory omissions."
+}

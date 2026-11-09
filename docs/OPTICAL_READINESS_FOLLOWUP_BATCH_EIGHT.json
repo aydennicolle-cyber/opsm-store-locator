@@ -1,0 +1,87 @@
+{
+  "status": "All nine validation stages passed; three generated outcomes verified. Browser and export verification remains pending.",
+  "raw_store_sha256": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "accepted": [],
+  "unresolved": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-2613244951",
+      "store_fingerprint": "996cfd4c2b77c33e279bbe4c9b027f847b1c807fed73423c30703ecc4af3f22c",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.openstreetmap.org/node/2613244951",
+      "reason": "Original OSM node retrieved through structured public API on 27 October 2026 retains only the name 'Eye care Optometrist', an optical tag and a map position, with no address, phone or operator website. Last source edit was 2014-01-07; retrieval is not a trading check. The generic label cannot reliably identify a specific operator; a nearby address or business cannot be substituted without evidence. Keep the original identity and point, missing-address restriction and unresolved canonical membership. Exclude from network and place-specific analysis until a meaningful premises address and identity are established."
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-4546327090",
+      "store_fingerprint": "752ee2cb40c8c746bf5cdab5f903e4f2f680dd82a2921b1e3d6bcec378fc3e3c",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.openstreetmap.org/node/4546327090",
+      "reason": "Original OSM node retrieved through structured public API on 27 October 2026 retains only the name 'Optometrists', an optical tag and a map position, with no address, phone or operator website. Last source edit was 2016-12-09; retrieval is not a trading check. The generic label cannot reliably identify a specific operator; a nearby address or business cannot be substituted without evidence. Keep the original identity and point, missing-address restriction and unresolved canonical membership. Exclude from network and place-specific analysis until a meaningful premises address and identity are established."
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-3991780847",
+      "store_fingerprint": "a1a6202d22986e907977d2319ce7c93312c08b23a16ee4ea20bed809b892a269",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.openstreetmap.org/node/3991780847",
+      "reason": "Original OSM node retrieved through structured public API on 27 October 2026 retains only the name 'avian eyecare', an optical tag and a map position, with no address, phone or operator website. Last source edit was 2018-11-04; retrieval is not a trading check. Healthengine and MyHealth1st describe historical Evian at The Forum, 3P7/203 Pacific Highway, but neither explicitly links the abbreviated OSM identity. MyHealth1st labels its page disabled2; the historical operator URL redirects to Whitehouse at 66 Pacific Highway with a different phone. None proves closure, relocation or identity equivalence. Do not merge with Whitehouse or transfer the historical unit address to this record. Keep the original identity and point, missing-address restriction and unresolved canonical membership. Exclude from network and place-specific analysis until a meaningful premises address and identity are established."
+    }
+  ],
+  "sources": [
+    "https://www.openstreetmap.org/api/0.6/nodes.json?nodes=2613244951%2C4546327090%2C3991780847",
+    "https://healthengine.com.au/optometrist/nsw/st-leonards/evian-optometrists-by-gandm-eyecare-st-leonards-nsw/s59019",
+    "https://www.myhealth1st.com.au/find/optometrists/nsw/sydney-north-sydney-and-hornsby/st-leonards/george-matilda-eyecare-st-leonards",
+    "https://georgeandmatilda.com.au/stores/evian-optometrists-by-g-m-eyecare-st-leonards/"
+  ],
+  "limits": "Addresses and statuses deliberately unchanged. Historical listing and redirect do not prove a present operator, closure or move. Generic OSM identities remain unresolved after original-source inspection.",
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-2613244951",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "network_excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-4546327090",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "network_excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-3991780847",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "network_excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,483 @@
+{
+  "status": "Nine validation stages passed; three generated address repairs, separate Springvale property and analytical exclusions verified. Browser/export verification pending.",
+  "original_stores": {
+    "independent-other-optical-osm-au-node-5402564830": {
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-osm-au-node-5402564830",
+      "affiliations": "",
+      "name": "Dream Eyes",
+      "status": "Mapped",
+      "country": "Australia",
+      "state": "VIC",
+      "suburb": "",
+      "postcode": "",
+      "full_address": "F13, Australia",
+      "phone": "",
+      "latitude": "-37.9506545",
+      "longitude": "145.1507984",
+      "official_url": "",
+      "website_url": "",
+      "instagram_url": "",
+      "facebook_url": "",
+      "directory_url": "",
+      "services": "Optical / optician listing",
+      "audiology": "false",
+      "venue_name": "",
+      "venue_id": "",
+      "location_type": "Unclassified",
+      "classification_confidence": "Low",
+      "classification_basis": "Insufficient official venue or street evidence",
+      "store_area_sqm": "",
+      "area_measure": "",
+      "area_source": "",
+      "area_date": "",
+      "area_confidence": "Unknown",
+      "source_url": "https://www.openstreetmap.org/node/5402564830",
+      "fetched_at": "2026-09-01T07:48:20.085579Z",
+      "business_type": "",
+      "identity_reviewed": "",
+      "coordinates_reviewed": "",
+      "status_evidence_url": "",
+      "status_verified_at": "",
+      "status_reason": "",
+      "coordinate_confidence": "",
+      "coordinate_evidence_url": "",
+      "coordinates_verified_at": "",
+      "coordinate_reason": "",
+      "public_facts_verified_at": "",
+      "public_facts_evidence_url": "",
+      "public_facts_reason": ""
+    },
+    "independent-other-optical-osm-au-node-11145701652": {
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-osm-au-node-11145701652",
+      "affiliations": "",
+      "name": "Care4eyes",
+      "status": "Mapped",
+      "country": "Australia",
+      "state": "VIC",
+      "suburb": "",
+      "postcode": "",
+      "full_address": "44 Jackson Court, Australia",
+      "phone": "+61 3 9848 2766",
+      "latitude": "-37.7888524",
+      "longitude": "145.1493893",
+      "official_url": "",
+      "website_url": "",
+      "instagram_url": "",
+      "facebook_url": "",
+      "directory_url": "",
+      "services": "Optical / optician listing",
+      "audiology": "false",
+      "venue_name": "",
+      "venue_id": "",
+      "location_type": "Unclassified",
+      "classification_confidence": "Low",
+      "classification_basis": "Insufficient official venue or street evidence",
+      "store_area_sqm": "",
+      "area_measure": "",
+      "area_source": "",
+      "area_date": "",
+      "area_confidence": "Unknown",
+      "source_url": "https://www.openstreetmap.org/node/11145701652",
+      "fetched_at": "2026-09-01T07:48:20.085579Z",
+      "business_type": "",
+      "identity_reviewed": "",
+      "coordinates_reviewed": "",
+      "status_evidence_url": "",
+      "status_verified_at": "",
+      "status_reason": "",
+      "coordinate_confidence": "",
+      "coordinate_evidence_url": "",
+      "coordinates_verified_at": "",
+      "coordinate_reason": "",
+      "public_facts_verified_at": "",
+      "public_facts_evidence_url": "",
+      "public_facts_reason": ""
+    },
+    "independent-other-optical-osm-au-way-537154052": {
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-osm-au-way-537154052",
+      "affiliations": "",
+      "name": "Eye Society",
+      "status": "Mapped",
+      "country": "Australia",
+      "state": "VIC",
+      "suburb": "",
+      "postcode": "",
+      "full_address": "365, Australia",
+      "phone": "",
+      "latitude": "-37.9528383",
+      "longitude": "145.1524449",
+      "official_url": "",
+      "website_url": "",
+      "instagram_url": "",
+      "facebook_url": "",
+      "directory_url": "",
+      "services": "Optical / optician listing",
+      "audiology": "false",
+      "venue_name": "",
+      "venue_id": "",
+      "location_type": "Unclassified",
+      "classification_confidence": "Low",
+      "classification_basis": "Insufficient official venue or street evidence",
+      "store_area_sqm": "",
+      "area_measure": "",
+      "area_source": "",
+      "area_date": "",
+      "area_confidence": "Unknown",
+      "source_url": "https://www.openstreetmap.org/way/537154052",
+      "fetched_at": "2026-09-01T07:48:20.085579Z",
+      "business_type": "",
+      "identity_reviewed": "",
+      "coordinates_reviewed": "",
+      "status_evidence_url": "",
+      "status_verified_at": "",
+      "status_reason": "",
+      "coordinate_confidence": "",
+      "coordinate_evidence_url": "",
+      "coordinates_verified_at": "",
+      "coordinate_reason": "",
+      "public_facts_verified_at": "",
+      "public_facts_evidence_url": "",
+      "public_facts_reason": ""
+    }
+  },
+  "fact_overrides": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-5402564830",
+      "name": "",
+      "full_address": "Level 2, Shop F13, Springvale Shopping Centre, 46-58 Buckingham Avenue, Springvale VIC 3171",
+      "suburb": "Springvale",
+      "postcode": "3171",
+      "phone": "0385213277",
+      "official_url": "",
+      "website_url": "",
+      "services": "",
+      "business_type": "",
+      "evidence_url": "https://springvaleshoppingcentre.com.au/portfolio_category/optometrist/",
+      "verified_at": "2026-10-27",
+      "reason": "Official centre directory indexed content explicitly identifies Dream Eyes at Level 2, Shop F13, with its phone number. The footer supplies 46-58 Buckingham Avenue. The original OSM node independently records F13 and layer 2. The full reader failed, but indexed official content was accessible. The entry has a 2019 administrative timestamp, not proof of current trading. Preserve Mapped status, the original point and source dates. This is distinct from Springvale Central at 268-274 Springvale Road.",
+      "retailer": "",
+      "affiliations": "",
+      "clear_fields": "",
+      "directory_url": "https://springvaleshoppingcentre.com.au/portfolio_category/optometrist/"
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-11145701652",
+      "name": "",
+      "full_address": "Shop 1, 44 Jackson Court, Doncaster East VIC 3109",
+      "suburb": "Doncaster East",
+      "postcode": "3109",
+      "phone": "0398482766",
+      "official_url": "",
+      "website_url": "",
+      "services": "",
+      "business_type": "",
+      "evidence_url": "https://www.openstreetmap.org/node/11145701652",
+      "verified_at": "2026-10-27",
+      "reason": "Original OSM tags explicitly supply Shop 1, 44 Jackson Court and the phone number. Independent directories corroborate the business and phone at 42/44 Jackson Court, Doncaster East 3109. Preserve the original unit and 44 address form; the 42/44 variant and exact frontage remain unresolved. No fresh trading evidence. Preserve Mapped status, the original point and source date.",
+      "retailer": "",
+      "affiliations": "",
+      "clear_fields": "",
+      "directory_url": "https://www.openstreetmap.org/node/11145701652"
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-way-537154052",
+      "name": "",
+      "full_address": "365 Springvale Road, Springvale VIC 3171",
+      "suburb": "Springvale",
+      "postcode": "3171",
+      "phone": "",
+      "official_url": "",
+      "website_url": "",
+      "services": "",
+      "business_type": "",
+      "evidence_url": "https://au.linkedin.com/company/eye-society",
+      "verified_at": "2026-10-27",
+      "reason": "The business company page explicitly lists 365 Springvale Road, Springvale VIC 3171 and eyesociety.com.au; multiple public directories agree. The original OSM building has number 365 and Eye Society. The operator website reader timed out; current trading is unverified. Preserve Mapped status, the original point and source date. Nearby shopping centres do not establish membership.",
+      "retailer": "",
+      "affiliations": "",
+      "clear_fields": "",
+      "directory_url": "https://au.linkedin.com/company/eye-society"
+    }
+  ],
+  "source_method": "Retained OSM tags plus standard web search/reader. No Firecrawl. Do not turn cached source content into current trading verification.",
+  "corroboration": [
+    "https://springvaleshoppingcentre.com.au/stores/page/3/",
+    "https://www.cylex-australia.com/doncaster-east/ophthalmologists-optometrists-opticians/",
+    "https://reviews.birdeye.com/care4eyes-168121474122858",
+    "https://www.whitepages.com.au/eye-society-pty-ltd-11313523/springvale-vic-11313520B"
+  ],
+  "next_steps": "Prepare Dream Eyes canonical property/membership with whole-property address and explicit low-confidence tenant-reference point. Add current-fingerprint unresolved reviews for Care4eyes and EyeSociety after staged network rebuild. Stage exactly-three-store changes preserving status,points,rawsource dates. Check other automatic properties; do not accept inferred centre membership.",
+  "accepted": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-5402564830",
+      "location_setting": "Shopping Centre",
+      "canonical_name": "Springvale Shopping Centre",
+      "place_type": "Shopping Centre",
+      "official_url": "https://springvaleshoppingcentre.com.au/portfolio_category/optometrist/",
+      "evidence_basis": "The official centre directory explicitly lists Dream Eyes at Level 2, Shop F13. The property is at 46-58 Buckingham Avenue, separate from Springvale Central on Springvale Road. Directory publication freshness is uncertain; membership does not establish current trading.",
+      "confidence": "High",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "https://springvaleshoppingcentre.com.au/",
+      "canonical_place_id": "place-au-vic-springvale-shopping-centre"
+    }
+  ],
+  "canonical": [
+    {
+      "place_id": "place-au-vic-springvale-shopping-centre",
+      "canonical_name": "Springvale Shopping Centre",
+      "aliases": "",
+      "official_url": "https://springvaleshoppingcentre.com.au/",
+      "evidence_url": "https://springvaleshoppingcentre.com.au/portfolio_category/optometrist/",
+      "verified_at": "2026-10-27",
+      "reason": "Distinct named property on Buckingham Avenue; do not merge with Springvale Central on Springvale Road.",
+      "state": "VIC",
+      "locality": "Springvale",
+      "postcode": "3171",
+      "address": "46-58 Buckingham Avenue",
+      "location_setting": "Shopping Centre",
+      "address_source_date": "",
+      "address_evidence_url": "https://springvaleshoppingcentre.com.au/portfolio_category/optometrist/",
+      "address_checked_at": "2026-10-27",
+      "address_basis": "Whole-property address from the official centre directory footer. Publication date unknown; shop F13 belongs to the business address and is not part of the property address."
+    }
+  ],
+  "coordinates": [
+    {
+      "place_id": "place-au-vic-springvale-shopping-centre",
+      "latitude": "-37.9506545",
+      "longitude": "145.1507984",
+      "evidence_url": "https://www.openstreetmap.org/node/5402564830",
+      "verified_at": "2026-10-27",
+      "confidence": "Low",
+      "method": "Accepted tenant reference",
+      "reference_store_id": "independent-other-optical-osm-au-node-5402564830",
+      "reason": "Approximate display reference inherited unchanged from the mapped Dream Eyes tenant point. Not a surveyed property centroid, entrance or boundary. Membership is supported separately by the centre directory."
+    }
+  ],
+  "unresolved_to_create": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-11145701652",
+      "evidence_url": "https://www.openstreetmap.org/node/11145701652",
+      "reason": "The original record identifies Shop 1, 44 Jackson Court, corroborated by directories at 42/44 Jackson Court, Doncaster East. The precise frontage and current trading remain unverified. No accepted Jackson Court precinct or explicit shopping-centre tenancy is established; preserve the supported business address without assigning place membership."
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-way-537154052",
+      "evidence_url": "https://au.linkedin.com/company/eye-society",
+      "reason": "The business company page and directories identify 365 Springvale Road, Springvale. Current trading is unverified. No accepted street corridor or explicit shopping-centre tenancy is established; proximity to Springvale Central or Springvale Shopping Centre does not establish membership."
+    }
+  ],
+  "raw_store_sha256_before": "ac91399dde8126e6c59dc022dc890c4e897ffeeda8ff63dba8579cee0417899e",
+  "location_overrides": [
+    {
+      "retailer": "Independent / Other optical",
+      "store_id": "independent-other-optical-osm-au-node-11145701652",
+      "venue_name": "",
+      "venue_id": "",
+      "location_type": "Unclassified",
+      "classification_confidence": "Low",
+      "classification_basis": "A shop number does not establish shopping-centre tenancy. Jackson Court business address recovered; setting and canonical membership unresolved.",
+      "notes": "Retained OSM address and independent directory corroboration reviewed 2026-10-27. No centre inferred from Shop 1."
+    }
+  ],
+  "unresolved": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-11145701652",
+      "store_fingerprint": "b0a1d7254b03c8c82ada99668e34153880a1ec16eae6a5b7d2791a50a38f02dd",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.openstreetmap.org/node/11145701652",
+      "reason": "The original record identifies Shop 1, 44 Jackson Court, corroborated by directories at 42/44 Jackson Court, Doncaster East. The precise frontage and current trading remain unverified. No accepted Jackson Court precinct or explicit shopping-centre tenancy is established; preserve the supported business address without assigning place membership."
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-way-537154052",
+      "store_fingerprint": "7011acd9ecb9858b78923e90fcdf5412e557e9ca35e4eea7481316cd9ee03a9c",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://au.linkedin.com/company/eye-society",
+      "reason": "The business company page and directories identify 365 Springvale Road, Springvale. Current trading is unverified. No accepted street corridor or explicit shopping-centre tenancy is established; proximity to Springvale Central or Springvale Shopping Centre does not establish membership."
+    }
+  ],
+  "staged_comparison": {
+    "independent-other-optical-osm-au-node-11145701652": {
+      "suburb": [
+        "",
+        "Doncaster East"
+      ],
+      "postcode": [
+        "",
+        "3109"
+      ],
+      "full_address": [
+        "44 Jackson Court, Australia",
+        "Shop 1, 44 Jackson Court, Doncaster East VIC 3109"
+      ],
+      "phone": [
+        "+61 3 9848 2766",
+        "0398482766"
+      ],
+      "directory_url": [
+        "",
+        "https://www.openstreetmap.org/node/11145701652"
+      ],
+      "classification_basis": [
+        "Insufficient official venue or street evidence",
+        "A shop number does not establish shopping-centre tenancy. Jackson Court business address recovered; setting and canonical membership unresolved."
+      ],
+      "public_facts_verified_at": [
+        "",
+        "2026-10-27"
+      ],
+      "public_facts_evidence_url": [
+        "",
+        "https://www.openstreetmap.org/node/11145701652"
+      ],
+      "public_facts_reason": [
+        "",
+        "Original OSM tags explicitly supply Shop 1, 44 Jackson Court and the phone number. Independent directories corroborate the business and phone at 42/44 Jackson Court, Doncaster East 3109. Preserve the original unit and 44 address form; the 42/44 variant and exact frontage remain unresolved. No fresh trading evidence. Preserve Mapped status, the original point and source date."
+      ]
+    },
+    "independent-other-optical-osm-au-node-5402564830": {
+      "suburb": [
+        "",
+        "Springvale"
+      ],
+      "postcode": [
+        "",
+        "3171"
+      ],
+      "full_address": [
+        "F13, Australia",
+        "Level 2, Shop F13, Springvale Shopping Centre, 46-58 Buckingham Avenue, Springvale VIC 3171"
+      ],
+      "phone": [
+        "",
+        "0385213277"
+      ],
+      "directory_url": [
+        "",
+        "https://springvaleshoppingcentre.com.au/portfolio_category/optometrist/"
+      ],
+      "venue_name": [
+        "",
+        "Springvale Shopping Centre"
+      ],
+      "venue_id": [
+        "",
+        "vic-springvale"
+      ],
+      "location_type": [
+        "Unclassified",
+        "Shopping Centre"
+      ],
+      "classification_confidence": [
+        "Low",
+        "High"
+      ],
+      "classification_basis": [
+        "Insufficient official venue or street evidence",
+        "Official name/address contains shopping-centre evidence"
+      ],
+      "public_facts_verified_at": [
+        "",
+        "2026-10-27"
+      ],
+      "public_facts_evidence_url": [
+        "",
+        "https://springvaleshoppingcentre.com.au/portfolio_category/optometrist/"
+      ],
+      "public_facts_reason": [
+        "",
+        "Official centre directory indexed content explicitly identifies Dream Eyes at Level 2, Shop F13, with its phone number. The footer supplies 46-58 Buckingham Avenue. The original OSM node independently records F13 and layer 2. The full reader failed, but indexed official content was accessible. The entry has a 2019 administrative timestamp, not proof of current trading. Preserve Mapped status, the original point and source dates. This is distinct from Springvale Central at 268-274 Springvale Road."
+      ]
+    },
+    "independent-other-optical-osm-au-way-537154052": {
+      "suburb": [
+        "",
+        "Springvale"
+      ],
+      "postcode": [
+        "",
+        "3171"
+      ],
+      "full_address": [
+        "365, Australia",
+        "365 Springvale Road, Springvale VIC 3171"
+      ],
+      "directory_url": [
+        "",
+        "https://au.linkedin.com/company/eye-society"
+      ],
+      "location_type": [
+        "Unclassified",
+        "Main Street / Street-front"
+      ],
+      "classification_confidence": [
+        "Low",
+        "Medium"
+      ],
+      "classification_basis": [
+        "Insufficient official venue or street evidence",
+        "Official address is a numbered or corner street address without named centre evidence"
+      ],
+      "public_facts_verified_at": [
+        "",
+        "2026-10-27"
+      ],
+      "public_facts_evidence_url": [
+        "",
+        "https://au.linkedin.com/company/eye-society"
+      ],
+      "public_facts_reason": [
+        "",
+        "The business company page explicitly lists 365 Springvale Road, Springvale VIC 3171 and eyesociety.com.au; multiple public directories agree. The original OSM building has number 365 and Eye Society. The operator website reader timed out; current trading is unverified. Preserve Mapped status, the original point and source date. Nearby shopping centres do not establish membership."
+      ]
+    }
+  },
+  "stage_path": "/var/folders/68/ghl3tmhn1sj44582kxynzctm0000gn/T/optical-classifier-check-bir0crad",
+  "raw_store_sha256_after": "5b740422dd8cda129a186aebbe852b67024828387293982a741e7a57768e68eb",
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": {
+    "exact_three_store_changes": true,
+    "statuses_points_source_dates_preserved": true,
+    "dream_eyes_distinct_property": "place-au-vic-springvale-shopping-centre",
+    "care4eyes_no_inferred_centre": true,
+    "two_unresolved_memberships_excluded": true
+  },
+  "springvale_browser_exports": {
+    "checked_at": "2026-10-27",
+    "files": [
+      {
+        "path": "/Users/ayden/Downloads/bailey-place-summary-2026-10-27 (8).csv",
+        "sha256": "895fb7f28cdc53c412f7c83717ba5260ba17c748b19abde61d129c8193118018"
+      },
+      {
+        "path": "/Users/ayden/Downloads/bailey-place-tenants-2026-10-27 (5).csv",
+        "sha256": "9ea1e3da6be4aa3feefe472f5157d0e0ebe5feddafc0fff1405f6d3565b48ea4"
+      }
+    ],
+    "verified": [
+      "Distinct Springvale Shopping Centre and Springvale Central search results",
+      "Whole-property address; unknown source publication date shown",
+      "Low-confidence accepted tenant point and explicit no entrance/boundary claim",
+      "Dream Eyes sole accepted tenant; nearby stores excluded from exact centre count",
+      "Incomplete co-tenancy warning",
+      "Actual Summary and Tenant CSV contents match profile; Mapped status preserved"
+    ],
+    "loading_note": "Initial local reload failed to fetch. Existing server responded to normal GET and Retry loading recovered. No server replacement or publication."
+  }
+}

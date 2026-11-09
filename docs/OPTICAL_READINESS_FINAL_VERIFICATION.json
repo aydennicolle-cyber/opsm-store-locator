@@ -1,0 +1,745 @@
+{
+  "checked_at": "2026-10-30",
+  "before": {
+    "stores": 3088,
+    "places": 1541,
+    "accepted_place_memberships": 2377,
+    "unresolved_memberships": 681,
+    "accepted_other_without_place": 30,
+    "network_analysis_eligible": 2951,
+    "place_analysis_eligible": 2358
+  },
+  "after": {
+    "stores": 3090,
+    "places": 1530,
+    "accepted_place_memberships": 2456,
+    "unresolved_memberships": 604,
+    "accepted_other_without_place": 30,
+    "network_analysis_eligible": 2954,
+    "place_analysis_eligible": 2429
+  },
+  "added_store_ids": [
+    "eyecare-plus-163379",
+    "oscar-wylee-156",
+    "specsavers-engadine",
+    "specsavers-gisborne"
+  ],
+  "retired_store_ids": [
+    "independent-other-optical-osm-au-node-2402171927",
+    "independent-other-optical-osm-au-node-9988342653"
+  ],
+  "changed_existing_store_fields": {
+    "independent-other-optical-osm-au-node-11145701652": [
+      "suburb",
+      "postcode",
+      "full_address",
+      "phone",
+      "directory_url",
+      "classification_basis",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "bailey-nelson-nz-optometrist-queensgate": [
+      "fetched_at"
+    ],
+    "george-matilda-477": [
+      "latitude",
+      "longitude",
+      "coordinate_confidence",
+      "coordinate_evidence_url",
+      "coordinates_verified_at",
+      "coordinate_reason"
+    ],
+    "bailey-nelson-nz-optometrist-st-lukes": [
+      "fetched_at"
+    ],
+    "george-matilda-393": [
+      "phone",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "valley-eyewear-burleigh-heads": [
+      "location_type",
+      "classification_basis"
+    ],
+    "the-eye-piece-9312": [
+      "location_type",
+      "classification_basis"
+    ],
+    "opsm-2934": [
+      "latitude",
+      "longitude",
+      "coordinate_confidence",
+      "coordinate_evidence_url",
+      "coordinates_verified_at",
+      "coordinate_reason"
+    ],
+    "the-eye-piece-10909": [
+      "location_type",
+      "classification_basis"
+    ],
+    "optical-by-national-pharmacies-blackwood-5051": [
+      "directory_url"
+    ],
+    "bailey-nelson-hawthorn": [
+      "phone",
+      "official_url",
+      "website_url",
+      "status_evidence_url",
+      "status_verified_at",
+      "status_reason",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "matthews-eyecare-nz-122878592": [
+      "full_address",
+      "latitude",
+      "longitude",
+      "coordinate_confidence",
+      "coordinate_evidence_url",
+      "coordinates_verified_at",
+      "coordinate_reason",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "the-eye-piece-9332": [
+      "location_type",
+      "classification_basis"
+    ],
+    "bailey-nelson-nz-optometrist-tauranga": [
+      "fetched_at"
+    ],
+    "independent-other-optical-osm-au-node-5720362545": [
+      "suburb",
+      "postcode",
+      "full_address",
+      "directory_url",
+      "venue_name",
+      "venue_id",
+      "location_type",
+      "classification_confidence",
+      "classification_basis",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "independent-other-optical-osm-au-node-3616959074": [
+      "suburb",
+      "postcode",
+      "full_address",
+      "phone",
+      "website_url",
+      "location_type",
+      "classification_confidence",
+      "classification_basis",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "independent-other-optical-provision-223610": [
+      "suburb",
+      "full_address",
+      "phone",
+      "website_url",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "oscar-wylee-99": [
+      "status",
+      "status_evidence_url",
+      "status_verified_at",
+      "status_reason"
+    ],
+    "bailey-nelson-nz-optometrist-dunedin": [
+      "fetched_at"
+    ],
+    "the-eye-piece-9308": [
+      "location_type",
+      "classification_basis"
+    ],
+    "matthews-eyecare-nz-aePVyAsOS-my1Du-ENsu_Q": [
+      "official_url",
+      "website_url",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "bailey-nelson-nz-optometrist-ponsonby": [
+      "fetched_at"
+    ],
+    "independent-other-optical-osm-au-node-9892744780": [
+      "name",
+      "full_address",
+      "phone",
+      "official_url",
+      "website_url",
+      "services"
+    ],
+    "independent-other-optical-reviewed-au-fitzpatrick-family-maroochydore": [
+      "affiliations",
+      "directory_url"
+    ],
+    "george-matilda-17206": [
+      "latitude",
+      "longitude",
+      "coordinate_confidence",
+      "coordinate_evidence_url",
+      "coordinates_verified_at",
+      "coordinate_reason"
+    ],
+    "independent-other-optical-reviewed-au-karratha-eyecare": [
+      "affiliations"
+    ],
+    "bailey-nelson-nz-optometrist-queenstown": [
+      "fetched_at"
+    ],
+    "bailey-nelson-nz-optometrist-botany": [
+      "fetched_at"
+    ],
+    "bailey-nelson-nz-optometrist-hamilton": [
+      "fetched_at"
+    ],
+    "sunglass-hut-B632": [
+      "suburb",
+      "full_address",
+      "latitude",
+      "longitude",
+      "official_url",
+      "coordinate_confidence",
+      "coordinate_evidence_url",
+      "coordinates_verified_at",
+      "coordinate_reason",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "bupa-optical-13626244": [
+      "status",
+      "full_address",
+      "latitude",
+      "longitude",
+      "status_evidence_url",
+      "status_verified_at",
+      "status_reason",
+      "coordinate_confidence",
+      "coordinate_evidence_url",
+      "coordinates_verified_at",
+      "coordinate_reason",
+      "public_facts_verified_at",
+      "public_facts_reason"
+    ],
+    "bailey-nelson-eastgardens": [
+      "phone",
+      "public_facts_verified_at",
+      "public_facts_reason"
+    ],
+    "independent-other-optical-provision-186700": [
+      "full_address",
+      "phone",
+      "website_url",
+      "venue_name",
+      "venue_id",
+      "location_type",
+      "classification_confidence",
+      "classification_basis",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "the-optical-company-parramatta-2150": [
+      "directory_url"
+    ],
+    "bailey-nelson-nz-optometrist-auckland-cbd": [
+      "fetched_at"
+    ],
+    "independent-other-optical-osm-au-node-5402564830": [
+      "suburb",
+      "postcode",
+      "full_address",
+      "phone",
+      "directory_url",
+      "venue_name",
+      "venue_id",
+      "location_type",
+      "classification_confidence",
+      "classification_basis",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "independent-other-optical-osm-au-node-615108303": [
+      "suburb",
+      "postcode",
+      "full_address",
+      "phone",
+      "directory_url",
+      "venue_name",
+      "venue_id",
+      "location_type",
+      "classification_confidence",
+      "classification_basis",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "bailey-nelson-nz-optometrist-sylvia-park": [
+      "fetched_at"
+    ],
+    "am-eyewear-shop-darlinghurst": [
+      "location_type",
+      "classification_basis"
+    ],
+    "oscar-wylee-76": [
+      "full_address",
+      "latitude",
+      "longitude",
+      "coordinate_confidence",
+      "coordinate_evidence_url",
+      "coordinates_verified_at",
+      "coordinate_reason",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "bailey-nelson-nz-optometrist-riccarton": [
+      "fetched_at"
+    ],
+    "independent-other-optical-osm-au-way-537154052": [
+      "suburb",
+      "postcode",
+      "full_address",
+      "directory_url",
+      "location_type",
+      "classification_confidence",
+      "classification_basis",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "bailey-nelson-nz-optometrist-albany-auckland": [
+      "fetched_at"
+    ],
+    "bailey-nelson-nz-optometrist-cashel-street": [
+      "fetched_at"
+    ],
+    "bailey-nelson-north-lakes": [
+      "status",
+      "status_evidence_url",
+      "status_verified_at",
+      "status_reason"
+    ],
+    "oscar-wylee-100": [
+      "status",
+      "status_evidence_url",
+      "status_verified_at",
+      "status_reason"
+    ],
+    "george-matilda-446": [
+      "postcode",
+      "full_address",
+      "latitude",
+      "longitude",
+      "coordinate_confidence",
+      "coordinate_evidence_url",
+      "coordinates_verified_at",
+      "coordinate_reason",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "independent-other-optical-osm-ne-node-14086659006": [
+      "suburb",
+      "full_address",
+      "phone",
+      "official_url",
+      "website_url",
+      "classification_confidence",
+      "classification_basis",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "opsm-nz-2955": [
+      "state",
+      "full_address",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "bailey-nelson-nz-optometrist-takapuna": [
+      "fetched_at"
+    ],
+    "independent-other-optical-osm-au-node-11984932693": [
+      "full_address",
+      "phone",
+      "directory_url",
+      "services",
+      "business_type",
+      "public_facts_verified_at",
+      "public_facts_evidence_url",
+      "public_facts_reason"
+    ],
+    "bailey-nelson-nz-optometrist-willis-street": [
+      "fetched_at"
+    ],
+    "bailey-nelson-nz-optometrist-nelson": [
+      "fetched_at"
+    ]
+  },
+  "full_rebuild": {
+    "results": {
+      "network": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "scripts/build_optical_network.py"
+        ]
+      },
+      "market": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "scripts/build_market_intelligence.py",
+          "--reuse-market-data"
+        ]
+      },
+      "retail_places": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "scripts/build_retail_places.py"
+        ]
+      },
+      "recognition": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "scripts/audit_centre_recognition.py"
+        ]
+      },
+      "property": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "scripts/build_property_intelligence.py"
+        ]
+      },
+      "health": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "scripts/build_data_health.py"
+        ]
+      },
+      "register": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "scripts/build_readiness_register.py"
+        ]
+      },
+      "python_tests": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ]
+      },
+      "test_environment_metrics": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_environment_metrics.js"
+        ]
+      },
+      "test_environments": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_environments.js"
+        ]
+      },
+      "test_excluded_context": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_excluded_context.js"
+        ]
+      },
+      "test_intelligence": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_intelligence.js"
+        ]
+      },
+      "test_location_news": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_location_news.js"
+        ]
+      },
+      "test_map_markers": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_map_markers.js"
+        ]
+      },
+      "test_overview": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_overview.js"
+        ]
+      },
+      "test_store_services": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_store_services.js"
+        ]
+      },
+      "privacy": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "scripts/scan_public_privacy.py"
+        ]
+      },
+      "diff": {
+        "exit_code": 0,
+        "command": [
+          "git",
+          "diff",
+          "--check"
+        ]
+      },
+      "package": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "scripts/package_public_site.py",
+          "--output",
+          "/var/folders/68/ghl3tmhn1sj44582kxynzctm0000gn/T/optical-rebuild-20261030-r66n2ht7/site"
+        ]
+      }
+    },
+    "log_directory": "/var/folders/68/ghl3tmhn1sj44582kxynzctm0000gn/T/optical-rebuild-20261030-r66n2ht7",
+    "python_tests": 432,
+    "javascript_suites": 8,
+    "retailer_source_files_unchanged": true,
+    "store_source_capture_dates_preserved": true,
+    "only_expected_store_rebuild_changes": {
+      "opsm-nz-2955": [
+        "state",
+        "full_address",
+        "public_facts_verified_at",
+        "public_facts_evidence_url",
+        "public_facts_reason"
+      ]
+    },
+    "place_field_changes": {
+      "corridor-nz-marlborough-blenheim-market-street": {
+        "optical_store_count": [
+          1,
+          2
+        ],
+        "retailers": [
+          [
+            "Specsavers"
+          ],
+          [
+            "OPSM",
+            "Specsavers"
+          ]
+        ],
+        "source_url": [
+          "https://www.specsavers.co.nz/stores/blenheim",
+          "https://www.opsm.co.nz/find-store"
+        ]
+      }
+    },
+    "retired_place_ids": [
+      "corridor-nz-nelson-blenheim-market-street"
+    ],
+    "added_place_ids": []
+  },
+  "final_queue_checks": {
+    "unresolved_memberships_with_valid_retained_evidence_and_excluded": 604,
+    "recognition_candidates_evidence_and_mapping_verified": 93,
+    "recognition_statuses": {
+      "Reviewed unresolved": 26,
+      "Reviewed; accepted non-centre setting retained": 2,
+      "Reviewed; accepted place retained": 65
+    }
+  },
+  "blenheim_browser": {
+    "verified": true,
+    "checks": [
+      "OPSM 70 Market St and region Marlborough displayed",
+      "Original source capture 1 September 2026 and overdue warning retained",
+      "One Market Street result, George Street and The Forum distinct",
+      "Two accepted corridor stores OPSM and Specsavers; Matthews nearby not verified in corridor",
+      "Approximate road reference and unresearched street tenant coverage explicit",
+      "NZ demographics unavailable; screening completeness not census confidence"
+    ]
+  },
+  "representative_browser_receipts": [
+    "OPTICAL_READINESS_BROWSER_ALIAS_CHECK.json",
+    "OPTICAL_READINESS_TWO_PROPERTY_BROWSER_EXPORT.json",
+    "OPTICAL_READINESS_NZ_FINAL_BROWSER_EXPORT.json",
+    "OPTICAL_READINESS_STANDALONE_UNRESOLVED_BROWSER.json"
+  ],
+  "status": "Complete: ready for practical use with stated restrictions; local only, not published.",
+  "post_recognition_followup": {
+    "results": {
+      "health": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "scripts/build_data_health.py"
+        ]
+      },
+      "register": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "scripts/build_readiness_register.py"
+        ]
+      },
+      "python_tests": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ]
+      },
+      "test_environment_metrics": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_environment_metrics.js"
+        ]
+      },
+      "test_environments": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_environments.js"
+        ]
+      },
+      "test_excluded_context": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_excluded_context.js"
+        ]
+      },
+      "test_intelligence": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_intelligence.js"
+        ]
+      },
+      "test_location_news": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_location_news.js"
+        ]
+      },
+      "test_map_markers": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_map_markers.js"
+        ]
+      },
+      "test_overview": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_overview.js"
+        ]
+      },
+      "test_store_services": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "tests/test_store_services.js"
+        ]
+      },
+      "privacy": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "scripts/scan_public_privacy.py"
+        ]
+      },
+      "diff": {
+        "exit_code": 0,
+        "command": [
+          "git",
+          "diff",
+          "--check"
+        ]
+      },
+      "package": {
+        "exit_code": 0,
+        "command": [
+          "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "scripts/package_public_site.py",
+          "--output",
+          "/var/folders/68/ghl3tmhn1sj44582kxynzctm0000gn/T/optical-rebuild-20261030-du6dsz_7/site"
+        ]
+      }
+    },
+    "log_directory": "/var/folders/68/ghl3tmhn1sj44582kxynzctm0000gn/T/optical-rebuild-20261030-du6dsz_7",
+    "changed_data_paths": [
+      "data/data_health.json"
+    ]
+  },
+  "readiness": {
+    "allowed_use": "Initial optical network screening and comparison using eligible known records and accepted place memberships. Read source dates and approximation warnings before relying on an individual result.",
+    "restrictions": [
+      "604 investigated unresolved place associations excluded from unsupported place analysis; 30 accepted standalone/Other records are a different category, not unresolved failures.",
+      "20 records still lack meaningful addresses; 181 Standard property-address gaps remain open. Use supported individual business addresses and labelled reference points; do not use gaps for navigation or surveyed boundaries.",
+      "Only 249 of 1814 named-network records satisfy the current-source measure in this snapshot. Brand reconciliation did not renew source capture dates automatically. Usable last-known records are not current trading confirmation.",
+      "Broader tenant directories and street research are partial. Missing tenants do not establish absence or vacancy. Screening completeness is not census completeness or investment confidence.",
+      "NZ demographic catchments are not published; Australian proxies are not substituted."
+    ],
+    "before_publication": [
+      "Review the local result and decide whether layout/functionality changes should be included before release.",
+      "If anything changes, rerun affected builds, complete tests, privacy scan, packaging and representative workflows.",
+      "Obtain explicit publication authorization; publish the verified public package and check the live result."
+    ],
+    "scope_boundary": "No redesign, new industry application, national census expansion, or shared-database architecture included."
+  },
+  "preservation": {
+    "retired_store_ids_have_canonical_remaps": true,
+    "blenheim_previous_place_id_remapped": true,
+    "unchanged_raw_retailer_files_during_final_full_rebuild": true,
+    "source_capture_dates_not_advanced_by_rebuild": true,
+    "shared_place_fields_unchanged_except_documented_blenheim_merge": true
+  },
+  "later_pilot": "docs/LOCATION_CLASSIFICATION_FIVE_EXAMPLE_PILOT.json",
+  "snapshot_notice": "Counts and verdict above describe the pre-pilot snapshot. The later five-example pilot resolves five associations and changes pedestrian-mall grouping; see its separate verification. Prior readiness verdict does not establish that remaining associations are irreducible."
+}

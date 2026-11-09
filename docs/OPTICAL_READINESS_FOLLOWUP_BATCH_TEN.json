@@ -1,0 +1,143 @@
+{
+  "status": "All nine validation stages passed; six generated outcomes verified. Browser and export verification remains pending.",
+  "raw_store_sha256": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "accepted": [
+    {
+      "store_id": "independent-other-optical-reviewed-au-westfund-dubbo",
+      "location_setting": "High Street",
+      "canonical_name": "Macquarie Street",
+      "place_type": "High Street Corridor",
+      "official_url": "https://www.westfund.com.au/health-services/eye-care/",
+      "evidence_basis": "Operator eye-care directory retrieved 27 October 2026 explicitly identifies the Dubbo branch at 186B Macquarie Street. Accept the existing Dubbo street-and-locality corridor, which contains a separately evidenced practice at 130 Macquarie Street. Preserve subunit B and the earlier provider variant 186A in retained evidence. This does not establish Dubbo Square or Orana Mall tenancy, a surveyed street boundary, or an exact unit footprint. Original store point, identity and source dates retained.",
+      "confidence": "Medium",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "corridor-au-nsw-dubbo-macquarie-street"
+    }
+  ],
+  "unresolved": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-4547827590",
+      "store_fingerprint": "641ffea4caf4c9ab218d59b08da67e7bba965f8c4a88a842698ae08073b6901f",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.archify.com/au/project/the-eyecare-company-by-george-matilda-eyecare",
+      "reason": "Architect project page rechecked 27 October 2026 explicitly places the historical theeyecarecompany fitout at Westfield Liverpool. It does not identify the abbreviated OSM record The Eyecare by source ID or address, establish current trading, or prove a successor relationship with Zoom Optics. Preserve the original addressless OSM identity and Unknown status. Canonical membership remains unresolved; do not transfer the historical practice address or count it as an extra competitor."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-bathurst-optical",
+      "store_fingerprint": "8c98ef50d54ccd7666231178dd9d8c0b3a8a2cf9a76fefe3945fa475d4750778",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://eyresbyshamir.com.au/practice-locator/",
+      "reason": "Retained government and manufacturer evidence supports 57 William Street and 02 6331 5642. Focused search on 27 October 2026 again found directory references at that address, but no readable owned trading confirmation or explicit shopping-centre membership. No accepted William Street corridor exists in the current inventory. Keep the supported address and point, Unknown status and current-analysis exclusions; do not assign Bathurst City Centre or an unrelated street corridor. Directory hours are not fresh trading verification."
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-11106950103",
+      "store_fingerprint": "32d7f2d9032717ad7c41e7d084079011672d5ad3282737d3a49582194e19bc5d",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.laubmanandpank.com.au/store/lismore",
+      "reason": "Operator Lismore page rechecked 27 October 2026 explicitly states Eyecare Casino is temporarily closed and directs patients to Lismore. The Lismore address at 160 Molesworth Street belongs to the receiving branch and must not replace Casino at 76 Barker Street. No closure or reopening day is supplied, and no accepted Barker Street place is established. Preserve Temporarily Closed status, original verification date and both current-analysis exclusions; Casino membership remains unresolved."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-geoff-day-cowra",
+      "store_fingerprint": "532d92b47cb67e6b6037a12650153b5961faf846ac05da343aab6a748409c239",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.facebook.com/GeoffDayOptometrist/",
+      "reason": "Retained manufacturer and named-map evidence supports 29 Kendal Street rather than the older 123 Kendal Street directory entry. Search on 27 October 2026 found the owned Facebook excerpt with 29 Kendal Street and 02 6342 3355, but full retrieval failed and no new dated trading evidence was established. No explicit named centre or accepted Cowra corridor is established. Preserve the address conflict, Unknown status and current-analysis exclusions; do not invent a move date, another branch or a place membership."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-webster-optometrists-cowra",
+      "store_fingerprint": "a28473516c13db92666d69d94d3184a3e26f571b534791fe60051816619e533f",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.websteroptometrists.com.au/",
+      "reason": "Full operator page retrieved 27 October 2026 confirms 114 Kendal Street, Cowra and 02 6342 2502, with frames and optometry services. It identifies the Cowra family practice separately from Peter Webster Gatton. No named shopping centre or accepted Kendal Street corridor is established by the retrieved evidence. Retain supported premises and business point with canonical study membership unresolved; proximity to other Cowra shops is not a precinct boundary."
+    }
+  ],
+  "limits": "Original source and status dates retained. Search excerpts are distinguished from full pages. No closures, relocations or new addresses inferred from inaccessible sources.",
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": [
+    {
+      "store_id": "independent-other-optical-reviewed-au-westfund-dubbo",
+      "checks": {
+        "accepted_place": true,
+        "place_eligible": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-4547827590",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-bathurst-optical",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-11106950103",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-geoff-day-cowra",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-webster-optometrists-cowra",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    }
+  ]
+}

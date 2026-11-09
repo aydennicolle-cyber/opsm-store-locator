@@ -1,0 +1,469 @@
+{
+  "reviewed_at": "2026-10-27",
+  "status": "Applied40; dependent verification pending.",
+  "scope": "40 individually read retained investigations explicitly limiting place classification. No new external or trading verification. Lower-freshness trading caveats preserved for final readiness review.",
+  "deferred_store_ids": [
+    "independent-other-optical-osm-au-node-4353406489",
+    "independent-other-optical-reviewed-au-icon-eyewear-hurstville",
+    "independent-other-optical-reviewed-au-brennan-smith-inverell",
+    "independent-other-optical-reviewed-au-westfund-lithgow",
+    "independent-other-optical-reviewed-au-new-look-maitland",
+    "independent-other-optical-osm-au-node-11898341739",
+    "independent-other-optical-provision-34119",
+    "independent-other-optical-reviewed-au-beach-optique-mona-vale",
+    "independent-other-optical-reviewed-au-martine-brinsdon-murwillumbah",
+    "independent-other-optical-reviewed-au-westfund-orange",
+    "independent-other-optical-reviewed-au-john-pearce-parkes",
+    "independent-other-optical-osm-au-node-8460982632",
+    "independent-other-optical-osm-au-node-5421723042",
+    "independent-other-optical-provision-16904",
+    "independent-other-optical-reviewed-au-medispecs-picton",
+    "independent-other-optical-reviewed-au-bigland-cowley-springwood",
+    "independent-other-optical-provision-223610",
+    "independent-other-optical-reviewed-au-eyemax-wallsend",
+    "independent-other-optical-osm-au-node-5720362545",
+    "independent-other-optical-reviewed-au-eyewise-darwin"
+  ],
+  "records": [
+    {
+      "store_id": "independent-other-optical-reviewed-au-sam-issa-engadine",
+      "address": "Shop 6, Appian Corner, 69\u201375 Station Street, Engadine NSW 2233",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://samissaoptometrist.com.au/",
+        "checked_at": "2026-09-24",
+        "reason": "Practice site confirms frames, glasses, contact lenses, address, phone and weekly hours. Manufacturer matches name, phone and Shop 6 Appian Corner, but gives vague Old Princess Highway street text and an unrelated McLaren Vale website. Use current practice street and website; do not import the erroneous link. Provider point is approximate, within about 30 metres of the practice map view centre, which is corroboration rather than a surveyed marker. Public Eyres prescription-provider point captured 12 September 2026 is independently matched to this practice and premises; source update date is unknown. Review completed 24 September 2026, not a claim of on-site inspection. Location setting is kept Uncertain unless explicitly supported by centre evidence."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-eye-concepts-fairfield",
+      "address": "Shop 5, 35 Smart Street, Fairfield NSW 2165, Australia",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.eyeconcepts.com.au/fairfield",
+        "checked_at": "2026-09-27",
+        "reason": "Operator identifies its current Fairfield branch and contact lens service at Shop 5, 35 Smart Street, with weekday and Saturday trading. Its shared eyewear storefront and physical branch contact details support permanent optical retail. Public coordinates use the named business feature, not the map viewport, and are approximate; exact shop-front position is unverified. No onsite or telephone confirmation is claimed. Uncertain formal setting does not exclude this physical retailer from network or competition analysis."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-theia-optical-five-dock",
+      "address": "92 Great North Road, Five Dock NSW 2046",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.theiaoptical.com.au/contact-us",
+        "checked_at": "2026-10-04",
+        "reason": "Current operator contact/homepage establishes full optometry and designer/prescription eyewear at92GreatNorthRoad with0272514975, corroborated by named map and NSW provider directory. WhitePages shop1 is not in the primary contact address and is omitted. Operator Sunday hours differ between page body and footer; hours are not imported. Areas served are not additional branches. Use the named business map approximate premises point, corroborated by written branch identity and address. Exact shop frontage is unverified. Uncertain formal setting does not exclude physical optical retail from the map; current competition follows its explicitly supported trading status."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-eyewear-specs-forbes",
+      "address": "95 Rankin Street, Forbes NSW 2871",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.visionaustralia.org/media/42526/download?attachment=",
+        "checked_at": "2026-09-24",
+        "reason": "NSW Spectacles Program provider list, page 11, and prescription manufacturer agree on name, street address and telephone. Program PDF metadata is 12 June 2026; individual row verification date is not published. Active denotes a currently listed spectacle provider, with lower trading-freshness confidence than a live practice/centre timetable. Practice domain returned HTTP 404; this is not closure evidence. Retain a current-trading follow-up. Public Eyres prescription-provider point captured 12 September 2026 is independently matched to this practice and premises; source update date is unknown. Review completed 24 September 2026, not a claim of on-site inspection. Location setting is kept Uncertain unless explicitly supported by centre evidence."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-ultimate-eyecare-forster",
+      "address": "98 Breckenridge Street, Forster NSW 2428",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://ultimateeyecare.com.au/contact/",
+        "checked_at": "2026-09-24",
+        "reason": "Practice contact page and homepage confirm address, phone, frames/contact lenses and weekday hours. Homepage retains a holiday notice ending 8 January 2026; that old notice does not establish September closure. Current scheduled hours support Active status, with stale holiday content explicitly retained as a freshness caveat. Public Eyres prescription-provider point captured 12 September 2026 is independently matched to this practice and premises; source update date is unknown. Review completed 24 September 2026, not a claim of on-site inspection. Location setting is kept Uncertain unless explicitly supported by centre evidence."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-glebe-eyewear",
+      "address": "Shop 8, 131-145 Glebe Point Road, Glebe NSW 2037",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://glebeeyewear.com.au/",
+        "checked_at": "2026-10-04",
+        "reason": "Current operator site explicitly associates GlebeEyewear and GeorgeAmaro at shop8/131-145GlebePointRoad with examinations, prescription frames and contact lenses. Named map and NSW directory agree. These names are one practice, distinct from nearby OnPointOptical at81GlebePointRoad with0272626673. GlebePlace appears on the map but no current primary formal precinct mapping is established. Use the named business map approximate premises point, corroborated by written branch identity and address. Exact shop frontage is unverified. Uncertain formal setting does not exclude physical optical retail from the map; current competition follows its explicitly supported trading status."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-john-williams-grafton",
+      "address": "75 Prince Street, Grafton NSW 2460, Australia",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.johnwilliamsoptometrist.com.au/contact",
+        "checked_at": "2026-09-27",
+        "reason": "Current own contact page confirms address, phone, weekday hours and prescription eyewear. Use operator-linked75PrinceStreet map address feature as an approximate premises reference; exact shop-front position unverified. Manufacturer locator still gives GraftonShoppingworld with the same phone; its point is not used. Historical centre listing does not prove current membership or a second branch. Public point checked against independently evidenced identity and premises. No onsite inspection. Unassigned setting does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-mclennan-deece-grafton",
+      "address": "86 Prince Street, Grafton NSW 2460",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/grafton-2460-nsw/mclennan-deece-optometrists/optometry/daefb4d4-50dd-df5c-797a-7baba0d33529?search_method=Details+-+search+results+list",
+        "checked_at": "2026-09-24",
+        "reason": "Current Healthdirect service record establishes the named optometry practice, address, phone and walk-in access. Prescription manufacturer confirms dispensing at the same address; current Google listing agrees and publishes hours. The practice domain returns a directory index, which is not trading evidence. No dated recent practice announcement was obtained: trading-freshness confidence is lower than for a live practice booking site. Google also displays a Best&Less building association; no place membership is inferred from that label. Public Google named-business point reviewed 24 September 2026; approximate premises position, not a surveyed entrance or on-site inspection. Location setting remains Uncertain and does not exclude map coverage. Published hours and review ages are supporting signals only."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-sight-savers-hamilton",
+      "address": "96 Tudor Street, Hamilton NSW 2303",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.sightsavers.com.au/",
+        "checked_at": "2026-09-24",
+        "reason": "Practice-owned website identifies its showroom at 96 Tudor Street, phone, prescription spectacles, examinations, onsite laboratory and appointment contact. Manufacturer agrees on address and phone. Retail services and current practice evidence support admission independently of any centre or street-corridor classification. Public point checked against independently evidenced business identity and premises. No onsite inspection. Setting remains Uncertain and does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-eyes-specs-hurstville",
+      "address": "209 Forest Road, Hurstville NSW 2220, Australia",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://eyesandspecs.com.au/",
+        "checked_at": "2026-09-27",
+        "reason": "Current operator homepage describes frames, spectacle lenses, contact lenses and in-store collection, and gives this address, phone and trading hours. The named public profile agrees on address, phone and website. Operator says opposite Westfield; this does not establish centre membership. Older indexed pages and the current homepage differ on precise hours, which are not stored. Public coordinates use the named business feature, not the map viewport, and are approximate; exact shop-front position is unverified. No onsite or telephone confirmation is claimed. Uncertain formal setting does not exclude this physical retailer from network or competition analysis."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-icontact-hurstville",
+      "address": "242 Forest Road, Hurstville NSW 2220, Australia",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.icontact-optometrists.com.au/hurstville",
+        "checked_at": "2026-09-27",
+        "reason": "Operator branch page invites in-store visits for stocked designer frames, glasses, sunglasses and contact lenses and gives 242 Forest Road, phone 0295806100 and trading hours. Named public profile links the same operator and address but gives mobile 0403067828; retain the operator landline and this additional number without declaring either invalid. Hours differ within the operator page and from the profile; exact hours are not stored. Other iContact branches in Hornsby, Lidcombe, Liverpool, Victoria and Indooroopilly are separate premises. Public coordinates use the named business feature, not the map viewport, and are approximate; exact shop-front position is unverified. No onsite or telephone confirmation is claimed. Uncertain formal setting does not exclude this physical retailer from network or competition analysis."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-hunter-discount-specs-kurri-kurri",
+      "address": "170 Lang Street, Kurri Kurri NSW 2327",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.hunterdiscountspecs.com/contact-us.html",
+        "checked_at": "2026-09-24",
+        "reason": "Current practice-owned branch list confirms this specific address and phone, with published weekday hours. Its website describes prescription eyewear, contact lenses and optical care. Manufacturer prescription-provider record agrees. Four branches are distinct physical practices; the local group remains in the Independent / Other reporting bucket. Coordinates come from the publicly accessible prescription-provider locator, reviewed against practice identity and premises address. Approximate premises/centre position only; no onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-blue-frog-leeton",
+      "address": "30 Wade Avenue, Leeton NSW 2705",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://bluefrogoptics.com.au/contact/",
+        "checked_at": "2026-09-24",
+        "reason": "Current operator contact, about, eyewear and branch-booking pages identify this permanent retail practice, numbered street address and telephone. Named public business profile independently agrees on identity, address, phone and website and shows current opening hours. Physical frames, prescription eye care and five branch locations are explicit. Public point checked against independently evidenced identity and premises. No onsite inspection. Unassigned setting does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-norton-optical-leichhardt",
+      "address": "Shop 5, The Italian Forum, 23 Norton Street, Leichhardt NSW 2040",
+      "status": "Unknown",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.visionaustralia.org/listofproviders",
+        "checked_at": "2026-10-04",
+        "reason": "Current-linked NSW Spectacles Program provider directory names NortonOptical shop5 TheItalianForum23NortonStreet with0295606787, corroborated by named business map and indexed business directories. No current operator website or fresh direct trading confirmation is found. Admit an evidenced physical prescription-eyewear dispensing identity as Unknown; it is excluded from current competition. An owned website or closure date is not invented. Formal current place mapping remains unconfirmed. Use the named business map approximate premises point, corroborated by written branch identity and address. Exact shop frontage is unverified. Uncertain formal setting does not exclude physical optical retail from the map; current competition follows its explicitly supported trading status."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-mclennan-deece-maclean",
+      "address": "1 Stanley Street, Maclean NSW 2463",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maclean-2463-nsw/matthew-mclennan-optometrist/optometry/f1548c9a-dbb2-fd30-5a12-59bf08ce8e32?search_method=Details+-+search+results+list",
+        "checked_at": "2026-09-24",
+        "reason": "Current Healthdirect names Matthew McLennan at 1 Stanley Street with 02 6645 1460 and weekday appointment hours. Google identifies the McLennan Deece branch at the same address and phone; manufacturer confirms prescription supply there. These branch-specific sources support 1 Stanley over a secondary 22 River Street listing. Manufacturer phone 02 6642 4411 is not adopted. Healthdirect opens at 9 am and Google at 8:30 am, so exact opening hours remain unverified and are not imported. No recent review or direct practice confirmation was obtained; continuing-trading evidence is the service record and published schedules, with lower freshness confidence. Public Google named-business point reviewed 24 September 2026; approximate premises position, not a surveyed entrance or on-site inspection. Location setting remains Uncertain and does not exclude map coverage. Published hours and review ages are supporting signals only."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-mezmereyes-mascot",
+      "address": "Shop 1, 1 Robey Street, Mascot NSW 2020",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.mezmereyes.com.au/contact-us/",
+        "checked_at": "2026-10-04",
+        "reason": "Operator contact/AboutUs/service pages retrieved through the web reader confirm Mascot physical retail optometry, spectacles and contact lenses with matching named map and NSW provider listing. Direct archive requests return406; preserve that limitation rather than claim successful byte capture. Botany Road is the entrance description, not another outlet. Operator pages show differing hours and those are not imported. Use the named business map approximate premises point, corroborated by written branch identity and address. Exact shop frontage is unverified. Uncertain formal setting does not exclude physical optical retail from the map; current competition follows its explicitly supported trading status."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-11425010142",
+      "address": "Shop 3, 139 Wagonga Street, Narooma NSW 2546",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.naroomavision.com.au/",
+        "checked_at": "2026-10-08",
+        "reason": "Indexed primary Narooma Vision homepage identifies this optical practice, physical shop address, phone, designer frames and optical dispenser. A freshly retrieved named business map matches name, address, phone and operator domain. Direct homepage access returns HTTP406; the indexed operator copy is labelled three months old. Preserve that age limitation rather than claiming fresh operator publication. The existing uniquely named OSM pin is repaired, not added as a new outlet. Formal precinct membership is unproven."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-northern-beaches-optical-narrabeen",
+      "address": "73 Waterloo Street, Narrabeen NSW 2101",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://northernbeachesoptical.com.au/book-eye-exam/",
+        "checked_at": "2026-09-27",
+        "reason": "Official practice and booking pages confirm eye examinations, dispensing, address and current hours. Public map resolves the same named business at 73 Waterloo Street; its named-business destination point is retained as approximate premises evidence. Precinct membership is unassigned."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-hunter-discount-specs-nelson-bay",
+      "address": "17 Stockton Street, Nelson Bay NSW 2315",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.hunterdiscountspecs.com/contact-us.html",
+        "checked_at": "2026-09-24",
+        "reason": "Current practice-owned branch list confirms this specific address and phone, with published weekday hours. Its website describes prescription eyewear, contact lenses and optical care. Manufacturer prescription-provider record agrees. Four branches are distinct physical practices; the local group remains in the Independent / Other reporting bucket. Coordinates come from the publicly accessible prescription-provider locator, reviewed against practice identity and premises address. Approximate premises/centre position only; no onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-edgey-specs-newcastle",
+      "address": "Suite 1, 456 Hunter Street, Newcastle NSW 2300",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.edgeyspecs.com.au/",
+        "checked_at": "2026-09-24",
+        "reason": "Practice-owned site confirms retail eyewear and eye care at Suite 1, 456 Hunter Street. Its linked MyHealth1st booking page matches address/phone and, when checked 24 September 2026, displayed next-day appointment availability and weekday hours (https://www.myhealth1st.com.au/find/optometrist/nsw/newcastle-and-lake-macquarie/newcastle/edgey-specs-civic). No appointment was made. Manufacturer prescription-provider record agrees. Edgeworth is a separate branch and is not created from this Civic record. Coordinates come from the publicly accessible prescription-provider locator, reviewed against practice identity and premises address. Approximate premises/centre position only; no onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-optometrist-parramatta",
+      "address": "Shop 9a, 103 George St PARRAMATTA NSW 2150 AUSTRALIA",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.optometristparramatta.com.au",
+        "checked_at": "2026-09-12",
+        "reason": "Official practice website confirms retail optical services and the same physical address; current bookings or hours support active trading. Coordinates corroborated from Optometry Australia practice directory. Directory geocoding supports a premises reference; tenancy-level pin accuracy is not independently surveyed. Retail setting remains unassigned and does not prevent map inclusion."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-master-specs-penrith",
+      "address": "444 High Street, Penrith NSW 2750",
+      "status": "Unknown",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.hilxeyewear.com.au/dealers",
+        "checked_at": "2026-09-28",
+        "reason": "Manufacturer dealer list and Penrith CBD directory corroborate name and street address. Yellow Pages supports prescription dispensing (https://www.yellowpages.com.au/penrith-nsw/bpp/master-specs-580120556); eye-examination services are not independently verified. Current trading remains unconfirmed: practice website unavailable, directories undated, CBD directory phone differs. Unavailable website is not closure evidence. Keep Unknown and exclude from current competition. Exact shop number is unverified and omitted. Address geocoder supplies a building-level reference only; Medium coordinate confidence, no exact storefront or canonical place membership inferred."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-penrith-valley-vision",
+      "address": "13 Castlereagh Street, Penrith NSW 2750",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://pvv.com.au/",
+        "checked_at": "2026-09-24",
+        "reason": "Practice website publishes spectacle frames, in-house dispensing, eye examinations, matching phone and weekly hours, and links its booking profile. That booking profile confirms this address. NSW Spectacles Program page 9 and Optometry Australia CASA directory also corroborate the address and telephone. Program PDF metadata is 12 June 2026, not an individual store verification date. Public Eyres prescription-provider point captured 12 September 2026 is independently matched to this practice and premises; source update date is unknown. Review completed 24 September 2026, not a claim of on-site inspection. Location setting is kept Uncertain unless explicitly supported by centre evidence."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-hunter-discount-specs-raymond-terrace",
+      "address": "2 The Close, Raymond Terrace NSW 2324",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.hunterdiscountspecs.com/contact-us.html",
+        "checked_at": "2026-09-24",
+        "reason": "Current practice-owned branch list confirms this specific address and phone, with published weekday hours. Its website describes prescription eyewear, contact lenses and optical care. Manufacturer prescription-provider record agrees. Four branches are distinct physical practices; the local group remains in the Independent / Other reporting bucket. Coordinates come from the publicly accessible prescription-provider locator, reviewed against practice identity and premises address. Approximate premises/centre position only; no onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-everything-in-sight-riverstone",
+      "address": "16 Garfield Road East, Riverstone NSW 2765",
+      "status": "Unknown",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.visionaustralia.org/listofproviders",
+        "checked_at": "2026-10-08",
+        "reason": "Named public business feature matches written practice identity, phone and premises. Approximate premises point only; exact frontage remains unverified. Government spectacles-program listing establishes dispensing identity at these numbered premises, corroborated by a named business feature with matching phone. No current owned operator confirmation was captured, so retain Unknown trading status and exclude from current competition. Unflagged maps, generic directory hours and relative-age mirrored reviews do not establish current trading. No formal centre or precinct membership is evidenced. Older secondary directories include 45 Garfield Road and a different phone; the current government/map pair agrees on16GarfieldRoadEast and96272135. No exact move date or separate practitioner storefront is inferred."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-in-optics-rooty-hill",
+      "address": "61 Rooty Hill Road North, Rooty Hill NSW 2766",
+      "status": "Unknown",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.visionaustralia.org/listofproviders",
+        "checked_at": "2026-10-08",
+        "reason": "Named public business feature matches written practice identity, phone and premises. Approximate premises point only; exact frontage remains unverified. Government spectacles-program listing establishes dispensing identity at these numbered premises, corroborated by a named business feature with matching phone. No current owned operator confirmation was captured, so retain Unknown trading status and exclude from current competition. Unflagged maps, generic directory hours and relative-age mirrored reviews do not establish current trading. No formal centre or precinct membership is evidenced."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-healthy-eyes-rozelle",
+      "address": "126 Victoria Road, Rozelle NSW 2039",
+      "status": "Unknown",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://partners.bolle-safety.com/en-gb/shop/955/healthy-eyes-safety-rx",
+        "checked_at": "2026-10-04",
+        "reason": "Current-linked NSW dispenser directory and manufacturer Bolle dealer page establish HealthyEyes retail/dispensing premises and matching phone; named map agrees with that identity/domain. Indexed operator/booking pages describe eye examinations, but fresh direct operator retrieval redirects to a WordPress ComingSoon placeholder without current practice detail. Fresh MyHealth1st practice page retains identity/contact details but is titled disabled2 and contains no bookable clinician in the retrieved content; this does not prove closure. Preserve Unknown trading rather than infer closure, current opening or new-store plans from a website placeholder. SafetyRx is the same address/phone alias, not a second outlet. Historical ProVision membership is not promoted to current affiliation without fresh evidence. Use the named business map approximate premises point, corroborated by written branch identity and address. Exact shop frontage is unverified. Uncertain formal setting does not exclude physical optical retail from the map; current competition follows its explicitly supported trading status."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-sussex-optical-sussex-inlet",
+      "address": "Shop 1, 196 Jacobs Drive, Sussex Inlet NSW 2540",
+      "status": "Unknown",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.google.com/maps/place/Sussex+Optical/@-35.156979,150.5997351,17z/data=!3m1!4b1!4m6!3m5!1s0x6b148a8c7da68909:0xd40cc75b5974a181!8m2!3d-35.156979!4d150.60231!16s%2Fg%2F1td5rffj",
+        "checked_at": "2026-09-24",
+        "reason": "Indexed practice-owned content describes independent optical retail at this unit, street and phone; manufacturer and current Google panel agree. Direct domain resolution failed and indexed practice content is old. Google retains hours and a visible review labelled two years ago, which does not independently establish current trading. Admit the evidenced premises to the map with Unknown status and exclude from confirmed current competition until fresher practice/booking evidence is obtained. No closure is inferred from the website failure. Public Google named-business point reviewed 24 September 2026; approximate premises position, not a surveyed entrance or on-site inspection. Location setting remains Uncertain and does not exclude map coverage. Published hours and review ages are supporting signals only."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-you-and-eye-sydney",
+      "address": "Shop 6, Upper Ground Floor, 10 Spring Street, Sydney NSW 2000",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.youandeye.com.au/contact/",
+        "checked_at": "2026-10-04",
+        "reason": "Operator contact and homepage explicitly establish this physical shop, examinations, prescription glasses and contact lenses. Named business map agrees on name, shop, address, phone and domain; NSW provider directory corroborates the same retail premises. Phone, name, address and nearby-candidate review finds no existing canonical identity. The upper-ground-floor shop qualifies even without formal retail-place classification; nearby HineSight and Bupa have distinct names, addresses and phones. Use the named business map approximate premises point, corroborated by written branch identity and address. Exact shop frontage is unverified. Uncertain formal setting does not exclude physical optical retail from the map; current competition follows its explicitly supported trading status."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-john-osborn-taree",
+      "address": "Shop 1/127 Victoria Street, Taree NSW 2430, Australia",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.google.com/maps/place/John+Osborn+Taree+Spectacle+Makers/data=!4m6!3m5!1s0x6b75c82d618cfa55:0xd0aba95504bf191c!8m2!3d-31.9126073!4d152.4619476!16s%2Fg%2F1tfmh_0b",
+        "checked_at": "2026-09-27",
+        "reason": "Named public business profile confirms the shop address, phone, trading hours and in-store shopping, and links the Localsearch practice profile. That hosted business description confirms prescription eyewear, contact lenses and an onsite optical workshop at 127 Victoria Street. Evidence is less direct than a standalone owned website; hosted profile update date is unknown and its trading-age label is inconsistent with older activity. Exact opening hours are not stored. ColourVue is a supplier brand, not an established practice-owned website. No onsite visit or phone confirmation; retain current-operator follow-up. Formal centre or precinct membership is unassigned; this does not block map or competition coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-taree-eyewear",
+      "address": "Shop 3, 17 Manning Street, Taree NSW 2430, Australia",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.tareeeyewear.com.au/",
+        "checked_at": "2026-09-27",
+        "reason": "Own website confirms a physical range of frames and sunglasses with onsite optometry, 17 Manning Street and phone 0265525570. The booking provider linked directly from the operator website specifies Shop 3 and the same address, phone and domain. Named public profile independently agrees. Operator contact page conflicts on Saturday closure versus appointment-only trading; exact hours are not stored. John Osborn at 127 Victoria Street has a different phone and separately linked retail profile. Dickon Walch is listed by Healthdirect at Suite 2 of 11-17 Manning Street; neither a duplicate nor an additional retailer is assumed from the shared building address. Formal centre or precinct membership is unassigned; this does not block map or competition coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-blue-frog-temora",
+      "address": "224 Hoskins Street, Temora NSW 2666",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://bluefrogoptics.com.au/contact/",
+        "checked_at": "2026-09-24",
+        "reason": "Current operator contact, about, eyewear and branch-booking pages identify this permanent retail practice, numbered street address and telephone. Named public business profile independently agrees on identity, address, phone and website and shows current opening hours. Physical frames, prescription eye care and five branch locations are explicit. Public point checked against independently evidenced identity and premises. No onsite inspection. Unassigned setting does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-adrenaline-optometry",
+      "address": "Shop 1/15 Church Street, Terrigal NSW 2260",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://adrenalineoptometry.au/",
+        "checked_at": "2026-09-11",
+        "reason": "Official site describes a full-scope independent practice, physical address, eye-test bookings and current hours; public map corroborates the named practice. Retail setting remains unassigned."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-blue-frog-wagga-wagga",
+      "address": "164 Baylis Street, Wagga Wagga NSW 2650",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://bluefrogoptics.com.au/contact/",
+        "checked_at": "2026-09-24",
+        "reason": "Current operator contact, about, eyewear and branch-booking pages identify this permanent retail practice, numbered street address and telephone. Named public business profile independently agrees on identity, address, phone and website and shows current opening hours. Physical frames, prescription eye care and five branch locations are explicit. Public point checked against independently evidenced identity and premises. No onsite inspection. Unassigned setting does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-dean-evans-woolgoolga",
+      "address": "62 Beach Street, Woolgoolga NSW 2456",
+      "status": "Unknown",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.google.com/maps/place/Dean+Evans+Optometrist/@-30.1106471,153.198608,17z/data=!3m1!4b1!4m6!3m5!1s0x6b9bf4ca9053811d:0x1792aa6e4a3b2968!8m2!3d-30.1106471!4d153.2011829!16s%2Fg%2F1vnrl5yc",
+        "checked_at": "2026-09-24",
+        "reason": "Prescription manufacturer, current public business profile and dispensing directory agree on practice identity, address and phone. Google still publishes hours and a visible review labelled a year ago, but the old business.site page is unavailable and a fresh practice-owned or current government/booking confirmation was not obtained. Admit the evidenced retail premises to the map with Unknown trading status; do not count it as a confirmed current competitor. Absence from a newer government provider list and a failed website do not establish closure. Resolve trading status before promotion to Active. Public Google named-business point reviewed 24 September 2026; approximate premises position, not a surveyed entrance or on-site inspection. Location setting remains Uncertain and does not exclude map coverage. Published hours and review ages are supporting signals only."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-woonona-eyecare",
+      "address": "391 Princes Hwy WOONONA NSW 2517",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.woononaeyecare.com.au",
+        "checked_at": "2026-09-12",
+        "reason": "Official practice website confirms retail optical services and the same physical address; current bookings or hours support active trading. Coordinates corroborated from Optometry Australia practice directory. Directory geocoding supports a premises reference; tenancy-level pin accuracy is not independently surveyed. Retail setting remains unassigned and does not prevent map inclusion."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-harrington-nelson",
+      "address": "55 Halifax Street, Nelson 7010",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.harringtoneyecare.co.nz/Home/Contact",
+        "checked_at": "2026-09-24",
+        "reason": "Current practice contact page confirms Nelson address, phone and weekday hours; homepage offers eyewear and eye-test booking. Footer identifies Luxottica Group membership. The homepage explicitly announces closure of the separate Richmond branch; that existing historical record is retained and marked Closed rather than being counted as a current competitor. Public point compared with independently evidenced practice identity and address. No onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-eyesonheads-mangawhai",
+      "address": "Unit 1, 62 Moir Street, Mangawhai, Northland 0505",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://eyesonheads.co.nz/",
+        "checked_at": "2026-10-08",
+        "reason": "Current Eyesonheads operator site identifies itself as Mangawhai Optometrists at unit 1/62 Moir Street with matching phone and explicitly offers frames, glasses, sunglasses and contact lenses. Named map, Healthpoint and the public Good Gryf eyewear stockist list corroborate this identity. Different displayed names do not create two outlets. Provider content is dated 2:40PM on December 4, 2023; retrieved 8 October 2026, not represented as newly published. Formal retail-place identity remains unconfirmed; street address and proximity do not establish membership."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-ocula-arrowtown",
+      "address": "25 Ramshaw Lane, Arrowtown, Otago",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://ocula.co.nz/pages/locations/",
+        "checked_at": "2026-09-12",
+        "reason": "Official practice website confirms retail optical services and the same physical address; current official branch listing and booking links support active trading. Coordinates corroborated from Healthpoint practice profile. Directory geocoding supports a premises reference; tenancy-level pin accuracy is not independently surveyed. Retail setting remains unassigned and does not prevent map inclusion."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-bridgman-dunedin",
+      "address": "218 George Street, Dunedin Central, Dunedin 9016",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.bridgmaneyecare.nz/",
+        "checked_at": "2026-09-24",
+        "reason": "Current practice site offers frames, contact lenses and eye-test booking at the Dunedin address and matching phone. Manufacturer lists the former Bridgman & Dean name at the same premises. Practice footer explicitly states Luxottica Group membership; a local trading name does not imply independent ownership. Balclutha is a separate branch and is not added from this row. Public point compared with independently evidenced practice identity and address. No onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    }
+  ]
+}

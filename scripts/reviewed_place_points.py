@@ -3,7 +3,7 @@ from datetime import date
 import math
 from urllib.parse import urlsplit
 
-METHODS={'Named property map','Operator map marker','Operator-linked property map','Accepted tenant reference','Reviewed street geometry','Reviewed precinct street anchor'}
+METHODS={'Named property map','Operator map marker','Operator-linked property map','Accepted tenant reference','Reviewed street geometry','Reviewed pedestrian mall geometry','Reviewed precinct street anchor'}
 
 def apply_place_point_reviews(places, stores, memberships, reviews):
     by_id={r['place_id']:r for r in places};by_store={r['store_id']:r for r in stores}
@@ -26,6 +26,8 @@ def apply_place_point_reviews(places, stores, memberships, reviews):
         reference=row.get('reference_store_id','')
         if method=='Reviewed street geometry' and place.get('place_type')!='High Street Corridor':
             raise ValueError(f'Street geometry requires a high street corridor: {key}')
+        if method=='Reviewed pedestrian mall geometry' and place.get('location_setting')!='Shopping Centre':
+            raise ValueError(f'Pedestrian mall geometry requires the shopping-centre grouping: {key}')
         if method=='Reviewed precinct street anchor' and (place.get('place_type')!='Retail Precinct'
                 or place.get('location_setting')!='High Street' or confidence!='Low'):
             raise ValueError(f'Precinct street anchor requires a low-confidence high-street precinct: {key}')

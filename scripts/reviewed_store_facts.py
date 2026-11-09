@@ -7,7 +7,7 @@ from pathlib import Path
 from reviewed_independents import public_url
 from store_rules import meaningful_address
 
-FIELDS = {'retailer', 'affiliations', 'name', 'full_address', 'suburb', 'postcode', 'phone', 'official_url', 'website_url', 'directory_url', 'services', 'business_type'}
+FIELDS = {'retailer', 'affiliations', 'name', 'full_address', 'state', 'suburb', 'postcode', 'phone', 'official_url', 'website_url', 'directory_url', 'services', 'business_type'}
 
 # Explicit dated review may remove a misclassified customer-facing URL, but
 # never erase source history, identity, status or premises through this route.

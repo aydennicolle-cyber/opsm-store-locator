@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-10-27",
+  "place_id": "place-au-act-manuka-terrace",
+  "browser_observations": [
+    "Search returned one Manuka Terrace result",
+    "Profile whole-property corner address and source link visible; unknown source date separate from checked 2026-10-27",
+    "One exact-place optical tenant Eyecare Plus",
+    "Eyecentric shown 100 metres nearby, explicitly not verified in centre; M Centre separate map marker",
+    "Retail context and ownership gaps visible; store-derived point explicitly not boundary or entrance"
+  ],
+  "download": {
+    "path": "/Users/ayden/Downloads/bailey-place-tenants-2026-10-27 (9).csv",
+    "sha256": "8063810860cbfb0e36f5434ec335e00eb8fabbb587e9958aa09b528bb02f7011",
+    "rows": [
+      {
+        "place_id": "place-au-act-manuka-terrace",
+        "place_name": "Manuka Terrace",
+        "country": "Australia",
+        "state": "ACT",
+        "membership_type": "Accepted exact-place optical membership",
+        "tenant_id": "optical-store-eyecare-plus-636",
+        "tenant_name": "Eyecare Plus Optometrists Manuka",
+        "retailer": "Eyecare Plus",
+        "category": "Optical",
+        "anchor_flag": "false",
+        "selection_basis": "Operator explicitly names Manuka Terrace at 18 Flinders Way and matches the retained branch phone 02 6295 0137. Original branch address names Shops 31 and 32 Manuka Terrace. Distinct from M Centre at 17-19 Flinders Way. Preserve original source capture date, trading status and map position.",
+        "status": "Active",
+        "source_url": "https://www.uniqueoptical.com.au/contact-us",
+        "source_type": "Accepted store-place evidence",
+        "source_date": "",
+        "verified_at": "2026-10-27",
+        "confidence": "High"
+      }
+    ],
+    "checks_passed": true
+  }
+}

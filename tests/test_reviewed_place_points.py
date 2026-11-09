@@ -17,6 +17,16 @@ class PlacePointReviewsTests(unittest.TestCase):
  def test_accepts_explicit_low_confidence_tenant_reference(self):
   self.apply(dict(self.row,method='Accepted tenant reference',confidence='Low',reference_store_id='s'))
   self.assertEqual(self.places[0]['coordinate_reference_store_id'],'s')
+ def test_pedestrian_mall_grouping_preserves_point_evidence_without_assigning_members(self):
+  self.places[0].update(place_type='Shopping Centre',location_setting='Shopping Centre')
+  before=copy.deepcopy(self.members)
+  with self.assertRaises(ValueError):self.apply(self.row|dict(method='Reviewed street geometry'))
+  self.apply(self.row|dict(method='Reviewed pedestrian mall geometry'))
+  self.assertEqual(self.places[0]['coordinate_verified_at'],self.row['verified_at'])
+  self.assertEqual(self.places[0]['place_type'],'Shopping Centre')
+  self.assertEqual(self.members,before)
+  self.places[0]['location_setting']='High Street'
+  with self.assertRaises(ValueError):self.apply(self.row|dict(method='Reviewed pedestrian mall geometry'))
  def test_nearby_or_unaccepted_store_cannot_establish_reference(self):
   for change in [dict(place_id='other'),dict(review_status='Needs review')]:
    self.members[0].update(change)

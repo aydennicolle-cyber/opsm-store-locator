@@ -3,13 +3,13 @@
     "as_of": "2026-10-10",
     "baseline": "Validated census batch78; no census admissions in this pilot",
     "input_sha256": {
-      "destination_profile_facts.json": "32bfe45e803cae494d423d8b46a6c8e560bb621d9ffeb1e2a629618c6d4a4813",
+      "destination_profile_facts.json": "9e338428bbe81439f348997f385a2d06a8e637241a0f89885c68da62f3bbea4a",
       "destination_directory.json": "5686b8f4b6c4fe53abc9c8011f62e772cdf6664eed5ba02ea8283993110eaac1",
-      "optical_stores.csv": "9474fff8824930d2424bc09e443df516697f7025fccb7fc8f257f8c12e495a36",
-      "store_certification.csv": "c27c5202e82fac647397d70087d69d6e61e5e89da30d83944926f1a424bc4376",
-      "store_place_memberships.csv": "9999fd6ef2d93f99e0703861d71c67f12e65b75f51bd1280617cb60a4bbfdf82",
-      "sa2_market.geojson": "259dbc44413737a8c9a33a0c14924a5a1f5688ed9f0f2a5c59354a4f7c3be869",
-      "retail_places.json": "dc4efdbe160a01994e878cf9813df9d397a60d4c9710e93e2ca08e71bb8d952c"
+      "optical_stores.csv": "74430268dbe20405bd96ffc6ea7f5cd71396f933f3ba319505d7200e36858520",
+      "store_certification.csv": "9cac27637db7ab1a035a57c36d95e1bee851b11e298fe56557677edd160d95e4",
+      "store_place_memberships.csv": "02f453fc7d25b8ee3b68a9e30938eefa4c8f5eec7aab48613672efa2bb138da2",
+      "sa2_market.geojson": "bc656b837cac1d0fb2c5155864d46b28fe5c348347f7ca24d42a747fb0c5016e",
+      "retail_places.json": "7ddae5e791a6d824bb146293b66630b5ef0c60196d391c9aa33c228fa1ec70e3"
     },
     "limitations": "Partial profiles, preserving source vintages. No inferred tenancy shares, customer catchment or predicted store performance."
   },
@@ -89,14 +89,14 @@
       "profile_status": "Partial: bounded public research complete; commercial and coverage gaps explicit",
       "checked_at": "2026-10-08",
       "demographic_boundary_evidence": {
-        "latitude": -31.876927,
-        "longitude": 115.777398,
+        "latitude": -31.87682,
+        "longitude": 115.777581,
         "match_status": "Unique",
         "sa2_code": "505021089",
         "sa2_name": "Karrinyup - Gwelup - Carine",
         "match_count": 1,
-        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.777398%2C-31.876927&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
-        "checked_at": "2026-09-27T21:58:22.781427+00:00"
+        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.777581%2C-31.87682&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+        "checked_at": "2026-10-25T07:51:03.175529+00:00"
       },
       "identity": {
         "place_id": "place-au-wa-karrinyup-shopping-centre",
@@ -104,11 +104,11 @@
         "country": "Australia",
         "state": "WA",
         "location_setting": "Shopping Centre",
-        "address": "",
-        "latitude": -31.876927,
-        "longitude": 115.777398,
+        "address": "200 Karrinyup Rd, Karrinyup WA 6018",
+        "latitude": -31.87682,
+        "longitude": 115.777581,
         "source_url": "https://www.karrinyupcentre.com.au/",
-        "source_date": ""
+        "source_date": "2026-10-25"
       },
       "population_context": {
         "sa2_code": "505021089",
@@ -138,14 +138,14 @@
         "population_growth_2021_2025_number": 1176,
         "interpretation": "Resident SA2 context, not a centre trade area or customer catchment.",
         "boundary_evidence": {
-          "latitude": -31.876927,
-          "longitude": 115.777398,
+          "latitude": -31.87682,
+          "longitude": 115.777581,
           "match_status": "Unique",
           "sa2_code": "505021089",
           "sa2_name": "Karrinyup - Gwelup - Carine",
           "match_count": 1,
-          "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.777398%2C-31.876927&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
-          "checked_at": "2026-09-27T21:58:22.781427+00:00"
+          "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.777581%2C-31.87682&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+          "checked_at": "2026-10-25T07:51:03.175529+00:00"
         }
       },
       "optical_competition": {
@@ -191,50 +191,6 @@
               "evidence_basis": "The current official Karrinyup directory lists Options Optometrists on the ground floor",
               "evidence_url": "https://www.karrinyupcentre.com.au/stores-services/options-optometrists-karrinyup",
               "verified_at": "2026-09-03",
-              "mapping_confidence": "High"
-            }
-          },
-          {
-            "store_id": "independent-other-optical-reviewed-au-sunglass-hut-karrinyup",
-            "retailer": "Independent / Other optical",
-            "name": "Sunglass Hut Karrinyup",
-            "business_type": "Sunglasses retail",
-            "status": "Active",
-            "full_address": "Shop 59B, Ground, Karrinyup Shopping Centre, 200 Karrinyup Rd, Karrinyup WA 6018",
-            "latitude": "-31.8765565",
-            "longitude": "115.7784366",
-            "source_url": "https://stores.sunglasshut.com/au/wa/karrinyup/shop-59b-ground-karrinyup-shopping-centre",
-            "fetched_at": "2026-09-28",
-            "status_evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/shop-59b-ground-karrinyup-shopping-centre",
-            "status_verified_at": "2026-09-28",
-            "stale_source_warning": false,
-            "quality_notes": "",
-            "membership_evidence": {
-              "evidence_basis": "Official operator and/or centre directory explicitly names this retail outlet inside the shopping centre; Official operator branch B726 confirms current hours, named centre address and dedicated sunglasses retail; branch-specific geocodedCoordinate supplies an approximate premises point. No eye-test service inferred.",
-              "evidence_url": "https://www.karrinyupcentre.com.au/stores-services/sunglass-hut",
-              "verified_at": "2026-09-28",
-              "mapping_confidence": "High"
-            }
-          },
-          {
-            "store_id": "independent-other-optical-reviewed-au-sunglass-hut-myer-karrinyup-b820",
-            "retailer": "Independent / Other optical",
-            "name": "Sunglass Hut Myer Karrinyup",
-            "business_type": "Sunglasses retail",
-            "status": "Active",
-            "full_address": "Myer, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018",
-            "latitude": "-31.8773623",
-            "longitude": "115.7766448",
-            "source_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
-            "fetched_at": "2026-10-08",
-            "status_evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
-            "status_verified_at": "2026-10-08",
-            "stale_source_warning": false,
-            "quality_notes": "",
-            "membership_evidence": {
-              "evidence_basis": "Operator branch address explicitly places its separately identified Myer concession in Karrinyup Shopping Centre.",
-              "evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
-              "verified_at": "2026-10-08",
               "mapping_confidence": "High"
             }
           },
@@ -347,28 +303,54 @@
               "verified_at": "2026-09-01",
               "mapping_confidence": "High"
             }
+          },
+          {
+            "store_id": "independent-other-optical-reviewed-au-sunglass-hut-karrinyup",
+            "retailer": "Sunglass Hut",
+            "name": "Sunglass Hut Karrinyup",
+            "business_type": "Sunglasses retail",
+            "status": "Active",
+            "full_address": "Shop 59B, Ground, Karrinyup Shopping Centre, 200 Karrinyup Rd, Karrinyup WA 6018",
+            "latitude": "-31.8765565",
+            "longitude": "115.7784366",
+            "source_url": "https://stores.sunglasshut.com/au/wa/karrinyup/shop-59b-ground-karrinyup-shopping-centre",
+            "fetched_at": "2026-10-18T08:05:50.043326+00:00",
+            "status_evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/shop-59b-ground-karrinyup-shopping-centre",
+            "status_verified_at": "2026-10-18",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "membership_evidence": {
+              "evidence_basis": "Official operator and/or centre directory explicitly names this retail outlet inside the shopping centre; Official operator branch B726 confirms current hours, named centre address and dedicated sunglasses retail; branch-specific geocodedCoordinate supplies an approximate premises point. No eye-test service inferred.",
+              "evidence_url": "https://www.karrinyupcentre.com.au/stores-services/sunglass-hut",
+              "verified_at": "2026-09-28",
+              "mapping_confidence": "High"
+            }
+          },
+          {
+            "store_id": "independent-other-optical-reviewed-au-sunglass-hut-myer-karrinyup-b820",
+            "retailer": "Sunglass Hut",
+            "name": "Sunglass Hut Myer Karrinyup",
+            "business_type": "Sunglasses retail",
+            "status": "Active",
+            "full_address": "Myer, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018",
+            "latitude": "-31.8773623",
+            "longitude": "115.7766448",
+            "source_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
+            "fetched_at": "2026-10-18T08:05:50.043326+00:00",
+            "status_evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
+            "status_verified_at": "2026-10-18",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "membership_evidence": {
+              "evidence_basis": "Operator branch address explicitly places its separately identified Myer concession in Karrinyup Shopping Centre.",
+              "evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
+              "verified_at": "2026-10-08",
+              "mapping_confidence": "High"
+            }
           }
         ],
         "accepted_member_count": 9,
         "nearby_current_non_bn": [
-          {
-            "store_id": "independent-other-optical-osm-au-node-11396192032",
-            "retailer": "Independent / Other optical",
-            "name": "Options Optometrists — Karrinyup",
-            "business_type": "Permanent retail optometry",
-            "status": "Active",
-            "full_address": "Shop SP274A, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018",
-            "latitude": "-31.8770744",
-            "longitude": "115.777965",
-            "source_url": "https://www.openstreetmap.org/node/11396192032",
-            "fetched_at": "2026-09-01T07:48:20.085579Z",
-            "status_evidence_url": "https://optionsoptometrists.com.au/locations/",
-            "status_verified_at": "2026-09-24",
-            "stale_source_warning": false,
-            "quality_notes": "",
-            "distance_km": 0.05599162717745361,
-            "accepted_destination_member": true
-          },
           {
             "store_id": "eyeq-optometrists-karrinyup",
             "retailer": "EyeQ Optometrists",
@@ -384,7 +366,25 @@
             "status_verified_at": "2026-10-05",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 0.06355981239154608,
+            "distance_km": 0.04490925989305074,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "independent-other-optical-osm-au-node-11396192032",
+            "retailer": "Independent / Other optical",
+            "name": "Options Optometrists — Karrinyup",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "Shop SP274A, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018",
+            "latitude": "-31.8770744",
+            "longitude": "115.777965",
+            "source_url": "https://www.openstreetmap.org/node/11396192032",
+            "fetched_at": "2026-09-01T07:48:20.085579Z",
+            "status_evidence_url": "https://optionsoptometrists.com.au/locations/",
+            "status_verified_at": "2026-09-24",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "distance_km": 0.04598853307265657,
             "accepted_destination_member": true
           },
           {
@@ -402,43 +402,7 @@
             "status_verified_at": "2026-10-08",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 0.07678750384733177,
-            "accepted_destination_member": true
-          },
-          {
-            "store_id": "independent-other-optical-reviewed-au-sunglass-hut-myer-karrinyup-b820",
-            "retailer": "Independent / Other optical",
-            "name": "Sunglass Hut Myer Karrinyup",
-            "business_type": "Sunglasses retail",
-            "status": "Active",
-            "full_address": "Myer, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018",
-            "latitude": "-31.8773623",
-            "longitude": "115.7766448",
-            "source_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
-            "fetched_at": "2026-10-08",
-            "status_evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
-            "status_verified_at": "2026-10-08",
-            "stale_source_warning": false,
-            "quality_notes": "",
-            "distance_km": 0.08602932872917647,
-            "accepted_destination_member": true
-          },
-          {
-            "store_id": "specsavers-3436",
-            "retailer": "Specsavers",
-            "name": "Karrinyup S/C",
-            "business_type": "Permanent retail optometry",
-            "status": "Active",
-            "full_address": "200 Karrinyup Road, SPO230/1 Karrinyup Shopping Centre, Karrinyup, WA, 6018",
-            "latitude": "-31.877384",
-            "longitude": "115.77818",
-            "source_url": "https://www.specsavers.com.au/stores/karrinyup",
-            "fetched_at": "2026-09-01T23:21:29.969Z",
-            "status_evidence_url": "",
-            "status_verified_at": "",
-            "stale_source_warning": true,
-            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 0.0896363012585204,
+            "distance_km": 0.05580854150442455,
             "accepted_destination_member": true
           },
           {
@@ -456,12 +420,30 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 0.09322879396628944,
+            "distance_km": 0.0754785278113065,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "specsavers-3436",
+            "retailer": "Specsavers",
+            "name": "Karrinyup S/C",
+            "business_type": "Permanent retail optometry",
+            "status": "Active",
+            "full_address": "200 Karrinyup Road, SPO230/1 Karrinyup Shopping Centre, Karrinyup, WA, 6018",
+            "latitude": "-31.877384",
+            "longitude": "115.77818",
+            "source_url": "https://www.specsavers.com.au/stores/karrinyup",
+            "fetched_at": "2026-09-01T23:21:29.969Z",
+            "status_evidence_url": "",
+            "status_verified_at": "",
+            "stale_source_warning": true,
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "distance_km": 0.08445202336272258,
             "accepted_destination_member": true
           },
           {
             "store_id": "independent-other-optical-reviewed-au-sunglass-hut-karrinyup",
-            "retailer": "Independent / Other optical",
+            "retailer": "Sunglass Hut",
             "name": "Sunglass Hut Karrinyup",
             "business_type": "Sunglasses retail",
             "status": "Active",
@@ -469,12 +451,12 @@
             "latitude": "-31.8765565",
             "longitude": "115.7784366",
             "source_url": "https://stores.sunglasshut.com/au/wa/karrinyup/shop-59b-ground-karrinyup-shopping-centre",
-            "fetched_at": "2026-09-28",
+            "fetched_at": "2026-10-18T08:05:50.043326+00:00",
             "status_evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/shop-59b-ground-karrinyup-shopping-centre",
-            "status_verified_at": "2026-09-28",
+            "status_verified_at": "2026-10-18",
             "stale_source_warning": false,
             "quality_notes": "",
-            "distance_km": 0.1063720293126886,
+            "distance_km": 0.08593931041281888,
             "accepted_destination_member": true
           },
           {
@@ -492,7 +474,25 @@
             "status_verified_at": "2026-09-28",
             "stale_source_warning": false,
             "quality_notes": "",
-            "distance_km": 0.12054536057068362,
+            "distance_km": 0.0995716112081645,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "independent-other-optical-reviewed-au-sunglass-hut-myer-karrinyup-b820",
+            "retailer": "Sunglass Hut",
+            "name": "Sunglass Hut Myer Karrinyup",
+            "business_type": "Sunglasses retail",
+            "status": "Active",
+            "full_address": "Myer, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018",
+            "latitude": "-31.8773623",
+            "longitude": "115.7766448",
+            "source_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
+            "fetched_at": "2026-10-18T08:05:50.043326+00:00",
+            "status_evidence_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
+            "status_verified_at": "2026-10-18",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "distance_km": 0.10700886152568595,
             "accepted_destination_member": true
           },
           {
@@ -510,7 +510,7 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 0.13335501651230044,
+            "distance_km": 0.14636073389341023,
             "accepted_destination_member": true
           },
           {
@@ -527,8 +527,8 @@
             "status_evidence_url": "https://www.specssmart.vision/",
             "status_verified_at": "2026-09-24",
             "stale_source_warning": false,
-            "quality_notes": "location setting needs review",
-            "distance_km": 1.9326086998850514,
+            "quality_notes": "",
+            "distance_km": 1.9145961021650226,
             "accepted_destination_member": false
           },
           {
@@ -546,7 +546,7 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 3.3962447653901897,
+            "distance_km": 3.395398371421218,
             "accepted_destination_member": false
           },
           {
@@ -564,7 +564,7 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 3.3987998365414596,
+            "distance_km": 3.3974221276095085,
             "accepted_destination_member": false
           },
           {
@@ -582,7 +582,25 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 3.4158437489998255,
+            "distance_km": 3.4146226709154313,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "sunglass-hut-B696",
+            "retailer": "Sunglass Hut",
+            "name": "Sunglass Hut Innaloo",
+            "business_type": "Sunglasses retail",
+            "status": "Active",
+            "full_address": "Ellen Stirling Bvld, Westfield Innaloo, Shop 1022/388, Ground Floor, Innaloo, WA, 6018",
+            "latitude": "-31.90105677502043",
+            "longitude": "115.80011289991776",
+            "source_url": "https://stores.sunglasshut.com/au/wa/innaloo/ellen-stirling-bvld-westfield-innaloo",
+            "fetched_at": "2026-10-18T08:05:50.043326+00:00",
+            "status_evidence_url": "https://stores.sunglasshut.com/au/wa/innaloo/ellen-stirling-bvld-westfield-innaloo",
+            "status_verified_at": "2026-10-18",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "distance_km": 3.433436390705136,
             "accepted_destination_member": false
           },
           {
@@ -600,7 +618,7 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 3.446508497248229,
+            "distance_km": 3.4452549917802204,
             "accepted_destination_member": false
           },
           {
@@ -618,7 +636,7 @@
             "status_verified_at": "2026-10-08",
             "stale_source_warning": false,
             "quality_notes": "",
-            "distance_km": 4.380985293473179,
+            "distance_km": 4.368610783559275,
             "accepted_destination_member": false
           },
           {
@@ -636,7 +654,7 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 4.837787430623364,
+            "distance_km": 4.817490472034847,
             "accepted_destination_member": false
           },
           {
@@ -654,12 +672,12 @@
             "status_verified_at": "",
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
-            "distance_km": 4.863543960324832,
+            "distance_km": 4.843147348690644,
             "accepted_destination_member": false
           }
         ],
         "within_2km": 10,
-        "within_5km": 17,
+        "within_5km": 18,
         "method": "Current non-BN competitors at <=2/5 km straight-line distance from the recorded point. All settings eligible. Radius does not establish membership or customer catchment; observed counts may be incomplete. Stale-source warnings remain separate."
       },
       "directory_summary": {
@@ -1708,7 +1726,7 @@
             "status_evidence_url": "https://eyemechanics.com.au/locations/optometrist-leppington-sydney/",
             "status_verified_at": "2026-10-04",
             "stale_source_warning": false,
-            "quality_notes": "location setting needs review",
+            "quality_notes": "",
             "distance_km": 4.837442079373791,
             "accepted_destination_member": false
           }
@@ -2067,11 +2085,11 @@
         "country": "Australia",
         "state": "SA",
         "location_setting": "High Street",
-        "address": "Jetty Road",
+        "address": "Shop 9, 1 Colley Terrace, Glenelg SA 5045",
         "latitude": -34.98008115234058,
         "longitude": 138.51894180868356,
-        "source_url": "https://holdfastbayoptometry.com.au/",
-        "source_date": "2026-09-02"
+        "source_url": "https://stores.sunglasshut.com/au/sa/glenelg/1-colley-terrace",
+        "source_date": "2026-10-31"
       },
       "population_context": {
         "sa2_code": "403011057",
@@ -2136,25 +2154,25 @@
             }
           },
           {
-            "store_id": "optical-by-national-pharmacies-glenelg-5045",
-            "retailer": "Optical by National Pharmacies",
-            "name": "Optical by National Pharmacies Glenelg",
-            "business_type": "Permanent retail optometry",
+            "store_id": "independent-other-optical-reviewed-au-sunglass-hut-glenelg-b742",
+            "retailer": "Sunglass Hut",
+            "name": "Sunglass Hut Jetty Road — Glenelg",
+            "business_type": "Sunglasses retail",
             "status": "Active",
-            "full_address": "Shop 6/108-116 Jetty Road, Glenelg SA 5045, Australia",
-            "latitude": "-34.9793821",
-            "longitude": "138.5197258",
-            "source_url": "https://www.nationalpharmacies.com.au/optical-booking/",
-            "fetched_at": "2026-09-03T00:05:23.931384+00:00",
-            "status_evidence_url": "",
-            "status_verified_at": "",
-            "stale_source_warning": true,
-            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "full_address": "Shop 9, 1 Colley Terrace, Glenelg SA 5045",
+            "latitude": "-34.9801762",
+            "longitude": "138.512709",
+            "source_url": "https://stores.sunglasshut.com/au/sa/glenelg/shop-9",
+            "fetched_at": "2026-10-18T08:05:50.043326+00:00",
+            "status_evidence_url": "https://stores.sunglasshut.com/au/sa/glenelg/shop-9",
+            "status_verified_at": "2026-10-18",
+            "stale_source_warning": false,
+            "quality_notes": "",
             "membership_evidence": {
-              "evidence_basis": "Numbered street address without a corroborated centre match",
-              "evidence_url": "https://www.nationalpharmacies.com.au/stores/glenelg-optical/",
-              "verified_at": "2026-09-03",
-              "mapping_confidence": "Medium"
+              "evidence_basis": "Operator identifies this branch as JETTY ROAD SGH with phone 08 8295 8493 and shop 9/1 Colley Terrace address; Maps matches phone and address. Independently inspected August 2025 Street View shows signed Sunglass Hut optical retail window and entrance directly onto Jetty Road public pavement beside other shops. Accept existing Glenelg Jetty Road High Street corridor. Address discrepancy retained: council-hosted April 2023 retail report states Sunglass Hut relocated along the strip due to hotel development, while current operator page retains Colley Terrace address. This does not invalidate explicit Jetty Road corridor identity, but exact premises address requires a separate correction review. Camera label 38 Jetty Road is not used as shop address. Original identity, address, coordinates and status preserved. Checked 2026-10-31. Sources: https://stores.sunglasshut.com/au/sa/glenelg/1-colley-terrace ; https://stores.sunglasshut.com/au/sa/glenelg/shop-9 ; https://www.npsp.sa.gov.au/files/18718_b_and_edac_agenda_4_april_2023.pdf?v=691. Map: https://www.google.com/maps/search/Sunglass+Hut+Glenelg. Imagery: August 2025.",
+              "evidence_url": "https://stores.sunglasshut.com/au/sa/glenelg/1-colley-terrace",
+              "verified_at": "2026-10-31",
+              "mapping_confidence": "High"
             }
           }
         ],
@@ -2192,9 +2210,9 @@
             "status_evidence_url": "",
             "status_verified_at": "",
             "stale_source_warning": true,
-            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
+            "quality_notes": "location setting needs review; source refresh is stale or incomplete; record remains usable as last-known public data",
             "distance_km": 0.10556564220370623,
-            "accepted_destination_member": true
+            "accepted_destination_member": false
           },
           {
             "store_id": "opsm-1211",
@@ -2216,7 +2234,7 @@
           },
           {
             "store_id": "independent-other-optical-reviewed-au-sunglass-hut-glenelg-b742",
-            "retailer": "Independent / Other optical",
+            "retailer": "Sunglass Hut",
             "name": "Sunglass Hut Jetty Road — Glenelg",
             "business_type": "Sunglasses retail",
             "status": "Active",
@@ -2224,12 +2242,30 @@
             "latitude": "-34.9801762",
             "longitude": "138.512709",
             "source_url": "https://stores.sunglasshut.com/au/sa/glenelg/shop-9",
-            "fetched_at": "2026-10-08",
+            "fetched_at": "2026-10-18T08:05:50.043326+00:00",
             "status_evidence_url": "https://stores.sunglasshut.com/au/sa/glenelg/shop-9",
-            "status_verified_at": "2026-10-08",
+            "status_verified_at": "2026-10-18",
             "stale_source_warning": false,
-            "quality_notes": "location setting needs review",
+            "quality_notes": "",
             "distance_km": 0.5679557783664337,
+            "accepted_destination_member": true
+          },
+          {
+            "store_id": "sunglass-hut-B769",
+            "retailer": "Sunglass Hut",
+            "name": "Sunglass Hut Adelaide Harbourtown DFO",
+            "business_type": "Sunglasses retail",
+            "status": "Active",
+            "full_address": "Shop T11, Harbourtown Shopping Centre, 727 Tapleys Hill Rd, Adelaide Harbourtown DFO, West Beach, SA, 5950",
+            "latitude": "-34.947114",
+            "longitude": "138.520492",
+            "source_url": "https://stores.sunglasshut.com/au/sa/west-beach/shop-t11-harbourtown-shopping-centre",
+            "fetched_at": "2026-10-18T08:05:50.043326+00:00",
+            "status_evidence_url": "https://stores.sunglasshut.com/au/sa/west-beach/shop-t11-harbourtown-shopping-centre",
+            "status_verified_at": "2026-10-18",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "distance_km": 3.6685059629903414,
             "accepted_destination_member": false
           },
           {
@@ -2266,6 +2302,24 @@
             "stale_source_warning": true,
             "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
             "distance_km": 4.6374946290590415,
+            "accepted_destination_member": false
+          },
+          {
+            "store_id": "sunglass-hut-B662",
+            "retailer": "Sunglass Hut",
+            "name": "Sunglass Hut Marion",
+            "business_type": "Sunglasses retail",
+            "status": "Active",
+            "full_address": "297 Diagonal Rd, Westfield Marion, Shop 2031, Level 2, Marion, Oaklands Park, SA, 5046",
+            "latitude": "-35.0159566",
+            "longitude": "138.54490860552252",
+            "source_url": "https://stores.sunglasshut.com/au/sa/oaklands-park/297-diagonal-rd-westfield-marion",
+            "fetched_at": "2026-10-18T08:05:50.043326+00:00",
+            "status_evidence_url": "https://stores.sunglasshut.com/au/sa/oaklands-park/297-diagonal-rd-westfield-marion",
+            "status_verified_at": "2026-10-18",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "distance_km": 4.637667560756166,
             "accepted_destination_member": false
           },
           {
@@ -2359,6 +2413,24 @@
             "accepted_destination_member": false
           },
           {
+            "store_id": "sunglass-hut-B861",
+            "retailer": "Sunglass Hut",
+            "name": "Sunglass Hut Myer Marion",
+            "business_type": "Sunglasses retail",
+            "status": "Active",
+            "full_address": "Myer, Ground Floor, Westfield Marion Shopping Centre, 297 Diagonal Road, Myer Marion, Oaklands Park, SA, 5046",
+            "latitude": "-35.01683743867401",
+            "longitude": "138.54692152492458",
+            "source_url": "https://stores.sunglasshut.com/au/sa/oaklands-park/myer-ground-floor-westfield-marion-shopping-centre",
+            "fetched_at": "2026-10-18T08:05:50.043326+00:00",
+            "status_evidence_url": "https://stores.sunglasshut.com/au/sa/oaklands-park/myer-ground-floor-westfield-marion-shopping-centre",
+            "status_verified_at": "2026-10-18",
+            "stale_source_warning": false,
+            "quality_notes": "",
+            "distance_km": 4.816626776161845,
+            "accepted_destination_member": false
+          },
+          {
             "store_id": "opsm-1572",
             "retailer": "OPSM",
             "name": "OPSM Edwardstown",
@@ -2408,13 +2480,13 @@
             "status_evidence_url": "https://opticalsuperstore.com.au/location/marion/",
             "status_verified_at": "2026-10-02",
             "stale_source_warning": true,
-            "quality_notes": "location setting needs review; source refresh is stale or incomplete; record remains usable as last-known public data",
+            "quality_notes": "source refresh is stale or incomplete; record remains usable as last-known public data",
             "distance_km": 4.9189263906886715,
             "accepted_destination_member": false
           }
         ],
         "within_2km": 4,
-        "within_5km": 14,
+        "within_5km": 17,
         "method": "Current non-BN competitors at <=2/5 km straight-line distance from the recorded point. All settings eligible. Radius does not establish membership or customer catchment; observed counts may be incomplete. Stale-source warnings remain separate."
       },
       "directory_summary": {

@@ -1,0 +1,50 @@
+{
+  "status": "Research only; no mappings or store changes applied",
+  "checked_at": "2026-10-27",
+  "method": "Standard web reader and search; retained evidence inspected first. No Firecrawl.",
+  "observations": [
+    {
+      "name": "Judi Coey",
+      "url": "https://www.judicoeyoptometry.com.au/",
+      "finding": "Full operator page confirms 1/13 Bunya St, Maleny. Sterling House appears in retained named-map evidence, but current third-party mirror incorrectly labels locality Merriam KS. Do not promote that building from mirror alone. No accepted Bunya corridor found."
+    },
+    {
+      "name": "Advanced Optometry",
+      "url": "https://www.advancedoptometry.com.au/",
+      "finding": "Full operator page confirms ground floor 113 Wickham Tce Spring Hill and 07 3831 2900. No accepted Wickham corridor found; address alone does not name a property."
+    },
+    {
+      "name": "Total Optical",
+      "url": "https://www.provision.com.au/practice/total-optical-pty-ltd/",
+      "finding": "Search result carries practice-specific page and corner Gatton/Newton Manunda plus 07 4031 1360. Government QFinder corroborates and says near TAFE, not in TAFE. Operator reader inaccessible. No accepted Gatton corridor. Full ProVision read still needed before final outcome."
+    },
+    {
+      "name": "iContact Indooroopilly",
+      "url": "https://www.health.qld.gov.au/?a=432826",
+      "finding": "Search exposes government table dated 15 April 2026: Unit G1B,49 Station Road,Indooroopilly4068,0733783278. Existing accepted Station Road Indooroopilly corridor available. Need inspect original conflict and current operator before final mapping."
+    },
+    {
+      "name": "Eyeman",
+      "url": "https://www.eyeman.com.au/",
+      "finding": "Full operator page confirms Unit1/3 Byres Street Newstead4006,0732161926. No accepted Byres corridor found. Manufacturer search mixed adjacent Total Optical and Eyeman snippets; do not import those contact associations."
+    },
+    {
+      "name": "Fitzpatrick Maroochydore",
+      "url": "https://www.fitzpatrickoptometrists.com.au/",
+      "finding": "Full operator page confirms Shop4/37 The Esplanade, corner Second Avenue,Maroochydore4558,0754438722. Longreach Merino Arcade is separately described with selected visiting days; not the Maroochydore property."
+    },
+    {
+      "name": "Torga North Lakes",
+      "url": "https://torgaoptical.com.au/",
+      "finding": "Current reader403. Retained operator online-only announcement remains evidence of closure; failed fetch does not newly establish status. Historical Westfield North Lakes membership requires separate handling from active tenancy."
+    },
+    {
+      "name": "iContact and Russell Cooper final checks",
+      "urls": [
+        "https://www.icontact-optometrists.com.au/locations",
+        "https://qfinder2.health.qld.gov.au/HealthServiceProvider/Index/120e62bd-7637-e611-80d2-00505601056f"
+      ],
+      "finding": "Full operator locator still shows Indooroopilly Shopping Centre 322 Moggill Road and same0733783278; do not discard documented government/independent-map Station Road correction or infer current centre tenancy. QFinder full page gives Russell Cooper160Bolsover,0749226996 and daily hours; no current operating-status conclusion from daily Closed widget."
+    }
+  ]
+}

@@ -42,6 +42,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -v
           node tests/test_intelligence.js
+          node tests/test_location_news.js
           python scripts/scan_public_privacy.py
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -49,10 +50,8 @@ jobs:
         env:
           SITE_REVISION: ${{ github.sha }}
         run: |
-          mkdir _site
-          cp -R assets data retailers _site/
-          cp index.html opsm_stores.csv opsm_stores.geojson .nojekyll _site/
-          python -c 'import json, os; from pathlib import Path; Path("_site/deployment.json").write_text(json.dumps({"revision": os.environ["SITE_REVISION"]}) + "\n")'
+          python scripts/package_public_site.py
+          python scripts/scan_public_privacy.py --site _site
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:

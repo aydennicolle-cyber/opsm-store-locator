@@ -80,8 +80,21 @@ class AdmissionTests(unittest.TestCase):
         for row in reviewed.read_reviewed_rows():
             key=reviewed.ID_PREFIX+row['id']
             with self.subTest(store=key):
-                self.assertEqual(stores[key]['fetched_at'][:10],row['verified_at'])
-                self.assertEqual(certificates[key]['source_id'],reviewed.SOURCE_ID)
+                if stores[key]['retailer'] == 'Sunglass Hut':
+                    # Complete operator refresh retains the original intake ID,
+                    # but supersedes its old source date with current evidence.
+                    snapshot=json.loads((ROOT/'retailers/sunglass-hut/source_snapshot.json').read_text())
+                    self.assertEqual(stores[key]['fetched_at'],snapshot['fetched_at'])
+                    self.assertEqual(certificates[key]['source_id'],'sunglass-hut-anz')
+                    self.assertIn(stores[key]['official_url'], {r['source_url'] for r in snapshot['stores']})
+                elif stores[key]['retailer'] == 'Oakley':
+                    snapshot=json.loads((ROOT/'retailers/oakley/source_snapshot.json').read_text())
+                    self.assertEqual(stores[key]['fetched_at'],snapshot['fetched_at'])
+                    self.assertEqual(certificates[key]['source_id'],'oakley-au')
+                    self.assertIn(stores[key]['source_url'],snapshot['source_urls'])
+                else:
+                    self.assertEqual(stores[key]['fetched_at'][:10],row['verified_at'])
+                    self.assertEqual(certificates[key]['source_id'],reviewed.SOURCE_ID)
                 self.assertEqual(certificates[key]['usable_for_network'],'true')
                 if row['location_setting']=='Uncertain' and key in overrides:
                     # A subsequent evidence-backed membership review may resolve
@@ -91,7 +104,11 @@ class AdmissionTests(unittest.TestCase):
                     self.assertTrue(decision['evidence_basis'])
                     self.assertEqual(memberships[key]['location_setting'],decision['location_setting'])
                     self.assertEqual(memberships[key]['review_status'],'Accepted')
-                    self.assertTrue(memberships[key]['place_id'])
+                    if decision['location_setting'] == 'Other' and not decision['canonical_name']:
+                        self.assertFalse(memberships[key]['place_id'])
+                        self.assertEqual(certificates[key]['eligible_for_place_analytics'], 'false')
+                    else:
+                        self.assertTrue(memberships[key]['place_id'])
                 elif row['location_setting']=='Uncertain':
                     self.assertEqual(memberships[key]['location_setting'],'Uncertain')
                     self.assertEqual(memberships[key]['place_id'],'')

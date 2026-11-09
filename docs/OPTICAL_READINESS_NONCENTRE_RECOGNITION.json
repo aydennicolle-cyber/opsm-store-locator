@@ -1,0 +1,79 @@
+{
+  "status": "Rebuilt; full Python, intelligence, privacy and diff checks passed; final browser check pending",
+  "decisions": [
+    {
+      "store_id": "eyecare-plus-621",
+      "store_fingerprint": "78272aed6bcfa2fa28af9678eb3af4c7a9897c2eee965d0085bb0d39580c3fad",
+      "accepted_place_id": "",
+      "accepted_setting": "Other",
+      "candidate_venue_id": "qld-inala-plaza",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.eyecareplus.com.au/inala/",
+      "reason": "Official practice page locates the practice inside Dr Le Surgery rather than a retail centre or street-front tenancy. Retain this explicit non-centre setting without assigning the nearby shopping centre. Original evidence date 2026-09-02; this is an integration review, not a new external verification."
+    },
+    {
+      "store_id": "gentle-monster-779149702155858418",
+      "store_fingerprint": "0647c452e56a5b23ad763af5b371304d841c67bb326495ccc8233b1e1eaf200f",
+      "accepted_place_id": "",
+      "accepted_setting": "Other",
+      "candidate_venue_id": "nsw-sydney-westfield",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.gentlemonster.com/au/en/stores",
+      "reason": "Official locator explicitly names Ground Floor David Jones. Retain this explicit non-centre setting without assigning the nearby shopping centre. Original evidence date 2026-10-20; this is an integration review, not a new external verification."
+    }
+  ],
+  "original_memberships": [
+    {
+      "store_id": "eyecare-plus-621",
+      "retailer": "Eyecare Plus",
+      "country": "Australia",
+      "state": "QLD",
+      "store_name": "Eyecare Plus Optometrists Inala",
+      "place_id": "",
+      "place_name": "",
+      "location_setting": "Other",
+      "mapping_confidence": "High",
+      "evidence_basis": "Official practice page locates the practice inside Dr Le Surgery rather than a retail centre or street-front tenancy",
+      "evidence_url": "https://www.eyecareplus.com.au/inala/",
+      "verified_at": "2026-09-02",
+      "previous_venue_id": "",
+      "review_status": "Accepted",
+      "usable_for_network": "true",
+      "trading_status": "Active"
+    },
+    {
+      "store_id": "gentle-monster-779149702155858418",
+      "retailer": "Gentle Monster",
+      "country": "Australia",
+      "state": "NSW",
+      "store_name": "GENTLE MONSTER Sydney David Jones",
+      "place_id": "",
+      "place_name": "",
+      "location_setting": "Other",
+      "mapping_confidence": "High",
+      "evidence_basis": "Official locator explicitly names Ground Floor David Jones",
+      "evidence_url": "https://www.gentlemonster.com/au/en/stores",
+      "verified_at": "2026-10-20",
+      "previous_venue_id": "",
+      "review_status": "Accepted",
+      "usable_for_network": "true",
+      "trading_status": "Active"
+    }
+  ],
+  "focused_tests": "5 retained mapping review tests passed; changes to setting, membership, address or candidate reopen review",
+  "rebuild_invariants": {
+    "original_memberships_and_dates_unchanged": true,
+    "both_reviews_connected": true
+  },
+  "validation": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  }
+}

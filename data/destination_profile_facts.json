@@ -59,7 +59,7 @@
         },
         {
           "label": "Gross lettable area",
-          "value": "109,000 m², GPT Listed Investor Tour October 2025, page 18. Independently checked against the PDF page.",
+          "value": "109,000 m\u00b2, GPT Listed Investor Tour October 2025, page 18. Independently checked against the PDF page.",
           "source_url": "https://www.gpt.com.au/sites/default/files/inline-uploads/GPT%20Retail%20presentation%20and%20Rouse%20Hill%20Town%20Centre%20tour.pdf",
           "source_period": "2025-10",
           "source_date": null,
@@ -80,14 +80,14 @@
       "profile_status": "Partial: bounded public research complete; commercial and coverage gaps explicit",
       "checked_at": "2026-10-08",
       "demographic_boundary_evidence": {
-        "latitude": -31.876927,
-        "longitude": 115.777398,
+        "latitude": -31.87682,
+        "longitude": 115.777581,
         "match_status": "Unique",
         "sa2_code": "505021089",
         "sa2_name": "Karrinyup - Gwelup - Carine",
         "match_count": 1,
-        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.777398%2C-31.876927&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
-        "checked_at": "2026-09-27T21:58:22.781427+00:00"
+        "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.777581%2C-31.87682&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+        "checked_at": "2026-10-25T07:51:03.175529+00:00"
       }
     },
     {
@@ -170,7 +170,7 @@
         },
         {
           "label": "Gross lettable area",
-          "value": "24,502 m², explicitly reported in the April 2026 sale campaign. Later approximate 28,000 m² wording is not reconciled; 40,000 m² legacy completion figure is not current operating GLA.",
+          "value": "24,502 m\u00b2, explicitly reported in the April 2026 sale campaign. Later approximate 28,000 m\u00b2 wording is not reconciled; 40,000 m\u00b2 legacy completion figure is not current operating GLA.",
           "source_url": "https://www.cbre.com.au/press-releases/sydney-s-thriving-ed-square-town-centre-provides-highly-sought-after-retail-investment-opportunity",
           "source_date": "2026-04-01",
           "source_period": null,
@@ -192,7 +192,7 @@
         },
         {
           "label": "Historical lettable area",
-          "value": "25,100 m² estimated total lettable area in FY2025 report. Definition and period differ from April 2026 GLA.",
+          "value": "25,100 m\u00b2 estimated total lettable area in FY2025 report. Definition and period differ from April 2026 GLA.",
           "source_url": "https://www.frasersproperty.com/content/dam/frasersproperty/feature/project/frasers-corporate/annual-report/2025/FY25%20FPL%20Annual%20Report.pdf",
           "source_date": null,
           "source_period": "FY2025, ending 30 September 2025 (FY2024 comparator where shown)",

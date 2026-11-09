@@ -1,0 +1,134 @@
+{
+  "checked_at": "2026-10-27",
+  "status": "Four outcomes verified in rebuilt data; full dependent checks passed. Browser/export verification remains separate.",
+  "raw_store_sha256": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "accepted": [
+    {
+      "store_id": "independent-other-optical-reviewed-nz-eden-quarter-optometrist",
+      "location_setting": "Shopping Centre",
+      "canonical_name": "Eden Quarter Shopping Centre",
+      "place_type": "Shopping Centre",
+      "official_url": "https://www.eqo.co.nz/contact",
+      "evidence_basis": "Practice-owned contact page explicitly names Eden Quarter Shopping Centre at the retained 290 Dominion Road business address, corner Valley Road. Accept named centre membership from the operator statement, not proximity. Source publication date unstated; reviewed 27 October 2026. The business street number does not establish the whole-property postal address.",
+      "confidence": "High",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "place-nz-auckland-eden-quarter-shopping-centre"
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-michael-holmes-premium-eyewear",
+      "location_setting": "High Street",
+      "canonical_name": "Teed Street",
+      "place_type": "High Street Corridor",
+      "official_url": "https://newmarket.co.nz/eyeing-up-newmarkets-optometrists/",
+      "evidence_basis": "Newmarket Business Association optical guide explicitly lists Michael Holmes at 25 Teed Street; retained operator premises review confirms that address and identity. Accept the existing Newmarket Teed Street shopping corridor, which also contains Parker & Co at 9 Teed Street. This is street-address membership, not Westfield tenancy or a surveyed precinct boundary. Guide says updated May 2026 but retains older addresses for some other practices; only this corroborated business claim is used. Direct operator retrieval unavailable on 27 October; original store-source date unchanged.",
+      "confidence": "Medium",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "corridor-nz-auckland-auckland-teed-street"
+    }
+  ],
+  "place_override": {
+    "place_id": "place-nz-auckland-eden-quarter-shopping-centre",
+    "canonical_name": "Eden Quarter Shopping Centre",
+    "aliases": "Eden Quarter",
+    "official_url": "",
+    "evidence_url": "https://www.eqo.co.nz/contact",
+    "verified_at": "2026-10-27",
+    "reason": "Practice explicitly identifies its named shopping centre. Keep the wider Dominion Road district separate; no boundaries or complete tenant list inferred.",
+    "state": "Auckland",
+    "locality": "Mount Eden",
+    "postcode": "1024",
+    "address": "Corner Dominion Road and Valley Road",
+    "location_setting": "Shopping Centre",
+    "address_source_date": "",
+    "address_evidence_url": "https://www.eqo.co.nz/contact",
+    "address_checked_at": "2026-10-27",
+    "address_basis": "Operator gives the named centre at the Dominion Road/Valley Road corner. This is an intersection reference, not a verified whole-property street-number range. Retain 290 Dominion Road as the business address only; publication date unknown."
+  },
+  "point_override": {
+    "place_id": "place-nz-auckland-eden-quarter-shopping-centre",
+    "latitude": "-36.8774381",
+    "longitude": "174.75078810000002",
+    "evidence_url": "https://www.eqo.co.nz/contact",
+    "verified_at": "2026-10-27",
+    "confidence": "Low",
+    "method": "Accepted tenant reference",
+    "reference_store_id": "independent-other-optical-reviewed-nz-eden-quarter-optometrist",
+    "reason": "Display reference inherited unchanged from the accepted optical tenant. Operator explicitly names the centre, but this point does not establish its centre, boundary or entrance."
+  },
+  "unresolved": [
+    {
+      "store_id": "independent-other-optical-reviewed-nz-specs-direct-morningside",
+      "store_fingerprint": "4de87829977329c0f8aad161398fa0d2bb1bf8dd9fba0af4678417e70dfe0cdb",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://specsdirect.co.nz/",
+      "reason": "Owned Specs Direct site retrieved 27 October 2026 confirms the showroom and 640 New North Road, Morningside, with phone 09 846 7007. The practice-network listing corroborates the address. Neither establishes a named shopping-centre tenancy or the scope of an accepted retail corridor. Keep the supported business premises and original point; canonical place membership remains unresolved without inventing a New North Road boundary."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-gates-eyewear-newmarket",
+      "store_fingerprint": "78e98f9b7f39a861e30f0e4dbd49ebe2bbdce151be6a05484a2a918b58293f7d",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://newmarket.co.nz/business/gates-eyewear/",
+      "reason": "Newmarket Business Association lists Gates Eyewear at 17A Remuera Road with the retained phone; its optical guide identifies the Newmarket precinct generally. The existing Remuera Road canonical corridor is anchored by OPSM at 395 Remuera Road, a different section. A common road name and broad Auckland locality do not justify joining them. Retain the independently established Gates/Adam identity reconciliation and current premises, but leave exact canonical section membership unresolved; no Westfield tenancy or newly defined precinct is inferred."
+    }
+  ],
+  "source_limits": "Eden operator contact and Specs Direct home fully retrieved. Newmarket guide fully retrieved and dated May 2026; Gates directory indexed. Holmes operator inaccessible. No full centre directory or surveyed boundary claimed.",
+  "place_build_verification": {
+    "checked_at": "2026-10-27",
+    "checks": {
+      "independent-other-optical-reviewed-nz-eden-quarter-optometrist": true,
+      "independent-other-optical-reviewed-nz-michael-holmes-premium-eyewear": true,
+      "single_eden_place": true,
+      "intersection_reference": true,
+      "low_point_confidence": true,
+      "original_tenant_point": true,
+      "raw_stores_unchanged": true
+    },
+    "scope": "Place/membership outputs only. Downstream validation still running."
+  },
+  "downstream_verification": {
+    "checked_at": "2026-10-27",
+    "checks": [
+      {
+        "store_id": "independent-other-optical-reviewed-nz-eden-quarter-optometrist",
+        "outcome": "Accepted",
+        "passed": true
+      },
+      {
+        "store_id": "independent-other-optical-reviewed-nz-michael-holmes-premium-eyewear",
+        "outcome": "Accepted",
+        "passed": true
+      },
+      {
+        "store_id": "independent-other-optical-reviewed-nz-specs-direct-morningside",
+        "outcome": "Unresolved and excluded",
+        "passed": true
+      },
+      {
+        "store_id": "independent-other-optical-reviewed-nz-gates-eyewear-newmarket",
+        "outcome": "Unresolved and excluded",
+        "passed": true
+      }
+    ],
+    "passed": 4,
+    "failed": 0
+  },
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  }
+}

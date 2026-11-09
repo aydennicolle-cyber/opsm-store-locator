@@ -7,33 +7,253 @@
     "property_relationship": 180
   },
   "sources": [
-    {"id":"opsm-au","label":"OPSM Australia official locator","category":"named_network","scope":"Australia","method":"Official public locator endpoint","required":true,"snapshot":"retailers/opsm/source_snapshot.json"},
-    {"id":"opsm-nz","label":"OPSM New Zealand official locator","category":"named_network","scope":"New Zealand","method":"Official public locator endpoint","required":true,"snapshot":"retailers/opsm-nz/source_snapshot.json"},
-    {"id":"specsavers-au","label":"Specsavers Australia official pages","category":"named_network","scope":"Australia","method":"Rendered official store pages","required":true,"snapshot":"retailers/specsavers/source_snapshot.json"},
-    {"id":"specsavers-nz","label":"Specsavers New Zealand official pages","category":"named_network","scope":"New Zealand","method":"Rendered official store pages","required":true,"snapshot":"retailers/specsavers-nz/source_snapshot.json"},
-    {"id":"bailey-nelson-au","label":"Bailey Nelson Australia official pages","category":"named_network","scope":"Australia","method":"Official store list and structured pages","required":true,"snapshot":"retailers/bailey-nelson/source_snapshot.json"},
-    {"id":"bailey-nelson-nz","label":"Bailey Nelson New Zealand official pages","category":"named_network","scope":"New Zealand","method":"Official store list and structured pages","required":true,"snapshot":"retailers/bailey-nelson-nz/source_snapshot.json"},
-    {"id":"oscar-wylee-au","label":"Oscar Wylee Australia official pages","category":"named_network","scope":"Australia","method":"Official store pages","required":true,"snapshot":"retailers/oscar-wylee/source_snapshot.json"},
-    {"id":"oscar-wylee-nz","label":"Oscar Wylee New Zealand official pages","category":"named_network","scope":"New Zealand","method":"Official store pages","required":true,"snapshot":"retailers/oscar-wylee-nz/source_snapshot.json"},
-    {"id":"george-and-matilda-au","label":"George & Matilda Australia official locator","category":"named_network","scope":"Australia","method":"Bounded official public locator","required":true,"snapshot":"retailers/george-and-matilda/source_snapshot.json"},
-    {"id":"eyecare-plus-au","label":"Eyecare Plus Australia official locator","category":"named_network","scope":"Australia","method":"Bounded official public locator","required":true,"snapshot":"retailers/eyecare-plus/source_snapshot.json"},
-    {"id":"optical-superstore-au","label":"Optical Superstore Australia official locator","category":"named_network","scope":"Australia","method":"Bounded official public locator","required":true,"snapshot":"retailers/optical-superstore/source_snapshot.json"},
-    {"id":"1001-optometry-au","label":"1001 Optometry Australia official locator","category":"named_network","scope":"Australia","method":"Official public Stockist locator endpoint","required":true,"snapshot":"retailers/1001-optometry/source_snapshot.json"},
-    {"id":"eyeq-optometrists-au","label":"EyeQ Optometrists Australia official locator","category":"named_network","scope":"Australia","method":"Official location list and practice pages","required":true,"snapshot":"retailers/eyeq-optometrists/source_snapshot.json"},
-    {"id":"laubman-and-pank-au","label":"Laubman & Pank Australia official locator","category":"named_network","scope":"Australia","method":"Official store finder and store pages","required":true,"snapshot":"retailers/laubman-and-pank/source_snapshot.json"},
-    {"id":"bupa-optical-au","label":"Bupa Optical Australia official locator","category":"named_network","scope":"Australia","method":"Official public Stockist locator endpoint","required":true,"snapshot":"retailers/bupa-optical/source_snapshot.json"},
-    {"id":"chemist-warehouse-optometry-au","label":"Chemist Warehouse Optometry official locator","category":"named_network","scope":"Australia","method":"Official public Storepoint locator endpoint","required":true,"snapshot":"retailers/chemist-warehouse-optometry/source_snapshot.json"},
-    {"id":"dresden-vision-au","label":"Dresden Vision Australia official locations","category":"named_network","scope":"Australia","method":"Official location list and structured store pages","required":true,"snapshot":"retailers/dresden-vision/source_snapshot.json"},
-    {"id":"optical-warehouse-au","label":"Optical Warehouse Australia official locations","category":"named_network","scope":"Australia","method":"Official store list with address geocoding","required":true,"snapshot":"retailers/optical-warehouse/source_snapshot.json"},
-    {"id":"the-optical-company-au","label":"The Optical Company Australia official locations","category":"named_network","scope":"Australia","method":"Official network list; consumer-facing The Optical Co stores","required":true,"snapshot":"retailers/the-optical-company/source_snapshot.json"},
-    {"id":"national-pharmacies-optical-au","label":"Optical by National Pharmacies official locator","category":"named_network","scope":"Australia","method":"Official optical-booking locator with address geocoding","required":true,"snapshot":"retailers/national-pharmacies-optical/source_snapshot.json"},
-    {"id":"matthews-eyecare-nz","label":"Matthews Eyecare New Zealand official practices","category":"named_network","scope":"New Zealand","method":"Official structured practice list with address geocoding","required":true,"snapshot":"retailers/matthews-eyecare/source_snapshot.json"},
-    {"id":"provision-affiliation","label":"ProVision independent practice network","category":"named_network","scope":"Australia","method":"Official public practice locator","required":true,"snapshot":"retailers/provision/source_snapshot.json"},
-    {"id":"osm-opticians","label":"OpenStreetMap shop=optician","category":"community_or_secondary","scope":"Australia and New Zealand","method":"Overpass recall-first discovery","required":true,"snapshot":"retailers/independent-other/source_snapshot.json"},
-    {"id":"retail-place-census","label":"Shopping-centre and named retail-precinct census","category":"community_or_secondary","scope":"Australia and New Zealand","method":"Official venue directories, owner portfolios, public datasets and recall-first discovery sources","required":true,"snapshot":"data/discovery/retail_place_discovery_run.json","completion_status":"partial"},
-    {"id":"centre-tenant-reconciliation","label":"Centre and precinct optical tenant directories","category":"community_or_secondary","scope":"Australia and New Zealand","method":"Reverse discovery from official tenant directories","required":true,"snapshot":"data/discovery_candidates.csv","completion_status":"partial"},
-    {"id":"regional-independent-discovery","label":"Regional group and independent storefront discovery","category":"community_or_secondary","scope":"Australia and New Zealand","method":"Official business sites and public listings used as leads","required":true,"snapshot":"data/discovery_candidates.csv","completion_status":"partial"},
-    {"id":"property-portfolios","label":"Property ownership, management and leasing portfolios","category":"property_relationship","scope":"Major Australian and New Zealand shopping-centre groups","method":"Bounded official portfolio, property, annual-report and public leasing evidence","required":false,"snapshot":"data/property_intelligence.json","completion_status":"partial"},
+    {
+      "id": "opsm-au",
+      "label": "OPSM Australia official locator",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official public locator endpoint",
+      "required": true,
+      "snapshot": "retailers/opsm/source_snapshot.json"
+    },
+    {
+      "id": "opsm-nz",
+      "label": "OPSM New Zealand official locator",
+      "category": "named_network",
+      "scope": "New Zealand",
+      "method": "Official public locator endpoint",
+      "required": true,
+      "snapshot": "retailers/opsm-nz/source_snapshot.json"
+    },
+    {
+      "id": "specsavers-au",
+      "label": "Specsavers Australia official pages",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Rendered official store pages",
+      "required": true,
+      "snapshot": "retailers/specsavers/source_snapshot.json"
+    },
+    {
+      "id": "specsavers-nz",
+      "label": "Specsavers New Zealand official pages",
+      "category": "named_network",
+      "scope": "New Zealand",
+      "method": "Rendered official store pages",
+      "required": true,
+      "snapshot": "retailers/specsavers-nz/source_snapshot.json"
+    },
+    {
+      "id": "bailey-nelson-au",
+      "label": "Bailey Nelson Australia official pages",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official store list and structured pages",
+      "required": true,
+      "snapshot": "retailers/bailey-nelson/source_snapshot.json"
+    },
+    {
+      "id": "bailey-nelson-nz",
+      "label": "Bailey Nelson New Zealand official pages",
+      "category": "named_network",
+      "scope": "New Zealand",
+      "method": "Official store list and structured pages",
+      "required": true,
+      "snapshot": "retailers/bailey-nelson-nz/source_snapshot.json"
+    },
+    {
+      "id": "oscar-wylee-au",
+      "label": "Oscar Wylee Australia official pages",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official store pages",
+      "required": true,
+      "snapshot": "retailers/oscar-wylee/source_snapshot.json"
+    },
+    {
+      "id": "oscar-wylee-nz",
+      "label": "Oscar Wylee New Zealand official pages",
+      "category": "named_network",
+      "scope": "New Zealand",
+      "method": "Official store pages",
+      "required": true,
+      "snapshot": "retailers/oscar-wylee-nz/source_snapshot.json"
+    },
+    {
+      "id": "george-and-matilda-au",
+      "label": "George & Matilda Australia official locator",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Bounded official public locator",
+      "required": true,
+      "snapshot": "retailers/george-and-matilda/source_snapshot.json"
+    },
+    {
+      "id": "eyecare-plus-au",
+      "label": "Eyecare Plus Australia official locator",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Bounded official public locator",
+      "required": true,
+      "snapshot": "retailers/eyecare-plus/source_snapshot.json"
+    },
+    {
+      "id": "optical-superstore-au",
+      "label": "Optical Superstore Australia official locator",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Bounded official public locator",
+      "required": true,
+      "snapshot": "retailers/optical-superstore/source_snapshot.json"
+    },
+    {
+      "id": "1001-optometry-au",
+      "label": "1001 Optometry Australia official locator",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official public Stockist locator endpoint",
+      "required": true,
+      "snapshot": "retailers/1001-optometry/source_snapshot.json"
+    },
+    {
+      "id": "eyeq-optometrists-au",
+      "label": "EyeQ Optometrists Australia official locator",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official location list and practice pages",
+      "required": true,
+      "snapshot": "retailers/eyeq-optometrists/source_snapshot.json"
+    },
+    {
+      "id": "laubman-and-pank-au",
+      "label": "Laubman & Pank Australia official locator",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official store finder and store pages",
+      "required": true,
+      "snapshot": "retailers/laubman-and-pank/source_snapshot.json"
+    },
+    {
+      "id": "bupa-optical-au",
+      "label": "Bupa Optical Australia official locator",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official public Stockist locator endpoint",
+      "required": true,
+      "snapshot": "retailers/bupa-optical/source_snapshot.json"
+    },
+    {
+      "id": "chemist-warehouse-optometry-au",
+      "label": "Chemist Warehouse Optometry official locator",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official public Storepoint locator endpoint",
+      "required": true,
+      "snapshot": "retailers/chemist-warehouse-optometry/source_snapshot.json"
+    },
+    {
+      "id": "dresden-vision-au",
+      "label": "Dresden Vision Australia official locations",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official location list and structured store pages",
+      "required": true,
+      "snapshot": "retailers/dresden-vision/source_snapshot.json"
+    },
+    {
+      "id": "optical-warehouse-au",
+      "label": "Optical Warehouse Australia official locations",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official store list with address geocoding",
+      "required": true,
+      "snapshot": "retailers/optical-warehouse/source_snapshot.json"
+    },
+    {
+      "id": "the-optical-company-au",
+      "label": "The Optical Company Australia official locations",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official network list; consumer-facing The Optical Co stores",
+      "required": true,
+      "snapshot": "retailers/the-optical-company/source_snapshot.json"
+    },
+    {
+      "id": "national-pharmacies-optical-au",
+      "label": "Optical by National Pharmacies official locator",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official optical-booking locator with address geocoding",
+      "required": true,
+      "snapshot": "retailers/national-pharmacies-optical/source_snapshot.json"
+    },
+    {
+      "id": "matthews-eyecare-nz",
+      "label": "Matthews Eyecare New Zealand official practices",
+      "category": "named_network",
+      "scope": "New Zealand",
+      "method": "Official structured practice list with address geocoding",
+      "required": true,
+      "snapshot": "retailers/matthews-eyecare/source_snapshot.json"
+    },
+    {
+      "id": "provision-affiliation",
+      "label": "ProVision independent practice network",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official public practice locator",
+      "required": true,
+      "snapshot": "retailers/provision/source_snapshot.json"
+    },
+    {
+      "id": "osm-opticians",
+      "label": "OpenStreetMap shop=optician",
+      "category": "community_or_secondary",
+      "scope": "Australia and New Zealand",
+      "method": "Overpass recall-first discovery",
+      "required": true,
+      "snapshot": "retailers/independent-other/source_snapshot.json"
+    },
+    {
+      "id": "retail-place-census",
+      "label": "Shopping-centre and named retail-precinct census",
+      "category": "community_or_secondary",
+      "scope": "Australia and New Zealand",
+      "method": "Official venue directories, owner portfolios, public datasets and recall-first discovery sources",
+      "required": true,
+      "snapshot": "data/discovery/retail_place_discovery_run.json",
+      "completion_status": "partial"
+    },
+    {
+      "id": "centre-tenant-reconciliation",
+      "label": "Centre and precinct optical tenant directories",
+      "category": "community_or_secondary",
+      "scope": "Australia and New Zealand",
+      "method": "Reverse discovery from official tenant directories",
+      "required": true,
+      "snapshot": "data/discovery_candidates.csv",
+      "completion_status": "partial"
+    },
+    {
+      "id": "regional-independent-discovery",
+      "label": "Regional group and independent storefront discovery",
+      "category": "community_or_secondary",
+      "scope": "Australia and New Zealand",
+      "method": "Official business sites and public listings used as leads",
+      "required": true,
+      "snapshot": "data/discovery_candidates.csv",
+      "completion_status": "partial"
+    },
+    {
+      "id": "property-portfolios",
+      "label": "Property ownership, management and leasing portfolios",
+      "category": "property_relationship",
+      "scope": "Major Australian and New Zealand shopping-centre groups",
+      "method": "Bounded official portfolio, property, annual-report and public leasing evidence",
+      "required": false,
+      "snapshot": "data/property_intelligence.json",
+      "completion_status": "partial"
+    },
     {
       "id": "reviewed-independent-practices",
       "label": "Reviewed independent public practices",
@@ -42,6 +262,95 @@
       "method": "Individually reviewed practice identity, current public trading evidence, address and map coordinates; supplier flags alone do not admit records",
       "required": false,
       "snapshot": "retailers/reviewed-independents/source_snapshot.json"
+    },
+    {
+      "id": "sunglass-hut-anz",
+      "label": "Sunglass Hut AU/NZ",
+      "category": "named_network",
+      "scope": "Australia + New Zealand",
+      "method": "Complete official directory traversal; raw IDs reconciled; closed records retained separately.",
+      "required": true,
+      "snapshot": "retailers/sunglass-hut/source_snapshot.json"
+    },
+    {
+      "id": "ray-ban-au",
+      "label": "Ray-Ban Australia official locator",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official country directory and branch capture; centre directory confirms optometry services.",
+      "required": true,
+      "snapshot": "retailers/ray-ban/source_snapshot.json"
+    },
+    {
+      "id": "gentle-monster-au",
+      "label": "Gentle Monster official Australian outlet evidence",
+      "category": "named_network",
+      "scope": "Australia; verified outlets only",
+      "method": "Official outlet pages and operator premises coordinates; stockists excluded.",
+      "required": true,
+      "completion_status": "partial",
+      "snapshot": "retailers/gentle-monster/source_snapshot.json"
+    },
+    {
+      "id": "valley-eyewear-au",
+      "label": "Valley Eyewear official Australian outlet evidence",
+      "category": "named_network",
+      "scope": "Australia; verified outlets only",
+      "method": "Official outlet pages and operator premises coordinates; stockists excluded.",
+      "required": true,
+      "completion_status": "partial",
+      "snapshot": "retailers/valley-eyewear/source_snapshot.json"
+    },
+    {
+      "id": "moscot-au",
+      "label": "MOSCOT official Australian outlet evidence",
+      "category": "named_network",
+      "scope": "Australia; verified outlets only",
+      "method": "Official outlet pages and operator premises coordinates; stockists excluded.",
+      "required": true,
+      "completion_status": "partial",
+      "snapshot": "retailers/moscot/source_snapshot.json"
+    },
+    {
+      "id": "am-eyewear-au",
+      "label": "AM Eyewear official Australian outlet evidence",
+      "category": "named_network",
+      "scope": "Australia; verified outlets only",
+      "method": "Official outlet pages and operator premises coordinates; stockists excluded.",
+      "required": true,
+      "completion_status": "partial",
+      "snapshot": "retailers/am-eyewear/source_snapshot.json"
+    },
+    {
+      "id": "oakley-au",
+      "label": "Oakley official outlet evidence AU",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official roster with preserved source IDs; stockists excluded",
+      "required": true,
+      "completion_status": "partial",
+      "snapshot": "retailers/oakley/source_snapshot.json"
+    },
+    {
+      "id": "oakley-nz",
+      "label": "Oakley official outlet evidence NZ",
+      "category": "named_network",
+      "scope": "New Zealand",
+      "method": "Official roster with preserved source IDs; stockists excluded",
+      "required": true,
+      "completion_status": "partial",
+      "snapshot": "retailers/oakley/source_snapshot.json",
+      "refresh_limitation": "The 26 October 2026 refresh attempt could not access the New Zealand locator. Retained outlet evidence comes from the 20\u201321 October capture and review; trading has not been freshly reconfirmed. National coverage remains partial. Unavailable access is not evidence of closure."
+    },
+    {
+      "id": "the-eye-piece-au",
+      "label": "The Eye Piece official outlet evidence AU",
+      "category": "named_network",
+      "scope": "Australia",
+      "method": "Official roster with preserved source IDs; stockists excluded",
+      "required": true,
+      "completion_status": "complete",
+      "snapshot": "retailers/the-eye-piece/source_snapshot.json"
     }
   ]
 }

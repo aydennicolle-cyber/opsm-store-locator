@@ -1,0 +1,1621 @@
+{
+  "checked_at": "2026-10-26",
+  "baseline": "/var/folders/68/ghl3tmhn1sj44582kxynzctm0000gn/T/address-review-baseline-5_ldqfc5",
+  "scope": "Address-only evidence propagation for previously researched valid high-priority property references; no identity, address text, point, membership or source-capture date changes authorised.",
+  "changes": [
+    {
+      "issue_id": "place:place-au-act-cooleman-court",
+      "previous_override": {
+        "place_id": "place-au-act-cooleman-court",
+        "canonical_name": "Cooleman Court",
+        "aliases": "",
+        "official_url": "https://regiongroup.au/portfolio/",
+        "evidence_url": "https://regiongroup.au/wp-content/uploads/2026/08/Property-Booklet-as-at-30-Jun-2026-FINAL-17.08.pdf",
+        "verified_at": "2026-09-02",
+        "reason": "Region Group's current portfolio confirms the centre identity and address while the stable place ID is retained",
+        "state": "ACT",
+        "locality": "Weston",
+        "postcode": "",
+        "address": "Brierly Street",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://regiongroup.au/wp-content/uploads/2026/08/Property-Booklet-as-at-30-Jun-2026-FINAL-17.08.pdf",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Region Group's current portfolio confirms the centre identity and address while the stable place ID is retained"
+      },
+      "address": "Brierly Street",
+      "review": {
+        "issue_id": "place:place-au-act-cooleman-court",
+        "disposition": "Reviewed valid owner-published property address; no repair required",
+        "source_url": "https://regiongroup.au/wp-content/uploads/2026/08/Property-Booklet-as-at-30-Jun-2026-FINAL-17.08.pdf",
+        "checked_at": "2026-10-25",
+        "source_period": "2026-06-30",
+        "scrape_id": "01a172e8-83f6-742a-aa1e-52abcb792ce5",
+        "basis": "Region Group portfolio, printed page 15, identifies Cooleman Court at Brierly Street, Weston ACT. Retain owner-published number-free whole-property address.",
+        "limitations": "June 2026 portfolio reviewed now, not a fresh October property survey. No entrance, boundary, point or tenant-list verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-act-westfield-belconnen",
+      "previous_override": {
+        "place_id": "place-au-act-westfield-belconnen",
+        "canonical_name": "Westfield Belconnen",
+        "aliases": "Belconnen Westfield",
+        "official_url": "https://www.westfield.com.au/belconnen/",
+        "evidence_url": "https://www.scentregroup.com/westfield-destinations/westfield-belconnen",
+        "verified_at": "2026-09-03",
+        "reason": "Scentre's current destination page confirms the canonical property name and Benjamin Way address",
+        "state": "ACT",
+        "locality": "Belconnen",
+        "postcode": "2617",
+        "address": "Benjamin Way",
+        "location_setting": "Shopping Centre",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.scentregroup.com/westfield-destinations/westfield-belconnen",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-03",
+        "basis": "Scentre's current destination page confirms the canonical property name and Benjamin Way address"
+      },
+      "address": "Benjamin Way",
+      "review": {
+        "issue_id": "place:place-au-act-westfield-belconnen",
+        "disposition": "Reviewed: sufficient official property-reference address; no repair required",
+        "source_url": "https://www.westfield.com.au/belconnen",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172c1-e7b8-72b6-8a51-f3cfb4c97544",
+        "basis": "Current ShoppingCenter structured address explicitly publishes Benjamin Way. Existing retained address agrees apart from abbreviation. Absence of a street number is not a missing address for this named property.",
+        "limitations": "Property reference only, not a postal delivery unit, specific entrance or surveyed boundary. Existing map-point qualification retained; no source capture or membership dates advanced."
+      }
+    },
+    {
+      "issue_id": "place:place-au-act-westfield-woden",
+      "previous_override": {
+        "place_id": "place-au-act-westfield-woden",
+        "canonical_name": "Westfield Woden",
+        "aliases": "Woden Westfield",
+        "official_url": "https://www.westfield.com.au/woden/",
+        "evidence_url": "https://www.scentregroup.com/westfield-destinations/westfield-woden",
+        "verified_at": "2026-09-03",
+        "reason": "Scentre's current destination page confirms the canonical property name and Keltie Street address",
+        "state": "ACT",
+        "locality": "Woden",
+        "postcode": "2606",
+        "address": "Keltie Street",
+        "location_setting": "Shopping Centre",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.scentregroup.com/westfield-destinations/westfield-woden",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-03",
+        "basis": "Scentre's current destination page confirms the canonical property name and Keltie Street address"
+      },
+      "address": "Keltie Street",
+      "review": {
+        "issue_id": "place:place-au-act-westfield-woden",
+        "disposition": "Reviewed: sufficient official property-reference address; no repair required",
+        "source_url": "https://www.westfield.com.au/woden",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172c1-e7e2-70eb-a497-508a4c008dea",
+        "basis": "Current ShoppingCenter structured address explicitly publishes Keltie Street. Existing retained address agrees apart from abbreviation. Absence of a street number is not a missing address for this named property.",
+        "limitations": "Property reference only, not a postal delivery unit, specific entrance or surveyed boundary. Existing map-point qualification retained; no source capture or membership dates advanced."
+      }
+    },
+    {
+      "issue_id": "place:place-au-nsw-carlingford-court",
+      "previous_override": {
+        "place_id": "place-au-nsw-carlingford-court",
+        "canonical_name": "Carlingford Court",
+        "aliases": "Carlingford Court Shopping Centre|HomeCo Carlingford Court",
+        "official_url": "https://www.carlingfordcourt.com.au/",
+        "evidence_url": "https://www.thejygroup.com/projects/sydney-carlingford-court-shopping-centre/",
+        "verified_at": "2026-09-02",
+        "reason": "Current co-owner HMC regulator and Vicinity evidence confirms Carlingford Court's identity address two ownership vehicles separate management and active status while the stable place ID is retained",
+        "state": "NSW",
+        "locality": "Carlingford",
+        "postcode": "2118",
+        "address": "Corner Pennant Hills Road and Carlingford Road",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.thejygroup.com/projects/sydney-carlingford-court-shopping-centre/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Current co-owner HMC regulator and Vicinity evidence confirms Carlingford Court's identity address two ownership vehicles separate management and active status while the stable place ID is retained"
+      },
+      "address": "Corner Pennant Hills Road and Carlingford Road",
+      "review": {
+        "issue_id": "place:place-au-nsw-carlingford-court",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://www.thejygroup.com/projects/sydney-carlingford-court-shopping-centre/",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172e6-5dfb-74bb-bebf-dc5f00883cee",
+        "basis": "Official co-owner explicitly gives Cnr Pennant Hills Road and Carlingford Road, Carlingford NSW 2118. A valid whole-property corner address; absence of a street number is not an information gap.",
+        "previous_address": "Corner Pennant Hills Road and Carlingford Road",
+        "previous_override": {
+          "place_id": "place-au-nsw-carlingford-court",
+          "canonical_name": "Carlingford Court",
+          "aliases": "Carlingford Court Shopping Centre|HomeCo Carlingford Court",
+          "official_url": "https://www.carlingfordcourt.com.au/",
+          "evidence_url": "https://www.thejygroup.com/projects/sydney-carlingford-court-shopping-centre/",
+          "verified_at": "2026-09-02",
+          "reason": "Current co-owner HMC regulator and Vicinity evidence confirms Carlingford Court's identity address two ownership vehicles separate management and active status while the stable place ID is retained",
+          "state": "NSW",
+          "locality": "Carlingford",
+          "postcode": "2118",
+          "address": "Corner Pennant Hills Road and Carlingford Road",
+          "location_setting": ""
+        },
+        "limitations": "Approximate centre-reference point retained; no new coordinate verification or tenant completeness claim."
+      }
+    },
+    {
+      "issue_id": "place:place-au-nsw-carnes-hill-marketplace",
+      "previous_override": {
+        "place_id": "place-au-nsw-carnes-hill-marketplace",
+        "canonical_name": "Carnes Hill Marketplace",
+        "aliases": "",
+        "official_url": "https://www.carneshillmarketplace.com.au/",
+        "evidence_url": "https://www.charterhall.com.au/property/property-detail/Carnes-Hill-Marketplace",
+        "verified_at": "2026-09-02",
+        "reason": "The current venue and Charter Hall property profile confirm Carnes Hill Marketplace's identity address ownership and active management while the stable place ID is retained",
+        "state": "NSW",
+        "locality": "Horningsea Park",
+        "postcode": "2171",
+        "address": "Corner Cowpasture and Kurrajong Roads",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Carnes-Hill-Marketplace",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "The current venue and Charter Hall property profile confirm Carnes Hill Marketplace's identity address ownership and active management while the stable place ID is retained"
+      },
+      "address": "Corner Cowpasture and Kurrajong Roads",
+      "review": {
+        "issue_id": "place:place-au-nsw-carnes-hill-marketplace",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://www.charterhall.com.au/property/property-detail/Carnes-Hill-Marketplace",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172e6-5dda-7274-8d26-124ddf48b276",
+        "basis": "Official owner identifies Cnr of Cowpasture and Kurrajong Roads, Horningsea Park NSW. Retain this valid whole-property corner address; postcode remains previously sourced, not freshly verified.",
+        "previous_address": "Corner Cowpasture and Kurrajong Roads",
+        "previous_override": {
+          "place_id": "place-au-nsw-carnes-hill-marketplace",
+          "canonical_name": "Carnes Hill Marketplace",
+          "aliases": "",
+          "official_url": "https://www.carneshillmarketplace.com.au/",
+          "evidence_url": "https://www.charterhall.com.au/property/property-detail/Carnes-Hill-Marketplace",
+          "verified_at": "2026-09-02",
+          "reason": "The current venue and Charter Hall property profile confirm Carnes Hill Marketplace's identity address ownership and active management while the stable place ID is retained",
+          "state": "NSW",
+          "locality": "Horningsea Park",
+          "postcode": "2171",
+          "address": "Corner Cowpasture and Kurrajong Roads",
+          "location_setting": ""
+        },
+        "limitations": "Approximate centre-reference point retained; no new coordinate verification or tenant completeness claim."
+      }
+    },
+    {
+      "issue_id": "place:place-au-nsw-deepwater-plaza-centre",
+      "previous_override": {
+        "place_id": "place-au-nsw-deepwater-plaza-centre",
+        "canonical_name": "Deepwater Plaza",
+        "aliases": "Deepwater Plaza Centre|Deepwater Plaza Shopping Centre",
+        "official_url": "https://www.deepwaterplaza.com.au/",
+        "evidence_url": "https://www.deepwaterplaza.com.au/privacy-policy/",
+        "verified_at": "2026-09-02",
+        "reason": "Current venue ownership management directory and leasing sources establish Deepwater Plaza as the canonical name and confirm both mapped optical tenants while the stable place ID is retained",
+        "state": "NSW",
+        "locality": "Woy Woy",
+        "postcode": "2256",
+        "address": "Corner Railway and Charlton Streets",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.deepwaterplaza.com.au/privacy-policy/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Current venue ownership management directory and leasing sources establish Deepwater Plaza as the canonical name and confirm both mapped optical tenants while the stable place ID is retained"
+      },
+      "address": "Corner Railway and Charlton Streets",
+      "review": {
+        "issue_id": "place:place-au-nsw-deepwater-plaza-centre",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://www.deepwaterplaza.com.au/",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172e6-5e99-74fc-88fb-9663f8edd7ce",
+        "basis": "Official centre website repeatedly confirms the corner of Railway and Charlton Streets, Woy Woy NSW 2256; also describes 54 Railway Street. Retain the established corner address as valid whole-property evidence, not an unresolved missing number.",
+        "previous_address": "Corner Railway and Charlton Streets",
+        "previous_override": {
+          "place_id": "place-au-nsw-deepwater-plaza-centre",
+          "canonical_name": "Deepwater Plaza",
+          "aliases": "Deepwater Plaza Centre|Deepwater Plaza Shopping Centre",
+          "official_url": "https://www.deepwaterplaza.com.au/",
+          "evidence_url": "https://www.deepwaterplaza.com.au/privacy-policy/",
+          "verified_at": "2026-09-02",
+          "reason": "Current venue ownership management directory and leasing sources establish Deepwater Plaza as the canonical name and confirm both mapped optical tenants while the stable place ID is retained",
+          "state": "NSW",
+          "locality": "Woy Woy",
+          "postcode": "2256",
+          "address": "Corner Railway and Charlton Streets",
+          "location_setting": ""
+        },
+        "limitations": "Approximate centre-reference point retained; no new coordinate verification or tenant completeness claim."
+      }
+    },
+    {
+      "issue_id": "place:place-au-nsw-lake-haven-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-nsw-lake-haven-shopping-centre",
+        "canonical_name": "Lake Haven Centre",
+        "aliases": "Lake Haven Shopping Centre",
+        "official_url": "https://www.lakehavencentre.com.au/",
+        "evidence_url": "https://www.vicinity.com.au/portfolio/our-properties/lake-haven-centre",
+        "verified_at": "2026-09-02",
+        "reason": "Current Vicinity property and venue sources establish Lake Haven Centre as the canonical name and confirm its address full ownership management leasing class metrics and active optical directory while the stable place ID is retained",
+        "state": "NSW",
+        "locality": "Lake Haven",
+        "postcode": "2263",
+        "address": "Corner Lake Haven Drive and Goobarabah Avenue",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/lake-haven-centre",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Current Vicinity property and venue sources establish Lake Haven Centre as the canonical name and confirm its address full ownership management leasing class metrics and active optical directory while the stable place ID is retained"
+      },
+      "address": "Corner Lake Haven Drive and Goobarabah Avenue",
+      "review": {
+        "issue_id": "place:place-au-nsw-lake-haven-shopping-centre",
+        "disposition": "Reviewed valid owner-published property address; no repair required",
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/lake-haven-centre",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172e9-3cd1-7735-819a-1f8502de52eb",
+        "basis": "Corner Lake Haven Drive and Goobarabah Avenue Lake Haven NSW 2263",
+        "limitations": "Address section verifies the whole-property description without a street number. No new entrance, boundary, coordinate or tenant-list verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-nsw-lismore-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-nsw-lismore-shopping-centre",
+        "canonical_name": "Lismore Square",
+        "aliases": "Lismore Shopping Centre|Lismore Shopping Square",
+        "official_url": "https://lismoresquare.com.au/",
+        "evidence_url": "https://mcconaghyproperties.com.au/our-centres/lismore-square/",
+        "verified_at": "2026-09-02",
+        "reason": "The current venue and McConaghy portfolio use Lismore Square and confirm its identity address and current management while the stable place ID is retained",
+        "state": "NSW",
+        "locality": "Lismore",
+        "postcode": "2480",
+        "address": "Corner Brewster and Uralba Streets",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://mcconaghyproperties.com.au/our-centres/lismore-square/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "The current venue and McConaghy portfolio use Lismore Square and confirm its identity address and current management while the stable place ID is retained"
+      },
+      "address": "Corner Brewster and Uralba Streets",
+      "review": {
+        "issue_id": "place:place-au-nsw-lismore-shopping-centre",
+        "disposition": "Reviewed valid owner-published property address; no repair required",
+        "source_url": "https://lismoresquare.com.au/",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172ed-2727-73e0-948f-7897b67d67f5",
+        "basis": "Official source explicitly publishes Cnr Brewster & Uralba Streets, Lismore NSW 2480. Retain valid number-free whole-property address.",
+        "limitations": "No new entrance, boundary, coordinate or tenant-completeness verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-nsw-mt-druitt-westfield",
+      "previous_override": {
+        "place_id": "place-au-nsw-mt-druitt-westfield",
+        "canonical_name": "Mt Druitt Westfield",
+        "aliases": "Westfield Mt Druitt",
+        "official_url": "https://www.westfield.com.au/mtdruitt/",
+        "evidence_url": "https://www.westfield.com.au/mtdruitt/store/3uTZCuj1LaGiCMoKamMICQ/opsm",
+        "verified_at": "2026-10-08",
+        "reason": "Existing property canonical ID retained; named primary tenant evidence and separate named property feature establish the asset. Fill property geography without substituting a tenant address. Current Westfield tenant pages reaffirm this asset and the separately named property map supplies the full intersection and postcode. The property point is independent of individual shop points; ownership and commercial metrics are not re-researched.",
+        "state": "NSW",
+        "locality": "Mount Druitt",
+        "postcode": "2770",
+        "address": "Corner Carlisle Avenue and Luxford Road",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.westfield.com.au/mtdruitt/store/3uTZCuj1LaGiCMoKamMICQ/opsm",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-10-08",
+        "basis": "Existing property canonical ID retained; named primary tenant evidence and separate named property feature establish the asset. Fill property geography without substituting a tenant address. Current Westfield tenant pages reaffirm this asset and the separately named property map supplies the full intersection and postcode. The property point is independent of individual shop points; ownership and commercial metrics are not re-researched."
+      },
+      "address": "Corner Carlisle Avenue and Luxford Road",
+      "review": {
+        "issue_id": "place:place-au-nsw-mt-druitt-westfield",
+        "disposition": "Reviewed valid number-free property address; no data correction required",
+        "checked_at": "2026-10-26",
+        "source_url": "https://www.westfield.com.au/mtdruitt/visit",
+        "scrape_id": "01a175e0-fd45-7326-96b4-029625cfc058",
+        "basis": "Official Westfield visit page confirms Cnr Carlisle Avenue & Luxford Rd, Mt Druitt NSW 2770, matching the retained whole-property intersection address. Missing street number is not an address defect here.",
+        "limitations": "Address review only; no new coordinate, boundary, trading-status or tenant verification. Original source dates retained."
+      }
+    },
+    {
+      "issue_id": "place:place-au-nsw-nepean-village",
+      "previous_override": {
+        "place_id": "place-au-nsw-nepean-village",
+        "canonical_name": "Nepean Village",
+        "aliases": "",
+        "official_url": "https://www.nepeanvillage.com.au/",
+        "evidence_url": "https://www.nepeanvillage.com.au/shopping",
+        "verified_at": "2026-09-03",
+        "reason": "The current official centre directory confirms the centre identity address and operating tenant mix",
+        "state": "NSW",
+        "locality": "Penrith",
+        "postcode": "2750",
+        "address": "Corner Station Street and Woodriff Street",
+        "location_setting": "Shopping Centre",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.nepeanvillage.com.au/shopping",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-03",
+        "basis": "The current official centre directory confirms the centre identity address and operating tenant mix"
+      },
+      "address": "Corner Station Street and Woodriff Street",
+      "review": {
+        "issue_id": "place:place-au-nsw-nepean-village",
+        "disposition": "Reviewed valid number-free property address; no data correction required",
+        "checked_at": "2026-10-26",
+        "source_url": "https://www.nepeanvillage.com.au/",
+        "scrape_id": "01a175d1-6c7c-76ab-9da2-7a229246f7d5",
+        "basis": "Official centre homepage confirms existing intersection address: Corner Station Street and Woodriff Street, Penrith 2750. A street number is not necessary for this supported whole-property reference.",
+        "limitations": "Address review only; no new coordinate, boundary or tenant verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-nsw-orana-mall-marketplace",
+      "previous_override": {
+        "place_id": "place-au-nsw-orana-mall-marketplace",
+        "canonical_name": "Orana Mall",
+        "aliases": "Orana Mall Marketplace",
+        "official_url": "https://www.oranamall.com.au/",
+        "evidence_url": "https://www.oranamall.com.au/leasing/",
+        "verified_at": "2026-09-02",
+        "reason": "The current venue confirms Orana Mall's name address BNG management direct leasing and active retail profile while the stable place ID is retained",
+        "state": "NSW",
+        "locality": "Dubbo",
+        "postcode": "2830",
+        "address": "Corner Wheelers Lane and Mitchell Highway",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.oranamall.com.au/leasing/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "The current venue confirms Orana Mall's name address BNG management direct leasing and active retail profile while the stable place ID is retained"
+      },
+      "address": "Corner Wheelers Lane and Mitchell Highway",
+      "review": {
+        "issue_id": "place:place-au-nsw-orana-mall-marketplace",
+        "disposition": "Reviewed valid owner-published property address; no repair required",
+        "source_url": "https://www.oranamall.com.au/",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172ed-27ac-72fe-8a68-d675fc878c43",
+        "basis": "Official source explicitly publishes Cnr Wheelers Lane & Mitchell Hwy, Dubbo NSW 2830. Retain valid number-free whole-property address.",
+        "limitations": "No new entrance, boundary, coordinate or tenant-completeness verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-nsw-settlement-city-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-nsw-settlement-city-shopping-centre",
+        "canonical_name": "Settlement City",
+        "aliases": "Settlement City Shopping Centre",
+        "official_url": "https://settlementcity.com.au/",
+        "evidence_url": "https://www.fawknerproperty.com.au/portfolio/settlement-city",
+        "verified_at": "2026-09-02",
+        "reason": "Fawkner's current portfolio confirms the official centre name while the stable place ID is retained",
+        "state": "NSW",
+        "locality": "Port Macquarie",
+        "postcode": "2444",
+        "address": "Corner Park and Bay Streets",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.fawknerproperty.com.au/portfolio/settlement-city",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Fawkner's current portfolio confirms the official centre name while the stable place ID is retained"
+      },
+      "address": "Corner Park and Bay Streets",
+      "review": {
+        "issue_id": "place:place-au-nsw-settlement-city-shopping-centre",
+        "disposition": "Reviewed valid number-free property address; no data correction required",
+        "checked_at": "2026-10-26",
+        "source_url": "https://mountpleasantcentre.com.au/national-page/",
+        "scrape_id": "01a175fc-7367-7641-b603-8ad8d2c2ca60",
+        "basis": "Owner portfolio confirms Bay Street and Park Street intersection, Port Macquarie2444.",
+        "limitations": "Property-reference address only; no claim about entrance, boundary or tenant trading."
+      }
+    },
+    {
+      "issue_id": "place:place-au-nsw-top-ryde-city-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-nsw-top-ryde-city-shopping-centre",
+        "canonical_name": "Top Ryde City",
+        "aliases": "Top Ryde City Shopping Centre",
+        "official_url": "https://www.toprydecity.com.au/",
+        "evidence_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+        "verified_at": "2026-09-02",
+        "reason": "The current owner and venue sources confirm Top Ryde City as the canonical name while the stable place ID is retained",
+        "state": "NSW",
+        "locality": "Ryde",
+        "postcode": "2112",
+        "address": "Corner Devlin Street and Blaxland Road",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://mafinancial.com/insights/ma-financial-acquires-interest-in-top-ryde-city-shopping-centre",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "The current owner and venue sources confirm Top Ryde City as the canonical name while the stable place ID is retained"
+      },
+      "address": "Corner Devlin Street and Blaxland Road",
+      "review": {
+        "issue_id": "place:place-au-nsw-top-ryde-city-shopping-centre",
+        "disposition": "Reviewed valid number-free property address; no data correction required",
+        "checked_at": "2026-10-26",
+        "source_url": "https://www.toprydecity.com.au/contact/",
+        "scrape_id": "01a175d2-ac08-7372-b2fb-fb251fe37877",
+        "basis": "Official centre contact page confirms Corner Devlin Street and Blaxland Road, Ryde NSW 2112, matching existing whole-property address. No street number required.",
+        "limitations": "Address review only; no new coordinate, tenant-completeness or boundary verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-nsw-tweed-mall",
+      "previous_override": {
+        "place_id": "place-au-nsw-tweed-mall",
+        "canonical_name": "Tweed Mall",
+        "aliases": "",
+        "official_url": "https://www.tweedmall.com.au/",
+        "evidence_url": "https://www.elanorinvestors.com/investors/managed-fund/tweed-mall-fund",
+        "verified_at": "2026-09-02",
+        "reason": "Current fund asset and venue sources confirm Tweed Mall's identity address ownership management leasing and active status while the stable place ID is retained",
+        "state": "NSW",
+        "locality": "Tweed Heads",
+        "postcode": "2485",
+        "address": "Corner Wharf and Bay Streets",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.elanorinvestors.com/investors/managed-fund/tweed-mall-fund",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Current fund asset and venue sources confirm Tweed Mall's identity address ownership management leasing and active status while the stable place ID is retained"
+      },
+      "address": "Corner Wharf and Bay Streets",
+      "review": {
+        "issue_id": "place:place-au-nsw-tweed-mall",
+        "disposition": "Reviewed valid number-free property address; no data correction required",
+        "checked_at": "2026-10-26",
+        "source_url": "https://www.tweedmall.com.au/",
+        "scrape_id": "01a175d1-70bf-7605-8ac5-a99697a98e2a",
+        "basis": "Official centre homepage confirms existing intersection address: Corner Wharf and Bay Streets, Tweed Heads 2485. A street number is not necessary for this supported whole-property reference.",
+        "limitations": "Address review only; no new coordinate, boundary or tenant verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-nsw-warrawong-plaza-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-nsw-warrawong-plaza-shopping-centre",
+        "canonical_name": "Warrawong Plaza",
+        "aliases": "Warrawong Plaza Shopping Centre",
+        "official_url": "https://warrawongplaza.com.au/",
+        "evidence_url": "https://www.elanorinvestors.com/investments/asset/warrawong-plaza-shopping-centre",
+        "verified_at": "2026-09-02",
+        "reason": "Current fund asset and venue sources establish Warrawong Plaza as the current short name and confirm its address fund ownership leasing and active status while the stable place ID is retained",
+        "state": "NSW",
+        "locality": "Warrawong",
+        "postcode": "2502",
+        "address": "Corner King Street and Northcote Drive",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.elanorinvestors.com/investments/asset/warrawong-plaza-shopping-centre",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Current fund asset and venue sources establish Warrawong Plaza as the current short name and confirm its address fund ownership leasing and active status while the stable place ID is retained"
+      },
+      "address": "Corner King Street and Northcote Drive",
+      "review": {
+        "issue_id": "place:place-au-nsw-warrawong-plaza-shopping-centre",
+        "disposition": "Reviewed valid owner-published property address; no repair required",
+        "source_url": "https://www.elanorinvestors.com/investments/asset/warrawong-plaza-shopping-centre",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172ec-b47b-76b4-a085-011eea2fc97b",
+        "basis": "Official source explicitly publishes Corner King Street & Northcote Drive, Warrawong NSW 2502. Retain valid number-free whole-property address.",
+        "limitations": "No new entrance, boundary, coordinate or tenant-completeness verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-qld-cairns-smithfield-centre",
+      "previous_override": {
+        "place_id": "place-au-qld-cairns-smithfield-centre",
+        "canonical_name": "Smithfield Shopping Centre",
+        "aliases": "Cairns Smithfield Centre|Smithfield Centre",
+        "official_url": "https://www.smithfieldcentre.com.au/",
+        "evidence_url": "https://www.smithfieldcentre.com.au/centre-information/getting-here/",
+        "verified_at": "2026-09-03",
+        "reason": "The current official venue profile confirms the public centre name address and operating store directory while retaining the stable record ID",
+        "state": "QLD",
+        "locality": "Smithfield",
+        "postcode": "4878",
+        "address": "Corner Captain Cook and Kennedy Highways",
+        "location_setting": "Shopping Centre",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.smithfieldcentre.com.au/centre-information/getting-here/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-03",
+        "basis": "The current official venue profile confirms the public centre name address and operating store directory while retaining the stable record ID"
+      },
+      "address": "Corner Captain Cook and Kennedy Highways",
+      "review": {
+        "issue_id": "place:place-au-qld-cairns-smithfield-centre",
+        "disposition": "Reviewed valid owner-published property address; no repair required",
+        "source_url": "https://www.smithfieldcentre.com.au/centre-information/getting-here/",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172ec-b4e1-7749-8a76-db56dded4a31",
+        "basis": "Official source explicitly publishes Cnr Captain Cook & Kennedy Highways, Smithfield QLD 4878. Retain valid number-free whole-property address.",
+        "limitations": "No new entrance, boundary, coordinate or tenant-completeness verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-qld-caneland-centre",
+      "previous_override": {
+        "place_id": "place-au-qld-caneland-centre",
+        "canonical_name": "Caneland Central",
+        "aliases": "Caneland Centre|Canelands Central Shopping Centre|Mackay Canelands Shopping Centre",
+        "official_url": "https://www.canelandcentral.com.au/",
+        "evidence_url": "https://www.canelandcentral.com.au/",
+        "verified_at": "2026-09-03",
+        "reason": "The current official venue uses Caneland Central for the single property at Mangrove Road",
+        "state": "QLD",
+        "locality": "Mackay",
+        "postcode": "4740",
+        "address": "Mangrove Road",
+        "location_setting": "Shopping Centre",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.canelandcentral.com.au/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-03",
+        "basis": "The current official venue uses Caneland Central for the single property at Mangrove Road"
+      },
+      "address": "Mangrove Road",
+      "review": {
+        "issue_id": "place:place-au-qld-caneland-centre",
+        "disposition": "Reviewed valid owner-published property address; no repair required",
+        "source_url": "https://www.canelandcentral.com.au/",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172ec-b4de-7528-884b-bb4b480eb519",
+        "basis": "Official source explicitly publishes Mangrove Rd, Mackay QLD 4740. Retain valid number-free whole-property address.",
+        "limitations": "No new entrance, boundary, coordinate or tenant-completeness verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-qld-castletown-shoppingworld",
+      "previous_override": {
+        "place_id": "place-au-qld-castletown-shoppingworld",
+        "canonical_name": "Castletown",
+        "aliases": "Castletown Shoppingworld|Castletown Shopping Centre",
+        "official_url": "https://castletown.com.au/",
+        "evidence_url": "https://mcconaghyproperties.com.au/our-centres/castletown/",
+        "verified_at": "2026-09-02",
+        "reason": "Current McConaghy and venue sources establish Castletown as the current centre name and confirm its address ownership management class public metrics leasing and Specsavers tenancy",
+        "state": "QLD",
+        "locality": "Hyde Park",
+        "postcode": "4812",
+        "address": "Corner Woolcock Street and Kings Road",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://mcconaghyproperties.com.au/our-centres/castletown/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Current McConaghy and venue sources establish Castletown as the current centre name and confirm its address ownership management class public metrics leasing and Specsavers tenancy"
+      },
+      "address": "Corner Woolcock Street and Kings Road",
+      "review": {
+        "issue_id": "place:place-au-qld-castletown-shoppingworld",
+        "disposition": "Reviewed valid number-free property address; no data correction required",
+        "checked_at": "2026-10-26",
+        "source_url": "https://castletown.com.au/",
+        "scrape_id": "01a175f2-8be1-761f-958b-9df0a99fa342",
+        "basis": "Official centre homepage confirms the retained Corner Woolcock Street and Kings Road address, Hyde Park, Townsville QLD 4812. A street number is not required for this supported reference.",
+        "limitations": "Address review only; no coordinate, boundary or trading-status changes."
+      }
+    },
+    {
+      "issue_id": "place:place-au-qld-ipswich-riverlink-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-qld-ipswich-riverlink-shopping-centre",
+        "canonical_name": "Riverlink Shopping Centre",
+        "aliases": "Ipswich Riverlink Shopping Centre|Riverlink",
+        "official_url": "https://www.riverlink.net.au/",
+        "evidence_url": "https://www.riverlink.net.au/leasing/",
+        "verified_at": "2026-09-02",
+        "reason": "The current venue confirms Riverlink's name address Leda ownership management direct leasing regional class public metrics and Specsavers tenancy while the stable place ID is retained",
+        "state": "QLD",
+        "locality": "North Ipswich",
+        "postcode": "4305",
+        "address": "Corner Downs Street and The Terrace",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.riverlink.net.au/leasing/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "The current venue confirms Riverlink's name address Leda ownership management direct leasing regional class public metrics and Specsavers tenancy while the stable place ID is retained"
+      },
+      "address": "Corner Downs Street and The Terrace",
+      "review": {
+        "issue_id": "place:place-au-qld-ipswich-riverlink-shopping-centre",
+        "disposition": "Reviewed valid number-free property address; no data correction required",
+        "checked_at": "2026-10-26",
+        "source_url": "https://www.riverlink.net.au/",
+        "scrape_id": "01a175fa-4eae-73e4-9a2b-f1cafde9c2f5",
+        "basis": "Official homepage confirms Cnr Downs Street and The Terrace, North Ipswich QLD4305.",
+        "limitations": "Property-reference address only; no claim about entrance, boundary or tenant trading."
+      }
+    },
+    {
+      "issue_id": "place:place-au-qld-kingaroy-plaza",
+      "previous_override": {
+        "place_id": "place-au-qld-kingaroy-plaza",
+        "canonical_name": "Kingaroy Mall",
+        "aliases": "Kingaroy Plaza|Kingaroy Shoppingworld",
+        "official_url": "https://kingaroyshoppingworld.com.au/",
+        "evidence_url": "https://mcconaghyproperties.com.au/news/a-fresh-identity-for-a-renewed-retail-experience/",
+        "verified_at": "2026-09-02",
+        "reason": "The official November 2025 rebrand establishes Kingaroy Mall as the current name while the stable place ID and former names remain searchable",
+        "state": "QLD",
+        "locality": "Kingaroy",
+        "postcode": "4610",
+        "address": "Corner Youngman and Alford Streets",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://mcconaghyproperties.com.au/news/a-fresh-identity-for-a-renewed-retail-experience/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "The official November 2025 rebrand establishes Kingaroy Mall as the current name while the stable place ID and former names remain searchable"
+      },
+      "address": "Corner Youngman and Alford Streets",
+      "review": {
+        "issue_id": "place:place-au-qld-kingaroy-plaza",
+        "disposition": "Reviewed valid number-free property address; no data correction required",
+        "checked_at": "2026-10-26",
+        "source_url": "https://kingaroymall.com.au/",
+        "scrape_id": "01a175fd-a378-7113-91e2-5d32445205ee",
+        "basis": "Existing official Kingaroy Shoppingworld URL redirects to kingaroymall.com.au, whose footer confirms retained Youngman and Alford Streets intersection, Kingaroy4610. Page still uses Shoppingworld wording. This review validates the property reference address only; it does not determine a new canonical marketing name.",
+        "limitations": "No coordinates, boundaries, trading status or memberships changed."
+      }
+    },
+    {
+      "issue_id": "place:place-au-qld-logan-hyperdome",
+      "previous_override": {
+        "place_id": "place-au-qld-logan-hyperdome",
+        "canonical_name": "Hyperdome",
+        "aliases": "Logan Hyperdome|Hyperdome Loganholme|Logan Hyperdome Shopping Centre|Hyperdome Shopping Centre",
+        "official_url": "https://hyperdomeshopping.com.au/",
+        "evidence_url": "https://www.qicre.com/Properties/Hyperdome",
+        "verified_at": "2026-09-02",
+        "reason": "Current QIC MA Financial and venue sources establish Hyperdome as the canonical name and confirm its address current ownership leasing metrics and all three mapped optical tenants while duplicate place IDs are remapped",
+        "state": "QLD",
+        "locality": "Loganholme",
+        "postcode": "4129",
+        "address": "Corner Pacific Highway and Bryants Road",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.qicre.com/Properties/Hyperdome",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Current QIC MA Financial and venue sources establish Hyperdome as the canonical name and confirm its address current ownership leasing metrics and all three mapped optical tenants while duplicate place IDs are remapped"
+      },
+      "address": "Corner Pacific Highway and Bryants Road",
+      "review": {
+        "issue_id": "place:place-au-qld-logan-hyperdome",
+        "disposition": "Reviewed valid number-free property address; no data correction required",
+        "checked_at": "2026-10-26",
+        "source_url": "https://hyperdomeshopping.com.au/",
+        "scrape_id": "01a175fd-a36e-70db-a7b0-dd4267070ce6",
+        "basis": "Official centre homepage explicitly confirms retained Corner Pacific Highway and Bryants Road, Loganholme4129.",
+        "limitations": "No coordinates, boundaries, trading status or memberships changed."
+      }
+    },
+    {
+      "issue_id": "place:place-au-qld-mackay-mt-pleasant-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-qld-mackay-mt-pleasant-shopping-centre",
+        "canonical_name": "Mount Pleasant Centre",
+        "aliases": "Mackay Mt Pleasant Shopping Centre|Mt Pleasant Shopping Centre",
+        "official_url": "https://www.mountpleasantcentre.com.au/",
+        "evidence_url": "https://www.fawknerproperty.com.au/portfolio/mount-pleasant-centre",
+        "verified_at": "2026-09-02",
+        "reason": "Fawkner's current portfolio confirms the official centre name while the stable place ID is retained",
+        "state": "QLD",
+        "locality": "Mount Pleasant",
+        "postcode": "4740",
+        "address": "Corner Bucasia Road and Phillip Street",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.fawknerproperty.com.au/portfolio/mount-pleasant-centre",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Fawkner's current portfolio confirms the official centre name while the stable place ID is retained"
+      },
+      "address": "Corner Bucasia Road and Phillip Street",
+      "review": {
+        "issue_id": "place:place-au-qld-mackay-mt-pleasant-shopping-centre",
+        "disposition": "Reviewed valid number-free property address; no data correction required",
+        "checked_at": "2026-10-26",
+        "source_url": "https://mountpleasantcentre.com.au/national-page/",
+        "scrape_id": "01a175fc-7367-7641-b603-8ad8d2c2ca60",
+        "basis": "Owner portfolio confirms Phillip Street and Mackay Bucasia Road, Mount Pleasant4740; retained shortened road label identifies the same property intersection.",
+        "limitations": "Property-reference address only; no claim about entrance, boundary or tenant trading."
+      }
+    },
+    {
+      "issue_id": "place:place-au-qld-mkt-square-shopping-centre-deception-bay",
+      "previous_override": {
+        "place_id": "place-au-qld-mkt-square-shopping-centre-deception-bay",
+        "canonical_name": "Market Square Deception Bay",
+        "aliases": "MKT Square Deception Bay|MKT Square Shopping Centre \u2013 Deception Bay",
+        "official_url": "https://mktdeceptionbay.com.au/",
+        "evidence_url": "https://mktdeceptionbay.com.au/",
+        "verified_at": "2026-10-02",
+        "reason": "Official property site explicitly uses Market Square and MKT Square for the same centre, states corner Deception Bay Road and Bay Avenue in Deception Bay QLD 4508, and corroborates the operator centre-address identity. Preserve the existing tenant-bearing canonical ID and former aliases.",
+        "state": "QLD",
+        "locality": "Deception Bay",
+        "postcode": "4508",
+        "address": "Corner Deception Bay Road and Bay Avenue",
+        "location_setting": "Shopping Centre",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://mktdeceptionbay.com.au/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-10-02",
+        "basis": "Official property site explicitly uses Market Square and MKT Square for the same centre, states corner Deception Bay Road and Bay Avenue in Deception Bay QLD 4508, and corroborates the operator centre-address identity. Preserve the existing tenant-bearing canonical ID and former aliases."
+      },
+      "address": "Corner Deception Bay Road and Bay Avenue",
+      "review": {
+        "issue_id": "place:place-au-qld-mkt-square-shopping-centre-deception-bay",
+        "disposition": "Reviewed valid number-free property address; no data correction required",
+        "checked_at": "2026-10-26",
+        "source_url": "https://mktdeceptionbay.com.au/",
+        "scrape_id": "01a175fe-7d29-75c5-95f3-a7b42b9e1917",
+        "basis": "Official footer confirms retained Cnr Deception Bay Road and Bay Avenue, Deception Bay Queensland4508. No street number needed for supported property reference."
+      }
+    },
+    {
+      "issue_id": "place:place-au-qld-mt-gravatt-westfield",
+      "previous_override": {
+        "place_id": "place-au-qld-mt-gravatt-westfield",
+        "canonical_name": "Westfield Mt Gravatt",
+        "aliases": "Westfield Garden City|Mt Gravatt Westfield|Upper Mt Gravatt Westfield",
+        "official_url": "https://www.scentregroup.com/westfield-destinations/westfield-mt-gravatt",
+        "evidence_url": "https://www.scentregroup.com/westfield-destinations/westfield-mt-gravatt",
+        "verified_at": "2026-09-03",
+        "reason": "Scentre Group's current official destination name is Westfield Mt Gravatt",
+        "state": "QLD",
+        "locality": "Upper Mt Gravatt",
+        "postcode": "4122",
+        "address": "Cnr Logan & Kessels Road",
+        "location_setting": "Shopping Centre",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.scentregroup.com/westfield-destinations/westfield-mt-gravatt",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-03",
+        "basis": "Scentre Group's current official destination name is Westfield Mt Gravatt"
+      },
+      "address": "Cnr Logan & Kessels Road",
+      "review": {
+        "issue_id": "place:place-au-qld-mt-gravatt-westfield",
+        "disposition": "Reviewed: sufficient official property-reference address; no repair required",
+        "source_url": "https://www.westfield.com.au/mtgravatt",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172c1-e8ea-730d-9e4e-1149c76cd1c8",
+        "basis": "Current ShoppingCenter structured address explicitly publishes Cnr Logan & Kessels Rd. Existing retained address agrees apart from abbreviation. Absence of a street number is not a missing address for this named property.",
+        "limitations": "Property reference only, not a postal delivery unit, specific entrance or surveyed boundary. Existing map-point qualification retained; no source capture or membership dates advanced."
+      }
+    },
+    {
+      "issue_id": "place:place-au-qld-taigum-square",
+      "previous_override": {
+        "place_id": "place-au-qld-taigum-square",
+        "canonical_name": "Taigum Square",
+        "aliases": "",
+        "official_url": "https://www.taigumsquare.com.au/",
+        "evidence_url": "https://www.vicinity.com.au/portfolio/our-properties/taigum-square",
+        "verified_at": "2026-09-02",
+        "reason": "The current Vicinity property profile confirms the centre identity address ownership management class metrics and direct leasing pathway",
+        "state": "QLD",
+        "locality": "Taigum",
+        "postcode": "4018",
+        "address": "Corner Church and Beams Roads",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/taigum-square",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "The current Vicinity property profile confirms the centre identity address ownership management class metrics and direct leasing pathway"
+      },
+      "address": "Corner Church and Beams Roads",
+      "review": {
+        "issue_id": "place:place-au-qld-taigum-square",
+        "disposition": "Reviewed valid owner-published property address; no repair required",
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/taigum-square",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172e9-3c6a-7779-b182-57f3af73da68",
+        "basis": "Corner Church and Beams Roads Taigum QLD 4018",
+        "limitations": "Address section verifies the whole-property description without a street number. No new entrance, boundary, coordinate or tenant-list verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-qld-westfield-north-lakes",
+      "previous_override": {
+        "place_id": "place-au-qld-westfield-north-lakes",
+        "canonical_name": "Westfield North Lakes",
+        "aliases": "North Lakes Westfield",
+        "official_url": "https://www.westfield.com.au/northlakes/",
+        "evidence_url": "https://www.scentregroup.com/westfield-destinations/westfield-north-lakes",
+        "verified_at": "2026-09-03",
+        "reason": "Scentre's current destination page confirms the canonical property name address and active destination",
+        "state": "QLD",
+        "locality": "North Lakes",
+        "postcode": "4509",
+        "address": "Corner Anzac Avenue and North Lakes Drive",
+        "location_setting": "Shopping Centre",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.scentregroup.com/westfield-destinations/westfield-north-lakes",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-03",
+        "basis": "Scentre's current destination page confirms the canonical property name address and active destination"
+      },
+      "address": "Corner Anzac Avenue and North Lakes Drive",
+      "review": {
+        "issue_id": "place:place-au-qld-westfield-north-lakes",
+        "disposition": "Reviewed: sufficient official property-reference address; no repair required",
+        "source_url": "https://www.westfield.com.au/northlakes",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172c1-e824-71b2-9174-b40499051dbe",
+        "basis": "Current ShoppingCenter structured address explicitly publishes Cnr Anzac Ave & North Lakes Dr.. Existing retained address agrees apart from abbreviation. Absence of a street number is not a missing address for this named property.",
+        "limitations": "Property reference only, not a postal delivery unit, specific entrance or surveyed boundary. Existing map-point qualification retained; no source capture or membership dates advanced."
+      }
+    },
+    {
+      "issue_id": "place:place-au-sa-bayside-village-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-sa-bayside-village-shopping-centre",
+        "canonical_name": "Bayside Village Shopping Centre",
+        "aliases": "",
+        "official_url": "",
+        "evidence_url": "https://glenelg.thesourcebulkfoods.com.au/",
+        "verified_at": "2026-10-08",
+        "reason": "Independent current tenant/operator addresses explicitly name Bayside Village in Glenelg, at Brighton Road/Jetty Road. No centre-owned website verified. The named map incorrectly links the Frankston Bayside website; reject that URL and keep this SA centre distinct from Bayside VIC. Point is an approximate named property reference, not a surveyed boundary.",
+        "state": "SA",
+        "locality": "Glenelg",
+        "postcode": "5045",
+        "address": "Corner Brighton Road and Jetty Road",
+        "location_setting": "Shopping Centre",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://glenelg.thesourcebulkfoods.com.au/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-10-08",
+        "basis": "Independent current tenant/operator addresses explicitly name Bayside Village in Glenelg, at Brighton Road/Jetty Road. No centre-owned website verified. The named map incorrectly links the Frankston Bayside website; reject that URL and keep this SA centre distinct from Bayside VIC. Point is an approximate named property reference, not a surveyed boundary."
+      },
+      "address": "Corner Brighton Road and Jetty Road",
+      "review": {
+        "issue_id": "place:place-au-sa-bayside-village-shopping-centre",
+        "disposition": "Existing corner address corroborated; valid number-free property reference",
+        "source_url": "https://revofitness.com.au/glenelg-opening-day/",
+        "source_date": "2024-06-04",
+        "checked_at": "2026-10-26",
+        "basis": "Dated official tenant article explicitly names Bayside Village on corner Brighton and Jetty Road, corroborating existing corner address. Current Source Bulk Foods branch page also names Bayside Village on Brighton Road. Valid number-free property reference, not missing address; no new boundary or current trading assertion.",
+        "address": "Corner Brighton Road and Jetty Road"
+      }
+    },
+    {
+      "issue_id": "place:place-au-unknown-sunny-park-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-unknown-sunny-park-shopping-centre",
+        "canonical_name": "Sunny Park Shopping Centre",
+        "aliases": "",
+        "official_url": "https://www.sunnypark.com.au/",
+        "evidence_url": "https://www.retailfirst.com.au/leasing",
+        "verified_at": "2026-09-02",
+        "reason": "Retail First's current portfolio confirms the centre identity state and locality while the stable place ID is retained",
+        "state": "QLD",
+        "locality": "Sunnybank",
+        "postcode": "4109",
+        "address": "Corner Mains Road and McCullough Street",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.retailfirst.com.au/leasing",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Retail First's current portfolio confirms the centre identity state and locality while the stable place ID is retained"
+      },
+      "address": "Corner Mains Road and McCullough Street",
+      "review": {
+        "issue_id": "place:place-au-unknown-sunny-park-shopping-centre",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://www.sunnypark.com.au/contact-us/",
+        "checked_at": "2026-10-26",
+        "basis": "Opened official contact page confirms Corner Mains Road and McCullough Street, Sunnybank QLD4109. Existing place and environment addresses agree. Retain valid intersection address and original source dates. Sunnybank Plaza can share an intersection reference without being the same property.",
+        "limitations": "No membership, boundary or trading-status changes. Homepage timed out; official contact page was accessible."
+      }
+    },
+    {
+      "issue_id": "place:place-au-vic-berwick-eden-rise-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-vic-berwick-eden-rise-shopping-centre",
+        "canonical_name": "Eden Rise Village",
+        "aliases": "Berwick Eden Rise Shopping Centre|Eden Rise Shopping Centre",
+        "official_url": "https://edenrisevillage.com.au/",
+        "evidence_url": "https://edenrisevillage.com.au/store-finder/",
+        "verified_at": "2026-09-24",
+        "reason": "Use the current centre-owned name/address while retaining the established correctly located canonical ID. Tenant directory confirms Eden Rise Optical and Specsavers.",
+        "state": "VIC",
+        "locality": "Berwick",
+        "postcode": "3806",
+        "address": "Clyde Road & O\u2019Shea Road",
+        "location_setting": "Shopping Centre",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://edenrisevillage.com.au/store-finder/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-24",
+        "basis": "Use the current centre-owned name/address while retaining the established correctly located canonical ID. Tenant directory confirms Eden Rise Optical and Specsavers."
+      },
+      "address": "Clyde Road & O\u2019Shea Road",
+      "review": {
+        "issue_id": "place:place-au-vic-berwick-eden-rise-shopping-centre",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://edenrisevillage.com.au/store-finder/",
+        "checked_at": "2026-10-26",
+        "basis": "Official centre or owner page opened on 2026-10-26 explicitly publishes the intersection of Clyde Road and Oshea Road. Existing place and environment addresses agree and are sufficient property references; no numbered address needs to be invented. Original source data, dates and coordinates retained.",
+        "limitations": "Address review only; no new tenant, trading-status, entrance or surveyed boundary assertion."
+      }
+    },
+    {
+      "issue_id": "place:place-au-vic-corio-village",
+      "previous_override": {
+        "place_id": "place-au-vic-corio-village",
+        "canonical_name": "Corio Village",
+        "aliases": "Corio Village Shopping Centre|Corio Central",
+        "official_url": "https://www.coriovillage.com.au/",
+        "evidence_url": "https://www.specsavers.com.au/stores/corio",
+        "verified_at": "2026-09-03",
+        "reason": "The current venue uses Corio Village while the active Specsavers store uses Corio Central at the same Bacchus Marsh and Purnell Roads property",
+        "state": "VIC",
+        "locality": "Corio",
+        "postcode": "3214",
+        "address": "Cnr Bacchus Marsh Road and Purnell Road",
+        "location_setting": "Shopping Centre",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.specsavers.com.au/stores/corio",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-03",
+        "basis": "The current venue uses Corio Village while the active Specsavers store uses Corio Central at the same Bacchus Marsh and Purnell Roads property"
+      },
+      "address": "Cnr Bacchus Marsh Road and Purnell Road",
+      "review": {
+        "issue_id": "place:place-au-vic-corio-village",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://www.coriovillage.com.au/",
+        "checked_at": "2026-10-26",
+        "basis": "Official centre or owner page opened on 2026-10-26 explicitly publishes the intersection of Bacchus Marsh Road and Purnell Road. Existing place and environment addresses agree and are sufficient property references; no numbered address needs to be invented. Original source data, dates and coordinates retained.",
+        "limitations": "Address review only; no new tenant, trading-status, entrance or surveyed boundary assertion."
+      }
+    },
+    {
+      "issue_id": "place:place-au-vic-cranbourne-park-shopping-centre-sp107",
+      "previous_override": {
+        "place_id": "place-au-vic-cranbourne-park-shopping-centre-sp107",
+        "canonical_name": "Cranbourne Park",
+        "aliases": "Cranbourne Park Shopping Centre|Cranbourne Park Shopping Centre SP107",
+        "official_url": "https://www.cranbournepark.com.au/",
+        "evidence_url": "https://www.vicinity.com.au/portfolio/our-properties/cranbourne-park",
+        "verified_at": "2026-09-02",
+        "reason": "Vicinity's current portfolio uses Cranbourne Park while the stable place ID is retained",
+        "state": "VIC",
+        "locality": "Cranbourne",
+        "postcode": "3977",
+        "address": "High Street",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/cranbourne-park",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Vicinity's current portfolio uses Cranbourne Park while the stable place ID is retained"
+      },
+      "address": "High Street",
+      "review": {
+        "issue_id": "place:place-au-vic-cranbourne-park-shopping-centre-sp107",
+        "disposition": "Reviewed valid owner-published property address; no repair required",
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/cranbourne-park",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172e9-3c6c-748e-92b2-7b92a367c9d6",
+        "basis": "High Street Cranbourne VIC 3977",
+        "limitations": "Address section verifies the whole-property description without a street number. No new entrance, boundary, coordinate or tenant-list verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-vic-dandenong-square",
+      "previous_override": {
+        "place_id": "place-au-vic-dandenong-square",
+        "canonical_name": "Dandenong Square",
+        "aliases": "Dandenong Plaza|Dandenong Plaza Shopping Centre",
+        "official_url": "https://dandenongsquare.com/",
+        "evidence_url": "https://dandenongsquare.com/centre-info/",
+        "verified_at": "2026-09-02",
+        "reason": "The current official venue and regulator records confirm Dandenong Square and its former Dandenong Plaza identities while the stable place ID is retained",
+        "state": "VIC",
+        "locality": "Dandenong",
+        "postcode": "3175",
+        "address": "Corner McCrae and Walker Streets",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://dandenongsquare.com/centre-info/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "The current official venue and regulator records confirm Dandenong Square and its former Dandenong Plaza identities while the stable place ID is retained"
+      },
+      "address": "Corner McCrae and Walker Streets",
+      "review": {
+        "issue_id": "place:place-au-vic-dandenong-square",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://dandenongsquare.com/centre-info/",
+        "checked_at": "2026-10-26",
+        "basis": "Official centre or owner page opened on 2026-10-26 explicitly publishes the intersection of McCrae and Walker Streets. Existing place and environment addresses agree and are sufficient property references; no numbered address needs to be invented. Original source data, dates and coordinates retained.",
+        "limitations": "Address review only; no new tenant, trading-status, entrance or surveyed boundary assertion."
+      }
+    },
+    {
+      "issue_id": "place:place-au-vic-melbourne-central-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-vic-melbourne-central-shopping-centre",
+        "canonical_name": "Melbourne Central",
+        "aliases": "Melbourne Central Shopping Centre|Melbourne Central Shopping Centre Ground Level",
+        "official_url": "https://www.melbournecentral.com.au/",
+        "evidence_url": "https://www.melbournecentral.com.au/centre-info/about",
+        "verified_at": "2026-09-02",
+        "reason": "The current official centre profile confirms the one Melbourne Central property at 211 La Trobe Street and the ground-level store label is retained as an alias",
+        "state": "VIC",
+        "locality": "Melbourne",
+        "postcode": "3000",
+        "address": "Cnr La Trobe and Swanston Streets",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.melbournecentral.com.au/centre-info/about",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "The current official centre profile confirms the one Melbourne Central property at 211 La Trobe Street and the ground-level store label is retained as an alias"
+      },
+      "address": "Cnr La Trobe and Swanston Streets",
+      "review": {
+        "issue_id": "place:place-au-vic-melbourne-central-shopping-centre",
+        "disposition": "Reviewed: sufficient intersection address",
+        "checked_at": "2026-10-25",
+        "source_url": "https://www.melbournecentral.com.au/",
+        "scrape_id": "01a17280-063b-711d-bac4-6a1a8f376dee",
+        "basis": "Official Find us section publishes the LaTrobe/Swanston intersection, Melbourne VIC 3000. Existing La Trobe spelling is equivalent; no street number required. Existing generated place and environment both display the intersection. Source-data date and original address preserved.",
+        "verified_address": "Cnr La Trobe and Swanston Streets",
+        "remaining_limit": "General property reference, not a verified entrance."
+      }
+    },
+    {
+      "issue_id": "place:place-au-vic-mid-valley-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-vic-mid-valley-shopping-centre",
+        "canonical_name": "Mid Valley Shopping Centre",
+        "aliases": "Cnr Centre Valley Rd & Princes Dr",
+        "official_url": "https://www.midvalleyshoppingcentre.com.au/",
+        "evidence_url": "https://www.midvalleyshoppingcentre.com.au/stores/",
+        "verified_at": "2026-09-02",
+        "reason": "The current official directory lists OPSM and Specsavers in the one Mid Valley Shopping Centre and confirms its current name address and regional retail role",
+        "state": "VIC",
+        "locality": "Morwell",
+        "postcode": "3840",
+        "address": "Corner of Centre Valley Road and Princes Drive",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.midvalleyshoppingcentre.com.au/stores/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "The current official directory lists OPSM and Specsavers in the one Mid Valley Shopping Centre and confirms its current name address and regional retail role"
+      },
+      "address": "Corner of Centre Valley Road and Princes Drive",
+      "review": {
+        "issue_id": "place:place-au-vic-mid-valley-shopping-centre",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://www.midvalleyshoppingcentre.com.au/stores/",
+        "checked_at": "2026-10-26",
+        "basis": "Official centre or owner page opened on 2026-10-26 explicitly publishes the intersection of Centre Valley Road and Princes Drive. Existing place and environment addresses agree and are sufficient property references; no numbered address needs to be invented. Original source data, dates and coordinates retained.",
+        "limitations": "Address review only; no new tenant, trading-status, entrance or surveyed boundary assertion."
+      }
+    },
+    {
+      "issue_id": "place:place-au-vic-point-cook-town-centre",
+      "previous_override": {
+        "place_id": "place-au-vic-point-cook-town-centre",
+        "canonical_name": "Stockland Point Cook",
+        "aliases": "Point Cook Town Centre",
+        "official_url": "https://www.stockland.com.au/shopping-centres/centres/stockland-point-cook",
+        "evidence_url": "https://links.sgx.com/1.0.0/corporate-announcements/OCV00Y9N84LUK0AD/901651_FY26%20Property%20Portfolio.pdf",
+        "verified_at": "2026-09-02",
+        "reason": "Stockland's current FY26 portfolio confirms the branded centre name and address while the stable place ID is retained",
+        "state": "VIC",
+        "locality": "Point Cook",
+        "postcode": "3030",
+        "address": "Corner Murnong and Main Streets",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://links.sgx.com/1.0.0/corporate-announcements/OCV00Y9N84LUK0AD/901651_FY26%20Property%20Portfolio.pdf",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Stockland's current FY26 portfolio confirms the branded centre name and address while the stable place ID is retained"
+      },
+      "address": "Corner Murnong and Main Streets",
+      "review": {
+        "issue_id": "place:place-au-vic-point-cook-town-centre",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://www.stockland.com.au/shopping-centres/centres/stockland-point-cook",
+        "checked_at": "2026-10-26",
+        "basis": "Opened official Stockland page explicitly locates the centre at the intersection of Main Street and Murnong Street. Existing property reference is sufficient; a missing street number is not a data error. Original address and source dates retained.",
+        "limitations": "This address review does not verify tenant membership, precise entrances or property boundaries."
+      }
+    },
+    {
+      "issue_id": "place:place-au-vic-rosebud-plaza-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-vic-rosebud-plaza-shopping-centre",
+        "canonical_name": "Rosebud Plaza",
+        "aliases": "Rosebud Plaza Shopping Centre",
+        "official_url": "https://rosebudplaza.com.au/",
+        "evidence_url": "https://rosebudplaza.com.au/contact/",
+        "verified_at": "2026-09-02",
+        "reason": "The current official venue uses Rosebud Plaza as the canonical name and confirms the address while the stable place ID is retained",
+        "state": "VIC",
+        "locality": "Rosebud",
+        "postcode": "3939",
+        "address": "Corner Boneo Road and McCombe Street",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://rosebudplaza.com.au/contact/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "The current official venue uses Rosebud Plaza as the canonical name and confirms the address while the stable place ID is retained"
+      },
+      "address": "Corner Boneo Road and McCombe Street",
+      "review": {
+        "issue_id": "place:place-au-vic-rosebud-plaza-shopping-centre",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://rosebudplaza.com.au/contact/",
+        "checked_at": "2026-10-26",
+        "basis": "Official centre or owner page opened on 2026-10-26 explicitly publishes the intersection of Boneo Road and McCombe Street. Existing place and environment addresses agree and are sufficient property references; no numbered address needs to be invented. Original source data, dates and coordinates retained.",
+        "limitations": "Address review only; no new tenant, trading-status, entrance or surveyed boundary assertion."
+      }
+    },
+    {
+      "issue_id": "place:place-au-vic-wendouree-stockland",
+      "previous_override": {
+        "place_id": "place-au-vic-wendouree-stockland",
+        "canonical_name": "Stockland Wendouree",
+        "aliases": "Wendouree Stockland",
+        "official_url": "https://www.stockland.com.au/shopping-centres/centres/stockland-wendouree",
+        "evidence_url": "https://links.sgx.com/1.0.0/corporate-announcements/OCV00Y9N84LUK0AD/901651_FY26%20Property%20Portfolio.pdf",
+        "verified_at": "2026-09-02",
+        "reason": "Stockland's current FY26 portfolio uses the canonical brand-first name while the stable place ID is retained",
+        "state": "VIC",
+        "locality": "Wendouree",
+        "postcode": "3355",
+        "address": "Corner Norman and Gillies Streets",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://links.sgx.com/1.0.0/corporate-announcements/OCV00Y9N84LUK0AD/901651_FY26%20Property%20Portfolio.pdf",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Stockland's current FY26 portfolio uses the canonical brand-first name while the stable place ID is retained"
+      },
+      "address": "Corner Norman and Gillies Streets",
+      "review": {
+        "issue_id": "place:place-au-vic-wendouree-stockland",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://www.stockland.com.au/shopping-centres/centres/stockland-wendouree",
+        "checked_at": "2026-10-26",
+        "basis": "Opened official Stockland page explicitly locates the centre at the intersection of Norman and Gillies Streets. Existing property reference is sufficient; a missing street number is not a data error. Original address and source dates retained.",
+        "limitations": "This address review does not verify tenant membership, precise entrances or property boundaries."
+      }
+    },
+    {
+      "issue_id": "place:place-au-wa-harrisdale-stockland-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-wa-harrisdale-stockland-shopping-centre",
+        "canonical_name": "Stockland Harrisdale",
+        "aliases": "Harrisdale Stockland Shopping Centre",
+        "official_url": "https://www.stockland.com.au/shopping-centres/centres/stockland-harrisdale",
+        "evidence_url": "https://links.sgx.com/1.0.0/corporate-announcements/OCV00Y9N84LUK0AD/901651_FY26%20Property%20Portfolio.pdf",
+        "verified_at": "2026-09-02",
+        "reason": "Stockland's current FY26 portfolio uses the canonical branded name while the stable place ID is retained",
+        "state": "WA",
+        "locality": "Harrisdale",
+        "postcode": "6112",
+        "address": "Corner Nicholson Road and Yellowwood Avenue",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://links.sgx.com/1.0.0/corporate-announcements/OCV00Y9N84LUK0AD/901651_FY26%20Property%20Portfolio.pdf",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Stockland's current FY26 portfolio uses the canonical branded name while the stable place ID is retained"
+      },
+      "address": "Corner Nicholson Road and Yellowwood Avenue",
+      "review": {
+        "issue_id": "place:place-au-wa-harrisdale-stockland-shopping-centre",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://www.stockland.com.au/shopping-centres/centres/stockland-harrisdale/visit",
+        "checked_at": "2026-10-26",
+        "basis": "Opened official Stockland page explicitly locates the centre at the intersection of Nicholson Road and Yellowwood Avenue. Existing property reference is sufficient; a missing street number is not a data error. Original address and source dates retained.",
+        "limitations": "This address review does not verify tenant membership, precise entrances or property boundaries."
+      }
+    },
+    {
+      "issue_id": "place:place-au-wa-livingston-marketplace",
+      "previous_override": {
+        "place_id": "place-au-wa-livingston-marketplace",
+        "canonical_name": "Livingston Marketplace",
+        "aliases": "",
+        "official_url": "https://www.livingstonmarketplace.com.au/",
+        "evidence_url": "https://www.vicinity.com.au/portfolio/our-properties/livingston-marketplace",
+        "verified_at": "2026-09-02",
+        "reason": "Vicinity's current portfolio confirms the centre name address ownership and classification while the stable place ID is retained",
+        "state": "WA",
+        "locality": "Canning Vale",
+        "postcode": "6155",
+        "address": "Corner Ranford and Nicholson Roads",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/livingston-marketplace",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Vicinity's current portfolio confirms the centre name address ownership and classification while the stable place ID is retained"
+      },
+      "address": "Corner Ranford and Nicholson Roads",
+      "review": {
+        "issue_id": "place:place-au-wa-livingston-marketplace",
+        "disposition": "Reviewed valid owner-published property address; no repair required",
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/livingston-marketplace",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172e9-3caa-73ed-a995-1901406a2b35",
+        "basis": "Corner Ranford and Nicholson Roads Canning Vale WA 6155",
+        "limitations": "Address section verifies the whole-property description without a street number. No new entrance, boundary, coordinate or tenant-list verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-wa-maddington-centro-shopping-centre",
+      "previous_override": {
+        "place_id": "place-au-wa-maddington-centro-shopping-centre",
+        "canonical_name": "Maddington Central",
+        "aliases": "Centro Maddington|Maddington Centro Shopping Centre",
+        "official_url": "https://maddingtoncentral.com.au/",
+        "evidence_url": "https://realside.com.au/properties/",
+        "verified_at": "2026-09-02",
+        "reason": "Realside's current portfolio and official venue use Maddington Central while the stable place ID is retained",
+        "state": "WA",
+        "locality": "Maddington",
+        "postcode": "6109",
+        "address": "Corner Burslem Drive and Attfield Street",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://realside.com.au/properties/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Realside's current portfolio and official venue use Maddington Central while the stable place ID is retained"
+      },
+      "address": "Corner Burslem Drive and Attfield Street",
+      "review": {
+        "issue_id": "place:place-au-wa-maddington-centro-shopping-centre",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://maddingtoncentral.com.au/centre-info/",
+        "checked_at": "2026-10-26",
+        "basis": "Official centre or owner page opened on 2026-10-26 explicitly publishes the intersection of Burslem Drive and Attfield Street. Existing place and environment addresses agree and are sufficient property references; no numbered address needs to be invented. Original source data, dates and coordinates retained.",
+        "limitations": "Address review only; no new tenant, trading-status, entrance or surveyed boundary assertion."
+      }
+    },
+    {
+      "issue_id": "place:place-au-wa-morley-galleria",
+      "previous_override": {
+        "place_id": "place-au-wa-morley-galleria",
+        "canonical_name": "Galleria",
+        "aliases": "Morley Galleria|Galleria Shopping Centre|Morley Galleria Ground Floor",
+        "official_url": "https://www.galleriashoppingcentre.com.au/",
+        "evidence_url": "https://www.vicinity.com.au/portfolio/our-properties/galleria",
+        "verified_at": "2026-09-02",
+        "reason": "Current Vicinity and venue sources establish Galleria as the canonical name and confirm its address co-ownership management leasing class metrics and three mapped optical tenants while duplicate place IDs are remapped",
+        "state": "WA",
+        "locality": "Morley",
+        "postcode": "6062",
+        "address": "Corner Collier and Walter Roads",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/galleria",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Current Vicinity and venue sources establish Galleria as the canonical name and confirm its address co-ownership management leasing class metrics and three mapped optical tenants while duplicate place IDs are remapped"
+      },
+      "address": "Corner Collier and Walter Roads",
+      "review": {
+        "issue_id": "place:place-au-wa-morley-galleria",
+        "disposition": "Reviewed valid owner-published property address; no repair required",
+        "source_url": "https://www.vicinity.com.au/portfolio/our-properties/galleria",
+        "checked_at": "2026-10-25",
+        "scrape_id": "01a172e9-3d3f-7379-bc80-a0bd8adacc9c",
+        "basis": "Corner Collier and Walter Roads Morley WA 6062",
+        "limitations": "Address section verifies the whole-property description without a street number. No new entrance, boundary, coordinate or tenant-list verification."
+      }
+    },
+    {
+      "issue_id": "place:place-au-wa-riverton-stockland",
+      "previous_override": {
+        "place_id": "place-au-wa-riverton-stockland",
+        "canonical_name": "Riverton Forum",
+        "aliases": "Stockland Riverton|Stockland Riverton Shopping Centre",
+        "official_url": "https://rivertonforum.com.au/",
+        "evidence_url": "https://www.elanorinvestors.com/investments/asset/riverton-forum",
+        "verified_at": "2026-09-02",
+        "reason": "Elanor's current investment portfolio and the official venue site use Riverton Forum after the Stockland disposal",
+        "state": "WA",
+        "locality": "Riverton",
+        "postcode": "6148",
+        "address": "High Road and Willeri Drive",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.elanorinvestors.com/investments/asset/riverton-forum",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Elanor's current investment portfolio and the official venue site use Riverton Forum after the Stockland disposal"
+      },
+      "address": "High Road and Willeri Drive",
+      "review": {
+        "issue_id": "place:place-au-wa-riverton-stockland",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://rivertonforum.com.au/",
+        "checked_at": "2026-10-26",
+        "basis": "Official centre or owner page opened on 2026-10-26 explicitly publishes the intersection of High Road and Willeri Drive. Existing place and environment addresses agree and are sufficient property references; no numbered address needs to be invented. Original source data, dates and coordinates retained.",
+        "limitations": "Address review only; no new tenant, trading-status, entrance or surveyed boundary assertion."
+      }
+    },
+    {
+      "issue_id": "place:place-nz-auckland-glenfield-mall",
+      "previous_override": {
+        "place_id": "place-nz-auckland-glenfield-mall",
+        "canonical_name": "Glenfield Mall",
+        "aliases": "",
+        "official_url": "https://glenfieldmall.co.nz/",
+        "evidence_url": "https://glenfieldmall.co.nz/privacy-policy",
+        "verified_at": "2026-09-02",
+        "reason": "Current venue sources confirm the centre identity address Colliers management local ownership direct centre leasing channel public scale and mapped Specsavers tenancy while the beneficial owner remains unnamed",
+        "state": "Auckland",
+        "locality": "Glenfield",
+        "postcode": "0629",
+        "address": "Corner Glenfield Road and Downing Street",
+        "location_setting": "",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://glenfieldmall.co.nz/privacy-policy",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Current venue sources confirm the centre identity address Colliers management local ownership direct centre leasing channel public scale and mapped Specsavers tenancy while the beneficial owner remains unnamed"
+      },
+      "address": "Corner Glenfield Road and Downing Street",
+      "review": {
+        "issue_id": "place:place-nz-auckland-glenfield-mall",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://glenfieldmall.co.nz/",
+        "checked_at": "2026-10-26",
+        "basis": "Official centre or owner page opened on 2026-10-26 explicitly publishes the intersection of Glenfield Road and Downing Street. Existing place and environment addresses agree and are sufficient property references; no numbered address needs to be invented. Original source data, dates and coordinates retained.",
+        "limitations": "Address review only; no new tenant, trading-status, entrance or surveyed boundary assertion."
+      }
+    },
+    {
+      "issue_id": "place:place-nz-auckland-manukau-city-centre",
+      "previous_override": {
+        "place_id": "place-nz-auckland-manukau-city-centre",
+        "canonical_name": "Manukau Supa Centa",
+        "aliases": "Manukau City Centre",
+        "official_url": "https://www.manukausupacenta.co.nz/",
+        "evidence_url": "https://www.willisbond.co.nz/manukau-supa-centa",
+        "verified_at": "2026-09-02",
+        "reason": "Current venue and Property Income Fund sources establish Manukau Supa Centa as a distinct large-format centre rather than Westfield Manukau",
+        "state": "Auckland",
+        "locality": "Manukau",
+        "postcode": "2104",
+        "address": "Corner Lambie and Cavendish Drives",
+        "location_setting": "Shopping Centre",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.willisbond.co.nz/manukau-supa-centa",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-09-02",
+        "basis": "Current venue and Property Income Fund sources establish Manukau Supa Centa as a distinct large-format centre rather than Westfield Manukau"
+      },
+      "address": "Corner Lambie and Cavendish Drives",
+      "review": {
+        "issue_id": "place:place-nz-auckland-manukau-city-centre",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://www.willisbond.co.nz/manukau-supa-centa",
+        "checked_at": "2026-10-26",
+        "basis": "Official centre or owner page opened on 2026-10-26 explicitly publishes the intersection of Lambie and Cavendish Drives. Existing place and environment addresses agree and are sufficient property references; no numbered address needs to be invented. Original source data, dates and coordinates retained. Generated canonical name is already Manukau Supa Centa, distinct from Westfield Manukau; historical ID is preserved.",
+        "limitations": "Address review only; no new tenant, trading-status, entrance or surveyed boundary assertion."
+      }
+    },
+    {
+      "issue_id": "place:place-nz-waikato-te-awa-at-the-base",
+      "previous_override": {
+        "place_id": "place-nz-waikato-te-awa-at-the-base",
+        "canonical_name": "Te Awa at The Base",
+        "aliases": "The Base|Te Awa|The Base (including Te Awa)",
+        "official_url": "https://www.the-base.co.nz/",
+        "evidence_url": "https://www.kiwiproperty.com/properties/the-base",
+        "verified_at": "2026-10-16",
+        "reason": "One destination display label approved by user. Owner identifies indoor Te Awa and outdoor large-format sections; combined tenant directory covers both, not just indoor mall.",
+        "state": "Waikato",
+        "locality": "Hamilton",
+        "postcode": "3200",
+        "address": "Corner Te Rapa Road and Wairere Drive",
+        "location_setting": "Shopping Centre",
+        "address_source_date": ""
+      },
+      "previous_address_evidence": {
+        "source_url": "https://www.kiwiproperty.com/properties/the-base",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-10-16",
+        "basis": "One destination display label approved by user. Owner identifies indoor Te Awa and outdoor large-format sections; combined tenant directory covers both, not just indoor mall."
+      },
+      "address": "Corner Te Rapa Road and Wairere Drive",
+      "review": {
+        "issue_id": "place:place-nz-waikato-te-awa-at-the-base",
+        "disposition": "Reviewed valid corner address; no repair required",
+        "source_url": "https://www.kiwiproperty.com/properties/the-base",
+        "checked_at": "2026-10-26",
+        "basis": "Official centre or owner page opened on 2026-10-26 explicitly publishes the intersection of Te Rapa Road and Wairere Drive. Existing place and environment addresses agree and are sufficient property references; no numbered address needs to be invented. Original source data, dates and coordinates retained. Owner distinguishes indoor Te Awa and outdoor large-format retail; retain existing user-approved combined destination scope, not an indoor-only claim.",
+        "limitations": "Address review only; no new tenant, trading-status, entrance or surveyed boundary assertion."
+      }
+    }
+  ],
+  "verification": {
+    "checked_at": "2026-10-27",
+    "result": "All45 changed records differ only in address_evidence in both places and environments. All1529placeIDs and other fields preserved. Store-place membership file byte-identical.",
+    "checks_results": "/tmp/readiness-address-review-links-results.json",
+    "python_tests": 420,
+    "session_id": 86905
+  }
+}

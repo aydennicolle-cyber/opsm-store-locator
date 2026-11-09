@@ -1,0 +1,448 @@
+{
+  "review_started_at": "2026-10-25",
+  "scope": "Targeted identity review from the foundation audit and normalized-name scan; not a national completeness audit. Similar names and proximity identify candidates only.",
+  "cases": [
+    {
+      "case_id": "P01",
+      "title": "Huonville Main Street",
+      "status": "Resolved and locally verified",
+      "decision": {
+        "type": "Manual user review",
+        "reviewed_at": "2026-10-25",
+        "confirmation": "One corridor; retain Main Road as an alias",
+        "canonical_place_id": "corridor-au-tas-huonville-main-street",
+        "previous_place_id": "corridor-au-tas-huonville-main-road",
+        "boundary_limit": "Named-street identity only; no surveyed extent or current trading verification",
+        "coordinate_history": "Previous reviewed point retained in retired_place_coordinate_reviews.csv; target review date unchanged."
+      },
+      "records": [
+        {
+          "place_id": "corridor-au-tas-huonville-main-road",
+          "name": "Main Street",
+          "locality": "Huonville",
+          "address": "Main Road",
+          "source_url": "https://www.openstreetmap.org/way/198720536"
+        },
+        {
+          "place_id": "corridor-au-tas-huonville-main-street",
+          "name": "Main Street",
+          "locality": "Huonville",
+          "address": "Main Street",
+          "source_url": "https://www.provision.com.au/practice/total-eyecare-huonville/"
+        }
+      ],
+      "verification": "All three required builders completed successfully. Focused regression confirms canonical remaps and distinct stores/centre; complete goal validation remains outstanding.",
+      "verification_record": "FOUNDATION_REPAIR_VERIFICATION.json"
+    },
+    {
+      "case_id": "P02",
+      "title": "Napier Emerson Street aliases",
+      "status": "Resolved and locally verified",
+      "decision": {
+        "type": "Published locality plus existing reviewed spelling correction",
+        "reviewed_at": "2026-10-25",
+        "canonical_place_id": "corridor-nz-hawke-s-bay-napier-emerson-street",
+        "previous_place_ids": [
+          "corridor-nz-hawke-s-bay-hawke-s-bay-emerson-street",
+          "corridor-nz-hawke-s-bay-napier-emeson-street"
+        ],
+        "limit": "Named street and locality only; retain raw store addresses and historical coordinate reviews; no trading or exact boundary claim."
+      },
+      "records": [
+        {
+          "place_id": "corridor-nz-hawke-s-bay-hawke-s-bay-emerson-street",
+          "name": "Emerson Street",
+          "locality": "",
+          "address": "Emerson Street",
+          "source_url": "https://spexeyewear.co.nz/"
+        },
+        {
+          "place_id": "corridor-nz-hawke-s-bay-napier-emeson-street",
+          "name": "Emerson Street",
+          "locality": "Napier",
+          "address": "Emeson Street",
+          "source_url": "https://www.openstreetmap.org/way/83686519"
+        },
+        {
+          "place_id": "corridor-nz-hawke-s-bay-napier-emerson-street",
+          "name": "Emerson Street",
+          "locality": "Napier",
+          "address": "Emerson Street",
+          "source_url": "https://www.specsavers.co.nz/stores/napier"
+        }
+      ],
+      "additional_evidence": [
+        {
+          "source_url": "https://spexeyewear.co.nz/pages/shop-hours",
+          "checked_at": "2026-10-25",
+          "fact": "Spex publishes its Napier branch at 5/44 Emerson Street, Napier City, 4110. This establishes the missing locality for its street record, not a surveyed street boundary."
+        }
+      ],
+      "verification": "Three required builders passed; complete Python suite 393 tests, all eight JavaScript suites and source privacy scan passed. Napier alias/date/membership regression passed. Birkenhead generated output retains both store memberships and previous name alias.",
+      "verification_record": "FOUNDATION_REPAIR_VERIFICATION.json"
+    },
+    {
+      "case_id": "P03",
+      "title": "Birkenhead Point centre names",
+      "status": "Resolved and locally verified",
+      "decision": {
+        "type": "Official centre directory and matching published property address",
+        "reviewed_at": "2026-10-25",
+        "previous_place_id": "place-au-nsw-birkenhead-point-outlet-centre",
+        "canonical_place_id": "place-au-nsw-birkenhead-point-brand-outlet",
+        "source_url": "https://www.birkenheadpoint.com.au/stores/shopping/sunglass-hut",
+        "basis": "Centre directory identifies Sunglass Hut; both store addresses explicitly name Birkenhead Point at 19 Roseby Street, Drummoyne. Preserve each shop address and both property name aliases."
+      },
+      "records": [
+        {
+          "place_id": "place-au-nsw-birkenhead-point-brand-outlet",
+          "name": "Birkenhead Point Brand Outlet",
+          "locality": "Drummoyne",
+          "address": "Shop 127, Birkenhead Point Brand Outlet, 19 Roseby Street, Drummoyne NSW 2047, Australia",
+          "source_url": "https://www.birkenheadpoint.com.au/"
+        },
+        {
+          "place_id": "place-au-nsw-birkenhead-point-outlet-centre",
+          "name": "Birkenhead Point Outlet Centre",
+          "locality": "Drummoyne",
+          "address": "Shop 10, Birkenhead Point Outlet Centre, 19 Roseby Street, Birkenhead Point Outlet, Drummoyne, NSW, 2047",
+          "source_url": "https://stores.sunglasshut.com/au/nsw/drummoyne/shop-10-birkenhead-point-outlet-centre"
+        }
+      ],
+      "verification": "Three required builders passed; complete Python suite 393 tests, all eight JavaScript suites and source privacy scan passed. Napier alias/date/membership regression passed. Birkenhead generated output retains both store memberships and previous name alias.",
+      "verification_record": "FOUNDATION_REPAIR_VERIFICATION.json"
+    },
+    {
+      "case_id": "P04",
+      "title": "HomeCo names without locality",
+      "status": "Resolved distinct identities; Rutherford current branding explicitly unverified",
+      "decision": {
+        "type": "Evidence-led review under user best-judgement instruction",
+        "reviewed_at": "2026-10-25",
+        "resolved": [
+          "Keysborough official name and address",
+          "Peninsula official Mornington address",
+          "Knoxfield current JLL marketing name linked by exact historical property address"
+        ],
+        "retained_uncertainty": "Rutherford retains its original mapped ID, explicit locality and HomeCo aliases, with neutral name-unverified display label. No unsupported Home + Life merger or street address added. This resolves ambiguous display identity without claiming current branding.",
+        "other_records": "Penrith, Vincentia, Lutwyche, Braybrook and Southlands already carry differentiating localities/addresses; no evidence of duplication with the three formerly generic records. They remain separate; their source freshness is not upgraded."
+      },
+      "records": [
+        {
+          "place_id": "place-au-unknown-homeco",
+          "name": "HomeCo",
+          "locality": "",
+          "address": "",
+          "source_url": "https://www.home-co.com.au/centre/keysborough/"
+        },
+        {
+          "place_id": "place-au-unknown-homeco-way-171574637",
+          "name": "HomeCo",
+          "locality": "",
+          "address": "",
+          "source_url": "https://www.home-co.com.au/centre/home-consortium-knoxfield/"
+        },
+        {
+          "place_id": "place-au-unknown-homeco-way-536335852",
+          "name": "HomeCo",
+          "locality": "",
+          "address": "",
+          "source_url": "https://www.home-co.com.au/centre/home-consortium-rutherford/"
+        },
+        {
+          "place_id": "place-au-unknown-homeco-peninsula",
+          "name": "HomeCo. Peninsula",
+          "locality": "",
+          "address": "",
+          "source_url": "https://home-co.com.au/peninsula"
+        },
+        {
+          "place_id": "place-au-unknown-homeco-way-536334280",
+          "name": "HomeCo Penrith",
+          "locality": "Penrith",
+          "address": "72-82 Mulgoa Road",
+          "source_url": "https://www.hmccapital.com.au/investor-centre/pds/"
+        },
+        {
+          "place_id": "place-au-nsw-homeco-vincentia",
+          "name": "HomeCo Vincentia",
+          "locality": "Vincentia",
+          "address": "8 Moona Creek Road, Vincentia NSW 2540",
+          "source_url": "https://www.eyeq.com.au/optometrist/vincentia/"
+        },
+        {
+          "place_id": "place-au-qld-homeco-lutwyche",
+          "name": "HomeCo Lutwyche",
+          "locality": "Lutwyche",
+          "address": "543 Lutwyche Road",
+          "source_url": "https://www.hmccapital.com.au/investment-strategies/real-estate/homeco-daily-needs-reit/financial-reports-presentations/hy26-results-presentation/"
+        },
+        {
+          "place_id": "place-au-vic-homeco",
+          "name": "HomeCo",
+          "locality": "Braybrook",
+          "address": "330 Ballarat Road",
+          "source_url": "https://www.home-co.com.au/centre/home-consortium-braybrook/"
+        },
+        {
+          "place_id": "place-au-wa-homeco-southlands-boulevarde",
+          "name": "HomeCo. Southlands Boulevarde",
+          "locality": "Willetton",
+          "address": "45 Burrendah Boulevard, Willetton WA 6155",
+          "source_url": "https://visionspace.com.au/contact-us/"
+        }
+      ],
+      "additional_evidence": [
+        {
+          "source_url": "https://home-co.com.au/keysborough/",
+          "checked_at": "2026-10-25",
+          "fact": "Old URL redirects to official Keysborough page, publishing 446 Cheltenham Road, Keysborough VIC 3173."
+        },
+        {
+          "source_url": "https://stonebridge.com.au/homeco-knoxfield-transacts-off-market-at-a-5-00-yield/",
+          "checked_at": "2026-10-25",
+          "fact": "Selling agent identifies HomeCo Knoxfield at 1464 Ferntree Gully Road, Knoxfield VIC 3180 in historical sale report. Publication date not established; current branding unconfirmed."
+        },
+        {
+          "source_url": "https://www.commo.com.au/properties/2025/03/19/tamim-property%E2%80%99s-lfr-centre-sold-spotlight-property-group-jll/1742365085",
+          "checked_at": "2026-10-25",
+          "source_date": "2025-03-19",
+          "fact": "Report with named seller, buyer and agent identifies Home + Life Rutherford. Does not alone prove same mapped HomeCo property or current branding. Old HomeCo Knoxfield/Rutherford URLs return 404; this is not evidence of closure."
+        }
+      ],
+      "verification_record": "FOUNDATION_REPAIR_VERIFICATION.json"
+    },
+    {
+      "case_id": "P05",
+      "title": "Murray Street missing localities",
+      "status": "Resolved and locally verified",
+      "decision": {
+        "type": "Published operator addresses",
+        "reviewed_at": "2026-10-25",
+        "mapping": {
+          "corridor-au-vic-vic-murray-street-1": "Wonthaggi VIC 3995",
+          "corridor-au-vic-vic-murray-street-2": "Colac VIC 3250"
+        },
+        "sources": [
+          "https://akerseyewear.com.au/",
+          "https://otwayoptical.com.au"
+        ],
+        "limit": "Stable street IDs and raw store addresses preserved; no boundary inference."
+      },
+      "records": [
+        {
+          "place_id": "corridor-au-vic-vic-murray-street-1",
+          "name": "Murray Street",
+          "locality": "",
+          "address": "Murray Street",
+          "source_url": "https://www.openstreetmap.org/node/10774441654"
+        },
+        {
+          "place_id": "corridor-au-vic-vic-murray-street-2",
+          "name": "Murray Street",
+          "locality": "",
+          "address": "Murray Street",
+          "source_url": "https://otwayoptical.com.au"
+        }
+      ],
+      "verification_record": "FOUNDATION_REPAIR_VERIFICATION.json"
+    },
+    {
+      "case_id": "P06",
+      "title": "Pakington Street sections and locality labels",
+      "status": "Resolved and locally verified",
+      "decision": {
+        "type": "Manual user section review with published branch-address evidence",
+        "reviewed_at": "2026-10-25",
+        "confirmation": "Keep Newtown and Geelong West as separate sections",
+        "merges": [
+          {
+            "previous_place_id": "corridor-au-vic-melbourne-pakington-street",
+            "canonical_place_id": "corridor-au-vic-newtown-pakington-street",
+            "evidence_url": "https://dresden.vision/au/stores/geelong",
+            "basis": "Dresden publishes 315 Pakington Street Newtown VIC 3220; the previous Melbourne locality label was incorrect."
+          },
+          {
+            "previous_place_id": "corridor-au-vic-vic-pakington-street-1",
+            "canonical_place_id": "corridor-au-vic-newtown-pakington-street",
+            "evidence_url": "https://winkseyecare.com.au",
+            "basis": "Winks publishes Shop 7/343 Pakington Street Newtown VIC 3220; the previous corridor lacked a locality."
+          },
+          {
+            "previous_place_id": "corridor-au-vic-vic-pakington-street-2",
+            "canonical_place_id": "corridor-au-vic-geelong-west-pakington-street",
+            "evidence_url": "https://eyewearonpako.com.au",
+            "basis": "Eyewear on Pako publishes 3/128-134 Pakington Street Geelong West; the previous corridor lacked a locality."
+          }
+        ],
+        "boundary_limit": "Named street within evidenced locality; no precise dividing intersection asserted. Pakington Strand remains distinct."
+      },
+      "records": [
+        {
+          "place_id": "corridor-au-vic-vic-pakington-street-1",
+          "name": "Pakington Street",
+          "locality": "",
+          "address": "Pakington Street",
+          "source_url": "https://winkseyecare.com.au"
+        },
+        {
+          "place_id": "corridor-au-vic-vic-pakington-street-2",
+          "name": "Pakington Street",
+          "locality": "",
+          "address": "Pakington Street",
+          "source_url": "https://eyewearonpako.com.au"
+        },
+        {
+          "place_id": "corridor-au-vic-geelong-west-pakington-street",
+          "name": "Pakington Street",
+          "locality": "Geelong West",
+          "address": "Pakington Street",
+          "source_url": "https://www.provision.com.au/practice/geelong-eye-health/"
+        },
+        {
+          "place_id": "corridor-au-vic-melbourne-pakington-street",
+          "name": "Pakington Street",
+          "locality": "Melbourne",
+          "address": "Pakington Street",
+          "source_url": "https://dresden.vision/au/stores/geelong"
+        },
+        {
+          "place_id": "corridor-au-vic-newtown-pakington-street",
+          "name": "Pakington Street",
+          "locality": "Newtown",
+          "address": "Pakington Street",
+          "source_url": "https://baileynelson.com.au/pages/optometrist-geelong"
+        },
+        {
+          "place_id": "place-au-vic-pakington-strand",
+          "name": "Pakington Strand",
+          "locality": "Geelong West",
+          "address": "95-103 Pakington Street, Geelong West VIC 3218",
+          "source_url": "https://pakingtonstrand.com.au/contact/"
+        }
+      ],
+      "additional_evidence": [
+        {
+          "source_url": "https://dresden.vision/au/stores/geelong",
+          "checked_at": "2026-10-25",
+          "fact": "Dresden publishes its Geelong store at 315 Pakington Street, Newtown VIC 3220. The derived Melbourne locality is incorrect for this branch."
+        },
+        {
+          "source_url": "https://winkseyecare.com.au",
+          "checked_at": "2026-10-25",
+          "fact": "Winks publishes its Newtown branch at Shop 7/343 Pakington Street, Newtown VIC 3220. This supports the existing Newtown street/locality grouping."
+        },
+        {
+          "source_url": "https://eyewearonpako.com.au",
+          "checked_at": "2026-10-25",
+          "fact": "Operator publishes 3/128-134 Pakington Street, Geelong West."
+        }
+      ],
+      "verification": "All three required builders completed successfully. Focused regression confirms canonical remaps and distinct stores/centre; complete goal validation remains outstanding.",
+      "verification_record": "FOUNDATION_REPAIR_VERIFICATION.json"
+    },
+    {
+      "case_id": "P07",
+      "title": "Elsternwick Glen Huntly Road variants",
+      "status": "Resolved and locally verified",
+      "decision": {
+        "type": "Manual user review",
+        "reviewed_at": "2026-10-25",
+        "confirmation": "One Elsternwick corridor; retain both spellings",
+        "canonical_place_id": "corridor-au-vic-elsternwick-glen-huntly-road",
+        "previous_place_id": "corridor-au-vic-elsternwick-glenhuntly-road",
+        "limit": "Named street and locality only; exact boundary not asserted."
+      },
+      "records": [
+        {
+          "place_id": "corridor-au-vic-elsternwick-glen-huntly-road",
+          "name": "Glen Huntly Road",
+          "locality": "Elsternwick",
+          "address": "Glen Huntly Road",
+          "source_url": "https://www.opsm.com.au/en/opsm-au/find-store"
+        },
+        {
+          "place_id": "corridor-au-vic-elsternwick-glenhuntly-road",
+          "name": "Glenhuntly Road",
+          "locality": "Elsternwick",
+          "address": "Glenhuntly Road",
+          "source_url": "https://www.provision.com.au/practice/eyedentity-elsternwick/"
+        }
+      ],
+      "verification_record": "FOUNDATION_REPAIR_VERIFICATION.json"
+    },
+    {
+      "case_id": "P08",
+      "title": "Rooke Street and mall study boundary",
+      "status": "Resolved as distinct records; exact boundary held by user decision",
+      "decision": {
+        "type": "Manual user review",
+        "reviewed_at": "2026-10-25",
+        "confirmation": "Keep mall separate; leave exact boundary unresolved",
+        "effect": "Retain both place identities and current store associations. No proximity-based mall membership or surveyed boundary asserted."
+      },
+      "records": [
+        {
+          "place_id": "corridor-au-tas-devonport-rooke-street",
+          "name": "Rooke Street",
+          "locality": "Devonport",
+          "address": "Rooke Street",
+          "source_url": "https://www.opsm.com.au/en/opsm-au/find-store"
+        },
+        {
+          "place_id": "corridor-au-tas-devonport-rooke-street-mall",
+          "name": "Rooke Street Mall \u2014 Devonport study area",
+          "locality": "Devonport",
+          "address": "",
+          "source_url": "https://www.devonport.tas.gov.au/live/your-community/halls-venues/rooke-street-mall-and-market-square/"
+        }
+      ],
+      "verification_record": "FOUNDATION_REPAIR_VERIFICATION.json"
+    },
+    {
+      "case_id": "P09",
+      "title": "Crown Street and mall study boundary",
+      "status": "Resolved and locally verified",
+      "decision": {
+        "type": "Manual user review",
+        "reviewed_at": "2026-10-25",
+        "confirmation": "They should be kept separate. The mall is Wollongong Central, by the looks of things.",
+        "effect": "Keep street and mall distinct. Tentative identification with Wollongong Central is not treated as proof of shared place identity or OPSM membership.",
+        "membership_resolution": "Official Wollongong Central OPSM page lists matching phone 02 4229 4444 and Crown Level 1 location. Reassign OPSM to centre, preserve wider street as explicit low-confidence reference and retain public mall separately.",
+        "membership_source": "https://www.wollongongcentral.com.au/stores/opsm",
+        "point_limit": "Wider street retains original approximate store-derived display point; no reviewed road geometry or new coordinate check claimed."
+      },
+      "records": [
+        {
+          "place_id": "corridor-au-nsw-wollongong-crown-street",
+          "name": "Crown Street",
+          "locality": "Wollongong",
+          "address": "Crown Street",
+          "source_url": "https://www.opsm.com.au/en/opsm-au/find-store"
+        },
+        {
+          "place_id": "place-au-nsw-crown-st-mall",
+          "name": "Crown Street Mall",
+          "locality": "Wollongong",
+          "address": "Crown Street between Keira and Kembla Streets",
+          "source_url": "https://www.wollongong.nsw.gov.au/business-in-wollongong/business-information-support/business-in-the-cbd/crown-street-mall"
+        }
+      ],
+      "additional_evidence": [
+        {
+          "source_url": "https://www.wollongongcentral.com.au/",
+          "checked_at": "2026-10-25",
+          "fact": "Official site describes Wollongong Central as a centre with almost 200 stores. Existing public mall source describes a pedestrian area. Existing centre source address also uses 200 Crown Street; this creates a targeted OPSM membership review, not an automatic reassignment."
+        }
+      ],
+      "verification_record": "FOUNDATION_REPAIR_VERIFICATION.json"
+    }
+  ],
+  "deferred": [
+    "Broader optical network freshness and background discovery",
+    "New industry applications and shared database architecture",
+    "Unrelated street-tenant research beyond the selected place-identity cases"
+  ],
+  "completed_at": "2026-10-25",
+  "completion_scope": "Targeted nine-case repair; no full census or trading verification. Remaining limitations are explicit, not treated as established facts."
+}

@@ -29,7 +29,7 @@
     const geography = (!q.place_ids?.length || q.place_ids.includes(place.place_id))
       && (!q.country || place.country === q.country) && (!q.state || place.state === q.state)
       && (!q.format || place.format === q.format) && (!q.positioning || place.positioning.includes(q.positioning))
-      && (!q.search || `${place.name} ${place.locality} ${place.state}`.toLowerCase().includes(q.search.toLowerCase()));
+      && (!q.search || `${place.name} ${(place.aliases || []).join(' ')} ${place.locality} ${place.state}`.toLowerCase().includes(q.search.toLowerCase()));
     const inScope = geography
       && (q.coverage !== 'directory' || place.coverage?.directory_complete === true);
     const possible = q.all.every(id => states[id] !== 'absent')

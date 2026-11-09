@@ -1,0 +1,92 @@
+{
+  "fetched_at": "2026-10-20T23:13:47.000998+00:00",
+  "source_urls": [
+    "https://www.theeyepiece.com.au/pages/our-boutiques"
+  ],
+  "captured_count": 4,
+  "scope": "Four practices in current official boutique roster; LINDBERG store-in-store not duplicated",
+  "stores": [
+    {
+      "id": 9332,
+      "name": "The Eye Piece Balmain",
+      "contactDetails": {
+        "addressLine1": "Shop 1, 340 Darling St",
+        "addressLine2": "",
+        "city": "Balmain",
+        "state": "NSW",
+        "postCode": "2041",
+        "country": "Australia",
+        "location": {
+          "latitude": -33.856703,
+          "longitude": 151.179123
+        }
+      }
+    },
+    {
+      "id": 9308,
+      "name": "The Eye Piece Sydney",
+      "contactDetails": {
+        "addressLine1": "Shop 1, 10 Hunter St",
+        "addressLine2": "",
+        "city": "Sydney",
+        "state": "NSW",
+        "postCode": "2000",
+        "country": "Australia",
+        "location": {
+          "latitude": -33.865354,
+          "longitude": 151.207739
+        }
+      }
+    },
+    {
+      "id": 9312,
+      "name": "The Eye Piece Wahroonga",
+      "contactDetails": {
+        "addressLine1": "Shop 3, 2 Redleaf Avenue",
+        "addressLine2": "",
+        "city": "Wahroonga",
+        "state": "NSW",
+        "postCode": "2076",
+        "country": "Australia",
+        "location": {
+          "latitude": -33.71868,
+          "longitude": 151.117671
+        }
+      }
+    },
+    {
+      "id": 10909,
+      "name": "The Eye Piece - George St",
+      "contactDetails": {
+        "addressLine1": "Shop 1, 200 George St",
+        "addressLine2": "",
+        "city": "Sydney",
+        "state": "NSW",
+        "postCode": "2000",
+        "country": "Australia",
+        "location": {
+          "latitude": -33.862599,
+          "longitude": 151.207914
+        }
+      }
+    }
+  ],
+  "supplementary_evidence": [
+    {
+      "source_url": "https://www.myhealth1st.com.au/practice/showWS?id=9332",
+      "facts": "Official boutique roster publishes address, phone, hours and eye-test booking; coordinates from the operator-linked public booking practice."
+    },
+    {
+      "source_url": "https://www.myhealth1st.com.au/practice/showWS?id=9308",
+      "facts": "Official boutique roster publishes address, phone, hours and eye-test booking; coordinates from the operator-linked public booking practice."
+    },
+    {
+      "source_url": "https://www.myhealth1st.com.au/practice/showWS?id=9312",
+      "facts": "Official boutique roster publishes address, phone, hours and eye-test booking; coordinates from the operator-linked public booking practice. Official boutique page postcode 2067 conflicts with booking practice 2076; booking address retained and discrepancy recorded."
+    },
+    {
+      "source_url": "https://www.myhealth1st.com.au/practice/showWS?id=10909",
+      "facts": "Official boutique roster publishes address, phone, hours and eye-test booking; coordinates from the operator-linked public booking practice. LINDBERG By The Eye Piece is a store-in-store at these same premises and uses this same booking practice ID; counted once, not a separate LINDBERG-owned store."
+    }
+  ]
+}

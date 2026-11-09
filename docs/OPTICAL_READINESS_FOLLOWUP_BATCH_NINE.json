@@ -1,0 +1,101 @@
+{
+  "status": "All nine validation stages passed; four generated outcomes verified. Browser and export verification remains pending.",
+  "raw_store_sha256": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "accepted": [],
+  "unresolved": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-8512027148",
+      "store_fingerprint": "4c17570d0f59d09b2a486ac6ec2c5f5a4a6696d21fb7ea9e0024623cf1ff3ccf",
+      "candidate_venue_id": "nsw-chase-chatswood",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.visionaryallianceoptical.com.au/eyecatchers.html",
+      "reason": "Closure/referral notice rechecked 27 October 2026 explicitly identifies Eyecatchers closing on 31 July 2025 and joining the separate Visionary Alliance practice. Lemongrove and the footer address at Shop 44, 427/441 Victoria Avenue belong to the receiving practice, not the former Level 1, 379 Victoria Avenue premises. The 88.8 m Chatswood Chase suggestion remains proximity-only. Preserve historical identity and the existing Closed status and original status-verification date; exact former centre membership remains unresolved and both current-analysis exclusions remain."
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-5072911675",
+      "store_fingerprint": "2964b5372fadf57b792924281d9f94e17c8029ade24c523f73f5ca9a91d95aa6",
+      "candidate_venue_id": "nsw-chatswood-westfield",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.proviewoptical.com.au/",
+      "reason": "Operator notice dated 13 July 2026 rechecked 27 October 2026 still states permanently closed and describes possible relocation as uncertain. The retained Shop 2, 370 Victoria Avenue address does not establish Westfield Chatswood tenancy; the candidate is based only on an 80.5 m distance. Preserve the existing Closed status, original status-verification date, premises and source identity. Former centre membership remains unresolved; do not invent a reopened outlet or count this historical practice in current competition."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-alan-burrow-coffs-harbour",
+      "store_fingerprint": "f91a55b07280e467b0b30b6a47201c5fdc9c11e4ab75620e0e9ff06e6110b691",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://alanburrow.com.au/",
+      "reason": "Operator homepage retrieved 27 October 2026 confirms 72 Albany Street, Coffs Harbour and 02 6652 7411, with eyewear services and appointments. Focused premises research did not establish a named centre or a defined canonical district. No accepted Albany Street corridor exists in the current inventory. Preserve the supported address, business point and original source dates; leave exact place membership unresolved rather than assigning City Centre Square or another nearby centre."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-eyecare-spot-collaroy",
+      "store_fingerprint": "4592680cce412539cc61a6df974ab01333fa53d256d7b41cef866feb3913bc0e",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.theeyecarespot.com.au/",
+      "reason": "Operator homepage retrieved 27 October 2026 confirms 1091 Pittwater Road, Collaroy and describes the practice as across from the beach and near the cinema. These are directions, not evidence of shopping-centre tenancy. Manufacturer stockist search corroborates the address but supplies no defined precinct. No accepted Collaroy corridor exists in the current inventory. Preserve original premises and point, with exact canonical place membership unresolved."
+    }
+  ],
+  "limits": "No raw store dates, status, addresses or points changed. Closure notices preserve historical identities; current practice directions do not imply precinct membership.",
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-8512027148",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-5072911675",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-alan-burrow-coffs-harbour",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-eyecare-spot-collaroy",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "status": "Research applied in FOLLOWUP_BATCH_FOURTEEN; six outcomes awaiting full validation. EyeLove and Emphasis remain separate pending address repairs.",
+  "checked_at": "2026-10-27",
+  "retrieval": "Standard web search and reader; no Firecrawl credits used. Reader crawl ages differ from search excerpts; do not treat retrieval date as source publication or verified trading date.",
+  "cases": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-3616959074",
+      "source_url": "https://choptom.com.au/contact/",
+      "finding": "Official Christensen Harbison contact page gives7BarolinStreet,Bundaberg4670,0741512767. Search excerpt crawled lastweek; fullreader reports1.1years. No other Christensen/Harbison rawstore found. Need originalOSMtags/address identity check before applying missing address; do not rely on proximity.",
+      "next": "Retrieve retained original OSM tags via local sources or public OSM API; corroborate name/locality identity. Check existing BarolinStreet corridor."
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-11984932693",
+      "source_url": "https://www.cairnsairport.com.au/travelling/airport-guide/shops/eye-love-cairns/",
+      "finding": "Official airport entry explicitly places EyeLove in T2DomesticDepartureLounge, phone0416522704, sunglasses retail. Official T2 PDFs also label EyeLove, some show two labels; this does not establish two current outlets. Fullpage reader crawl lastmonth; search5days. Do not confuse Elwood or Campsie practices.",
+      "map_source": "https://www.cairnsairport.com.au/assets/maps/pdf/T2-Terminal-internal2.pdf",
+      "next": "Check original OSM identity and accepted Cairns terminal inventory; preserve unit uncertainty and avoid duplicate shop claim."
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-3808231195",
+      "source_url": "https://drjai.com.au/our-team/",
+      "finding": "Primary operator explicitly names DrJai as director of QueenslandEyeSpecialists and lists21WalkerStreet,Bundaberg,0741524922. Describes ophthalmic surgeons and exclusively clinical optometry, not demonstrated spectacle retail. Could be wrong optical-retail inclusion; currently already excluded due missingaddress.",
+      "next": "Inspect originalOSMtags and current service/scope rules before address/classification correction; adding address must not accidentally enable unsupported retail competition."
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-12254014860",
+      "finding": "Exactname SunnyLine with Ipswich/Brassall and optometry searches yielded no reliable operator; OSM-derived street indexmentions are not independent corroboration.",
+      "next": "Read original OSM tags; investigate identity without guessing Sunnybank or another similarly named store."
+    }
+  ],
+  "separate_pending_status_check": {
+    "store_id": "bupa-optical-13626244",
+    "url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-adelaide-st-brisbane",
+    "finding": "Standard reader27October returned page crawled4weeksago; insufficient to verify planned27October reopening. Keep existing temporaryclosure exclusion until stronger evidence."
+  },
+  "retained_original_osm_records": [
+    {
+      "type": "node",
+      "id": 615108303,
+      "lat": -27.3718924,
+      "lon": 152.8864782,
+      "tags": {
+        "name": "Emphasis on Eyecare",
+        "shop": "optician"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3616959074,
+      "lat": -24.8667,
+      "lon": 152.3488694,
+      "tags": {
+        "name": "Christensen Harbison",
+        "shop": "optician"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3808231195,
+      "lat": -24.8770067,
+      "lon": 152.3598261,
+      "tags": {
+        "name": "Queensland Eye Specialists",
+        "shop": "optician"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11984932693,
+      "lat": -16.8765092,
+      "lon": 145.7537766,
+      "tags": {
+        "name": "Eye Love",
+        "shop": "optician"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12254014860,
+      "lat": -27.6081169,
+      "lon": 152.7582933,
+      "tags": {
+        "name": "Sunny Line",
+        "shop": "optician"
+      }
+    }
+  ],
+  "original_osm_limit": "All five retained nodes have only name and shop=optician tags, without phone or written address. Public API request via local Python failed DNS; standard web reader could not retrieve batch API URL. No new Firecrawl call made. Do not label these original tags as newly verified.",
+  "additional_primary_evidence": [
+    {
+      "url": "https://www.milburnandneill.co.nz/",
+      "finding": "Operator directly names DunbarHouse,21DunbarStreet and034777666. No relocation date inferred."
+    },
+    {
+      "url": "https://www.dunedinpsychology.co.nz/who-we-are/",
+      "finding": "Independent tenant gives same DunbarHouse address. Confirms named property identity without inventing current ownership or precinct extent."
+    },
+    {
+      "url": "https://peterdick.co.nz/contact",
+      "finding": "Dunedin17MorayPlace distinct from Mosgiel134aGordonRoad and scheduled regional visiting rooms. No accepted MorayPlace corridor in current inventory."
+    },
+    {
+      "url": "https://www.brighteyes.com.au/store-finder/",
+      "finding": "Operator branch2 and finder agreeShop8/287ShuteHarbourRoad. Existing WhitsundayShoppingCentre is226, not evidence of this tenancy."
+    }
+  ],
+  "emphasis_followup": {
+    "store_id": "independent-other-optical-osm-au-node-615108303",
+    "source_url": "https://qfinder2.health.qld.gov.au/HealthServiceProvider/Index/ccd72be7-7637-e611-80d2-00505601056f",
+    "finding": "Full QLDgovernment page retrieved through standard web reader listsShop8,SamfordCentralShoppingCentre,cornerMtGloriousRoadandMaryRingDrive,Samford4520,0732896733 and operatorhttps://emphasisoneyecare.com.au/. Reader crawl6months. Shamirprovidersearch agrees. Suitable last-known address evidence; not fresh trading proof. Existing Unknown status must remain and exclude current competition. No accepted Samford property presently exists."
+  }
+}

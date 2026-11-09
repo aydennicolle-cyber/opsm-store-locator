@@ -4,20 +4,20 @@ The detailed directory database preserves every source row, including held/out-o
 
 KARRINYUP SHOPPING CENTRE
 Partial: bounded public research complete; commercial and coverage gaps explicit
-Canonical identity: place-au-wa-karrinyup-shopping-centre; Shopping Centre; -31.876927, 115.777398
+Canonical identity: place-au-wa-karrinyup-shopping-centre; Shopping Centre; -31.87682, 115.777581
 EXTENT: Official shopping-centre directory scope; accepted optical membership is separately evidenced. The map point is not a property boundary.
 Extent source: https://www.karrinyupcentre.com.au/centre-info/about-us
-OPTICAL: 9 accepted current members; 10 current non-BN competitors within 2 km; 17 within 5 km.
+OPTICAL: 9 accepted current members; 10 current non-BN competitors within 2 km; 18 within 5 km.
 Current non-BN competitors at <=2/5 km straight-line distance from the recorded point. All settings eligible. Radius does not establish membership or customer catchment; observed counts may be incomplete. Stale-source warnings remain separate.
   EyeQ Optometrists Karrinyup [eyeq-optometrists-karrinyup] — Shop 144, Level 1, Karrinyup Shopping Centre, Karrinyup Road, Karrinyup WA 6018; type: Permanent retail optometry; membership evidence: https://www.eyeq.com.au/optometrist/karrinyup/; checked 2026-10-05; stale source: True
   Options Optometrists — Karrinyup [independent-other-optical-osm-au-node-11396192032] — Shop SP274A, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018; type: Permanent retail optometry; membership evidence: https://www.karrinyupcentre.com.au/stores-services/options-optometrists-karrinyup; checked 2026-09-03; stale source: False
-  Sunglass Hut Karrinyup [independent-other-optical-reviewed-au-sunglass-hut-karrinyup] — Shop 59B, Ground, Karrinyup Shopping Centre, 200 Karrinyup Rd, Karrinyup WA 6018; type: Sunglasses retail; membership evidence: https://www.karrinyupcentre.com.au/stores-services/sunglass-hut; checked 2026-09-28; stale source: False
-  Sunglass Hut Myer Karrinyup [independent-other-optical-reviewed-au-sunglass-hut-myer-karrinyup-b820] — Myer, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018; type: Sunglasses retail; membership evidence: https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre; checked 2026-10-08; stale source: False
   Vision West [independent-other-optical-osm-au-node-11397913900] — Shop SP0003, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018; type: Permanent retail optometry; membership evidence: https://www.visionwest.com.au/contact/; checked 2026-09-28; stale source: False
   Laubman & Pank Karrinyup [laubman-pank-karrinyup-optometrist] — Shop G18B Karrinyup Shoping Centre, 200 Karrinyup Rd, Karrinyup, WA, 6018; type: Permanent retail optometry; membership evidence: https://www.laubmanandpank.com.au/store/karrinyup-optometrist; checked 2026-09-02; stale source: True
   OPSM Karrinyup [opsm-1370] — 200 Karrinyup Rd, Karrinyup, WA, 6018; type: unclassified; membership evidence: https://www.karrinyupcentre.com.au/stores-services/opsm; checked 2026-09-03; stale source: True
   Karrinyup [oscar-wylee-134] — Karrinyup Shopping Centre, Shop SPO284, 200 Karrinyup Rd, Karrinyup WA 6018; type: unclassified; membership evidence: https://www.oscarwylee.com.au/locations/optometrist-karrinyup.html; checked 2026-09-01; stale source: True
   Karrinyup S/C [specsavers-3436] — 200 Karrinyup Road, SPO230/1 Karrinyup Shopping Centre, Karrinyup, WA, 6018; type: Permanent retail optometry; membership evidence: https://www.specsavers.com.au/stores/karrinyup; checked 2026-09-01; stale source: True
+  Sunglass Hut Karrinyup [independent-other-optical-reviewed-au-sunglass-hut-karrinyup] — Shop 59B, Ground, Karrinyup Shopping Centre, 200 Karrinyup Rd, Karrinyup WA 6018; type: Sunglasses retail; membership evidence: https://www.karrinyupcentre.com.au/stores-services/sunglass-hut; checked 2026-09-28; stale source: False
+  Sunglass Hut Myer Karrinyup [independent-other-optical-reviewed-au-sunglass-hut-myer-karrinyup-b820] — Myer, Karrinyup Shopping Centre, 200 Karrinyup Road, Karrinyup WA 6018; type: Sunglasses retail; membership evidence: https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre; checked 2026-10-08; stale source: False
 The accepted census includes a separately identified Sunglass Hut concession in Myer that is absent from the centre directory. Do not delete it or treat a directory omission as closure.
 DIRECTORY: 315 source listings; 302 in-scope directory-listed non-optical records; 5 coming soon; 0 held; 0 outside scope/unresolved address; 2 unclassified.
 Published official centre directory. Listings include services and may include internal outlets or concessions.
@@ -26,7 +26,7 @@ No compatible occupied-tenancy or category-floor-area denominator.
 RESIDENT CONTEXT: Karrinyup - Gwelup - Carine (SA2 505021089); 2025 population 24,578; 2021 population 23,402; change 1,176 (5.03%). Density 1,744.5/km² (2025). Age 45+ 46.2%; median equivalised household income AUD 1,439/week (2021).
 Resident SA2 context, not a centre trade area or customer catchment.
 ABS release 2026-05-26: https://www.abs.gov.au/methodologies/data-region-methodology/2011-25
-Coordinate-bound SA2 receipt checked 2026-09-27T21:58:22.781427+00:00: https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.777398%2C-31.876927&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json
+Coordinate-bound SA2 receipt checked 2026-10-25T07:51:03.175529+00:00: https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=115.777581%2C-31.87682&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json
 ACCESS
   Parking: Centre reports over 4,800 car bays and road access via Karrinyup Road, Francis Avenue, Davenport Street and Jeanes Road. Source: https://www.karrinyupcentre.com.au/centre-info/location-parking; source date/period: not stated; checked 2026-10-08T08:53:07.147004+00:00
   Public transport: Nearest rail station is Stirling; onward bus connection serves the centre bus port less than 100 metres from the centre. This is not direct rail access. Source: https://www.karrinyupcentre.com.au/centre-info/location-parking; source date/period: not stated; checked 2026-10-08T08:53:07.147004+00:00
@@ -96,10 +96,10 @@ Partial: bounded public research complete; commercial and coverage gaps explicit
 Canonical identity: corridor-au-sa-glenelg-jetty-road; High Street; -34.98008115234058, 138.51894180868356
 EXTENT: Canonical Jetty Road street scope. The council describes an approximately one-kilometre street and a wider precinct with side streets; its improvement project also includes Colley Terrace. The wider precinct and project boundary do not establish canonical street membership.
 Extent source: https://www.yourholdfast.com/transforming-jetty-road-glenelg/transforming-jetty-road-glenelg-faqs
-OPTICAL: 2 accepted current members; 4 current non-BN competitors within 2 km; 14 within 5 km.
+OPTICAL: 2 accepted current members; 4 current non-BN competitors within 2 km; 17 within 5 km.
 Current non-BN competitors at <=2/5 km straight-line distance from the recorded point. All settings eligible. Radius does not establish membership or customer catchment; observed counts may be incomplete. Stale-source warnings remain separate.
   HoldfastBay Optometry [independent-other-optical-provision-17714] — 105A Jetty Road, Glenelg, South Australia, 5045; type: Permanent retail optometry; membership evidence: https://holdfastbayoptometry.com.au/; checked 2026-09-02; stale source: True
-  Optical by National Pharmacies Glenelg [optical-by-national-pharmacies-glenelg-5045] — Shop 6/108-116 Jetty Road, Glenelg SA 5045, Australia; type: Permanent retail optometry; membership evidence: https://www.nationalpharmacies.com.au/stores/glenelg-optical/; checked 2026-09-03; stale source: True
+  Sunglass Hut Jetty Road — Glenelg [independent-other-optical-reviewed-au-sunglass-hut-glenelg-b742] — Shop 9, 1 Colley Terrace, Glenelg SA 5045; type: Sunglasses retail; membership evidence: https://stores.sunglasshut.com/au/sa/glenelg/1-colley-terrace; checked 2026-10-31; stale source: False
 OPSM belongs to Bayside Village Shopping Centre; Sunglass Hut is at Shop 9, 1 Colley Terrace. Both remain nearby competitors, not additional accepted Jetty Road street members. Historical directory addresses are retained as conflicting evidence.
 DIRECTORY: 291 source listings; 143 in-scope directory-listed non-optical records; 0 coming soon; 8 held; 139 outside scope/unresolved address; 0 unclassified.
 Published district directory, restricted for comparison to explicit Jetty Road/Glenelg addresses. Address conflicts and unclear identities remain held.

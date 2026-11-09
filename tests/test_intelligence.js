@@ -2,6 +2,23 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const Intel = require("../assets/intelligence.js");
 
+// A newly accepted place need not belong to the older co-tenancy research cohort.
+const acceptedTenant = {store_id: 'new-independent', name: 'Independent practice', retailer: 'Independent / Other optical',
+  place_id: 'new-place', status: 'Mapped', eligible_for_analytics: true, eligible_for_place_analytics: true,
+  mapping_evidence_url: 'https://example.org/premises', mapping_record_date: '2026-10-01', mapping_confidence: 'Medium'};
+const exactTenants = Intel.exactPlaceOpticalTenants([
+  acceptedTenant, {...acceptedTenant},
+  {...acceptedTenant, store_id: 'nearby', place_id: 'other-place'},
+  {...acceptedTenant, store_id: 'unresolved', eligible_for_place_analytics: false},
+  {...acceptedTenant, store_id: 'closed', status: 'Closed', eligible_for_analytics: false},
+], 'new-place');
+assert.equal(exactTenants.length, 1, 'Export accepted tenants outside the pilot without duplicates, neighbours or excluded stores');
+assert.equal(exactTenants[0].status, 'Mapped', 'Do not upgrade last-known status to Active');
+assert.equal(exactTenants[0].verified_at, '2026-10-01');
+assert.equal(exactTenants[0].source_date, '', 'A mapping review date is not a source publication date');
+assert.equal(exactTenants[0].source_url, acceptedTenant.mapping_evidence_url);
+assert.deepEqual(Intel.exactPlaceOpticalTenants([acceptedTenant], ''), []);
+
 const selectedRow = {
   country: "New Zealand", location_setting: "Shopping Centre",
   market_features: { population_2025: null, population_growth_2021_2025_pct: null },
@@ -170,8 +187,8 @@ assert.deepEqual(effectiveRelationships.map((item) => item.relationship_id), ["n
 const propertyContext = Intel.competitorPropertyContext(
   {place_id: "centre", latitude: 0, longitude: 0},
   [
-    {store_id: "inside", name: "Inside", retailer: "OPSM", place_id: "centre", latitude: 0.01, longitude: 0.01},
-    {store_id: "near", name: "Near", retailer: "OPSM", place_id: "", latitude: 0, longitude: 0.001},
+    {store_id: "inside", name: "Inside", retailer: "OPSM", place_id: "centre", latitude: 0.01, longitude: 0.01, eligible_for_analytics: true, eligible_for_place_analytics: true},
+    {store_id: "near", name: "Near", retailer: "OPSM", place_id: "", latitude: 0, longitude: 0.001, eligible_for_analytics: true},
   ]
 );
 assert.equal(propertyContext.by_retailer.OPSM.in_centre.length, 1);
@@ -218,6 +235,17 @@ assert.equal(defaultCompetition.radiusCounts[0].total, 1, "default store competi
 assert.equal(defaultCompetition.nearestByBrand[independentBrand].store.store_id, "stale-current");
 assert.deepEqual(defaultCompetition.distances.map((entry) => entry.store.store_id), ["stale-current"]);
 assert.deepEqual(defaultCompetition.sameCentre.map((store) => store.store_id), ["stale-current"]);
+const propertyStatusContext = Intel.competitorPropertyContext(
+  {place_id: "centre", latitude: 0, longitude: 0},
+  [...statusNeighbours,
+   {...staleCurrent, eligible_for_place_analytics: true},
+   {...staleCurrent, store_id: "unaccepted-place", eligible_for_place_analytics: false},
+   {...staleCurrent, store_id: "missing-point", latitude: null},
+   {...staleCurrent, store_id: "uncertified", eligible_for_analytics: undefined}]
+);
+assert.deepEqual(propertyStatusContext.by_retailer[independentBrand].in_centre.map(x => x.store_id), ["stale-current"]);
+assert.deepEqual(propertyStatusContext.by_retailer[independentBrand].nearby_unverified.map(x => x.store_id), ["unaccepted-place"]);
+assert.equal(propertyStatusContext.by_retailer[independentBrand].catchment_2km.length, 0);
 
 assert.equal(Intel.placeMatchesRetailerFilters(
   {retailers: ["OPSM", "Specsavers"]},
@@ -272,8 +300,8 @@ assert.ok(indexSource.includes('class="toolbar-overflow"'));
 assert.ok(indexSource.includes("<span>Site planning</span>"));
 assert.ok(indexSource.includes("<span>Map</span>"));
 assert.equal(indexSource.includes('data-view="centres"'), false);
-assert.ok(appSource.includes("Major retail brands"));
-assert.ok(appSource.includes("Other brands and banners"));
+assert.ok(appSource.includes("Major optical retail brands"));
+assert.ok(appSource.includes("Other optical brands and banners"));
 assert.ok(appSource.includes('id="networkControls"'));
 assert.ok(appSource.includes("independent-featured"));
 assert.equal(appSource.includes('id="serviceInput"'), false);
@@ -297,7 +325,7 @@ const explorationShare = Intel.sanitiseShareState({view:"centres", activeLayers:
 assert.deepEqual(explorationShare.layers, ["centres"]);
 assert.equal(explorationShare.filters.search, "applied");
 assert.equal(explorationShare.filters.audiology, "true");
-assert.equal(explorationShare.filters.status, "Active");
+assert.deepEqual(explorationShare.filters.status, ["Active"]);
 assert.equal(explorationShare.place_filters.state, "WA");
 assert.equal(explorationShare.drafts, undefined);
 

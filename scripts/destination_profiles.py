@@ -52,11 +52,11 @@ def compile_profiles(data, summaries):
         accepted=[]
         for m in memberships:
             if (m['place_id']==pid and m['review_status']=='Accepted'
-                    and certificates[m['store_id']]['eligible_for_place_analytics']=='true'):
+                    and certificates.get(m['store_id'], {}).get('eligible_for_place_analytics')=='true'):
                 accepted.append(store_summary(m['store_id']) | {'membership_evidence':{k:m[k] for k in ('evidence_basis','evidence_url','verified_at','mapping_confidence')}})
         nearby=[]
         for sid,r in stores.items():
-            if r['country']!=place['country'] or r['retailer']=='Bailey Nelson' or certificates[sid]['eligible_for_analytics']!='true':continue
+            if r['country']!=place['country'] or r['retailer']=='Bailey Nelson' or certificates.get(sid, {}).get('eligible_for_analytics')!='true':continue
             d=distance_km(place['latitude'],place['longitude'],r['latitude'],r['longitude'])
             if d<=5:nearby.append(store_summary(sid) | {'distance_km':d,'accepted_destination_member':any(x['store_id']==sid for x in accepted)})
         nearby.sort(key=lambda r:(r['distance_km'],r['store_id']))

@@ -1,0 +1,17 @@
+{
+ "status":"Preliminary research only; no new corrections applied from these observations",
+ "checked_at":"2026-10-27",
+ "method":"Retained census and source records, then standard web search/reader; no Firecrawl",
+ "cases":[
+  {"store_id":"independent-other-optical-osm-au-node-2678282621","finding":"Eyelines point is Burnie. Existing George and Matilda391 at1A41MountStreet; operator locator confirms address. Original OSM record and historical premises still need identity review before remap; proximity alone insufficient.","source":"https://georgeandmatilda.com.au/find-a-store/"},
+  {"store_id":"independent-other-optical-osm-au-node-2376749009","finding":"Optomeyes point near Sandy Bay; must establish branch identity/address. Optometry Australia2014 article says10Optomeyes joinedOPSM with branch consolidations; not proof of any specific modern outlet.","source":"https://www.optometry.org.au/workplace/optomeyes-joins-opsm/"},
+  {"store_id":"independent-other-optical-osm-au-node-3148788170","finding":"Optomeyes point near existing OPSMWynyard2288 at124GoldieStreet. Historical rebranding article is network-level only; exact branch evidence required before remapping.","source":"https://www.optometry.org.au/workplace/optomeyes-joins-opsm/"},
+  {"store_id":"independent-other-optical-osm-au-node-4066348933","finding":"Amca point inVIC; exact-name searches mainly return unrelated air-conditioning association. Original tags and retail scope must be inspected; no guessed address or deletion."},
+  {"store_id":"independent-other-optical-osm-au-node-11145701652","finding":"Care4eyes original44JacksonCourt; thirdparty listing42/44JacksonCtDoncasterEast3109. Primary business source not yet established; retain variant rather than guessing42versus44."},
+  {"store_id":"independent-other-optical-osm-au-node-5402564830","finding":"DreamEyes originalF13; officialSpringvaleShoppingCentre search listsLevel2F13. Fullreader502, needaccessible directory detail or corroboration and wholecentreaddress before repair.","source":"https://springvaleshoppingcentre.com.au/portfolio_category/optometrist/"},
+  {"store_id":"independent-other-optical-osm-au-way-537154052","finding":"EyeSociety original365; businessLinkedIn explicitly365SpringvaleRoadSpringvaleVIC3171 andeyesociety.com.au. Several independent directory addresses agree. Needoperatorwebsite check; no inferred status refresh.","source":"https://au.linkedin.com/company/eye-society"},
+  {"store_id":"independent-other-optical-reviewed-au-martins-eyecare-glenorchy","finding":"Owned homepage accessible, detailedaddresssection still to inspect; existing359MainRoad. CheckexistingGlenorchycorridor." ,"source":"https://www.martinseyecare.com.au/"},
+  {"store_id":"independent-other-optical-reviewed-nz-fitzroy-optometrists","finding":"Owned contact explicitly2BDarnellStFitzroyShoppingCentreNewPlymouth. Determinewhether namedtownshoppingarea ormanagedcentre before assigningtype; notsameasMelbourneFitzroy.","source":"https://www.fitzroyoptometrist.co.nz/contact-us/"},
+  {"store_id":"independent-other-optical-provision-17873","finding":"TotalEyecareSandyBay18MagnetCourt: primaryresearch not yet done."}
+ ]
+}

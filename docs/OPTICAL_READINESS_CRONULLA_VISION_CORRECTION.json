@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-30",
+  "status": "Verified in the five-example pilot; final broad setting is Shopping Centre under the approved pedestrian-mall grouping.",
+  "store_id": "independent-other-optical-reviewed-au-cronulla-vision",
+  "previous_override": [],
+  "previous_unresolved_review": [
+    {
+      "store_id": "independent-other-optical-reviewed-au-cronulla-vision",
+      "store_fingerprint": "1510ae266ca9ddf6158e81ade7b27f0cbefaff56a470f8bb3b3cf7bd4af47cde",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-04",
+      "evidence_url": "https://www.cronullavision.com.au/",
+      "reason": "Retained premises investigation; no new source verification is claimed. Current owned practice page gives1/34CronullaStreet and0295272112, with eye examinations, prescription eyewear and digital imaging; practice booking profile corroborates contacts and contact-lens fittings. The named map matches this premises. This is a newly discovered existing practice, not a newly opened store. Distinct address, phone and operator establish it separately from Shire Optometrists and the unresolved generic Eye care OSM feature at the southern end of Cronulla Street. Booking profile expands the building to34-36; retain the owned page34. No formal precinct membership inferred from the street or mall wording. Use the named business map approximate premises point, corroborated by written branch identity and address. Exact shop frontage is unverified. Formal centre or precinct membership remains unconfirmed; this does not exclude an otherwise eligible retailer from network analysis."
+    }
+  ],
+  "override": {
+    "store_id": "independent-other-optical-reviewed-au-cronulla-vision",
+    "location_setting": "High Street",
+    "canonical_name": "Cronulla Mall",
+    "place_type": "High Street Corridor",
+    "official_url": "https://www.cronullavision.com.au/",
+    "evidence_basis": "Official practice homepage explicitly states Cronulla Vision opened in Cronulla Mall in May 2004 and gives current contact address 1/34 Cronulla Street. Read together, these support membership in the existing Cronulla Mall street corridor. This is operator-supported membership, not a surveyed boundary or inferred centre tenancy. Rechecked 30 October 2026 after user identified overlooked text.",
+    "confidence": "High",
+    "source_date": "2026-10-30",
+    "owner": "",
+    "manager": "",
+    "place_official_url": "",
+    "canonical_place_id": "place-au-nsw-cronulla-mall"
+  },
+  "source": "https://www.cronullavision.com.au/",
+  "finding": "Earlier review overlooked explicit operator membership statement. Existing mall corridor reused; no new place or category.",
+  "verification": "docs/LOCATION_CLASSIFICATION_FIVE_EXAMPLE_PILOT.json"
+}

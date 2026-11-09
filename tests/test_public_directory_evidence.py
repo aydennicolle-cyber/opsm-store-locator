@@ -31,6 +31,27 @@ class PublicDirectoryEvidenceTests(unittest.TestCase):
         self.load();places=[dict(place_id=self.place['place_id'],name='Existing')];before=copy.deepcopy(places)
         with self.assertRaises(ValueError):evidence.add_places(places,self.data)
         self.assertEqual(places,before)
+    def test_explicit_store_reference_preserves_directory_identity(self):
+        definitions={self.place['place_id']:self.place}
+        before=copy.deepcopy(definitions)
+        store=dict(country='Australia',state='ACT')
+        override=dict(canonical_place_id=self.place['place_id'],location_setting='Shopping Centre',canonical_name='Tenant supplied label')
+        self.assertEqual(evidence.reviewed_reference(store,override,definitions),self.place['place_id'])
+        self.assertEqual(definitions,before)
+        self.assertIsNone(evidence.reviewed_reference(store,override|{'canonical_place_id':'unknown'},definitions))
+        for change in [dict(country='New Zealand'),dict(state='VIC')]:
+            with self.assertRaises(ValueError):evidence.reviewed_reference(store|change,override,definitions)
+        with self.assertRaises(ValueError):evidence.reviewed_reference(store,override|{'location_setting':'High Street'},definitions)
+    def test_additional_count_sample_supports_presence_without_adding_overlapping_totals(self):
+        capture=dict(place_id=self.place['place_id'],records=[],source_urls=['https://example.org/map'],source_total=None,directory_complete=False,format_scope='named street',scope='Fixed street segment',capture_method='Addressed records',limitations='Partial',absence_reviews=[],source_record_count=2,anonymous_record_count=2,anonymous_counts=dict(hospitality_venues=0,as_of='2026-10-01',additional_samples=[dict(hospitality_venues=2,observed_at='2026-10-18',source_urls=['https://example.org/map'])]))
+        self.payload['captures']=[capture];self.load()
+        base=dict(metadata={},features=[],places=[dict(place_id=self.place['place_id'],name='Example',format='High Street',features={},optical=[],observations=[])])
+        got=evidence.apply(base,self.data)['places'][0]
+        self.assertEqual(got['observations'],[])
+        self.assertEqual(got['anonymous_counts']['hospitality_venues'],0)
+        self.assertEqual(len(got['features']['category:food and dining']),1)
+        self.assertEqual(got['anonymous_counts']['evidence'][0]['count'],2)
+        self.assertEqual(got['anonymous_counts']['evidence'][0]['observed_at'],'2026-10-18')
     def test_real_export_has_no_commercial_fields_and_reconciles_anonymous_exclusions(self):
         data=Path(__file__).resolve().parents[1]/'data';x=evidence.load(data)
         for capture in x['captures']:

@@ -394,6 +394,11 @@ def link_stores_to_market(stores: list[dict], features: list[dict]) -> dict[str,
                 "queried_latitude": latitude,
                 "queried_longitude": longitude,
             }
+            if not unique:
+                links[store["store_id"]]["coverage_note"] = (
+                    "The authoritative ABS query did not establish one SA2 area for this point. "
+                    "Demographic assignment remains unresolved; no nearest-area substitution."
+                )
             continue
         match = None
         for bounds, feature in spatial:
@@ -440,7 +445,8 @@ def link_stores_to_market(stores: list[dict], features: list[dict]) -> dict[str,
 def build_centres(stores: list[dict]) -> list[dict]:
     grouped: dict[str, list[dict]] = defaultdict(list)
     for store in stores:
-        if store.get("venue_id") and current_competitor(store) and meaningful_address(store) and valid_store_point(store):
+        if (store.get("venue_id") and store.get("location_type") == "Shopping Centre"
+                and current_competitor(store) and meaningful_address(store) and valid_store_point(store)):
             grouped[store["venue_id"]].append(store)
     overrides = {row["venue_id"]: row for row in read_csv(PROFILE_CSV)}
     registry = {row["venue_id"]: row for row in read_csv(CENTRE_REGISTRY_CSV)}
@@ -544,6 +550,7 @@ def build_history(stores: list[dict]) -> dict:
         }
         for store in stores
     }
+    raw_current = current
     prior_paths = [path for path in sorted(HISTORY_DIR.glob("*.json")) if path != snapshot_path]
     health_path = DATA_DIR / "data_health.json"
     health = json.loads(health_path.read_text(encoding="utf-8")) if health_path.exists() else {}
@@ -566,6 +573,26 @@ def build_history(stores: list[dict]) -> dict:
     if prior_paths:
         prior_payload = json.loads(prior_paths[-1].read_text(encoding="utf-8"))
         prior = prior_payload["stores"]
+        remap_path = DATA_DIR / "store_identity_remaps.csv"
+        remaps = {}
+        if remap_path.exists():
+            with remap_path.open() as handle:
+                remaps = {r["source_store_id"]: r["canonical_store_id"] for r in csv.DictReader(handle)}
+        def canonical(store_id):
+            seen = set()
+            while store_id in remaps:
+                if store_id in seen:
+                    raise ValueError("Store identity remap cycle")
+                seen.add(store_id); store_id = remaps[store_id]
+            return store_id
+        def remapped(rows):
+            result = {}
+            for sid, row in sorted(rows.items(), key=lambda pair: pair[0] in remaps):
+                cid = canonical(sid)
+                result.setdefault(cid, {**row, "store_id": cid})
+            return result
+        prior = remapped(prior)
+        current = remapped(current)
         baseline_date = prior_payload["snapshot_date"]
         prior_scopes = {
             (store["retailer"], store.get("country", "Australia")) for store in prior.values()
@@ -582,12 +609,12 @@ def build_history(stores: list[dict]) -> dict:
                 discovery_records_added.append(store_id)
                 continue
             if (store["retailer"], store["country"]) in prior_scopes:
-                events.append({"type": "Opened", "date": snapshot_date, **store})
+                events.append({"type": "Record added", "classification": "detected_change", "date": snapshot_date, **store})
         for store_id in sorted(prior.keys() - current.keys()):
             store = prior[store_id]
             scope = (store["retailer"], store.get("country", "Australia"))
             if scope in current_scopes:
-                events.append({"type": "Closed", "date": snapshot_date, **store})
+                events.append({"type": "Record removed", "classification": "detected_change", "date": snapshot_date, **store})
         for store_id in sorted(current.keys() & prior.keys()):
             before = prior[store_id]
             after = current[store_id]
@@ -595,7 +622,7 @@ def build_history(stores: list[dict]) -> dict:
             if moved:
                 events.append(
                     {
-                        "type": "Relocated",
+                        "type": "Location record changed", "classification": "detected_change",
                         "date": snapshot_date,
                         **after,
                         "previous_address": before["full_address"],
@@ -603,7 +630,7 @@ def build_history(stores: list[dict]) -> dict:
                     }
                 )
     snapshot_path.write_text(
-        json.dumps({"snapshot_date": snapshot_date, "stores": current}, indent=2) + "\n",
+        json.dumps({"snapshot_date": snapshot_date, "stores": raw_current}, indent=2) + "\n",
         encoding="utf-8",
     )
     return {
@@ -619,7 +646,7 @@ def build_history(stores: list[dict]) -> dict:
             else (
                 "New retailer or country coverage was added as a baseline, not counted as store openings."
                 if coverage_baselines_added
-                else "Events compare the current network with the latest prior successful snapshot."
+                else "Database differences compare successful snapshots; they do not confirm openings, closures or relocations."
             )
         ),
     }

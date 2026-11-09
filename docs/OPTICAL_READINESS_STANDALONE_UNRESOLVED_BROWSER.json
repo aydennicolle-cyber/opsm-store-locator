@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-30",
+  "scope": "Representative standalone and unresolved user flows; bulk exclusions verified separately across full queue. Tested while unrelated Blenheim downstream rebuild was running; these records unchanged by that repair.",
+  "browser_checks": [
+    {
+      "store_id": "independent-other-optical-provision-16770",
+      "case": "AU standalone practice",
+      "observed": "RJK Optometry address 14 Arthur Street; Other, High mapping confidence, canonical place Not mapped, Usable network status. Last-known source warning and original capture date visible. Nearby OPSM and other stores remain nearby; no same-place competitors asserted."
+    },
+    {
+      "store_id": "opsm-1376",
+      "case": "AU unresolved place",
+      "observed": "OPSM Adelaide Rundle Mall retains 71 Rundle Mall; Uncertain and Not mapped, network Usable. Dated 27 October evidence explains operator 71 versus precinct 50 conflict and explicitly excludes place-specific analysis. Nearby stores are not assigned as same-place competitors."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-albany-optometrists",
+      "case": "NZ unresolved place",
+      "observed": "Albany Optometrists shows 44 Corinthian Drive, uncertainty and no canonical place, network Usable; original 12 September status/coordinate/membership evidence and Healthpoint approximate-point limitation visible. Nearby Westfield Albany shops are not assigned as members of this practice. NZ demographics unavailable without an Australian proxy."
+    }
+  ],
+  "actual_export": {
+    "path": "/Users/ayden/Downloads/optical-stores-filtered-2026-10-30.csv",
+    "sha256": "2d95c54b9331335b49838484ce7e5d05d0a1ef2b62024008822832bdf7e53b55",
+    "rows": 1,
+    "blank_canonical_place": true,
+    "uncertain_mapping": true,
+    "explicit_place_analysis_exclusion": true,
+    "original_mapping_date_preserved": true
+  }
+}

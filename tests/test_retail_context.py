@@ -39,9 +39,11 @@ class RetailContextTests(unittest.TestCase):
         ])
         self.assertEqual(set(metrics), {"centre-a"})
         self.assertEqual(metrics["centre-a"]["annual_visits"], 14_000_000)
-        self.assertEqual(metrics["centre-a"]["gla_sqm"], 83_000)
+        self.assertIsNone(metrics["centre-a"]["gla_sqm"])
+        self.assertIn('gla_sqm', metrics['centre-a']['metric_conflicts'])
+        self.assertEqual({r['value'] for r in metrics['centre-a']['metric_observations']['gla_sqm']}, {83000, 999999})
         self.assertEqual(metrics["centre-a"]["tenancy_count"], 307)
-        self.assertEqual(metrics["centre-a"]["metric_evidence"]["gla_sqm"]["portfolio_asset_id"], "source-a")
+        self.assertNotIn('gla_sqm', metrics['centre-a']['metric_evidence'])
         with self.assertRaises(ValueError):
             portfolio_metrics([dict(asset, gla_sqm="nan")])
 
@@ -58,10 +60,19 @@ class RetailContextTests(unittest.TestCase):
                 if not fields:
                     continue
                 checked.add(row["place_id"])
-                self.assertIsNotNone(row["components"]["accessibility_retail_context"], row["place_id"])
+                if any(summary[field] is not None for field in fields):
+                    self.assertIsNotNone(row["components"]["accessibility_retail_context"], row["place_id"])
+                else:
+                    self.assertIsNone(row["components"]["accessibility_retail_context"], row["place_id"])
                 for field in fields:
                     self.assertEqual(row["retail_context_metrics"][field], summary[field], (row["place_id"], field))
-                    self.assertEqual(row["retail_context_evidence"][field], summary["metric_evidence"][field])
+                    if summary[field] is None:
+                        self.assertIn(field, summary['metric_conflicts'])
+                        self.assertEqual(row['retail_context_conflicts'][field], summary['metric_conflicts'][field])
+                        self.assertNotIn(field, row['retail_context_evidence'])
+                    else:
+                        self.assertEqual(row["retail_context_evidence"][field], summary["metric_evidence"][field])
+                    self.assertEqual(row['retail_context_reports'][field], summary['metric_observations'][field])
         self.assertIn("place-au-nsw-westfield-liverpool", checked)
         self.assertIn("place-au-nsw-westfield-parramatta", checked)
 

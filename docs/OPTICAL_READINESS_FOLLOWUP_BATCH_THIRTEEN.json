@@ -1,0 +1,143 @@
+{
+  "status": "All nine stages passed; six generated unresolved outcomes verified. Browser/export check pending.",
+  "raw_store_sha256": "85eb8dacd717e2d68f7fe0c9d5f3f347b21b42804b75b708855321d8e3c34769",
+  "accepted": [],
+  "unresolved": [
+    {
+      "store_id": "independent-other-optical-provision-16904",
+      "store_fingerprint": "9a4137961a16e6822b0767767712a062e788670b1bdaf7f003b431a4f8aef582",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.stephendaly.com.au/contact/",
+      "reason": "The owned contact page confirms 21 The Strand, Penshurst and 02 9586 0011. ProVision independently gives the same street address. No accepted Penshurst/The Strand corridor or explicit named-property tenancy is established in the existing inventory. Village-like atmosphere is descriptive, not evidence of a defined precinct. Preserve the business address and point without assigning a boundary or a namesake Strand property."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-medispecs-picton",
+      "store_fingerprint": "eff50bdbb317bd82cc86d84dcdb3a437b6124fda1d40f19188c8d3264ae041d0",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.medispecspicton.com.au/",
+      "reason": "The owned site confirms 150-158 Argyle Street, Picton and body phone02 46772348. Shop3 remains supported by retained government/provider evidence; the malformed international-format website phone is not imported. There is no accepted Picton corridor in the inventory or explicit named-centre tenancy in the source. Argyle Street in Camden is a different locality. Preserve this practice independently and leave place membership unresolved."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-bigland-cowley-springwood",
+      "store_fingerprint": "2c9607bd7838a8e48613ef4fcc28b6a292333ab2f25c70457cbbb52ea463fe33",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://biglandcowleyoptometrists.com.au/contact-us/",
+      "reason": "The owned contact page confirms the Springwood NSW practice at1a Raymond Road with02 4751 1070; Katoomba is separately listed at2a Parke Street. Existing Springwood shopping places in this inventory are in Queensland, not this NSW practice. No accepted Raymond Road corridor or explicit named-centre tenancy established. Retain the existing approximate provider-derived point without claiming an exact entrance."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-eyemax-wallsend",
+      "store_fingerprint": "2ad05e9d017ff9c635d4c87b4715809d6347e85dae4899288009bc3e9a59bc1b",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.eyemaxeyecare.com.au/",
+      "reason": "The owned site still explicitly states temporary non-operation until further notice due to ongoing repairs and maintenance, at93 Nelson Street. Generic hours, booking and services do not establish reopening. Retain Temporarily Closed and exclusion from current network analysis. Existing Boscawen Street, Kokera Street and Wallsend Village records do not establish Nelson Street membership. No accepted Nelson Street corridor or explicit named-centre tenancy found."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-eyewise-darwin",
+      "store_fingerprint": "b960ceb98f1c1da01ccbcdfdb7bb9f819ec1e5888fa9dfe00f4de655bc03f44b",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://eyewise.com.au/",
+      "reason": "The owned page confirms4/20 Knuckey Street, Darwin and08 8981 0755. No Knuckey Street corridor exists in the accepted inventory; the page does not establish Galleria Darwin or Mitchell Centre tenancy. Preserve the approximate provider-derived map reference and address; do not map to Smith or Cavenagh Street solely from nearby context."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-fairmaid-chance-crawford-dunedin",
+      "store_fingerprint": "8afdad382e0716e1d8b49c9dab546fbf3d4b8c09d6a1bf09ee4dd5b905cade16",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.fccdunedin.health.nz/",
+      "reason": "The owned homepage confirms the Dunedin practice and optical services, but its retrieved text does not expose a street address; the attempted /contact page returns404. Retain235 Moray Place from the prior8October evidence without claiming a fresh address verification or relocation. No accepted Moray Place corridor or explicit Meridian Mall tenancy is established. George Street and King Edward Street are distinct accepted corridors. Preserve the original store and source dates; leave place membership unresolved."
+    }
+  ],
+  "research": "docs/OPTICAL_READINESS_FOLLOWUP_BATCH_THIRTEEN_RESEARCH.json",
+  "limits": "No address, point or trading-status changes. Fairmaid address not freshly reconfirmed; EyeMax temporary closure retained. Only accepted inventory checked for compatible place identities; no new precinct boundaries invented.",
+  "raw_store_sha256_after_envision": "a438244bb1fa1d78ca836db4aecb062eb82ffaabed511d01397185830ad63f8a",
+  "generated_verification": [
+    {
+      "store_id": "independent-other-optical-provision-16904",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "place_excluded": true,
+        "network_preserved": true,
+        "explanation": true,
+        "evidence_link": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-medispecs-picton",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "place_excluded": true,
+        "network_preserved": true,
+        "explanation": true,
+        "evidence_link": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-bigland-cowley-springwood",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "place_excluded": true,
+        "network_preserved": true,
+        "explanation": true,
+        "evidence_link": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-eyemax-wallsend",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "place_excluded": true,
+        "network_preserved": true,
+        "explanation": true,
+        "evidence_link": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-eyewise-darwin",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "place_excluded": true,
+        "network_preserved": true,
+        "explanation": true,
+        "evidence_link": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-fairmaid-chance-crawford-dunedin",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "place_excluded": true,
+        "network_preserved": true,
+        "explanation": true,
+        "evidence_link": true
+      }
+    }
+  ],
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  }
+}

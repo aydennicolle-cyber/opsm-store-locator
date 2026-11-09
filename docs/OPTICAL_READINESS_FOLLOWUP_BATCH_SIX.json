@@ -1,0 +1,154 @@
+{
+  "status": "All nine validation stages passed; four generated outcomes verified. Browser and export verification remains pending.",
+  "checked_at": "2026-10-27",
+  "raw_store_sha256": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "accepted": [
+    {
+      "store_id": "independent-other-optical-osm-ne-node-12611705756",
+      "location_setting": "High Street",
+      "canonical_name": "Gladstone Road",
+      "place_type": "High Street Corridor",
+      "official_url": "https://www.gisborneoptometrists.co.nz/contact",
+      "evidence_basis": "Operator contact and team pages explicitly confirm211GladstoneRoad,Gisborne4010 and block-by-the-clock street context. Accept existing Gisborne street-and-locality corridor containing independently evidenced127-131 and260GladstoneRoad premises. Operator directions point agrees with retained OSM business point within approximately4m. Preserve raw identity and point; no surveyed boundary or unrelated Australian Gladstone Road membership claimed.",
+      "confidence": "Medium",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "corridor-nz-gisborne-gisborne-gladstone-road"
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-shattky-hastings",
+      "location_setting": "Other",
+      "canonical_name": "CML Building",
+      "place_type": "Other",
+      "official_url": "https://www.shattky.co.nz/",
+      "evidence_basis": "Current operator homepage explicitly gives116RussellStreetSouth,Hastings. Hastings council heritage report identifies CML Building at116-120RussellStreetSouth and explicitly names Shattky Donaldson and Eagle, now Visique Shattky on Russell, among its tenants. The report was updated September2015: use it for enduring building identity and historical association, corroborated by the present operator address, not current ownership or a complete tenant list. Accept named commercial building as Other; no automatic membership of the broader historic area or Central Character Precinct.",
+      "confidence": "Medium",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "place-nz-hawkes-bay-hastings-cml-building"
+    }
+  ],
+  "unresolved": [
+    {
+      "store_id": "independent-other-optical-reviewed-nz-canon-street-optometrists",
+      "store_fingerprint": "7362e77bd46b5b7766786590f633c43a9cfddf64ef2f4d4958fa5bd7196f273d",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://canonstreetoptometrists.co.nz/contact/",
+      "reason": "Operator contact page retrieved27October2026 confirms26CanonStreetTimaru7910 and036889791. Focused centre research yielded no explicit named-property membership and no accepted Canon Street corridor exists in current inventory. Preserve supported premises and original point; retain unresolved canonical study membership instead of inferring nearby retail-district inclusion."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-terrace-optometrist-timaru",
+      "store_fingerprint": "690e3bcd9d69963c4c1d627d1d8f2863ecef42ee566b14fd82f8b47fd94230ce",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.theterraceoptometrist.co.nz/",
+      "reason": "Operator page retrieved27October2026 confirms21cTheTerraceTimaru7910 and describes a purpose-built downstairs optometry practice with an upstairs residence at21TheTerrace. This supports premises context, not a named shopping centre or defined study district. Retain unitC and original point. Existing The Terrace corridors in Wellington and NorthIpswich are unrelated and must not be reused; canonical membership remains unresolved."
+    }
+  ],
+  "place_override": {
+    "place_id": "place-nz-hawkes-bay-hastings-cml-building",
+    "canonical_name": "CML Building",
+    "aliases": "Colonial Mutual Life Assurance Building|Shattky Donaldson and Eagle Building",
+    "official_url": "",
+    "evidence_url": "https://www.hastingsdc.govt.nz/assets/Document-Library/Heritage-Inventory-docs/Group-1-buildings/4.-cml-building-update-2015.pdf",
+    "verified_at": "2026-10-27",
+    "reason": "Council heritage inventory number4/property21416 identifies building and former names; current operator confirms same116RussellStreetSouth premises. Historical report is not current ownership or tenant-list proof.",
+    "state": "Hawke's Bay",
+    "locality": "Hastings",
+    "postcode": "",
+    "address": "116-120 Russell Street South",
+    "location_setting": "Other",
+    "address_source_date": "",
+    "address_evidence_url": "https://www.hastingsdc.govt.nz/assets/Document-Library/Heritage-Inventory-docs/Group-1-buildings/4.-cml-building-update-2015.pdf",
+    "address_checked_at": "2026-10-27",
+    "address_basis": "Whole-building address explicitly given by Hastings council heritage report updated September2015. Exact publication day not supplied, so source_date remains blank rather than invented. Review date records retrieval only. Tenant number116 remains separate from whole-building116-120 range."
+  },
+  "point_override": {
+    "place_id": "place-nz-hawkes-bay-hastings-cml-building",
+    "latitude": "-39.6428458",
+    "longitude": "176.8427425",
+    "evidence_url": "https://www.shattky.co.nz/",
+    "verified_at": "2026-10-27",
+    "confidence": "Low",
+    "method": "Accepted tenant reference",
+    "reference_store_id": "independent-other-optical-reviewed-nz-shattky-hastings",
+    "reason": "Approximate display reference inherited unchanged from accepted Shattky practice point. Not a surveyed building centroid, footprint or entrance."
+  },
+  "sources": [
+    "https://www.hastingsdc.govt.nz/assets/Document-Library/Heritage-Inventory-docs/Group-1-buildings/4.-cml-building-update-2015.pdf",
+    "https://www.gisborneoptometrists.co.nz/team"
+  ],
+  "limits": "Historical council report date retained explicitly. No current ownership, complete directory, surveyed boundaries or fresh whole-network trading guarantee claimed.",
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": [
+    {
+      "store_id": "independent-other-optical-osm-ne-node-12611705756",
+      "checks": {
+        "accepted_place": true,
+        "place_eligible": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-shattky-hastings",
+      "checks": {
+        "accepted_place": true,
+        "place_eligible": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-canon-street-optometrists",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-terrace-optometrist-timaru",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    }
+  ],
+  "property_verification": {
+    "retail_places.json": {
+      "single_identity": true,
+      "address": true,
+      "point": true,
+      "reference_method": true,
+      "publication_day_not_invented": true,
+      "historical_date_visible": true
+    },
+    "retail_environments.json": {
+      "single_identity": true,
+      "address": true,
+      "point": true,
+      "reference_method": true,
+      "publication_day_not_invented": true,
+      "historical_date_visible": true
+    }
+  }
+}

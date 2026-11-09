@@ -1,0 +1,168 @@
+{
+  "checked_at": "2026-10-26",
+  "source_url": "https://www.oakley.com/en-au/store-finder",
+  "status": "AU held outlets reconciled; NZ latest refresh unavailable with dated last-known evidence retained. User-facing source limitation verification remains.",
+  "observations": [
+    {
+      "held_id": "C250",
+      "branch": "Sydney George Street",
+      "method": "Rendered official locator search Sydney; Oakley Store and Outlet filters,50km; opened Store details",
+      "address": "393 George St, Sydney",
+      "phone": "+61 2 9299 0908",
+      "directions_coordinates": [
+        -33.8696596,
+        151.2068197
+      ],
+      "source_object_id": "6a2c24a3bc929c0a23fb1fb4",
+      "limitation": "Name/address/phone displayed; point is operator directions destination, not independently surveyed. Country roster not established."
+    },
+    {
+      "held_id": "C289",
+      "query": "Robina",
+      "address": "167-191 Robina Town Centre Dr, Tenancy 4280, Robina Town Centre, Robina",
+      "phone": "+61 7 5677 0921",
+      "directions_coordinates": [
+        -28.0777609,
+        153.3855893
+      ],
+      "method": "Rendered live official locator; Store and Outlet checked, 50km; one matching result.",
+      "comparison": "Address, phone and operator point match held raw snapshot. Preserve reviewed canonical corrections."
+    },
+    {
+      "held_id": "C252",
+      "query": "Manly",
+      "address": "94, The Corso, Manly",
+      "phone": "+61 2 9976 3522",
+      "directions_coordinates": [
+        -33.797652,
+        151.287747
+      ],
+      "method": "Rendered live official locator; Store and Outlet checked, 50km; one matching result.",
+      "comparison": "Address, phone and operator point match held raw snapshot. Preserve reviewed canonical corrections."
+    },
+    {
+      "held_id": "C290",
+      "query": "Mascot",
+      "address": "Sydney Domestic Airport, Shop 2b 208 Pier B, T2 Depart. Airside, Mascot",
+      "phone": "+61 2 9133 1974",
+      "directions_coordinates": [
+        -33.9368097,
+        151.1691395
+      ],
+      "method": "Rendered live official locator; Store and Outlet checked, 50km; one matching result.",
+      "comparison": "Address, phone and operator point match held raw snapshot. Preserve reviewed canonical corrections."
+    },
+    {
+      "held_id": "C288",
+      "query": "Cannington",
+      "address": "1382 Albany Hwy, Shop 1144 Westfield Carousel, Cannington",
+      "phone": "+61 8 6149 5474",
+      "directions_coordinates": [
+        -32.01949630000001,
+        115.9382998
+      ],
+      "method": "Rendered live official locator; Store and Outlet checked, 50km; one matching result.",
+      "comparison": "Address, phone and operator point match held raw snapshot. Preserve reviewed canonical corrections."
+    },
+    {
+      "held_id": "C266",
+      "query": "Broadbeach",
+      "address": "2 Hooker Blvd, Shop 1547 Pacific Fair Shopping Center, Broadbeach",
+      "phone": "+61 7 5538 4147",
+      "directions_coordinates": [
+        -28.037206,
+        153.4271005
+      ],
+      "method": "Rendered live official locator; Store and Outlet checked, 50km; one matching result.",
+      "comparison": "Address, phone and operator point match held raw snapshot. Preserve reviewed canonical corrections."
+    },
+    {
+      "held_id": "C262",
+      "query": "Carindale",
+      "address": "Shop 2218, Westfield Carindale, 1151 Creek Rd, Carindale",
+      "phone": "+61 7 3843 6375",
+      "directions_coordinates": [
+        -27.5031792,
+        153.1024823
+      ],
+      "method": "Rendered live official locator; Store and Outlet checked, 50km; one matching result.",
+      "comparison": "Address, phone and operator point match held raw snapshot. Preserve reviewed canonical corrections."
+    },
+    {
+      "held_id": "C246",
+      "query": "Chadstone",
+      "address": "1341 Dandenong Road, Shop B321, Chadstone Shopping Centre, Chadstone",
+      "phone": "+61 3 9564 8155",
+      "directions_coordinates": [
+        -37.8852828,
+        145.0828813
+      ],
+      "method": "Rendered live official locator; Store and Outlet checked, 50km; one matching result.",
+      "comparison": "Address, phone and operator point match held raw snapshot. Preserve reviewed canonical corrections."
+    },
+    {
+      "held_id": "C245",
+      "query": "Torquay",
+      "address": "Surf City Plaza, Shop 7, Torquay",
+      "phone": "+61 3 5261 5633",
+      "directions_coordinates": [
+        -38.3268839,
+        144.3166208
+      ],
+      "method": "Rendered live official locator; Store and Outlet checked, 50km; one matching result.",
+      "comparison": "Address, phone and operator point match held raw snapshot. Preserve reviewed canonical corrections."
+    },
+    {
+      "held_id": "dfo-jindalee",
+      "source_url": "https://dfojindalee.com.au/project/oakley-vault/",
+      "method": "Official centre tenant page read via indexed copy crawled last week",
+      "address": "T13, DFO Jindalee,16 Amazons Place,Jindalee4074",
+      "phone": "0733764904",
+      "comparison": "Centre tenant page continues to list Oakley at T13 with matching phone and property address. Retain existing store despite locator omission. Map point not reverified."
+    }
+  ],
+  "access_limitations": [
+    "Initial navigation to storeId deep link does not open detail automatically; use locator search.",
+    "Australian locator Queenstown search suggests Australian places, returns no match and unrelated Suggested locations nearby despite Store/Outlet filters. This is not evidence of NZ store closure or absent roster.",
+    "2022 official RESUBZERO PDF is historical only; not current verification.",
+    "Jindalee search with Store/Outlet filters returns no match; held outlet independently sourced from DFO directory, which requires separate check. No closure inferred."
+  ],
+  "additional_evidence": [
+    {
+      "url": "https://heartofthecity.co.nz/auckland-shopping/fashion/oakley",
+      "finding": "District directory lists99QueenStreet,093584100; page states last updated08December2025. Corroborates held premises but not newly verified trading."
+    }
+  ],
+  "canonical_changes": [],
+  "airport_exception": "C290 remains incorrectly labelled Green Hills at Sydney Domestic Airport and points near T1. Existing canonical T2 identity and airport-directory point retained; do not copy known raw source error back.",
+  "au_outcome": "All ten held AU outlets checked: nine via rendered operator locator and Jindalee via centre directory. No new premises or phone changes found. Preserve known airport label/point correction, original source dates and incomplete national coverage warning. NZ checks remain.",
+  "nz_outcome": {
+    "disposition": "Latest refresh unavailable; retain dated last-known records",
+    "held_source_capture": "2026-10-20T23:13:47.000998+00:00",
+    "attempts": [
+      "AU locator search Queenstown returned Australian suggestions and unrelated fallback stores.",
+      "NZ locator https://www.oakley.com/en-nz/store-finder returned HTTP403 in browser and failed web retrieval.",
+      "Official 2022 PDF is historical only; not used as current verification."
+    ],
+    "records": [
+      {
+        "held_id": "C271",
+        "address": "99 Queen St, Auckland, AKL, 1010",
+        "phone": "+64 9 358 4100",
+        "corroboration": "Heart of the City district directory lists same premises and phone, with publication update08December2025. No new trading verification."
+      },
+      {
+        "held_id": "C273",
+        "address": "1/22-24 Beach St, Queenstown, OTA, 9300",
+        "phone": "+64 3 409 2097",
+        "corroboration": "Search produced secondary directories matching premises and phone but no fresh accessible primary branch source. Retain20October operator capture without advancing verification date."
+      }
+    ],
+    "user_facing_verification_pending": "Check profile/source coverage wording and exports communicate last-known capture and partial coverage before final readiness acceptance.",
+    "browser_observation_2026_10_27": {
+      "observed": "Declared sources panel shows Oakley NZ as partial with21Oct2026 retained snapshot date, but does not explain the failed26Oct refresh.",
+      "action_required": "Display explicit source-specific refresh limitation without advancing original capture/status dates.",
+      "verified_after_change": "Rendered coverage panel now displays full failed26Octoberrefresh explanation, retains21October snapshot date and partial label. Captured27October2026; no new external source check."
+    }
+  }
+}

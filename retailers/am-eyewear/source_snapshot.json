@@ -1,0 +1,55 @@
+{
+  "fetched_at": "2026-10-20T22:11:00.322695+00:00",
+  "source_urls": [
+    "https://ameyewear.com/pages/landing-page"
+  ],
+  "scope": "Verified Australian outlets only; not a complete AU/NZ census",
+  "captured_count": 1,
+  "page_sha256": "fd4966d9dcc17c35cdff4d2b9ad2a970cd44551fe67803f2cd714559799abe5a",
+  "stores": [
+    {
+      "@id": "https://ameyewear.com/#shop-darlinghurst",
+      "name": "AM Eyewear – Sydney Shop",
+      "telephone": "+61 2 9357 4550",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop 3, 191-193 William St",
+        "addressLocality": "Darlinghurst",
+        "addressRegion": "NSW",
+        "postalCode": "2010",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8750801562156,
+        "longitude": 151.22029113628585
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "10:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "17:00"
+        }
+      ]
+    }
+  ],
+  "supplementary_evidence": [
+    {
+      "source_url": "https://ameyewear.com/pages/landing-page",
+      "facts": "Official flagship FAQ explicitly says no in-store eye tests or optometry. Official structured data provides address, premises coordinates and trading hours."
+    }
+  ]
+}

@@ -48,5 +48,14 @@ class DirectoryOverlayTests(unittest.TestCase):
             capture['records'][0].update(change)
             with self.assertRaises(ValueError): apply_captures(self.public, [capture])
 
+    def test_explicit_publisher_brand_is_searchable_without_adding_another_listing(self):
+        self.capture['records'][0]['source_brand'] = 'Documented fascia'
+        result = apply_captures(self.public, [self.capture])['places'][0]
+        self.assertEqual(result['features']['brand:documented fascia'], ['1'])
+        self.assertEqual(result['features']['brand:alpha'], ['1', '2'])
+        self.assertEqual(len(result['observations']), 3)
+        self.assertFalse(result['coverage']['trading_verified'])
+        self.assertNotIn('operator:documented fascia', result['features'])
+
 
 if __name__ == '__main__': unittest.main()

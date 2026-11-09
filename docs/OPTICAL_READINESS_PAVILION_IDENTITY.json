@@ -1,0 +1,126 @@
+{
+  "status": "All nine validation stages and generated property/profile/membership checks passed. Browser/export verification remains pending.",
+  "raw_store_sha256": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "accepted": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-13670708403",
+      "location_setting": "Other",
+      "canonical_name": "The Pavilion",
+      "place_type": "Other",
+      "official_url": "https://www.jjoptical.com.au/contact/",
+      "evidence_basis": "Operator contact page retrieved 27 October 2026 explicitly identifies The Pavilion building at 1A/17 Mitchell Drive, across the road from Stockland Green Hills. Independent tenant EM Accounting identifies the same complex at Unit 7/17 Mitchell Drive. Accept the named commercial property separately from Green Hills, based on explicit tenant statements. No complete tenant list, current ownership, precise entrance or boundary is established.",
+      "confidence": "High",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "place-au-nsw-east-maitland-the-pavilion"
+    }
+  ],
+  "unresolved": [],
+  "property_override": {
+    "place_id": "place-au-nsw-east-maitland-the-pavilion",
+    "canonical_name": "The Pavilion",
+    "aliases": "The Pavilion East Maitland|Pavillion Building",
+    "official_url": "",
+    "evidence_url": "https://www.jjoptical.com.au/contact/",
+    "verified_at": "2026-10-27",
+    "reason": "Named commercial building explicitly identified by two tenants; separate from Stockland Green Hills. Classified Other without asserting a conventional shopping-centre category or complete tenant list.",
+    "state": "NSW",
+    "locality": "East Maitland",
+    "postcode": "2323",
+    "address": "17 Mitchell Drive",
+    "location_setting": "Other",
+    "address_source_date": "",
+    "address_evidence_url": "https://emaccounting.com.au/contact-em-accounting/",
+    "address_checked_at": "2026-10-27",
+    "address_basis": "J & J Optical unit1A and EM Accounting unit7 independently publish the same building name and street number17. Retain units on individual business addresses, not the whole-property address. Exact publication date of the corroborating address page unknown; retrieval is not source publication. No property boundary or entrance established."
+  },
+  "coordinate_override": {
+    "place_id": "place-au-nsw-east-maitland-the-pavilion",
+    "latitude": "-32.7613793",
+    "longitude": "151.5900137",
+    "evidence_url": "https://www.jjoptical.com.au/contact/",
+    "verified_at": "2026-10-27",
+    "confidence": "Low",
+    "method": "Accepted tenant reference",
+    "reference_store_id": "independent-other-optical-osm-au-node-13670708403",
+    "reason": "Approximate property display reference inherited unchanged from the accepted J & J Optical business point. It is not a surveyed building centroid, boundary or entrance. Explicit tenant evidence establishes membership independently of this point."
+  },
+  "research": {
+    "operator_contact": "https://www.jjoptical.com.au/contact/",
+    "independent_tenant": "https://emaccounting.com.au/contact-em-accounting/",
+    "operator_address": "1A/17 Mitchell Drive East Maitland NSW2323",
+    "independent_address": "Unit7/17 Mitchell Drive East Maitland2323",
+    "operator_page_modified_metadata": "2026-04-15",
+    "checked_at": "2026-10-27",
+    "identity_search": "No existing accepted place or environment matched Pavilion/17Mitchell with EastMaitland/GreenHills. No new owner or complete tenancy claims."
+  },
+  "prior_validation_failure": {
+    "results": {
+      "retail_places": 0,
+      "recognition": 0,
+      "property_intelligence": 0,
+      "data_health": 0,
+      "readiness_register": 0,
+      "tests": 1
+    },
+    "test": "test_memberships_never_use_proximity_as_tenancy_evidence",
+    "reason": "Negated phrase not by proximity matched broad forbidden-word check. Clarified affirmative tenant evidence; no production or test rule changed."
+  },
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": {
+    "accepted_property": true,
+    "network_eligible": true,
+    "place_eligible": true,
+    "unit_preserved": true,
+    "explicit_evidence": true,
+    "retail_places_address": true,
+    "retail_places_address_evidence": true,
+    "retail_places_point_note": true,
+    "low_point_confidence": true,
+    "retail_environments_address": true,
+    "retail_environments_address_evidence": true,
+    "retail_environments_point_note": true
+  },
+  "browser_verification": {
+    "checked_at": "2026-10-27",
+    "search": "The Pavilion returns one East Maitland Other property; selection recentres map.",
+    "profile": "17 Mitchell Drive; address source and unknown publication date; Low accepted-tenant reference visibly described.",
+    "competition": "One J & J accepted member; six Green Hills retailers separately shown nearby, not members.",
+    "summary_export": "/Users/ayden/Downloads/bailey-place-summary-2026-10-27 (3).csv",
+    "summary_fields_verified": [
+      "place_id",
+      "address",
+      "address_evidence",
+      "coordinate_method",
+      "coordinate_confidence",
+      "coordinate_reason",
+      "exact_place_optical_tenant_count=1"
+    ],
+    "tenant_export": "/Users/ayden/Downloads/bailey-place-tenants-2026-10-27.csv",
+    "tenant_export_sha256": "8ea0ad71cc52812a56590b6225bbe6cc6482ee2d2c878319a3c4819eb77afd78",
+    "tenant_rows": 1,
+    "fix": "Tenant export previously empty because accepted optical records were limited to older co-tenancy cohort. Current UI helper derives optical tenants from both certification eligibility flags plus exact place ID, preserving non-optical research separately. Regression and all eight JavaScript suites pass; actual Tenant CSV verified.",
+    "tenant_export_javascript_checks": {
+      "test_environment_metrics.js": 0,
+      "test_environments.js": 0,
+      "test_excluded_context.js": 0,
+      "test_intelligence.js": 0,
+      "test_location_news.js": 0,
+      "test_map_markers.js": 0,
+      "test_overview.js": 0,
+      "test_store_services.js": 0
+    }
+  }
+}

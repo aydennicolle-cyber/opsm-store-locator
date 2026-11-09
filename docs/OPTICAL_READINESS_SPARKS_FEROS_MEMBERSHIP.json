@@ -1,0 +1,122 @@
+{
+  "checked_at": "2026-10-27",
+  "status": "Retail-place rebuild verified accepted canonical membership; downstream chain and browser/export verification pending.",
+  "before_store": {
+    "retailer": "Independent / Other optical",
+    "store_id": "independent-other-optical-provision-16855",
+    "affiliations": "provision",
+    "name": "Sparks & Feros Optometrists",
+    "status": "Active",
+    "country": "Australia",
+    "state": "NSW",
+    "suburb": "Carlingford",
+    "postcode": "2118",
+    "full_address": "Shop 111B, Ground Floor, Carlingford Court, Carlingford, New South Wales, 2118",
+    "phone": "",
+    "latitude": "-33.776985",
+    "longitude": "151.052345",
+    "official_url": "https://www.provision.com.au/practice/sparks-feros-optometrists/",
+    "website_url": "",
+    "instagram_url": "",
+    "facebook_url": "",
+    "directory_url": "https://www.provision.com.au/practice/sparks-feros-optometrists/",
+    "services": "",
+    "audiology": "false",
+    "venue_name": "",
+    "venue_id": "",
+    "location_type": "Unclassified",
+    "classification_confidence": "Low",
+    "classification_basis": "Insufficient official venue or street evidence",
+    "store_area_sqm": "",
+    "area_measure": "",
+    "area_source": "",
+    "area_date": "",
+    "area_confidence": "Unknown",
+    "source_url": "https://www.provision.com.au/search-results/",
+    "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+    "business_type": "",
+    "identity_reviewed": "",
+    "coordinates_reviewed": "",
+    "status_evidence_url": "",
+    "status_verified_at": "",
+    "status_reason": "",
+    "coordinate_confidence": "",
+    "coordinate_evidence_url": "",
+    "coordinates_verified_at": "",
+    "coordinate_reason": "",
+    "public_facts_verified_at": "",
+    "public_facts_evidence_url": "",
+    "public_facts_reason": ""
+  },
+  "before_membership": {
+    "store_id": "independent-other-optical-provision-16855",
+    "retailer": "Independent / Other optical",
+    "country": "Australia",
+    "state": "NSW",
+    "store_name": "Sparks & Feros Optometrists",
+    "place_id": "",
+    "place_name": "",
+    "location_setting": "Uncertain",
+    "mapping_confidence": "Uncertain",
+    "evidence_basis": "Location setting needs consultant review",
+    "evidence_url": "https://www.provision.com.au/practice/sparks-feros-optometrists/",
+    "verified_at": "2026-09-02",
+    "previous_venue_id": "",
+    "review_status": "Needs review",
+    "usable_for_network": "true",
+    "trading_status": "Active"
+  },
+  "store_csv_sha256": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "evidence": [
+    {
+      "url": "https://www.provision.com.au/practice/sparks-feros-optometrists/",
+      "method": "Full page retrieved via web reader; reported crawl last month, publication date unstated.",
+      "finding": "Practice identity, optical services, phone0298721555 and Shop111B GroundFloor CarlingfordCourt explicitly published."
+    },
+    {
+      "url": "https://home-co.com.au/carlingford-court/sparks-feros-optometrists/",
+      "method": "Official page search-index content retrieved; crawl last week; direct web-reader open cache miss.",
+      "finding": "Same practice/phone, explicitly HomeCo CarlingfordCourt, unitT113. Unit conflict preserved."
+    }
+  ],
+  "proposed_override": {
+    "store_id": "independent-other-optical-provision-16855",
+    "location_setting": "Shopping Centre",
+    "canonical_name": "Carlingford Court",
+    "place_type": "Shopping Centre",
+    "official_url": "https://www.provision.com.au/practice/sparks-feros-optometrists/",
+    "evidence_basis": "ProVision practice page explicitly identifies Sparks & Feros at Carlingford Court. HomeCo indexed official tenant page independently names the practice and matching phone. Centre membership is supported by written evidence, not proximity. ProVision gives Shop111B while HomeCo gives T113; unit discrepancy remains unresolved. Preserve the original address and point; neither exact frontage nor a relocation is established.",
+    "confidence": "High",
+    "source_date": "2026-10-27",
+    "owner": "",
+    "manager": "",
+    "place_official_url": "",
+    "canonical_place_id": "place-au-nsw-carlingford-court"
+  },
+  "preserve": [
+    "original store ID and raw source identifier",
+    "address and pin",
+    "source fetched_at",
+    "trading status",
+    "existing canonical place ID"
+  ],
+  "verification_required": [
+    "accepted mapping to existing CarlingfordCourt",
+    "existing Modernspecs and Specsavers memberships preserved",
+    "store CSV byte-identical",
+    "unit discrepancy visible in membership evidence",
+    "profile and export checks"
+  ],
+  "generated_place_verification": {
+    "checked_at": "2026-10-27",
+    "checks": {
+      "accepted_existing_place": true,
+      "modernspecs_retained": true,
+      "specsavers_retained": true,
+      "raw_store_csv_unchanged": true,
+      "unit_discrepancy_in_evidence": true
+    },
+    "optical_store_count": 3,
+    "limitations": "Property intelligence, health, browser and exports not yet verified for this change."
+  }
+}

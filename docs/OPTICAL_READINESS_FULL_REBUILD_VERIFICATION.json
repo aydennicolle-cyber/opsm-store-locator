@@ -1,0 +1,210 @@
+{
+  "checked_at": "2026-10-27",
+  "status": "Full rebuild chain passed, targeted freshness correction passed 425 tests/privacy/package. Subsequent final address correction now undergoing separate dependent validation.",
+  "results": {
+    "network": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/build_optical_network.py"
+      ]
+    },
+    "recognition": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/audit_centre_recognition.py"
+      ]
+    },
+    "market": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/build_market_intelligence.py",
+        "--reuse-market-data"
+      ]
+    },
+    "retail_places": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/build_retail_places.py"
+      ]
+    },
+    "property_intelligence": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/build_property_intelligence.py"
+      ]
+    },
+    "data_health": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/build_data_health.py"
+      ]
+    },
+    "readiness_register": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/build_readiness_register.py"
+      ]
+    },
+    "python-tests": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ]
+    },
+    "test_environment_metrics": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_environment_metrics.js"
+      ]
+    },
+    "test_environments": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_environments.js"
+      ]
+    },
+    "test_excluded_context": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_excluded_context.js"
+      ]
+    },
+    "test_intelligence": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_intelligence.js"
+      ]
+    },
+    "test_location_news": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_location_news.js"
+      ]
+    },
+    "test_map_markers": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_map_markers.js"
+      ]
+    },
+    "test_overview": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_overview.js"
+      ]
+    },
+    "test_store_services": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_store_services.js"
+      ]
+    },
+    "privacy": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/scan_public_privacy.py"
+      ]
+    },
+    "diff": {
+      "exit_code": 0,
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ]
+    },
+    "package": {
+      "exit_code": 0,
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/package_public_site.py",
+        "--output",
+        "/tmp/optical-full-readiness-20261027/site"
+      ]
+    }
+  },
+  "comparison_paths": {
+    "data/sa2_market.geojson": [
+      "/metadata/generated_at"
+    ],
+    "data/centres.json": [
+      "/metadata/generated_at"
+    ],
+    "data/destination_profiles.json": [
+      "/metadata/input_sha256/retail_places.json",
+      "/metadata/input_sha256/sa2_market.geojson"
+    ],
+    "data/lookalike_places.json": [
+      "/metadata/generated_at"
+    ],
+    "data/place_tenants.json": [
+      "/metadata/generated_at"
+    ],
+    "data/data_health.json": [
+      "/sources/26/last_success",
+      "/generated_at"
+    ],
+    "data/retail_places.json": [
+      "/metadata/generated_at"
+    ],
+    "data/property_intelligence.json": [
+      "/generated_at"
+    ],
+    "data/growth_development_signals.json": [
+      "/metadata/generated_at"
+    ],
+    "data/discovery/retail_place_identity_leads.json": [
+      "/generated_at"
+    ]
+  },
+  "findings": [
+    "All original retailer snapshots, store records, memberships, remaps and saved market-point evidence remained byte-identical.",
+    "Derived JSON changes limited to generation timestamps and dependent hashes, except property-portfolios source freshness incorrectly used build timestamp.",
+    "That freshness issue is now corrected in source_results and two regression tests pass; dependent validation is running."
+  ],
+  "remaining": [
+    "Finish dependent validation and verify property source timestamp is unknown while individual evidence dates remain preserved.",
+    "Resolve two final address exceptions recorded in OPTICAL_READINESS_FINAL_ADDRESS_EXCEPTIONS.json.",
+    "Connect already-investigated remaining address outcomes to repair-register dispositions.",
+    "Complete adjacent-centre review presentation and remaining AU/NZ workflow/alias checks.",
+    "Finish goal-wide completion audit and readiness report; no publication."
+  ],
+  "property_freshness_verification": {
+    "checked_at": "2026-10-27",
+    "aggregate_last_success": null,
+    "aggregate_fresh": false,
+    "partial_coverage_preserved": true,
+    "all_property_content_except_build_timestamp_unchanged": true,
+    "regression_tests": 2
+  },
+  "freshness_fix_validation": {
+    "data_health": 0,
+    "register": 0,
+    "tests": 0,
+    "privacy": 0,
+    "diff": 0,
+    "package": 0
+  }
+}

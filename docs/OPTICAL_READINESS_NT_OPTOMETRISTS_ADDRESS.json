@@ -1,0 +1,218 @@
+{
+  "status": "All nine stages passed on latest rerun43674; generated data, browser profile, Summary CSV and Tenant CSV verified.",
+  "store_id": "independent-other-optical-osm-au-node-5720362545",
+  "original_store": {
+    "retailer": "Independent / Other optical",
+    "store_id": "independent-other-optical-osm-au-node-5720362545",
+    "affiliations": "",
+    "name": "NT Optometrists",
+    "status": "Mapped",
+    "country": "Australia",
+    "state": "NT",
+    "suburb": "",
+    "postcode": "",
+    "full_address": "Australia",
+    "phone": "+61 8 8945 1111",
+    "latitude": "-12.4010018",
+    "longitude": "130.9158862",
+    "official_url": "",
+    "website_url": "",
+    "instagram_url": "",
+    "facebook_url": "",
+    "directory_url": "",
+    "services": "Optical / optician listing",
+    "audiology": "false",
+    "venue_name": "",
+    "venue_id": "",
+    "location_type": "Unclassified",
+    "classification_confidence": "Low",
+    "classification_basis": "Insufficient official venue or street evidence",
+    "store_area_sqm": "",
+    "area_measure": "",
+    "area_source": "",
+    "area_date": "",
+    "area_confidence": "Unknown",
+    "source_url": "https://www.openstreetmap.org/node/5720362545",
+    "fetched_at": "2026-09-01T07:48:20.085579Z",
+    "business_type": "",
+    "identity_reviewed": "",
+    "coordinates_reviewed": "",
+    "status_evidence_url": "",
+    "status_verified_at": "",
+    "status_reason": "",
+    "coordinate_confidence": "",
+    "coordinate_evidence_url": "",
+    "coordinates_verified_at": "",
+    "coordinate_reason": "",
+    "public_facts_verified_at": "",
+    "public_facts_evidence_url": "",
+    "public_facts_reason": ""
+  },
+  "raw_store_sha256_before": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "fact_override": {
+    "store_id": "independent-other-optical-osm-au-node-5720362545",
+    "name": "",
+    "full_address": "Shop 24A, Karama Shopping Plaza, 37 Kalymnos Drive, Karama NT 0812",
+    "suburb": "Karama",
+    "postcode": "0812",
+    "phone": "",
+    "official_url": "",
+    "website_url": "",
+    "services": "",
+    "business_type": "",
+    "evidence_url": "https://www.karamashoppingplaza.com.au/business-directory/nt-optometrist/",
+    "verified_at": "2026-10-27",
+    "reason": "Original OSM node5720362545, last edited2019-01-08, names NT Optometrists and phone+61889451111. Full primary Karama Shopping Plaza tenant page retrieved27October2026 gives the same business and phone at Shop24A,37KalymnosDrive,Karama0812. This explicit identity match supports the missing address independently of distance. Preserve original store ID, phone, point, Mapped status and raw source date. The linked operator homepage returnedHTTP500; centre listing and directory hours do not establish fresh independent trading verification or an exact storefront entrance.",
+    "retailer": "",
+    "affiliations": "",
+    "clear_fields": "",
+    "directory_url": "https://www.karamashoppingplaza.com.au/business-directory/nt-optometrist/"
+  },
+  "osm_evidence": {
+    "node_id": 5720362545,
+    "timestamp": "2019-01-08T02:50:47Z",
+    "version": 2,
+    "name": "NT Optometrists",
+    "phone": "+61 8 8945 1111",
+    "latitude": -12.4010018,
+    "longitude": 130.9158862,
+    "url": "https://www.openstreetmap.org/node/5720362545"
+  },
+  "centre_evidence": "https://www.karamashoppingplaza.com.au/business-directory/nt-optometrist/",
+  "limits": "Operator homepage retrieval failedHTTP500; no fresh Active status, closure or point correction. Original source record remains available. No existing Karama canonical place found; create only with explicit property evidence.",
+  "staged_comparison": {
+    "independent-other-optical-osm-au-node-5720362545": {
+      "suburb": [
+        "",
+        "Karama"
+      ],
+      "postcode": [
+        "",
+        "0812"
+      ],
+      "full_address": [
+        "Australia",
+        "Shop 24A, Karama Shopping Plaza, 37 Kalymnos Drive, Karama NT 0812"
+      ],
+      "directory_url": [
+        "",
+        "https://www.karamashoppingplaza.com.au/business-directory/nt-optometrist/"
+      ],
+      "venue_name": [
+        "",
+        "Karama Shopping Plaza"
+      ],
+      "venue_id": [
+        "",
+        "nt-karama-plaza"
+      ],
+      "location_type": [
+        "Unclassified",
+        "Shopping Centre"
+      ],
+      "classification_confidence": [
+        "Low",
+        "High"
+      ],
+      "classification_basis": [
+        "Insufficient official venue or street evidence",
+        "Official name/address contains shopping-centre evidence"
+      ],
+      "public_facts_verified_at": [
+        "",
+        "2026-10-27"
+      ],
+      "public_facts_evidence_url": [
+        "",
+        "https://www.karamashoppingplaza.com.au/business-directory/nt-optometrist/"
+      ],
+      "public_facts_reason": [
+        "",
+        "Original OSM node5720362545, last edited2019-01-08, names NT Optometrists and phone+61889451111. Full primary Karama Shopping Plaza tenant page retrieved27October2026 gives the same business and phone at Shop24A,37KalymnosDrive,Karama0812. This explicit identity match supports the missing address independently of distance. Preserve original store ID, phone, point, Mapped status and raw source date. The linked operator homepage returnedHTTP500; centre listing and directory hours do not establish fresh independent trading verification or an exact storefront entrance."
+      ]
+    }
+  },
+  "property_override": {
+    "place_id": "place-au-nt-karama-shopping-plaza",
+    "canonical_name": "Karama Shopping Plaza",
+    "aliases": "",
+    "official_url": "https://www.karamashoppingplaza.com.au/",
+    "evidence_url": "https://www.karamashoppingplaza.com.au/business-directory/nt-optometrist/",
+    "verified_at": "2026-10-27",
+    "reason": "Official property tenant directory identifies the named shopping plaza and business address. No complete tenant inventory or ownership claim.",
+    "state": "NT",
+    "locality": "Karama",
+    "postcode": "0812",
+    "address": "37 Kalymnos Drive",
+    "location_setting": "Shopping Centre",
+    "address_source_date": "",
+    "address_evidence_url": "https://www.karamashoppingplaza.com.au/business-directory/nt-optometrist/",
+    "address_checked_at": "2026-10-27",
+    "address_basis": "Official centre directory gives Shop24A at37KalymnosDrive. Store unit retained on the business; property address omits the unit. Source publication date unknown."
+  },
+  "coordinate_override": {
+    "place_id": "place-au-nt-karama-shopping-plaza",
+    "latitude": "-12.4010018",
+    "longitude": "130.9158862",
+    "evidence_url": "https://www.karamashoppingplaza.com.au/business-directory/nt-optometrist/",
+    "verified_at": "2026-10-27",
+    "confidence": "Low",
+    "method": "Accepted tenant reference",
+    "reference_store_id": "independent-other-optical-osm-au-node-5720362545",
+    "reason": "Approximate property display reference inherited unchanged from the accepted NT Optometrists map record. It is not a surveyed property centroid, entrance or boundary. Explicit directory evidence establishes membership independently of this reference point."
+  },
+  "membership_override": {
+    "store_id": "independent-other-optical-osm-au-node-5720362545",
+    "location_setting": "Shopping Centre",
+    "canonical_name": "Karama Shopping Plaza",
+    "place_type": "Shopping Centre",
+    "official_url": "https://www.karamashoppingplaza.com.au/business-directory/nt-optometrist/",
+    "evidence_basis": "Karama Shopping Plaza official tenant directory explicitly lists NT Optometrist at Shop24A,37KalymnosDrive. Published phone matches original OSM business record. Membership is based on the named tenant entry; trading status remains Mapped.",
+    "confidence": "High",
+    "source_date": "2026-10-27",
+    "owner": "",
+    "manager": "",
+    "place_official_url": "https://www.karamashoppingplaza.com.au/",
+    "canonical_place_id": "place-au-nt-karama-shopping-plaza"
+  },
+  "raw_store_sha256_after": "85eb8dacd717e2d68f7fe0c9d5f3f347b21b42804b75b708855321d8e3c34769",
+  "initial_validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "verification_finding": "Environment profiles omitted coordinate_confidence while carrying method, reason and source. Builder now propagates confidence; regression checks all point fields across every environment. Full rerun43674 pending; original staged store comparison still valid.",
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": {
+    "retail_places": true,
+    "retail_environments": true,
+    "membership": true,
+    "eligibility": true
+  },
+  "browser_verification": {
+    "checked_at": "2026-10-27",
+    "search": "Karama returns one shopping centre; selection recentres map on Karama.",
+    "profile": "37 Kalymnos Drive, address source unknown publication date, Low point confidence and accepted-tenant reference limitations visible. One NT Optometrists member. Co-tenancy not researched and ownership Unknown visible.",
+    "summary_export": "/Users/ayden/Downloads/bailey-place-summary-2026-10-27 (4).csv",
+    "tenant_export": "/Users/ayden/Downloads/bailey-place-tenants-2026-10-27 (1).csv",
+    "tenant_rows": 1,
+    "status_preserved": "Mapped",
+    "tenant_sha256": "7cfc500de2d8528f50c58bc645a8fe6c7ab3475b96a6a31cd430dce0e697fac3"
+  }
+}

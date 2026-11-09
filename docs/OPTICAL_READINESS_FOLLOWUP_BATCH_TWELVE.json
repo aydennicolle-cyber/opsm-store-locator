@@ -1,0 +1,184 @@
+{
+  "status": "All nine validation stages passed; eight generated outcomes verified. Browser and export verification remains pending.",
+  "raw_store_sha256": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "accepted": [
+    {
+      "store_id": "independent-other-optical-reviewed-au-beach-optique-mona-vale",
+      "location_setting": "High Street",
+      "canonical_name": "Bungan Street",
+      "place_type": "High Street Corridor",
+      "official_url": "https://www.beachoptique.com/",
+      "evidence_basis": "Full operator homepage retrieved 27 October 2026 explicitly identifies Shop 2/11 Bungan Street, Mona Vale and optical frames. Accept the existing Bungan Street locality corridor. The phrase centre of Mona Vale describes the locality, not Pittwater Place tenancy. Preserve unit2, original source dates and point; no surveyed corridor extent or entrance claimed.",
+      "confidence": "Medium",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "corridor-au-nsw-mona-vale-bungan-street"
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-westfund-orange",
+      "location_setting": "High Street",
+      "canonical_name": "Summer Street",
+      "place_type": "High Street Corridor",
+      "official_url": "https://www.westfund.com.au/health-services/eye-care/",
+      "evidence_basis": "Full operator eye-care directory retrieved 27 October 2026 explicitly identifies Orange at 179 Summer Street with optical services and appointments. Accept the existing Summer Street Orange corridor, not Orange Central Square tenancy. Original premises, point and source dates remain unchanged; no surveyed street boundary asserted.",
+      "confidence": "Medium",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "corridor-au-nsw-orange-summer-street"
+    }
+  ],
+  "unresolved": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-11898341739",
+      "store_fingerprint": "5e25b703f05f9683d5e7df0c52ed1fd05a583827dc1a46fa5bf3a468d3ae7417",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/marrickville-2204-nsw/eyedealeyes-optometrist/optometry/79892648-d02c-1df9-e3d2-85f72c0240c8",
+      "reason": "Full Healthdirect listing retrieved 27 October 2026 confirms Shop 2, 20-22 Station Street and 02 9559 6167; HealthShare search agrees. A Yelp excerpt lists 354 Illawarra Road with the same phone, but no move date or current operator confirmation was established. Preserve the supported Station Street address, original Mapped status and source dates; do not infer closure or a second store. No accepted Station Street corridor or explicit named-centre membership is established. Directory hours are not fresh trading verification and its map viewport is not an exact storefront point."
+    },
+    {
+      "store_id": "independent-other-optical-provision-34119",
+      "store_fingerprint": "cce050937706555b508e01ae7ccb85c04d156e263297f6b9c8f8cf9b83d2908a",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.provision.com.au/practice/6d-vision/",
+      "reason": "Full ProVision practice page retrieved 27 October 2026 confirms Shop 3, 599 Kingsway, Miranda. Its discussion of what the practice likes about Westfield Miranda is contextual and does not explicitly identify this premises as a tenant. Booking-provider search distinguishes this address from another practice at Westfield 600 Kingsway; an older 2018 social excerpt describes moving to 599. Preserve the supported premises without inventing relocation chronology from snippets. No accepted Kingsway corridor or proven Westfield membership is established; canonical association remains unresolved."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-martine-brinsdon-murwillumbah",
+      "store_fingerprint": "bec8fb9d94e96663b3f9ca3b73598799726c9f70f91000ff809525db575c81b8",
+      "candidate_venue_id": "nsw-plaza-the",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.healthshare.com.au/directory/optometrists-in-murwillumbah-2484-nsw/",
+      "reason": "Full HealthShare directory retrieved 27 October 2026 lists Martine Brinsdon separately at 12/14 Wharf Street. The same page assigns Shop 5, The Plaza, 47 Murwillumbah Street to other named practitioners, not Martine. Retain the earlier 20 Wharf Street address conflict and Brinsden spelling variant; no chronology or new trading verification inferred. The 78.2 m Plaza candidate is proximity-only and no accepted Wharf Street corridor is established. Canonical association remains unresolved."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-john-pearce-parkes",
+      "store_fingerprint": "b7e587280216807034a1bd8dadcf9f46021c34a26b8c10da4dff9b3ee4d1943f",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.visionaustralia.org/listofproviders",
+      "reason": "Retained government-provider and named-map evidence supports 30 Currajong Street and 02 6862 2232. Search on 27 October 2026 found an owned Facebook excerpt describing Wednesday/Friday opening at that address, but full retrieval was unsupported and the excerpt did not establish publication date. HealthShare search corroborates premises only. Preserve Unknown status and network exclusion rather than claiming a fresh trading confirmation. No accepted Currajong Street corridor or named-centre evidence is established; Clarinda Street is a different corridor."
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-8460982632",
+      "store_fingerprint": "47452368fb4d72844ad28bf11314f11741de7de83fd6ba5ed575686eda7b6ca7",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://corporate.hcf.com.au/cfal/locations/hcf-centres/hcf-eyecare-centre",
+      "reason": "Full HCF locations page retrieved 27 October 2026 confirms Level 6, 128 Marsden Street, Parramatta and 02 9685 0655. Eyecare Centre names the clinical service, not a shopping centre. The operator map reference is close to the retained business point but does not establish tenancy or an entrance; preserve the existing approximate point. No named shopping property or accepted Marsden Street corridor is established. Keep the supported level-specific address, original source dates and unresolved canonical association."
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-5421723042",
+      "store_fingerprint": "a301b3b1772be403d2afca8cfd69601e87204d1fe58d0f1bde233d4953c07007",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.viewoptometrist.com.au/location/",
+      "reason": "Full operator location page retrieved 27 October 2026 confirms Ground Floor, 135 Church Street, Parramatta. Instructions to park in Westfield Parramatta and use its Level 3 Church Street exit are access directions, not explicit tenancy evidence. No accepted Parramatta Church Street corridor is established. Preserve premises, original Mapped status and point; retain unresolved canonical membership without converting parking instructions into a shopping-centre association."
+    }
+  ],
+  "limits": "No original store dates, status, addresses or points changed. John Pearce remains excluded from current network analysis. Directory excerpts and failed Facebook retrieval do not establish fresh trading. Two existing corridor links, no new precinct boundaries.",
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": [
+    {
+      "store_id": "independent-other-optical-reviewed-au-beach-optique-mona-vale",
+      "checks": {
+        "accepted_place": true,
+        "place_eligible": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-westfund-orange",
+      "checks": {
+        "accepted_place": true,
+        "place_eligible": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-11898341739",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-provision-34119",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-martine-brinsdon-murwillumbah",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-john-pearce-parkes",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-8460982632",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-5421723042",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    }
+  ]
+}

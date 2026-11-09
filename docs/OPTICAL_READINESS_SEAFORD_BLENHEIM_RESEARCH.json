@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-27",
+  "status": "Evidence reviewed; application prepared in /tmp/readiness-seaford-blenheim-apply.py, not yet applied",
+  "method": "Standard web only; no Firecrawl",
+  "cases": [
+    {
+      "store_id": "opsm-1514",
+      "url": "https://www.cbhs.com.au/docs/librariesprovider2/choice-network-forms/choice-network-providers---optometrist_sa.pdf?sfvrsn=af4cb774_3",
+      "source_date": "2026-05-07",
+      "finding": "Full PDF explicitly dates its provider information 7 May 2026. Page 2 lists Shop61 Seaford Central Shopping Centre108CommercialRoad with0883863400. Full OPSM branch1514 page confirms same phone and corner address. Supports centre membership rather than Commercial Road only; sole-member generated corridor coordinate must be retired with history."
+    },
+    {
+      "store_id": "specsavers-nz-3852",
+      "url": "https://www.specsavers.co.nz/stores/blenheim",
+      "source_date": null,
+      "finding": "Full current operator page explicitly says moved down the road to67MarketStreet, phone035779644. Existing store address already matches. Retain current MarketStreet association rather than introducing Forum membership; move date not given."
+    }
+  ]
+}

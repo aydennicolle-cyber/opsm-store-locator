@@ -6,7 +6,9 @@ from __future__ import annotations
 import csv
 import json
 import os
+from datetime import date
 from pathlib import Path
+from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,6 +19,7 @@ RETAILER_DIR = ROOT / "retailers" / ("specsavers-nz" if IS_NZ else "specsavers")
 SNAPSHOT_PATH = RETAILER_DIR / "source_snapshot.json"
 CSV_PATH = RETAILER_DIR / "stores.csv"
 GEOJSON_PATH = RETAILER_DIR / "stores.geojson"
+ADDITIONS_PATH = RETAILER_DIR / "reviewed_additions.json"
 VALID_STATES = {"ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"}
 NZ_REGION_ALIASES = {
     "AUK": "Auckland",
@@ -185,6 +188,8 @@ def write_csv(stores: list[dict]) -> None:
         "official_url",
         "services",
         "audiology",
+        "fetched_at",
+        "source_url",
     ]
     with CSV_PATH.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
@@ -223,11 +228,42 @@ def write_geojson(stores: list[dict], snapshot: dict) -> None:
     )
 
 
+def merge_reviewed_additions(stores: list[dict], path: Path) -> list[dict]:
+    """Replay individually evidenced additions without refreshing the older census.
+
+    A later locator capture containing an addition requires reconciliation rather
+    than silently duplicating it or overwriting its reviewed trading status.
+    """
+    if not path.exists():
+        return stores
+    combined = list(stores)
+    ids = {str(row["id"]) for row in combined}
+    urls = {row["official_url"].rstrip("/") for row in combined}
+    for item in json.loads(path.read_text(encoding="utf-8"))["records"]:
+        row = dict(item["record"])
+        url = row.get("official_url", "")
+        expected_host = "www.specsavers.co.nz" if IS_NZ else "www.specsavers.com.au"
+        if (not row.get("id") or row.get("country") != COUNTRY_NAME
+                or urlparse(url).scheme != "https" or urlparse(url).hostname != expected_host
+                or row.get("source_url") != url or not item.get("evidence_basis")
+                or row.get("status") not in {"Active", "Opening Soon", "Unknown", "Temporarily Closed", "Closed"}
+                or date.fromisoformat(row["fetched_at"]) > date.today()):
+            raise ValueError("Invalid reviewed Specsavers addition")
+        if str(row["id"]) in ids or url.rstrip("/") in urls:
+            raise ValueError(f"Reconcile reviewed addition already present in snapshot: {url}")
+        ids.add(str(row["id"]))
+        urls.add(url.rstrip("/"))
+        combined.append(row)
+    return combined
+
+
 def main() -> None:
     snapshot = json.loads(SNAPSHOT_PATH.read_text(encoding="utf-8"))
     stores = [clean_store(item) for item in snapshot.get("stores", []) if item.get("ok")]
-    stores.sort(key=lambda item: (item["state"], item["city"], item["name"]))
     validate(stores, snapshot)
+    stores = merge_reviewed_additions(stores, ADDITIONS_PATH)
+    stores.sort(key=lambda item: (item["state"], item["city"], item["name"]))
+    validate(stores, {**snapshot, "list_count": len(stores), "store_count": len(stores)})
     write_csv(stores)
     write_geojson(stores, snapshot)
     by_state: dict[str, int] = {}

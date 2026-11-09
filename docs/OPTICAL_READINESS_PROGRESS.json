@@ -1,0 +1,592 @@
+{
+  "status": "Complete: ready for practical use with stated restrictions; local only, not published.",
+  "baseline_path": "/var/folders/68/ghl3tmhn1sj44582kxynzctm0000gn/T/optical-readiness-baseline-5_x68rc5",
+  "verified_so_far": [
+    "Four newly accepted Sunglass Hut memberships rebuilt successfully; promoted review queue 647 to 643",
+    "All 3088 store identities and substantive store fields preserved; only 16 NZ Bailey Nelson source-fetch dates changed",
+    "Focused readiness recovery tests and metric/address/point rendering tests passed before final rebuild",
+    "2026-10-25 continuation: Bayside correction and Fountain Gate consolidation survive retail-place rebuild. Fountain Gate has one canonical property, six retained optical records and a sourced whole-property address.",
+    "Ocean Keys AU4613 is accepted in the existing Clarkson centre based on explicit operator centre/shop/phone evidence. No duplicate store added.",
+    "Store baseline comparison: all 3088 IDs preserved, no additions/removals, only 16 fetched_at fields differ from baseline.",
+    "Seven place-identity tests and JavaScript intelligence tests passed. These are partial checks, not full readiness proof.",
+    "2026-10-25: Clifford Gardens OPSM/Specsavers, Myer Adelaide B812 and 1001 Box Hill South accepted in rebuilt data. Two obsolete single-member James Street coordinate reviews retained in retired history. High recognition candidates 21 to 17; no Optiko retailer-label candidate remains.",
+    "QVB and M\u0101nawa Bay: two previously unresolved store memberships now accepted; corresponding property identities added with official whole-property addresses and explicit point limitations. High recognition candidates 17 to 15.",
+    "Actual Clifford Gardens downloaded Summary CSV verified by place ID and content; export hash recorded in decisions.",
+    "QVB browser exposed historical Unknown store in nearby competition. Strict analytics/place eligibility added to property competition, BN property presence and nearest BN calculations. Browser confirms exclusion; eight JavaScript suites pass.",
+    "The Crossing Christchurch B657, enex Perth F986 and Harbour Town Gold Coast B768 accepted in rebuilt memberships, with official whole-property addresses and Low-confidence accepted-tenant reference points. Gold Coast kept distinct from Harbour Town Adelaide. Retail-place builder exited zero; diff check passed.",
+    "30 blank or tenant-withheld street references now display existing canonical name and locality without inventing a building address or new source-check date. Five address-evidence tests pass; Dean Street browser profile verifies wording and retained warnings. High register issue count 442 to 425, solely from resolving these 17 High display gaps.",
+    "Street-reference change: focused environment suite passed 7 tests after replacing the obsolete all-notes-mean-withheld assertion with explicit tenant withholding and named-street reference checks. Full prior run had 405 tests and two failures; centre-recognition remains unresolved. Source privacy scan passed.",
+    "First seven Westfield address corrections passed retail-place rebuild. Five further official addresses applied to existing IDs, with source receipts retained and previous Southland override recorded. Twelve-address full dependent rebuild pending.",
+    "Combined retail-place/property/data-health builds passed after explicit Geelong consolidation. Twelve Westfield addresses verified with source-specific check dates and unknown publication dates. Crown/Sirocco/Town Pier accepted as Other. Full 407-test run has one remaining recognition failure; recognition audit now 9 High cases.",
+    "Staged full network rebuild preserved all 3088 store IDs and changed only location_type/classification_basis on the six audited Eye Piece/AM/Valley records. Ten readiness regression tests pass; explicit centre and insufficient-address cases remain protected.",
+    "Classifier dependent rebuild exited zero: all six audited stores Accepted on named street corridors, original 2026-10-20 membership dates preserved. 1544 places, 3088 stores, 628 membership reviews, 127 recognition candidates including 3 High. Register 394 High issues across all categories; these are not all resolved.",
+    "Registry-address recovery regression suite passed 11 tests. Recovery requires existing source-ID remap and matching state, fills only blank centre addresses, rejects conflicting or tenant-unit records, preserves coordinates and original record date without claiming a check/publication date.",
+    "Park Beach Plaza generated place now has 253 Pacific Highway, unchanged coordinates, original registry record date 2026-07-23, no fabricated checked/publication date. Retail-place build passed; downstream session 29665 remains live. Recognition name regression suite passed 12 tests.",
+    "Registry-address chain session 29665 exited zero. Park Beach Plaza address and original record date reach retail_environments, checked_at remains blank. Audit now 2 High, 26 Medium, 99 Low; City Specs remains Low proximity candidate. Full register 392 High before six new address corrections.",
+    "Six-address rebuild session 88392 exited zero. Grand Central, Chadstone, Macquarie, Eastland, Canberra Centre and Castle Towers addresses match source corrections in both place and environment files. Browser/export checks remain pending. Melbourne Central existing intersection address confirmed by current official homepage, with no source data mutation.",
+    "Property batch 86769 exited zero orchestration; results record Python-tests=1 (single centre-recognition failure), eight JS suites=0, privacy=0 and diff-check=0. B632 stage changed only one store, preserving all 3088 IDs, fetched_at, status and phone. Corrected address to 7/266 Lambton Quay and point to -41.2839426,174.7752427 from official B632 UID1447833 embedded operator data.",
+    "B632 dependent rebuild session 12306 exited zero. New source/review precedence regression passes; 13 readiness tests total. Staged full network comparison changed only B632 official URL and six existing reviewed Oakley George Street fields (name, address/phone formatting, links and service wording). All 3088 IDs and source/status dates preserved. Reviewed staged outputs promoted locally.",
+    "Two unresolved-review regression tests pass: changed identity/address/status/point reopens review, missing evidence rejected, original history preserved. Three source-date tests pass after fixing test-data path isolation. Review-order chain session 63191 terminal; intelligence/privacy passed, Python reported transitional membership mismatch and two fixture errors before fixes/rebuild.",
+    "Session33505 terminal: 412/413 tests passed; remaining failure was newly added World Square review not yet incorporated in older place build. Privacy/diff checks passed. Browser local tab10 confirmed health review list did not contain Optikus; implemented explicit reviewed-outcome promotion and matching denominator adjustment. Unresolved receipt tests pass including retained stale-review visibility.",
+    "Session72558 completed all builds, full Python suite, privacy and diff check with exit0. Focused 56 retail-place tests pass independently after package import fix and explicit string-false eligibility assertion. Browser tab10 confirms Optikus and World Square review reasons/date/exclusion text in health list. Optikus remains last-known network eligible but place excluded; historical World Square excluded from both current network and place analysis.",
+    "Health rebuild83678 exited0. Browser reload/search/open Optikus verified canonical Uncertain/Not mapped, dated 2026-10-25 membership explanation, exclusion text, optikus.com.au evidence link and preserved stale source warning. JS syntax and intelligence checks pass. Full Python17358/privacy62550 running; store CSV export still pending.",
+    "Comet Place Maryborough and Gateway Business Centre Booragoon accepted as Other in retail-place rebuild. Explicit operator membership plus property-agent corroboration; Low accepted-tenant display points, no surveyed extent. Current storefront IDs, store fields and original source dates untouched.",
+    "Session64551 exited0: places/property/health/register/full414 tests/privacy all passed. Comet Place/Gateway addresses and Other memberships verified; Knox/Rouse Hill addresses match both place and environment outputs.",
+    "Session16547 exited0. All eight addresses agree in places and environments; only membership move OPSM1274, explicitly supported by centre directory. Register now includes28 insufficient independent storefront addresses, all excluded from network analysis. North Lakes staged diff94162 changed only status plus3 evidence fields; promoted with all3088 IDs preserved.",
+    "North Lakes and NZ build completed; North Lakes excluded from both analytics flags, accepted membership retained; Albany/Riccarton environment addresses verified. Full414 tests had one wording-only membership guard failure on negated proximity phrase; override reworded to affirmative written tenant evidence.",
+    "Session91416 all builds exited0; Orange99/Wagga100 Closed and both analytics flags false, historical places retained; Midland76 revised address/pin confirmed. Session21657 full414Python/eightJS/privacy all passed. Browser actual NorthLakes CSV and Optikus CSV verified with distinct evidence dates and unresolved blankplace preservation.",
+    "Current full EyeQ locator comparison:25/25 existing identities, no new/missing IDs, all25phones match;23 normalizedaddresses match,2 retain richer held detail. This is locator reconciliation, not independent trading verification.",
+    "Session90548 exited0: firstEyeQbatch retail/property/health/register/fulltests/privacy passed.",
+    "EyeQ final rebuild13779 exited0. Twelve current branch-reviewed unresolved memberships verified in rebuilt membership+health data with2026-10-25 evidence and place-analysis exclusion; Subiaco accepted in Rokeby Road corridor.",
+    "Check62858 exited0: full Python, intelligence JS, privacy and diff-check passed before final Morayfield membership change. This is not final-batch verification.",
+    "87943 exited0 all four builders. Four new property addresses verified in rebuilt places and environments; reference points unchanged. Morayfield OPSM1273 accepted centre membership.",
+    "Browser tab11 confirms OPSM Morayfield accepted centre association with current dated tenant evidence and retained old source warning. Confusing older classification note now explicitly distinguished; browser reload verified label. Screenshot /tmp/readiness-morayfield-profile.png.",
+    "83496 terminal exit0: four builders, full Python tests, intelligence JS, privacy and diff-check passed. Full before/after store membership dictionaries identical across Retail First address update.",
+    "Address chain16142 exited0. Northland/Mandurah/Claremont/Queensgate addresses agree in places and environments, points unchanged. Membership comparison exposed OPSM1418 spell-sensitive match; current explicit tenant page confirms Level2T217 and phone0893833943. Override applied, await34334.",
+    "Stage13495 exited0: adds only oscar-wylee-156, all3088 existing store rows byte-value equal. Four staged network outputs promoted. Source156 individually dated2026-10-25; old brand snapshot remains unchanged, raw added row retained in source_history.",
+    "92354 completed builders then415tests with only demographic-link count failure3088vs3089. Market builder --reuse-market-data is required after inventory addition, preserving existing ABS feature vintage. Initial full market attempt failed network download; retried correct reuse mode after terminal failure.",
+    "Market reuse build30842 terminal exit0; store_market_links metadata3089 and newOscar156 link present. Original ABS feature data reused.",
+    "2026-10-26: market rebuild90702 exited0 after official network lookup; 2454 existing SA2 features, 2712/3089 store links, 709 reviewed centre entities. No network snapshot archived because census certification remains incomplete.",
+    "2026-10-27: First 38 retained membership receipts pass all generated checks; 420 Python tests, intelligence/privacy/diff pass. Further 38 receipts recorded. Full queue evidence inventory expanded to include original status and coordinate reviews: 648 of 708 audited stores have dated evidence in at least one reviewed field, including 433 with blank general premises-evidence URL. This is an inventory, not case-resolution proof.",
+    "2026-10-27: combined retained batch finished all builds, recognition audit, full Python suite, intelligence, privacy and diff checks with exit0. All222 retained investigations passed current-fingerprint, unresolved membership, place-exclusion and dated/source-linked health review checks. Recorded another32 individually read retained investigations with original dates; no new source or status claims."
+  ],
+  "changes": [
+    {
+      "path": "data/optical_stores.csv",
+      "before_sha256": "2cf78b928a2706989e78eb90435cfc4319ddaf93d23c8ae83a51f9727265759e",
+      "current_sha256": "e52fda76aa7f28dd5dfa2fe0b44b1ab229dca6f6b7dcb6afc384c808373d454d"
+    },
+    {
+      "path": "data/optical_stores.geojson",
+      "before_sha256": "c30da7cf4a5eaf1d7b6db217341e190381eed30c35dc59287c137ad13cdd6303",
+      "current_sha256": "ecaf544d61e94010695e4ca4cfef384815a7d0c85b16e5ae21fea89f31c07137"
+    },
+    {
+      "path": "data/place_coordinate_overrides.csv",
+      "before_sha256": "aaa506b6fb2e2dbd385a1bd47791bc838f424785a2c023e29d5bb3c98317814e",
+      "current_sha256": "35e06cb5883058fdbf1dfc46de63ced7a7515a39c8acec73874ea7128b1e32cd"
+    },
+    {
+      "path": "data/place_consolidations.csv",
+      "before_sha256": "d54effe386f1da7834ece12743495d3a81f45d9f7f7d8dfd3825784146d5143b",
+      "current_sha256": "a8be3c2740eb74e3c39ba052a411cfa7aa52747815430148aac7b2e7ce1827d9"
+    },
+    {
+      "path": "data/store_place_overrides.csv",
+      "before_sha256": "f914fb76e8bacce4ddb56b38479d11adc04b5ad4c388e29d01e1f5c32deb39a5",
+      "current_sha256": "30c4b36e6b0d673e66329a2183ac4029a99edf8caba00495a3fb86bc97ffe104"
+    },
+    {
+      "path": "scripts/build_retail_places.py",
+      "before_sha256": "e47942de9f8e0f05c93556196bea8dc4d5a71823dc74f6641d1cd1bf8596fba3",
+      "current_sha256": "480d0860a8c9dbf2197558334229255eb95d3f7b8581f197532c4ce111c919c5"
+    },
+    {
+      "path": "scripts/build_retail_environments.py",
+      "before_sha256": "ff0889f08e96e95f6c9b1671e67e9bae1582c23f6b7c09084981306209121835",
+      "current_sha256": "df43af07389b57e36a6f6b572b8cdbc56a91342466844ffdbba204a170dcdcd2"
+    },
+    {
+      "path": "assets/app.js",
+      "before_sha256": "f9c452cc39790a865b835ebc8457a7dfb275d779ec6cd2392ae61f7d777e2836",
+      "current_sha256": "d2bdd9323da30a925fb076a5077e6ec59fd10ab74781b532b655ccf0b75055be"
+    },
+    {
+      "path": "assets/environment-explorer.js",
+      "before_sha256": "0e1fe22b68c7d00cea08fa7fcf15922d033455f66eb7a9e56188f0ddb787fd26",
+      "current_sha256": "d938782c70202ed1cd7938a1966a8ad582ba0222d471b4757977d1af212e4e9d"
+    },
+    {
+      "path": "retailers/bailey-nelson-nz/source_snapshot.json",
+      "before_sha256": "00e12bfd047d747b1daf3a6645428ee00e4a724f0ab51010b989cef4bcf17ee7",
+      "current_sha256": "9971ae0ae562c69436f7043bc2c7174a812d72858bdb2fe11a2b64052b969490"
+    }
+  ],
+  "additional_findings": [
+    "Retained shopping_centres.csv contains a Park Beach Plaza address (253 Pacific Highway; source record 2026-07-23) absent from the generated place. Needs evidence-date semantics preserved when recovered.",
+    "Many remaining number-free addresses are named roads or intersections; these must be reviewed as potentially sufficient property references rather than labelled wrong merely because a street number is absent.",
+    "All three missing property pins have explicit operator map evidence recorded, pending complete rebuild verification.",
+    "OPSM public find-store page retrieval does not return a complete branch list; direct endpoints return HTTP 403. No working OPSM feed was overwritten.",
+    "Full market builder was treating named street and Other venue IDs as shopping centres. Added an explicit Shopping Centre classification requirement and regression test.",
+    "Canonical Green Hills aliases require explicit consolidation back to the existing Stockland Green Hills Shopping Centre ID to preserve linked tenant evidence across rebuilds.",
+    "Official Clifford Gardens directory phones exactly match OPSM 1339 and Specsavers 3572; corrected street assignments. Two now-empty derived James Street coordinate reviews retired into history, not remapped as centre aliases.",
+    "Official Sunglass Hut B812 booking identity and phone distinguish the Myer Adelaide concession from separately closed R22A and street-front Shop 69.",
+    "1001 Box Hill operator explicitly places Shop117 at 1 Main Street; Vicinity South asset confirms this address. Whole-property South display address recovered.",
+    "Centre-recognition candidates now honour explicit non-centre overrides and cannot create a centre solely from a closed store label; independently registered properties remain included.",
+    "Official Eastland and Canberra Centre getting-here links contain questionable postcodes (3134 and 2608 respectively). Address corrections omit those linked postcodes and preserve existing fields; follow up before treating postcodes as verified. Karrinyup homepage/contact scrape provided no useful address and was not treated as negative evidence.",
+    "Erina Fair parking and Karrinyup location pages return access roads but no complete property address. Retrieval receipts retained; do not infer precise property address or coordinates from access-road lists.",
+    "B632 current official page redirects retained 226 address URL to 7/266 and same UID/bookingID/phone, with revised point about 100m away. Correction recorded without inventing relocation date. Named premises evidence gathered for Optical Warehouse Comet Place Maryborough and Optical Superstore Gateway Business Centre Booragoon; membership reconciliation pending.",
+    "Browser profile initially showed only classification_basis and directory/source links, omitting canonical membership basis/date/link. Added explicit mapping_evidence_basis/url/record_date to health certification, app hydration, profile and store export columns. Local consultant corrections replace these fields with local note/evidence and clear inherited date, avoiding false source attribution.",
+    "Address audit: no blank full_address strings, but28 independent records fail existing meaningful-address usability rule (e.g. Australia-only). Added explicit store_address issues; not new discoveries or accepted place memberships. All28 excluded from network analysis.",
+    "Eight-address build exposed OPSM1274 street-only membership. Official Mt Ommaney tenant page explicitly identifies OPSM SP115; accepted centre address matches retained171 DandenongRd. Added explicit membership; retired only-member obsolete corridor point preserving evidence. No centre membership inferred solely from distance.",
+    "Official North Lakes branch Optician JSON explicitly Temporarily Closed (receipt01a172a2-6978-7228-ac50-07365f1e9ca6), matching phone/URL. Status correction applied, no reopening/relocation date inferred. Albany/Riccarton centre postal addresses recovered from ShoppingCenter data, not shared Organization headquarters. Botany homepage raw retrieval did not yield address; no change.",
+    "Oscar AU full locator121rows vs retained122:119 unchanged matched records, Midland76 changed unit/point, Orange99 and Wagga100 explicitly closed on branch pages; new MountBarker156 not present in canonical inventory and needs reconciliation. Public locator receipt saved docs/OPTICAL_READINESS_OSCAR_AU_LOCATOR.json.",
+    "Eight current EyeQ primary branch pages reviewed alongside retained5October premises/map evidence. Subiaco explicitly describes Rokeby Road/main Subiaco shopping precinct. Bathurst,StIves,BerowraHeights,Kiama,Ramsgate,Nowra,PortMacquarie confirm written addresses but no accepted named/bounded retail-place association; retainedUncertain with dated evidence explanation and safe exclusions, not inferred street frontage.",
+    "Four official property addresses: Brookside159 OsborneRd, Morayfield171 MorayfieldRd4506, Greensborough25 MainSt3088, BelmontForum227 BelmontAve6105. Explicit centre tenant page confirms OPSM1273 phone5498 3755. Sole-member old MorayfieldRoad point review retired preserving evidence; no road-to-centre alias.",
+    "Official ShoppingCenter data: CapalabaPark45 RedlandBayRd; BoovalFair and SunnybankHillsShoppingtown explicitly publish retained intersection addresses. Two number-free addresses reviewed sufficient rather than invented numbers. Three source receipts in decisions.",
+    "Northland2-50MurrayRdPreston3072 and Mandurah330PinjarraRd6210 official embedded centre data; ClaremontQuarter9BayViewTerrace6010 official postal data; QueensgateCnrQueensDrive/BunnyStLowerHutt official location heading. Applied, await16142 verification.",
+    "Four official Westfield property-reference addresses confirmed from current ShoppingCenter data: MtGravatt/NorthLakes intersections, BelconnenBenjaminWay, WodenKeltieStreet. Documented sufficient without inventing numbers.",
+    "Adding genuinely new Oscar156 exposed destination_profiles direct certificate lookup KeyError before health build. Missing certificate now excludes from membership/radius competition until health writes eligibility; health rebuilds destination profiles before environment data. Regression removes then restores certificate of accepted member, proving exclusion and restored inclusion.",
+    "Current OSS branch prose explicitly names Queensland Country Centre(Aitkenvale) and Christawood Centre(Maroochydore). Bank/healthfund confirms333RossRiverRd; agent listing corroboratesChristawood52-54BadenPowellSt. TwoOtherbusiness-centre memberships withLowtenantreferencepoints applied. Canberra/MountEliza remain evidence-bound unresolved. MtEliza page includes copiedBrookside image/secondaryphone fragments; retained correct displayed/call-to-book phone.",
+    "Market reuse mode still calls ABS for points outside retained simplified geometry. Sandbox DNS prevented queries; approved external-network execution30842 reuses existing features and queries public boundaries. Do not fabricate missing link or refresh demographic vintage.",
+    "OrangeCentralSquare did not physically disappear: removing closedOscar99 from source grouping changed chosen generated ID to orange-central-shopping-centre. Existing OPSM/Specsavers memberships followed alternate ID but property attributes retained historical ID. Canonical override pins historical ID/name plusalias; manager confirms227SummerStreet.",
+    "Wallsend operator explicitly states BoscawenStreet frontage betweenNelson/Harris and parking out front. PostalShop7/68NelsonStreet preserved, newstreetreferenceLowtenantpoint. WarehouseCapalaba retains formerLensPro consolidation, not currentCapalabaCentralmembership; MaroochydorepostalMaud/entranceSecond notrelocation; Strathpine no formalplaceevidence. Three reviewedunresolved receipts applied."
+  ],
+  "live_sessions": [
+    {
+      "session_id": 98243,
+      "purpose": "Combined retained-review rebuild, recognition audit and required validation"
+    },
+    {
+      "session_id": 21033,
+      "purpose": "Loopback-only local preview on8038"
+    }
+  ],
+  "verification_limit": "Record newly started dependent-check session. Verify newstores accepted explicit centre IDs but both analyticsflagsfalse, generatedwholeproperty references withoutunits,3091storelinks, original3089rows unchanged. AllPython/JS/privacy/diff chain pending; finalbrowser/export/package and other highoutcomes/sourcefreshness remain.",
+  "previous_build_failure": {
+    "log": "/tmp/readiness-westfield-twelve-places.log",
+    "error": "Duplicate identities Westfield Bay City and Westfield Geelong after current name correction",
+    "next_action": "Explicit consolidation added using shared property identity evidence, retaining Bay City ID and all five store records. Verify rebuild; do not suppress duplicate check."
+  },
+  "latest_place_rebuild": {
+    "log": "/tmp/readiness-qvb-manawa-places.log",
+    "exit_code": 0,
+    "place_count": 1536,
+    "store_memberships": 3088,
+    "promoted_review_count": 640
+  },
+  "last_full_python_run": {
+    "log": "/tmp/readiness-oscar-check-python.log",
+    "tests": 414,
+    "failures": 0,
+    "errors": 0
+  },
+  "register_scope_correction": "Added all centre-recognition candidates, including challenges to accepted memberships that place_review.csv omits. Candidate counts are not confirmed errors and may overlap other issues for the same store.",
+  "javascript_verification": {
+    "suites": 8,
+    "exit_codes": "all zero",
+    "results": "/tmp/readiness-oscar-check-results.json"
+  },
+  "source_privacy_verification": {
+    "log": "/tmp/readiness-oscar-check-privacy.log",
+    "exit_code": 0,
+    "scope": "Oscar closure/address/point corrections plus status evidence profile/export fields"
+  },
+  "pending_membership_research_2026_10_25": [
+    {
+      "store_id": "the-optical-company-charlestown-5400",
+      "source": "https://theopticalco.com.au/local-store/charlestown/",
+      "scrape_id": "01a172da-60e5-7017-b053-3b0884f7d9e2",
+      "finding": "Explicit highway frontage, walk out of Charlestown Square toward Pacific Highway. Existing corridor-au-nsw-charlestown-pacific-highway-2 available. Candidate accepted street association; not applied."
+    },
+    {
+      "store_id": "the-optical-company-parramatta-2150",
+      "source": "https://theopticalco.com.au/local-store/parramatta/",
+      "scrape_id": "01a172da-6012-7688-b734-4c8c2ddd6fb6",
+      "finding": "Suite1 ground floor80GeorgeStreet confirmed. Walking directions oddly mention CampbellStreet; no named premises established. Candidate unresolved review; not applied."
+    },
+    {
+      "store_id": "the-optical-company-singleton-2330",
+      "source": "https://theopticalco.com.au/local-store/singleton/",
+      "scrape_id": "01a172da-609a-739a-b4a6-a2a3bf7ddd80",
+      "finding": "2/106JohnStreet confirmed, rebrand from The Eye Place, no named shared property. Candidate unresolved review; not applied."
+    },
+    {
+      "store_id": "bupa-optical-19555346",
+      "source": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-norwood",
+      "scrape_id": "01a172da-b6ed-750d-8d6f-970b3e15811f",
+      "finding": "Despite blocked booking-widget fragments, actual branch text confirms254TheParade and explicitly says located within Norwood Parade precinct. Existing corridor-au-sa-norwood-the-parade. Candidate accepted association; not applied."
+    },
+    {
+      "store_id": "matthews-eyecare-nz-55695732",
+      "source": "https://www.onejervois.co.nz/",
+      "scrape_id": "01a172db-39bb-729f-86a9-19b30912d873",
+      "finding": "Official named mixed-use One Jervois property directory lists Matthews Optometrists, address1JervoisRoadPonsonby1011; current Matthews branch confirms same address (receipt01a172da-b61d-710a-8fa2-6c611fff56fa). Candidate new Other mixed-use premises, not yet applied. Property hours differ from branch; do not import."
+    },
+    {
+      "store_id": "bailey-nelson-hawthorn",
+      "source": "https://baileynelson.com.au/pages/optometrist-hawthorn",
+      "finding": "Old /booking/087-hawthorn returns404. Web search finds official branch and Victoria/currentlocator label COMING SOON at732GlenferrieRoad. Must read actual page and compare existing status before any status/address/URL changes. No closure inferred."
+    }
+  ],
+  "remaining_membership_source_notes": [
+    {
+      "store_id": "sunglass-hut-B713",
+      "branch_receipt": "01a172dc-4cc9-756d-bcca-f0494a052e94",
+      "branch_url": "https://stores.sunglasshut.com/au/nsw/sydney/413-421-george-st",
+      "evidence": "Current branch confirms Shop4-5 groundfloor413-421GeorgeStreet. Council-hosted 27June2013 architect heritage report read in full via Firecrawl receipt01a172de-350c-7251-87fb-9bc626b64be8 explicitly identifies subject tenancies4/5 as GeorgeStreet shopfronts. Existing corridor-au-nsw-sydney-george-street available. Candidate accepted street membership using current address plus dated frontage evidence, not historic tenants or current-status claims. Not applied."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-sunglass-hut-glenelg-b742",
+      "branch_receipt": "01a172dc-4b8e-77c8-b9cf-38eac2deea36",
+      "branch_url": "https://stores.sunglasshut.com/au/sa/glenelg/1-colley-terrace",
+      "evidence": "Old branch URL redirects; current operator calls store JETTY ROAD SGH, gives1ColleyTerraceShop9 and phone0882958493. Do not assume JettyRoad frontage solely from branch marketing name; existing JettyRoad corridor. Further exact frontage research or safe unresolved outcome needed."
+    },
+    {
+      "store_id": "bailey-nelson-hawthorn",
+      "branch_receipt": "01a172de-58ea-73a5-ba8b-16918aa35424",
+      "branch_url": "https://baileynelson.com.au/pages/optometrist-hawthorn",
+      "evidence": "Actual rawHTML JSONLD and rendered markup explicitly name Hawthorn COMING SOON,732GlenferrieRd3122,phone+61399625524. Current record alreadyOpeningSoon but has broken booking URL and no phone. Public-fact override update with preserved old history and staged network rebuild still needed; no exact opening date or current trading claim."
+    }
+  ],
+  "address_batch_2026_10_25": {
+    "status": "Latest full chain 67243 running after three additional addresses and Roselands test expectation repair",
+    "session_id": 67243,
+    "verification_required": [
+      "Compare rebuilt memberships against /tmp/readiness-address-memberships-before.json; investigate every changed association caused by newly supplied centre addresses.",
+      "Verify Kings Langley stable ID, old-name alias and no duplicate place.",
+      "Verify seven new addresses in raw places and environment profiles, with address-specific checked dates."
+    ],
+    "fixed_build_failure": "Generated Smidmore Street record lost its sole member after the centre address became available. Current official Metro OPSM directory confirms exact branch phone; explicit override added and obsolete street point moved to retired history.",
+    "latest_membership_comparison": {
+      "preserved_store_ids": 3089,
+      "changes": [
+        {
+          "store_id": "opsm-2991",
+          "previous": "corridor-au-nsw-marrickville-smidmore-street",
+          "current": "place-au-nsw-marrickville-metro"
+        }
+      ]
+    },
+    "test_expectation_repair": "Roselands expected name updated to official HomeCo. Roselands. Added retained legacy alias and stable membership ID assertions. All 56 retail-place tests passed. Full suite pending latest chain."
+  },
+  "address_batch_2026_10_26": {
+    "status": "Seven QLD repairs verified in generated data; final browser/export verification pending.",
+    "session_id": 45071,
+    "applied": [
+      "Lake Macquarie Square whole-property address and official website",
+      "Lake Munmorah whole-property address and official website",
+      "Singleton Square whole-property address and replacement of unrelated Armidale URL"
+    ],
+    "generated_verified": [
+      "Belmont Citi Centre 41 Macquarie Street",
+      "Eastpoint Food Fair 235-285 New South Head Road",
+      "Lake Macquarie Square 46 Wilsons Road",
+      "Lake Munmorah Shopping Centre 275 Pacific Highway"
+    ],
+    "membership_comparison": {
+      "store_ids_preserved": 3089,
+      "changes_since_address_baseline": [
+        "opsm-2991 explicit previously reviewed Metro membership; no additional changes"
+      ]
+    },
+    "pending": [
+      "Rebuild Singleton, Southgate and Warriewood corrections; refresh readiness register with latest decisions",
+      "Compare all rebuilt memberships to retained baseline",
+      "Verify corrected environment profiles and browser",
+      "Remaining high-priority inventory and source freshness work",
+      "Final packaging and clean rebuild"
+    ],
+    "additional_changes": [
+      "Southgate whole-property intersection address",
+      "Warriewood Square whole-property numbered address and centre URL",
+      "Nepean Village, Tweed Mall and Top Ryde City existing intersection addresses confirmed by official pages"
+    ],
+    "completed_session_id": 33565,
+    "validation_results": {
+      "retail_places": 0,
+      "property_intelligence": 0,
+      "data_health": 0,
+      "readiness_register": 0,
+      "tests": 0,
+      "intelligence": 0,
+      "privacy": 0,
+      "diff": 0
+    },
+    "latest_applied": [
+      "Stockland Merrylands 199-201 McFarlane Street",
+      "Strand Arcade 412-414 George Street",
+      "Wagga Marketplace 87 Baylis Street and replacement of unrelated Albury link"
+    ],
+    "next_rebuild_required": [
+      "Orion Springfield Central",
+      "Sunnybank Plaza",
+      "Miami One",
+      "Brisbane domestic terminal reference",
+      "Brisbane international terminal reference",
+      "Gold Coast terminal reference",
+      "OPSM1162 explicit Earlville membership evidence",
+      "OPSM7059 evidence wording"
+    ],
+    "next_verification": "Poll59684. Verify6latestpropertyreferences/evidence in generated profiles; explicit Brisbane street-address uncertainty must remain visible. Membership comparison expected only2991,1191,7059,1167,1162 differences. Browser/export checks pending.",
+    "verified_profile_ids": [
+      "place-au-nsw-singleton-square",
+      "place-au-nsw-southgate-shopping-centre",
+      "place-au-nsw-warriewood-square",
+      "place-au-nsw-stockland-merrylands",
+      "place-au-nsw-the-strand-arcade",
+      "place-au-nsw-wagga-wagga-marketplace"
+    ],
+    "verification_required": [
+      "Poll73568 to terminal; do not use prior results JSON as current-run proof",
+      "Compare regenerated addresses and evidence fields in profiles",
+      "Compare all membership IDs against address baseline; investigate unexpected changes",
+      "Browser/export checks remain pending"
+    ],
+    "research_next": [
+      "Bega Village official homepage confirms106AucklandStreet; reconcile formerlySapphire identity using current Specsavers tenant page rather than404blog search snippet",
+      "RoyalRandwick council2023agenda confirms73-115BelmoreRoad; read source or currentowner before repair"
+    ],
+    "latest_membership_check": "All3089 IDs preserved; only explicitly reviewed OPSM2991Metro and1191Gateway differences from address baseline after four QLD property repairs.",
+    "latest_completed_session": 73568,
+    "latest_verified_place_ids": [
+      "place-au-qld-brisbane-arcade",
+      "place-au-qld-caloundra-shopping-centre",
+      "place-au-qld-buderim-marketplace",
+      "place-au-qld-bribie-island-shopping-centre",
+      "place-au-qld-cannon-hill-kmart-plaza",
+      "place-au-qld-capalaba-central-shopping-centre",
+      "place-au-qld-clifton-village-shopping-centre"
+    ],
+    "subsequent_changes_not_covered_by_73568": [
+      "place-au-qld-earlville-shopping-town",
+      "place-au-qld-gladstone-centre-plaza",
+      "place-au-qld-metro-middle-park",
+      "place-au-qld-macarthur-central"
+    ],
+    "subsequent_changes_not_covered_by_66105": [
+      "OPSM1162 Earlville explicit membership evidence",
+      "Orion Springfield Central address",
+      "Sunnybank Plaza address",
+      "Miami One address"
+    ]
+  },
+  "latest_completed_validation": {
+    "batch": "market-rebuild",
+    "results": {
+      "retail_places": 0,
+      "recognition": 0,
+      "property_intelligence": 0,
+      "data_health": 0,
+      "readiness_register": 0,
+      "tests": 0,
+      "intelligence": 0,
+      "privacy": 0,
+      "diff": 0
+    }
+  },
+  "source_reconciliation_next": {
+    "bupa": "docs/OPTICAL_READINESS_BUPA_RECONCILIATION.json",
+    "1001": "docs/OPTICAL_READINESS_1001_RECONCILIATION.json",
+    "findings": "LivepublicStockist feeds48Bupa/16 1001, no new/missing IDs. Bupa2phone conflicts:3870877MtGravatt source0730535486 vsheld0730887698;8139006Mornington source0730887698 vsheld0399177851.9address and39point differences.1001 phonesallmatch,15address/URL differences and12point differences. Every differing point has an existing coordinate review attached; assess evidence before overriding.",
+    "raw_evidence": [
+      "/tmp/readiness-bupa-locator.json",
+      "/tmp/readiness-1001-locator.json"
+    ],
+    "scripts": [
+      "/tmp/readiness-fetch-locators.py",
+      "/tmp/readiness-compare-stockist.py"
+    ],
+    "next_action": "Verify Brisbane temporary-closure exclusions and Queen Street membership after dependent rebuild. Complete remaining Bupa/1001 coordinate exception review."
+  },
+  "latest_relocation": {
+    "store_id": "bupa-optical-13626244",
+    "staged_comparison": "/var/folders/68/ghl3tmhn1sj44582kxynzctm0000gn/T/optical-classifier-check-8stdctxo/comparison.json",
+    "only_store_changed": true,
+    "inventory_preserved": 3091,
+    "evidence": "docs/OPTICAL_READINESS_BUPA_BRISBANE_RELOCATION.json",
+    "next_verification": [
+      "Queen Street association accepted; old Adelaide association removed",
+      "Temporarily Closed excludes both current analytics flags",
+      "History and original fetched_at unchanged",
+      "Market links reflect relocated point if current linkage changes",
+      "Browser/export checks"
+    ]
+  },
+  "latest_locator_batch": {
+    "completed_session": 64995,
+    "counts": {
+      "george-and-matilda": 114,
+      "eyecare-plus": 106,
+      "optical-superstore": 53,
+      "chemist-warehouse-optometry": 8
+    },
+    "next": [
+      "Keperra new163379 identity/duplicate check; Jesmond already Unknown",
+      "GM393phone/446pad/17206point review",
+      "MiddlePark branch URL check; HerveyBay already relocated",
+      "Record CWO source reconciliation after active build completes"
+    ],
+    "scope": "Raw source counts, not accepted current-trading store totals."
+  },
+  "next_branch_repairs": {
+    "keperra": {
+      "id": "163379",
+      "name": "Eyecare Plus Optometrists Keperra Priority Optometry",
+      "address": "15 Dallas Pde, Keperra, QLD, 4054, Australia",
+      "phone": "0721436078",
+      "source_url": "https://www.eyecareplus.com.au/keperra/",
+      "checked_at": "2026-10-26",
+      "verification_method": "Live browser tab15; direct HTTP403 and reader cache miss.",
+      "evidence": "Visible current-week hours and optical services confirm operating practice. Address link contains named Priority Optometry feature point -27.409,152.95838; locator -27.408992,152.958391 agrees. No held name/address match; normalized phone check still required.",
+      "limitation": "No opening date or centre membership established."
+    },
+    "currambine": {
+      "store_id": "george-matilda-446",
+      "source_url": "https://georgeandmatilda.com.au/stores/optometrist-currambine-wa/",
+      "centre_evidence": "https://currambinecentral.com.au/centre-map/",
+      "finding": "Operator relocation to Pad1A and centre directory explicitly identify tenant. Held Marmion Avenue membership incorrect. No existing canonical Currambine Central name found; check aliases/source registry before adding property. Whole-property1244MarmionAve,postcode6028; locator postcode1244 erroneous."
+    },
+    "george_town": {
+      "store_id": "george-matilda-393",
+      "phone": "0363302188",
+      "source_url": "https://georgeandmatilda.com.au/stores/optometrist-george-town-tas/",
+      "finding": "Branch and locator agree revised phone. Practice operates selected days; retain Active with visible limitation, not temporarily closed between routine sessions."
+    },
+    "maroochydore": {
+      "store_id": "george-matilda-17206",
+      "finding": "Shop/address unchanged; explicit SunshinePlaza membership confirmed by centre directory. Locator point changed; investigate named business map before applying."
+    }
+  },
+  "branch_stage": "/var/folders/68/ghl3tmhn1sj44582kxynzctm0000gn/T/optical-classifier-check-94xmexjx",
+  "next_verification": "Poll20747. Verify raw stores hash unchanged, exactly4membership moves (2978Riverlink,1569Pines,1354NorthgateWA,2296Settlement),4obsolete street geometry reviewsretired withhistory. Verify17retainedunresolved candidate bindings nowexplained andevidencedatesunchanged. Fullrecognitionqueue audit remains; two Other cases alreadyresearchedneedqueuepresentation, and remainingacceptedcandidatesrequireevidencecomparison. Four earlier retainedmapping annotations passed427Python/privacy/package.",
+  "market_rebuild": {
+    "session_id": 45756,
+    "exit_code": 0,
+    "features_retained": 2454,
+    "matched_stores": 2715,
+    "store_total": 3092
+  },
+  "pending_point_repairs": "docs/OPTICAL_READINESS_GM_POINT_REVIEW.json: both operator-linked business identities now corroborate exact named map features; apply after47325 completes. Preserve original points/history. Then staged network and dependent validation.",
+  "latest_generated_checks": {
+    "currambine_memberships": "GM446 and Specsavers3688 both accepted in new centre",
+    "currambine_property_address": "1244 Marmion Avenue; evidence dated2026-10-26",
+    "keperra": "Blank place retained with Needs review; downstream exclusion still to verify."
+  },
+  "next_source_repair": "Matthews122878592Wanaka: live branch confirms17SirTimWallisDrive replacing23CardronaValleyRoad. Named map -44.703684,169.1528024 matches exact business/newaddress. Evidence in MATTHEWS_EYECARE reconciliation. Apply after active validation; preserve oldpoint/address/history and revise old association without assuming ThreeParks membership.",
+  "source_batch_terminal": {
+    "session45239": "Completed; Matthews28sameIDs/1relocation,TOC19allcomparedfieldsmatch,Dresdenlistingcaptured;Laubmanreadtimedout. No Laubman roster completion claim.",
+    "session33512": "Dresden5branchdetailsmatch held snapshot; no new/absent IDs. Full listing extra Canadian branches explicitly out ofscope."
+  },
+  "next_source_actions": [
+    "Wait for address-review dependent validation; verify only address evidence changes against baseline recorded in OPTICAL_READINESS_ADDRESS_REVIEW_LINKS.json.",
+    "Verify remaining94high property outcomes,38high unresolved memberships,full promoted queue and user-facing source limitations.",
+    "Final clean rebuild, allJS tests, package, browser and actual exports."
+  ],
+  "active_source_check": null,
+  "source_checks_pending": [
+    "Laubman branch batch73075 terminal failure on Ipswich timeout; roster evidence complete but branch details not.",
+    "OW and National Pharmacies parsed comparisons match; verify parser coverage before recording final outcomes.",
+    "Review BN branch differences and Hawthorn opening evidence when75763 finishes.",
+    "Remaining OPSM AU/NZ, SpecsaversNZ, ProVision, small eyewear sources and Bupa exceptions."
+  ],
+  "latest_staged_repair": {
+    "store_id": "bailey-nelson-eastgardens",
+    "stage": "/var/folders/68/ghl3tmhn1sj44582kxynzctm0000gn/T/optical-classifier-check-9o9s0r0g",
+    "evidence": "docs/OPTICAL_READINESS_BN_EASTGARDENS_PHONE.json",
+    "next": "Run dependent builds and tests; record BN source outcome after verification. Remaining source and final acceptance work continues."
+  },
+  "active_validation": {
+    "session_id": 20747,
+    "results_path": "/tmp/readiness-recognition-four-results.json",
+    "purpose": "Four explicitly evidenced OPSM centre memberships and seventeen retained unresolved candidate bindings"
+  },
+  "source_access_attempts_latest": {
+    "checked_at": "2026-10-26",
+    "opsm_au": "Public locator endpoint curl HTTP error; no roster captured.",
+    "opsm_nz": "Public locator endpoint curl HTTP error; no roster captured.",
+    "specsavers_nz": "HTTP list failed; browser tab18 rendered complete61store list, saved roster comparison. Branch detail check not complete."
+  },
+  "previous_validation_failure": {
+    "session_id": 42340,
+    "failed_test": "test_independent_public_profiles_are_explicit_and_safe",
+    "reason": "Affiliation remap did not carry missing directory URL",
+    "repair": "Add directory_url to missing-field propagation on accepted identity remaps; staged diff verified against raw source URLs."
+  },
+  "latest_unresolved_verification": {
+    "passed": 38,
+    "failed": 0,
+    "evidence_file": "docs/OPTICAL_READINESS_UNRESOLVED_VERIFICATION.json",
+    "scope": "Every current High membership and recognition issue; generated-data verification only. Browser/export verification remains separate."
+  },
+  "next_retained_batch": {
+    "report": "docs/OPTICAL_READINESS_STATUS_EVIDENCE_REVIEWS_EIGHTH.json",
+    "applied": 106,
+    "verification": "pending"
+  },
+  "remaining_inventory_report": "docs/OPTICAL_READINESS_REMAINING_MEMBERSHIP_INVENTORY.json",
+  "next_priority_evidence_case": "Poll37892 to terminal. Inspect EyeLove acceptedT2property profile/address and Emphasis Unknown, blankcanonicalmembership, bothanalyticsfalse, currentreceipt evidence. Important: recovered Emphasis address classifier now namesSamfordCentral; inspect any automaticallygenerated Samford property for stale/tenant-unit/address/point issues before treating casecomplete. Two records remain in78focusedqueue until outcomesverified. Batch14 browserNZDunbar/Christensen remains; all fullgoal finalaudit/browser/package obligations remain.",
+  "remaining_inventory_cursor": "All354 assessed against retained status/premises notes.153 followups unresolved in OPTICAL_READINESS_MEMBERSHIP_FOLLOWUP.json; this excludes separately accepted-store recognition candidates.",
+  "tenant_export_fix": {
+    "files": [
+      "assets/app.js",
+      "assets/intelligence.js",
+      "tests/test_intelligence.js"
+    ],
+    "finding": "Pilot co-tenancy dataset omitted newly accepted optical tenants from CSV. UI now derives accepted optical tenants from certified exact-place stores, retains original status and dates, excludes duplicates/neighbours/unresolved/closed records.",
+    "actual_download": "/Users/ayden/Downloads/bailey-place-tenants-2026-10-27.csv",
+    "js_validation_session": null,
+    "js_results": "/tmp/readiness-tenant-export-js-results.json",
+    "js_validation_results": {
+      "test_environment_metrics.js": 0,
+      "test_environments.js": 0,
+      "test_excluded_context.js": 0,
+      "test_intelligence.js": 0,
+      "test_location_news.js": 0,
+      "test_map_markers.js": 0,
+      "test_overview.js": 0,
+      "test_store_services.js": 0
+    }
+  },
+  "research_tool_preference": "User instruction27October2026: use retained evidence and standard ChatGPT web access first. Firecrawl only where these cannot retrieve required information; respect usage limits. Current balance checked377, billing end2026-11-20T22:46:19.662Z. No separate personal cap found in accessible guidance.",
+  "next_research": "Next ten address cases saved as preliminary research in docs/OPTICAL_READINESS_NEXT_ADDRESS_RESEARCH.json. Continue identity/address evidence; do not infer specific Optomeyes successor solely from network-level acquisition or point. Cairns T2 browser and actual exports verified in batch15 document; full goal-wide validation remains outstanding.",
+  "clean_build_followup": "Staged market rebuild succeeded without remote queries after adding 237 new coordinate-bound ABS receipts. Existing receipts/dates and demographic features/codes unchanged. Exact one-store Mount Martha coordinate correction applied from operator-linked map and ABS rechecked. Dependent validation live; final whole-project clean rebuild still required.",
+  "prepared_next_batches": [
+    "docs/OPTICAL_READINESS_FOLLOWUP_BATCH_TWENTY.json: seven prepared membership outcomes, not applied. Scripts /tmp/readiness-apply-twenty.py and /tmp/readiness-verify-twenty.py prepared. Ensure checker template uses normal nine stages after19 completes.",
+    "docs/OPTICAL_READINESS_THREE_ADDRESS_RECOVERIES.json: three address fixes prepared, not applied. DreamEyes needs separate46-58BuckinghamAveSpringvaleShoppingCentre canonical property, not SpringvaleCentral; prepare property+lowpoint+membership. Care4eyes andEyeSociety unresolvedreceipts must use postrepairfingerprints."
+  ],
+  "next_address_repair": {
+    "document": "docs/OPTICAL_READINESS_THREE_ADDRESS_RECOVERIES.json",
+    "apply_script": "/tmp/readiness-apply-three.py",
+    "status": "Three repairs promoted from verified exact-three-row stage. Care4eyes incorrect automatic centre label overridden to Unclassified. Dependent checks live."
+  },
+  "prepared_corridor_followup": "docs/OPTICAL_READINESS_RETAINED_CORRIDOR_FOLLOWUP.json",
+  "remaining_osm_research": "docs/OPTICAL_READINESS_REMAINING_OSM_RESEARCH.json",
+  "latest_browser_verification": "Springvale profile and actual Summary/Tenant CSVs verified; see THREE_ADDRESS_RECOVERIES.",
+  "staged_abs_query": {
+    "session_id": 42354,
+    "script": "/tmp/readiness-stage-abs-queries.py",
+    "inventory": "/tmp/readiness-market-query-inventory.json",
+    "results": "/tmp/readiness-staged-abs-queries.json",
+    "store_count_requiring_query": 236,
+    "status": "Terminal success: 236 results, zero failures. Comparison saved in ABS_REBUILD_RECONCILIATION; not promoted."
+  },
+  "market_rebuild_regression": "tests/test_market_rebuild_evidence.py passed: retained unmatched authoritative receipt stays unresolved, never nearest-area fallback, checked date preserved.",
+  "last_validation_failure": {
+    "session_id": 14511,
+    "reason": "Obsolete Tamaki Drive coordinate override after sole store moved to correct street; retired with original corridor and membership preserved."
+  },
+  "final_ui_package_validation": {
+    "test_environment_metrics": 0,
+    "test_environments": 0,
+    "test_excluded_context": 0,
+    "test_intelligence": 0,
+    "test_location_news": 0,
+    "test_map_markers": 0,
+    "test_overview": 0,
+    "test_store_services": 0,
+    "app-syntax": 0,
+    "package": 0,
+    "diff": 0
+  },
+  "historical_pending_superseded_by_final_audit": [
+    "After session90548 completes, apply five remaining EyeQ unresolved receipts (Jannali,Cootamundra,Lithgow,Mackay,Young) using premises_research evidence. Full25branch identity/address/phone comparison saved docs/OPTICAL_READINESS_EYEQ_LOCATOR.json. Do not downgrade richer Rowville/Woden addresses.",
+    "Poll session90548. Verify Subiaco accepted to existing Rokeby corridor and seven EyeQ unresolved receipt reasons/dates reach certification. No store fields/IDs/points changed. Remaining EyeQ Jannali/Cootamundra/Lithgow/Mackay/Young and other named reviews still need reconciliation.",
+    "Continue outstanding High place addresses, named-store mappings and source reconciliation. Oscar locator newMountBarker156 needs reconciliation; unchanged119 source records checked but working snapshot not promoted. Finish browser representative AU/NZ flows, packaging privacy and clean rebuild before signoff.",
+    "Rebuild and verify Comet Place and Gateway Business Centre Other associations; actual store CSV and broader browser checks await unlocked Mac. Continue full-inventory High issues.",
+    "Broaden browser/export verification across remaining repaired records, streets, standalone and unresolved cases. Clifford Gardens actual summary export verified; QVB and M\u0101nawa Bay profiles verified.",
+    "Verify packaged privacy, complete clean-rebuild evidence and all readiness requirements before sign-off.",
+    "High priority: investigate/correct OPSM2934 displaced store coordinates (-35.11402,138.54753), against named Southgate Plaza reference(-35.10663,138.52094), with retained original source and explicit point limitations. Ensure this newly discovered coordinate issue is carried into readiness register; identity merge alone does not resolve it.",
+    "After43085: compare all generated store fields against /tmp/readiness-before-southgate-store-point.json, verify only intended OPSM2934 coordinate/evidence fields changed and source dates preserved. Verify memberships against /tmp/readiness-address-memberships-before.json with expected nine branch mapping changes (previous seven plus OPSM1422 and OPSM2934). Verify corrected pin and explicit approximation in browser and actual store export."
+  ],
+  "pending": [],
+  "current_verification": "docs/OPTICAL_READINESS_FINAL_VERIFICATION.json",
+  "remaining_limits": [
+    "604 investigated unresolved place associations excluded from unsupported place analysis; 30 accepted standalone/Other records are a different category, not unresolved failures.",
+    "20 records still lack meaningful addresses; 181 Standard property-address gaps remain open. Use supported individual business addresses and labelled reference points; do not use gaps for navigation or surveyed boundaries.",
+    "Only 249 of 1814 named-network records satisfy the current-source measure in this snapshot. Brand reconciliation did not renew source capture dates automatically. Usable last-known records are not current trading confirmation.",
+    "Broader tenant directories and street research are partial. Missing tenants do not establish absence or vacancy. Screening completeness is not census completeness or investment confidence.",
+    "NZ demographic catchments are not published; Australian proxies are not substituted."
+  ],
+  "final_verification": "docs/OPTICAL_READINESS_FINAL_VERIFICATION.json"
+}

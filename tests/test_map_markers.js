@@ -20,3 +20,26 @@ assert.equal(placeClusterPresentation([...corridors, store]).icon, placeClusterP
 assert.match(mapClusterLabel([...mixed, store]), /^1 shopping centre and 1 high-street corridor and 1 store nearby/);
 assert.equal(placeClusterPresentation([place('x', 'other')]).label, '1 other place');
 console.log('Map marker type and count tests passed');
+
+// Detached cluster groups may retain stale child trees. Joined clusters must
+// reflect the applied data selection, including an empty store selection.
+const refreshSource = source.slice(source.indexOf('  function refreshOverviewClusters()'), source.indexOf('  const selectionLayer'));
+let selectedMarkers = [{options:{storeId:'selected',baseLatitude:-33,baseLongitude:151},getTooltip:()=>null}];
+const selectedPlace = {options:{placeId:'place',baseLatitude:-33,baseLongitude:151},getTooltip:()=>null};
+let rendered = [];
+const staleGroup = {getLayers(){throw new Error('Stale detached cluster tree was read');}};
+const refresh = vm.runInNewContext(`(() => {${refreshSource}; return refreshOverviewClusters;})()`, {
+  map:{getZoom:()=>5,hasLayer:()=>true,removeLayer:()=>{}},
+  state:{activeLayers:new Set(['stores','centres'])},
+  mixedOverviewLayer:{clearLayers:()=>{rendered=[];},addLayers:markers=>{rendered=markers;}},
+  storeClusters:staleGroup,centreLayer:staleGroup,
+  storeMarkersForActiveMapView:()=>selectedMarkers,
+  centreMarkersForActiveMapView:()=>[selectedPlace],
+  L:{marker:(_point,options)=>({options,on:()=>{}})},refreshIcons:()=>{},
+});
+refresh();
+assert.deepEqual(Array.from(rendered,marker=>marker.options.storeId || marker.options.placeId), ['selected','place']);
+selectedMarkers=[];
+refresh();
+assert.deepEqual(Array.from(rendered,marker=>marker.options.placeId), ['place']);
+console.log('Joined clusters use applied filters, including empty results');

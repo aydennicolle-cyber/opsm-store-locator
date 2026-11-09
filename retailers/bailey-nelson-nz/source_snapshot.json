@@ -1,7 +1,7 @@
 {
   "source_url": "https://baileynelson.co.nz/pages/optometrist-near-me",
-  "fetched_at": "2026-09-01T07:43:01+00:00",
-  "list_count": 15,
+  "fetched_at": "2026-10-25T07:31:20+00:00",
+  "list_count": 16,
   "store_count": 16,
   "collection_method": "Official store list, Schema.org store pages and official map links",
   "stores": [
@@ -15,7 +15,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-albany-auckland#localbusiness",
         "name": "Bailey Nelson Albany",
         "url": "https://baileynelson.co.nz/pages/optometrist-albany-auckland",
-        "image": "https://images.prismic.io/baileynelson/Zr5oz0aF0TcGI-Vg_Albany.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/Zr5oz0aF0TcGI-Vg_Albany.jpg?q=100",
         "telephone": "+6499419837",
         "email": "albany@baileynelson.co.nz",
         "address": {
@@ -116,7 +116,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-auckland-cbd#localbusiness",
         "name": "Bailey Nelson Auckland CBD",
         "url": "https://baileynelson.co.nz/pages/optometrist-auckland-cbd",
-        "image": "https://images.prismic.io/baileynelson/Zr5qgkaF0TcGI-WP_AucklandCBD.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/Zr5qgkaF0TcGI-WP_AucklandCBD.jpg?q=100",
         "telephone": "+6499419833",
         "email": "aucklandcbd@baileynelson.co.nz",
         "address": {
@@ -217,7 +217,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-botany#localbusiness",
         "name": "Bailey Nelson Botany",
         "url": "https://baileynelson.co.nz/pages/optometrist-botany",
-        "image": "https://images.prismic.io/baileynelson/Zr5r20aF0TcGI-Wp_botany.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/Zr5r20aF0TcGI-Wp_botany.jpg?q=100",
         "telephone": "+6499419989",
         "email": "botany@baileynelson.co.nz",
         "address": {
@@ -318,7 +318,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-cashel-street#localbusiness",
         "name": "Bailey Nelson Cashel Street",
         "url": "https://baileynelson.co.nz/pages/optometrist-cashel-street",
-        "image": "https://images.prismic.io/baileynelson/Zr5wqEaF0TcGI-Ye_CashelSt.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/Zr5wqEaF0TcGI-Ye_CashelSt.jpg?q=100",
         "telephone": "+6439306645",
         "address": {
           "@type": "PostalAddress",
@@ -417,7 +417,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-dunedin#localbusiness",
         "name": "Bailey Nelson Dunedin",
         "url": "https://baileynelson.co.nz/pages/optometrist-dunedin",
-        "image": "https://images.prismic.io/baileynelson/aR-VvmGnmrmGqGKE_Image_20251120_092236_315.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/aR-VvmGnmrmGqGKE_Image_20251120_092236_315.jpg?q=100",
         "telephone": "+64 3 244 8027",
         "email": "dunedin@baileynelson.co.nz",
         "address": {
@@ -518,7 +518,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-hamilton#localbusiness",
         "name": "Bailey Nelson Hamilton",
         "url": "https://baileynelson.co.nz/pages/optometrist-hamilton",
-        "image": "https://images.prismic.io/baileynelson/Z9oxmTiBA97GioJ6_Image_20250319_135011_336.jpeg?auto=format%2Ccompress&rect=567%2C855%2C2348%2C1859&w=3428&h=2714",
+        "image": "https://images.prismic.io/baileynelson/Z9oxmTiBA97GioJ6_Image_20250319_135011_336.jpeg?rect=567%2C855%2C2348%2C1859&w=3428&h=2714&q=100",
         "telephone": "+6479700391",
         "email": "hamilton@baileynelson.co.nz",
         "address": {
@@ -610,6 +610,107 @@
       }
     },
     {
+      "official_url": "https://baileynelson.co.nz/pages/optometrist-nelson",
+      "map_url": "",
+      "resolved_map_url": "https://baileynelson.co.nz/booking",
+      "structured_data": {
+        "@context": "https://schema.org",
+        "@type": "Optician",
+        "@id": "https://baileynelson.co.nz/pages/optometrist-nelson#localbusiness",
+        "name": "Bailey Nelson Nelson",
+        "url": "https://baileynelson.co.nz/pages/optometrist-nelson",
+        "image": "https://images.prismic.io/baileynelson/Zt-6GRoQrfVKl4Sv_24-BN-NSO-WebAssets-Comingsoon.jpg?q=100",
+        "telephone": "+6448878993",
+        "email": "nelson@baileynelson.co.nz",
+        "address": {
+          "@type": "PostalAddress",
+          "extendedAddress": "Shop 234",
+          "streetAddress": "216 Queen Street, Richmond Mall",
+          "addressLocality": "Richmond",
+          "addressRegion": "Nelson",
+          "postalCode": "7020",
+          "addressCountry": "NZ"
+        },
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Bailey Nelson",
+          "url": "https://baileynelson.co.nz"
+        },
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optometry Services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Comprehensive Eye Tests"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Contact Lens Eye Tests"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Visual Fields Testing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ultra-wide retinal imaging"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optical & Sunglass styling"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Free frame adjustments"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Prescription glasses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Sunglasses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Contact lenses"
+            }
+          }
+        ]
+      }
+    },
+    {
       "official_url": "https://baileynelson.co.nz/pages/optometrist-ponsonby",
       "map_url": "https://maps.app.goo.gl/baQVwDL7NFmeGU3P9",
       "resolved_map_url": "https://www.google.com/maps/place/Bailey+Nelson+Optometrist+-+Ponsonby/@-36.855511,174.7460373,15z/data=!4m6!3m5!1s0x6d0d4796bf1051a5:0x714293e28f1f70d!8m2!3d-36.855511!4d174.7460373!16s%2Fg%2F11cjjvr3fs?sa=X&ved=1t:2428&ictx=111&coh=219816&entry=tts&g_ep=EgoyMDI0MDgxMi4wKgBIAVAD",
@@ -619,7 +720,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-ponsonby#localbusiness",
         "name": "Bailey Nelson Ponsonby",
         "url": "https://baileynelson.co.nz/pages/optometrist-ponsonby",
-        "image": "https://images.prismic.io/baileynelson/aR6bL2GnmrmGqDw5_IMG_1115.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/aR6bL2GnmrmGqDw5_IMG_1115.jpg?q=100",
         "telephone": "+6499419836",
         "email": "ponsonby@baileynelson.co.nz",
         "address": {
@@ -720,7 +821,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-queensgate#localbusiness",
         "name": "Bailey Nelson Queensgate",
         "url": "https://baileynelson.co.nz/pages/optometrist-queensgate",
-        "image": "https://images.prismic.io/baileynelson/aPlznrpReVYa3lgV_fe2b04fb-a3dd-4711-8ec7-976330e67203-2-.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/aPlznrpReVYa3lgV_fe2b04fb-a3dd-4711-8ec7-976330e67203-2-.jpg?q=100",
         "telephone": "+64 4 219 0276",
         "email": "queensgate@baileynelson.co.nz",
         "address": {
@@ -812,6 +913,106 @@
       }
     },
     {
+      "official_url": "https://baileynelson.co.nz/pages/optometrist-queenstown",
+      "map_url": "",
+      "resolved_map_url": "https://baileynelson.co.nz/booking",
+      "structured_data": {
+        "@context": "https://schema.org",
+        "@type": "Optician",
+        "@id": "https://baileynelson.co.nz/pages/optometrist-queenstown#localbusiness",
+        "name": "Bailey Nelson Queenstown - NOW OPEN",
+        "url": "https://baileynelson.co.nz/pages/optometrist-queenstown",
+        "image": "https://images.prismic.io/baileynelson/qknVzsZUSXU6003T_Bailey-Nelson-Queenstown.jpg?q=100",
+        "email": "queenstown@baileynelson.co.nz",
+        "address": {
+          "@type": "PostalAddress",
+          "extendedAddress": "Shop C-09",
+          "streetAddress": "19 Grant Road",
+          "addressLocality": "Frankton",
+          "addressRegion": "Queenstown",
+          "postalCode": "9300",
+          "addressCountry": "NZ"
+        },
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Bailey Nelson",
+          "url": "https://baileynelson.co.nz"
+        },
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optometry Services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Comprehensive Eye Tests"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Contact Lens Eye Tests"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Visual Fields Testing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ultra-wide retinal imaging"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optical & Sunglass styling"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Free frame adjustments"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Prescription glasses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Sunglasses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Contact lenses"
+            }
+          }
+        ]
+      }
+    },
+    {
       "official_url": "https://baileynelson.co.nz/pages/optometrist-riccarton",
       "map_url": "https://maps.app.goo.gl/VjPZzZdZjRJZN36A9",
       "resolved_map_url": "https://www.google.com/maps/place/Bailey+Nelson+Optometrist+-+Riccarton/@-43.5308029,172.598759,15z/data=!4m6!3m5!1s0x6d318af313a35d49:0x54b6ff83b9186230!8m2!3d-43.5308029!4d172.598759!16s%2Fg%2F11b86cy_py?sa=X&ved=1t:2428&ictx=111&coh=219816&entry=tts&g_ep=EgoyMDI0MDgxMi4wKgBIAVAD",
@@ -821,7 +1022,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-riccarton#localbusiness",
         "name": "Bailey Nelson Riccarton",
         "url": "https://baileynelson.co.nz/pages/optometrist-riccarton",
-        "image": "https://images.prismic.io/baileynelson/Zr5xOkaF0TcGI-Yr_Riccarton.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/Zr5xOkaF0TcGI-Yr_Riccarton.jpg?q=100",
         "telephone": "+6439306644",
         "email": "riccarton@baileynelson.co.nz",
         "address": {
@@ -922,7 +1123,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-st-lukes#localbusiness",
         "name": "Bailey Nelson St Lukes - Now Open",
         "url": "https://baileynelson.co.nz/pages/optometrist-st-lukes",
-        "image": "https://images.prismic.io/baileynelson/agUOkqYofJOwHO_a_BN-St-Lukes-Store-Image-2026-02.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/agUOkqYofJOwHO_a_BN-St-Lukes-Store-Image-2026-02.jpg?q=100",
         "telephone": "006498737941",
         "email": "StLukes@baileynelson.co.nz",
         "address": {
@@ -1023,7 +1224,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-sylvia-park#localbusiness",
         "name": "Bailey Nelson Sylvia Park",
         "url": "https://baileynelson.co.nz/pages/optometrist-sylvia-park",
-        "image": "https://images.prismic.io/baileynelson/Zr5tUUaF0TcGI-XM_SylviaPark.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/Zr5tUUaF0TcGI-XM_SylviaPark.jpg?q=100",
         "telephone": "+6499419990",
         "address": {
           "@type": "PostalAddress",
@@ -1123,7 +1324,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-takapuna#localbusiness",
         "name": "Bailey Nelson Takapuna",
         "url": "https://baileynelson.co.nz/pages/optometrist-takapuna",
-        "image": "https://images.prismic.io/baileynelson/Zr5t10aF0TcGI-Xe_Takapuna.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/Zr5t10aF0TcGI-Xe_Takapuna.jpg?q=100",
         "telephone": "+6499655165",
         "address": {
           "@type": "PostalAddress",
@@ -1222,7 +1423,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-tauranga#localbusiness",
         "name": "Bailey Nelson Tauranga",
         "url": "https://baileynelson.co.nz/pages/optometrist-tauranga",
-        "image": "https://images.prismic.io/baileynelson/aKO4t6Tt2nPbacFh_Tauranga-Image-.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/aKO4t6Tt2nPbacFh_Tauranga-Image-.jpg?q=100",
         "telephone": "+6472829602",
         "address": {
           "@type": "PostalAddress",
@@ -1322,7 +1523,7 @@
         "@id": "https://baileynelson.co.nz/pages/optometrist-willis-street#localbusiness",
         "name": "Bailey Nelson Willis Street",
         "url": "https://baileynelson.co.nz/pages/optometrist-willis-street",
-        "image": "https://images.prismic.io/baileynelson/Zr5vlkaF0TcGI-YA_WillisSt.jpg?auto=format,compress",
+        "image": "https://images.prismic.io/baileynelson/Zr5vlkaF0TcGI-YA_WillisSt.jpg?q=100",
         "telephone": "+6449075387",
         "address": {
           "@type": "PostalAddress",
@@ -1410,209 +1611,6 @@
           }
         ]
       }
-    },
-    {
-      "official_url": "https://baileynelson.co.nz/pages/optometrist-queenstown",
-      "map_url": "",
-      "resolved_map_url": "https://baileynelson.co.nz/booking",
-      "structured_data": {
-        "@context": "https://schema.org",
-        "@type": "Optician",
-        "@id": "https://baileynelson.co.nz/pages/optometrist-queenstown#localbusiness",
-        "name": "Bailey Nelson Queenstown - NOW OPEN",
-        "url": "https://baileynelson.co.nz/pages/optometrist-queenstown",
-        "image": "https://images.prismic.io/baileynelson/qknVzsZUSXU6003T_Bailey-Nelson-Queenstown.jpg?auto=format,compress",
-        "email": "queenstown@baileynelson.co.nz",
-        "address": {
-          "@type": "PostalAddress",
-          "extendedAddress": "Shop C-09",
-          "streetAddress": "19 Grant Road",
-          "addressLocality": "Frankton",
-          "addressRegion": "Queenstown",
-          "postalCode": "9300",
-          "addressCountry": "NZ"
-        },
-        "parentOrganization": {
-          "@type": "Organization",
-          "name": "Bailey Nelson",
-          "url": "https://baileynelson.co.nz"
-        },
-        "makesOffer": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Optometry Services"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Comprehensive Eye Tests"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Contact Lens Eye Tests"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Visual Fields Testing"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Ultra-wide retinal imaging"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Optical & Sunglass styling"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Free frame adjustments"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Prescription glasses"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Sunglasses"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Contact lenses"
-            }
-          }
-        ]
-      },
-      "reviewed_at": "2026-09-12"
-    },
-    {
-      "official_url": "https://baileynelson.co.nz/pages/optometrist-nelson",
-      "map_url": "",
-      "resolved_map_url": "https://baileynelson.co.nz/booking",
-      "structured_data": {
-        "@context": "https://schema.org",
-        "@type": "Optician",
-        "@id": "https://baileynelson.co.nz/pages/optometrist-nelson#localbusiness",
-        "name": "Bailey Nelson Nelson",
-        "url": "https://baileynelson.co.nz/pages/optometrist-nelson",
-        "image": "https://images.prismic.io/baileynelson/Zt-6GRoQrfVKl4Sv_24-BN-NSO-WebAssets-Comingsoon.jpg?auto=format,compress",
-        "email": "nelson@baileynelson.co.nz",
-        "address": {
-          "@type": "PostalAddress",
-          "extendedAddress": "Shop 234",
-          "streetAddress": "216 Queen Street, Richmond Mall",
-          "addressLocality": "Richmond",
-          "addressRegion": "Nelson",
-          "postalCode": "7020",
-          "addressCountry": "NZ"
-        },
-        "parentOrganization": {
-          "@type": "Organization",
-          "name": "Bailey Nelson",
-          "url": "https://baileynelson.co.nz"
-        },
-        "makesOffer": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Optometry Services"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Comprehensive Eye Tests"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Contact Lens Eye Tests"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Visual Fields Testing"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Ultra-wide retinal imaging"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Optical & Sunglass styling"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Free frame adjustments"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Prescription glasses"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Sunglasses"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Contact lenses"
-            }
-          }
-        ]
-      },
-      "reviewed_at": "2026-09-12"
     }
-  ],
-  "supplemental_review_date": "2026-09-12"
+  ]
 }

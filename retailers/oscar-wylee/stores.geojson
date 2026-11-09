@@ -7,7 +7,8 @@
     ],
     "source_url": "https://www.oscarwylee.com.au/locations/",
     "fetched_at": "2026-09-01T07:43:15+00:00",
-    "store_count": 122
+    "store_count": 123,
+    "record_date_note": "Retained source capture plus individually dated additions; per-record fetched_at overrides the original capture date."
   },
   "features": [
     {
@@ -2936,6 +2937,32 @@
         "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
         "audiology": "false",
         "status": "Active"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.8594922,
+          -35.0642569
+        ]
+      },
+      "properties": {
+        "name": "Mount Barker",
+        "id": "156",
+        "country": "Australia",
+        "state": "SA",
+        "city": "Mount Barker",
+        "postal_code": "5251",
+        "full_address": "Mount Barker Central Shopping Centre Shop T35, 15 McLaren St Mount Barker SA 5251",
+        "phone": "(08) 7120 3118",
+        "official_url": "https://www.oscarwylee.com.au/locations/optometrist-mt-barker.html",
+        "services": "Comprehensive eye tests, Prescription glasses, Sunglasses",
+        "audiology": "false",
+        "status": "Active",
+        "fetched_at": "2026-10-25",
+        "source_url": "https://www.oscarwylee.com.au/locations/"
       }
     }
   ]

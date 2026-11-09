@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-30",
+  "status": "NZ centre browser/export verified; street check revealed separately tracked region defect",
+  "place_id": "place-nz-auckland-newmarket-westfield",
+  "tenant_csv": "/Users/ayden/Downloads/bailey-place-tenants-2026-10-30 (1).csv",
+  "tenant_csv_sha256": "cbf650a65f2c42664c9bf5e9924acd8ad3d3f35529b9a675e57c9587dadaaafa",
+  "tenant_count": 3,
+  "exact_membership_match": true,
+  "browser_observations": [
+    "Explore search for Westfield Newmarket with New Zealand country filter yields one documented match; coverage says tenant mix not researched and source optics not assessed.",
+    "Explore profile preserves 277 Broadway address evidence date 2026-09-03 and historical per-measure dates. Two optical records carry stale-source warnings.",
+    "Map opens correct named centre profile. OPSM, Specsavers and Sunglass Hut are IN CENTRE; Parker & Co, Gates Eyewear and Michael Holmes are nearby but not verified in centre.",
+    "NZ demographics remain unavailable; no Australian proxy. Screening completeness 60% explicitly does not measure census completeness or investment confidence.",
+    "Blenheim Specsavers profile displays 67 Market Street and High Street/Market Street membership, last-known capture warning and unavailable NZ demographics. Store search revealed OPSM incorrect Nelson region and duplicate corridor; repair tracked in OPTICAL_READINESS_BLENHEIM_REGION.json."
+  ],
+  "remaining": "Blenheim repaired browser confirmation, other final standalone/unresolved flows and complete goal audit."
+}

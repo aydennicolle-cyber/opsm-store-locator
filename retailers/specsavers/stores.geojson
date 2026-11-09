@@ -4,8 +4,9 @@
     "retailer": "Specsavers",
     "source": "https://www.specsavers.com.au/stores/full-store-list",
     "fetched_at": "2026-09-01T23:21:29.969Z",
-    "store_count": 401,
-    "collection_method": "Official full store list reconciled; structured data captured for new records; structured details retained for unchanged official URLs"
+    "store_count": 403,
+    "collection_method": "Official full store list reconciled; structured data captured for new records; structured details retained for unchanged official URLs",
+    "record_date_note": "Original snapshot plus individually dated upcoming-store additions; original snapshot date is not a fresh check of existing branches."
   },
   "features": [
     {
@@ -9630,6 +9631,58 @@
         "official_url": "https://www.specsavers.com.au/stores/yokine",
         "services": "Optometry; Audiology",
         "audiology": "true"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.01384,
+          -34.063786
+        ]
+      },
+      "properties": {
+        "id": "engadine",
+        "name": "Engadine",
+        "status": "Opening Soon",
+        "country": "Australia",
+        "state": "NSW",
+        "city": "Engadine",
+        "postal_code": "2233",
+        "full_address": "Shop 5, Engadine Central, 1031 Old Princes Highway, Engadine, NSW, 2233",
+        "phone": "",
+        "official_url": "https://www.specsavers.com.au/stores/engadine",
+        "services": "Optometry",
+        "audiology": "false",
+        "fetched_at": "2026-10-26",
+        "source_url": "https://www.specsavers.com.au/stores/engadine"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.58902,
+          -37.486347
+        ]
+      },
+      "properties": {
+        "id": "gisborne",
+        "name": "Gisborne",
+        "status": "Opening Soon",
+        "country": "Australia",
+        "state": "VIC",
+        "city": "Gisborne",
+        "postal_code": "3437",
+        "full_address": "Shop 9 & 10, Gisborne Village Shopping Centre, 22 Brantome Street, Gisborne, VIC, 3437",
+        "phone": "",
+        "official_url": "https://www.specsavers.com.au/stores/gisborne",
+        "services": "Optometry; Audiology",
+        "audiology": "true",
+        "fetched_at": "2026-10-26",
+        "source_url": "https://www.specsavers.com.au/stores/gisborne"
       }
     }
   ]

@@ -19,6 +19,8 @@ from store_rules import meaningful_address, valid_store_point, current_competito
 from statistics import median
 from market_points import resolve_market, authoritative_link
 from build_property_intelligence import load_groups, load_portfolio_assets, portfolio_metrics
+from place_metric_evidence import UNITS, observation, reconcile, merge_place_metrics
+from unresolved_place_reviews import load_reviews as load_unresolved_reviews, review_reason
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -73,12 +75,8 @@ DEVELOPMENT_STATUSES = {
 }
 
 NAMED_RETAILERS = {
-    "OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee",
-    "George & Matilda", "Eyecare Plus", "Optical Superstore",
-    "1001 Optometry", "EyeQ Optometrists", "Laubman & Pank",
-    "Bupa Optical", "Chemist Warehouse Optometry", "Dresden Vision",
-    "Optical Warehouse", "The Optical Company", "Optical by National Pharmacies",
-    "Matthews Eyecare",
+    item["name"] for item in json.loads((DATA / "retailer_registry.json").read_text())["retailers"]
+    if item["is_named_network"]
 }
 SOURCE_DISAGREEMENTS = {}
 GENERIC_PLACE_WORDS = {
@@ -87,6 +85,10 @@ GENERIC_PLACE_WORDS = {
 }
 DISTINCTIVE_OWNERS = {"westfield", "stockland", "eastgate", "vicinity", "homeco", "qic"}
 KNOWN_DISTINCT_PLACE_PAIRS = {
+    # Official Central directory: 13-15 McLaren St; National Pharmacies:
+    # Barker Plaza at Hutchinson/Morphett. Nearby source pins are not aliases.
+    frozenset({"barker-plaza", "mount-barker-central-shopping-centre"}),
+    frozenset({"barker-plaza", "mount-barker-central"}),
     frozenset({"silverdale-mall", "silverdale-centre"}),
     # Vicinity publishes separate North and South assets; shared branding is not identity.
     frozenset({"box-hill-central-north", "box-hill-central-south"}),
@@ -114,6 +116,13 @@ def read_csv(path: Path) -> list[dict]:
         return []
     with path.open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
+
+
+def storefront_place_name(name: str) -> bool:
+    """Retailer branding and numbered tenancy labels cannot name a whole place."""
+    return any(re.match(re.escape(brand) + r"(?:\W|$)", name, re.I) for brand in NAMED_RETAILERS) or bool(
+        re.match(r"^(?:shop|kiosk|suite|unit|level)\s+(?:no\.?\s*)?[a-z]*\d+\b", name, re.I)
+    )
 
 
 def build_place_tenants(places: list[dict], memberships: list[dict], old_to_new: dict[str, str], generated_at: str) -> None:
@@ -381,9 +390,14 @@ def apply_place_consolidations(
         effective_target_setting = reviewed_target_settings.get(
             canonical, target.get("location_setting")
         )
+        reviewed_setting_change = (
+            row.get("canonical_location_setting") == effective_target_setting
+            and effective_target_setting in {"High Street", "Shopping Centre", "Other"}
+            and all(row.get(field) for field in ("reason", "evidence_url", "last_verified_at"))
+        )
         if (
             source.get("country") != target.get("country")
-            or source.get("location_setting") != effective_target_setting
+            or (source.get("location_setting") != effective_target_setting and not reviewed_setting_change)
         ):
             raise ValueError(f"Incompatible place consolidation: {previous} -> {canonical}")
         for alias in [source.get("name", ""), *source.get("aliases", [])]:
@@ -417,6 +431,11 @@ def apply_canonical_place_overrides(places: list[dict], old_to_new: dict[str, st
             deferred.append(row)
             continue
         if not place:
+            if place_id.startswith("corridor-"):
+                # The same road name may occur in many towns. A vanished
+                # derived corridor must be retired or explicitly remapped;
+                # name similarity cannot transfer its identity elsewhere.
+                raise ValueError(f"Unknown canonical corridor override: {place_id}")
             current_name = clean_name(row.get("canonical_name", ""))
             expected_state = row.get("state", "").strip()
             override_names = {
@@ -483,6 +502,28 @@ def apply_canonical_place_overrides(places: list[dict], old_to_new: dict[str, st
             value = row.get(field, "").strip()
             if value:
                 place[field] = value
+                if field == "address":
+                    # Address-only reviews must not advance identity or point dates.
+                    address_checked_at = (row.get("address_checked_at") or verified_at).strip()
+                    try:
+                        datetime.strptime(address_checked_at, "%Y-%m-%d")
+                    except ValueError as exc:
+                        raise ValueError(f"Invalid address review date: {place_id}") from exc
+                    source_date = (row.get("address_source_date") or "").strip()
+                    if source_date:
+                        try:
+                            datetime.strptime(source_date, "%Y-%m-%d")
+                        except ValueError as exc:
+                            raise ValueError(f"Invalid address source date: {place_id}") from exc
+                    place["address_evidence"] = {
+                        "source_url": (row.get("address_evidence_url") or evidence_url).strip(),
+                        "source_date": source_date or None,
+                        "checked_at": address_checked_at,
+                        "basis": (row.get("address_basis") or row.get("reason") or "").strip() or (
+                            "Reviewed place address" if source_date else
+                            "Reviewed place address; publication date not recorded"
+                        ),
+                    }
                 if field == "locality":
                     place["suburb"] = value
     return deferred
@@ -519,8 +560,8 @@ def apply_place_suppressions(
             if len(candidates) == 1:
                 place = candidates[0]
                 place_id = place["place_id"]
-        if not place:
-            raise ValueError(f"Unknown place suppression: {place_id}")
+        if not place and (not source_ids or any(source_id in old_to_new for source_id in source_ids)):
+            raise ValueError(f"Unknown or ambiguous place suppression: {place_id}")
         source_ids |= {
             previous for previous, canonical in old_to_new.items() if canonical == place_id
         }
@@ -532,8 +573,11 @@ def apply_place_suppressions(
             raise ValueError(
                 f"Suppressed place still has stores without explicit remaps: {place_id} -> {unresolved}"
             )
-        places.remove(place)
-        by_id.pop(place_id)
+        # A full upstream rebuild can already omit the retired vague identity.
+        # Keep its evidence/history and still enforce explicit store remaps.
+        if place:
+            places.remove(place)
+            by_id.pop(place_id)
         for source_id in source_ids:
             old_to_new.pop(source_id, None)
         applied.append(
@@ -543,9 +587,38 @@ def apply_place_suppressions(
                 "reason": reason,
                 "evidence_url": evidence_url,
                 "verified_at": verified_at,
+                "already_absent": place is None,
             }
         )
     return applied
+
+
+def recover_registered_addresses(places: list[dict], remaps: dict[str, str]) -> None:
+    """Recover held property addresses only through an existing source-ID mapping."""
+    by_id = {place['place_id']: place for place in places}
+    candidates = defaultdict(list)
+    for row in read_csv(DATA / 'shopping_centres.csv'):
+        place = by_id.get(remaps.get(row.get('venue_id', '')))
+        address = (row.get('street_address') or '').strip()
+        if (not place or place.get('address') or not address
+                or place.get('location_setting') != 'Shopping Centre'
+                or row.get('state') != place.get('state')
+                or not row.get('source_url')
+                or re.search(r'\b(shop|tenancy|unit|kiosk|level)\b', address, re.I)):
+            continue
+        candidates[place['place_id']].append(row)
+    for pid, rows in candidates.items():
+        # Conflicting retained records require review, not last-row-wins selection.
+        if len({r['street_address'].strip() for r in rows}) != 1:
+            continue
+        row = rows[0]
+        place = by_id[pid]
+        place['address'] = row['street_address'].strip()
+        place['address_evidence'] = {
+            'source_url': row['source_url'], 'source_date': None, 'checked_at': '',
+            'record_date': row.get('source_date', ''),
+            'basis': 'Whole-property address recovered from retained shopping-centre registry by existing source ID; record date is not a new source check or publication date.',
+        }
 
 
 def add_official_retail_places(places: list[dict]) -> None:
@@ -576,6 +649,13 @@ def add_official_retail_places(places: list[dict]) -> None:
             existing["source_date"] = verified_at
             existing["source_basis"] = row.get("source_basis", "").strip() or "Authoritative public retail-place record"
             existing["confidence"] = row.get("confidence", "High").strip() or "High"
+            if not existing.get("address") and row.get("address", "").strip():
+                existing["address"] = row["address"].strip()
+                existing["address_evidence"] = {
+                    "source_url": source_url, "source_date": None,
+                    "checked_at": verified_at,
+                    "basis": "Address recovered from the retained official place record; original check date preserved",
+                }
             continue
         place = {
             "place_id": place_id,
@@ -605,6 +685,8 @@ def add_official_retail_places(places: list[dict]) -> None:
             "official_url": source_url,
             "source_url": source_url,
             "coordinate_source_url": row.get("coordinate_source_url", "").strip(),
+            "coordinate_method": "Retained public place reference",
+            "coordinate_reason": "Reference point retained from the public place record; exact entrance and property boundaries have not been established by this record.",
             "source_date": verified_at,
             "status": row.get("status", "Active").strip() or "Active",
             "confidence": row.get("confidence", "High").strip() or "High",
@@ -731,7 +813,7 @@ def validate_place_integrity(places: list[dict], memberships: list[dict], stores
     centres = [place for place in places if place["location_setting"] == "Shopping Centre"]
     for place in centres:
         name = clean_name(place.get("name", ""))
-        if name.startswith(("&", "/")) or slug(name) in generic_names:
+        if name.startswith(("&", "/")) or slug(name) in generic_names or storefront_place_name(name):
             invalid_names.append((place["place_id"], name))
     if invalid_names:
         raise ValueError(f"Malformed or ambiguous shopping-centre names: {invalid_names}")
@@ -798,6 +880,8 @@ def place_name_score(name: str) -> tuple[int, int, int]:
 def should_merge(first: dict, second: dict) -> bool:
     if first.get("country") != second.get("country") or first.get("state") != second.get("state"):
         return False
+    if frozenset({slug(clean_name(first["name"])), slug(clean_name(second["name"]))}) in KNOWN_DISTINCT_PLACE_PAIRS:
+        return False
     distance = haversine(first, second)
     if slug(clean_name(first["name"])) == slug(clean_name(second["name"])) and distance <= 2.0:
         return True
@@ -861,6 +945,8 @@ def merge_centre_cluster(cluster: list[dict]) -> dict:
         "address": "",
         "latitude": round(sum(float(item["latitude"]) for item in cluster) / len(cluster), 6),
         "longitude": round(sum(float(item["longitude"]) for item in cluster) / len(cluster), 6),
+        "coordinate_method": "Average of source centre references",
+        "coordinate_reason": "Approximate display point averaged from the retained centre references; not a surveyed boundary, entrance or shopfront.",
         "owner": first_value("owner"),
         "manager": first_value("manager"),
         "centre_type": first_value("centre_type"),
@@ -879,6 +965,10 @@ def merge_centre_cluster(cluster: list[dict]) -> dict:
         "retailers": retailers,
         "optical_store_count": sum(int(item.get("optical_store_count") or 0) for item in cluster),
         "old_centre_ids": sorted({item["centre_id"] for item in cluster}),
+        **reconcile({field: [observation(field, item[field], {
+            "source_record_id": item["centre_id"], "source_url": item.get("public_url"),
+            "source_date": item.get("metrics_date"),
+        }) for item in cluster if item.get(field) not in (None, "")] for field in UNITS}),
     }
 
 
@@ -1025,6 +1115,9 @@ def add_broad_osm_centres(places: list[dict]) -> list[dict]:
                     "address": " ".join(filter(None, [tags.get("addr:housenumber"), tags.get("addr:street")])),
                     "latitude": latitude,
                     "longitude": longitude,
+                    "coordinate_method": "OpenStreetMap feature reference",
+                    "coordinate_reason": "OpenStreetMap feature reference used for display; the linked official website corroborates identity, not positional accuracy or an entrance.",
+                    "coordinate_source_url": f"https://www.openstreetmap.org/{element['type']}/{element['id']}",
                     "owner": tags.get("owner", ""),
                     "manager": tags.get("operator", ""),
                     "centre_type": "",
@@ -1066,9 +1159,9 @@ def parse_street(address: str) -> str:
 def create_place_from_override(store: dict, override: dict) -> dict:
     setting = override["location_setting"]
     name = clean_name(override["canonical_name"])
-    place_id = (
+    place_id = override.get("canonical_place_id") or (
         centre_place_id(store["country"], store["state"], name)
-        if setting == "Shopping Centre"
+        if setting == "Shopping Centre" or override.get("place_type") == "Airport Terminal"
         else corridor_place_id(store["country"], store["state"], store["suburb"], name)
     )
     return {
@@ -1087,6 +1180,9 @@ def create_place_from_override(store: dict, override: dict) -> dict:
         "address": store["full_address"],
         "latitude": float(store["latitude"]),
         "longitude": float(store["longitude"]),
+        "coordinate_method": "Store-derived place reference",
+        "coordinate_reason": "Place display point inherited from the evidenced store record; it does not establish the property boundary or entrance.",
+        "coordinate_reference_store_id": store.get("store_id", ""),
         "owner": override.get("owner", ""),
         "manager": override.get("manager", ""),
         "centre_type": "",
@@ -1109,7 +1205,8 @@ def create_place_from_override(store: dict, override: dict) -> dict:
 
 
 def promote_store_named_centres(
-    stores: list[dict], places: list[dict], old_to_new: dict[str, str]
+    stores: list[dict], places: list[dict], old_to_new: dict[str, str],
+    unresolved_store_ids=(),
 ) -> None:
     """Promote explicit centre names from official retailer address evidence.
 
@@ -1122,6 +1219,10 @@ def promote_store_named_centres(
         if store.get("location_type") != "Shopping Centre" or not venue_id or not venue_name:
             continue
         if venue_id in old_to_new:
+            continue
+        # A branch name or kiosk number is not a property identity. Keep the
+        # store usable and let the normal review queue expose an unresolved map.
+        if storefront_place_name(venue_name):
             continue
         normalized_name = slug(venue_name)
         normalized_locality = slug(store.get("suburb", ""))
@@ -1149,6 +1250,11 @@ def promote_store_named_centres(
             old_to_new[venue_id] = existing["place_id"]
             continue
 
+        # A last-known tenant address under review cannot independently verify
+        # a new active property. Existing property identities above are retained.
+        if store.get("store_id") in unresolved_store_ids and not current_competitor(store):
+            continue
+
         place_id = centre_place_id(store["country"], store["state"], venue_name)
         collision = next((place for place in places if place["place_id"] == place_id), None)
         if collision:
@@ -1171,6 +1277,9 @@ def promote_store_named_centres(
             "address": store.get("full_address", ""),
             "latitude": float(store["latitude"]),
             "longitude": float(store["longitude"]),
+            "coordinate_method": "Store-derived place reference",
+            "coordinate_reason": "Place display point inherited from the store whose address names this centre; it does not establish the property boundary or entrance.",
+            "coordinate_reference_store_id": store["store_id"],
             "owner": "",
             "manager": "",
             "centre_type": "",
@@ -1197,8 +1306,21 @@ def promote_store_named_centres(
 def main() -> None:
     generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     stores = read_csv(STORES_PATH)
+    unresolved_reviews = load_unresolved_reviews(stores, DATA / 'unresolved_place_reviews.csv')
+    recorded_unresolved_reviews = load_unresolved_reviews(stores, DATA / 'unresolved_place_reviews.csv', include_stale=True)
     centres_payload = json.loads(CENTRES_PATH.read_text(encoding="utf-8"))
     current_centres = centres_payload.get("centres", [])
+    # Retired ambiguous labels must not alter the names, averaged points or
+    # metrics of a real property during clustering. The suppression pass below
+    # still validates every affected store's explicit correction and records
+    # the retained historical IDs.
+    suppressed_source_ids = {
+        source_id.strip()
+        for row in read_csv(SUPPRESSIONS_PATH)
+        for source_id in row.get("source_venue_ids", "").split("|")
+        if source_id.strip()
+    }
+    current_centres = [p for p in current_centres if p["centre_id"] not in suppressed_source_ids]
     places = [merge_centre_cluster(cluster) for cluster in cluster_centres(current_centres)]
     place_by_id = {place["place_id"]: place for place in places}
     old_to_new = {
@@ -1207,44 +1329,68 @@ def main() -> None:
         for old_id in place["old_centre_ids"]
     }
     overrides = {row["store_id"]: row for row in read_csv(OVERRIDES_PATH)}
+    from public_directory_evidence import load as load_directory, reviewed_reference
+    directory_definitions = {p['place_id']: p for p in load_directory(DATA)['places']}
 
     for store_id, override in overrides.items():
         store = next((item for item in stores if item["store_id"] == store_id), None)
         if not store:
             raise ValueError(f"Unknown store-place override: {store_id}")
+        directory_reference = reviewed_reference(store, override, directory_definitions)
+        if directory_reference:
+            # These identities are added below from their own retained evidence.
+            # A store association must not create or overwrite the same place.
+            override['place_id'] = directory_reference
+            continue
+        # A reviewed standalone practice can have a known setting without
+        # belonging to a named retail place. Do not manufacture a blank place.
+        if (override.get("location_setting") == "Other"
+                and not override.get("canonical_name", "").strip()
+                and not override.get("canonical_place_id", "").strip()):
+            override["place_id"] = ""
+            continue
         proposed = create_place_from_override(store, override)
-        existing = next(
-            (
-                place for place in places
-                if place["location_setting"] == proposed["location_setting"]
-                and place["country"] == proposed["country"]
-                and frozenset({slug(clean_name(place["name"])), slug(clean_name(proposed["name"]))})
-                not in KNOWN_DISTINCT_PLACE_PAIRS
-                and (
-                    place["place_id"] == proposed["place_id"]
-                    or (
-                        slug(clean_name(proposed["name"]))
-                        in {
-                            slug(clean_name(place.get("name", ""))),
-                            *(slug(clean_name(alias)) for alias in place.get("aliases", [])),
-                        }
-                        and (
-                            not proposed.get("locality")
-                            or not place.get("locality")
-                            or slug(proposed["locality"]) == slug(place["locality"])
+        if override.get("canonical_place_id"):
+            # Reviewed IDs take precedence over name similarity and distance.
+            # A later canonical override can correct the legacy place type.
+            existing = next((place for place in places
+                             if place["place_id"] == override["canonical_place_id"]
+                             and place["country"] == proposed["country"]), None)
+        else:
+            existing = next(
+                (
+                    place for place in places
+                    if place["location_setting"] == proposed["location_setting"]
+                    and place["country"] == proposed["country"]
+                    and frozenset({slug(clean_name(place["name"])), slug(clean_name(proposed["name"]))})
+                    not in KNOWN_DISTINCT_PLACE_PAIRS
+                    and (
+                        place["place_id"] == proposed["place_id"]
+                        or (
+                            slug(clean_name(proposed["name"]))
+                            in {
+                                slug(clean_name(place.get("name", ""))),
+                                *(slug(clean_name(alias)) for alias in place.get("aliases", [])),
+                            }
+                            and (
+                                not proposed.get("locality")
+                                or not place.get("locality")
+                                or slug(proposed["locality"]) == slug(place["locality"])
+                            )
+                        )
+                        or (
+                            proposed.get("place_type") != "Airport Terminal"
+                            and place.get("place_type") != "Airport Terminal"
+                            and haversine(place, proposed) <= 0.3
+                            and (
+                                distinctive_place_tokens(place)
+                                & distinctive_place_tokens(proposed)
+                            )
                         )
                     )
-                    or (
-                        haversine(place, proposed) <= 0.3
-                        and (
-                            distinctive_place_tokens(place)
-                            & distinctive_place_tokens(proposed)
-                        )
-                    )
-                )
-            ),
-            None,
-        )
+                ),
+                None,
+            )
         if existing:
             if proposed["name"] != existing["name"] and proposed["name"] not in existing["aliases"]:
                 existing["aliases"].append(proposed["name"])
@@ -1273,7 +1419,7 @@ def main() -> None:
     deferred_corridor_names = apply_canonical_place_overrides(
         places, old_to_new, defer_missing_corridors=True
     )
-    promote_store_named_centres(stores, places, old_to_new)
+    promote_store_named_centres(stores, places, old_to_new, unresolved_store_ids=unresolved_reviews)
     suppressions = apply_place_suppressions(places, old_to_new, stores, overrides)
     for override in overrides.values():
         place_id = override.get("place_id", "")
@@ -1306,6 +1452,14 @@ def main() -> None:
             basis = override["evidence_basis"]
             evidence_url = override["official_url"]
             verified_at = override["source_date"]
+        elif store['store_id'] in unresolved_reviews:
+            review = unresolved_reviews[store['store_id']]
+            basis = review_reason(review)
+            evidence_url = review['evidence_url']
+            verified_at = review['reviewed_at']
+        elif store['store_id'] in recorded_unresolved_reviews:
+            basis = 'Previous unresolved-place review needs renewed investigation because material store details changed; no place assigned.'
+            evidence_url = recorded_unresolved_reviews[store['store_id']]['evidence_url']
         elif (store["store_id"].startswith(REVIEWED_INDEPENDENT_PREFIX) or store.get("public_facts_verified_at")) and store.get("location_type") == "Unclassified":
             # A verified storefront can be usable while its setting is unknown.
             # Do not override an explicit review with street/address heuristics.
@@ -1398,6 +1552,8 @@ def main() -> None:
                 "address": name,
                 "latitude": round(sum(float(store["latitude"]) for store in stores_in_cluster) / len(stores_in_cluster), 6),
                 "longitude": round(sum(float(store["longitude"]) for store in stores_in_cluster) / len(stores_in_cluster), 6),
+                "coordinate_method": "Average of mapped street-front stores",
+                "coordinate_reason": "Approximate street reference averaged from the mapped optical stores in this corridor; not a surveyed retail boundary, street endpoint or entrance.",
                 "owner": "",
                 "manager": "",
                 "centre_type": "",
@@ -1448,13 +1604,14 @@ def main() -> None:
         item["place_id"] = place_id
     place_by_id = {place["place_id"]: place for place in places}
 
+    recover_registered_addresses(places, old_to_new)
     memberships = []
     for item in preliminary:
         store = item["store"]
         place_id = item["place_id"]
         place = place_by_id.get(place_id)
         review_status = "Accepted" if item["confidence"] in {"High", "Medium"} and (place_id or item["setting"] == "Other") else "Needs review"
-        if review_status == "Needs review" and (store["retailer"] in NAMED_RETAILERS or store["store_id"].startswith(REVIEWED_INDEPENDENT_PREFIX) or store.get("public_facts_verified_at")):
+        if review_status == "Needs review" and (store["retailer"] in NAMED_RETAILERS or store["store_id"].startswith(REVIEWED_INDEPENDENT_PREFIX) or store.get("public_facts_verified_at") or store['store_id'] in recorded_unresolved_reviews):
             exceptions.append(
                 {
                     "priority": "High" if item["setting"] == "Uncertain" else "Medium",
@@ -1697,7 +1854,7 @@ def build_lookalikes(places: list[dict], memberships: list[dict], stores: list[d
         whitespace = min(100.0, nearest_bailey * 5) if nearest_bailey is not None else None
         competitors = [brand for brand in place["retailers"] if brand != "Bailey Nelson"]
         optical_validation = min(100.0, len(set(competitors)) * 22 + int(place["optical_store_count"]) * 7) if competitors else None
-        retail_metrics = {**place, **property_metrics.get(place["place_id"], {})}
+        retail_metrics = merge_place_metrics(place, property_metrics.get(place["place_id"], {}))
         if place["location_setting"] == "Shopping Centre":
             context = average_available([
                 min(100.0, number(retail_metrics.get("gla_sqm")) / 1800) if number(retail_metrics.get("gla_sqm")) is not None else None,
@@ -1732,7 +1889,9 @@ def build_lookalikes(places: list[dict], memberships: list[dict], stores: list[d
                     field: number(retail_metrics.get(field))
                     for field in ("gla_sqm", "annual_visits", "tenancy_count")
                 } if place["location_setting"] == "Shopping Centre" else {},
-                "retail_context_evidence": property_metrics.get(place["place_id"], {}).get("metric_evidence", {}),
+                "retail_context_evidence": retail_metrics.get("metric_evidence", {}),
+                "retail_context_conflicts": retail_metrics.get("metric_conflicts", {}),
+                "retail_context_reports": retail_metrics.get("metric_observations", {}),
                 "market_features": {
                     field: number((place.get("market") or {}).get(field)) for field in (*fields, "population_2021", "population_growth_2021_2025_number")
                 },

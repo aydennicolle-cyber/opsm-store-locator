@@ -1,0 +1,843 @@
+{
+  "basis": "Official property-page ShoppingCenter structured addresses; corporate Organization addresses excluded. Staged evidence pending canonical mapping. Failed retrievals are not missing-address evidence.",
+  "records": [
+    {
+      "name": "Tuggerah",
+      "slug": "tuggerah",
+      "country": "Australia",
+      "suburb": "Tuggerah",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/tuggerah",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Tuggerah Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tuggerah",
+          "addressRegion": "NSW",
+          "postalCode": "2259",
+          "streetAddress": "50 Wyong Road"
+        }
+      },
+      "scrape_id": "01a17212-9661-77d0-bc78-d0002e5ae6aa",
+      "error": null
+    },
+    {
+      "name": "Mt Gravatt",
+      "slug": "mtgravatt",
+      "country": "Australia",
+      "suburb": "Upper Mt Gravatt",
+      "state": "QLD",
+      "url": "https://www.westfield.com.au/mtgravatt",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Mt Gravatt Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Upper Mt Gravatt",
+          "addressRegion": "QLD",
+          "postalCode": "4122",
+          "streetAddress": "Cnr Logan & Kessels Rd"
+        }
+      },
+      "scrape_id": "01a17212-98a0-730d-a980-cb8841403204",
+      "error": null
+    },
+    {
+      "name": "Parramatta",
+      "slug": "parramatta",
+      "country": "Australia",
+      "suburb": "Parramatta",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/parramatta",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Parramatta Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Parramatta",
+          "addressRegion": "NSW",
+          "postalCode": "2150",
+          "streetAddress": "159-175 Church St"
+        }
+      },
+      "scrape_id": "01a17212-9778-70b8-8f59-f97f155b16b2",
+      "error": null
+    },
+    {
+      "name": "Liverpool",
+      "slug": "liverpool",
+      "country": "Australia",
+      "suburb": "Liverpool",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/liverpool",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Liverpool Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Liverpool",
+          "addressRegion": "NSW",
+          "postalCode": "2170",
+          "streetAddress": "Macquarie Street"
+        }
+      },
+      "scrape_id": "01a17212-b3df-761b-b194-5bbf38205e83",
+      "error": null
+    },
+    {
+      "name": "Warringah Mall",
+      "slug": "warringahmall",
+      "country": "Australia",
+      "suburb": "Brookvale",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/warringahmall",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Warringah Mall Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brookvale",
+          "addressRegion": "NSW",
+          "postalCode": "2100",
+          "streetAddress": "Cnr Old Pittwater Road and Condamine Street"
+        }
+      },
+      "scrape_id": "01a17212-c2b1-743f-8ac7-0565fcaf8713",
+      "error": null
+    },
+    {
+      "name": "Miranda",
+      "slug": "miranda",
+      "country": "Australia",
+      "suburb": "Miranda",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/miranda",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Miranda Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Miranda",
+          "addressRegion": "NSW",
+          "postalCode": "2228",
+          "streetAddress": "600 Kingsway"
+        }
+      },
+      "scrape_id": "01a17212-d295-7772-a278-af6d632baa99",
+      "error": null
+    },
+    {
+      "name": "North Lakes",
+      "slug": "northlakes",
+      "country": "Australia",
+      "suburb": "North Lakes",
+      "state": "QLD",
+      "url": "https://www.westfield.com.au/northlakes",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield North Lakes Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "North Lakes",
+          "addressRegion": "QLD",
+          "postalCode": "4509",
+          "streetAddress": "Cnr Anzac Ave & North Lakes Dr."
+        }
+      },
+      "scrape_id": "01a17212-cbdd-746f-8348-446563dd4f5e",
+      "error": null
+    },
+    {
+      "name": "Kotara",
+      "slug": "kotara",
+      "country": "Australia",
+      "suburb": "Kotara",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/kotara",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Kotara Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kotara",
+          "addressRegion": "NSW",
+          "postalCode": "2289",
+          "streetAddress": "Corner Park Avenue & Northcott Drive"
+        }
+      },
+      "scrape_id": "01a17212-e6ab-74ac-93a6-627d337f9108",
+      "error": null
+    },
+    {
+      "name": "Hurstville",
+      "slug": "hurstville",
+      "country": "Australia",
+      "suburb": "Hurstville",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/hurstville",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Hurstville Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hurstville",
+          "addressRegion": "NSW",
+          "postalCode": "2220",
+          "streetAddress": "Cnr Cross St and Park Rd"
+        }
+      },
+      "scrape_id": "01a17212-ed7a-74db-82b3-0f54663f4fae",
+      "error": null
+    },
+    {
+      "name": "Helensvale",
+      "slug": "helensvale",
+      "country": "Australia",
+      "suburb": "Helensvale",
+      "state": "QLD",
+      "url": "https://www.westfield.com.au/helensvale",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": null,
+      "error": "Rate limit exceeded. Consumed (req/min): 11, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 32s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "name": "Eastgardens",
+      "slug": "eastgardens",
+      "country": "Australia",
+      "suburb": "Eastgardens",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/eastgardens",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Eastgardens Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Eastgardens",
+          "addressRegion": "NSW",
+          "postalCode": "2036",
+          "streetAddress": "152 Bunnerong Rd"
+        }
+      },
+      "error": null,
+      "retrieval_history": [
+        {
+          "checked_at": "2026-10-25",
+          "scrape_id": null,
+          "error": "Rate limit exceeded. Consumed (req/min): 12, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 31s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+        }
+      ],
+      "scrape_id": "01a17264-3a6f-753d-b3ac-d088b900714e"
+    },
+    {
+      "name": "Coomera",
+      "slug": "coomera",
+      "country": "Australia",
+      "suburb": "Coomera",
+      "state": "QLD",
+      "url": "https://www.westfield.com.au/coomera",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Coomera Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Coomera",
+          "addressRegion": "QLD",
+          "postalCode": "4209",
+          "streetAddress": "103 Foxwell Road"
+        }
+      },
+      "error": null,
+      "retrieval_history": [
+        {
+          "checked_at": "2026-10-25",
+          "scrape_id": null,
+          "error": "Rate limit exceeded. Consumed (req/min): 13, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 28s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+        }
+      ],
+      "scrape_id": "01a17264-3a6f-74eb-8913-551ffbb8d33d"
+    },
+    {
+      "name": "Carindale",
+      "slug": "carindale",
+      "country": "Australia",
+      "suburb": "Carindale",
+      "state": "QLD",
+      "url": "https://www.westfield.com.au/carindale",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Carindale Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Carindale",
+          "addressRegion": "QLD",
+          "postalCode": "4152",
+          "streetAddress": "1151 Creek Road"
+        }
+      },
+      "scrape_id": "01a17210-9a5a-7322-8113-944fb38b90e3",
+      "error": null
+    },
+    {
+      "name": "Chermside",
+      "slug": "chermside",
+      "country": "Australia",
+      "suburb": "Chermside",
+      "state": "QLD",
+      "url": "https://www.westfield.com.au/chermside",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Chermside Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chermside",
+          "addressRegion": "QLD",
+          "postalCode": "4032",
+          "streetAddress": "Cnr Gympie & Hamilton Rds"
+        }
+      },
+      "error": null,
+      "retrieval_history": [
+        {
+          "checked_at": "2026-10-25",
+          "scrape_id": null,
+          "error": "Rate limit exceeded. Consumed (req/min): 14, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 28s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+        }
+      ],
+      "scrape_id": "01a17264-3a4a-7687-a2f1-8a5976cb93f8"
+    },
+    {
+      "name": "Hornsby",
+      "slug": "hornsby",
+      "country": "Australia",
+      "suburb": "Hornsby",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/hornsby",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Hornsby Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hornsby",
+          "addressRegion": "NSW",
+          "postalCode": "2077",
+          "streetAddress": "236 Pacific Highway"
+        }
+      },
+      "scrape_id": "01a17212-f37c-766e-ae60-b2ea199181c7",
+      "error": null
+    },
+    {
+      "name": "Burwood",
+      "slug": "burwood",
+      "country": "Australia",
+      "suburb": "Burwood",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/burwood",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Burwood Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Burwood",
+          "addressRegion": "NSW",
+          "postalCode": "2134",
+          "streetAddress": "100 Burwood Rd"
+        }
+      },
+      "error": null,
+      "retrieval_history": [
+        {
+          "checked_at": "2026-10-25",
+          "scrape_id": null,
+          "error": "Rate limit exceeded. Consumed (req/min): 15, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 24s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+        }
+      ],
+      "scrape_id": "01a17265-10c6-77fc-b30d-3f39919f8fb8"
+    },
+    {
+      "name": "Bondi Junction",
+      "slug": "bondijunction",
+      "country": "Australia",
+      "suburb": "Bondi Junction",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/bondijunction",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Bondi Junction Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bondi Junction",
+          "addressRegion": "NSW",
+          "postalCode": "2022",
+          "streetAddress": "500 Oxford St"
+        }
+      },
+      "error": null,
+      "retrieval_history": [
+        {
+          "checked_at": "2026-10-25",
+          "scrape_id": null,
+          "error": "Rate limit exceeded. Consumed (req/min): 16, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 24s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+        }
+      ],
+      "scrape_id": "01a17265-100d-74f1-8e2b-3216767cad0f"
+    },
+    {
+      "name": "Sydney",
+      "slug": "sydney",
+      "country": "Australia",
+      "suburb": "Sydney",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/sydney",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Sydney Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sydney",
+          "addressRegion": "NSW",
+          "postalCode": "2000",
+          "streetAddress": "Cnr Pitt St Mall and Market St"
+        }
+      },
+      "error": null,
+      "retrieval_history": [
+        {
+          "checked_at": "2026-10-25",
+          "scrape_id": null,
+          "error": "Rate limit exceeded. Consumed (req/min): 17, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 22s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+        }
+      ],
+      "scrape_id": "01a17265-10b5-73f7-a4ec-cf7bd3499b67"
+    },
+    {
+      "name": "Fountain Gate",
+      "slug": "fountaingate",
+      "country": "Australia",
+      "suburb": "Fountain Gate",
+      "state": "VIC",
+      "url": "https://www.westfield.com.au/fountaingate",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Fountain Gate Shopping Centre",
+        "address": {
+          "streetAddress": "25-55 Overland Drive",
+          "addressLocality": "Fountain Gate",
+          "addressRegion": "VIC",
+          "postalCode": "3805"
+        }
+      },
+      "error": null,
+      "scrape_id": "01a1721b-c8cb-730b-a764-e66ef00c303b",
+      "extraction_basis": "Official property homepage visible footer; not JSON-LD extraction"
+    },
+    {
+      "name": "Woden",
+      "slug": "woden",
+      "country": "Australia",
+      "suburb": "Woden",
+      "state": "ACT",
+      "url": "https://www.westfield.com.au/woden",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": null,
+      "error": "Rate limit exceeded. Consumed (req/min): 19, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 21s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "name": "Whitford City",
+      "slug": "whitfordcity",
+      "country": "Australia",
+      "suburb": "Hillarys",
+      "state": "WA",
+      "url": "https://www.westfield.com.au/whitfordcity",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": null,
+      "error": "Rate limit exceeded. Consumed (req/min): 20, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 19s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "name": "West Lakes",
+      "slug": "westlakes",
+      "country": "Australia",
+      "suburb": "West Lakes",
+      "state": "SA",
+      "url": "https://www.westfield.com.au/westlakes",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": null,
+      "error": "Rate limit exceeded. Consumed (req/min): 21, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 19s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "name": "Tea Tree Plaza",
+      "slug": "teatreeplaza",
+      "country": "Australia",
+      "suburb": "Modbury",
+      "state": "SA",
+      "url": "https://www.westfield.com.au/teatreeplaza",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Tea Tree Plaza Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Modbury",
+          "addressRegion": "SA",
+          "postalCode": "5092",
+          "streetAddress": "976 North East Rd"
+        }
+      },
+      "error": null,
+      "retrieval_history": [
+        {
+          "checked_at": "2026-10-25",
+          "scrape_id": null,
+          "error": "Rate limit exceeded. Consumed (req/min): 22, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 19s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+        }
+      ],
+      "scrape_id": "01a17265-10b0-75f2-b32c-4009fbf3b45b"
+    },
+    {
+      "name": "Southland",
+      "slug": "southland",
+      "country": "Australia",
+      "suburb": "Cheltenham",
+      "state": "VIC",
+      "url": "https://www.westfield.com.au/southland",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Southland Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cheltenham",
+          "addressRegion": "VIC",
+          "postalCode": "3192",
+          "streetAddress": "1239 Nepean Hwy"
+        }
+      },
+      "error": null,
+      "retrieval_history": [
+        {
+          "checked_at": "2026-10-25",
+          "scrape_id": null,
+          "error": "Rate limit exceeded. Consumed (req/min): 23, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 16s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+        }
+      ],
+      "scrape_id": "01a17266-1fe7-778e-af1a-f816203c11c8",
+      "suggested_existing_place_id": "place-au-vic-westfield-southland",
+      "implementation_status": "Applied to existing canonical place; rebuild verification pending"
+    },
+    {
+      "name": "Plenty Valley",
+      "slug": "plentyvalley",
+      "country": "Australia",
+      "suburb": "Mill Park",
+      "state": "VIC",
+      "url": "https://www.westfield.com.au/plentyvalley",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Plenty Valley Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mill Park",
+          "addressRegion": "VIC",
+          "postalCode": "3082",
+          "streetAddress": "415 McDonalds Road"
+        }
+      },
+      "error": null,
+      "retrieval_history": [
+        {
+          "checked_at": "2026-10-25",
+          "scrape_id": null,
+          "error": "Rate limit exceeded. Consumed (req/min): 24, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 16s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+        }
+      ],
+      "scrape_id": "01a17266-2070-74df-b46b-ca5429084f68",
+      "suggested_existing_place_id": "place-au-vic-plenty-valley-westfield",
+      "implementation_status": "Applied to existing canonical place; rebuild verification pending"
+    },
+    {
+      "name": "Penrith",
+      "slug": "penrith",
+      "country": "Australia",
+      "suburb": "Penrith",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/penrith",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": null,
+      "error": "Rate limit exceeded. Consumed (req/min): 25, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 16s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "name": "Mt Druitt",
+      "slug": "mtdruitt",
+      "country": "Australia",
+      "suburb": "Mt Druitt",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/mtdruitt",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": null,
+      "error": "Rate limit exceeded. Consumed (req/min): 26, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 13s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "name": "Marion",
+      "slug": "marion",
+      "country": "Australia",
+      "suburb": "Oaklands Park",
+      "state": "SA",
+      "url": "https://www.westfield.com.au/marion",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Marion Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Oaklands Park",
+          "addressRegion": "SA",
+          "postalCode": "5046",
+          "streetAddress": "297 Diagonal Rd"
+        }
+      },
+      "error": null,
+      "retrieval_history": [
+        {
+          "checked_at": "2026-10-25",
+          "scrape_id": null,
+          "error": "Rate limit exceeded. Consumed (req/min): 27, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 13s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+        }
+      ],
+      "scrape_id": "01a17266-2004-7158-aceb-34009bec0dae",
+      "suggested_existing_place_id": "place-au-sa-westfield-marion",
+      "implementation_status": "Applied to existing canonical place; rebuild verification pending"
+    },
+    {
+      "name": "Knox",
+      "slug": "knox",
+      "country": "Australia",
+      "suburb": "Wantirna South",
+      "state": "VIC",
+      "url": "https://www.westfield.com.au/knox",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": null,
+      "error": "Rate limit exceeded. Consumed (req/min): 28, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 12s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+    },
+    {
+      "name": "Geelong",
+      "slug": "geelong",
+      "country": "Australia",
+      "suburb": "Geelong",
+      "state": "VIC",
+      "url": "https://www.westfield.com.au/geelong",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Geelong Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Geelong",
+          "addressRegion": "VIC",
+          "postalCode": "3220",
+          "streetAddress": "95 Malop Street"
+        }
+      },
+      "error": null,
+      "retrieval_history": [
+        {
+          "checked_at": "2026-10-25",
+          "scrape_id": null,
+          "error": "Rate limit exceeded. Consumed (req/min): 29, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 11s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+        }
+      ],
+      "scrape_id": "01a17266-2036-71be-a6bc-09453344f6b7",
+      "suggested_existing_place_id": "place-au-vic-westfield-bay-city",
+      "implementation_status": "Applied to existing canonical place; rebuild verification pending"
+    },
+    {
+      "name": "Innaloo",
+      "slug": "innaloo",
+      "country": "Australia",
+      "suburb": "Innaloo",
+      "state": "WA",
+      "url": "https://www.westfield.com.au/innaloo",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Innaloo Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Innaloo",
+          "addressRegion": "WA",
+          "postalCode": "6018",
+          "streetAddress": "Ellen Stirling Boulevard"
+        }
+      },
+      "error": null,
+      "retrieval_history": [
+        {
+          "checked_at": "2026-10-25",
+          "scrape_id": null,
+          "error": "Rate limit exceeded. Consumed (req/min): 30, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 11s, resets at Sun Oct 25 2026 08:00:43 GMT+0000 (Coordinated Universal Time)"
+        }
+      ],
+      "scrape_id": "01a17266-2074-753e-b022-335d6472c75c",
+      "suggested_existing_place_id": "place-au-wa-westfield-innaloo",
+      "implementation_status": "Applied to existing canonical place; rebuild verification pending"
+    },
+    {
+      "name": "Carousel",
+      "slug": "carousel",
+      "country": "Australia",
+      "suburb": "Cannington",
+      "state": "WA",
+      "url": "https://www.westfield.com.au/carousel",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Carousel Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cannington",
+          "addressRegion": "WA",
+          "postalCode": "6107",
+          "streetAddress": "1382 Albany Hwy"
+        }
+      },
+      "scrape_id": "01a17213-81a0-7029-8fcd-6d7f2f1abaac",
+      "error": null
+    },
+    {
+      "name": "Doncaster",
+      "slug": "doncaster",
+      "country": "Australia",
+      "suburb": "Doncaster",
+      "state": "VIC",
+      "url": "https://www.westfield.com.au/doncaster",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Doncaster Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Doncaster",
+          "addressRegion": "VIC",
+          "postalCode": "3108",
+          "streetAddress": "619 Doncaster Rd (Cnr Williamsons Rd)"
+        }
+      },
+      "scrape_id": "01a17213-8374-7406-a516-391ab22c3e18",
+      "error": null
+    },
+    {
+      "name": "Chatswood",
+      "slug": "chatswood",
+      "country": "Australia",
+      "suburb": "Chatswood",
+      "state": "NSW",
+      "url": "https://www.westfield.com.au/chatswood",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Chatswood Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chatswood",
+          "addressRegion": "NSW",
+          "postalCode": "2067",
+          "streetAddress": "1 Anderson Street"
+        }
+      },
+      "scrape_id": "01a17213-848f-74ee-85e6-2e37ba9ecd6f",
+      "error": null
+    },
+    {
+      "name": "Belconnen",
+      "slug": "belconnen",
+      "country": "Australia",
+      "suburb": "Belconnen",
+      "state": "ACT",
+      "url": "https://www.westfield.com.au/belconnen",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Belconnen Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Belconnen",
+          "addressRegion": "ACT",
+          "postalCode": "2617",
+          "streetAddress": "Benjamin Way"
+        }
+      },
+      "scrape_id": "01a17213-9fe8-755e-be5e-8b584cc3f96a",
+      "error": null
+    },
+    {
+      "name": "Booragoon",
+      "slug": "booragoon",
+      "country": "Australia",
+      "suburb": "Booragoon",
+      "state": "WA",
+      "url": "https://www.westfield.com.au/booragoon",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Booragoon Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Booragoon",
+          "addressRegion": "WA",
+          "postalCode": "6154",
+          "streetAddress": "125 Riseley Street"
+        }
+      },
+      "scrape_id": "01a17213-9f01-7123-abab-31a7aaa6216d",
+      "error": null
+    },
+    {
+      "name": "Airport West",
+      "slug": "airportwest",
+      "country": "Australia",
+      "suburb": "Airport West",
+      "state": "VIC",
+      "url": "https://www.westfield.com.au/airportwest",
+      "checked_at": "2026-10-25",
+      "source_date": null,
+      "centre": {
+        "name": "Westfield Airport West Shopping Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Airport West",
+          "addressRegion": "VIC",
+          "postalCode": "3042",
+          "streetAddress": "29 - 35 Louis St"
+        }
+      },
+      "scrape_id": "01a17213-b544-757b-8a9c-a086748dbccf",
+      "error": null
+    }
+  ]
+}

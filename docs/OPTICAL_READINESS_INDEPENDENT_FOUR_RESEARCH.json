@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-27",
+  "status": "Evidence captured; four reviews prepared in /tmp/readiness-independent-four-retained.py, not yet applied",
+  "method": "Standard web only, no Firecrawl",
+  "important_findings": [
+    {
+      "url": "https://lbo.net.au/",
+      "finding": "Full official page explicitly says Wollongbar practice moved to Alstonville; gives7CommercialRoad and0266214410. This settles inconsistent ProVision extracted/search addresses in favour of current stored Alstonville address. Move date unspecified."
+    },
+    {
+      "url": "https://darwineyecare.com.au/",
+      "finding": "Full operator page and ProVision agree19/21CavenaghStreet; operatorphone0889999393."
+    },
+    {
+      "url": "https://www.provision.com.au/practice/optometrist-pakenham-optical/",
+      "finding": "Full practice profile120MainStreet and0359412277."
+    },
+    {
+      "url": "https://www.provision.com.au/practice/collins-street-optometrists-melbourne-cbd/",
+      "finding": "Full profile concatenates Level9 and267CollinsStreet; operator homepage/contact/FAQ search results corroborate formatting. Full operator pages timeout; no need to use paid retrieval for corroborated address."
+    }
+  ]
+}

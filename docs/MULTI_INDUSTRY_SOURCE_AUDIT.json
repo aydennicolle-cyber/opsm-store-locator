@@ -1,0 +1,438 @@
+{
+  "document_type": "handover_source_audit",
+  "schema_version": 1,
+  "prepared_for_date": "2026-10-24",
+  "captured_at_utc": "2026-10-24T03:55:05.900268+00:00",
+  "purpose": "Identify inspected public source files for a future neutral extraction. This is neither an extraction allowlist nor a validated data release.",
+  "source_repository": "aydennicolle-cyber/opsm-store-locator",
+  "branch": "codex/priority-street-enrichment",
+  "head_commit": "a85e8ed11a85ea6411f9a24be5e128d51070a314",
+  "working_tree_has_pre_existing_uncommitted_changes": true,
+  "head_alone_reproduces_source": false,
+  "validation": {
+    "scope": "Documentation and read-only source inspection only",
+    "source_builds_run": false,
+    "source_test_suites_run": false,
+    "data_publishable_certified": false,
+    "neutral_export_created": false
+  },
+  "observed_inventory": {
+    "retail_places_generated_at": "2026-10-24T03:47:29+00:00",
+    "place_records": 1549,
+    "places_by_country": {
+      "Australia": 1392,
+      "New Zealand": 157
+    },
+    "places_by_type": {
+      "Airport Terminal": 11,
+      "High Street Corridor": 726,
+      "Other": 3,
+      "Retail Precinct": 3,
+      "Shopping Arcade": 5,
+      "Shopping Centre": 801
+    },
+    "places_without_point": 3,
+    "explicitly_optical_derived_corridor_basis_records": 654,
+    "data_health_generated_at": "2026-10-24T03:53:56+00:00",
+    "directory_captures": 172,
+    "au_sa2_features": 2454,
+    "note": "Counts are inspected observations, not targets or complete AU/NZ coverage. Outputs have different build timestamps."
+  },
+  "files": [
+    {
+      "path": ".github/workflows/pages.yml",
+      "sha256": "294fda3d18c76803e4c0c1d4efdb2dd41737e93ed63ee5196f2f55af03faa55b",
+      "bytes": 1668
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "493c301986f393c57cdc74a2b49c2b8e844c38bd6e890da428f99cb9e4127a4e",
+      "bytes": 1659
+    },
+    {
+      "path": "README.md",
+      "sha256": "637e4c240abe89a1486d7a44d0ee13c92f0a908435052c19bc676498170912c7",
+      "bytes": 19532
+    },
+    {
+      "path": "assets/app.js",
+      "sha256": "bcf43fae6bfb76129ed0984e6571feaa932078090052d1ea998b8381b279dff8",
+      "bytes": 325741
+    },
+    {
+      "path": "assets/environment-explorer.js",
+      "sha256": "1ad94afb738eca6f8aa0341725a8706887ed3e6cf9c17b51dda8eb05990b1eab",
+      "bytes": 33381
+    },
+    {
+      "path": "assets/environments.js",
+      "sha256": "276f870e36ab779bf9a63a8909f08a30eb9d0890f1a29f8c80d6cfc1cd27a00d",
+      "bytes": 5091
+    },
+    {
+      "path": "assets/intelligence.js",
+      "sha256": "efde48928b46caf78d1de0011bb87072b92f043274a195968325c04ff1c3161e",
+      "bytes": 31009
+    },
+    {
+      "path": "assets/location-news.js",
+      "sha256": "31b6885a5c4ddff14d4b4046d808ec11a9c587b7f6de9375bf18f42c76ef70f2",
+      "bytes": 13676
+    },
+    {
+      "path": "assets/styles.css",
+      "sha256": "d34bdf0d096168a6a7f745d9efc7da966066470cbb42f7dba4ba969350cdf611",
+      "bytes": 125845
+    },
+    {
+      "path": "data/asset_relationships.csv",
+      "sha256": "26c132347c56ad8fafe14fc7eab62369217ab2c8c4393f089f2afc20fcf8670c",
+      "bytes": 20766
+    },
+    {
+      "path": "data/data_health.json",
+      "sha256": "d4bd9a5e0a3802ad259bd646972b346e01d106b9d12892c7d8c6328101748dc8",
+      "bytes": 1821706
+    },
+    {
+      "path": "data/destination_directory.json",
+      "sha256": "5686b8f4b6c4fe53abc9c8011f62e772cdf6664eed5ba02ea8283993110eaac1",
+      "bytes": 914052
+    },
+    {
+      "path": "data/destination_profile_facts.json",
+      "sha256": "32bfe45e803cae494d423d8b46a6c8e560bb621d9ffeb1e2a629618c6d4a4813",
+      "bytes": 30041
+    },
+    {
+      "path": "data/destination_profiles.json",
+      "sha256": "2c08c5125e285f1695dfd50a7844c5e4f1f5ef622f4c0336db88808b3ca4d3dc",
+      "bytes": 166885
+    },
+    {
+      "path": "data/destination_research.json",
+      "sha256": "d0464b95d92f7811451f3bb0cae06d9b03e9c5e8e55e7cb250a1b5eed59d954f",
+      "bytes": 21225
+    },
+    {
+      "path": "data/discovery/retail_place_identity_leads.json",
+      "sha256": "4f760586a66ac2fbb793e40d839cec1b4ca0fbee0685be6f7882167993c0e59f",
+      "bytes": 23515
+    },
+    {
+      "path": "data/discovery/retail_places_osm_au.json",
+      "sha256": "c1f0eebafa0461c883412432941a40926e53033adbbff04c2fcd4c1f063f18e5",
+      "bytes": 1146822
+    },
+    {
+      "path": "data/discovery/retail_places_osm_nz.json",
+      "sha256": "548a59f08e27ce04a6761e6e031934c0847efe46d8a22f2fe84ec889a4b4abfe",
+      "bytes": 191774
+    },
+    {
+      "path": "data/growth_development_signals.csv",
+      "sha256": "c6749c43e4f06d3e6505c26687f2bedbc6a266163e10b08f12a1e0dc5c8dc28e",
+      "bytes": 3972
+    },
+    {
+      "path": "data/growth_development_signals.json",
+      "sha256": "9f594ae00217a5ce4ed69428fe56b5ae61fe61d4a38df7159061ffae62dd0714",
+      "bytes": 8342
+    },
+    {
+      "path": "data/intelligence_layer_register.csv",
+      "sha256": "328bbda1506025f76d3678cfdf202ce0af4c8c4c1aaf429ab92584413437686b",
+      "bytes": 2848
+    },
+    {
+      "path": "data/location_news.json",
+      "sha256": "7142c499324f201714a5307b9fb76330e636aaf5a82c1ba26f14cea845a738ea",
+      "bytes": 12650
+    },
+    {
+      "path": "data/location_news_records.json",
+      "sha256": "ba3b88265bce671bb858e8fa6224e6cbf309bbb952de4b9b1a9fc292f29ad59f",
+      "bytes": 94
+    },
+    {
+      "path": "data/market_point_links.json",
+      "sha256": "519fd85f99928b8ce9976c9d401ec8e4665f68308c00a7e481921523815398e8",
+      "bytes": 566662
+    },
+    {
+      "path": "data/official_retail_places.csv",
+      "sha256": "1478c2c5d762adad2eb576736f2d133f15550543650221cc6e4dbd82522f08b1",
+      "bytes": 21357
+    },
+    {
+      "path": "data/place_canonical_overrides.csv",
+      "sha256": "d6e5327425615295008277f79543c2b23d5cf5aec72b1e454d4aa3a78aca12da",
+      "bytes": 142464
+    },
+    {
+      "path": "data/place_consolidations.csv",
+      "sha256": "04da55e4b2b0b813c1e382c306b26c2032a177b3f8383c4d86534ac0c36a9b1c",
+      "bytes": 84869
+    },
+    {
+      "path": "data/place_coordinate_overrides.csv",
+      "sha256": "b544fe2fc0e982b8b50fca1171e16743cfa812c0707611d2388066643fa03ee5",
+      "bytes": 325061
+    },
+    {
+      "path": "data/place_id_remaps.csv",
+      "sha256": "69a2301962502a30aacf0230a21282559f3abcb6f551bed06e7cd0586ab102dd",
+      "bytes": 86267
+    },
+    {
+      "path": "data/place_key_tenants.csv",
+      "sha256": "7d68546e92995c011bb3b828685cd2b509198f2bb2190cfb71f9629f6174df90",
+      "bytes": 78330
+    },
+    {
+      "path": "data/place_suppressions.csv",
+      "sha256": "c5a056fabd6b64ba247da8c0dbd1849fa1ce9a7424bcabbc4ab0e961f50fba52",
+      "bytes": 3274
+    },
+    {
+      "path": "data/place_tenants.json",
+      "sha256": "753246145cec1665053b14b65c76c8925b3c21ad2f906c0363e097e928720b59",
+      "bytes": 525983
+    },
+    {
+      "path": "data/property_attributes.csv",
+      "sha256": "a7059c53b4c1825bafd5592f76efe5ba22567ce61a9e73899899f7c05c8dd851",
+      "bytes": 81530
+    },
+    {
+      "path": "data/property_group_aliases.csv",
+      "sha256": "0f2fc7a8b2430a0e8d0b5e9df7f5e875715097da48ff7917ad3a371df98726d1",
+      "bytes": 19845
+    },
+    {
+      "path": "data/property_group_domain_rules.csv",
+      "sha256": "17d27ccc8a8dab12ddad53422b9cde73bcee9acba622c1f8ef65427549c6c0c1",
+      "bytes": 602
+    },
+    {
+      "path": "data/property_group_id_remaps.csv",
+      "sha256": "48410a1441166268c25b4e8917d588a7c5cb958213a66a6446db49925f8ff22c",
+      "bytes": 44
+    },
+    {
+      "path": "data/property_groups.csv",
+      "sha256": "7c24b5e623fa5873a68cc127d53e8c3d8c23f7f920d8f023764b6f9042966257",
+      "bytes": 33501
+    },
+    {
+      "path": "data/property_intelligence.json",
+      "sha256": "60ae613b17a6733be8b410981af5d3e61c3af52eff8667aa6d3af32354211fb5",
+      "bytes": 11021119
+    },
+    {
+      "path": "data/property_portfolio_assets.csv",
+      "sha256": "c066b21740cc78f08ba04ac1920d9f167029cd4f743234ff9dcc420ffa1ee687",
+      "bytes": 194170
+    },
+    {
+      "path": "data/property_portfolio_scopes.csv",
+      "sha256": "6a64078ba6d3f5714ef3cd1adb80e57ec5e3064d41ce7b43dd7a77fbc6a1297f",
+      "bytes": 917
+    },
+    {
+      "path": "data/property_research_status.csv",
+      "sha256": "77272c53b07f2e8b724414eb02c5e308554fb516cde2268b91320a4f44a3a865",
+      "bytes": 43157
+    },
+    {
+      "path": "data/public_directory_captures.json",
+      "sha256": "fc125521ffd251f43369d3671d04846c59f7ac494306550aee89d177417210e2",
+      "bytes": 32774345
+    },
+    {
+      "path": "data/retail_environment_evidence.json",
+      "sha256": "383de2f253499504579e2aaeb9b0bf90fd40a5a8ba4b9313ccf9162268b41f25",
+      "bytes": 3130
+    },
+    {
+      "path": "data/retail_environments.json",
+      "sha256": "bd8c2f121a48cf73b79332c0ef268a699ab6bbe890ca1c66451b3b42cb84e155",
+      "bytes": 53856930
+    },
+    {
+      "path": "data/retail_places.json",
+      "sha256": "83ddeb9a993e1e24a51733a75170d9fa64843650329e91d65336fb2a5b6fefb8",
+      "bytes": 2714218
+    },
+    {
+      "path": "data/sa2_market.geojson",
+      "sha256": "259dbc44413737a8c9a33a0c14924a5a1f5688ed9f0f2a5c59354a4f7c3be869",
+      "bytes": 3750607
+    },
+    {
+      "path": "data/source_manifest.json",
+      "sha256": "0a3dd25ff6c928073f915aa29a3bfb992539d9275bcac77e61a84c5139b0e5a1",
+      "bytes": 13276
+    },
+    {
+      "path": "data/store_market_links.json",
+      "sha256": "344ef66b2ce720aa92b12a2bfbef933162c6a48e46cb250ebc5e9e21a08a32b1",
+      "bytes": 1060016
+    },
+    {
+      "path": "docs/LOCATION_NEWS.md",
+      "sha256": "690db9e4c5cb406aee6f3cc3c65c507e17c5cf6521866dfa50e640aab3cbb428",
+      "bytes": 5699
+    },
+    {
+      "path": "docs/PROTECTED_PUBLISHING.md",
+      "sha256": "d30f9b167fc267a14b5b69d1c294c1553eaaf39f056c79ad6a0921ea22a392ad",
+      "bytes": 2772
+    },
+    {
+      "path": "docs/PUBLIC_DIRECTORY_EVIDENCE.md",
+      "sha256": "8dc9908a427cf4fbf8346726f5b012c43dd442c697bf3d5a5b6e0ee96b14e898",
+      "bytes": 9020
+    },
+    {
+      "path": "docs/RETAIL_ENVIRONMENTS.md",
+      "sha256": "af1643766616500ddc40cb0c24155056e6cfc3a4b39cbf9bc183d7c33fe94d02",
+      "bytes": 7323
+    },
+    {
+      "path": "package.json",
+      "sha256": "ef34ecd86b0847f0444a3c95f89379cf4c9854129aeb626321a9d5ec8c79e16f",
+      "bytes": 488
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "2a019b4cb139d399b6e0deafb419a6a109309c815c894f37c2ecb3b52db94593",
+      "bytes": 1011
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "06d28d69e958deafb09f0a44fcae9b548f15e4debc14ebc39aad5f0934856fbf",
+      "bytes": 16
+    },
+    {
+      "path": "retailers/city-beach/city_beach_store_locator_raw.json",
+      "sha256": "e31e2a55bedfdf51f1c802a3503b9f50b576f4fcb1599406baab2377538d088b",
+      "bytes": 343410
+    },
+    {
+      "path": "retailers/city-beach/index.html",
+      "sha256": "5b1a8f4b7b60c8c6e5ed93511d4ab581c184ae3e63afb8dc1ba6d9c210b3069a",
+      "bytes": 14638
+    },
+    {
+      "path": "retailers/city-beach/stores.csv",
+      "sha256": "aa9409c3ae2924f28194be537c035d11d54dd5da2b3e23d4bf35c159b257829a",
+      "bytes": 13248
+    },
+    {
+      "path": "retailers/city-beach/stores.geojson",
+      "sha256": "ef3a92efb4c934d307c58763f68f8b9310f22aad60b51219ce50e2629620840e",
+      "bytes": 44351
+    },
+    {
+      "path": "retailers/ozmosis/index.html",
+      "sha256": "60e0c16496c6982df8afd5fe002aa345b65f48778421d339e39cee018d2e99de",
+      "bytes": 14852
+    },
+    {
+      "path": "retailers/ozmosis/ozmosis_store_locator_raw.json",
+      "sha256": "204b589ca1f570487cf92e6e27e9a350bbd74bb8e498412f93cff322bd42989f",
+      "bytes": 152536
+    },
+    {
+      "path": "retailers/ozmosis/stores.csv",
+      "sha256": "d446b637aef02988ba2a78d3469dc790eba44ac3da988f99f64c19eb27003def",
+      "bytes": 7316
+    },
+    {
+      "path": "retailers/ozmosis/stores.geojson",
+      "sha256": "8b4125a193a7244e10f359a4ad08269c62b2d04e1fd1b5d8cfb80f99204114eb",
+      "bytes": 24167
+    },
+    {
+      "path": "scripts/build_data_health.py",
+      "sha256": "efefc97b08ef68731bd57a1bd03d3aade872f28d9bdd1775a5a76379dfe2df86",
+      "bytes": 25970
+    },
+    {
+      "path": "scripts/build_market_intelligence.py",
+      "sha256": "44f8dc97634888684386759d32bc39286a62d8d835aa06380826336b2a2ddfaf",
+      "bytes": 32767
+    },
+    {
+      "path": "scripts/build_retail_environments.py",
+      "sha256": "d1f49014ec7229cf5b692302f9494ab8bb82849faaf04bffa64d99562546fd18",
+      "bytes": 10620
+    },
+    {
+      "path": "scripts/directory_category_crosswalk.py",
+      "sha256": "84872e2dd1441c009bfe2d766c2a50b274d93ccfcc58be45fb691d49eee49d87",
+      "bytes": 3688
+    },
+    {
+      "path": "scripts/market_points.py",
+      "sha256": "183237dd38db7299dae016293ee2eab35fc5dbf805abb59172b51592df8fe4fd",
+      "bytes": 2235
+    },
+    {
+      "path": "scripts/package_public_site.py",
+      "sha256": "4bdfa1923f045b089f32b936a9573b10db9b3511c9d796920c8319749bb726c9",
+      "bytes": 3176
+    },
+    {
+      "path": "scripts/public_directory_schema.py",
+      "sha256": "2f174e6117c8e0a3881cd02fc2fe1494c19b9bfaca208232551055dd40744151",
+      "bytes": 17600
+    },
+    {
+      "path": "scripts/public_site_files.json",
+      "sha256": "95eb912a62401ebfdbfd2b8b61fe5dde77d0d84c1926d6d41868a4e59975272a",
+      "bytes": 3898
+    },
+    {
+      "path": "scripts/retail_directory_overlay.py",
+      "sha256": "4e800ce3373571e21dc56ca07b20ba6eb05c5627b8a0f19a8f1bfd7e8dabe699",
+      "bytes": 6076
+    },
+    {
+      "path": "scripts/reviewed_place_points.py",
+      "sha256": "74ff769f32d8d2993e5c63765e6ab176708602ef4600c9927791830c4c935009",
+      "bytes": 3144
+    },
+    {
+      "path": "scripts/scan_public_privacy.py",
+      "sha256": "d447cbb0921974b561dfe1b739de34a326a9da0db2c772c0fabe26e523bdaeb8",
+      "bytes": 8090
+    },
+    {
+      "path": "scripts/serve_local.py",
+      "sha256": "56f66259544013d2648aed02196ba307c5876ce37656c9d196a7293fe28720f8",
+      "bytes": 1906
+    }
+  ],
+  "inventory_limitations": [
+    "Selected files referenced by the handover; not a complete executable source backup.",
+    "Mixed files require explicit recursive projections and review.",
+    "Hashes detect changes; they do not establish public suitability, accuracy, freshness or reuse permission.",
+    "README includes the documentation link added in this handover."
+  ],
+  "capture_method": "Each file hash and its sampled inventory use the same captured bytes. This is not an atomic multi-file snapshot.",
+  "source_snapshot_coherence": "Not certified. Concurrent source changes were observed during documentation preparation.",
+  "source_paths_changed_during_preparation": [
+    "data/data_health.json",
+    "data/destination_profiles.json",
+    "data/discovery/retail_place_identity_leads.json",
+    "data/growth_development_signals.json",
+    "data/lookalike_places.json",
+    "data/place_tenants.json",
+    "data/property_intelligence.json",
+    "data/public_directory_captures.json",
+    "data/retail_environments.json",
+    "data/retail_places.json"
+  ]
+}

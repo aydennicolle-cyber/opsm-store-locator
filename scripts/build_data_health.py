@@ -31,12 +31,8 @@ PLACE_TENANTS_PATH = DATA / "place_tenants.json"
 INTELLIGENCE_LAYER_REGISTER_PATH = DATA / "intelligence_layer_register.csv"
 STORE_IDENTITY_REVIEW_PATH = DATA / "store_identity_review.csv"
 NAMED_RETAILERS = {
-    "OPSM", "Specsavers", "Bailey Nelson", "Oscar Wylee",
-    "George & Matilda", "Eyecare Plus", "Optical Superstore",
-    "1001 Optometry", "EyeQ Optometrists", "Laubman & Pank",
-    "Bupa Optical", "Chemist Warehouse Optometry", "Dresden Vision",
-    "Optical Warehouse", "The Optical Company", "Optical by National Pharmacies",
-    "Matthews Eyecare",
+    item["name"] for item in json.loads((DATA / "retailer_registry.json").read_text())["retailers"]
+    if item["is_named_network"]
 }
 FRESHNESS_KEYS = {
     "opsm-au": "OPSM Australia", "opsm-nz": "OPSM New Zealand",
@@ -117,6 +113,11 @@ def source_results(manifest: dict, as_of: datetime, metadata: dict) -> list[dict
         timestamp = str(source.get("last_success", ""))
         if source["id"] in FRESHNESS_KEYS:
             timestamp = str(metadata.get("source_freshness", {}).get(FRESHNESS_KEYS[source["id"]], timestamp))
+        elif source["id"] == "property-portfolios":
+            # This is a derived collection with independent evidence dates per
+            # property, not a single source capture. Rebuilding it must never
+            # turn generated_at (or one nested observation) into a refresh.
+            timestamp = str(source.get("last_success") or "")
         elif snapshot.suffix.lower() == ".json" and snapshot.exists():
             timestamp = find_timestamp(json.loads(snapshot.read_text(encoding="utf-8"))) or timestamp
         elif snapshot.suffix.lower() == ".csv" and snapshot.exists() and not timestamp:
@@ -140,7 +141,13 @@ def source_retailer_prefixes() -> tuple:
 
 
 def source_id_for_store(store: dict) -> str:
+    # These canonical IDs were retained, but their branch facts were refreshed
+    # from the complete current operator feed.
+    if store["retailer"] == "Sunglass Hut":
+        return "sunglass-hut-anz"
     country = "nz" if store["country"] == "New Zealand" else "au"
+    if store["retailer"] == "Oakley" and store.get("source_url") in {"https://www.oakley.com/en-au/store-finder", "https://dfojindalee.com.au/project/oakley-vault/"}:
+        return f"oakley-{country}"
     # A reviewed brand change does not replace the record's source or its age.
     source_retailer = next((name for prefix, name in source_retailer_prefixes()
                             if store['store_id'].startswith(prefix)), store['retailer'])
@@ -161,6 +168,13 @@ def source_id_for_store(store: dict) -> str:
         "The Optical Company": "the-optical-company",
         "Optical by National Pharmacies": "national-pharmacies-optical",
         "Matthews Eyecare": "matthews-eyecare",
+        "Ray-Ban": "ray-ban",
+        'The Eye Piece': 'the-eye-piece',
+        'Oakley': 'oakley',
+        'AM Eyewear': 'am-eyewear',
+        'MOSCOT': 'moscot',
+        'Valley Eyewear': 'valley-eyewear',
+        'Gentle Monster': 'gentle-monster',
     }[source_retailer]
     return f"{retailer}-{country}"
 
@@ -231,13 +245,17 @@ def main() -> None:
             "store_id": store["store_id"], "retailer": store["retailer"], "country": store["country"], "state": store["state"],
             "location_setting": membership.get("location_setting", "Uncertain"), "place_id": membership.get("place_id", ""),
             "mapping_confidence": membership.get("mapping_confidence", "Uncertain"), "operational_status": status,
+            "mapping_evidence_basis": membership.get('evidence_basis', ''),
+            "mapping_evidence_url": membership.get('evidence_url', ''),
+            "mapping_record_date": membership.get('verified_at', ''),
             "usable_for_network": str(usable).lower(), "current_source": str(current_source).lower(),
             "eligible_for_analytics": str(usable and current_trading).lower(), "eligible_for_place_analytics": str(usable and place_complete and accepted_place and current_trading).lower(),
             "source_id": source_id, "issues": "; ".join(issues),
         })
 
     named_rows = [row for row in certification_rows if row["retailer"] in NAMED_RETAILERS]
-    promoted_rows = [row for row in certification_rows if row["retailer"] in NAMED_RETAILERS or row["store_id"].startswith(REVIEWED_INDEPENDENT_PREFIX)]
+    promoted_review_ids = {row['store_id'] for row in reviews}
+    promoted_rows = [row for row in certification_rows if row["retailer"] in NAMED_RETAILERS or row["store_id"].startswith(REVIEWED_INDEPENDENT_PREFIX) or row['store_id'] in promoted_review_ids]
     usable_named = sum(row["usable_for_network"] == "true" for row in named_rows)
     setting_named = sum(row["location_setting"] != "Uncertain" for row in named_rows)
     mapped_named = sum(row["location_setting"] != "Uncertain" and (row["location_setting"] == "Other" or bool(row["place_id"])) for row in named_rows)
@@ -409,7 +427,7 @@ def main() -> None:
         },
         "intelligence_layer_register": intelligence_layers,
         "store_certification": {
-            row["store_id"]: {key: row[key] for key in ("operational_status", "usable_for_network", "current_source", "eligible_for_analytics", "eligible_for_place_analytics", "location_setting", "place_id", "mapping_confidence", "issues")}
+            row["store_id"]: {key: row[key] for key in ("operational_status", "usable_for_network", "current_source", "eligible_for_analytics", "eligible_for_place_analytics", "location_setting", "place_id", "mapping_confidence", "mapping_evidence_basis", "mapping_evidence_url", "mapping_record_date", "issues")}
             for row in certification_rows
         },
         "unresolved_mapping_reviews": pending_reviews,
@@ -419,13 +437,39 @@ def main() -> None:
     with STORE_HEALTH_PATH.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(certification_rows[0]), lineterminator="\n")
         writer.writeheader(); writer.writerows(certification_rows)
-    HEALTH_PATH.write_text(json.dumps(health, indent=2) + "\n", encoding="utf-8")
-    # Environment search must use the certification produced by this build.
+    # Destination competition and environment search must use this build's
+    # certification, including newly admitted stores absent from the old file.
+    if (DATA / 'destination_profile_facts.json').exists():
+        try:
+            from .destination_profiles import build_profiles
+        except ImportError:
+            from destination_profiles import build_profiles
+        summaries = json.loads((DATA / 'destination_research.json').read_text())['profiles']
+        build_profiles(DATA, summaries)
     try:
         from .build_retail_environments import build as build_environments
     except ImportError:
         from build_retail_environments import build as build_environments
-    build_environments(DATA)
+    environments = build_environments(DATA)
+    try:
+        from .environment_coverage import summarize as summarize_environments
+    except ImportError:
+        from environment_coverage import summarize as summarize_environments
+    environment_health = summarize_environments(environments, bailey_corridor_scope)
+    health['retail_environment'] = environment_health
+    # Keep the legacy curated-table count explicitly named, not mistaken for all research.
+    health['co_tenancy']['coverage_statement'] = ('Legacy curated key-tenant table only; newer directory captures and supplementary observations are included in the assembled retail-evidence section. ' + health['co_tenancy']['coverage_statement'])
+    health['high_street_research']['dimensions']['legacy_key_tenant_table_coverage'] = high_street_dimensions['bailey_corridor_retail_mix_coverage']
+    health['high_street_research']['dimensions']['bailey_corridor_retail_mix_coverage'] = environment_health['bailey_corridor_retail_mix_coverage']
+    health['high_street_research']['counts']['retail_mix_evidenced'] = environment_health['counts']['bailey_corridors_with_non_optical_listing_evidence']
+    health['high_street_research']['coverage_statement'] += ' Retail-mix coverage now counts corridors with accepted non-optical listing evidence across assembled sources; it does not establish complete street occupancy. The legacy key-tenant table is reported separately.'
+    HEALTH_PATH.write_text(json.dumps(health, indent=2) + "\n", encoding="utf-8")
+    try:
+        from .build_location_news import build as build_news
+    except ImportError:
+        from build_location_news import build as build_news
+    if (DATA / "location_news_records.json").exists():
+        build_news(DATA)
     print(f"Named-network stores usable: {usable_named}/{len(named_rows)}; setting mapped: {setting_named}; place mapped: {mapped_named}")
     print(f"Places: {len(places)}; promoted mapping reviews: {len(pending_reviews)}; background leads: {len(background_leads)}")
     print(f"Health dimensions: {dimensions}; status: {status}")

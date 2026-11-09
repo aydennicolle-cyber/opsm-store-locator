@@ -1,0 +1,649 @@
+{
+  "reviewed_at": "2026-10-27",
+  "status": "Applied54 with current address/status/source/date equality assertions and blank membership checks; dependent verification pending.",
+  "scope": "54 individually read retained investigations explicitly limiting place classification or rejecting address-only membership. Other examined records need further evidence assessment; none automatically resolved.",
+  "deferred_store_ids": [
+    "independent-other-optical-osm-au-node-1896332017",
+    "independent-other-optical-osm-au-node-2161972681",
+    "independent-other-optical-reviewed-nz-blink-birkenhead",
+    "independent-other-optical-reviewed-nz-devonport-optometrists",
+    "independent-other-optical-reviewed-nz-specs-direct-morningside",
+    "independent-other-optical-reviewed-nz-eden-quarter-optometrist",
+    "independent-other-optical-reviewed-nz-gates-eyewear-newmarket",
+    "independent-other-optical-reviewed-nz-michael-holmes-premium-eyewear",
+    "independent-other-optical-reviewed-nz-lowes-taaffe-bhikoo-pakuranga",
+    "independent-other-optical-reviewed-nz-papakura-eyecare",
+    "independent-other-optical-reviewed-nz-auckland-myopia-clinic",
+    "independent-other-optical-reviewed-nz-illume-eye-care-ponsonby",
+    "independent-other-optical-reviewed-nz-auckland-optometrists-royal-oak",
+    "independent-other-optical-osm-ne-node-6923678892",
+    "independent-other-optical-reviewed-nz-paterson-burn-waiuku",
+    "independent-other-optical-reviewed-nz-paterson-burn-fraser-street",
+    "independent-other-optical-reviewed-nz-papamoa-optometrists",
+    "independent-other-optical-reviewed-nz-tauranga-eyecare",
+    "independent-other-optical-reviewed-nz-ts-opticians-belfast",
+    "independent-other-optical-reviewed-nz-th-optometrists-bryndwr",
+    "independent-other-optical-osm-ne-node-4757538924",
+    "independent-other-optical-reviewed-nz-anstice-ilam",
+    "independent-other-optical-reviewed-nz-lincoln-eye",
+    "independent-other-optical-reviewed-nz-canon-street-optometrists",
+    "independent-other-optical-reviewed-nz-terrace-optometrist-timaru",
+    "independent-other-optical-osm-ne-node-12611705756",
+    "independent-other-optical-reviewed-nz-shattky-hastings",
+    "independent-other-optical-reviewed-nz-see-hear-levin",
+    "independent-other-optical-osm-au-node-2613244951",
+    "independent-other-optical-osm-au-node-4546327090",
+    "independent-other-optical-osm-au-node-4547827590",
+    "independent-other-optical-osm-au-node-3991780847",
+    "independent-other-optical-reviewed-au-ballina-optometry",
+    "independent-other-optical-reviewed-au-bathurst-optical",
+    "independent-other-optical-reviewed-au-mac-optometry-braidwood",
+    "independent-other-optical-provision-16855",
+    "independent-other-optical-osm-au-node-11106950103",
+    "independent-other-optical-osm-au-node-8512027148",
+    "independent-other-optical-osm-au-node-5072911675",
+    "independent-other-optical-reviewed-au-alan-burrow-coffs-harbour",
+    "independent-other-optical-reviewed-au-eyecare-spot-collaroy",
+    "independent-other-optical-reviewed-au-geoff-day-cowra",
+    "independent-other-optical-reviewed-au-webster-optometrists-cowra",
+    "independent-other-optical-reviewed-au-westfund-dubbo",
+    "independent-other-optical-osm-au-node-13670708403",
+    "independent-other-optical-reviewed-au-emu-plains-optical"
+  ],
+  "records": [
+    {
+      "store_id": "independent-other-optical-reviewed-au-curtin-optical",
+      "address": "Shop 1B Curtin Place, Curtin ACT 2605",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://curtinoptical.com.au/contact/",
+        "checked_at": "2026-09-11",
+        "reason": "Official contact page supplies address and hours. Officially linked map resolves 1B Curtin Place; postcode follows the practice, not the map label. Retail setting remains unassigned."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-act-optical-tuggeranong",
+      "address": "Shop 47, Greenway Waters Suites, corner Anketell and Cowlishaw Streets, Greenway ACT 2900",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.actoptical.com.au/contact.html",
+        "checked_at": "2026-09-12",
+        "reason": "Official current contact page confirms Shop 47, weekly hours and appointments; practice product pages confirm prescription lenses, frames and contact lenses. Coordinates use the named Tuggeranong map widget on the contact page. Centre-versus-street classification remains unresolved and does not prevent network inclusion."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-north-canberra-eyecare",
+      "address": "Suite C, 1 Hall Street, Lyneham ACT 2602",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://northcanberraeyecare.com.au",
+        "checked_at": "2026-09-12",
+        "reason": "Official practice website confirms retail optical services and the same physical address; current bookings or hours support active trading. Coordinates corroborated from Optometry Australia practice directory. Directory geocoding supports a premises reference; tenancy-level pin accuracy is not independently surveyed. Retail setting remains unassigned and does not prevent map inclusion."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-albany-optometrists",
+      "address": "44 Corinthian Drive, Albany, Auckland 0632",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://albanyoptometrists.co.nz/contact-us/",
+        "checked_at": "2026-09-12",
+        "reason": "Official contact page confirms 44 Corinthian Drive, current weekly hours and bookings; official frames page confirms in-person eyewear retail. Healthpoint provides the matching premises reference, not a surveyed shop-front point. Unresolved location setting does not exclude this outlet."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-grace-lang-optometry",
+      "address": "67 O'Neill Street, Ponsonby, Auckland 1011, New Zealand",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.gracelang.co.nz/",
+        "checked_at": "2026-09-24",
+        "reason": "Current own website explicitly describes a physical optical and eyewear store, selected frames in store, optometry services and appointment hours at 67 O\u2019Neill Street. Appointment-only access does not exclude permanent retail. Postal code corroborated by named public profile. Public point checked against independently evidenced identity and premises. No onsite inspection. Unassigned setting does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-haydon-optometrists",
+      "address": "159 Hurstmere Road, Takapuna, Auckland 0622, New Zealand",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://haydons.co.nz/",
+        "checked_at": "2026-09-24",
+        "reason": "Current own website confirms designer frames, contact lens supply, eye examinations, address, phone and opening hours. Postal code corroborated by named public profile. Public point checked against independently evidenced identity and premises. No onsite inspection. Unassigned setting does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-auckland-university-optometry-clinic",
+      "address": "Level 3, Building 505, 85 Park Road, Grafton, Auckland 1023, New Zealand",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.optometryclinics.auckland.ac.nz/make-an-appointment/",
+        "checked_at": "2026-09-24",
+        "reason": "Public teaching clinic with explicit prescription sunglasses and selected frames at https://www.optometryclinics.auckland.ac.nz/what-we-do/; current 2026 pricing and appointments. Appointment required, no walk-ins. Own address is Level 3, Building 505, 85 Park Road. Google names the same clinic, phone and domain at 8 Boyle Crescent; https://fmhs-history.blogs.auckland.ac.nz/buildings/ explicitly describes Building 505 as straddling Park Road and Boyle Crescent. Retain own address; approximate named clinic point, entrance/address-label difference disclosed. No shopping-centre or precinct membership inferred from campus location. Public point checked against independently evidenced identity and premises. No onsite inspection. Unassigned setting does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-campuspecs",
+      "address": "36 Lorne Street, Auckland CBD, Auckland 1010",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.campuspecs.co.nz/stores",
+        "checked_at": "2026-09-12",
+        "reason": "Official practice website confirms retail optical services and the same physical address; current bookings or hours support active trading. Coordinates corroborated from Healthpoint practice profile. Directory geocoding supports a premises reference; tenancy-level pin accuracy is not independently surveyed. Retail setting remains unassigned and does not prevent map inclusion."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-blockhouse-bay-optometrists",
+      "address": "1/1 Donovan Street, Blockhouse Bay, Auckland 0600",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.bbayoptom.co.nz/",
+        "checked_at": "2026-10-08",
+        "reason": "Current owned Blockhouse Bay Optometrists page explicitly lists glasses, contact lenses and eye examinations at 1/1 Donovan Street with dedicated phone. Named map and Healthpoint corroborate. Nearby supermarket directions do not establish shopping-centre tenancy. The practice remains eligible for network analysis with formal retail-place mapping uncertain. Public evidence reviewed on 2026-10-08."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-nicholls-browns-bay",
+      "address": "72 Clyde Road, Browns Bay, Auckland 0630",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.nichollsoptical.co.nz/contact-us/",
+        "checked_at": "2026-09-24",
+        "reason": "Current practice contact page confirms address, phone and weekday/Saturday hours; practice booking profile describes frames and eye care. The public Healthpoint point was last updated March 2024 and is used only as approximate geometry corroborated by the current practice address. An automatic Anstice Ilam suggestion was rejected as an unrelated practice in another region. Public point compared with independently evidenced practice identity and address. No onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-botany-junction-optometrist",
+      "address": "5B/123 Ormiston Road, Flat Bush, Auckland 2016",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.botanyjunctionoptometrists.co.nz/contact",
+        "checked_at": "2026-10-08",
+        "reason": "Current operator confirms optical retail, eye examinations and contact lenses at 5B/123 Ormiston Road, with phone 09 278 4393 and postcode 2016. Named business map identifies the principal Melinda Nordin, same phone/domain and street, but simplifies the unit to 5 and gives postcode 2019. Government gives a conflicting phone 09 278 5210. Retain operator-supported unit, phone and postcode, with source conflicts explicit. No membership of Botany Town Centre or Ormiston Town Centre is inferred from locality/name. Public evidence reviewed on 2026-10-08."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-glen-eden-optometrist",
+      "address": "16 Glenmall Place, Glen Eden, Auckland 0602",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.glenedenoptometrist.co.nz/",
+        "checked_at": "2026-10-08",
+        "reason": "Current Glen Eden Optometrist operator confirms permanent optical retail at 16 Glenmall Place with dedicated phone and postcode 0602. Named business map and government/Healthpoint retain the Visique name at the same address/phone. The current independent practice is one store; historical Visique naming does not establish ownership or another shop. Historical references to the Glenmall shopping-centre site do not establish a current canonical centre mapping. Evidence reviewed on 2026-10-08."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-i-love-eyecare-glen-innes",
+      "address": "21 Mayfair Place, Glen Innes, Auckland 1072",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://iloveicare.com/",
+        "checked_at": "2026-09-24",
+        "reason": "Practice homepage map label and Get Directions link explicitly give 21 Mayfair Place, agreeing with Healthpoint March 2026 and the government glasses-supplier list. Own services page confirms a permanent Glen Innes clinic/showroom, repairs and retail glasses alongside its mobile service; mobile services do not exclude the permanent premises. Published weekday hours and appointment links support current service. A secondary directory uses 280 Apirana Avenue; no move date or second branch is inferred, and the address variant remains a follow-up. Public point compared with independently evidenced practice identity and address. No onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-john-oconnor-henderson",
+      "address": "371 Great North Road, Henderson, Auckland 0612",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.johnoconnor.co.nz/optometrist-near-me/",
+        "checked_at": "2026-10-08",
+        "reason": "Current operator contact page, separate Healthpoint branch panel and named business map corroborate this existing practice and its missing phone. Operator advertises eye examinations, prescription eyewear and contact lenses. Retain its stable canonical identity, address, existing approximate point and raw source date while recording the new dated contact/point review. An old Waitangi Day notice concerns a one-day holiday closure; it is not evidence of permanent closure and is not imported as a current event. Provider content is dated 2:30PM on March 11, 2026; retrieved 8 October 2026, not represented as newly published. Formal retail-place identity remains unconfirmed; street address and proximity do not establish membership."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-hobsonville-optometrists",
+      "address": "413A Hobsonville Road, Hobsonville, Auckland 0618",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.hobsonvilleoptometrists.co.nz/",
+        "checked_at": "2026-09-12",
+        "reason": "Official practice website confirms retail optical services and the same physical address; current bookings or hours support active trading. Coordinates corroborated from Healthpoint practice profile. Directory geocoding supports a premises reference; tenancy-level pin accuracy is not independently surveyed. Retail setting remains unassigned and does not prevent map inclusion. Official practice postcode 0618 retained; Healthpoint lists 0616 for the same street address."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-eyes-of-howick",
+      "address": "100 Picton Street, Howick, Auckland 2014",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.eyesofhowick.co.nz/",
+        "checked_at": "2026-09-12",
+        "reason": "Official practice website confirms retail optical services and the same physical address; current bookings or hours support active trading. Coordinates corroborated from Healthpoint practice profile. Directory geocoding supports a premises reference; tenancy-level pin accuracy is not independently surveyed. Retail setting remains unassigned and does not prevent map inclusion."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-eyewear-direct-manukau",
+      "address": "18 Manukau Station Road, Manukau, Auckland 2104",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://eyewear-direct.co.nz/contact/",
+        "checked_at": "2026-10-08",
+        "reason": "Eyewear Direct operator contact page explicitly lists separate Manukau and Pakuranga physical premises sharing 09 262 0086. Its prescription page offers supplied prescriptions in new or existing frames. The government SuperGold listing independently confirms in-store optical testing, frames, spectacle lenses, contacts and sunglasses. Healthpoint and separate named map features corroborate both premises. Direct operator HTTP capture failed with 500; the public web reader contact copy is three months old and prescription copy five months old. Keep this evidence-age limitation; fresh map retrieval is not proof of a recent operator update. Pakuranga is named within a medical centre but is not assigned a formal shopping-centre membership. Healthpoint uses 11\u201313 Cortina while the operator and named map use 11. The shared phone does not justify merging distinct branches. A secondary historical Specs Direct label at Ti Rakau Drive is not admitted as another current premises. Provider content is dated 10:01AM on December 4, 2023; retrieved 8 October 2026, not represented as newly published. Formal retail-place identity remains unconfirmed; street address and proximity do not establish membership."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-gary-filer-manukau",
+      "address": "Cavendish Corner, 12/613 Great South Road, Manukau, Auckland 2104",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.garyfiler.co.nz/contact/",
+        "checked_at": "2026-10-08",
+        "reason": "Current Gary Filer contact page explicitly includes Cavendish Corner, 12/613 Great South Road, Manukau, Auckland 2104 and dedicated phone; Healthpoint corroborates this unit/postcode. Other sections on the same site and the named business map repeat 2241, also explicitly used for its PO Box. Use the specific physical-contact block and directory-supported 2104; preserve the conflicting footer/map postcode rather than silently declaring all sources consistent. Glasses, frames and contact lenses are explicit retail services. Cavendish Corner is retained as address context only; no formal centre identity/tenancy is inferred. Evidence reviewed on 2026-10-08."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-howes-brown-meadowbank",
+      "address": "64 St Johns Road, Meadowbank, Auckland 1072",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://eb8778.wixsite.com/vision1",
+        "checked_at": "2026-10-08",
+        "reason": "Current owned Howes and Brown site names 64 St Johns Road, Meadowbank, with dedicated phone. Its Frames page explicitly states a stocked eyewear range; clinical and behavioural optometry focus does not exclude permanent retail dispensing. Named map and fresh Healthpoint corroborate the address/phone and postcode 1072 while calling the locality St Johns. Use operator Meadowbank locality and preserve the source variant; no exact frontage or centre membership is inferred. Public evidence reviewed on 2026-10-08."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-mt-albert-optometrists",
+      "address": "931 New North Road, Mount Albert, Auckland 1025",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.mtalbertoptometrists.co.nz/",
+        "checked_at": "2026-10-08",
+        "reason": "Current Mt Albert operator confirms spectacles, contact lenses and eye examinations at 931 New North Road, corroborated by the named map and directory. Operator describes Mount Albert Shopping Village, but the captured evidence does not establish a canonical property identity, boundaries or whether this means a formal centre or wider shopping area. Keep the store usable while formal place mapping remains uncertain. Public evidence reviewed on 2026-10-08."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-hunt-gaunt-mount-eden",
+      "address": "3 Walters Road, Mount Eden, Auckland 1024",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.huntandgaunt.co.nz/contact-us/",
+        "checked_at": "2026-10-08",
+        "reason": "Current Hunt & Gaunt operator contact and eyewear pages explicitly identify two separate branches, their distinct addresses/phones and prescription lens services. Healthpoint branch panels and independent named maps corroborate both. Saturday opening varies and the homepage contains an apparent 9pm/9am typographical conflict; retain the variable-Saturday qualifier without importing the conflicting time. Provider content is dated 11:46AM on June 18, 2024; retrieved 8 October 2026, not represented as newly published. Formal retail-place identity remains unconfirmed; street address and proximity do not establish membership."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-cassidy-new-lynn",
+      "address": "3080 Great North Road, New Lynn, Auckland 0600",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.cassidyeyecare.co.nz/contact/new-lynn",
+        "checked_at": "2026-09-24",
+        "reason": "Current branch-owned contact page confirms address, phone, weekday/Saturday hours and booking. Practice site offers prescription eyewear. Named Google business profile independently agrees on address and phone. Te Atatu is a separate existing branch and is repaired under its existing ID. Public point compared with independently evidenced practice identity and address. No onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-john-oconnor-newmarket",
+      "address": "49 Remuera Road, Remuera, Auckland 1050",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.johnoconnor.co.nz/optometrist-near-me/",
+        "checked_at": "2026-10-08",
+        "reason": "Current operator contact page, separate Healthpoint branch panel and named business map corroborate this existing practice and its missing phone. Operator advertises eye examinations, prescription eyewear and contact lenses. Retain its stable canonical identity, address, existing approximate point and raw source date while recording the new dated contact/point review. An old Waitangi Day notice concerns a one-day holiday closure; it is not evidence of permanent closure and is not imported as a current event. Provider content is dated 2:30PM on March 11, 2026; retrieved 8 October 2026, not represented as newly published. Formal retail-place identity remains unconfirmed; street address and proximity do not establish membership."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-ne-way-262147882",
+      "address": "250 Onehunga Mall, Onehunga, Auckland 1061",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://seriouseyes.co.nz/contacts/",
+        "checked_at": "2026-10-08",
+        "reason": "Existing stable OSM Visique record and current Hawkins operator identify the same 250 Onehunga Mall premises. Named business map and Healthpoint match dedicated phone and address. Enrich the existing record and confirm Active retail trading; do not add a second Visique/Hawkins shop. Auckland Transport identifies Onehunga Mall as the road, with surrounding streets and on-street parking. Retire this address-only shopping-centre membership; the road name containing Mall did not prove centre tenancy. Retain the existing accurate approximate point, corroborated within metres, and original raw source date. Public evidence reviewed on 2026-10-08."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-visique-millwater",
+      "address": "Shop 20, 175 Millwater Parkway, Silverdale 0932",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://seriouseyes.co.nz/contacts/",
+        "checked_at": "2026-10-08",
+        "reason": "Current Hawkins operator separately lists Millwater, Central shop 20 at 175 Millwater Parkway, with dedicated 09 426 5308 phone and retail eyewear services. Current Bolle manufacturer dealer 933 and Healthpoint independently corroborate this precise unit/phone; manufacturer and operator-linked address map corroborate postcode 0932. Use the exact unit address FEATURE from the operator map, not the camera centre; provider and manufacturer points agree within metres. The separate Rose Millener-labelled map has phone 09 421 0178 and is not identity evidence or a second admitted retailer. The operator shop-reference wording does not yet establish a canonical centre identity. Hours differ between sources and are not promoted. Public evidence reviewed on 2026-10-08."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-hunt-gaunt-titirangi",
+      "address": "517 South Titirangi Road, Titirangi, Auckland 0604",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.huntandgaunt.co.nz/contact-us/",
+        "checked_at": "2026-10-08",
+        "reason": "Current Hunt & Gaunt operator contact and eyewear pages explicitly identify two separate branches, their distinct addresses/phones and prescription lens services. Healthpoint branch panels and independent named maps corroborate both. Saturday opening varies and the homepage contains an apparent 9pm/9am typographical conflict; retain the variable-Saturday qualifier without importing the conflicting time. Provider content is dated 11:46AM on June 18, 2024; retrieved 8 October 2026, not represented as newly published. Formal retail-place identity remains unconfirmed; street address and proximity do not establish membership."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-mcdonald-adams-warkworth",
+      "address": "41 Queen Street, Warkworth, Auckland 0910",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.mcdonaldadams.co.nz/contact",
+        "checked_at": "2026-10-08",
+        "reason": "Current operator contact page confirms 41 Queen Street and phone; its services page explicitly offers frames, spectacle dispensing and contact lenses. Healthpoint and the named map corroborate this branch. Use the named business point; the older provider point differs by about 32 metres and neither is a surveyed frontage. Provider content is dated 3:16PM on June 18, 2024; retrieved 8 October 2026, not represented as newly published. Formal retail-place identity remains unconfirmed; street address and proximity do not establish membership."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-otahuhu-eyecare",
+      "address": "Suite 8, 115 Church Street, \u014ct\u0101huhu, Auckland",
+      "status": "Unknown",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.workandincome.govt.nz/eligibility/health-and-disability/glasses-suppliers/auckland-south",
+        "checked_at": "2026-09-24",
+        "reason": "Government glasses-supplier listing and Healthpoint agree on Suite 8, 115 Church Street and phone, establishing retail optometry and public premises geometry. No current practice-owned confirmation or live booking was established. Healthpoint last updated June 2024; the government page date does not prove individual re-verification. Town association page contradicts itself: address field 115 Church Street versus description 285 Great South Road. Keep the corroborated premises on-map with Unknown trading status, excluded from current competition; address/freshness follow-up remains explicit. Public point compared with independently evidenced practice identity and address. No onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-blur-mount-maunganui",
+      "address": "Shop 1A, 169 Maunganui Road, Mount Maunganui 3116",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.blureyecare.co.nz/contact",
+        "checked_at": "2026-09-11",
+        "reason": "Official contact page identifies this branch, independent optometry, street address, hours and its branch-specific map coordinates. Retail setting remains unassigned."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-mh-rogers-mount-maunganui",
+      "address": "257 Maunganui Road, Mount Maunganui 3116",
+      "status": "Unknown",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://eyepro.co.nz/optometrist/mh-rogers-optometrists/",
+        "checked_at": "2026-09-24",
+        "reason": "Eyepro practice profile, government glasses-supplier list and Healthpoint agree on name, address and phone and establish retail optometry. Current trading is not independently confirmed through a practice-owned site, dated update or booking availability. Eyepro profile was posted in March 2022; Healthpoint was updated March 2026 but is not provider-maintained; June 2026 is a whole-government-page update, not proof this individual entry was checked. Retain on map as Unknown, outside current competition until stronger trading evidence. Public point compared with independently evidenced practice identity and address. No onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-omokoroa-eyecare",
+      "address": "170 Omokoroa Road, Omokoroa 3114",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://taurangaeyecare.co.nz/contact-us",
+        "checked_at": "2026-10-08",
+        "reason": "Current Tauranga Eyecare operator separately lists Omokoroa Eyecare at 170 Omokoroa Road with dedicated 07 548 1278 phone. Its dated February 2014 article identifies a permanent branch in the medical complex; the current operator retains the branch and retail eyewear services. Exact address-building map feature and Healthpoint medical-complex references corroborate 170 Omokoroa Road and postcode 3114. Use a Low-confidence shared-building point, not an optical business feature or surveyed unit. A retailer-name map query returned the Tauranga branch and is explicitly rejected for Omokoroa. The medical centre phone/services are not copied to the optometrist. Third-party Poike/3112 details conflict and are not promoted. No centre tenancy or exact unit is inferred. Evidence reviewed on 2026-10-08."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-blur-rotorua",
+      "address": "1202 Pukaki Street, Rotorua 3010",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.blureyecare.co.nz/location-rotorua",
+        "checked_at": "2026-09-11",
+        "reason": "Official contact page and Rotorua branch page identify permanent optometry and eyewear services, address and hours. Branch map coordinates and the linked Pukaki Street map corroborate postcode 3010. Retail setting remains unassigned."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-bay-eye-care",
+      "address": "60 Eighth Avenue, Tauranga 3110",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.bayeyecare.co.nz/contact",
+        "checked_at": "2026-09-11",
+        "reason": "Official page states the clinic is open, gives optometrist appointments and contact-lens supply, address, reception hours and an embedded marker. Specialist optometry is retained; no centre membership is inferred."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-blur-tauranga",
+      "address": "46 Spring Street, Tauranga 3110",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.blureyecare.co.nz/contact",
+        "checked_at": "2026-09-11",
+        "reason": "Official contact page identifies this branch, optometry and eyewear services, street address, hours and its branch-specific map coordinates. Retail setting remains unassigned."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-ashburton-eyecare",
+      "address": "139 Walnut Avenue, Allenton, Ashburton 7700, New Zealand",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.asheye.co.nz/",
+        "checked_at": "2026-09-24",
+        "reason": "Current own website confirms in-store spectacle frames and lenses, eye examinations, contact lenses, this address and weekday hours. Distinct from the Australian Ashburton practice. Public point checked against independently evidenced identity and premises. No onsite inspection. Unassigned setting does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-truscott-hamilton-ashburton",
+      "address": "234 Havelock Street, Ashburton 7700",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.thtoptometrists.co.nz/",
+        "checked_at": "2026-09-24",
+        "reason": "Current practice website describes retail eyewear and its separate Ashburton, Bryndwr and Redcliffs branches. Branch-specific Healthpoint March 2026 and the government Canterbury glasses list agree on Ashburton address and phone. Use the Ashburton location page point, not the parent listing phone or another branch. Direct contact-page fetch timed out; no live appointment availability is claimed. Public point compared with independently evidenced practice identity and address. No onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-dr-specs-christchurch",
+      "address": "Unit 6, 14 Acheron Drive, Riccarton, Christchurch 8041, New Zealand",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://drspecs.co.nz/",
+        "checked_at": "2026-09-24",
+        "reason": "Current own website explicitly offers optical frames and sunglasses for sale, prescription lenses, an in-house optometrist and weekday trading at this address. Repairs are an additional service, not a reason to exclude retail. Postal code corroborated by named public profile. Public point checked against independently evidenced identity and premises. No onsite inspection. Unassigned setting does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-foate-bishopdale",
+      "address": "129 Farrington Avenue, Bishopdale, Christchurch, Canterbury 8053",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://foate.co.nz/",
+        "checked_at": "2026-09-12",
+        "reason": "Official practice pages confirm the named physical outlet, optical retail services and current hours or bookings. Bishopdale branch is distinct from the existing Ferrymead record. Official branch hours support trading; mall/precinct classification remains under review. Coordinates use the public Healthpoint premises point; exact tenancy accuracy remains unverified."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-ocula-merivale",
+      "address": "184 Papanui Road, Merivale, Christchurch 8014, New Zealand",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://ocula.co.nz/pages/optometrist-merivale/",
+        "checked_at": "2026-09-24",
+        "reason": "Current own branch page confirms physical prescription eyewear retail, eye examinations, address, phone and opening hours. Named public profile matches. Mention of parking at Merivale Mall is not evidence of mall tenancy; no centre membership inferred. Public point checked against independently evidenced identity and premises. No onsite inspection. Unassigned setting does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-curtis-vision-armagh",
+      "address": "58 Armagh Street, Christchurch Central 8013",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.curtisvision.co.nz/contact/armagh-street/",
+        "checked_at": "2026-09-11",
+        "reason": "Official branch page gives optometry, eyewear, street address and weekday hours. Its embedded map identifies the named branch marker and street postcode; the PO Box postcode is not used. Retail setting remains unassigned."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-visionary-prebbleton",
+      "address": "8/26 Central Avenue, Prebbleton 7604",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.thevisionary.co.nz/",
+        "checked_at": "2026-10-08",
+        "reason": "Current Visionary operator confirms a permanent eye-exam, frame, lens and contact-lens practice at unit 8/26 Central Avenue, Prebbleton 7604, with dedicated phone. Named map and Healthpoint corroborate the building address but omit the unit. Preserve the explicit operator unit; no centre/precinct membership is inferred. A relaxed cafe-style consultation environment does not exclude genuine optical retail. Evidence reviewed on 2026-10-08."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-park-view-rangiora",
+      "address": "130 Percival Street, Rangiora 7400",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://parkviewoptometrists.co.nz/contactus",
+        "checked_at": "2026-09-24",
+        "reason": "Practice-owned contact page confirms 130 Percival Street and phone. Practice home page offers frames, contact lenses and onsite lens supply with appointment contact. Healthpoint March 2024 supplies a matching approximate premises point. Government 130 Park Street disagrees; use the practice-owned Percival Street address. Practice pages were read with web retrieval; local certificate failure was not bypassed. No live appointment slot or onsite trading check was made. Public point compared with independently evidenced practice identity and address. No onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-barrington-eye-care",
+      "address": "16 Athelstan Street, Spreydon, Christchurch 8024",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.barringtoneyecare.co.nz/book-online",
+        "checked_at": "2026-09-11",
+        "reason": "Official contact map supplies marker coordinates and street address. Public practice booking page and NZ government optical-supplier directory corroborate optometry and the address. Exact retail setting remains unassigned."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-curtis-vision-wigram",
+      "address": "2 Ballarat Way, Wigram, Christchurch 8042",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.curtisvision.co.nz/contact/wigram/",
+        "checked_at": "2026-09-11",
+        "reason": "Official branch page gives optometry, prescription eyewear, address and weekday hours. Its embedded map identifies the named branch marker. Retail setting remains unassigned."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-naylor-palmer-palmerston-north",
+      "address": "211 Broadway Avenue, Palmerston North 4410",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://naylorpalmer.co.nz/",
+        "checked_at": "2026-09-24",
+        "reason": "Current practice website confirms dispensing, frames, examinations, booking, address and phone. Healthpoint March 2026 provides the matching public premises point. The directory describes retinal screening, while the practice itself establishes retail eyewear: the narrower directory category does not exclude it. An older Visique alias is not assumed to establish current group membership. Public point compared with independently evidenced practice identity and address. No onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-wink-palmerston-north",
+      "address": "187 Broadway Avenue, Palmerston North 4410, New Zealand",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://eyepro.co.nz/optometrist/wink-optometrists/",
+        "checked_at": "2026-09-24",
+        "reason": "Public practice page hosted by EYEPRO confirms identity, address and phone; the named Google business profile links this exact page and shows trading hours. Provider-supplied https://www.healthpoint.co.nz/eye-care/optometry/wink-optometrists/ was updated 11 March 2026 and corroborates the same premises. Public practice description at https://m.finda.co.nz/business/listing/pjhn/rainford-murphy-eye-care/ explicitly describes frames, spectacle lenses and contact lens retail. Evidence is less direct than an owned practice website: EYEPRO entry originated in 2022 and the detailed retail description has no verified update date. Current provider identity and trading evidence support admission; confirm range and hours directly if needed. No standalone practice website or supported structured network affiliation asserted. Public point checked against independently evidenced identity and premises. No onsite inspection. Unassigned setting does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-artarmon-vision",
+      "address": "122 Hampden Road, Artarmon NSW 2064",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://artarmonvision.com.au/contact-us/",
+        "checked_at": "2026-09-11",
+        "reason": "Official practice contact page supplies examinations, address and hours. Public map identifies the same practice, close to the practice contact-map point. Retail setting remains unassigned."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-eyedesign-bella-vista",
+      "address": "Suite 106, 32 Lexington Drive, Bella Vista NSW 2153",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.eyedesigneyewear.com.au/contact-us/",
+        "checked_at": "2026-09-24",
+        "reason": "Current practice contact page identifies Suite 106 at 32 Lexington Drive with the matching phone and weekday appointments; its services page describes prescription eyewear purchases and fittings. The manufacturer uses Building F, Unit 106, 24\u201332 Lexington Drive for the same practice. This appointment-only corporate-building practice qualifies as optical retail. An old Mosman address appears only inside commented-out HTML and is not treated as a current location. No precise shop-front or precinct membership is inferred. Coordinates come from the publicly accessible prescription-provider locator, reviewed against practice identity and premises address. Approximate premises/centre position only; no onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-bondi-optical",
+      "address": "Shop 1, 172 Bondi Road, Bondi NSW 2026, Australia",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.bondioptical.com.au/",
+        "checked_at": "2026-09-27",
+        "reason": "Current own website confirms retail eyewear, current hours and Shop 1, 172 Bondi Road. Named Google Alan Ryan profile gives Shop 1 170/172 and the same operator mobile 0450336921. A second Google profile and the NSW Spectacles Program list still give 202A Bondi Road with the same landline/domain. Treat as the same operator at the currently published premises, not two current shops. Exact relocation date unverified. Audio-enabled glasses are advertised; no audiology clinic inferred. Public point checked against independently evidenced identity and premises. No onsite inspection. Unassigned setting does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-eyerys-i-care-broken-hill",
+      "address": "Suite 3/142 Argent Street, Broken Hill NSW 2880",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://eyerysicare.com.au/",
+        "checked_at": "2026-09-24",
+        "reason": "Current practice-owned page confirms prescription spectacles, sunglasses, contact lenses, examinations, opening hours and Suite 3/142 Argent Street, accessed via Bromide Street. Named Google business profile matches address and phone. Older manufacturer Westside Plaza premises and point are not used. Another manufacturer has a conflicting phone digit; use the current practice-owned number. Public point checked against independently evidenced identity and premises. No onsite inspection. Unassigned setting does not block map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-optimax-eyecare-burwood",
+      "address": "Shop 2, 95 Burwood Road, Burwood NSW 2134",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.oakley.com/en-au/store-finder/store-details/dealers/295-burwood-road-burwood-new-south-wales-2134?storeId=1124815AFS1",
+        "checked_at": "2026-09-24",
+        "reason": "Official Oakley dealer record and current Google business listing agree on 2/95 Burwood Road and 0424 186 868; the prescription manufacturer also lists this address. Google publishes hours and the newest visible review is labelled five months ago. Prefer these premises sources over NSW Spectacles Program 73 Burwood Road; relocation chronology and the historical role of 73 remain unresolved. No claim that the old address is closed or that the government list is wholly unreliable. Oakley publishes no actual opening timetable. The manufacturer telephone differs and is not imported. Public Google named-business point reviewed 24 September 2026; approximate premises position, not a surveyed entrance or on-site inspection. Location setting remains Uncertain and does not exclude map coverage. Published hours and review ages are supporting signals only."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-hunter-discount-specs-cessnock",
+      "address": "1B Cooper Street, Cessnock NSW 2325",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.hunterdiscountspecs.com/contact-us.html",
+        "checked_at": "2026-09-24",
+        "reason": "Current practice-owned branch list confirms this specific address and phone, with published weekday hours. Its website describes prescription eyewear, contact lenses and optical care. Manufacturer prescription-provider record agrees. Four branches are distinct physical practices; the local group remains in the Independent / Other reporting bucket. Coordinates come from the publicly accessible prescription-provider locator, reviewed against practice identity and premises address. Approximate premises/centre position only; no onsite inspection. Retail setting remains Uncertain and does not exclude map coverage."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-provision-60113",
+      "address": "81 Wingewarra Street, Dubbo NSW 2830",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.morrisonseyecare.com.au/",
+        "checked_at": "2026-10-08",
+        "reason": "Current operator homepage/contact page and named business feature confirm81WingewarraStreet and the operator domain. Add branch phone and evidenced optical services and replace the approximate inherited point with the named business point. Preserve original source date, stable ID and ProVision affiliation. The previous WingewarraStreet corridor membership arose from address-only evidence and lacks formal precinct corroboration; retire that mapping while retaining network eligibility. Six government visiting-service rows share the practice phone but do not establish six fixed storefronts; current schedules and venues remain unverified."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-oliver-woo-eastwood",
+      "address": "173 Rowe Street, Eastwood NSW 2122",
+      "status": "Active",
+      "evidence": {
+        "role": "trading/premises",
+        "url": "https://www.linkedin.com/posts/oliver-woo-b5239a40_dear-friends-customers-and-patients-activity-7117871743452553216-y2m_",
+        "checked_at": "2026-09-24",
+        "reason": "The practitioner announced relocation to 173 Rowe Street on 12 October 2023. Public fitout contractor DB Projects confirms a completed Eastwood clinic with retail display, testing and consultation areas (https://www.dbprojects.com.au/project/oliver-woo-optometrist/). Current Google business listing matches the new address and practitioner phone, with scheduled hours and a visible review labelled a month ago. The manufacturer still lists 201\u2013203 Rowe Street; its old-site point is not used. Specialist myopia/contact-lens care does not exclude this evidenced retail practice. Public Google named-business point reviewed 24 September 2026; approximate premises position, not a surveyed entrance or on-site inspection. Location setting remains Uncertain and does not exclude map coverage. Published hours and review ages are supporting signals only."
+      }
+    }
+  ]
+}

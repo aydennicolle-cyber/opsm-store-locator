@@ -492,12 +492,14 @@
   function competitorPropertyContext(place, stores) {
     const byRetailer = {};
     (stores || []).forEach((store) => {
+      if (store.eligible_for_analytics !== true) return;
+      if (store.latitude == null || store.longitude == null || store.latitude === "" || store.longitude === "") return;
       if (!Number.isFinite(Number(store.latitude)) || !Number.isFinite(Number(store.longitude))) return;
       const retailer = store.retailer || "Unknown";
       byRetailer[retailer] ||= { in_centre: [], nearby_unverified: [], catchment_2km: [] };
       const distance = haversine(place, store);
       const item = { store_id: store.store_id, name: store.name, distance_km: Math.round(distance * 100) / 100 };
-      if (store.place_id && store.place_id === place.place_id) byRetailer[retailer].in_centre.push(item);
+      if (store.eligible_for_place_analytics === true && store.place_id && store.place_id === place.place_id) byRetailer[retailer].in_centre.push(item);
       else if (distance <= 0.25) byRetailer[retailer].nearby_unverified.push(item);
       else if (distance <= 2) byRetailer[retailer].catchment_2km.push(item);
     });
@@ -534,6 +536,35 @@
     return Array.isArray(layers) ? [...new Set(layers.filter(layer => allowed.includes(layer)))] : ["stores", "centres"];
   }
 
+  const STORE_FILTER_VALUES = {
+    location: ['Shopping Centre', 'High Street', 'Other', 'Uncertain'],
+    service: ['optometry', 'retail', 'unverified'],
+    status: ['Active', 'Mapped', 'Opening Soon', 'Temporarily Closed', 'Unknown'],
+  };
+  function normaliseStoreSelection(value, key) {
+    const values = Array.isArray(value) ? value : value ? [value] : [];
+    return STORE_FILTER_VALUES[key].filter(item => values.includes(item));
+  }
+  function matchesStoreSelection(value, selected, key) {
+    const values = normaliseStoreSelection(selected, key);
+    return !values.length || values.includes(value);
+  }
+  function storeFilterExclusions(store, filters, ignoreRetailer = false) {
+    const reasons = [];
+    const query = String(filters.search || '').trim().toLowerCase();
+    const haystack = `${store.name} ${store.suburb} ${store.postcode} ${store.full_address} ${store.venue_name}`.toLowerCase();
+    if (!ignoreRetailer && !Array.from(filters.retailers || []).includes(store.retailer)) reasons.push('Optical Retail Brands');
+    if (filters.country && store.country !== filters.country) reasons.push('Country');
+    if (filters.state && store.state !== filters.state) reasons.push('State / region');
+    if (query && !haystack.includes(query)) reasons.push('Search');
+    if (!matchesStoreSelection(store.location_type, filters.location, 'location')) reasons.push('Place type');
+    if (!matchesStoreSelection(storeServiceCategory(store), filters.service, 'service')) reasons.push('Store services');
+    if (!matchesStoreSelection(store.status, filters.status, 'status')) reasons.push('Status');
+    if (filters.audiology && String(store.audiology) !== filters.audiology) reasons.push('Audiology');
+    if (filters.affiliation && !String(store.affiliations || '').split('|').includes(filters.affiliation)) reasons.push('Affiliation');
+    return reasons;
+  }
+
   function sanitiseShareState(state) {
     return {
       view: state.view || "network",
@@ -542,11 +573,12 @@
         retailers: Array.from(state.filters?.retailers || []),
         country: state.filters?.country || "",
         state: state.filters?.state || "",
-        location: state.filters?.location || "",
+        location: normaliseStoreSelection(state.filters?.location, "location"),
         search: state.filters?.search || "",
         affiliation: state.filters?.affiliation || "",
         audiology: state.filters?.audiology || "",
-        status: state.filters?.status || "",
+        service: normaliseStoreSelection(state.filters?.service, "service"),
+        status: normaliseStoreSelection(state.filters?.status, "status"),
       },
       place_filters: {
         search: state.placeFilters?.search || "",
@@ -588,6 +620,35 @@
     };
   }
 
+  // Classify evidenced services, never infer clinical services from the brand name.
+  function storeServiceCategory(store = {}) {
+    const type = String(store.business_type || '').toLowerCase();
+    const services = String(store.services || '').toLowerCase();
+    const evidence = `${type}; ${services}`;
+    const hasNegation = /(?:no|not|without)\s+(?:on.?site\s+)?(?:optometry|eye tests?|eye exams?|eye examinations?)/.test(evidence);
+    if (!hasNegation && /optometr|eye\s+(?:tests?|exams?|examinations?)|eye-test/.test(evidence)) return 'optometry';
+    if (/sunglasses retail|eyewear retail|contact lens retail|permanent optical retail/.test(type) || /sunglasses retail/.test(services)) return 'retail';
+    return 'unverified';
+  }
+
+  function exactPlaceOpticalTenants(stores, placeId) {
+    if (!placeId) return [];
+    const seen = new Set();
+    return stores.filter(store => {
+      if (!store.store_id || seen.has(store.store_id) || store.place_id !== placeId
+          || store.eligible_for_analytics !== true || store.eligible_for_place_analytics !== true) return false;
+      seen.add(store.store_id);
+      return true;
+    }).map(store => ({
+      place_id: placeId, tenant_id: `optical-store-${store.store_id}`, store_id: store.store_id,
+      tenant_name: store.name || store.retailer, retailer: store.retailer, category: "Optical",
+      anchor_flag: false, selection_basis: store.mapping_evidence_basis || "Accepted canonical place membership",
+      status: store.status || "Unknown", source_url: store.mapping_evidence_url || "",
+      source_type: "Accepted store-place evidence", source_date: "",
+      verified_at: store.mapping_record_date || "", confidence: store.mapping_confidence || "Uncertain",
+    }));
+  }
+
   function comparisonSnapshot(candidates = []) {
     return candidates.filter(candidate => number(candidate.latitude) !== null && number(candidate.longitude) !== null && Math.abs(Number(candidate.latitude)) <= 90 && Math.abs(Number(candidate.longitude)) <= 180).map(candidate => ({
       id: String(candidate.id || ''), name: String(candidate.name || 'Unnamed place'),
@@ -605,6 +666,9 @@
   }
 
   return {
+    STORE_FILTER_VALUES, normaliseStoreSelection, matchesStoreSelection, storeFilterExclusions,
+    storeServiceCategory,
+    exactPlaceOpticalTenants,
     comparisonSnapshot,
     comparisonConnections,
     sanitiseLayers,

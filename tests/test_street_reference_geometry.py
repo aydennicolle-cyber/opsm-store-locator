@@ -29,6 +29,13 @@ class RetainedStreetPointTests(unittest.TestCase):
         reviews = json.loads((root/'data/discovery/reviewed_street_reference_geometry.json').read_text())['reviews']
         with (root/'data/place_coordinate_overrides.csv').open() as source:
             overrides = {r['place_id']: r for r in csv.DictReader(source)}
+        # Historical geometry remains auditable when the sole shop is explicitly
+        # reassigned to a centre and its derived street place disappears.
+        with (root/'data/retired_place_coordinate_reviews.csv').open() as source:
+            retired = {r['place_id']: r for r in csv.DictReader(source)}
+        self.assertFalse(set(overrides) & set(retired))
+        self.assertTrue(all(r['retirement_reason'] for r in retired.values()))
+        overrides.update(retired)
         for r in reviews:
             with self.subTest(place=r['place_id']):
                 a, b = r['segment']; t = r['fraction']

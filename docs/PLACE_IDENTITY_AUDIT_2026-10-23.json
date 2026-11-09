@@ -1,0 +1,454 @@
+{
+  "reviewed_on": "2026-10-23",
+  "population_before": 1579,
+  "scope": "All canonical names screened against named retailer prefixes and tenancy labels; address-fragment and source-generated names reviewed. Not a full verification of every centre or tenant directory.",
+  "decisions": [
+    {
+      "previous_place_id": "place-au-act-sunglass-hut-canberra-outlet-centre",
+      "previous_name": "Sunglass Hut Canberra Outlet Centre",
+      "store_id": "sunglass-hut-B760",
+      "source_venue_id": "act-canberra-hut-outlet-sunglass",
+      "canonical_place_id": "place-au-act-canberra-outlet-centre",
+      "canonical_name": "Canberra Outlet Centre",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/act/fyshwick/shop-531-level-1-canberra-outlet-centre",
+      "corroboration_url": "https://canberraoutlet.com.au/stores/sunglass-hut/"
+    },
+    {
+      "previous_place_id": "place-au-nsw-sunglass-hut-chatswood-chase-kiosk",
+      "previous_name": "Sunglass Hut Chatswood Chase Kiosk",
+      "store_id": "sunglass-hut-B740",
+      "source_venue_id": "nsw-chase-chatswood-hut-kiosk-sunglass",
+      "canonical_place_id": "place-au-nsw-chatswood-chase",
+      "canonical_name": "Chatswood Chase",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/chatswood/kiosk-gk009-level-1-chatswood-chase",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-nsw-sunglass-hut-chatswood-westfield-kiosk",
+      "previous_name": "Sunglass Hut Chatswood Westfield Kiosk",
+      "store_id": "sunglass-hut-B698",
+      "source_venue_id": "nsw-chatswood-hut-kiosk-sunglass-westfield",
+      "canonical_place_id": "place-au-nsw-westfield-chatswood",
+      "canonical_name": "Westfield Chatswood",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/chatswood/k406-level-4-westfield-chatswood-shopping-centre",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-nsw-sunglass-hut-erina-fair",
+      "previous_name": "Sunglass Hut Erina Fair",
+      "store_id": "sunglass-hut-B838",
+      "source_venue_id": "nsw-erina-fair-hut-sunglass",
+      "canonical_place_id": "place-au-nsw-erina-fair",
+      "canonical_name": "Erina Fair",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/erina/t260-ground-floor-erina-fair-shopping-centre",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-nsw-sunglass-hut-myer-bondi-junction",
+      "previous_name": "Sunglass Hut Myer Bondi Junction",
+      "store_id": "sunglass-hut-B796",
+      "source_venue_id": "nsw-bondi-hut-junction-myer-sunglass",
+      "canonical_place_id": "place-au-nsw-bondi-junction-westfield",
+      "canonical_name": "Bondi Junction Westfield",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/bondi-junction/500-oxford-street-westfield-bondi-junction-b796",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-nsw-sunglass-hut-myer-warringah-mall",
+      "previous_name": "Sunglass Hut Myer Warringah Mall",
+      "store_id": "sunglass-hut-B896",
+      "source_venue_id": "nsw-hut-myer-sunglass-warringah",
+      "canonical_place_id": "place-au-nsw-westfield-warringah-mall",
+      "canonical_name": "Westfield Warringah Mall",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/brookvale/myer-ground-floor-westfield-warringah-mall",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-nsw-sunglass-hut-sydney-outlet-village",
+      "previous_name": "Sunglass Hut Sydney Outlet Village",
+      "store_id": "sunglass-hut-4714",
+      "source_venue_id": "nsw-hut-outlet-sunglass-sydney-village",
+      "canonical_place_id": "place-au-nsw-fashion-spree",
+      "canonical_name": "Sydney Outlet Village",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/sydney/shop-84-sydney-outlet-village-5-viscount-place-liverpool",
+      "corroboration_url": "https://sydneyoutletvillage.com.au/plan-your-visit/"
+    },
+    {
+      "previous_place_id": "place-au-nt-kiosk-8-gateway-shopping-centre",
+      "previous_name": "Kiosk 8 Gateway Shopping Centre",
+      "store_id": "sunglass-hut-A928",
+      "source_venue_id": "nt-8-gateway-kiosk",
+      "canonical_place_id": "place-au-nt-gateway-shopping-centre",
+      "canonical_name": "Gateway Shopping Centre",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/nt/yarrawonga/kiosk-8-gateway-shopping-centre-1-roystonea-avenue",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-qld-kiosk-k02-westfield-coomera",
+      "previous_name": "Kiosk K02 Westfield Coomera",
+      "store_id": "sunglass-hut-AU4618",
+      "source_venue_id": "qld-coomera-k02-kiosk-westfield",
+      "canonical_place_id": "place-au-qld-westfield-coomera",
+      "canonical_name": "Westfield Coomera",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/qld/coomera/103-foxwell-rd",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-qld-sunglass-hut-carindale",
+      "previous_name": "Sunglass Hut Carindale",
+      "store_id": "sunglass-hut-B663",
+      "source_venue_id": "qld-carindale-hut-sunglass",
+      "canonical_place_id": "place-au-qld-westfield-carindale",
+      "canonical_name": "Westfield Carindale",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/qld/carindale/shop-2031-level-1-westfield-carindale-shopping-centre",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-qld-sunglass-hut-myer-carindale",
+      "previous_name": "Sunglass Hut Myer Carindale",
+      "store_id": "sunglass-hut-B805",
+      "source_venue_id": "qld-carindale-hut-myer-sunglass",
+      "canonical_place_id": "place-au-qld-westfield-carindale",
+      "canonical_name": "Westfield Carindale",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/qld/carindale/myer-ground-floor-westfield-carindale-shopping-centre",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-qld-sunglass-hut-myer-centre-brisbane-kiosk-closed",
+      "previous_name": "Sunglass Hut Myer Centre Brisbane Kiosk-Closed",
+      "store_id": "sunglass-hut-AU3334",
+      "source_venue_id": "qld-brisbane-closed-hut-kiosk-myer-sunglass",
+      "canonical_place_id": "place-au-qld-uptown",
+      "canonical_name": "Uptown",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/qld/brisbane/91-queen-street-the-myer-centre",
+      "corroboration_url": "https://www.uptownbrisbane.com.au/whats-uptown"
+    },
+    {
+      "previous_place_id": "place-au-qld-sunglass-hut-myer-chermside",
+      "previous_name": "Sunglass Hut Myer Chermside",
+      "store_id": "sunglass-hut-B804",
+      "source_venue_id": "qld-chermside-hut-myer-sunglass",
+      "canonical_place_id": "place-au-qld-westfield-chermside",
+      "canonical_name": "Westfield Chermside",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/qld/chermside/myer-level-2-westfield-chermside",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-qld-sunglass-hut-myer-townsville-shopping-centre",
+      "previous_name": "Sunglass Hut Myer Townsville Shopping Centre",
+      "store_id": "sunglass-hut-B827",
+      "source_venue_id": "qld-hut-myer-sunglass-townsville",
+      "canonical_place_id": "place-au-qld-stockland-townsville",
+      "canonical_name": "Townsville Shopping Centre",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/qld/aitkenvale/myer-level-1-townsville-shopping-centre",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-sa-sunglass-hut-myer-centre-adelaide-closed",
+      "previous_name": "Sunglass Hut Myer Centre Adelaide -Closed",
+      "store_id": "sunglass-hut-AU3191",
+      "source_venue_id": "sa-adelaide-closed-hut-myer-sunglass",
+      "canonical_place_id": "place-au-sa-myer-centre-adelaide",
+      "canonical_name": "Myer Centre Adelaide",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/sa/adelaide/14-38-rundle-mall-myer-centre-adelaide",
+      "corroboration_url": "https://myercentreadelaide.com.au/plan-your-visit/"
+    },
+    {
+      "previous_place_id": "place-au-sa-sunglass-hut-myer-tea-tree-plaza",
+      "previous_name": "Sunglass Hut Myer Tea Tree Plaza",
+      "store_id": "sunglass-hut-B813",
+      "source_venue_id": "sa-hut-myer-plaza-sunglass-tea-tree",
+      "canonical_place_id": "place-au-sa-westfield-tea-tree-plaza",
+      "canonical_name": "Westfield Tea Tree Plaza",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/sa/modbury/976-north-east-rd-westfield-tea-tree-plaza-b813",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-sa-sunglass-hut-rundle-mall",
+      "previous_name": "Sunglass Hut Rundle Mall",
+      "store_id": "sunglass-hut-B660",
+      "source_venue_id": "sa-hut-rundle-sunglass",
+      "canonical_place_id": "place-au-sa-rundle-mall",
+      "canonical_name": "Rundle Mall",
+      "location_setting": "High Street",
+      "source_url": "https://stores.sunglasshut.com/au/sa/adelaide/shop-69-rundle-mall",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-vic-sunglass-hut-myer-chadstone",
+      "previous_name": "Sunglass Hut Myer Chadstone",
+      "store_id": "sunglass-hut-B808",
+      "source_venue_id": "vic-chadstone-hut-myer-sunglass",
+      "canonical_place_id": "place-au-vic-chadstone-shopping-centre",
+      "canonical_name": "Chadstone Shopping Centre",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/vic/chadstone/myer-ground-level-chadstone-shopping-centre",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-vic-sunglass-hut-myer-eastland",
+      "previous_name": "Sunglass Hut Myer Eastland",
+      "store_id": "sunglass-hut-B816",
+      "source_venue_id": "vic-eastland-hut-myer-sunglass",
+      "canonical_place_id": "place-au-vic-eastland",
+      "canonical_name": "Eastland",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/vic/ringwood/myer-level-2-eastland-shopping-centre",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-vic-sunglass-hut-myer-southland",
+      "previous_name": "Sunglass Hut Myer Southland",
+      "store_id": "sunglass-hut-B817",
+      "source_venue_id": "vic-hut-myer-southland-sunglass",
+      "canonical_place_id": "place-au-vic-westfield-southland",
+      "canonical_name": "Westfield Southland",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/vic/cheltenham/myer-level-2-westfield-southland-shopping-centre",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-vic-sunglass-hut-southland",
+      "previous_name": "Sunglass Hut Southland",
+      "store_id": "sunglass-hut-B673",
+      "source_venue_id": "vic-hut-southland-sunglass",
+      "canonical_place_id": "place-au-vic-westfield-southland",
+      "canonical_name": "Westfield Southland",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/vic/cheltenham/shop-2107-level-2-westfield-southland-shopping-centre",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-wa-sunglass-hut-belmont-forum",
+      "previous_name": "Sunglass Hut Belmont Forum",
+      "store_id": "sunglass-hut-B728",
+      "source_venue_id": "wa-belmont-forum-hut-sunglass",
+      "canonical_place_id": "place-au-wa-belmont-forum",
+      "canonical_name": "Belmont Forum Shopping Centre",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/wa/cloverdale/227-belmont-ave-belmont-forum",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-wa-sunglass-hut-carousel",
+      "previous_name": "Sunglass Hut Carousel",
+      "store_id": "sunglass-hut-B704",
+      "source_venue_id": "wa-carousel-hut-sunglass",
+      "canonical_place_id": "place-au-wa-westfield-carousel",
+      "canonical_name": "Westfield Carousel",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/wa/cannington/shop-1226-ground-westfield-carousel-shopping-centre",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-wa-sunglass-hut-myer-carousel",
+      "previous_name": "Sunglass Hut Myer Carousel",
+      "store_id": "sunglass-hut-B865",
+      "source_venue_id": "wa-carousel-hut-myer-sunglass",
+      "canonical_place_id": "place-au-wa-westfield-carousel",
+      "canonical_name": "Westfield Carousel",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/wa/cannington/myer-westfield-carousel-shopping-centre",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-wa-sunglass-hut-perth-piccadilly-arcade",
+      "previous_name": "Sunglass Hut Perth Piccadilly Arcade",
+      "store_id": "sunglass-hut-B725",
+      "source_venue_id": "wa-arcade-hut-perth-piccadilly-sunglass",
+      "canonical_place_id": "place-au-wa-piccadilly-arcade",
+      "canonical_name": "Piccadilly Arcade",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/wa/perth/shop-34-36-piccadilly-arcade",
+      "corroboration_url": "https://visitperth.com/shopping/shopping-destinations/Venues/piccadilly-arcade"
+    },
+    {
+      "previous_place_id": "place-nz-canterbury-sunglass-hut-northlands",
+      "previous_name": "Sunglass Hut Northlands",
+      "store_id": "sunglass-hut-B638",
+      "source_venue_id": "canterbury-hut-northlands-sunglass",
+      "canonical_place_id": "place-nz-canterbury-northlands-mall",
+      "canonical_name": "Northlands Mall",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-south/christchurch/55-main-north-road-northlands-shopping-centre",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-sa-east-mall",
+      "previous_name": "East Mall",
+      "store_id": "sunglass-hut-B679",
+      "source_venue_id": "sa-east",
+      "canonical_place_id": "place-au-sa-elizabeth-shopping-centre",
+      "canonical_name": "Elizabeth City Centre",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/sa/elizabeth/shop-s030-ground-floor-east-mall-elizabeth-shopping-centre",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-vic-bourke-street-mall",
+      "previous_name": "Bourke Street Mall",
+      "store_id": "sunglass-hut-B750",
+      "source_venue_id": "vic-bourke-street",
+      "canonical_place_id": "corridor-au-vic-melbourne-bourke-street",
+      "canonical_name": "Bourke Street",
+      "location_setting": "High Street",
+      "source_url": "https://stores.sunglasshut.com/au/vic/melbourne/shop-1-3-street-level",
+      "corroboration_url": "https://whatson.melbourne.vic.gov.au/things-to-do/melbourne-shopping-centres"
+    },
+    {
+      "previous_place_id": "place-au-vic-cnr-grange-rd-centre-dandenong-rd",
+      "previous_name": "Cnr Grange Rd & Centre Dandenong Rd",
+      "store_id": "sunglass-hut-B763",
+      "source_venue_id": "vic-and-cnr-dandenong-grange-rd",
+      "canonical_place_id": "place-au-unknown-dfo-moorabbin",
+      "canonical_name": "DFO Moorabbin",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/vic/cheltenham/cnr-grange-rd-centre-dandenong-rd-dfo-moorabbin",
+      "corroboration_url": ""
+    },
+    {
+      "previous_place_id": "place-au-vic-convention-centre-pl",
+      "previous_name": "Convention Centre Pl",
+      "store_id": "sunglass-hut-B764",
+      "source_venue_id": "vic-convention-pl",
+      "canonical_place_id": "place-au-vic-dfo-south-wharf",
+      "canonical_name": "DFO South Wharf",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/vic/south-wharf/tenancy-b012-basement",
+      "corroboration_url": "https://www.south-wharf.dfo.com.au/shopping"
+    },
+    {
+      "previous_place_id": "place-au-vic-pall-mall",
+      "previous_name": "Pall Mall",
+      "store_id": "sunglass-hut-B874",
+      "source_venue_id": "vic-pall",
+      "canonical_place_id": "corridor-au-vic-bendigo-pall-mall",
+      "canonical_name": "Pall Mall",
+      "location_setting": "High Street",
+      "source_url": "https://stores.sunglasshut.com/au/vic/bendigo/ground-floor",
+      "corroboration_url": "https://www.bendigo.vic.gov.au/about-us/projects/tram-track-renewal-works-high-street-and-pall-mall"
+    },
+    {
+      "previous_place_id": "place-nz-auckland-portland-towers",
+      "previous_name": "Portland Towers",
+      "store_id": "sunglass-hut-B639",
+      "source_venue_id": "auckland-portland-towers",
+      "canonical_place_id": "corridor-nz-auckland-auckland-queen-street",
+      "canonical_name": "Queen Street",
+      "location_setting": "High Street",
+      "source_url": "https://stores.sunglasshut.com/nz/auckland/auckland/62-queen-street-portland-towers",
+      "corroboration_url": "https://heartofthecity.co.nz/auckland-shopping/accessories/sunglass-hut-queen-street"
+    },
+    {
+      "previous_place_id": "place-au-qld-optiko-queen-st-mall",
+      "previous_name": "Optiko – Queen St Mall",
+      "store_id": "george-matilda-17212",
+      "source_venue_id": "qld-optiko-queen-st",
+      "canonical_place_id": "corridor-au-qld-brisbane-queen-street",
+      "canonical_name": "Queen Street",
+      "location_setting": "High Street",
+      "source_url": "https://georgeandmatilda.com.au/find-a-store/",
+      "corroboration_url": "https://georgeandmatilda.com.au/stores/optometrist-brisbane-city-qld/"
+    },
+    {
+      "previous_place_id": "place-au-wa-murray-st-mall",
+      "previous_name": "Murray St Mall",
+      "store_id": "specsavers-3481",
+      "source_venue_id": "wa-murray-st",
+      "canonical_place_id": "corridor-au-wa-perth-murray-street-mall",
+      "canonical_name": "Murray Street Mall",
+      "location_setting": "High Street",
+      "source_url": "https://www.specsavers.com.au/stores/perthmurraystmall",
+      "corroboration_url": "https://visitperth.com/shopping/shopping-destinations/Venues/murray-street-mall"
+    },
+    {
+      "previous_place_id": "place-au-vic-centre-rd",
+      "previous_name": "Centre Rd",
+      "decision": "Suppress false centre; retain stores as separately addressed street records",
+      "source_venue_id": "vic-rd",
+      "source_url": "https://www.gleneira.vic.gov.au/services/business-support/supporting-your-business/bentleigh-shopping-centre"
+    },
+    {
+      "previous_place_id": "place-au-vic-centre-road",
+      "previous_name": "Centre Road",
+      "decision": "Suppress false centre; retain stores as separately addressed street records",
+      "source_venue_id": "vic-road",
+      "source_url": "https://www.gleneira.vic.gov.au/services/business-support/supporting-your-business/bentleigh-shopping-centre"
+    },
+    {
+      "previous_place_id": "place-au-nt-casuarina-shopping-centre",
+      "previous_name": "Casuarina Shopping Centre",
+      "store_id": "sunglass-hut-AU3775",
+      "source_venue_id": "nt-casuarina",
+      "canonical_place_id": "place-au-nt-casuarina-square",
+      "canonical_name": "Casuarina Square",
+      "location_setting": "Shopping Centre",
+      "source_url": "https://stores.sunglasshut.com/au/nt/casuarina",
+      "corroboration_url": "https://www.casuarinasquare.com.au/",
+      "note": "Closed kiosk remains closed; centre identity only."
+    },
+    {
+      "previous_place_id": "place-au-unknown-centrepoint-midland-shopping-centre-parking-area",
+      "previous_name": "Centrepoint Midland Shopping Centre Parking Area",
+      "canonical_place_id": "place-au-unknown-centrepoint-midland-shopping-centre-parking-area",
+      "canonical_name": "Centrepoint Midland",
+      "action": "rename_preserving_id",
+      "source_url": "https://www.centrepointshoppingcentre.com.au/contact",
+      "note": "Approximate source point retained; not surveyed geometry."
+    },
+    {
+      "previous_place_id": "place-au-qld-chancellor-village-blvd",
+      "previous_name": "Chancellor Village Blvd",
+      "store_id": "independent-other-optical-provision-17587",
+      "source_venue_id": "qld-blvd-chancellor-village",
+      "action": "suppress_false_place_keep_store_mapping_unresolved",
+      "source_url": "https://www.optikus.com.au/",
+      "note": "Reviewed 23 October 2026: Chancellor Village Boulevard is a street address, not a centre name. Current operator address is Shop 3, 1 Chancellor Village Boulevard. Older references to Chancellor Park Market Place use a different unit/address; the current centre or street-front setting needs explicit evidence."
+    }
+  ],
+  "result": {
+    "place_identities_corrected": 39,
+    "store_memberships_corrected": 40,
+    "places_after": 1549,
+    "store_records_added_or_removed": 0,
+    "pacific_fair": {
+      "place_id": "place-au-qld-pacific-fair",
+      "sunglass_hut_store_ids": [
+        "sunglass-hut-B682",
+        "sunglass-hut-A571",
+        "sunglass-hut-B885"
+      ],
+      "observation": "One canonical centre and three separately identified Sunglass Hut outlets were already correctly mapped in the current baseline; no extra place marker reproduced in the current review site."
+    },
+    "validation_status": "Passed: required builders, 380 Python tests, 7 JavaScript suites, repository and packaged-site privacy scans, manifest validation and browser spot checks. Local review only.",
+    "published": false,
+    "unresolved_store_mappings": [
+      {
+        "store_id": "independent-other-optical-provision-17587",
+        "name": "Optikus Optometrists",
+        "reason": "False street-named centre removed; current centre/street-front setting unresolved from operator and older directory evidence."
+      }
+    ],
+    "browser_checks": [
+      "Pacific Fair: one centre result; all three Sunglass Hut outlets listed as stores; Shop 2098 opens its official store profile with canonical place Pacific Fair.",
+      "Carindale: one Westfield Carindale place result; no separate Sunglass Hut Myer Carindale place result."
+    ],
+    "private_news_batch_unchanged": true
+  }
+}

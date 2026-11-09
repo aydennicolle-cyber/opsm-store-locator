@@ -38,10 +38,26 @@ def named_source_count() -> int:
             original = next(item for item in REGISTRY
                             if correction["store_id"].startswith(item["slug"] + "-"))
             total += int(correction["retailer"] in NAMED) - int(original["is_named_network"])
+    with (DATA/'store_identity_remaps.csv').open(newline='') as handle:
+        total += sum(r['source_store_id'].startswith(('sunglass-hut-', 'oakley-')) and r['canonical_store_id'].startswith('independent-other-optical-') for r in csv.DictReader(handle))
     return total
 
 
 class DataHealthTests(unittest.TestCase):
+    def test_profile_mapping_evidence_preserves_membership_provenance_and_dates(self):
+        health = json.loads((DATA / 'data_health.json').read_text())['store_certification']
+        with (DATA / 'store_place_memberships.csv').open(newline='') as stream:
+            memberships = list(csv.DictReader(stream))
+        for membership in memberships:
+            cert = health[membership['store_id']]
+            self.assertEqual(cert['mapping_evidence_basis'], membership['evidence_basis'])
+            self.assertEqual(cert['mapping_evidence_url'], membership['evidence_url'])
+            self.assertEqual(cert['mapping_record_date'], membership['verified_at'])
+        historical = health['independent-other-optical-osm-au-node-3981216558']
+        self.assertEqual(historical['mapping_record_date'], '2026-10-02')
+        self.assertEqual(historical['eligible_for_analytics'], 'false')
+        self.assertEqual(historical['eligible_for_place_analytics'], 'false')
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.health = json.loads((DATA / "data_health.json").read_text(encoding="utf-8"))
@@ -177,7 +193,7 @@ class DataHealthTests(unittest.TestCase):
         research = self.health["high_street_research"]
         self.assertEqual(
             set(research["dimensions"]),
-            {"bailey_corridor_baseline_coverage", "bailey_corridor_retail_mix_coverage"},
+            {"bailey_corridor_baseline_coverage", "bailey_corridor_retail_mix_coverage", "legacy_key_tenant_table_coverage"},
         )
         bailey_corridor_ids = {
             row["place_id"] for row in self.certification
@@ -190,6 +206,14 @@ class DataHealthTests(unittest.TestCase):
         self.assertEqual(research["counts"]["bailey_corridors"], len(bailey_corridor_ids))
         self.assertEqual(research["counts"]["baseline_researched"], len(bailey_corridor_ids))
         self.assertLessEqual(research["counts"]["key_tenant_profiled"], len(bailey_corridor_ids))
+        environments = json.loads((ROOT / 'data/retail_environments.json').read_text())['places']
+        evidenced_ids = {p['place_id'] for p in environments if any(r.get('role') != 'Optical' for r in p['observations'])}
+        expected = len(bailey_corridor_ids & evidenced_ids)
+        self.assertEqual(research['counts']['retail_mix_evidenced'], expected)
+        self.assertEqual(research['dimensions']['bailey_corridor_retail_mix_coverage'], round(100 * expected / len(bailey_corridor_ids), 1))
+        counts = self.health['retail_environment']['counts']
+        self.assertEqual(counts['places'], len(environments))
+        self.assertEqual(counts['places_with_non_optical_listing_evidence'], len(evidenced_ids))
 
     def test_public_glossary_is_complete_and_unambiguous(self) -> None:
         terms = self.glossary["terms"]

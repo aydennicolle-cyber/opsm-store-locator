@@ -3,6 +3,8 @@ import csv
 import json
 import unittest
 import sys
+import tempfile
+import shutil
 from pathlib import Path
 from scripts import destination_profiles as profiles
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/"scripts"))
@@ -33,7 +35,22 @@ class DestinationProfileTests(unittest.TestCase):
             self.assertIn('2021',m['quality_note'])
 
     def test_radius_does_not_establish_street_membership(self):
-        saved=json.loads((DATA/'destination_profiles.json').read_text())['profiles']
+        # Remove an evidenced mapping in an isolated fixture: this test must
+        # remain valid when real research resolves the previously unknown shop.
+        summaries=json.loads((DATA/'destination_research.json').read_text())['profiles']
+        sid='independent-other-optical-reviewed-au-sunglass-hut-glenelg-b742'
+        with tempfile.TemporaryDirectory() as tmp:
+            target=Path(tmp)
+            for name in ['destination_profile_facts.json','retail_places.json','sa2_market.geojson',
+                         'optical_stores.csv','store_certification.csv','destination_directory.json']:
+                shutil.copy2(DATA/name,target/name)
+            with (DATA/'store_place_memberships.csv').open(newline='') as stream:
+                reader=csv.DictReader(stream); fields=reader.fieldnames
+                rows=[r for r in reader if r['store_id']!=sid]
+            with (target/'store_place_memberships.csv').open('w',newline='') as stream:
+                writer=csv.DictWriter(stream,fieldnames=fields)
+                writer.writeheader();writer.writerows(rows)
+            saved=profiles.compile_profiles(target,summaries)
         street=next(p for p in saved if p['place_id'].startswith('corridor'))['optical_competition']
         accepted={s['store_id'] for s in street['accepted_current_members']}
         colley=next(s for s in street['nearby_current_non_bn'] if 'sunglass-hut-glenelg' in s['store_id'])
@@ -62,6 +79,30 @@ class DestinationProfileTests(unittest.TestCase):
             self.assertTrue(p['limitations'])
             for fact in p['access']+p['property_facts']:
                 self.assertTrue(fact['capture_sha256'])
+
+    def test_new_store_without_certificate_is_excluded_until_health_rebuild(self):
+        summaries=json.loads((DATA/'destination_research.json').read_text())['profiles']
+        baseline=profiles.compile_profiles(DATA,summaries)
+        member=next(s for p in baseline for s in p['optical_competition']['accepted_current_members'])
+        sid=member['store_id']
+        with tempfile.TemporaryDirectory() as tmp:
+            target=Path(tmp)
+            for name in ['destination_profile_facts.json','retail_places.json','sa2_market.geojson',
+                         'optical_stores.csv','store_place_memberships.csv','destination_directory.json']:
+                shutil.copy2(DATA/name,target/name)
+            with (DATA/'store_certification.csv').open(newline='') as stream:
+                reader=csv.DictReader(stream); fields=reader.fieldnames; rows=list(reader)
+            def write_certificates(records):
+                with (target/'store_certification.csv').open('w',newline='') as stream:
+                    writer=csv.DictWriter(stream,fieldnames=fields);writer.writeheader();writer.writerows(records)
+            write_certificates([r for r in rows if r['store_id']!=sid])
+            pending=profiles.compile_profiles(target,summaries)
+            for profile in pending:
+                competition=profile['optical_competition']
+                self.assertNotIn(sid,{s['store_id'] for s in competition['accepted_current_members']})
+                self.assertNotIn(sid,{s['store_id'] for s in competition['nearby_current_non_bn']})
+            write_certificates(rows)
+            self.assertEqual(profiles.compile_profiles(target,summaries),baseline)
 
     def test_edsquare_research_keeps_incompatible_measures_separate(self):
         with (DATA/'property_portfolio_assets.csv').open(newline='') as f:

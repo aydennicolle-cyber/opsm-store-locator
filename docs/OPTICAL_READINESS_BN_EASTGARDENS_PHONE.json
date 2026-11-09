@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-10-26",
+  "store_id": "bailey-nelson-eastgardens",
+  "previous_override": {
+    "store_id": "bailey-nelson-eastgardens",
+    "name": "",
+    "full_address": "Shop 246, Westfield Eastgardens, 152 Bunnerong Rd, Eastgardens, NSW, 2036",
+    "suburb": "",
+    "postcode": "",
+    "phone": "",
+    "official_url": "",
+    "website_url": "",
+    "services": "",
+    "business_type": "",
+    "evidence_url": "https://baileynelson.com.au/pages/optometrist-eastgardens",
+    "verified_at": "2026-10-04",
+    "reason": "Current official branch,visible address and locator captured on2026-10-04. Original raw source dates and IDs are preserved; these dated reviewed facts do not refresh unrelated records.  Current official named-map feature is within10metres of the existing approximate pin; preserve the pin. Exact shop frontage is not surveyed.",
+    "retailer": "",
+    "affiliations": "",
+    "clear_fields": "",
+    "directory_url": ""
+  },
+  "updated_override": {
+    "store_id": "bailey-nelson-eastgardens",
+    "name": "",
+    "full_address": "Shop 246, Westfield Eastgardens, 152 Bunnerong Rd, Eastgardens, NSW, 2036",
+    "suburb": "",
+    "postcode": "",
+    "phone": "02 8395 2761",
+    "official_url": "",
+    "website_url": "",
+    "services": "",
+    "business_type": "",
+    "evidence_url": "https://baileynelson.com.au/pages/optometrist-eastgardens",
+    "verified_at": "2026-10-26",
+    "reason": "Current official branch,visible address and locator captured on2026-10-04. Original raw source dates and IDs are preserved; these dated reviewed facts do not refresh unrelated records.  Current official named-map feature is within10metres of the existing approximate pin; preserve the pin. Exact shop frontage is not surveyed. Phone reviewed 2026-10-26: visible operator branch page and Westfield tenant page agree 02 8395 2761, superseding structured-data 02 8394 2761. Westfield evidence: https://www.westfield.com.au/eastgardens/store/2swwm3yZFgqvzducojeQUj/baileynelson-eastgardens . The operator visible postcode 2026 conflicts with its structured 2036 and existing reviewed address; preserve the existing 2036 address and original address/point review date above. This check does not renew point or trading verification.",
+    "retailer": "",
+    "affiliations": "",
+    "clear_fields": "",
+    "directory_url": ""
+  },
+  "evidence": [
+    {
+      "url": "https://baileynelson.com.au/pages/optometrist-eastgardens",
+      "visible_phone": "02 8395 2761",
+      "structured_phone": "+61283942761",
+      "visible_postcode": "2026",
+      "structured_postcode": "2036"
+    },
+    {
+      "url": "https://www.westfield.com.au/eastgardens/store/2swwm3yZFgqvzducojeQUj/baileynelson-eastgardens",
+      "phone": "(02) 8395 2761",
+      "retrieval_limitation": "Reader copy contains September hours; used only as corroboration of phone, not current trading hours."
+    }
+  ],
+  "scope": "Phone correction only; preserve reviewed address, pin, status and source capture date."
+}

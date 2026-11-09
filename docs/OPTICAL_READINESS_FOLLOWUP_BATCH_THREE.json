@@ -1,0 +1,150 @@
+{
+  "checked_at": "2026-10-27",
+  "status": "All nine validation stages passed; six generated outcomes verified. Browser and export verification remains pending.",
+  "raw_store_sha256": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "accepted": [
+    {
+      "store_id": "independent-other-optical-reviewed-nz-papakura-eyecare",
+      "location_setting": "High Street",
+      "canonical_name": "Great South Road",
+      "place_type": "High Street Corridor",
+      "official_url": "https://papakuraeyecare.co.nz/our-services/book-now/",
+      "evidence_basis": "Owned Papakura Eyecare page explicitly gives 202 Great South Road, Papakura and 09 298 2898; government glasses-supplier list independently corroborates it. Accept the existing Papakura street-and-locality corridor, which already contains OPSM Papakura at 143 Great South Road. This does not combine other Great South Road suburbs or establish a surveyed district boundary. Operator page retrieved through a six-month-old crawl; original store-source age and point unchanged.",
+      "confidence": "Medium",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "corridor-nz-auckland-papakura-great-south-road"
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-illume-eye-care-ponsonby",
+      "location_setting": "Other",
+      "canonical_name": "One Jervois",
+      "place_type": "Other",
+      "official_url": "https://www.illumeeyecare.co.nz/pages/contact-the-illume-eye-care-team",
+      "evidence_basis": "Owned Illume contact page explicitly names the One Jervois Building at 1 Jervois Road and publishes unit 3/1 in its footer. Accept the existing mixed-use One Jervois property, not a shopping centre or whole Ponsonby district. Keep Illume distinct from separately evidenced Matthews; co-location does not establish duplicate identity or a commercial relationship. Retain original raw address and point; the more specific operator unit is preserved in this evidence. Source publication date unknown, retrieved with three-week crawl age.",
+      "confidence": "High",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "place-nz-auckland-ponsonby-one-jervois"
+    }
+  ],
+  "unresolved": [
+    {
+      "store_id": "independent-other-optical-reviewed-nz-lowes-taaffe-bhikoo-pakuranga",
+      "store_fingerprint": "d252ff6657c765e3ada3bcdd0d3b31dc94c07d084691ad8a3caefa5f4025424a",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.pakurangaoptometrists.co.nz/",
+      "reason": "Operator page reviewed 27 October 2026 confirms 125 Pakuranga Road, current retained phone 09 576 4769 and directions next to DW Family Doctors and Post Office. A historic syndicated practice description says outside Pakuranga Plaza and retains the former Visique phone, so it is context rather than current exclusion proof. Neither the operator nor current provider records establish centre tenancy. Keep the practice separate from Pakuranga Medical Centre at 11 Cortina Place and preserve the prior duplicate-provider reconciliation. Centre or precinct membership remains unresolved; no nearby-place assignment."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-auckland-myopia-clinic",
+      "store_fingerprint": "89b0f1deabe0a7b1f9aedc8676082a5bf19fdc53352d1de6f86f0bc35cc3ff4e",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.myopia.co.nz/contact",
+      "reason": "Operator contact page reviewed 27 October 2026 confirms 111 Parnell Road and postcode 1052; Healthpoint still gives 1053 with an October 2025 content date. Retain the supported operator postcode and existing position. Operator-linked public history describes relocation from Victoria Street to Parnell but does not establish a surveyed retail precinct or centre tenancy. No accepted Parnell corridor exists in the current inventory, and focused district research did not establish one for this property. Keep exact canonical membership unresolved without inventing a street boundary or relocation day."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-auckland-optometrists-royal-oak",
+      "store_fingerprint": "d6bd70810380690e14582c06f94d3c1c735e55d344279d1dfc225f7cfc095ba5",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://aucklandoptometrists.com/",
+      "reason": "Owned site reviewed 27 October 2026 confirms the eyewear practice at 109A Trafalgar Street, Royal Oak, Auckland 1061 and retained phone. Government glasses-supplier list independently corroborates the same address. Focused mall research did not establish Royal Oak Mall tenancy; locality alone is insufficient. The existing Trafalgar Street canonical corridor is in Nelson and must not be reused. Keep this supported Auckland premises usable but canonical place membership unresolved."
+    },
+    {
+      "store_id": "independent-other-optical-osm-ne-node-6923678892",
+      "store_fingerprint": "8c0f45757a6dc381f02195c64aca45248d7c3ea02fd7eb22cf671e668e926ef6",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.cassidyeyecare.co.nz/contact/te-atatu",
+      "reason": "Owned Te Atatu branch page reviewed 27 October 2026 explicitly confirms 84C Gunner Drive, phone 09 834 9070 and separate New Lynn branch. Te Atatu Peninsula town-centre magazine from 2023 lists Cassidy at 84 Gunner Drive, corroborating district context but not a current precise study boundary. No accepted Gunner Drive corridor is established in the current inventory. Preserve original OSM identity, operator unit C and corroborated point; retain unresolved exact place membership rather than inventing a centre or merging the New Lynn branch."
+    }
+  ],
+  "additional_sources": [
+    "https://www.workandincome.govt.nz/eligibility/health-and-disability/glasses-suppliers/auckland-south",
+    "https://www.findglocal.com/NZ/Auckland/162875863767208/Visique-Pakuranga-Optometrists",
+    "https://www.healthpoint.co.nz/eye-care/optometry/auckland-myopia-clinic/at/111-parnell-road-auckland/",
+    "https://nz.linkedin.com/in/auckland-myopia-clinic-9094832a3",
+    "https://www.teatatupeninsula.co.nz/wp-content/uploads/2023/03/VIEWS-ON-TAP-AUTUMN-2023-FOR-WEB.pdf",
+    "https://aucklandoptometrists.com/",
+    "https://www.cassidyeyecare.co.nz/contact/te-atatu"
+  ],
+  "limitations": "Government/provider/search corroboration is not a fresh trading guarantee. No raw store addresses, coordinates, statuses or source dates changed.",
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": [
+    {
+      "store_id": "independent-other-optical-reviewed-nz-papakura-eyecare",
+      "checks": {
+        "accepted_place": true,
+        "place_eligible": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-illume-eye-care-ponsonby",
+      "checks": {
+        "accepted_place": true,
+        "place_eligible": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-lowes-taaffe-bhikoo-pakuranga",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-auckland-myopia-clinic",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-auckland-optometrists-royal-oak",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-ne-node-6923678892",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    }
+  ]
+}

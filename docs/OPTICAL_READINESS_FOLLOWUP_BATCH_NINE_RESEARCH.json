@@ -1,0 +1,30 @@
+{
+  "status": "Operator evidence gathered; no batch-nine data changes.",
+  "checked_at": "2026-10-27",
+  "records": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-8512027148",
+      "source": "https://eyecatchers.com.au/",
+      "finding": "Scrape did not return structured page content in this attempt. Do not infer status. Existing address Level1,379VictoriaAvenueChatswood needs explicit property/street evidence.",
+      "next": "Inspect access error or use official alternative; preserve existing raw record."
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-5072911675",
+      "source": "https://www.proviewoptical.com.au/",
+      "finding": "Homepage retrieved successfully: notice dated13July2026 says permanently closed and any relocation uncertain. Current held record already Closed, verified1October2026, and both analytics flags false. Preserve dates/status rather than repeat closure repair. Low candidate WestfieldChatswood80.5m remains unproven.",
+      "next": "Prepare unresolved historical membership receipt; preserve exclusions and oldstatusdate."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-alan-burrow-coffs-harbour",
+      "source": "https://alanburrow.com.au/",
+      "finding": "Operator homepage confirms72AlbanyStreet,CoffsHarbour and0266527411 with eyewear and appointments. No accepted AlbanyStreet corridor found in inventory. No explicit centre membership in inspected page.",
+      "next": "Check named premises or district evidence before unresolved outcome."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-eyecare-spot-collaroy",
+      "source": "https://www.theeyecarespot.com.au/",
+      "finding": "Operator homepage confirms1091PittwaterRoad,Collaroy; explicitly across from beach and near cinema. No accepted Collaroy corridor found. Nearby cinema is not centre membership.",
+      "next": "Check district evidence, then record defensible outcome preserving rawpoint."
+    }
+  ]
+}

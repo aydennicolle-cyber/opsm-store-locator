@@ -2,6 +2,8 @@
 
 Public-source network, centre, demographic and site-selection intelligence for Australian and New Zealand optical retail.
 
+Planning a map for another industry? The [shared location data and industry map handover](docs/MULTI_INDUSTRY_HANDOVER.md) describes a separate AU/NZ place-data foundation, independent Car Wash and Surf applications, source extraction boundaries and a [starter prompt](docs/MULTI_INDUSTRY_STARTER_PROMPT.md). This is a proposed migration; the current optical application remains unchanged.
+
 The local pilot now opens on **Explore locations**: a filterable candidate table with required ALL/ANY features, exact or minimum-count preferred matches, independent BN/other-optical filters, evidence profiles and editable saved hypotheses. Select a feature by retailer name or category. Unknown data cannot satisfy a required condition. Coverage is shown separately from match strength; no commercial prediction is made. **More → Network & data coverage** retains inventory charts. Map mode uses its own filters, as stated beside the results. Existing map, shortlist and site comparisons remain available.
 
 Public evidence is adapted by `scripts/build_retail_environments.py`, also run after certification by `scripts/build_data_health.py`. See [retail environment methodology](docs/RETAIL_ENVIRONMENTS.md). Commercial group selections and their derived hypotheses belong only in the separate authenticated private companion, outside this repository. The public application never fetches that companion.

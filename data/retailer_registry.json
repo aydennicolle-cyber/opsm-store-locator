@@ -13,7 +13,10 @@
       "short": "OPSM",
       "mark": "OPSM",
       "marker_width": 38,
-      "source_folders": ["opsm", "opsm-nz"]
+      "source_folders": [
+        "opsm",
+        "opsm-nz"
+      ]
     },
     {
       "retailer_id": "specsavers",
@@ -27,7 +30,10 @@
       "short": "SPEC",
       "mark": "Specsavers",
       "marker_width": 58,
-      "source_folders": ["specsavers", "specsavers-nz"]
+      "source_folders": [
+        "specsavers",
+        "specsavers-nz"
+      ]
     },
     {
       "retailer_id": "bailey-nelson",
@@ -41,7 +47,10 @@
       "short": "BN",
       "mark": "BN",
       "marker_width": 50,
-      "source_folders": ["bailey-nelson", "bailey-nelson-nz"]
+      "source_folders": [
+        "bailey-nelson",
+        "bailey-nelson-nz"
+      ]
     },
     {
       "retailer_id": "oscar-wylee",
@@ -55,7 +64,10 @@
       "short": "OW",
       "mark": "Oscar Wylee",
       "marker_width": 54,
-      "source_folders": ["oscar-wylee", "oscar-wylee-nz"]
+      "source_folders": [
+        "oscar-wylee",
+        "oscar-wylee-nz"
+      ]
     },
     {
       "retailer_id": "george-and-matilda",
@@ -70,7 +82,9 @@
       "mark": "G&M",
       "logo": "assets/logo-george-matilda.svg",
       "marker_width": 66,
-      "source_folders": ["george-and-matilda"]
+      "source_folders": [
+        "george-and-matilda"
+      ]
     },
     {
       "retailer_id": "eyecare-plus",
@@ -85,7 +99,9 @@
       "mark": "Eyecare+",
       "logo": "assets/logo-eyecare-plus.svg",
       "marker_width": 66,
-      "source_folders": ["eyecare-plus"]
+      "source_folders": [
+        "eyecare-plus"
+      ]
     },
     {
       "retailer_id": "optical-superstore",
@@ -100,7 +116,9 @@
       "mark": "Optical Superstore",
       "logo": "assets/logo-optical-superstore.svg",
       "marker_width": 70,
-      "source_folders": ["optical-superstore"]
+      "source_folders": [
+        "optical-superstore"
+      ]
     },
     {
       "retailer_id": "1001-optometry",
@@ -115,7 +133,9 @@
       "mark": "1001",
       "logo": "assets/logo-1001-optometry.svg",
       "marker_width": 54,
-      "source_folders": ["1001-optometry"]
+      "source_folders": [
+        "1001-optometry"
+      ]
     },
     {
       "retailer_id": "eyeq-optometrists",
@@ -130,7 +150,9 @@
       "mark": "EyeQ",
       "logo": "assets/logo-eyeq-optometrists.svg",
       "marker_width": 56,
-      "source_folders": ["eyeq-optometrists"]
+      "source_folders": [
+        "eyeq-optometrists"
+      ]
     },
     {
       "retailer_id": "laubman-and-pank",
@@ -145,7 +167,9 @@
       "mark": "L&P",
       "logo": "assets/logo-laubman-and-pank.svg",
       "marker_width": 68,
-      "source_folders": ["laubman-and-pank"]
+      "source_folders": [
+        "laubman-and-pank"
+      ]
     },
     {
       "retailer_id": "bupa-optical",
@@ -160,7 +184,9 @@
       "mark": "Bupa Optical",
       "logo": "assets/logo-bupa-optical.svg",
       "marker_width": 66,
-      "source_folders": ["bupa-optical"]
+      "source_folders": [
+        "bupa-optical"
+      ]
     },
     {
       "retailer_id": "chemist-warehouse-optometry",
@@ -175,7 +201,9 @@
       "mark": "CW Optometry",
       "logo": "assets/logo-chemist-warehouse-optometry.svg",
       "marker_width": 76,
-      "source_folders": ["chemist-warehouse-optometry"]
+      "source_folders": [
+        "chemist-warehouse-optometry"
+      ]
     },
     {
       "retailer_id": "dresden-vision",
@@ -190,7 +218,9 @@
       "mark": "Dresden",
       "logo": "assets/logo-dresden-vision.svg",
       "marker_width": 64,
-      "source_folders": ["dresden-vision"]
+      "source_folders": [
+        "dresden-vision"
+      ]
     },
     {
       "retailer_id": "optical-warehouse",
@@ -205,7 +235,9 @@
       "mark": "Optical Warehouse",
       "logo": "assets/logo-optical-warehouse.svg",
       "marker_width": 72,
-      "source_folders": ["optical-warehouse"]
+      "source_folders": [
+        "optical-warehouse"
+      ]
     },
     {
       "retailer_id": "the-optical-company",
@@ -220,7 +252,9 @@
       "mark": "The Optical Co",
       "logo": "assets/logo-the-optical-company.svg",
       "marker_width": 72,
-      "source_folders": ["the-optical-company"]
+      "source_folders": [
+        "the-optical-company"
+      ]
     },
     {
       "retailer_id": "national-pharmacies-optical",
@@ -235,7 +269,9 @@
       "mark": "National Optical",
       "logo": "assets/logo-national-pharmacies-optical.svg",
       "marker_width": 76,
-      "source_folders": ["national-pharmacies-optical"]
+      "source_folders": [
+        "national-pharmacies-optical"
+      ]
     },
     {
       "retailer_id": "matthews-eyecare",
@@ -250,7 +286,26 @@
       "mark": "Matthews",
       "logo": "assets/logo-matthews-eyecare.svg",
       "marker_width": 70,
-      "source_folders": ["matthews-eyecare"]
+      "source_folders": [
+        "matthews-eyecare"
+      ]
+    },
+    {
+      "retailer_id": "sunglass-hut",
+      "name": "Sunglass Hut",
+      "slug": "sunglass-hut",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": true,
+      "min_marker_zoom": 0,
+      "color": "#262626",
+      "logo": "assets/logo-sunglass-hut.png",
+      "short": "SGH",
+      "mark": "SGH",
+      "marker_width": 70,
+      "source_folders": [
+        "sunglass-hut"
+      ]
     },
     {
       "retailer_id": "independent-other",
@@ -264,7 +319,129 @@
       "short": "IND",
       "mark": "IND",
       "marker_width": 34,
-      "source_folders": ["independent-other", "reviewed-independents"]
+      "source_folders": [
+        "independent-other",
+        "reviewed-independents"
+      ]
+    },
+    {
+      "retailer_id": "ray-ban",
+      "name": "Ray-Ban",
+      "slug": "ray-ban",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": true,
+      "min_marker_zoom": 0,
+      "color": "#be1522",
+      "logo": "assets/logo-ray-ban.png",
+      "short": "RB",
+      "mark": "Ray-Ban",
+      "marker_width": 52,
+      "source_folders": [
+        "ray-ban"
+      ]
+    },
+    {
+      "retailer_id": "gentle-monster",
+      "name": "Gentle Monster",
+      "slug": "gentle-monster",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": true,
+      "min_marker_zoom": 0,
+      "color": "#252525",
+      "logo": "assets/logo-gentle-monster.svg",
+      "short": "GM",
+      "mark": "Gentle Monster",
+      "marker_width": 64,
+      "source_folders": [
+        "gentle-monster"
+      ]
+    },
+    {
+      "retailer_id": "valley-eyewear",
+      "name": "Valley Eyewear",
+      "slug": "valley-eyewear",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": true,
+      "min_marker_zoom": 0,
+      "color": "#252525",
+      "logo": "assets/logo-valley-eyewear.svg",
+      "short": "VE",
+      "mark": "Valley Eyewear",
+      "marker_width": 64,
+      "source_folders": [
+        "valley-eyewear"
+      ]
+    },
+    {
+      "retailer_id": "moscot",
+      "name": "MOSCOT",
+      "slug": "moscot",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": true,
+      "min_marker_zoom": 0,
+      "color": "#252525",
+      "logo": "assets/logo-moscot.png",
+      "short": "MOS",
+      "mark": "MOSCOT",
+      "marker_width": 64,
+      "source_folders": [
+        "moscot"
+      ]
+    },
+    {
+      "retailer_id": "am-eyewear",
+      "name": "AM Eyewear",
+      "slug": "am-eyewear",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": true,
+      "min_marker_zoom": 0,
+      "color": "#252525",
+      "logo": "assets/logo-am-eyewear.png",
+      "short": "AM",
+      "mark": "AM Eyewear",
+      "marker_width": 64,
+      "source_folders": [
+        "am-eyewear"
+      ]
+    },
+    {
+      "retailer_id": "oakley",
+      "name": "Oakley",
+      "slug": "oakley",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": true,
+      "min_marker_zoom": 0,
+      "color": "#252525",
+      "logo": "assets/logo-oakley.jpg",
+      "short": "OAK",
+      "mark": "Oakley",
+      "marker_width": 64,
+      "source_folders": [
+        "oakley"
+      ]
+    },
+    {
+      "retailer_id": "the-eye-piece",
+      "name": "The Eye Piece",
+      "slug": "the-eye-piece",
+      "network_type": "additional",
+      "is_named_network": true,
+      "default_visible": true,
+      "min_marker_zoom": 0,
+      "color": "#252525",
+      "logo": "assets/logo-the-eye-piece.png",
+      "short": "TEP",
+      "mark": "The Eye Piece",
+      "marker_width": 64,
+      "source_folders": [
+        "the-eye-piece"
+      ]
     }
   ],
   "affiliations": [
@@ -273,7 +450,9 @@
       "name": "ProVision",
       "status": "active",
       "description": "Independent member affiliation retained separately from each practice's consumer-facing name.",
-      "source_folders": ["provision"],
+      "source_folders": [
+        "provision"
+      ],
       "source_url": "https://www.provision.com.au/search-results/"
     },
     {
@@ -281,7 +460,10 @@
       "name": "The Optical Company network",
       "status": "active",
       "description": "Corporate network affiliation retained separately from customer-facing brands and reviewed practices trading under their own local names.",
-      "source_folders": ["optical-warehouse", "the-optical-company"],
+      "source_folders": [
+        "optical-warehouse",
+        "the-optical-company"
+      ],
       "source_url": "https://www.opticalco.com.au/locations-listing/"
     },
     {

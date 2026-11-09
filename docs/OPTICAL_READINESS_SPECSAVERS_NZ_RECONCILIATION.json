@@ -1,0 +1,464 @@
+{
+  "checked_at": "2026-10-26",
+  "source_url": "https://www.specsavers.co.nz/stores/full-store-list",
+  "method": "Complete rendered browser list: North Island and South Island; navigation/footer links excluded.",
+  "source_count": 61,
+  "held_count": 61,
+  "source_slugs": [
+    "albany",
+    "aucklandcbd",
+    "botany",
+    "chartwell",
+    "wellingtoncbdsouth",
+    "gisborne",
+    "glenfield",
+    "hamiltoncbd",
+    "hastings",
+    "henderson",
+    "johnsonville",
+    "kerikeri",
+    "wellingtonlambton",
+    "levin",
+    "lowerhutt",
+    "manukau-supa-centa",
+    "manukau",
+    "massey",
+    "masterton",
+    "mtroskill",
+    "mtwellington",
+    "mtmaunganui",
+    "napier",
+    "newlynn",
+    "newplymouth",
+    "newmarket",
+    "onehunga",
+    "ormiston",
+    "palmerstonnorth",
+    "papakura",
+    "paraparaumu",
+    "porirua",
+    "pukekohe",
+    "rotorua",
+    "silverdale",
+    "stlukes",
+    "sylviapark",
+    "takapuna",
+    "taupo",
+    "tauranga",
+    "tauranga-crossing",
+    "terapa",
+    "thames",
+    "upperhutt",
+    "whakatane",
+    "whanganui",
+    "whangarei",
+    "ashburton",
+    "blenheim",
+    "dunedin",
+    "hornby",
+    "invercargill",
+    "nelson",
+    "papanui",
+    "queenstown",
+    "rangiora",
+    "riccartonwestfield",
+    "richmond",
+    "shirley",
+    "south-dunedin",
+    "timaru"
+  ],
+  "new_slugs": [],
+  "absent_slugs": [],
+  "limitations": "Roster reconciliation only; branch addresses, points and trading status not yet rechecked. HTTP retrieval failed but rendered browser list succeeded.",
+  "branch_check": {
+    "checked_at": "2026-10-26",
+    "method": "All61 official branches rendered in CUA browser; captured heading, visible address-map link and phone link. Reconstructed comparison records from held source plus entity decoding and one missing raw phone; full field-set SHA256 matches actual browser captures. Sorted by slug, compact UTF8 JSON arrays of[slug,value].",
+    "field_sha256": {
+      "name": "c851d7f2ea367045aeab195118b04b963dfe6c25321b2986c224df4ad7559724",
+      "address": "197328b647d2f7b8158c06333f42a3363b09a9742f12ad66512e19fbed62b81a",
+      "phone": "621071382941f072645c6f02132321287e9d60fe0618107aff73e9728a363287"
+    },
+    "records": [
+      {
+        "slug": "albany",
+        "name": "Albany Westfield",
+        "address": "Shop 221, Westfield Albany, 219 Don Mckinnon Dr, Albany, Auckland, 0632",
+        "phone": "094471465"
+      },
+      {
+        "slug": "ashburton",
+        "name": "Ashburton",
+        "address": "58 Cass Street, Ashburton, Ashburton, New Zealand, 7700",
+        "phone": "033076071"
+      },
+      {
+        "slug": "aucklandcbd",
+        "name": "Auckland CBD",
+        "address": "155 Queen St, Auckland Central, Auckland, 1010",
+        "phone": "093031364"
+      },
+      {
+        "slug": "blenheim",
+        "name": "Blenheim",
+        "address": "67 Market Street, Blenheim Central, Blenheim, 7201",
+        "phone": "035779644"
+      },
+      {
+        "slug": "botany",
+        "name": "Botany",
+        "address": "Shop SP0522 Botany Town Centre, 22 Town Centre Drive, East Tamaki, Auckland, 2016",
+        "phone": "092798007"
+      },
+      {
+        "slug": "chartwell",
+        "name": "Chartwell Shopping Centre",
+        "address": "Chartwell Shopping Centre, Cnr Hukanui & Comries Roads, Chartwell, Hamilton, 3210",
+        "phone": "078536909"
+      },
+      {
+        "slug": "dunedin",
+        "name": "Dunedin",
+        "address": "290 George St, Dunedin, Dunedin, 9016",
+        "phone": "034770301"
+      },
+      {
+        "slug": "gisborne",
+        "name": "Gisborne",
+        "address": "127-131 Gladstone Rd, Gisborne, Gisborne, 4010",
+        "phone": "068686533"
+      },
+      {
+        "slug": "glenfield",
+        "name": "Glenfield Mall",
+        "address": "Glenfield Mall, Glenfield, Auckland, 0629",
+        "phone": "094417936"
+      },
+      {
+        "slug": "hamiltoncbd",
+        "name": "Hamilton CBD",
+        "address": "54 Bryce St, Hamilton, 3204",
+        "phone": "078395094"
+      },
+      {
+        "slug": "hastings",
+        "name": "Hastings",
+        "address": "210 Heretaunga Street West, Hastings, Hastings, 4122",
+        "phone": "068788686"
+      },
+      {
+        "slug": "henderson",
+        "name": "Henderson - WestCity S/C",
+        "address": "Shop 225, WestCity Waitakere Shopping Centre, 7 Catherine Street, Henderson, Auckland, 0612",
+        "phone": "098386853"
+      },
+      {
+        "slug": "hornby",
+        "name": "Hornby - The Hub",
+        "address": "Shop 25, The Hub Hornby Mall, 418 Main South Road, Hornby, Christchurch, 8042",
+        "phone": "033495193"
+      },
+      {
+        "slug": "invercargill",
+        "name": "Invercargill",
+        "address": "1, 22 Kelvin St, Invercargill, 9810",
+        "phone": "032181250"
+      },
+      {
+        "slug": "johnsonville",
+        "name": "Johnsonville",
+        "address": "34 Johnsonville Road, Shop 45 Johnsonville Shopping Centre, Johnsonville, Wellington, 6037",
+        "phone": "044785468"
+      },
+      {
+        "slug": "kerikeri",
+        "name": "Kerikeri",
+        "address": "Tenancy A, 33-35 Kerikeri Road, Kerikeri, 0230",
+        "phone": "094077760"
+      },
+      {
+        "slug": "levin",
+        "name": "Levin",
+        "address": "183 Oxford Street, Levin Shopping Centre, Levin, MWT, 5510",
+        "phone": "062629191"
+      },
+      {
+        "slug": "lowerhutt",
+        "name": "Lower Hutt - Queensgate S/C",
+        "address": "Shop 133, Queensgate Shopping Centre, Cnr Queens Drive and Bunny Street, Lower Hutt, Wellington, 5010",
+        "phone": "045892717"
+      },
+      {
+        "slug": "manukau",
+        "name": "Manukau Westfield",
+        "address": "Shop 1, Level G, Westfield Manukau, Cnr Great South Road & Manukau Station Road, Manukau, Auckland, 2241",
+        "phone": "092635115"
+      },
+      {
+        "slug": "manukau-supa-centa",
+        "name": "Manukau Supa Centa",
+        "address": "SPK201, Manukau Supa Centa, Cnr Lambie & Cavendish Drive, Manukau, Manukau City Centre, 2104",
+        "phone": "092620233"
+      },
+      {
+        "slug": "massey",
+        "name": "Massey - NorthWest S/C",
+        "address": "Shop 56, Northwest Shopping Centre, 1/7 Fred Taylor Drive, Massey, Auckland, 0657",
+        "phone": "098331337"
+      },
+      {
+        "slug": "masterton",
+        "name": "Masterton",
+        "address": "Shop 2, 227 Queen St, Masterton, 5810",
+        "phone": "063701412"
+      },
+      {
+        "slug": "mtmaunganui",
+        "name": "Mt. Maunganui - Bayfair S/C",
+        "address": "Shop SP0815, Bayfair Shopping Centre, Cnr Maunganui & Girven Roads, Mt Maunganui, Tauranga, 3116",
+        "phone": "075750259"
+      },
+      {
+        "slug": "mtroskill",
+        "name": "Mt Roskill",
+        "address": "The Warehouse, 22 Stoddard Rd, Auckland, 1041",
+        "phone": "096201101"
+      },
+      {
+        "slug": "mtwellington",
+        "name": "Mt Wellington",
+        "address": "The Warehouse, 87-101 Lunn Avenue, Mt Wellington, Auckland, 1072",
+        "phone": "095702222"
+      },
+      {
+        "slug": "napier",
+        "name": "Napier",
+        "address": "205 Emerson Street, Napier, Napier, 4110",
+        "phone": "068353569"
+      },
+      {
+        "slug": "nelson",
+        "name": "Nelson CBD",
+        "address": "176 Trafalgar St, Nelson, Nelson, 7010",
+        "phone": "035480168"
+      },
+      {
+        "slug": "newlynn",
+        "name": "New Lynn LynnMall",
+        "address": "Shop 69, LynnMall Shopping Centre, Memorial Drive, New Lynn, New Lynn, 0600",
+        "phone": "098263989"
+      },
+      {
+        "slug": "newmarket",
+        "name": "Newmarket Westfield",
+        "address": "Shop 353, Westfield, 277 Broadway, Newmarket, Auckland, 1023",
+        "phone": "095235322"
+      },
+      {
+        "slug": "newplymouth",
+        "name": "New Plymouth",
+        "address": "104 Devon Street East, New Plymouth, 4310",
+        "phone": "067582565"
+      },
+      {
+        "slug": "onehunga",
+        "name": "Onehunga",
+        "address": "178-182 Onehunga Mall, Onehunga, Auckland, 1061",
+        "phone": "096341437"
+      },
+      {
+        "slug": "ormiston",
+        "name": "Ormiston",
+        "address": "Ormiston Town Centre, 240 Ormiston Road, Ormiston, Flat Bush, 2016",
+        "phone": "092652240"
+      },
+      {
+        "slug": "palmerstonnorth",
+        "name": "Palmerston North - The Plaza",
+        "address": "Shop 22, The Plaza, 84 The Square, Church Street, Palmerston North, 4410",
+        "phone": "063558433"
+      },
+      {
+        "slug": "papakura",
+        "name": "Papakura",
+        "address": "172 Great South Rd, Papakura, Auckland, 2110",
+        "phone": "092997764"
+      },
+      {
+        "slug": "papanui",
+        "name": "Papanui - Northlands Mall",
+        "address": "S57 Northlands Mall, Papanui, Main North Road, Papanui, Christchurch, 8052",
+        "phone": "033541435"
+      },
+      {
+        "slug": "paraparaumu",
+        "name": "Paraparaumu - Coastlands S'town",
+        "address": "Shop 50, Coastlands Shoppingtown, State Highway 1, North Island, Paraparaumu, 5032",
+        "phone": "042971138"
+      },
+      {
+        "slug": "porirua",
+        "name": "Porirua - North City S/C",
+        "address": "Shop 151, North City Shopping Centre, 2 Titahi Bay Road, Porirua, Porirua, 5022",
+        "phone": "042384030"
+      },
+      {
+        "slug": "pukekohe",
+        "name": "Pukekohe",
+        "address": "41 King St, Unit B, Pukekohe, Auckland, 2120",
+        "phone": "092389906"
+      },
+      {
+        "slug": "queenstown",
+        "name": "Queenstown- Remarkables",
+        "address": "Remarkables Park Town Centre, 12 Hawthorne Drive, Frankton, Queenstown, 9300",
+        "phone": "034092678"
+      },
+      {
+        "slug": "rangiora",
+        "name": "Rangiora",
+        "address": "151 - 183 High Street, Farmers Rangiora Building, Rangiora, Rangiora, 7400",
+        "phone": "033131590"
+      },
+      {
+        "slug": "riccartonwestfield",
+        "name": "Riccarton Westfield",
+        "address": "Shop 256 & 257, Level 2, Westfield Riccarton, 129 Riccarton Rd, Riccarton, Christchurch, 8041",
+        "phone": "033431499"
+      },
+      {
+        "slug": "richmond",
+        "name": "Richmond Mall",
+        "address": "Shop 34 Richmond Mall, Cnr Queen, Croucher & Talbot Streets, Richmond, 7020",
+        "phone": "035442020"
+      },
+      {
+        "slug": "rotorua",
+        "name": "Rotorua",
+        "address": "1211 Eruera St, Rotorua, 3010",
+        "phone": "073492020"
+      },
+      {
+        "slug": "shirley",
+        "name": "Shirley - The Palms S/C",
+        "address": "Shop P080, The Palms Shopping Centre, Cnr Marshland & New Brighton Roads, Shirley, Christchurch, 8061",
+        "phone": "033852780"
+      },
+      {
+        "slug": "silverdale",
+        "name": "Silverdale",
+        "address": "10/75 Silverdale Street, Shop PR10, Silverdale, Auckland, 0930",
+        "phone": "094280845"
+      },
+      {
+        "slug": "south-dunedin",
+        "name": "South Dunedin",
+        "address": "155 King Edward Street, South Dunedin, Dunedin, 9012",
+        "phone": "034551991"
+      },
+      {
+        "slug": "stlukes",
+        "name": "St Lukes Westfield",
+        "address": "Shop S830, Level 1, Westfield St Lukes Shopping Centre, 80 Saint Lukes Road, St Lukes, Mount Albert, 1025",
+        "phone": "098462991"
+      },
+      {
+        "slug": "sylviapark",
+        "name": "Sylvia Park Mall",
+        "address": "286 Mount Wellington Highway, Shop S006 Sylvia Park Shopping Centre, Mt Wellington, Auckland, 1060",
+        "phone": "095794434"
+      },
+      {
+        "slug": "takapuna",
+        "name": "Takapuna Shore City",
+        "address": "Shore City, 52 - 56 Anzac Street, Takapuna, Auckland, 0622",
+        "phone": "094860311"
+      },
+      {
+        "slug": "taupo",
+        "name": "Taupo",
+        "address": "43 Horomatangi St, Taupo, 3330",
+        "phone": "073781854"
+      },
+      {
+        "slug": "tauranga",
+        "name": "Tauranga CBD",
+        "address": "58a Devonport Road, Tauranga CBD, Tauranga, 3110",
+        "phone": "075711902"
+      },
+      {
+        "slug": "tauranga-crossing",
+        "name": "Tauranga Crossing",
+        "address": "Shop RS207, 1-5 Taurikura Drive, Tauranga Crossing, Tauranga, 3110",
+        "phone": "075435570"
+      },
+      {
+        "slug": "terapa",
+        "name": "Te Rapa, Te Awa - The Base",
+        "address": "Shop 39, The Base, Cnr Te Rapa Road & Wairere Drive, Te Rapa, Hamilton, 3200",
+        "phone": "078505938"
+      },
+      {
+        "slug": "thames",
+        "name": "Thames",
+        "address": "Goldfields Shopping Centre, Shops 19&21, Thames, 3500",
+        "phone": "078686090"
+      },
+      {
+        "slug": "timaru",
+        "name": "Timaru",
+        "address": "15 Elizabeth Street, Timaru, 7910",
+        "phone": "036884179"
+      },
+      {
+        "slug": "upperhutt",
+        "name": "Upper Hutt",
+        "address": "134-136 Main Street, Upper Hutt, 5018",
+        "phone": "045280140"
+      },
+      {
+        "slug": "wellingtoncbdsouth",
+        "name": "Cuba Street - Wellington",
+        "address": "83 Cuba Street, Cnr Cuba Mall and Dixon Street, Wellington, 6011",
+        "phone": "048019793"
+      },
+      {
+        "slug": "wellingtonlambton",
+        "name": "Lambton Quay - Wellington",
+        "address": "Shop 2A, 160 Lambton Quay, Wellington, Wellington, 6011",
+        "phone": "044711069"
+      },
+      {
+        "slug": "whakatane",
+        "name": "Whakatane",
+        "address": "184 The Strand, Whakatane, 3120",
+        "phone": "073082154"
+      },
+      {
+        "slug": "whanganui",
+        "name": "Whanganui",
+        "address": "87 Victoria Ave, Whanganui, Whanganui, 4500",
+        "phone": "063459542"
+      },
+      {
+        "slug": "whangarei",
+        "name": "Whangarei",
+        "address": "22 James St, Whangarei, 0110",
+        "phone": "094383509"
+      }
+    ],
+    "differences": "Nine raw addresses contain HTML ampersand entities; decoded browser addresses otherwise identical. South Dunedin phone+6434551991 absent from raw source but already correct in canonical tool as034551991. No canonical fact edits needed.",
+    "relocation_notices": [
+      {
+        "slug": "paraparaumu",
+        "notice": "We have relocated inside Coastlands",
+        "outcome": "Rendered branch address matches held source Shop50; no new relocation inferred."
+      },
+      {
+        "slug": "silverdale",
+        "notice": "We have relocated from Whangaparaoa to a new and improved store at Silverdale Mall.",
+        "outcome": "Rendered branch address matches held Silverdale source; no new relocation inferred."
+      }
+    ],
+    "limitations": "Coordinates, native numeric IDs, and independent trading were not reverified. Current branch URL roster and displayed details checked; original capture/status/point dates retained. No absence inferred."
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "checked_at": "2026-10-27",
+  "status": "Applied and verified: four explicit unresolved outcomes retained, unsupported place analysis excluded. Full build/test/privacy checks passed; individual browser checks remain separate.",
+  "scope": "Four individual follow-up cases. Does not refresh the underlying store-source dates or prove current trading.",
+  "records": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-2161972681",
+      "name": "MacKinley Optical",
+      "before_address": "25 Petrie Plaza, Canberra ACT 2601",
+      "before_status": "Unknown",
+      "receipt": {
+        "store_id": "independent-other-optical-osm-au-node-2161972681",
+        "store_fingerprint": "71b72675c959726f8d8a2273300dec22156de369751530a0d608280e2612e32c",
+        "candidate_venue_id": "act-canberra",
+        "reviewed_at": "2026-10-27",
+        "evidence_url": "https://www.revenue.act.gov.au/cost-of-living-support/spectacles-subsidy-scheme",
+        "reason": "ACT Government provider list retrieved 27 October 2026 still lists MacKinley Optical City at 25 Petrie Plaza with the retained phone. The list has no branch-specific verification date and does not settle the previously recorded conflict with a directory reporting closure. Retain Unknown trading status and exclusion from current competition. Neither this list nor the retained premises investigation establishes Canberra Centre tenancy; the 90-metre candidate is proximity only. No centre membership or reopening is inferred."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-1896332017",
+      "name": "Optorica",
+      "before_address": "Suite 17, 41 Liardet Street, Weston ACT 2611",
+      "before_status": "Active",
+      "receipt": {
+        "store_id": "independent-other-optical-osm-au-node-1896332017",
+        "store_fingerprint": "0fe332889927d065c9e3f03e04310d00f58523665691713b695db665165704a7",
+        "candidate_venue_id": "",
+        "reviewed_at": "2026-10-27",
+        "evidence_url": "https://www.optoricaoptometrist.net.au/",
+        "reason": "Owned practice homepage retrieved 27 October 2026 confirms Suite 17, 41 Liardet Street, Weston and both retained published phones. ACT Government provider search result independently lists 17/41 Liardet Street, while its Cooleman Court entries name other businesses. These are address observations, not proof of centre exclusion or membership. Focused centre research did not establish a named property or defined precinct association. Keep the valid business location usable, but retain unresolved canonical membership; no invented Liardet Street corridor boundary."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-blink-birkenhead",
+      "name": "Blink Optometrists",
+      "before_address": "78A Birkenhead Avenue, Birkenhead, Auckland 0626",
+      "before_status": "Active",
+      "receipt": {
+        "store_id": "independent-other-optical-reviewed-nz-blink-birkenhead",
+        "store_fingerprint": "fbd3d0f65285d8bc3136e109e7e8a2e695af715924cc74df6ef7765a24e113f2",
+        "candidate_venue_id": "",
+        "reviewed_at": "2026-10-27",
+        "evidence_url": "https://www.optometrist-auckland.co.nz/contact-us/",
+        "reason": "Owned contact page retrieved 27 October 2026 gives 1/78 Birkenhead Avenue, postcode 0626, phone 09 480 2146 and parking in front and behind the practice. Retained address uses 78A at the same street number and postcode; keep both source forms in evidence without asserting unit equivalence or a relocation. New Zealand Police provider search and Healthpoint also use 78A. Focused precinct research found no explicit accepted place membership. Do not confuse Blink with the distinct Birkenhead Optometrists business at Highbury Shopping Centre. Preserve the current address and point; centre/precinct membership remains unresolved."
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-devonport-optometrists",
+      "name": "Devonport Optometrists",
+      "before_address": "85 Victoria Road, Devonport, Auckland 0624",
+      "before_status": "Active",
+      "receipt": {
+        "store_id": "independent-other-optical-reviewed-nz-devonport-optometrists",
+        "store_fingerprint": "338546ecbf59a94c5e5351d588a57cb7feb580d6825190dff8b3d8adf93434de",
+        "candidate_venue_id": "",
+        "reviewed_at": "2026-10-27",
+        "evidence_url": "https://devonportoptometrists.co.nz/contact/",
+        "reason": "On 27 October 2026 direct operator contact retrieval returned 403, but the indexed operator page (three-month crawl age) still identifies 85 Victoria Road and 09 215 9178. A destination-guide advertisement corroborates that address and describes Devonport village generally; it does not establish a precise canonical precinct boundary or tenancy. The retained premises investigation notes an older Wynyard Street/The Arcade banner. Preserve the supported 85 Victoria Road record without claiming a new relocation date or assigning the older arcade. Membership remains unresolved; failed direct access is not closure evidence."
+      }
+    }
+  ],
+  "supplementary_sources": [
+    "https://www.optometrist-auckland.co.nz/",
+    "https://www.newcops.govt.nz/pre-application/vision-examiners",
+    "https://stats.healthpoint.co.nz/eye-care/optometry/blink-optometrists/",
+    "https://birkenheadoptom.co.nz/",
+    "https://devonportflagstaff.co.nz/wp-content/uploads/2024/12/DestinationDevonport2026.pdf"
+  ],
+  "source_limits": "Optorica and Blink operator pages fully retrieved. Devonport primary contact page available only through indexed text after direct 403. Supplementary searches corroborate premises but establish no precinct boundary. Government provider listing is not current-trading proof.",
+  "generated_verification": {
+    "checked_at": "2026-10-27",
+    "checks": [
+      {
+        "store_id": "independent-other-optical-osm-au-node-2161972681",
+        "passed": true
+      },
+      {
+        "store_id": "independent-other-optical-osm-au-node-1896332017",
+        "passed": true
+      },
+      {
+        "store_id": "independent-other-optical-reviewed-nz-blink-birkenhead",
+        "passed": true
+      },
+      {
+        "store_id": "independent-other-optical-reviewed-nz-devonport-optometrists",
+        "passed": true
+      }
+    ],
+    "passed": 4,
+    "failed": 0
+  },
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  }
+}

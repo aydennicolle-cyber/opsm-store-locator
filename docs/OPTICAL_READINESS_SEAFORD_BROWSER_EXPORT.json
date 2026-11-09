@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-10-27",
+  "alias_query": "Seaford Shopping Centre",
+  "result_count": 1,
+  "result_name": "Seaford Central",
+  "profile_address": "108 Commercial Road",
+  "profile_address_checked_at": "2026-10-26",
+  "profile_address_source_date": "unknown",
+  "profile_accepted_tenants": 2,
+  "profile_nearby_not_verified": [
+    "OPSM Seaford"
+  ],
+  "profile_point_warning": "Store-derived reference, not property boundary or entrance",
+  "download_path": "/Users/ayden/Downloads/bailey-place-tenants-2026-10-27 (8).csv",
+  "download_sha256": "7558044dd303b062f729d34ac122d2a3bcff7e2baedea6311bedb9b99f0ec370",
+  "download_rows": [
+    {
+      "place_id": "place-au-sa-seaford-central",
+      "place_name": "Seaford Central",
+      "country": "Australia",
+      "state": "SA",
+      "membership_type": "Accepted exact-place optical membership",
+      "tenant_id": "optical-store-independent-other-optical-provision-106970",
+      "tenant_name": "South Coast Optometrists Seaford",
+      "retailer": "Independent / Other optical",
+      "category": "Optical",
+      "anchor_flag": "false",
+      "selection_basis": "Canonicalised from the store's named retail-place evidence",
+      "status": "Active",
+      "source_url": "https://www.provision.com.au/practice/south-coast-optometrists/",
+      "source_type": "Accepted store-place evidence",
+      "source_date": "",
+      "verified_at": "2026-09-02",
+      "confidence": "High"
+    },
+    {
+      "place_id": "place-au-sa-seaford-central",
+      "place_name": "Seaford Central",
+      "country": "Australia",
+      "state": "SA",
+      "membership_type": "Accepted exact-place optical membership",
+      "tenant_id": "optical-store-specsavers-3642",
+      "tenant_name": "Seaford",
+      "retailer": "Specsavers",
+      "category": "Optical",
+      "anchor_flag": "false",
+      "selection_basis": "Official address explicitly names Seaford Central",
+      "status": "Active",
+      "source_url": "https://www.specsavers.com.au/stores/seaford",
+      "source_type": "Accepted store-place evidence",
+      "source_date": "",
+      "verified_at": "2026-09-02",
+      "confidence": "High"
+    }
+  ],
+  "scope": "Confirms Seaford identity alias, profile and actual tenant export; OPSM membership remains separately under review."
+}

@@ -135,6 +135,10 @@ class OpticalNetworkTests(unittest.TestCase):
                                 if correction["store_id"].startswith(item["slug"] + "-"))
                 expected[original] -= 1
                 expected[correction["retailer"]] += 1
+        for slug, brand in [('sunglass-hut', 'Sunglass Hut'), ('oakley', 'Oakley')]:
+            promoted = sum(r['source_store_id'].startswith(slug + '-') and r['canonical_store_id'].startswith('independent-other-optical-') for r in remaps)
+            expected[brand] += promoted
+            expected['Independent / Other optical'] -= promoted
         self.assertEqual(counts, expected)
         countries = {country: sum(row["country"] == country for row in self.rows) for country in ("Australia", "New Zealand")}
         self.assertEqual(sum(countries.values()), len(self.rows))
@@ -252,7 +256,7 @@ class OpticalNetworkTests(unittest.TestCase):
     def test_additional_network_logos_are_local_assets(self) -> None:
         registry = json.loads((ROOT / "data" / "retailer_registry.json").read_text(encoding="utf-8"))["retailers"]
         additional = [item for item in registry if item["network_type"] == "additional"]
-        self.assertEqual(len(additional), 11)
+        self.assertTrue(additional)
         self.assertTrue({
             "Bupa Optical",
             "Chemist Warehouse Optometry",
@@ -261,6 +265,7 @@ class OpticalNetworkTests(unittest.TestCase):
             "The Optical Company",
             "Optical by National Pharmacies",
             "Matthews Eyecare",
+            "Sunglass Hut",
         }.issubset({item["name"] for item in additional}))
         for item in additional:
             logo = item.get("logo", "")

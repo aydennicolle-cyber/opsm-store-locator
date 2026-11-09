@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-10-30",
+  "previous_decisions": [
+    {
+      "issue_id": "source:bailey-nelson-au:north-lakes",
+      "disposition": "Explicit temporary closure applied; staged rebuild and current-competition exclusion pending",
+      "store_id": "bailey-nelson-north-lakes",
+      "source_url": "https://baileynelson.com.au/pages/optometrist-north-lakes",
+      "checked_at": "2026-10-25",
+      "scrape_id": "01a172a2-6978-7228-ac50-07365f1e9ca6",
+      "basis": "Live official branch Optician structured data explicitly names Bailey Nelson North Lakes - Temporarily Closed, with matching branch URL and phone +61737093765. Exclude from current competition; preserve last-known address, accepted centre membership and original source snapshot date. No permanent closure, relocation date or reopening date inferred.",
+      "source_name": "Bailey Nelson North Lakes - Temporarily Closed",
+      "original_status": "Active"
+    },
+    {
+      "issue_id": "source:oscar-wylee-au:oscar-wylee-99",
+      "store_id": "oscar-wylee-99",
+      "disposition": "Explicit operator closure correction applied; rebuild/exclusion verification pending",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-orange.html",
+      "scrape_id": "01a172a5-c918-7349-94db-6c6aebe4af58",
+      "checked_at": "2026-10-25",
+      "basis": "Current official branch page explicitly states this store has closed and directs customers to continuing eye care. Specific closure notice supersedes retained generic promotional text and old reviews further down the page. Locator omission is corroborating only, not the basis for closure. Preserve last-known premises and original source ID/date; exact closure date unknown.",
+      "previous_status": "Active"
+    },
+    {
+      "issue_id": "source:oscar-wylee-au:oscar-wylee-100",
+      "store_id": "oscar-wylee-100",
+      "disposition": "Explicit operator closure correction applied; rebuild/exclusion verification pending",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-wagga-wagga.html",
+      "scrape_id": "01a172a5-c8bc-715f-9717-a6edcbf3f98c",
+      "checked_at": "2026-10-25",
+      "basis": "Current official branch page explicitly states this store has closed and directs customers to continuing eye care. Specific closure notice supersedes retained generic promotional text and old reviews further down the page. Locator omission is corroborating only, not the basis for closure. Preserve last-known premises and original source ID/date; exact closure date unknown.",
+      "previous_status": "Active"
+    },
+    {
+      "issue_id": "source:oscar-wylee-156",
+      "disposition": "Staged network verified and promoted; existing store fields unchanged, dependent build pending",
+      "source_url": "https://www.oscarwylee.com.au/locations/optometrist-mt-barker.html",
+      "checked_at": "2026-10-25",
+      "scrape_id": "01a172be-c6a0-722f-b2c0-30e723a82951",
+      "basis": "Previously absent native locatorID156 confirmed on full brand locator and live branch page. Explicit centre membership; no duplicate Oscar record in retained inventory. Existing source records and original snapshot retained.",
+      "limitations": "Operator business reference point; opening date unknown. This is one source addition, not a blanket brand freshness update."
+    }
+  ],
+  "scope": "Four stale pending dispositions reconciled to actual current generated status and analysis eligibility. Final rebuild receipt remains separate."
+}

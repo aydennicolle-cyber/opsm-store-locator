@@ -1,0 +1,44 @@
+{
+  "scope": "Two high-priority named-store cases still labelled Needs investigation in the register despite current reviewed receipts. Generated checks only; no new external verification or browser/export signoff.",
+  "records": [
+    {
+      "store_id": "eyecare-plus-163379",
+      "checks": {
+        "current_evidence_receipt": true,
+        "blank_place": true,
+        "place_excluded": true,
+        "network_eligible": true,
+        "reason_visible_in_health": true,
+        "evidence_visible_in_health": true
+      },
+      "receipt": {
+        "store_id": "eyecare-plus-163379",
+        "store_fingerprint": "9be66511f9a15da2663af89e11c0bad53832b9b80cffa4d7ecb6e7e366fcee00",
+        "candidate_venue_id": "",
+        "reviewed_at": "2026-10-26",
+        "evidence_url": "https://www.eyecareplus.com.au/keperra/",
+        "reason": "Current operator branch and full locator identify Priority Optometry at15DallasParade with matching phone and named-business map. No named shared shopping property or defined shopping-precinct section is identified by this evidence. Retain valid business location; leave place membership unresolved rather than inferring it from nearby shops."
+      }
+    },
+    {
+      "store_id": "matthews-eyecare-nz-122878592",
+      "checks": {
+        "current_evidence_receipt": true,
+        "blank_place": true,
+        "place_excluded": true,
+        "network_eligible": true,
+        "reason_visible_in_health": true,
+        "evidence_visible_in_health": true
+      },
+      "receipt": {
+        "store_id": "matthews-eyecare-nz-122878592",
+        "store_fingerprint": "4e579412864a439fe6aad711bd873372353abdb690501edd27789b86ae0e3aa1",
+        "candidate_venue_id": "",
+        "reviewed_at": "2026-10-26",
+        "evidence_url": "https://matthews.co.nz/practices/wanaka-matthews-eyecare/",
+        "reason": "Current operator locator and branch confirm relocation from 23 Cardrona Valley Road to 17 Sir Tim Wallis Drive. Named public business map matches the new premises. Its Three Parks label does not establish a defined shopping precinct or centre membership; operator evidence and targeted premises search do not settle this. Remove obsolete Cardrona Valley Road association and retain the valid business location without assigning an unsupported place."
+      }
+    }
+  ],
+  "status": "Both exclusions and network eligibility verified; register decision synchronization pending terminal build."
+}

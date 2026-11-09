@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T07:15:52+00:00",
+  "generated_at": "2026-11-06T08:33:56+00:00",
   "coverage_note": "Unpromoted property-identity discovery evidence; not accepted aliases, store memberships or manual-review failures.",
   "leads": [
     {
@@ -173,7 +173,8 @@
       "website_url": "https://www.northlandshopping.com.au",
       "source_fetched_at": "2026-09-01T08:06:07+00:00",
       "candidate_place_ids": [
-        "place-au-vic-northland"
+        "place-au-vic-northland",
+        "place-au-vic-sunglass-hut-northland"
       ],
       "review_status": "Unpromoted discovery lead",
       "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
@@ -275,6 +276,23 @@
       "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
     },
     {
+      "source_id": "osm-au-way-107665842",
+      "name": "Westfield Fountain Gate Shopping Centre",
+      "latitude": -38.0188965,
+      "longitude": 145.3038133,
+      "country": "Australia",
+      "state": "",
+      "source_url": "https://www.openstreetmap.org/way/107665842",
+      "website_url": "https://www.westfield.com.au/fountaingate",
+      "source_fetched_at": "2026-09-01T08:06:07+00:00",
+      "candidate_place_ids": [
+        "place-au-vic-fountain-gate-shopping-centre",
+        "place-au-vic-westfield-fountain-gate"
+      ],
+      "review_status": "Unpromoted discovery lead",
+      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
+    },
+    {
       "source_id": "osm-au-way-213934856",
       "name": "Wheelers Hill Shopping Centre",
       "latitude": -37.9105017,
@@ -286,22 +304,6 @@
       "source_fetched_at": "2026-09-01T08:06:07+00:00",
       "candidate_place_ids": [
         "place-au-vic-wheelers-hill-business-centre"
-      ],
-      "review_status": "Unpromoted discovery lead",
-      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
-    },
-    {
-      "source_id": "osm-au-way-24026232",
-      "name": "Westfield Knox",
-      "latitude": -37.8690024,
-      "longitude": 145.2414956,
-      "country": "Australia",
-      "state": "VIC",
-      "source_url": "https://www.openstreetmap.org/way/24026232",
-      "website_url": "https://www.westfield.com.au/knox/",
-      "source_fetched_at": "2026-09-01T08:06:07+00:00",
-      "candidate_place_ids": [
-        "place-au-vic-westfield-knox-shopping-centre"
       ],
       "review_status": "Unpromoted discovery lead",
       "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
@@ -387,22 +389,6 @@
       "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
     },
     {
-      "source_id": "osm-au-way-265204608",
-      "name": "Lansell Square",
-      "latitude": -36.8105529,
-      "longitude": 144.2423736,
-      "country": "Australia",
-      "state": "",
-      "source_url": "https://www.openstreetmap.org/way/265204608",
-      "website_url": "https://www.lansellsquare.com.au/",
-      "source_fetched_at": "2026-09-01T08:06:07+00:00",
-      "candidate_place_ids": [
-        "place-au-vic-kangaroo-flat-lansell-plaza"
-      ],
-      "review_status": "Unpromoted discovery lead",
-      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
-    },
-    {
       "source_id": "osm-au-way-397729616",
       "name": "Lederer Corrimal",
       "latitude": -34.3740911,
@@ -435,22 +421,6 @@
       "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
     },
     {
-      "source_id": "osm-au-way-182460914",
-      "name": "Liverpool Plaza",
-      "latitude": -33.9215868,
-      "longitude": 150.9232467,
-      "country": "Australia",
-      "state": "",
-      "source_url": "https://www.openstreetmap.org/way/182460914",
-      "website_url": "https://www.liverpoolplaza.com.au/",
-      "source_fetched_at": "2026-09-01T08:06:07+00:00",
-      "candidate_place_ids": [
-        "place-au-nsw-westfield-liverpool"
-      ],
-      "review_status": "Unpromoted discovery lead",
-      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
-    },
-    {
       "source_id": "osm-au-way-214486193",
       "name": "Erina Fair Shopping Centre",
       "latitude": -33.4373073,
@@ -478,38 +448,6 @@
       "source_fetched_at": "2026-09-01T08:06:07+00:00",
       "candidate_place_ids": [
         "place-au-nsw-westfield-tuggerah"
-      ],
-      "review_status": "Unpromoted discovery lead",
-      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
-    },
-    {
-      "source_id": "osm-au-way-17956861",
-      "name": "Pacific Fair",
-      "latitude": -28.0365422,
-      "longitude": 153.4276823,
-      "country": "Australia",
-      "state": "",
-      "source_url": "https://www.openstreetmap.org/way/17956861",
-      "website_url": "https://www.pacificfair.com.au",
-      "source_fetched_at": "2026-09-01T08:06:07+00:00",
-      "candidate_place_ids": [
-        "place-au-qld-gold-coast-pacific-fair"
-      ],
-      "review_status": "Unpromoted discovery lead",
-      "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."
-    },
-    {
-      "source_id": "osm-au-way-269114823",
-      "name": "Skygate DFO",
-      "latitude": -27.416365,
-      "longitude": 153.0802202,
-      "country": "Australia",
-      "state": "",
-      "source_url": "https://www.openstreetmap.org/way/269114823",
-      "website_url": "https://skygate.com.au/",
-      "source_fetched_at": "2026-09-01T08:06:07+00:00",
-      "candidate_place_ids": [
-        "place-au-qld-dfo-brisbane"
       ],
       "review_status": "Unpromoted discovery lead",
       "reason": "Shared name words and distance suggest an identity check; neither establishes an alias or membership."

@@ -1,0 +1,1851 @@
+{
+  "fetched_at": "2026-10-18T08:05:50.043326+00:00",
+  "source_scope": "Official AU/NZ directory entries, including concessions and closed listings. Not a claim of all physical trading locations.",
+  "countries": {
+    "au": {
+      "directory_count": 201,
+      "captured_count": 201,
+      "directory_sha256": "ea360b83e668ff246e3de87e781d52f3ef1dd11357b91aefcd08e44944eea4c3"
+    },
+    "nz": {
+      "directory_count": 26,
+      "captured_count": 26,
+      "directory_sha256": "1703aefd06aadd74a40c85f458ad6a2c89f82e92eec5ea8f3b3352971799ed71"
+    }
+  },
+  "counts": {
+    "captured": 227,
+    "existing_canonical_ids_preserved": 47,
+    "new_records": 180,
+    "status_counts": {
+      "Active": 217,
+      "Closed": 10
+    },
+    "new_active_records": 170,
+    "active_setting_review_needed": 19
+  },
+  "records": [
+    {
+      "raw_id": "B716",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b716",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/act/belconnen/3-benjamin-way-westfield-belconnen",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B788",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b788",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/act/canberra/148-bunda-street-canberra-centre-b788",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B800",
+      "canonical_store_id": "sunglass-hut-B800",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/act/canberra/148-bunda-street-canberra-centre-b800",
+      "action": "add"
+    },
+    {
+      "raw_id": "B760",
+      "canonical_store_id": "sunglass-hut-B760",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/act/fyshwick/shop-531-level-1-canberra-outlet-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B871",
+      "canonical_store_id": "sunglass-hut-B871",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/albury/525-david-street-myer",
+      "action": "add"
+    },
+    {
+      "raw_id": "B868",
+      "canonical_store_id": "sunglass-hut-B868",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/bankstown/north-terrace-bankstown-central",
+      "action": "add"
+    },
+    {
+      "raw_id": "B676",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b676",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/bankstown/shop-sp168",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B717",
+      "canonical_store_id": "sunglass-hut-B717",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/blacktown/shop-3000a-westpoint-blacktown",
+      "action": "add"
+    },
+    {
+      "raw_id": "B693",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b693",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/bondi-junction/500-oxford-street-westfield-bondi-junction-b693",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B699",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b699",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/bondi-junction/500-oxford-street-westfield-bondi-junction-b699",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B796",
+      "canonical_store_id": "sunglass-hut-B796",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/bondi-junction/500-oxford-street-westfield-bondi-junction-b796",
+      "action": "add"
+    },
+    {
+      "raw_id": "B896",
+      "canonical_store_id": "sunglass-hut-B896",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/brookvale/myer-ground-floor-westfield-warringah-mall",
+      "action": "add"
+    },
+    {
+      "raw_id": "B665",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b665",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/brookvale/shop-1072-ground-floor-warringah-mall-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B772",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b772",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/burwood/shop-113-ground-floor-westfield-burwood-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "A902",
+      "canonical_store_id": "sunglass-hut-A902",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/byron-bay/1-7-lawson-street",
+      "action": "add"
+    },
+    {
+      "raw_id": "B743",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b743",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/campbelltown/kiosk-ku5-level-3-macarthur-square",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B863",
+      "canonical_store_id": "sunglass-hut-B863",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/castle-hill/myer-castle-towers-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B675",
+      "canonical_store_id": "sunglass-hut-B675",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/castle-hill/shop-389-level-2-castle-towers-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B723",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b723",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/charlestown/30-pearson-street-charlestown-square",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B872",
+      "canonical_store_id": "sunglass-hut-B872",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/charlestown/myer-level-1-charlestown-square",
+      "action": "add"
+    },
+    {
+      "raw_id": "B698",
+      "canonical_store_id": "sunglass-hut-B698",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/chatswood/k406-level-4-westfield-chatswood-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B740",
+      "canonical_store_id": "sunglass-hut-B740",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/chatswood/kiosk-gk009-level-1-chatswood-chase",
+      "action": "add"
+    },
+    {
+      "raw_id": "B797",
+      "canonical_store_id": "sunglass-hut-B797",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/chatswood/myer-ground-floor-westfield-chatswood-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B737",
+      "canonical_store_id": "sunglass-hut-B737",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/drummoyne/shop-10-birkenhead-point-outlet-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B691",
+      "canonical_store_id": "sunglass-hut-B691",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/dubbo/k07-dubbo-square",
+      "action": "add"
+    },
+    {
+      "raw_id": "B779",
+      "canonical_store_id": "sunglass-hut-B779",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/east-maitland/shop-t2058-level-1-green-hills-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B867",
+      "canonical_store_id": "sunglass-hut-B867",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/eastgardens/myer-ground-floor-westfield-eastgardens",
+      "action": "add"
+    },
+    {
+      "raw_id": "B838",
+      "canonical_store_id": "sunglass-hut-B838",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/erina/t260-ground-floor-erina-fair-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B762",
+      "canonical_store_id": "sunglass-hut-B762",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/homebush/3-5-underwood-road-dfo-homebush",
+      "action": "add"
+    },
+    {
+      "raw_id": "AU4616",
+      "canonical_store_id": "sunglass-hut-AU4616",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/hornsby/236-pacific-hwy-l2-westfield-hornsby",
+      "action": "add"
+    },
+    {
+      "raw_id": "E524",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-e524",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/hurstville/shop-405-westfield-hurstville",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B722",
+      "canonical_store_id": "sunglass-hut-B722",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/kotara/northcott-dr-park-avenue-westfield-kotara",
+      "action": "add"
+    },
+    {
+      "raw_id": "B875",
+      "canonical_store_id": "sunglass-hut-B875",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/liverpool/macquarie-street-westfield-liverpool",
+      "action": "add"
+    },
+    {
+      "raw_id": "B754",
+      "canonical_store_id": "sunglass-hut-B754",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/mascot/2t-300-level-2-domestic-terminal-sydney-t2-airport",
+      "action": "add"
+    },
+    {
+      "raw_id": "B773",
+      "canonical_store_id": "sunglass-hut-B773",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/mascot/shop-2-1937-level-2-t1-sydney-int-l-departures-airport",
+      "action": "add"
+    },
+    {
+      "raw_id": "B757",
+      "canonical_store_id": "sunglass-hut-B757",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/mascot/shop-60-level-2-t3-qantas-domestic-terminal-sydney-airport",
+      "action": "add"
+    },
+    {
+      "raw_id": "B677",
+      "canonical_store_id": "sunglass-hut-B677",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/miranda/600-kingsway-westfield-miranda-b677",
+      "action": "add"
+    },
+    {
+      "raw_id": "B735",
+      "canonical_store_id": "sunglass-hut-B735",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/miranda/600-kingsway-westfield-miranda-b735",
+      "action": "add"
+    },
+    {
+      "raw_id": "B864",
+      "canonical_store_id": "sunglass-hut-B864",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/miranda/600-kingsway-westfield-miranda-b864",
+      "action": "add"
+    },
+    {
+      "raw_id": "B858",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-narellan",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/narellan/k21-level-1-narellan-town-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B770",
+      "canonical_store_id": "sunglass-hut-B770",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/north-ryde/cnr-herring-rd-waterloo-rd-macquarie-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B801",
+      "canonical_store_id": "sunglass-hut-B801",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/north-ryde/myer-macquarie-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B799",
+      "canonical_store_id": "sunglass-hut-B799",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/parramatta/myer-level-4-myer-level-2-westfield-parramatta-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B749",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b749",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/parramatta/shop-4019a-level-4-westfield-parramatta-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B706",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-penrith-kiosk",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/penrith/kiosk-k21-westfield-penrith-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B802",
+      "canonical_store_id": "sunglass-hut-B802",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/penrith/myer-penrith-plaza",
+      "action": "add"
+    },
+    {
+      "raw_id": "B672",
+      "canonical_store_id": "sunglass-hut-B672",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/port-macquarie/shops-8-9-port-central-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B795",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b795",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/rouse-hill/shop-gr-011-rouse-hill-town-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B892",
+      "canonical_store_id": "sunglass-hut-B892",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/shellharbour/myer-ground-floor-shellharbour-stockland",
+      "action": "add"
+    },
+    {
+      "raw_id": "B667",
+      "canonical_store_id": "sunglass-hut-B667",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/shellharbour/shop-2052-level-1-stockland-shellharbour",
+      "action": "add"
+    },
+    {
+      "raw_id": "B771",
+      "canonical_store_id": "sunglass-hut-B771",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/sydney/ground-floor-b771",
+      "action": "add"
+    },
+    {
+      "raw_id": "B884",
+      "canonical_store_id": "sunglass-hut-B884",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/sydney/ground-floor-b884",
+      "action": "add"
+    },
+    {
+      "raw_id": "B758",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b758",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/sydney/shop-2023-ground-floor-westfield-sydney",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B671",
+      "canonical_store_id": "sunglass-hut-B671",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/sydney/shop-3-lower-ground-qvb-building",
+      "action": "add"
+    },
+    {
+      "raw_id": "B713",
+      "canonical_store_id": "sunglass-hut-B713",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/sydney/shop-4-5-ground-floor",
+      "action": "add"
+    },
+    {
+      "raw_id": "4714",
+      "canonical_store_id": "sunglass-hut-4714",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/sydney/shop-84-sydney-outlet-village-5-viscount-place-liverpool",
+      "action": "add"
+    },
+    {
+      "raw_id": "B895",
+      "canonical_store_id": "sunglass-hut-B895",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/tamworth/shop-t9-ground-floor-city-plaza",
+      "action": "add"
+    },
+    {
+      "raw_id": "B850",
+      "canonical_store_id": "sunglass-hut-B850",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/tuggerah/shop-1043-ground-floor-westfield-tuggerah-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B851",
+      "canonical_store_id": "sunglass-hut-B851",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/tweed-heads-south/shop-99-ground-floor-tweed-city-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B775",
+      "canonical_store_id": "sunglass-hut-B775",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/ultimo/shop-s205-level-2-broadway-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B785",
+      "canonical_store_id": "sunglass-hut-B785",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/wagga-wagga/kiosk-9-wagga-wagga-marketplace",
+      "action": "add"
+    },
+    {
+      "raw_id": "B903",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b903",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/wetherill-park/561-583-polding-street-stockland-wetherill-park-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B701",
+      "canonical_store_id": "sunglass-hut-B701",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nsw/wollongong/shop-n010-ground-floor-wollongong-central-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "AU3775",
+      "canonical_store_id": "sunglass-hut-AU3775",
+      "country": "Australia",
+      "status": "Closed",
+      "source_url": "https://stores.sunglasshut.com/au/nt/casuarina/kiosk-18-ground-floor-casuarina-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B681",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-casuarina",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nt/casuarina/shop-75-level-1-casuarina-square-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "A928",
+      "canonical_store_id": "sunglass-hut-A928",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/nt/yarrawonga/kiosk-8-gateway-shopping-centre-1-roystonea-avenue",
+      "action": "add"
+    },
+    {
+      "raw_id": "B827",
+      "canonical_store_id": "sunglass-hut-B827",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/aitkenvale/myer-level-1-townsville-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B669",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b669",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/aitkenvale/shop-221-level-1-townsville-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B768",
+      "canonical_store_id": "sunglass-hut-B768",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/biggera-waters/147-189-brisbane-road-harbour-town-premium-outlets",
+      "action": "add"
+    },
+    {
+      "raw_id": "B897",
+      "canonical_store_id": "sunglass-hut-B897",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/bilinga/shop-39-gold-coast-airport",
+      "action": "add"
+    },
+    {
+      "raw_id": "B746",
+      "canonical_store_id": "sunglass-hut-B746",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/brisbane-airport/site-3p-09-level-3",
+      "action": "add"
+    },
+    {
+      "raw_id": "B759",
+      "canonical_store_id": "sunglass-hut-B759",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/brisbane-airport/tenancy-2b-14-level-2-brisbane-domestic-terminal",
+      "action": "add"
+    },
+    {
+      "raw_id": "AU3334",
+      "canonical_store_id": "sunglass-hut-AU3334",
+      "country": "Australia",
+      "status": "Closed",
+      "source_url": "https://stores.sunglasshut.com/au/qld/brisbane/91-queen-street-the-myer-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B780",
+      "canonical_store_id": "sunglass-hut-B780",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/brisbane/shop-3-4-brisbane-arcade",
+      "action": "add"
+    },
+    {
+      "raw_id": "B761",
+      "canonical_store_id": "sunglass-hut-B761",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/brisbane/shop-t131-dfo-brisbane",
+      "action": "add"
+    },
+    {
+      "raw_id": "B885",
+      "canonical_store_id": "sunglass-hut-B885",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/broadbeach/myer-ground-floor-pacific-fair-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B682",
+      "canonical_store_id": "sunglass-hut-B682",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/broadbeach/shop-2098-ground-floor-pacific-fair-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "A571",
+      "canonical_store_id": "sunglass-hut-A571",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/broadbeach/shop-2370-level-1-pacific-fair-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B751",
+      "canonical_store_id": "sunglass-hut-B751",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/buddina/119-point-cartwright-dr-kawana-shoppingworld",
+      "action": "add"
+    },
+    {
+      "raw_id": "B862",
+      "canonical_store_id": "sunglass-hut-B862",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/cairns/myer-cairns-central-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B659",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b659",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/cairns/shop-20-ground-floor-cairns-central-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B805",
+      "canonical_store_id": "sunglass-hut-B805",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/carindale/myer-ground-floor-westfield-carindale-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B663",
+      "canonical_store_id": "sunglass-hut-B663",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/carindale/shop-2031-level-1-westfield-carindale-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B804",
+      "canonical_store_id": "sunglass-hut-B804",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/chermside/myer-level-2-westfield-chermside",
+      "action": "add"
+    },
+    {
+      "raw_id": "B840",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b840",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/chermside/westfield-chermside-cnr-gympie-hamilton-rd",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "AU4618",
+      "canonical_store_id": "sunglass-hut-AU4618",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/coomera/103-foxwell-rd",
+      "action": "add"
+    },
+    {
+      "raw_id": "B685",
+      "canonical_store_id": "sunglass-hut-B685",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/gladstone/cnr-dawson-hwy-phillip-st-stocklands-gladstone-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B854",
+      "canonical_store_id": "sunglass-hut-B854",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/hyde-park/corner-woolcock-st-kings-rd-castletown-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B707",
+      "canonical_store_id": "sunglass-hut-B707",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/indooroopilly/322-moggill-road-indooroopilly-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B806",
+      "canonical_store_id": "sunglass-hut-B806",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/indooroopilly/myer-level-2-indooroopilly-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B689",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b689",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/loganholme/kiosk-k17-ground-floor-logan-hyperdome",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B825",
+      "canonical_store_id": "sunglass-hut-B825",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/mackay/myer-ground-floor-caneland-central-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B733",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b733",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/mackay/shop-2060-ground-floor-caneland-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B700",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b700",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/mango-hill/cnr-anzac-ave-north-lakes-dr-westfield-north-lakes-b700",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B869",
+      "canonical_store_id": "sunglass-hut-B869",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/mango-hill/cnr-anzac-ave-north-lakes-dr-westfield-north-lakes-b869",
+      "action": "add"
+    },
+    {
+      "raw_id": "B845",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-sunshine-plaza",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/maroochydore/horton-pde",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B807",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-myer-sunshine-plaza",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/maroochydore/myer-level-2-sunshine-plaza",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B905",
+      "canonical_store_id": "sunglass-hut-B905",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/mooloolaba/shop-115-sirocco-resort",
+      "action": "add"
+    },
+    {
+      "raw_id": "AU3215",
+      "canonical_store_id": "sunglass-hut-AU3215",
+      "country": "Australia",
+      "status": "Closed",
+      "source_url": "https://stores.sunglasshut.com/au/qld/mount-gravatt/cnr-logan-rd-kessels-rd-westfield-garden-city-au3215",
+      "action": "add"
+    },
+    {
+      "raw_id": "B829",
+      "canonical_store_id": "sunglass-hut-B829",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/mount-gravatt/cnr-logan-rd-kessels-rd-westfield-garden-city-b829",
+      "action": "add"
+    },
+    {
+      "raw_id": "B747",
+      "canonical_store_id": "sunglass-hut-B747",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/mt-gravatt/cnr-logan-rd-kessels-rd-westfield-garden-city",
+      "action": "add"
+    },
+    {
+      "raw_id": "B893",
+      "canonical_store_id": "sunglass-hut-B893",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/mt-ommaney/shop-k7-ground-floor-mt-ommaney-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B848",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-noosa-hastings",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/noosa/shop-7-laguna-on-hastings",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "AU4615",
+      "canonical_store_id": "sunglass-hut-AU4615",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/north-ipswich/shop-k07-ipswich-riverlink-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B824",
+      "canonical_store_id": "sunglass-hut-B824",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/robina/myer-ground-floor-robina-town-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B729",
+      "canonical_store_id": "sunglass-hut-B729",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/robina/shop-4074-ground-floor-robina-town-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B731",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b731",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/rockhampton/120-331-yaamba-rd-park-avenue-stockland-rockhampton-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B833",
+      "canonical_store_id": "sunglass-hut-B833",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/surfers-paradise/street-level",
+      "action": "add"
+    },
+    {
+      "raw_id": "B786",
+      "canonical_store_id": "sunglass-hut-B786",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/qld/toowoomba/shop-1120-level-1-grand-central-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "AU3191",
+      "canonical_store_id": "sunglass-hut-AU3191",
+      "country": "Australia",
+      "status": "Closed",
+      "source_url": "https://stores.sunglasshut.com/au/sa/adelaide/14-38-rundle-mall-myer-centre-adelaide",
+      "action": "add"
+    },
+    {
+      "raw_id": "B812",
+      "canonical_store_id": "sunglass-hut-B812",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/sa/adelaide/22-rundle-mall-myer-centre-adelaide",
+      "action": "add"
+    },
+    {
+      "raw_id": "B660",
+      "canonical_store_id": "sunglass-hut-B660",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/sa/adelaide/shop-69-rundle-mall",
+      "action": "add"
+    },
+    {
+      "raw_id": "B679",
+      "canonical_store_id": "sunglass-hut-B679",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/sa/elizabeth/shop-s030-ground-floor-east-mall-elizabeth-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B742",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-glenelg-b742",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/sa/glenelg/shop-9",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "C350",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-burnside-c350",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/sa/glenside/tenancy-g140-ground-floor-burnside-village-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B678",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b678",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/sa/modbury/976-north-east-rd-westfield-tea-tree-plaza-b678",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B813",
+      "canonical_store_id": "sunglass-hut-B813",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/sa/modbury/976-north-east-rd-westfield-tea-tree-plaza-b813",
+      "action": "add"
+    },
+    {
+      "raw_id": "B664",
+      "canonical_store_id": "sunglass-hut-B664",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/sa/noarlunga-centre/shop-qf49a-level-2-centro-colonnades-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B662",
+      "canonical_store_id": "sunglass-hut-B662",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/sa/oaklands-park/297-diagonal-rd-westfield-marion",
+      "action": "add"
+    },
+    {
+      "raw_id": "B861",
+      "canonical_store_id": "sunglass-hut-B861",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/sa/oaklands-park/myer-ground-floor-westfield-marion-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B769",
+      "canonical_store_id": "sunglass-hut-B769",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/sa/west-beach/shop-t11-harbourtown-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B666",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b666",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/sa/west-lakes/t145-ground-floor-westfield-west-lakes",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B818",
+      "canonical_store_id": "sunglass-hut-B818",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/tas/hobart/55-murray-street",
+      "action": "add"
+    },
+    {
+      "raw_id": "B793",
+      "canonical_store_id": "sunglass-hut-B793",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/tas/hobart/shop-36-street-entry-the-cat-fiddle-arcade",
+      "action": "add"
+    },
+    {
+      "raw_id": "B819",
+      "canonical_store_id": "sunglass-hut-B819",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/tas/launceston/street-entry",
+      "action": "add"
+    },
+    {
+      "raw_id": "B886",
+      "canonical_store_id": "sunglass-hut-B886",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/ballarat/18-armstrong-street-south-central-square-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "AU4612",
+      "canonical_store_id": "sunglass-hut-AU4612",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/ballarat/k11-gillies-st-north",
+      "action": "add"
+    },
+    {
+      "raw_id": "B874",
+      "canonical_store_id": "sunglass-hut-B874",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/bendigo/ground-floor",
+      "action": "add"
+    },
+    {
+      "raw_id": "F641",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-f641",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/bendigo/k012-bendigo-marketplace-116-120-mitchell-st",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "F773",
+      "canonical_store_id": "sunglass-hut-F773",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/broadmeadows/1099-1169-pascoe-vale-road",
+      "action": "add"
+    },
+    {
+      "raw_id": "B687",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b687",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/chadstone/b13-lower-ground-chadstone-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B808",
+      "canonical_store_id": "sunglass-hut-B808",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/chadstone/myer-ground-level-chadstone-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B736",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b736",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/chadstone/shop-g-089-ground-chadstone-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B763",
+      "canonical_store_id": "sunglass-hut-B763",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/cheltenham/cnr-grange-rd-centre-dandenong-rd-dfo-moorabbin",
+      "action": "add"
+    },
+    {
+      "raw_id": "B817",
+      "canonical_store_id": "sunglass-hut-B817",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/cheltenham/myer-level-2-westfield-southland-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B673",
+      "canonical_store_id": "sunglass-hut-B673",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/cheltenham/shop-2107-level-2-westfield-southland-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "AU3395",
+      "canonical_store_id": "sunglass-hut-AU3395",
+      "country": "Australia",
+      "status": "Closed",
+      "source_url": "https://stores.sunglasshut.com/au/vic/docklands/shop-nc-g01-ground-floor-the-district-docklands",
+      "action": "add"
+    },
+    {
+      "raw_id": "B798",
+      "canonical_store_id": "sunglass-hut-B798",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/doncaster/myer-ground-floor-westfield-doncaster-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B730",
+      "canonical_store_id": "sunglass-hut-B730",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/doncaster/shop-g17-ground-floor-westfield-doncaster-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "F833",
+      "canonical_store_id": "sunglass-hut-F833",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/epping/571-583-high-st",
+      "action": "add"
+    },
+    {
+      "raw_id": "B674",
+      "canonical_store_id": "sunglass-hut-B674",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/frankston/shop-g-86-ground-bayside-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B860",
+      "canonical_store_id": "sunglass-hut-B860",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/geelong/myer-level-1-westfield-geelong-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B766",
+      "canonical_store_id": "sunglass-hut-B766",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/geelong/shop-2238-level-2-westfield-bay-city",
+      "action": "add"
+    },
+    {
+      "raw_id": "B732",
+      "canonical_store_id": "sunglass-hut-B732",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/greensborough/shop-373-level-3-greensborough-plaza",
+      "action": "add"
+    },
+    {
+      "raw_id": "B810",
+      "canonical_store_id": "sunglass-hut-B810",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/maribyrnong/myer-level-3-highpoint-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B741",
+      "canonical_store_id": "sunglass-hut-B741",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/maribyrnong/shop-3114-level-3-highpoint-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "AU4611",
+      "canonical_store_id": "sunglass-hut-AU4611",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/melbourne/330-cranbourne-road",
+      "action": "add"
+    },
+    {
+      "raw_id": "Q747",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-q747",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/melbourne/l01-1k3-melbourne-central",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B822",
+      "canonical_store_id": "sunglass-hut-B822",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/melbourne/myer-ground-floor",
+      "action": "add"
+    },
+    {
+      "raw_id": "B791",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b791",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/melbourne/shop-049-ground-floor-melbourne-central-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B750",
+      "canonical_store_id": "sunglass-hut-B750",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/melbourne/shop-1-3-street-level",
+      "action": "add"
+    },
+    {
+      "raw_id": "B715",
+      "canonical_store_id": "sunglass-hut-B715",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/melbourne/shop-g-043-ground-floor-emporium-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B856",
+      "canonical_store_id": "sunglass-hut-B856",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/melton/kiosk-k16-woodgrove-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "AU3757",
+      "canonical_store_id": "sunglass-hut-AU3757",
+      "country": "Australia",
+      "status": "Closed",
+      "source_url": "https://stores.sunglasshut.com/au/vic/mill-park/shop-k10-westfield-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B690",
+      "canonical_store_id": "sunglass-hut-B690",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/narre-warren/kiosk-113-level-1-fountain-gate-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B826",
+      "canonical_store_id": "sunglass-hut-B826",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/narre-warren/myer-level-1-westfield-fountain-gate",
+      "action": "add"
+    },
+    {
+      "raw_id": "B811",
+      "canonical_store_id": "sunglass-hut-B811",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/preston/myer-ground-floor-northland-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B695",
+      "canonical_store_id": "sunglass-hut-B695",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/preston/shop-g07c-ground-floor-northland-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "P102",
+      "canonical_store_id": "sunglass-hut-P102",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/richmond/620-victoria-st",
+      "action": "add"
+    },
+    {
+      "raw_id": "B816",
+      "canonical_store_id": "sunglass-hut-B816",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/ringwood/myer-level-2-eastland-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B739",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b739",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/ringwood/shop-2139-level-2-eastland-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B764",
+      "canonical_store_id": "sunglass-hut-B764",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/south-wharf/tenancy-b012-basement",
+      "action": "add"
+    },
+    {
+      "raw_id": "AU3400",
+      "canonical_store_id": "sunglass-hut-AU3400",
+      "country": "Australia",
+      "status": "Closed",
+      "source_url": "https://stores.sunglasshut.com/au/vic/south-yarra/street-level-au3400",
+      "action": "add"
+    },
+    {
+      "raw_id": "B904",
+      "canonical_store_id": "sunglass-hut-B904",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/south-yarra/street-level-b904",
+      "action": "add"
+    },
+    {
+      "raw_id": "B668",
+      "canonical_store_id": "sunglass-hut-B668",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/southbank/shop-t114b-groundfloor-level-1-crown-casino-complex",
+      "action": "add"
+    },
+    {
+      "raw_id": "B778",
+      "canonical_store_id": "sunglass-hut-B778",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/strathmore/shop-g010b-dfo-essendon",
+      "action": "add"
+    },
+    {
+      "raw_id": "B744",
+      "canonical_store_id": "sunglass-hut-B744",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/taylors-lake/tenancy-110-watergardens-town-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B899",
+      "canonical_store_id": "sunglass-hut-B899",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/tullamarine/s19-level-1-t4-terminal-melbourne-airport-centre-rd",
+      "action": "add"
+    },
+    {
+      "raw_id": "B702",
+      "canonical_store_id": "sunglass-hut-B702",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/tullamarine/shop-t2-w09-level-1-terminal-2-melbourne-airport",
+      "action": "add"
+    },
+    {
+      "raw_id": "AU3718",
+      "canonical_store_id": "sunglass-hut-AU3718",
+      "country": "Australia",
+      "status": "Closed",
+      "source_url": "https://stores.sunglasshut.com/au/vic/wantirna-south/425-burwood-hwy-westfield-knox-au3718",
+      "action": "add"
+    },
+    {
+      "raw_id": "B902",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b902",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/wantirna-south/425-burwood-hwy-westfield-knox-b902",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B890",
+      "canonical_store_id": "sunglass-hut-B890",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/werribee/myer-werribee-plaza",
+      "action": "add"
+    },
+    {
+      "raw_id": "B790",
+      "canonical_store_id": "sunglass-hut-B790",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/vic/werribee/shop-t227-pacific-werribee-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B815",
+      "canonical_store_id": "sunglass-hut-B815",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/booragoon/myer-ground-floor-garden-city-booragoon-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B774",
+      "canonical_store_id": "sunglass-hut-B774",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/booragoon/shop-46-ground-floor-garden-city-booragoon-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B865",
+      "canonical_store_id": "sunglass-hut-B865",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/cannington/myer-westfield-carousel-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B704",
+      "canonical_store_id": "sunglass-hut-B704",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/cannington/shop-1226-ground-westfield-carousel-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B721",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b721",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/claremont/shop-128-ground-claremont-quarter",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B728",
+      "canonical_store_id": "sunglass-hut-B728",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/cloverdale/227-belmont-ave-belmont-forum",
+      "action": "add"
+    },
+    {
+      "raw_id": "B776",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b776",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/eaton/shop-t75-eaton-fair-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "F870",
+      "canonical_store_id": "sunglass-hut-F870",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/ellenbrook/11-main-st",
+      "action": "add"
+    },
+    {
+      "raw_id": "B783",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b783",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/hillarys/kiosk-8-whitford-city-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B696",
+      "canonical_store_id": "sunglass-hut-B696",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/innaloo/ellen-stirling-bvld-westfield-innaloo",
+      "action": "add"
+    },
+    {
+      "raw_id": "B894",
+      "canonical_store_id": "sunglass-hut-B894",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/joondalup/myer-lakeside-joondalup-shopping-city",
+      "action": "add"
+    },
+    {
+      "raw_id": "B855",
+      "canonical_store_id": "sunglass-hut-B855",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/joondalup/shop-t275-level-1-lakeside-joondalup-shopping-city",
+      "action": "add"
+    },
+    {
+      "raw_id": "B820",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-myer-karrinyup-b820",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/karrinyup/myer-karrinyup-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B726",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-karrinyup",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/karrinyup/shop-59b-ground-karrinyup-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B705",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b705",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/mandurah/g086a-ground-floor-mandurah-forum",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B767",
+      "canonical_store_id": "sunglass-hut-B767",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/midland/shop-44-45-ground-floor",
+      "action": "add"
+    },
+    {
+      "raw_id": "B661",
+      "canonical_store_id": "sunglass-hut-B661",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/morley/cnr-old-collier-rd-walter-rd-galleria-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B821",
+      "canonical_store_id": "sunglass-hut-B821",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/morley/cnr-old-collier-walter-rd-galleria-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B814",
+      "canonical_store_id": "sunglass-hut-B814",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/perth/200-murray-street-forrest-chase-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "AU4613",
+      "canonical_store_id": "sunglass-hut-AU4613",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/perth/36-ocean-keys-boulevard",
+      "action": "add"
+    },
+    {
+      "raw_id": "F986",
+      "canonical_store_id": "sunglass-hut-F986",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/perth/683-703-hay-st",
+      "action": "add"
+    },
+    {
+      "raw_id": "B898",
+      "canonical_store_id": "sunglass-hut-B898",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/perth/miller-road-perth-qantas-domestic-t4",
+      "action": "add"
+    },
+    {
+      "raw_id": "B725",
+      "canonical_store_id": "sunglass-hut-B725",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/perth/shop-34-36-piccadilly-arcade",
+      "action": "add"
+    },
+    {
+      "raw_id": "C279",
+      "canonical_store_id": "sunglass-hut-C279",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/perth/shop-g-056-dfo-perth",
+      "action": "add"
+    },
+    {
+      "raw_id": "B835",
+      "canonical_store_id": "sunglass-hut-B835",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/rockingham/shop-t178-ground-floor-rockingham-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B709",
+      "canonical_store_id": "independent-other-optical-reviewed-au-sunglass-hut-b709",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/success/g-309-ground-floor-cockburn-gateways-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "AU3530",
+      "canonical_store_id": "sunglass-hut-AU3530",
+      "country": "Australia",
+      "status": "Closed",
+      "source_url": "https://stores.sunglasshut.com/au/wa/west-perth/shop-a37-ground-watertown-brand-outlet-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B718",
+      "canonical_store_id": "sunglass-hut-B718",
+      "country": "Australia",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/au/wa/west-perth/shop-b30-level-1-watertown-brand-outlet-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "Q101",
+      "canonical_store_id": "sunglass-hut-Q101",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/auckland/auckland/4-jimmy-ward-crescent",
+      "action": "add"
+    },
+    {
+      "raw_id": "B639",
+      "canonical_store_id": "sunglass-hut-B639",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/auckland/auckland/62-queen-street-portland-towers",
+      "action": "add"
+    },
+    {
+      "raw_id": "Q767",
+      "canonical_store_id": "sunglass-hut-Q767",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/auckland/auckland/7-queen-street",
+      "action": "add"
+    },
+    {
+      "raw_id": "B626",
+      "canonical_store_id": "sunglass-hut-B626",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/bop/mt-maunganui/shop-603-ground-floor-bayfair-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B630",
+      "canonical_store_id": "sunglass-hut-B630",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/dunedin/meridian-mall-kiosk-18",
+      "action": "add"
+    },
+    {
+      "raw_id": "B652",
+      "canonical_store_id": "independent-other-optical-reviewed-nz-sunglass-hut-b652",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-north/auckland/1-7-fred-taylor-drive-northwest-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B647",
+      "canonical_store_id": "sunglass-hut-B647",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-north/auckland/219-don-mckinnon-drive-westfield-albany",
+      "action": "add"
+    },
+    {
+      "raw_id": "NZ3069",
+      "canonical_store_id": "sunglass-hut-NZ3069",
+      "country": "New Zealand",
+      "status": "Closed",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-north/auckland/50-high-street",
+      "action": "add"
+    },
+    {
+      "raw_id": "B641",
+      "canonical_store_id": "sunglass-hut-B641",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-north/auckland/shop-k07-ground-floor-lynnmall-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "E604",
+      "canonical_store_id": "sunglass-hut-E604",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-north/auckland/shop-s286-level-2-westfield-newmarket",
+      "action": "add"
+    },
+    {
+      "raw_id": "B645",
+      "canonical_store_id": "sunglass-hut-B645",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-north/hamilton/shop-s209-level-2-chartwell-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B648",
+      "canonical_store_id": "sunglass-hut-B648",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-north/new-plymouth/shop-31-lower-ground-centre-city-plaza",
+      "action": "add"
+    },
+    {
+      "raw_id": "B656",
+      "canonical_store_id": "sunglass-hut-B656",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-south/auckland/151-arthur-street-dresssmart-outlet-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B642",
+      "canonical_store_id": "sunglass-hut-B642",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-south/auckland/286-mount-wellington-highway-sylvia-park-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B634",
+      "canonical_store_id": "sunglass-hut-B634",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-south/auckland/80-st-lukes-road-westfield-st-lukes",
+      "action": "add"
+    },
+    {
+      "raw_id": "B649",
+      "canonical_store_id": "sunglass-hut-B649",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-south/auckland/george-bolt-drive-auckland-domestic-airport",
+      "action": "add"
+    },
+    {
+      "raw_id": "B658",
+      "canonical_store_id": "sunglass-hut-B658",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-south/auckland/ray-emery-drive-auckland-international-airport",
+      "action": "add"
+    },
+    {
+      "raw_id": "B628",
+      "canonical_store_id": "sunglass-hut-B628",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-south/auckland/shop-0135-level-1-botany-town-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B627",
+      "canonical_store_id": "sunglass-hut-B627",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-south/auckland/store-k1-ground-floor-westfield-manukau",
+      "action": "add"
+    },
+    {
+      "raw_id": "B644",
+      "canonical_store_id": "sunglass-hut-B644",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-south/christchurch/129-riccarton-road-westfield-riccarton",
+      "action": "add"
+    },
+    {
+      "raw_id": "B657",
+      "canonical_store_id": "sunglass-hut-B657",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-south/christchurch/166-cashel-st-the-crossing",
+      "action": "add"
+    },
+    {
+      "raw_id": "B638",
+      "canonical_store_id": "sunglass-hut-B638",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/nz-south/christchurch/55-main-north-road-northlands-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B636",
+      "canonical_store_id": "sunglass-hut-B636",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/ota/queenstown/shop-2-town-pier",
+      "action": "add"
+    },
+    {
+      "raw_id": "B637",
+      "canonical_store_id": "independent-other-optical-reviewed-nz-sunglass-hut-b637",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/waikato/hamilton/te-rapa-road-&-wairere-drive-the-base-shopping-centre",
+      "action": "refresh_existing"
+    },
+    {
+      "raw_id": "B646",
+      "canonical_store_id": "sunglass-hut-B646",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/wellington/lower-hutt/shop-s208-level-1-queensgate-shopping-centre",
+      "action": "add"
+    },
+    {
+      "raw_id": "B632",
+      "canonical_store_id": "sunglass-hut-B632",
+      "country": "New Zealand",
+      "status": "Active",
+      "source_url": "https://stores.sunglasshut.com/nz/wellington/wellington/226-lambton-quay",
+      "action": "add"
+    }
+  ],
+  "logo": {
+    "local_path": "assets/logo-sunglass-hut.png",
+    "source_url": "https://a.mktgcdn.com/p/BRMvJaNKzid08ec7UfnL9j7MNOu8FJK6PY6aptvBrxE/160x27.png",
+    "evidence": "Official locator header logo captured with AU/NZ directory on 2026-10-18"
+  },
+  "service_classification_note": "Eyewear retail evidenced; optometry is not listed in the captured branch evidence. This does not prove that no optometry service could exist."
+}

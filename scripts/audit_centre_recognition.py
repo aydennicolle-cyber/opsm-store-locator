@@ -6,8 +6,15 @@ from __future__ import annotations
 import csv
 import math
 import re
+from datetime import date
 from collections import defaultdict
 from pathlib import Path
+if __package__:
+    from .unresolved_place_reviews import load_reviews, review_reason, fingerprint
+    from .reviewed_independents import public_url
+else:
+    from unresolved_place_reviews import load_reviews, review_reason, fingerprint
+    from reviewed_independents import public_url
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -47,6 +54,7 @@ IGNORED_NAME_TOKENS = {
     "plaza",
     "square",
     "marketplace",
+    "city",
     "westfield",
     "stockland",
     "the",
@@ -180,10 +188,17 @@ def explicit_place_name_overlap(store: dict, centre: dict) -> bool:
     return bool(store_tokens & centre_tokens)
 
 
-def build_known_centres(stores: list[dict], registry: list[dict]) -> list[dict]:
+def build_known_centres(stores: list[dict], registry: list[dict], reviewed_noncentre_store_ids=()) -> list[dict]:
     grouped: dict[str, list[dict]] = defaultdict(list)
     for store in stores:
-        if store["venue_id"]:
+        # A rejected centre interpretation must not return as a candidate for
+        # another store. Retain independently registered properties even when
+        # their last optical tenant has closed, but do not create a property
+        # solely from a closed business label.
+        if (store["venue_id"]
+                and store.get("store_id") not in reviewed_noncentre_store_ids
+                and store.get("location_type") == "Shopping Centre"
+                and store.get("status") != "Closed"):
             grouped[store["venue_id"]].append(store)
 
     known = {}
@@ -210,8 +225,38 @@ def build_known_centres(stores: list[dict], registry: list[dict]) -> list[dict]:
     return list(known.values())
 
 
+def apply_retained_mapping_reviews(rows, stores, memberships, reviews):
+    """Explain reviewed nearby candidates without assigning or removing tenants."""
+    by_id = {s['store_id']: s for s in stores}
+    accepted = {}
+    for review in reviews:
+        key = (review['store_id'], review['candidate_venue_id'])
+        if (key in accepted or key[0] not in by_id
+                or (not review.get('accepted_place_id')
+                    and review.get('accepted_setting') != 'Other')
+                or not review.get('reason')
+                or not public_url(review.get('evidence_url', ''))
+                or date.fromisoformat(review['reviewed_at']) > date.today()):
+            raise ValueError(f'Invalid retained mapping review: {key}')
+        accepted[key] = review
+    for row in rows:
+        review = accepted.get((row['store_id'], row['candidate_venue_id']))
+        member = memberships.get(row['store_id'], {})
+        if (review and member.get('review_status') == 'Accepted'
+                and member.get('place_id') == review['accepted_place_id']
+                and (bool(review['accepted_place_id'])
+                     or member.get('location_setting') == review.get('accepted_setting') == 'Other')
+                and review['store_fingerprint'] == fingerprint(by_id[row['store_id']])):
+            retained = 'accepted place' if review['accepted_place_id'] else 'accepted non-centre setting'
+            row['review_status'] = f'Reviewed; {retained} retained'
+            row['evidence'] += (f"; Review recorded {review['reviewed_at']}: "
+                                + review['reason'] + ' Source: ' + review['evidence_url'])
+            row['automatic_action'] = f'No additional membership; {retained} retained'
+
+
 def main() -> None:
     stores = read_csv(STORE_PATH)
+    unresolved_reviews = load_reviews(stores, DATA_DIR / 'unresolved_place_reviews.csv')
     registry = read_csv(CENTRE_PATH)
     memberships = {
         (row["retailer"], row["store_id"], row["venue_id"])
@@ -229,7 +274,7 @@ def main() -> None:
         and row.get("location_setting", "").strip() in {"High Street", "Other"}
     }
     place_remaps = load_place_remaps()
-    centres = build_known_centres(stores, registry)
+    centres = build_known_centres(stores, registry, reviewed_noncentre_store_ids)
     rows = []
 
     for store in stores:
@@ -271,8 +316,8 @@ def main() -> None:
             elif distance <= 125 and overlapping_name:
                 priority = "High"
                 evidence = (
-                    "Official store name explicitly matches a distinctive canonical place name; "
-                    "coordinates corroborate the identity"
+                    "Retained store name shares a distinctive place-name term; "
+                    "nearby coordinates support review but do not verify tenancy or current trading"
                 )
             elif distance <= 50:
                 priority = "Medium"
@@ -342,6 +387,17 @@ def main() -> None:
                 }
             )
 
+    for row in rows:
+        review = unresolved_reviews.get(row['store_id'])
+        if (review and row['store_id'] not in canonical_memberships
+                and review['candidate_venue_id'] == row['candidate_venue_id']):
+            row['review_status'] = 'Reviewed unresolved'
+            row['evidence'] += '; ' + review_reason(review) + ' Source: ' + review['evidence_url']
+            row['automatic_action'] = 'No assignment; retained for transparent unresolved review'
+
+    apply_retained_mapping_reviews(rows, stores,
+                                   {row['store_id']: row for row in read_csv(CANONICAL_MEMBERSHIP_PATH)},
+                                   read_csv(DATA_DIR / 'centre_recognition_decisions.csv'))
     priority_order = {"High": 0, "Medium": 1, "Low": 2}
     rows.sort(
         key=lambda row: (

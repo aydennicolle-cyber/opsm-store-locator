@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "document_type": "location_news",
+  "events": [
+    {
+      "event_id": "development-chadstone-market-pavilion",
+      "aliases": [],
+      "parent_event_id": null,
+      "kind": "background",
+      "scope": "location",
+      "relations": [
+        {
+          "kind": "direct_place",
+          "entity_id": "place-au-vic-chadstone-shopping-centre",
+          "label": "Chadstone Shopping Centre",
+          "basis": "Existing public project names this place.",
+          "source_urls": [
+            "https://www.vicinity.com.au/assets/sb/f/129601/x/218db7b71b/2025-annual-report.pdf"
+          ],
+          "distance_km": null
+        }
+      ],
+      "versions": [
+        {
+          "revision_id": "development-chadstone-market-pavilion-d9391fd180fcbef7",
+          "published_on": "2025-08-20",
+          "recorded_at": "2026-09-03",
+          "date_basis": "Retained public source date; year precision where the legacy date was a placeholder.",
+          "title": "Chadstone Market Pavilion",
+          "statements": [
+            {
+              "text": "Vicinity reports that the 20000 sqm Market Pavilion opened in March 2025 with more than 60 retailers.",
+              "kind": "source_report",
+              "source_ids": [
+                "source-233abdaa2ccb"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "source_id": "source-233abdaa2ccb",
+              "url": "https://www.vicinity.com.au/assets/sb/f/129601/x/218db7b71b/2025-annual-report.pdf",
+              "title": "Official owner annual report"
+            }
+          ],
+          "timing": "Completed March 2025",
+          "uncertainty": "Retained project baseline; current completion has not been rechecked.",
+          "metrics": []
+        }
+      ]
+    },
+    {
+      "event_id": "development-eaton-fair-stage-3",
+      "aliases": [],
+      "parent_event_id": null,
+      "kind": "background",
+      "scope": "location",
+      "relations": [
+        {
+          "kind": "direct_place",
+          "entity_id": "place-au-wa-eaton-fair-shopping-centre",
+          "label": "Eaton Fair Shopping Centre",
+          "basis": "Existing public project names this place.",
+          "source_urls": [
+            "https://buchan.au/projects/eaton-fair/"
+          ],
+          "distance_km": null
+        }
+      ],
+      "versions": [
+        {
+          "revision_id": "development-eaton-fair-stage-3-6128e357cbe04aec",
+          "published_on": null,
+          "recorded_at": "2026-09-27",
+          "date_basis": "Retained public source date; year precision where the legacy date was a placeholder.",
+          "title": "Eaton Fair Stage 3 expansion",
+          "statements": [
+            {
+              "text": "Project architect reports a 10000 sqm retail extension with entertainment and residential components under construction and a 2026 opening target; the current centre growth page also describes continuing expansion. Completion is not established.",
+              "kind": "source_report",
+              "source_ids": [
+                "source-947e7097a0d8"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "source_id": "source-947e7097a0d8",
+              "url": "https://buchan.au/projects/eaton-fair/",
+              "title": "Project architect"
+            }
+          ],
+          "timing": "2026 target; completion unconfirmed",
+          "uncertainty": "Retained project baseline; current completion has not been rechecked.",
+          "metrics": []
+        }
+      ]
+    },
+    {
+      "event_id": "development-sylvia-park-resido",
+      "aliases": [],
+      "parent_event_id": null,
+      "kind": "background",
+      "scope": "location",
+      "relations": [
+        {
+          "kind": "direct_place",
+          "entity_id": "place-nz-auckland-sylvia-park-mall",
+          "label": "Sylvia Park Mall",
+          "basis": "Existing public project names this place.",
+          "source_urls": [
+            "https://www.kiwiproperty.com/properties/sylvia-park/resido"
+          ],
+          "distance_km": null
+        }
+      ],
+      "versions": [
+        {
+          "revision_id": "development-sylvia-park-resido-7dae8c2bcc882c84",
+          "published_on": "2024",
+          "recorded_at": "2026-09-03",
+          "date_basis": "Retained public source date; year precision where the legacy date was a placeholder.",
+          "title": "Resido at Sylvia Park",
+          "statements": [
+            {
+              "text": "Kiwi Property reports that the 295-apartment build-to-rent development beside Sylvia Park completed in 2024.",
+              "kind": "source_report",
+              "source_ids": [
+                "source-38f2cb5d70b6"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "source_id": "source-38f2cb5d70b6",
+              "url": "https://www.kiwiproperty.com/properties/sylvia-park/resido",
+              "title": "Official owner property page"
+            }
+          ],
+          "timing": "Completed 2024",
+          "uncertainty": "Retained project baseline; current completion has not been rechecked.",
+          "metrics": []
+        }
+      ]
+    },
+    {
+      "event_id": "project-bondi-junction-level6",
+      "aliases": [
+        "development-westfield-bondi-level-6"
+      ],
+      "parent_event_id": null,
+      "kind": "background",
+      "scope": "location",
+      "relations": [
+        {
+          "kind": "direct_place",
+          "entity_id": "place-au-nsw-bondi-junction-westfield",
+          "label": "Bondi Junction Westfield",
+          "basis": "Existing public project names this place.",
+          "source_urls": [
+            "https://www.scentregroup.com/westfield-destinations/westfield-bondi-junction"
+          ],
+          "distance_km": null
+        }
+      ],
+      "versions": [
+        {
+          "revision_id": "project-bondi-junction-level6-42f1c0d958732639",
+          "published_on": "2026-06-09",
+          "recorded_at": "2026-09-03",
+          "date_basis": "Retained public source date; year precision where the legacy date was a placeholder.",
+          "title": "Westfield Bondi Level 6 redevelopment",
+          "statements": [
+            {
+              "text": "A $240 million redevelopment is under construction and planned to open in stages from late Q4 2026.",
+              "kind": "source_report",
+              "source_ids": [
+                "source-ffcfeedd7cac"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "source_id": "source-ffcfeedd7cac",
+              "url": "https://www.scentregroup.com/westfield-destinations/westfield-bondi-junction",
+              "title": "Official owner destination page"
+            }
+          ],
+          "timing": "Late 2026",
+          "uncertainty": "Retained project baseline; current completion has not been rechecked.",
+          "metrics": []
+        }
+      ]
+    },
+    {
+      "event_id": "project-eastgardens-housing-proposal",
+      "aliases": [
+        "development-westfield-eastgardens-housing"
+      ],
+      "parent_event_id": null,
+      "kind": "background",
+      "scope": "location",
+      "relations": [
+        {
+          "kind": "direct_place",
+          "entity_id": "place-au-nsw-westfield-eastgardens",
+          "label": "Westfield Eastgardens",
+          "basis": "Existing public project names this place.",
+          "source_urls": [
+            "https://www.scentregroup.com/news-and-media/latest-news/scentre-group-grows-ffo-by-44-percent-upgrades-full-year-guidance"
+          ],
+          "distance_km": null
+        }
+      ],
+      "versions": [
+        {
+          "revision_id": "project-eastgardens-housing-proposal-262d6a9e7cfa03e2",
+          "published_on": null,
+          "recorded_at": "2026-09-03",
+          "date_basis": "Retained public source date; year precision where the legacy date was a placeholder.",
+          "title": "Westfield Eastgardens mixed-use exploration",
+          "statements": [
+            {
+              "text": "Scentre Group reports that an integrated mixed-use opportunity including 1300 dwellings is being explored.",
+              "kind": "source_report",
+              "source_ids": [
+                "source-4fe691848518"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "source_id": "source-4fe691848518",
+              "url": "https://www.scentregroup.com/news-and-media/latest-news/scentre-group-grows-ffo-by-44-percent-upgrades-full-year-guidance",
+              "title": "Official owner market update"
+            }
+          ],
+          "timing": "Long term",
+          "uncertainty": "Retained project baseline; current completion has not been rechecked.",
+          "metrics": []
+        }
+      ]
+    },
+    {
+      "event_id": "project-penrith-entertainment",
+      "aliases": [
+        "development-westfield-penrith-entertainment"
+      ],
+      "parent_event_id": null,
+      "kind": "background",
+      "scope": "location",
+      "relations": [
+        {
+          "kind": "direct_place",
+          "entity_id": "place-au-nsw-westfield-penrith",
+          "label": "Westfield Penrith",
+          "basis": "Existing public project names this place.",
+          "source_urls": [
+            "https://www.scentregroup.com/news-and-media/latest-news/scentre-group-grows-ffo-by-44-percent-upgrades-full-year-guidance"
+          ],
+          "distance_km": null
+        }
+      ],
+      "versions": [
+        {
+          "revision_id": "project-penrith-entertainment-e9bbe29dae1aa1ef",
+          "published_on": null,
+          "recorded_at": "2026-09-03",
+          "date_basis": "Retained public source date; year precision where the legacy date was a placeholder.",
+          "title": "Westfield Penrith entertainment precinct redevelopment",
+          "statements": [
+            {
+              "text": "Scentre Group reports that its $30 million redevelopment of the entertainment and lifestyle precinct and HOYTS complex commenced in 2026.",
+              "kind": "source_report",
+              "source_ids": [
+                "source-4fe691848518"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "source_id": "source-4fe691848518",
+              "url": "https://www.scentregroup.com/news-and-media/latest-news/scentre-group-grows-ffo-by-44-percent-upgrades-full-year-guidance",
+              "title": "Official owner market update"
+            }
+          ],
+          "timing": "2026",
+          "uncertainty": "Retained project baseline; current completion has not been rechecked.",
+          "metrics": []
+        }
+      ]
+    },
+    {
+      "event_id": "project-warringah-housing-concept",
+      "aliases": [
+        "development-westfield-warringah-housing"
+      ],
+      "parent_event_id": null,
+      "kind": "background",
+      "scope": "location",
+      "relations": [
+        {
+          "kind": "direct_place",
+          "entity_id": "place-au-nsw-westfield-warringah-mall",
+          "label": "Westfield Warringah Mall",
+          "basis": "Existing public project names this place.",
+          "source_urls": [
+            "https://www.scentregroup.com/news-and-media/latest-news/scentre-group-grows-ffo-by-44-percent-upgrades-full-year-guidance"
+          ],
+          "distance_km": null
+        }
+      ],
+      "versions": [
+        {
+          "revision_id": "project-warringah-housing-concept-f2de58fa284e843a",
+          "published_on": null,
+          "recorded_at": "2026-09-03",
+          "date_basis": "Retained public source date; year precision where the legacy date was a placeholder.",
+          "title": "Westfield Warringah Mall town-centre concept",
+          "statements": [
+            {
+              "text": "Scentre Group reports substantially progressed concept plans for a new town centre with potential for up to 1600 dwellings.",
+              "kind": "source_report",
+              "source_ids": [
+                "source-4fe691848518"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "source_id": "source-4fe691848518",
+              "url": "https://www.scentregroup.com/news-and-media/latest-news/scentre-group-grows-ffo-by-44-percent-upgrades-full-year-guidance",
+              "title": "Official owner market update"
+            }
+          ],
+          "timing": "Long term",
+          "uncertainty": "Retained project baseline; current completion has not been rechecked.",
+          "metrics": []
+        }
+      ]
+    }
+  ],
+  "checks": []
+}

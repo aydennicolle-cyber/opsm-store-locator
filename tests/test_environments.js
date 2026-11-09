@@ -41,3 +41,6 @@ assert.equal(E.searchSummary([a],{bn:'absent'}).unresolved.length,1,'no BN recor
 assert.equal(E.searchSummary([a],{bn:'present'}).unresolved.length,1,'unrecorded BN remains unknown for a physical-presence requirement');
 assert.equal(E.searchSummary([a],{other:'absent'}).excluded.length,1,'documented other optical presence contradicts an absence requirement');
 assert.equal(E.searchSummary([a],{bn:'not_recorded'}).matches.length,1,'explicit no-recorded filter retains its distinct meaning');
+const renamed = place('Glen Huntly Road', [], {aliases:['Glenhuntly Road'],locality:'Elsternwick',state:'VIC'});
+assert.equal(E.match(renamed,{search:'Glenhuntly Road'}).eligible,true,'retained spelling must find the corrected place');
+assert.equal(E.match(renamed,{search:'Glenhuntly Road',state:'NSW'}).eligible,false,'alias matching cannot bypass geography');

@@ -1,0 +1,84 @@
+{
+  "status": "All nine validation stages passed; three generated outcomes verified. Browser and export verification remains pending.",
+  "raw_store_sha256": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "accepted": [
+    {
+      "store_id": "independent-other-optical-reviewed-au-ballina-optometry",
+      "location_setting": "High Street",
+      "canonical_name": "River Street",
+      "place_type": "High Street Corridor",
+      "official_url": "https://www.ballinaoptometry.com.au/contact/",
+      "evidence_basis": "Operator contact page explicitly confirms 6/26-54 River Street, Ballina 2478 and 02 6686 4988. Accept the existing Ballina River Street corridor from written premises evidence, preserving suite 6 and the original address range. No Ballina Fair or Ballina Central membership is claimed. Contact-page metadata was last modified 9 November 2017; retrieval on 27 October 2026 is not a new publication or independent trading guarantee. Original point and source dates retained.",
+      "confidence": "Medium",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "corridor-au-nsw-ballina-river-street"
+    }
+  ],
+  "unresolved": [
+    {
+      "store_id": "independent-other-optical-reviewed-nz-see-hear-levin",
+      "store_fingerprint": "715805801e47297443e7de15b5b80a1971945460f37b8b3d6888a92a748859c1",
+      "candidate_venue_id": "manawatu-whanganui-levin",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://seehear.co.nz/",
+      "reason": "Operator page retrieved 27 October 2026 confirms 174 Oxford Street, Levin and 06 368 0130, with optical and hearing services. The full Cylex results page separates See Hear at 174 Oxford Street from Specsavers at 183 Oxford Street: its Levin Shopping Centre wording belongs to Specsavers. Retain the 35 m proximity candidate as unproven. Canonical membership remains unresolved; a shared road or combined search snippet cannot establish centre inclusion."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-mac-optometry-braidwood",
+      "store_fingerprint": "2c51a47ed6997112dfc13c64f91c253c5264770123ceaa4ee68067494d05eb16",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.macoptometry.com.au/",
+      "reason": "Operator homepage retrieved 27 October 2026 confirms 110 Wallace Street, Braidwood and 0417 048 221, with prescription frames and lenses. Its published weekday hours support a permanent practice; closed days do not imply permanent closure. Old Bungendore image labels do not establish a second current branch or a relocation date. No named centre or accepted Wallace Street corridor is established. Preserve the Braidwood identity and point; canonical study membership remains unresolved."
+    }
+  ],
+  "sources": [
+    "https://www.cylex.co.nz/levin/optometrist.html"
+  ],
+  "limits": "No raw store addresses, coordinates, statuses or source dates changed.",
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": [
+    {
+      "store_id": "independent-other-optical-reviewed-au-ballina-optometry",
+      "checks": {
+        "accepted_place": true,
+        "place_eligible": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-see-hear-levin",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-mac-optometry-braidwood",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    }
+  ]
+}

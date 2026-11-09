@@ -1,0 +1,206 @@
+{
+  "checked_at": "2026-10-27",
+  "method": "Standard web first. One targeted Firecrawl fallback for inaccessible Meadow Mews OPSM page; 1 reported credit.",
+  "cases": [
+    {
+      "store_id": "opsm-1144",
+      "status": "Evidence supports retained Waterfield Street; integration pending",
+      "sources": [
+        {
+          "url": "https://www.commercialrealestate.com.au/property/55-waterfield-street-coburg-vic-3058-2020690569",
+          "source_date": "2026-04-15",
+          "finding": "Selling agent describes the 55 Waterfield Street retail freehold as leased to OPSM. No explicit Walkers Arcade tenancy established."
+        },
+        {
+          "url": "https://centralcoburg.com.au/trader/opsm/",
+          "finding": "Search extract names OPSM at 55 Waterfield Street, phone 9354 8730. Full page fetch failed; use as supplementary evidence only."
+        }
+      ]
+    },
+    {
+      "store_id": "specsavers-3438",
+      "status": "Investigation retained; membership decision pending",
+      "sources": [
+        {
+          "url": "https://www.specsavers.com.au/stores/portmacquarie",
+          "finding": "Operator retains 2/46 Horton Street, phone 02 6583 5174."
+        },
+        {
+          "url": "https://portcentralshopping.com.au/store-directory/",
+          "finding": "Retrieved directory lists OPSM and Sunglass Hut. Specsavers not shown; omission does not establish absence or closure."
+        }
+      ]
+    },
+    {
+      "store_id": "opsm-1577",
+      "status": "Correction applied; rebuild verification in progress",
+      "sources": [
+        {
+          "url": "https://www.darwingalleria.com.au/store-directory/",
+          "finding": "Official Darwin Galleria directory names OPSM Darwin units T05/T06 and links directly to OPSM branch 1577. Centre address 37 Smith Street."
+        },
+        {
+          "url": "https://www.opsm.com.au/stores/nt/darwin/opsm-darwin/1577",
+          "finding": "Linked operator confirms Smith Street Mall and phone 08 8941 1577. This supports named property membership independently of coordinate proximity."
+        }
+      ]
+    },
+    {
+      "store_id": "eyecare-plus-560",
+      "status": "Earlier provisional street-retention interpretation superseded by explicit centre tenant listing; correction prepared",
+      "sources": [
+        {
+          "url": "https://www.eyecareplus.com.au/alicesprings/",
+          "finding": "Operator describes premises at 39/36-38 Hartley Street and Yeperenye parking as a one-minute walk away. It does not explicitly establish shopping-centre tenancy. Keep existing street association; do not turn the parking description into a surveyed boundary or assertion of non-tenancy."
+        },
+        {
+          "url": "https://www.yeperenye.com.au/shopping",
+          "finding": "Official centre directory identifies Eyecare Plus as its outside-facing Shop 39 with phone 08 8952 0044 and links to the matching operator branch. The operator parking directions do not negate this explicit centre tenancy. Outside-facing does not mean outside the property membership."
+        }
+      ]
+    },
+    {
+      "store_id": "opsm-1666",
+      "status": "Explicit official centre tenancy confirmed; correction ready for integration",
+      "sources": [
+        {
+          "url": "https://meadowmews.com.au/stores/opsm/",
+          "finding": "Official centre search result names OPSM and 102-106 Hobart Road; full page cache miss."
+        },
+        {
+          "url": "https://seniors.tas.gov.au/resources/WCAG-Seniors-Card-Directory_2025-26.pdf",
+          "finding": "Search extract names Shop 19 Meadows Mews and matching phone 6344 5555; PDF not yet opened. Do not substitute search publication metadata for document period."
+        },
+        {
+          "url": "https://meadowmews.com.au/stores/opsm/",
+          "finding": "Targeted Firecrawl retrieval after repeated standard-web cache misses confirms OPSM Shop 19 at Meadow Mews Plaza, 102-106 Hobart Road, phone 03 6344 5555. Exact phone matches full operator branch 1666 page.",
+          "retrieved_at": "2026-10-27",
+          "page_updated_metadata": "2026-07-23T13:22:17+10:00",
+          "scrape_id": "01a17d0c-6312-70c3-849a-1321a6d766fa",
+          "credits_used": 1
+        },
+        {
+          "url": "https://www.opsm.com.au/stores/tas/launceston/opsm-kingsmeadow/1666",
+          "finding": "Full operator page read with standard web confirms 106 Hobart Road and 03 6344 5555. Does not itself name centre."
+        }
+      ]
+    },
+    {
+      "store_id": "eyecare-plus-636",
+      "status": "Manuka Terrace membership supported; new canonical place and property address required before rebuild",
+      "sources": [
+        {
+          "url": "https://www.uniqueoptical.com.au/contact-us",
+          "finding": "Operator search result gives Manuka Terrace, 18 Flinders Way and 02 6295 0137."
+        },
+        {
+          "url": "https://www.eyecareplus.com.au/manuka/",
+          "finding": "Operator search result identifies Shops 31 and 32 Manuka Terrace and says practice moved there in 2010. Distinguish it from the nearby M Centre candidate; full page and property identity still to check."
+        },
+        {
+          "url": "https://www.uniqueoptical.com.au/contact-us",
+          "finding": "Full operator page opened; names Manuka Terrace, 18 Flinders Way and phone 02 6295 0137."
+        },
+        {
+          "url": "https://www.manukaterrace.com.au/find-us",
+          "finding": "Official property contact page gives corner Franklin Street and Flinders Way. Shop guide extraction did not expose tenant names; this is not negative tenancy evidence."
+        },
+        {
+          "url": "https://www.provision.com.au/practice/eyecentric/",
+          "finding": "Different practice Eyecentric is Shop 8 M Centre, 17-19 Flinders Way, with different phone 02 6156 5959. Retain M Centre as a separate identity; do not merge based on adjacency."
+        }
+      ]
+    },
+    {
+      "store_id": "independent-other-optical-provision-177064",
+      "status": "Separate adjoining property evidence found; retained street review integration pending",
+      "sources": [
+        {
+          "url": "https://www.eyestudio.com.au/location",
+          "finding": "Operator explicitly describes itself at the front of Southlands Boulevarde Shopping Centre, 39 Burrendah Boulevard; phone 08 9313 8880 on homepage. Do not equate at-the-front wording with an internal shop unit; investigate property listing before accepting tenancy."
+        },
+        {
+          "url": "https://www.realcommercial.com.au/sold/property-39-burrendah-boulevard-willetton-wa-6155-503797078",
+          "finding": "Opened agent sale listing describes 39 Burrendah Boulevard as separate retail property adjoining Southlands Boulevard, leased to Nandos and Eye Studio. Historical property evidence supports interpreting operator at-the-front wording as adjacency; no present ownership claim."
+        }
+      ]
+    },
+    {
+      "store_id": "opsm-2993",
+      "status": "Explicit operator and property premises evidence confirmed; new canonical Rowens Arcade record required",
+      "sources": [
+        {
+          "url": "https://rowens.com.au/shop-directory/",
+          "finding": "Official directory search lists OPSM Shops 7,8,9 ground level, phone 02 4455 1288. Historical-looking site; do not claim all directory tenants current."
+        },
+        {
+          "url": "https://www.opsm.com.au/eye-care/dry-eye-technology",
+          "finding": "Operator service-location search result explicitly gives Shop 7 Rowens Arcade 93 Princes Highway. Full page review required before integration."
+        },
+        {
+          "url": "https://www.opsm.com.au/eye-care/dry-eye-technology",
+          "finding": "Full operator page opened: Ulladulla explicitly Shop 7 Rowens Arcade 93 Princes Highway. Service page phone ends 1278 whereas directory/retained branch ends 1288; preserve original phone pending reconciliation. This is explicit premises evidence, not a phone update."
+        },
+        {
+          "url": "https://rowens.com.au/shop-directory/",
+          "finding": "Full official directory opened. OPSM names shops 7,8,9 ground level and phone 02 4455 1288; source publication date unknown."
+        },
+        {
+          "url": "https://www.opsm.com.au/stores/nsw/ulladulla/opsm-ulladulla/2993",
+          "finding": "Full retained branch page confirms 93 Princess Highway and phone 02 4455 1288; 1278 is its fax. Service page has apparently placed fax under telephone and links branch 7020, which could not be fetched. Preserve stable ID 2993 and original phone; do not create second store or infer closure from unavailable 7020 URL."
+        }
+      ]
+    },
+    {
+      "store_id": "opsm-1376",
+      "status": "Conflicting official premises evidence; current place decision requires reconciliation or explicit unresolved outcome",
+      "sources": [
+        {
+          "url": "https://www.opsm.com.au/stores/sa/adelaide/opsm-adelaide-rundle-mall/1376",
+          "finding": "Full operator branch page retains 71 Rundle Mall and phone 08 8212 5192."
+        },
+        {
+          "url": "https://www.rundlemall.com/store-directory/shop/eyewear/",
+          "finding": "Precinct directory search extraction names OPSM at 50 Rundle Mall with same phone. Individual listing fetch 403. Conflicts with operator 71 address; no relocation date established."
+        },
+        {
+          "url": "https://www.rundlemallplaza.com.au/stores/",
+          "finding": "Full current Plaza directory lists Laubman and Pank but not OPSM. Omission does not establish closure or absence. Guessed OPSM tenant URL unavailable; do not assert it ever existed."
+        }
+      ],
+      "next_action": "Do not assign Adelaide Arcade by distance. Reconcile 50 versus 71, or preserve operator last-known store record with unresolved place restriction."
+    },
+    {
+      "store_id": "optical-by-national-pharmacies-glenelg-5045",
+      "status": "Retained Jetty Road review prepared",
+      "sources": [
+        {
+          "url": "https://www.nationalpharmacies.com.au/stores/glenelg-optical/",
+          "finding": "Full operator page gives Shop 6/108-116 Jetty Road, phone 08 8295 5311. Separate from pharmacy branch at 83 Jetty Road."
+        },
+        {
+          "url": "https://www.sa.gov.au/topics/care-and-support/concessions/health-concessions/glassessa/optometrists",
+          "finding": "Historical government provider list identifies optical branch at 108-116 and OPSM at Bayside Village Shop20/127JettyRoad. Does not independently certify present trading."
+        }
+      ]
+    },
+    {
+      "store_id": "oscar-wylee-54",
+      "status": "Retained Queen Street review prepared",
+      "sources": [
+        {
+          "url": "https://www.oscarwylee.com.au/locations/optometrist-albert-st.html",
+          "finding": "Full operator page gives 136 Queen Street, near Vans; description says across from Queen Street Mall."
+        },
+        {
+          "url": "https://heritage.brisbane.qld.gov.au/heritage-places/403",
+          "finding": "Council heritage record identifies Brisbane Arcade at 160 and166QueenStreet through to117AdelaideStreet. Page revised April2021; establishes distinct property, not current tenant list."
+        },
+        {
+          "url": "https://brisbanearcade.com.au/visit-brisbane-arcade/",
+          "finding": "Official visitor page gives160QueenStreetMall and through-link toAdelaideStreet."
+        }
+      ]
+    }
+  ]
+}

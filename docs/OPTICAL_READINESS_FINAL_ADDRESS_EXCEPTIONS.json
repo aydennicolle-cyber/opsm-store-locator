@@ -1,0 +1,316 @@
+{
+  "checked_at": "2026-10-27",
+  "status": "Address correction and unresolved outcome verified in rebuilt data; NZ profile and actual store export verified. Final UI/package checks tracked separately.",
+  "method": "Existing inventory and standard ChatGPT web access; no Firecrawl requests",
+  "cases": [
+    {
+      "store_id": "independent-other-optical-osm-au-node-4945481560",
+      "current_record": {
+        "retailer": "Independent / Other optical",
+        "store_id": "independent-other-optical-osm-au-node-4945481560",
+        "affiliations": "",
+        "name": "Rose Bay Eyecare Centre",
+        "status": "Mapped",
+        "country": "Australia",
+        "state": "NSW",
+        "suburb": "",
+        "postcode": "",
+        "full_address": "New South Head Road, Australia",
+        "phone": "+61 2 9371 8002",
+        "latitude": "-33.8698944",
+        "longitude": "151.2691806",
+        "official_url": "https://www.eyecarecentre.net.au/",
+        "website_url": "https://www.eyecarecentre.net.au/",
+        "instagram_url": "",
+        "facebook_url": "",
+        "directory_url": "",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Low",
+        "classification_basis": "Official address contains street evidence but needs review",
+        "store_area_sqm": "",
+        "area_measure": "",
+        "area_source": "",
+        "area_date": "",
+        "area_confidence": "Unknown",
+        "source_url": "https://www.openstreetmap.org/node/4945481560",
+        "fetched_at": "2026-09-01T07:48:20.085579Z",
+        "business_type": "",
+        "identity_reviewed": "",
+        "coordinates_reviewed": "",
+        "status_evidence_url": "",
+        "status_verified_at": "",
+        "status_reason": "",
+        "coordinate_confidence": "",
+        "coordinate_evidence_url": "",
+        "coordinates_verified_at": "",
+        "coordinate_reason": "",
+        "public_facts_verified_at": "",
+        "public_facts_evidence_url": "",
+        "public_facts_reason": ""
+      },
+      "findings": [
+        {
+          "url": "https://www.eyecarecentre.net.au/",
+          "outcome": "Standard web open could not retrieve the page; browser fallback pending."
+        },
+        {
+          "url": "https://www.accc.gov.au/system/files/public-registers/documents/D12%2B179847.pdf?download=y",
+          "outcome": "Search extract of historical practice filing says 698 New South Head Road; document not yet opened."
+        },
+        {
+          "url": "https://rose-bay-nsw.aussiestoresonline.com/rose-bay-eyecare-centre",
+          "outcome": "Third-party search extract says 696 New South Head Road and matching phone; numbering conflict requires primary corroboration."
+        },
+        {
+          "url": "https://www.eyecarecentre.net.au/",
+          "outcome": "Browser fallback returned ERR_NAME_NOT_RESOLVED on 27 October. This does not establish closure."
+        },
+        {
+          "url": "https://www.accc.gov.au/system/files/public-registers/documents/D12%2B179847.pdf?download=y",
+          "outcome": "Standard web indexed extract contains 696 New South Head in applicant section and 698 in annexure. Full document retrieval failed. Historical numbering discrepancy remains unresolved; do not promote a current complete address."
+        }
+      ],
+      "recommended_outcome": "Retain original incomplete street address, Mapped status, phone, raw point and both analytical exclusions. Keep street association but expose address investigation limits in its evidence and repair register."
+    },
+    {
+      "store_id": "independent-other-optical-osm-ne-node-14086659006",
+      "current_record": {
+        "retailer": "Independent / Other optical",
+        "store_id": "independent-other-optical-osm-ne-node-14086659006",
+        "affiliations": "",
+        "name": "Mortimer Hirst - eyecare & eyewear",
+        "status": "Mapped",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "suburb": "",
+        "postcode": "",
+        "full_address": "T\u0101maki Drive, New Zealand",
+        "phone": "",
+        "latitude": "-36.8505378",
+        "longitude": "174.857297",
+        "official_url": "",
+        "website_url": "",
+        "instagram_url": "",
+        "facebook_url": "",
+        "directory_url": "",
+        "services": "Optical / optician listing",
+        "audiology": "false",
+        "venue_name": "",
+        "venue_id": "",
+        "location_type": "Main Street / Street-front",
+        "classification_confidence": "Low",
+        "classification_basis": "Official address contains street evidence but needs review",
+        "store_area_sqm": "",
+        "area_measure": "",
+        "area_source": "",
+        "area_date": "",
+        "area_confidence": "Unknown",
+        "source_url": "https://www.openstreetmap.org/node/14086659006",
+        "fetched_at": "2026-09-01T07:48:20.085579Z",
+        "business_type": "",
+        "identity_reviewed": "",
+        "coordinates_reviewed": "",
+        "status_evidence_url": "",
+        "status_verified_at": "",
+        "status_reason": "",
+        "coordinate_confidence": "",
+        "coordinate_evidence_url": "",
+        "coordinates_verified_at": "",
+        "coordinate_reason": "",
+        "public_facts_verified_at": "",
+        "public_facts_evidence_url": "",
+        "public_facts_reason": ""
+      },
+      "findings": [
+        {
+          "url": "https://www.mortimerhirst.co.nz/st-heliers",
+          "outcome": "Opened operator page confirms 3 St Heliers Bay Road, St Heliers, Auckland and +64 9 575 8650. Existing OSM identity has Tamaki Drive only, no phone. Need check exact identity and other inventory records before repair/merge."
+        },
+        {
+          "url": "https://www.stheliers.com/blogs/outlets/mortimer-hirst",
+          "outcome": "Local business directory search extract corroborates operator address and phone; not yet opened."
+        },
+        {
+          "url": "https://www.stheliers.com/blogs/outlets/mortimer-hirst",
+          "outcome": "Opened village association directory corroborates same practice and 3 St Heliers Bay Road with matching operator phone."
+        },
+        {
+          "url": "https://www.oneroof.co.nz/news/waterfront-trophy-surfaces-after-40-years-48304",
+          "outcome": "Search extract dated 4 October 2025 names Mortimer Hirst in 1-11 St Heliers Bay Road property at Tamaki Drive corner; this explains street-label ambiguity without evidence of relocation."
+        }
+      ],
+      "recommended_outcome": "Repair existing St Heliers identity to operator-published 3 St Heliers Bay Road and phone. Match existing St Heliers Bay Road corridor, preserve raw Tamaki Drive address and approximate point. Other retained Mortimer Hirst is Takapuna, not this branch. Retain Mapped status; source check does not silently promote trading status."
+    }
+  ],
+  "staged_verification": {
+    "stage": "/var/folders/68/ghl3tmhn1sj44582kxynzctm0000gn/T/optical-classifier-check-cyqs7xg3",
+    "exact_changed_store_ids": [
+      "independent-other-optical-osm-ne-node-14086659006"
+    ],
+    "diff": {
+      "independent-other-optical-osm-ne-node-14086659006": {
+        "suburb": [
+          "",
+          "St Heliers"
+        ],
+        "full_address": [
+          "T\u0101maki Drive, New Zealand",
+          "3 St Heliers Bay Road, St Heliers, Auckland, New Zealand"
+        ],
+        "phone": [
+          "",
+          "+64 9 575 8650"
+        ],
+        "official_url": [
+          "",
+          "https://www.mortimerhirst.co.nz/st-heliers"
+        ],
+        "website_url": [
+          "",
+          "https://www.mortimerhirst.co.nz/st-heliers"
+        ],
+        "classification_confidence": [
+          "Low",
+          "Medium"
+        ],
+        "classification_basis": [
+          "Official address contains street evidence but needs review",
+          "Official address is a numbered or corner street address without named centre evidence"
+        ],
+        "public_facts_verified_at": [
+          "",
+          "2026-10-27"
+        ],
+        "public_facts_evidence_url": [
+          "",
+          "https://www.mortimerhirst.co.nz/st-heliers"
+        ],
+        "public_facts_reason": [
+          "",
+          "Operator branch page and St Heliers village association directory agree on 3 St Heliers Bay Road and phone. The practice is at the Tamaki Drive corner; the raw OSM street label was incomplete. Correct this existing St Heliers identity, distinct from the retained Takapuna branch. Preserve original source date, Mapped status and approximate OSM business point; no relocation, surveyed entrance or new trading-status confirmation is asserted."
+        ]
+      }
+    },
+    "other_store_rows_unchanged": true,
+    "original_id_status_coordinates_source_and_capture_preserved": true
+  },
+  "retired_previous_corridor": {
+    "place": {
+      "place_id": "corridor-nz-auckland-auckland-tamaki-drive",
+      "centre_id": "corridor-nz-auckland-auckland-tamaki-drive",
+      "name": "T\u0101maki Drive",
+      "canonical_name": "T\u0101maki Drive",
+      "aliases": [],
+      "place_type": "High Street Corridor",
+      "location_setting": "High Street",
+      "country": "New Zealand",
+      "state": "Auckland",
+      "locality": "",
+      "suburb": "",
+      "postcode": "",
+      "address": "T\u0101maki Drive",
+      "latitude": -36.8503636,
+      "longitude": 174.8571951,
+      "coordinate_method": "Reviewed street geometry",
+      "coordinate_reason": "Approximate display reference on evidenced T\u0101maki Drive road geometry. Exact recorded road name; bounded road-only query. Not surveyed frontage, study boundary or customer catchment. Does not establish shop membership.",
+      "owner": "",
+      "manager": "",
+      "centre_type": "",
+      "gla_sqm": "",
+      "annual_visits": "",
+      "trade_area_population": "",
+      "anchors": [],
+      "tenancy_count": "",
+      "redevelopment_activity": "",
+      "official_url": "",
+      "source_url": "https://www.openstreetmap.org/node/14086659006",
+      "source_date": "2026-09-01",
+      "status": "Active",
+      "confidence": "Medium",
+      "source_basis": "Corridor derived from mapped street-front optical stores on the same street and locality",
+      "retailers": [
+        "Independent / Other optical"
+      ],
+      "optical_store_count": 1,
+      "catchment_radius_m": 800,
+      "has_bailey": false,
+      "mapping_confidence": "Medium",
+      "certification_status": "Best available",
+      "evidence_tier": "Derived",
+      "coordinate_source_url": "https://www.openstreetmap.org/way/606865269",
+      "coordinate_verified_at": "2026-10-18",
+      "coordinate_confidence": "Medium",
+      "coordinate_reference_store_id": ""
+    },
+    "coordinate_review": {
+      "place_id": "corridor-nz-auckland-auckland-tamaki-drive",
+      "latitude": "-36.8503636",
+      "longitude": "174.8571951",
+      "evidence_url": "https://www.openstreetmap.org/way/606865269",
+      "verified_at": "2026-10-18",
+      "confidence": "Medium",
+      "method": "Reviewed street geometry",
+      "reference_store_id": "",
+      "reason": "Approximate display reference on evidenced T\u0101maki Drive road geometry. Exact recorded road name; bounded road-only query. Not surveyed frontage, study boundary or customer catchment. Does not establish shop membership."
+    },
+    "memberships": [
+      {
+        "store_id": "independent-other-optical-osm-ne-node-14086659006",
+        "retailer": "Independent / Other optical",
+        "country": "New Zealand",
+        "state": "Auckland",
+        "store_name": "Mortimer Hirst - eyecare & eyewear",
+        "place_id": "corridor-nz-auckland-auckland-tamaki-drive",
+        "place_name": "T\u0101maki Drive",
+        "location_setting": "High Street",
+        "mapping_confidence": "Medium",
+        "evidence_basis": "Numbered street address without a corroborated centre match",
+        "evidence_url": "https://www.openstreetmap.org/node/14086659006",
+        "verified_at": "2026-09-01",
+        "previous_venue_id": "",
+        "review_status": "Accepted",
+        "usable_for_network": "false",
+        "trading_status": "Mapped"
+      }
+    ],
+    "reason": "Only accepted optical outlet corrected to operator-published St Heliers Bay Road address. This obsolete store-derived Tamaki Drive record is not remapped into a different street. Original street geometry and membership retained in readiness audit history."
+  },
+  "mortimer_browser_export": {
+    "checked_at": "2026-10-27",
+    "path": "/Users/ayden/Downloads/optical-stores-filtered-2026-10-27 (2).csv",
+    "sha256": "db43d7cc9c358b714609d5591e00dcdddd760cf7ddc9c100e052b599aeda51bc",
+    "row_count": 2,
+    "checks": [
+      "Distinct Takapuna and St Heliers records remain",
+      "St Heliers selected pin and full supported address visible",
+      "Accepted existing St Heliers Bay Road corridor shown",
+      "Mapped status and approximate original point preserved",
+      "Dated public facts and mapping evidence visible",
+      "Stats NZ absence explicit, no Australian proxy",
+      "Nearby network results independent of search filters",
+      "Actual CSV retains original source date and coordinates, corrected address and canonical street ID"
+    ]
+  },
+  "dependent_validation": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": {
+    "address_issue_count_before": 21,
+    "address_issue_count_after": 20,
+    "mortimer_correct_corridor": true,
+    "rose_bay_excluded_from_both_analyses": true,
+    "obsolete_street_reference_retired_with_history": true
+  }
+}

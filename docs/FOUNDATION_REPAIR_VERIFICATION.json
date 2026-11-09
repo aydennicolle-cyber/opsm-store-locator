@@ -1,0 +1,212 @@
+{
+  "reviewed_at": "2026-10-25",
+  "goal_scope": "Nine targeted identity cases, shared profile/export evidence, truthful coverage labels; no publication",
+  "checks": [
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/build_retail_places.py"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-address-final-check-0.log"
+    },
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/build_property_intelligence.py"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-address-final-check-1.log"
+    },
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/build_data_health.py"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-reviewed-check-2.log"
+    },
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-reviewed-check-3.log"
+    },
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_environment_metrics.js"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-reviewed-check-4.log"
+    },
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_environments.js"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-reviewed-check-5.log"
+    },
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_excluded_context.js"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-reviewed-check-6.log"
+    },
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_intelligence.js"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-reviewed-check-7.log"
+    },
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_location_news.js"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-reviewed-check-8.log"
+    },
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_map_markers.js"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-reviewed-check-9.log"
+    },
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_overview.js"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-reviewed-check-10.log"
+    },
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "tests/test_store_services.js"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-reviewed-check-11.log"
+    },
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/scan_public_privacy.py"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-reviewed-check-12.log"
+    },
+    {
+      "command": [
+        "/Users/ayden/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/package_public_site.py",
+        "--output",
+        "/tmp/optical-foundation-reviewed"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-reviewed-check-13.log"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/foundation-reviewed-check-14.log"
+    }
+  ],
+  "preservation": {
+    "raw_store_csv_unchanged": true,
+    "raw_store_geojson_unchanged": true,
+    "store_membership_id_set_unchanged": true,
+    "membership_rows": 3088,
+    "retired_coordinate_rows_preserve_original_values": true
+  },
+  "place_counts": {
+    "before": 1549,
+    "after": 1541,
+    "new_consolidations": 8
+  },
+  "coverage": {
+    "places": 1541,
+    "places_with_listing_evidence": 178,
+    "places_without_listing_evidence": 1363,
+    "places_with_non_optical_listing_evidence": 178,
+    "complete_source_captures": 105,
+    "shopping_centres": 800,
+    "complete_centre_source_captures": 103,
+    "independently_trading_verified_places": 0,
+    "bailey_corridors": 31,
+    "bailey_corridors_with_non_optical_listing_evidence": 31
+  },
+  "conflicts": [
+    {
+      "place_id": "place-au-nsw-royal-randwick-shopping-centre",
+      "fields": [
+        "gla_sqm"
+      ]
+    },
+    {
+      "place_id": "place-au-nsw-westfield-penrith",
+      "fields": [
+        "gla_sqm",
+        "tenancy_count"
+      ]
+    },
+    {
+      "place_id": "place-au-qld-indooroopilly",
+      "fields": [
+        "gla_sqm"
+      ]
+    },
+    {
+      "place_id": "place-au-wa-clarkson-ocean-keys-shopping-centre",
+      "fields": [
+        "gla_sqm"
+      ]
+    }
+  ],
+  "browser_evidence": [
+    "Castle Towers metrics and source dates inspected",
+    "Penrith conflicting reports inspected",
+    "Ed.Square Explore and map addresses inspected",
+    "Actual Ed.Square Summary CSV downloaded and address/source/metric fields verified",
+    "Coverage panel denominators and legacy subset wording inspected",
+    "Final rebuilt Keysborough profile distinguishes unknown publication date from 2026-10-25 address check",
+    "Final Explore search for retained Glenhuntly Road spelling returns the single corrected corridor and four outlets"
+  ],
+  "limitations": [
+    "Rutherford current branding unverified; no assumed Home + Life merger",
+    "Rooke mall exact boundary unresolved by user decision",
+    "Crown wider street display point approximate; centre membership uses official directory and matching phone",
+    "Conflicting property figures remain excluded from single-value comparisons",
+    "Source captures do not independently verify trading",
+    "No national census refresh or new-industry database work performed"
+  ],
+  "identity_cases_reviewed": 9,
+  "completion_requirements": {
+    "targeted_identity_register": "All nine cases have evidence/manual decisions and explicit limitations",
+    "history": "Eight new remaps resolve; removed coordinate rows retain original contents; raw stores unchanged",
+    "shared_evidence": "Per-measure observations, units, source/check dates and conflict holds verified by full generated-data tests and browser examples",
+    "addresses_exports": "Supported address receipts used in both profiles and Summary CSV; actual Ed.Square download verified",
+    "coverage": "Generated denominators agree with current records; source capture and trading labels inspected in browser",
+    "checks": "All required commands and all JavaScript suites passed; local manifest package passed privacy validation",
+    "local_only": "No push, merge, publish or deploy performed"
+  }
+}

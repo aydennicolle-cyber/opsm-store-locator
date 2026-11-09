@@ -11,6 +11,13 @@ import unicodedata
 from collections import defaultdict
 from pathlib import Path
 
+try:
+    from .place_metric_evidence import merge_place_metrics
+    from .environment_coverage import label_coverage
+except ImportError:
+    from place_metric_evidence import merge_place_metrics
+    from environment_coverage import label_coverage
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -31,6 +38,44 @@ CATEGORIES = {
     'Design and lifestyle': ['Home and lifestyle'],
     'Department-store anchor': ['Department stores'],
 }
+
+
+def place_address(place, profile):
+    """Expose supported display addresses without promoting a tenant unit."""
+    address = profile.get('display_address') or place.get('address', '')
+    source = profile.get('extent_evidence', {}) if profile.get('display_address') else place.get('address_evidence', {})
+    held = bool(re.search(r'\b(shop|tenancy|unit|kiosk|level)\b', address, re.I))
+    locality = place.get('locality') or place.get('suburb')
+    if (held or not address) and place.get('location_setting') == 'High Street' and place.get('name') and locality:
+        # A named corridor is not represented by one tenant's building address.
+        # Reuse accepted identity fields without manufacturing address verification.
+        reference = ', '.join(dict.fromkeys(str(v).strip() for v in
+                              (place['name'], locality, place.get('state')) if v))
+        basis = ('Named-street reference from the existing canonical street and locality; '
+                 'not a building address, surveyed boundary or verified entrance. '
+                 'Original business addresses remain on store records.')
+        return {
+            'address': reference,
+            'address_note': basis,
+            'address_evidence': {
+                'source_url': place.get('source_url') or '',
+                'source_date': None,
+                'record_date': place.get('source_date') or '',
+                'checked_at': '',
+                'basis': basis,
+            },
+        }
+    return {
+        'address': '' if held else address,
+        'address_note': 'Place address not independently sourced; tenant-unit address withheld.' if held else '',
+        'address_evidence': ({
+            'source_url': source.get('source_url') or place.get('source_url') or '',
+            'source_date': source.get('source_date'),
+            'record_date': source.get('record_date', '') if source else place.get('source_date') or '',
+            'checked_at': source.get('checked_at') or '',
+            'basis': source.get('basis') or ('Supported destination-profile address' if source else 'Existing place record; address-specific verification not recorded'),
+        } if address and not held else {}),
+    }
 
 
 def build(data=ROOT / 'data'):
@@ -106,25 +151,34 @@ def build(data=ROOT / 'data'):
         corridor = p['location_setting'] == 'High Street'
         scope = (f"Named-street study: {p['name']}, {p.get('locality') or p.get('suburb') or p.get('state')}. Only explicit street/frontage addresses or accepted optical memberships; side streets and wider precinct listings excluded. No radius or walking catchment implied."
                  if corridor else 'Accepted canonical centre membership / official centre directory. Nearby stores are excluded; map point is not a property boundary.')
-        area = p.get('gla_sqm') or None
+        measures = merge_place_metrics(p, prop)
+        area = measures.get('gla_sqm')
         positioning = sorted({c for r in rows for c in ('Value', 'Mainstream', 'Contemporary fashion', 'Premium fashion', 'Luxury') if 'category:' + key(c) in r['features']})
         purposes = sorted({c for r in rows for c in ('Supermarkets', 'Department stores', 'Fashion and accessories', 'Food and dining', 'Services', 'Entertainment', 'Health and wellbeing') if 'category:' + key(c) in r['features']})
-        # Do not display a tenant unit as a centre address.
-        address = profile.get('display_address') or p.get('address', '')
-        address_held = bool(re.search(r'\b(shop|tenancy|unit|kiosk|level)\b', address, re.I)) and not profile.get('display_address')
         output.append({
-            'place_id': pid, 'name': p['name'], 'country': p['country'], 'state': p.get('state', ''),
+            'place_id': pid, 'name': p['name'], 'aliases': p.get('aliases', []), 'country': p['country'], 'state': p.get('state', ''),
             'locality': p.get('locality') or p.get('suburb') or '', 'format': p['location_setting'],
+            'place_type': p['place_type'],
             'latitude': p['latitude'], 'longitude': p['longitude'], 'scope': scope,
-            'address': '' if address_held else address, 'address_note': 'Centre address not independently sourced; tenant-unit address withheld.' if address_held else '',
+            **({'identity_sources': p['sources'], 'identity_reviewed_at': p['reviewed_at'],
+                'coordinate_source_url': p.get('coordinate_source_url')} if p.get('sources') else {}),
+            **place_address(p, profile),
+            'coordinate_method': p.get('coordinate_method', ''),
+            'coordinate_confidence': p.get('coordinate_confidence', ''),
+            'coordinate_reason': p.get('coordinate_reason', ''),
+            'coordinate_source_url': p.get('coordinate_source_url', ''),
+            'coordinate_verified_at': p.get('coordinate_verified_at', ''),
+            'coordinate_reference_store_id': p.get('coordinate_reference_store_id', ''),
             'features': dict(feature_map), 'absent_features': {}, 'observations': rows,
             'coverage': {'status': 'Partial' if rows else 'Not yet sourced', 'observations': len(rows), 'distinct_names': len({key(r['name']) for r in rows}),
                          'held_scope_records': held[pid], 'complete': False, 'observed_dates': sorted({r['observed_at'] for r in rows})},
             'optical': outlets, 'bn_presence': 'present' if any(r['retailer'] == 'Bailey Nelson' for r in outlets) else 'not_recorded',
             'other_optical_presence': 'present' if any(r['retailer'] != 'Bailey Nelson' for r in outlets) else 'not_recorded',
-            'scale': {'class': prop.get('centre_class', 'Unknown'), 'evidence': prop.get('centre_class_evidence', {}), 'gla_sqm': area, 'tenancy_count': p.get('tenancy_count') or None},
-            'metrics': {'annual_visits': p.get('annual_visits') or None, 'trade_area_population': p.get('trade_area_population') or None,
+            'scale': {'class': prop.get('centre_class', 'Unknown'), 'evidence': prop.get('centre_class_evidence', {}), 'gla_sqm': area, 'tenancy_count': measures.get('tenancy_count')},
+            'metrics': {'annual_visits': measures.get('annual_visits'), 'trade_area_population': measures.get('trade_area_population'),
                         'source_url': p.get('source_url'), 'record_date': p.get('source_date'), 'reference_period': None},
+            'metric_evidence': measures['metric_evidence'], 'metric_observations': measures['metric_observations'],
+            'metric_conflicts': measures['metric_conflicts'],
             'shopping_purpose': purposes, 'positioning': positioning, 'local_importance': 'Not yet established relative to nearby alternatives',
             'confidence': 'Partial public evidence; no commercial-success confidence inferred',
             'market': prop.get('market', {}), 'access': profile.get('access', []), 'property_facts': profile.get('property_facts', []),
@@ -137,6 +191,7 @@ def build(data=ROOT / 'data'):
                'features': sorted(catalogue.values(), key=lambda r: (r['kind'], r['label'].casefold())), 'places': output}
     from public_directory_evidence import apply as apply_public_directories
     payload = apply_public_directories(payload, data)
+    payload = label_coverage(payload)
     (data / 'retail_environments.json').write_text(json.dumps(payload, ensure_ascii=False, separators=(',', ':')) + '\n')
     return payload
 

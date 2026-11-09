@@ -8,6 +8,7 @@ import re
 import csv
 from pathlib import Path
 from build_retail_environments import key
+from public_directory_schema import identity_review
 
 ALIASES = {
     'bright eyes': 'BrightEyes', 'brighteyes': 'BrightEyes',
@@ -69,7 +70,7 @@ def reconcile(payload, captured_place_ids, evidence_reviews=None):
                 if record['source_id'] in duplicate_reviews:
                     record.setdefault('original_scope_status', record.get('scope_status'))
                     record['scope_status'] = 'suspected_duplicate'
-                    record['identity_review'] = duplicate_reviews[record['source_id']]
+                    record['identity_review'] = identity_review(duplicate_reviews[record['source_id']])
             for fid in list(place['features']):
                 place['features'][fid] = [ref for ref in place['features'][fid] if ref not in duplicate_reviews and ref.removeprefix('directory:') not in duplicate_reviews]
                 if not place['features'][fid]: del place['features'][fid]
@@ -118,7 +119,7 @@ def reconcile(payload, captured_place_ids, evidence_reviews=None):
             paired.append({'source_id': row['source_id'], 'name': row['name'],
                            'operator': label, 'source_url': row['source_url'],
                            'observed_at': row['observed_at'], 'store_id': sid,
-                           'identity_review': decision if decision and sid else None,
+                           'identity_review': identity_review(decision) if decision and sid else None,
                            'resolution': 'Reviewed same-place branch identity' if decision and sid else 'Same-place operator corroboration' if sid else
                            'Multiple outlet identities need review' if matches else
                            'Directory presence; census identity or membership unresolved'})
@@ -131,7 +132,14 @@ def reconcile(payload, captured_place_ids, evidence_reviews=None):
         paired_ids = {r['store_id'] for r in paired if r['store_id']}
         census_only = [r['store_id'] for r in census if r['store_id'] not in paired_ids] if has_directory else []
         issues = []
-        partial = not place.get('coverage', {}).get('directory_complete', False)
+        coverage = place.get('coverage', {})
+        partial = (not coverage.get('directory_complete', False)
+                   or coverage.get('format_scope') == 'named street'
+                   or place.get('format') == 'High Street')
+        # A source-scope omission is explained by incomplete coverage. It is
+        # distinct from an operator present in the source with ambiguous branches.
+        source_omissions = {r['store_id'] for r in census
+                            if not dc[key(operator_name(r['operator']))]}
         for row in paired:
             if row['store_id']: continue
             op = key(row['operator'])
@@ -150,6 +158,11 @@ def reconcile(payload, captured_place_ids, evidence_reviews=None):
         for issue in issues:
             decision = retained.get(issue['record_id']) if issue['side'] == 'linked' else None
             issue['resolved'] = bool(decision)
+            if (not decision and partial and issue['side'] == 'linked'
+                    and issue['record_id'] in source_omissions
+                    and issue['record_id'] not in held):
+                issue['resolved'] = True
+                issue['explained_by_source_coverage'] = True
             if not decision and issue['side'] == 'linked':
                 decision = held.get(issue['record_id'])
             if not decision and issue['side'] == 'listed':

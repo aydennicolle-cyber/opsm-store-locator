@@ -1,0 +1,250 @@
+{
+  "scope": "Completed bounded AU/NZ eyewear omission reconciliation; source limitations retained, not a claim of exhaustive real-world coverage",
+  "next": [],
+  "relationships_to_verify": [
+    {
+      "brands": [
+        "LINDBERG",
+        "The Eye Piece"
+      ],
+      "question": "Verify owned store, trading banner, exclusive retailer or stockist relationship; do not duplicate a stockist as a brand-owned outlet.",
+      "status": "verified and reconciled into The Eye Piece George Street practice; no duplicate LINDBERG outlet",
+      "reviewed_at": "2026-10-21",
+      "source_url": "https://www.theeyepiece.com.au/pages/about-us",
+      "finding": "LINDBERG By The Eye Piece is a dedicated store-in-store at The Eye Piece 200 George Street Sydney. Do not add it as a separate brand-owned outlet or duplicate the host practice."
+    }
+  ],
+  "method": "Reconcile official owned-store rosters, concessions, status, service evidence and existing canonical IDs separately from wholesale stockists.",
+  "last_reviewed": "2026-10-21",
+  "progress": [
+    {
+      "brand": "Oakley",
+      "status": "AU/NZ Store and Outlet locator traversal reconciled; Jindalee supplemented from centre directory",
+      "evidence_file": "data/discovery/eyewear/oakley-locator-evidence.json",
+      "source_url": "https://www.oakley.com/en-au/store-finder",
+      "limitations": [
+        "Operator locator omits separately evidenced DFO Jindalee; source coverage remains partial.",
+        "Green Hills source label and coordinate conflict corrected using Sydney Airport T2 directory; raw source values retained."
+      ],
+      "scope": "All returned AU and NZ operator Store/Outlet results; wholesale stockists excluded"
+    },
+    {
+      "brand": "Ray-Ban",
+      "status": "AU/NZ directory check completed",
+      "source_url": "https://stores.ray-ban.com/australia",
+      "raw_id": "C280",
+      "canonical_store_id": "ray-ban-C280",
+      "scope": "Global official directory lists one Australian store and no New Zealand country entry; this is directory coverage, not proven real-world absence",
+      "service_category": "optometry",
+      "service_evidence_url": "https://www.chadstone.com.au/stores/ray-ban",
+      "limitations": [
+        "Operator floor says Level 1; centre directory says Lower Ground. Exact frontage unverified."
+      ]
+    },
+    {
+      "brand": "Gentle Monster",
+      "status": "Official AU/NZ roster check completed; three published Australian outlets reconciled",
+      "evidence_file": "data/discovery/eyewear/gentle-monster-locator-evidence.json",
+      "source_url": "https://www.gentlemonster.com/au/en/stores",
+      "locations": [
+        "Sydney David Jones",
+        "Sydney International Airport",
+        "Melbourne Chadstone"
+      ],
+      "limitations": [
+        "No New Zealand outlet identified in the official store roster checked; absence is not proven."
+      ],
+      "canonical_store_ids": [
+        "gentle-monster-779149709720963067",
+        "gentle-monster-779149702155858418",
+        "gentle-monster-779149678137852858"
+      ]
+    },
+    {
+      "brand": "Valley Eyewear",
+      "status": "Published flagship reconciled; owned-store versus stockist check completed",
+      "source_url": "https://www.valleyeyewear.com.au/pages/flagship-store-optometry",
+      "address": "Shop 3/11 James Street, Burleigh Heads QLD 4220",
+      "service_category": "optometry",
+      "evidence": "Official flagship page publishes current hours, phone and in-house optometrist with eye tests.",
+      "coordinate_evidence": {
+        "latitude": -28.0891453,
+        "longitude": 153.4512678,
+        "basis": "Official flagship Get Directions link resolves to Shop 3/11 James Street Google Maps place point.",
+        "source_url": "https://maps.app.goo.gl/Ncypsxeu2N8cbxHX8",
+        "confidence": "Medium \u2014 operator-linked premises point; exact frontage unverified"
+      },
+      "canonical_store_ids": [
+        "valley-eyewear-burleigh-heads"
+      ],
+      "limitations": [
+        "No additional AU/NZ branded outlet verified in this check. Wholesale stockists do not establish brand-owned stores; wider real-world coverage remains unproven."
+      ]
+    },
+    {
+      "brand": "MOSCOT",
+      "status": "Published flagship reconciled; owned-store versus stockist check completed",
+      "source_url": "https://moscot.com/pages/moscot-melbourne-shop",
+      "address": "566 Chapel Street, South Yarra VIC 3141",
+      "evidence": "Official shop page publishes address, phone and hours.",
+      "coordinate_evidence": {
+        "latitude": -37.8405488,
+        "longitude": 144.9956246,
+        "basis": "Official Melbourne shop page Get Directions link contains a Google Maps place point (not viewport centre).",
+        "source_url": "https://moscot.com/pages/moscot-melbourne-shop",
+        "confidence": "Medium \u2014 operator-linked premises point; exact frontage unverified"
+      },
+      "canonical_store_ids": [
+        "moscot-melbourne"
+      ],
+      "limitations": [
+        "No additional AU/NZ branded outlet verified in this check. Wholesale stockists do not establish brand-owned stores; wider real-world coverage remains unproven."
+      ]
+    },
+    {
+      "brand": "AM Eyewear",
+      "status": "Published flagship reconciled; owned-store versus stockist check completed",
+      "source_url": "https://ameyewear.com/pages/landing-page",
+      "address": "Shop 3/191 William Street, Darlinghurst NSW 2010",
+      "evidence": "Official page provides hours and structured premises coordinates; explicitly no in-store eye tests.",
+      "canonical_store_ids": [
+        "am-eyewear-shop-darlinghurst"
+      ],
+      "limitations": [
+        "No additional AU/NZ branded outlet verified in this check. Wholesale stockists do not establish brand-owned stores; wider real-world coverage remains unproven."
+      ]
+    },
+    {
+      "brand": "The Eye Piece",
+      "status": "All four published practices reconciled",
+      "source_url": "https://www.theeyepiece.com.au/pages/our-boutiques",
+      "scope": "Balmain, Hunter Street, Wahroonga and George Street. LINDBERG store-in-store shares George Street practice identity.",
+      "limitations": [
+        "Wahroonga boutique page says 2067; linked booking practice says 2076. Booking postcode retained with source discrepancy recorded."
+      ]
+    }
+  ],
+  "preview_note": "Latest public checkout verified on http://127.0.0.1:8002/. Port 8001 is a separate wrapper; its cached certification can differ.",
+  "airport_review": {
+    "reviewed_at": "2026-10-21",
+    "status": "Explicit terminal memberships modelled; bounded airport and brand directory check completed",
+    "records": [
+      {
+        "store_id": "sunglass-hut-B754",
+        "name": "Sunglass Hut Sydney Domestic Airport",
+        "address": "2T-300, Level 2, Domestic Terminal, Sydney T2 Airport, Shop 2t-300, T2 Domestic Terminal, Sydney Domestic Airport, Mascot, NSW, 2020",
+        "source_url": "https://stores.sunglasshut.com/au/nsw/mascot/2t-300-level-2-domestic-terminal-sydney-t2-airport"
+      },
+      {
+        "store_id": "sunglass-hut-B773",
+        "name": "Sunglass Hut Sydney International Airport",
+        "address": "Shop 2-1937, Level 2, T1 Sydney Int'l Departures Airport, Landside, 1 Departure Drive, Sydney Int'l Airport Landside, Mascot, NSW, 2020",
+        "source_url": "https://stores.sunglasshut.com/au/nsw/mascot/shop-2-1937-level-2-t1-sydney-int-l-departures-airport"
+      },
+      {
+        "store_id": "sunglass-hut-B757",
+        "name": "Sunglass Hut Sydney Qantas Domestic Terminal",
+        "address": "Shop 60, Level 2, T3 Qantas Domestic Terminal, Sydney Airport, Shiers Ave, Sydney Qantas Domestic Terminal T3, Mascot, NSW, 2020",
+        "source_url": "https://stores.sunglasshut.com/au/nsw/mascot/shop-60-level-2-t3-qantas-domestic-terminal-sydney-airport"
+      },
+      {
+        "store_id": "sunglass-hut-B897",
+        "name": "Sunglass Hut Gold Coast Airport Kiosk",
+        "address": "Shop 39, Gold Coast Airport, 1 Drive Eastern Ave, Gold Coast Airside Kiosk, Bilinga, QLD, 4225",
+        "source_url": "https://stores.sunglasshut.com/au/qld/bilinga/shop-39-gold-coast-airport"
+      },
+      {
+        "store_id": "sunglass-hut-B746",
+        "name": "Sunglass Hut Brisbane International Airport",
+        "address": "Site 3P.09, Level 3, Brisbane Int'l Terminal Airport Dr, Brisbane International Airport Airside, Brisbane Airport, QLD, 4007",
+        "source_url": "https://stores.sunglasshut.com/au/qld/brisbane-airport/site-3p-09-level-3"
+      },
+      {
+        "store_id": "sunglass-hut-B759",
+        "name": "Sunglass Hut Brisbane Domestic Airport",
+        "address": "Tenancy 2B-14, Level 2, Brisbane Domestic Terminal, Airport Drive, Brisbane Domestic Airport, Brisbane Airport, QLD, 4007",
+        "source_url": "https://stores.sunglasshut.com/au/qld/brisbane-airport/tenancy-2b-14-level-2-brisbane-domestic-terminal"
+      },
+      {
+        "store_id": "sunglass-hut-B899",
+        "name": "Sunglass Hut Melbourne Domestic Airport T4",
+        "address": "S19, Level 1, T4 Terminal, Melbourne Airport, Centre Rd, Melbourne Domestic Airport T4, Tullamarine, VIC, 3045",
+        "source_url": "https://stores.sunglasshut.com/au/vic/tullamarine/s19-level-1-t4-terminal-melbourne-airport-centre-rd"
+      },
+      {
+        "store_id": "sunglass-hut-B702",
+        "name": "Sunglass Hut Melbourne International Airport T2",
+        "address": "Shop T2-W09, Level 1, Terminal 2, Melbourne Airport, Centre Rd, Melbourne International Airport T2, Tullamarine, VIC, 3043",
+        "source_url": "https://stores.sunglasshut.com/au/vic/tullamarine/shop-t2-w09-level-1-terminal-2-melbourne-airport"
+      },
+      {
+        "store_id": "sunglass-hut-B898",
+        "name": "Sunglass Hut Perth Qantas Domestic Terminal",
+        "address": "Miller Road, Perth Qantas Domestic T4, Tenancy 01-25, Level 1, Perth Domestic Airport T4, Perth, WA, 6105",
+        "source_url": "https://stores.sunglasshut.com/au/wa/perth/miller-road-perth-qantas-domestic-t4"
+      },
+      {
+        "store_id": "sunglass-hut-B649",
+        "name": "Sunglass Hut Auckland Domestic Airport",
+        "address": "George Bolt Drive, Auckland Domestic Airport, Shop G110, Ground Floor, Auckland Domestic Airport, Auckland, 2022",
+        "source_url": "https://stores.sunglasshut.com/nz/nz-south/auckland/george-bolt-drive-auckland-domestic-airport"
+      },
+      {
+        "store_id": "sunglass-hut-B658",
+        "name": "Sunglass Hut Auckland International Airport Kiosk",
+        "address": "Ray Emery Drive, Auckland International Airport, Shop F565, Auckland International Airport, Auckland, 2022",
+        "source_url": "https://stores.sunglasshut.com/nz/nz-south/auckland/ray-emery-drive-auckland-international-airport"
+      },
+      {
+        "store_id": "gentle-monster-779149678137852858",
+        "name": "GENTLE MONSTER Sydney International Airport",
+        "address": "T1 International Terminal, Sydney Airport, Mascot NSW 2020, Australia",
+        "source_url": "https://www.gentlemonster.com/au/en/stores"
+      },
+      {
+        "store_id": "oakley-C290",
+        "name": "Oakley \u2014 Sydney Airport T2",
+        "address": "Sydney Domestic Airport, Shop 2b 208 Pier B, T2 Depart. Airside, Mascot, NSW, 2020",
+        "source_url": "https://www.sydneyairport.com.au/shop/oakley"
+      }
+    ],
+    "limitations": [
+      "No confirmed BN or OPSM terminal outlet found in existing census, official BN rosters and targeted official directory checks. This is not an exhaustive airport absence certification.",
+      "OPSM Airport West is a Westfield shopping-centre outlet; nearby DFO stores are not terminal outlets.",
+      "Brisbane directory retrieval returned HTTP 403; Melbourne, Auckland and Perth landing pages did not expose a complete tenant roster. Explicit branch/terminal evidence remains the basis of positive memberships.",
+      "Terminal pins are reference points, not boundaries. Airside/landside access is retained only when published."
+    ],
+    "checked_sources": [
+      "https://baileynelson.com.au/pages/optometrist-near-me",
+      "https://baileynelson.co.nz/pages/optometrist-near-me",
+      "https://www.opsm.com.au/stores/vic/airport-west/opsm-airport-west/1488",
+      "https://www.sydneyairport.com.au/shop",
+      "https://www.bne.com.au/passenger/shop-dine-explore/shop",
+      "https://www.melbourneairport.com.au/shopping",
+      "https://www.aucklandairport.co.nz/shopping",
+      "https://www.perthairport.com.au/at-the-airport/shop-and-eat"
+    ]
+  },
+  "additional_scope_evidence": [
+    {
+      "source_url": "https://stores.ray-ban.com/",
+      "finding": "Global country roster lists Australia; New Zealand not listed."
+    },
+    {
+      "source_url": "https://www.valleyeyewear.com.au/a/stockists/countries/new-zealand",
+      "finding": "New Zealand entries explicitly described as stockists, not branded stores."
+    },
+    {
+      "source_url": "https://ameyewear.com/blogs/news/how-to-choose-sunglasses",
+      "finding": "Distinguishes Darlinghurst flagship from retail partners."
+    },
+    {
+      "source_url": "https://dfojindalee.com.au/project/oakley-vault/",
+      "finding": "Current official centre page confirms Oakley T13 and published trading hours."
+    },
+    {
+      "source_url": "https://robinatowncentre.qicre.com/directory/",
+      "finding": "Centre postcode 4230 corroborates operator source; retained without guessing."
+    }
+  ]
+}

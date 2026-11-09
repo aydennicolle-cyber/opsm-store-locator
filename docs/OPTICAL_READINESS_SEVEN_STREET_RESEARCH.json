@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-10-27",
+  "status": "Expanded to eight prepared reviews; not applied",
+  "method": "Standard web and retained sources; no Firecrawl",
+  "cases": {
+    "specsavers-3637": [
+      "https://www.specsavers.com.au/stores/stives",
+      "Operator confirms 196 Mona Vale Road, phone02 9423 0225 and explicitly describes being on Mona Vale Road next to Douglass Hanly Moir Pathology. Retain the road association; no explicit St Ives Shopping Centre tenancy established."
+    ],
+    "specsavers-3241": [
+      "https://www.specsavers.com.au/stores/littlecollins",
+      "Operator confirms 309 Little Collins Street and phone03 9654 7288. Retain Little Collins Street; no explicit Block Arcade tenancy established."
+    ],
+    "bupa-optical-13626256": [
+      "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-chatswood",
+      "Operator confirms 381 Victoria Avenue and phone02 8311 2394, describing the wider Chatswood retail district. Retain Victoria Avenue; the district description does not establish Chatswood Chase tenancy."
+    ],
+    "independent-other-optical-provision-326334": [
+      "https://www.designeyewear.com.au/",
+      "Full operator homepage and ProVision profile agree66A Gawler Place with phone08 8223 6665. Retain Gawler Place; no explicit Adelaide Arcade tenancy established."
+    ],
+    "independent-other-optical-provision-16825": [
+      "https://www.provision.com.au/practice/eye-see-eyes-optometrist-orange/",
+      "Full ProVision practice profile confirms247 Summer Street and phone02 6362 6666. Retain Summer Street; no explicit Orange Central membership established."
+    ],
+    "eyecare-plus-672": [
+      "https://eyecareplusspringvale.com.au/contact/",
+      "Full practice contact page confirms37A Buckingham Avenue and phone03 9558 4499, agreeing with the national operator search extract. National branch full page returned403; the practice-owned page provides direct address evidence. Retain Buckingham Avenue; no explicit Springvale Shopping Centre tenancy established."
+    ],
+    "specsavers-3438": [
+      "https://www.specsavers.com.au/stores/portmacquarie",
+      "Previously retrieved operator page confirms2/46 Horton Street and phone02 6583 5174. Retained Port Central directory evidence names other optical businesses but omission alone is not non-tenancy evidence. Retain the evidenced Horton Street association; no additional Port Central membership established."
+    ],
+    "eyecare-plus-154858": [
+      "https://www.caloundravisionoptometrists.com.au/contact/",
+      "Full practice contact page identifies67 Bulcock Street, phone07 5491 1288 and Eyecare Plus affiliation. Queensland Health separately lists Better Vision at Centrepoint Shop5/50 Bulcock Street with a different phone. Retain Bulcock Street; do not conflate these practices or infer centre membership from their proximity."
+    ]
+  },
+  "application_script": "/tmp/readiness-eight-street-reviews.py",
+  "limits": "Retain supported street associations without asserting surveyed boundaries, categorical non-tenancy or directory completeness."
+}

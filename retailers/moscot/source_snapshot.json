@@ -1,0 +1,43 @@
+{
+  "fetched_at": "2026-10-20T22:11:00.322695+00:00",
+  "source_urls": [
+    "https://moscot.com/pages/moscot-melbourne-shop"
+  ],
+  "scope": "Verified Australian outlets only; not a complete AU/NZ census",
+  "captured_count": 1,
+  "page_sha256": "ed295de3788a5a40459f9a88d57e63d599d16369de98bb348011c2704223911f",
+  "stores": [
+    {
+      "id": "melbourne",
+      "name": "MOSCOT — Melbourne",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "South Yarra",
+      "postal_code": "3141",
+      "full_address": "566 Chapel Street, South Yarra VIC 3141",
+      "phone": "+61 3 9005 4649",
+      "latitude": -37.8405488,
+      "longitude": 144.9956246,
+      "official_url": "https://moscot.com/pages/moscot-melbourne-shop",
+      "website_url": "https://moscot.com/pages/moscot-melbourne-shop",
+      "source_url": "https://moscot.com/pages/moscot-melbourne-shop",
+      "services": "Prescription eyewear; Sunglasses",
+      "status": "Active",
+      "business_type": "Prescription eyewear retail",
+      "fetched_at": "2026-10-20T22:11:00.322695+00:00",
+      "verified_at": "2026-10-20",
+      "identity_reviewed": "true",
+      "coordinates_reviewed": "true",
+      "status_evidence_url": "https://moscot.com/pages/moscot-melbourne-shop",
+      "coordinate_evidence_url": "https://moscot.com/pages/moscot-melbourne-shop",
+      "coordinate_confidence": "Medium — operator premises point; exact frontage unverified",
+      "evidence_notes": "Official shop page publishes hours, address and phone. Branch-specific eye examinations not verified; customer reviews are not service evidence. Coordinates from official Get Directions place point."
+    }
+  ],
+  "supplementary_evidence": [
+    {
+      "source_url": "https://moscot.com/pages/moscot-melbourne-shop",
+      "facts": "Official shop page publishes hours, address and phone. Branch-specific eye examinations not verified; customer reviews are not service evidence. Coordinates from official Get Directions place point."
+    }
+  ]
+}

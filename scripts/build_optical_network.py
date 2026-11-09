@@ -17,6 +17,8 @@ from reviewed_independents import (
     read_reviewed_rows,
 )
 from reviewed_store_facts import apply_public_facts
+from sunglass_hut import refresh_canonical
+from eyewear_sources import refresh_oakley_canonical
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -357,6 +359,14 @@ def read_freshness() -> dict[str, str]:
         ("The Optical Company", "the-optical-company", "The Optical Company Australia"),
         ("Optical by National Pharmacies", "national-pharmacies-optical", "Optical by National Pharmacies Australia"),
         ("Matthews Eyecare", "matthews-eyecare", "Matthews Eyecare New Zealand"),
+        ("Sunglass Hut", "sunglass-hut", "Sunglass Hut AU/NZ"),
+        ("Ray-Ban", "ray-ban", "Ray-Ban Australia"),
+        ('The Eye Piece', 'the-eye-piece', 'The Eye Piece AU/NZ'),
+        ('Oakley', 'oakley', 'Oakley AU/NZ'),
+        ('AM Eyewear', 'am-eyewear', 'AM Eyewear Australia'),
+        ('MOSCOT', 'moscot', 'MOSCOT Australia'),
+        ('Valley Eyewear', 'valley-eyewear', 'Valley Eyewear Australia'),
+        ('Gentle Monster', 'gentle-monster', 'Gentle Monster Australia'),
         ("ProVision", "provision", "ProVision Australia"),
     ):
         snapshot = json.loads(
@@ -435,6 +445,14 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
         ("The Optical Company", "the-optical-company", "The Optical Company Australia", ""),
         ("Optical by National Pharmacies", "national-pharmacies-optical", "Optical by National Pharmacies Australia", ""),
         ("Matthews Eyecare", "matthews-eyecare", "Matthews Eyecare New Zealand", "nz-"),
+        ("Sunglass Hut", "sunglass-hut", "Sunglass Hut AU/NZ", ""),
+        ("Ray-Ban", "ray-ban", "Ray-Ban Australia", ""),
+        ('The Eye Piece', 'the-eye-piece', 'The Eye Piece AU/NZ', ''),
+        ('Oakley', 'oakley', 'Oakley AU/NZ', ''),
+        ('AM Eyewear', 'am-eyewear', 'AM Eyewear Australia', ''),
+        ('MOSCOT', 'moscot', 'MOSCOT Australia', ''),
+        ('Valley Eyewear', 'valley-eyewear', 'Valley Eyewear Australia', ''),
+        ('Gentle Monster', 'gentle-monster', 'Gentle Monster Australia', ''),
         ("Independent / Other optical", "provision", "ProVision Australia", "provision-"),
         ("Independent / Other optical", "reviewed-independents", REVIEWED_SOURCE_LABEL, "reviewed-"),
     ):
@@ -534,7 +552,7 @@ def load_stores(freshness: dict[str, str]) -> list[dict]:
             item for item in by_id[canonical].get("affiliations", "").split("|") if item
         }
         by_id[canonical]["affiliations"] = "|".join(sorted(source_affiliations | canonical_affiliations))
-        for field in ("website_url", "instagram_url", "facebook_url"):
+        for field in ("website_url", "instagram_url", "facebook_url", "directory_url"):
             if not by_id[canonical].get(field) and by_id[source].get(field):
                 by_id[canonical][field] = by_id[source][field]
     resolved = [store for store in stores if store["store_id"] not in remaps]
@@ -661,6 +679,10 @@ def classify(store: dict) -> dict:
         "Bupa Optical", "Chemist Warehouse Optometry", "Dresden Vision",
         "Optical Warehouse", "The Optical Company", "Optical by National Pharmacies",
         "Matthews Eyecare",
+        # These newly added operators publish numbered street addresses with
+        # shop/unit prefixes. Apply the same explicit-centre requirement as
+        # other newer sources; a shop number is not a property identity.
+        "AM Eyewear", "Valley Eyewear", "The Eye Piece",
     } or "provision" in store.get("affiliations", "").split("|")
     if additional_network:
         explicit = [
@@ -970,6 +992,10 @@ def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     freshness = read_freshness()
     stores = load_stores(freshness)
+    # Normalise source brands before applying explicit reviewed corrections.
+    # Otherwise a raw locator URL/service field can overwrite its dated review.
+    refresh_canonical(stores, identity_remaps())
+    refresh_oakley_canonical(stores, identity_remaps())
     apply_public_facts(stores, DATA_DIR / "store_public_fact_overrides.csv")
     for store in stores:
         if store['retailer'] in {'The Optical Company', 'Optical Warehouse'}:
@@ -996,14 +1022,15 @@ def main() -> None:
             }
         )
         membership_key = (store["retailer"], store["store_id"])
+        legacy_key = ("Independent / Other optical", store["store_id"]) if store["retailer"] == "Sunglass Hut" else membership_key
         membership = centre_memberships.get(membership_key)
         if membership:
             store.update(membership)
             matched_memberships.add(membership_key)
-        override = overrides.get((store["retailer"], store["store_id"]))
+        override = overrides.get((store["retailer"], store["store_id"])) or overrides.get(legacy_key)
         if override:
             store.update(override)
-        area_override = area_overrides.get((store["retailer"], store["store_id"]))
+        area_override = area_overrides.get((store["retailer"], store["store_id"])) or area_overrides.get(legacy_key)
         if area_override:
             store.update(area_override)
     unmatched_memberships = set(centre_memberships) - matched_memberships

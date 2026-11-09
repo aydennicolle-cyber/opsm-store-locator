@@ -1,0 +1,3037 @@
+{
+  "checked_at": "2026-10-26",
+  "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator",
+  "endpoint": "https://stockist.co/api/v1/u4734/locations/all",
+  "source_count": 48,
+  "held_count": 48,
+  "new_ids": [],
+  "absent_ids": [],
+  "differences": [
+    {
+      "store_id": "bupa-optical-3870868",
+      "differences": {
+        "latitude": {
+          "current_source": "-33.87801000",
+          "held": "-33.8772433"
+        },
+        "longitude": {
+          "current_source": "151.20743000",
+          "held": "151.2066996"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-3870868",
+        "latitude": "-33.8772433",
+        "longitude": "151.2066996",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20World%20Square%2C%20Shop%209.41%2C%20LG%20Level%20World%20Square%20Shopping%20Centre%2C%2C%20644%20George%20St%2C%20Sydney%2C%2C%20New%20South%20Wales%202000%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-3870868",
+        "name": "Bupa Optical World Square",
+        "full_address": "Shop 9.41, LG Level World Square Shopping Centre, 644 George St, Sydney, NSW, 2000, Australia",
+        "suburb": "Sydney",
+        "postcode": "2000",
+        "phone": "0279086000",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-world-square",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-world-square",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-world-square",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 9.41, LG Level World Square Shopping Centre, 644 George St, Sydney, NSW, 2000, Australia",
+        "latitude": "-33.8772433",
+        "longitude": "151.2066996",
+        "phone": "0279086000",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-3870854",
+      "differences": {
+        "latitude": {
+          "current_source": "-16.92494481",
+          "held": "-16.9253412"
+        },
+        "longitude": {
+          "current_source": "145.77169565",
+          "held": "145.7720827"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-3870854",
+        "latitude": "-16.9253412",
+        "longitude": "145.7720827",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Cairns%2C%20Shop%2017%2C%2021%20McLeod%20Street%2C%20Cairns%20Central%20Shopping%20Centre%2C%20Cairns%20City%20QLD%204870%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-3870854",
+        "name": "Bupa Optical Cairns",
+        "full_address": "Shop 17, 21 McLeod Street, Cairns Central Shopping Centre, Cairns City, QLD, 4870, Australia",
+        "suburb": "Cairns City",
+        "postcode": "4870",
+        "phone": "0730535564",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-cairns",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-cairns",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-cairns",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 17, 21 McLeod Street, Cairns Central Shopping Centre, Cairns City, QLD, 4870, Australia",
+        "latitude": "-16.9253412",
+        "longitude": "145.7720827",
+        "phone": "0730535564",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-35589156",
+      "differences": {
+        "latitude": {
+          "current_source": "-37.81208600",
+          "held": "-37.8123362"
+        },
+        "longitude": {
+          "current_source": "144.96369519",
+          "held": "144.9637384"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-35589156",
+        "latitude": "-37.8123362",
+        "longitude": "144.9637384",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Melbourne%20Emporium%2C%20Emporium%20Shopping%20Centre%20%2C%20Shop%20T3%20%E2%80%93%20013%2C%20287%20Lonsdale%20St%2C%20Melbourne%20VIC%203000%20",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-35589156",
+        "name": "Bupa Optical & Hearing Melbourne Emporium",
+        "full_address": "287 Lonsdale Street, Emporium Shopping Centre, Shop T3 – 013, Melbourne, VIC, 3000, Australia",
+        "suburb": "Melbourne",
+        "postcode": "3000",
+        "phone": "0370420287",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-hearing-melbourne-emporium",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-hearing-melbourne-emporium",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-hearing-melbourne-emporium",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "287 Lonsdale Street, Emporium Shopping Centre, Shop T3 – 013, Melbourne, VIC, 3000, Australia",
+        "latitude": "-37.8123362",
+        "longitude": "144.9637384",
+        "phone": "0370420287",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626255",
+      "differences": {
+        "latitude": {
+          "current_source": "-37.90183787",
+          "held": "-37.9009638"
+        },
+        "longitude": {
+          "current_source": "145.09155534",
+          "held": "145.0903467"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626255",
+        "latitude": "-37.9009638",
+        "longitude": "145.0903467",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Oakleigh%2C%20Shop%20SP003%2C%20Oakleigh%20Central%2C%2039%20Hanover%20St%2C%20Oakleigh%2C%2C%20Victoria%203166%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626255",
+        "name": "Bupa Optical Oakleigh",
+        "full_address": "Shop SP003, Oakleigh Central, 39 Hanover St, Oakleigh, VIC, 3166, Australia",
+        "suburb": "Oakleigh",
+        "postcode": "3166",
+        "phone": "0370420276",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-oakleigh",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-oakleigh",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-oakleigh",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below.  Official centre directory and branch premises identify Oakleigh Central, correcting the prior Hanover Street corridor assignment. Written tenant evidence establishes centre membership.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop SP003, Oakleigh Central, 39 Hanover St, Oakleigh, VIC, 3166, Australia",
+        "latitude": "-37.9009638",
+        "longitude": "145.0903467",
+        "phone": "0370420276",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626269",
+      "differences": {
+        "latitude": {
+          "current_source": "-26.65464367",
+          "held": "-26.6548251"
+        },
+        "longitude": {
+          "current_source": "153.09025082",
+          "held": "153.085009"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626269",
+        "latitude": "-26.6548251",
+        "longitude": "153.085009",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Maroochydore%20Sunshine%20Plaza",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626269",
+        "name": "Bupa Optical & Hearing Maroochydore",
+        "full_address": "Shop GD543 Sunshine Plaza, 154-164 Horton Parade, Maroochydore, QLD, 4558, Australia",
+        "suburb": "Maroochydore",
+        "postcode": "4558",
+        "phone": "0730634896",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-maroochydore",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-maroochydore",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-maroochydore",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop GD543 Sunshine Plaza, 154-164 Horton Parade, Maroochydore, QLD, 4558, Australia",
+        "latitude": "-26.6548251",
+        "longitude": "153.085009",
+        "phone": "0730634896",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626257",
+      "differences": {
+        "latitude": {
+          "current_source": "-27.38138000",
+          "held": "-27.3814336"
+        },
+        "longitude": {
+          "current_source": "153.03159000",
+          "held": "153.0339217"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626257",
+        "latitude": "-27.3814336",
+        "longitude": "153.0339217",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Chermside%2C%20Shop%20354%20Gympie%20Rd%2C%20Chermside%20QLD%204032",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626257",
+        "name": "Bupa Optical & Hearing Chermside",
+        "full_address": "Shop 354 Westfield Chermside, Gympie Rd, Chermside, QLD, 4032, Australia",
+        "suburb": "Chermside",
+        "postcode": "4032",
+        "phone": "0730535647",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-chermside",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-chermside",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-chermside",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 354 Westfield Chermside, Gympie Rd, Chermside, QLD, 4032, Australia",
+        "latitude": "-27.3814336",
+        "longitude": "153.0339217",
+        "phone": "0730535647",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626253",
+      "differences": {
+        "latitude": {
+          "current_source": "-27.50445063",
+          "held": "-27.5039688"
+        },
+        "longitude": {
+          "current_source": "153.10025084",
+          "held": "153.101982"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626253",
+        "latitude": "-27.5039688",
+        "longitude": "153.101982",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Carindale%2C%20Shop%201113/Ground%20level%2C%2C%20Westfield%20Shopping%20Centre%2C%2C%201151%20Creek%20Rd%2C%20Carindale%2C%20Queensland%204152%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626253",
+        "name": "Bupa Optical & Hearing Carindale",
+        "full_address": "Shop 1113, Ground Floor, Westfield Shopping Centre, 1151 Creek Rd, Carindale, QLD, 4152, Australia",
+        "suburb": "Carindale",
+        "postcode": "4152",
+        "phone": "0730535565",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-carindale",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-carindale",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-carindale",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 1113, Ground Floor, Westfield Shopping Centre, 1151 Creek Rd, Carindale, QLD, 4152, Australia",
+        "latitude": "-27.5039688",
+        "longitude": "153.101982",
+        "phone": "0730535565",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626273",
+      "differences": {
+        "latitude": {
+          "current_source": "-28.03654800",
+          "held": "-28.0359227"
+        },
+        "longitude": {
+          "current_source": "153.42782400",
+          "held": "153.4290663"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626273",
+        "latitude": "-28.0359227",
+        "longitude": "153.4290663",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Pacific%20Fair%2C%20Shop%2070%20%26amp%3B%2080%20Pacific%20Fair%20Shopping%20Centre%2C%2C%202-32%20Hooker%20Boulevard%20Broadbeach%2C%2C%20Queensland%204218%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626273",
+        "name": "Bupa Optical & Hearing Pacific Fair",
+        "full_address": "Shop 70 & 80 Pacific Fair Shopping Centre, 2-32 Hooker Boulevard, Broadbeach, QLD, 4218, Australia",
+        "suburb": "Broadbeach",
+        "postcode": "4218",
+        "phone": "0731844340",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-pacific-fair",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-pacific-fair",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-pacific-fair",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 70 & 80 Pacific Fair Shopping Centre, 2-32 Hooker Boulevard, Broadbeach, QLD, 4218, Australia",
+        "latitude": "-28.0359227",
+        "longitude": "153.4290663",
+        "phone": "0731844340",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626250",
+      "differences": {
+        "latitude": {
+          "current_source": "-33.87455500",
+          "held": "-33.8745651"
+        },
+        "longitude": {
+          "current_source": "151.10524757",
+          "held": "151.1059151"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626250",
+        "latitude": "-33.8745651",
+        "longitude": "151.1059151",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Burwood%2C%20Shop%20348%20Westfield%20Burwood%2C%20Level%203%2C%20100%20Burwood%20Road%2C%20Burwood%2C%20New%20South%20Wales%202134%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626250",
+        "name": "Bupa Optical & Hearing Burwood",
+        "full_address": "Shop 348 Westfield Burwood, 100 Burwood Road, Burwood, NSW, 2134, Australia",
+        "suburb": "Burwood",
+        "postcode": "2134",
+        "phone": "0279083422",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-burwood",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-burwood",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-burwood",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Named-map phone 0283360705 conflicts with agreeing operator locator/branch phone 0279083422. Prefer the current operator phone; do not infer a second business from this field discrepancy.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 348 Westfield Burwood, 100 Burwood Road, Burwood, NSW, 2134, Australia",
+        "latitude": "-33.8745651",
+        "longitude": "151.1059151",
+        "phone": "0279083422",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-19555346",
+      "differences": {
+        "full_address": {
+          "current_source": "254 The Parade, Norwood, SA, 5067, Australia",
+          "held": "254 The Parade, Norwood SA 5067"
+        },
+        "latitude": {
+          "current_source": "-34.92115339",
+          "held": "-34.9210658"
+        },
+        "longitude": {
+          "current_source": "138.64043160",
+          "held": "138.6404027"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-19555346",
+        "latitude": "-34.9210658",
+        "longitude": "138.6404027",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Norwood%20254%20The%20Parade",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-19555346",
+        "name": "Bupa Optical & Hearing Norwood",
+        "full_address": "254 The Parade, Norwood SA 5067",
+        "suburb": "Norwood",
+        "postcode": "5067",
+        "phone": "0871501563",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-norwood",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-norwood",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-norwood",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Current official locator row has no country value. Its SA state, 5067 postcode, 254 The Parade premises and valid AU point agree with the official branch page and named business map. The previous literal-country filter missed this existing outlet; no opening date is inferred.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection. Same254TheParade premises; punctuation/country formatting only.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "254 The Parade, Norwood SA 5067",
+        "latitude": "-34.9210658",
+        "longitude": "138.6404027",
+        "phone": "0871501563",
+        "status": "Active",
+        "fetched_at": "2026-10-08T04:59:02.204072+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626258",
+      "differences": {
+        "full_address": {
+          "current_source": "Colonnades Shopping Centre, Shop SP193, 54 Beach Rd, Noarlunga Centre, Colonnades, SA, 5168, Australia",
+          "held": "Shop SP193, Colonnades Shopping Centre, 54 Beach Road, Noarlunga Centre SA 5168"
+        },
+        "latitude": {
+          "current_source": "-35.14261500",
+          "held": "-35.1428811"
+        },
+        "longitude": {
+          "current_source": "138.49577100",
+          "held": "138.4981949"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626258",
+        "latitude": "-35.1428811",
+        "longitude": "138.4981949",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Colonnades%2C%20Colonnades%20Shopping%20Centre%2C%20Shop%20SP193%2C%2C%2054%20Beach%20Rd%2C%2C%20Noarlunga%20Centre%2C%20South%20Australia%205168%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626258",
+        "name": "Bupa Optical & Hearing Colonnades",
+        "full_address": "Shop SP193, Colonnades Shopping Centre, 54 Beach Road, Noarlunga Centre SA 5168",
+        "suburb": "Noarlunga Centre",
+        "postcode": "5168",
+        "phone": "0870794637",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-colonnades",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-colonnades",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-colonnades",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Colonnades is the centre name; the written branch locality is Noarlunga Centre.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection. SameSP193 and54BeachRoad premises; held Noarlunga Centre locality avoids duplicated Colonnades locality.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop SP193, Colonnades Shopping Centre, 54 Beach Road, Noarlunga Centre SA 5168",
+        "latitude": "-35.1428811",
+        "longitude": "138.4981949",
+        "phone": "0870794637",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-3870871",
+      "differences": {
+        "full_address": {
+          "current_source": "131 Warringah Mall, Brookvale, NSW, 2100, Australia",
+          "held": "Westfield Warringah Mall, 131 Condamine Street, Brookvale NSW 2100"
+        },
+        "latitude": {
+          "current_source": "-33.75468314",
+          "held": "-33.7680796"
+        },
+        "longitude": {
+          "current_source": "151.26901891",
+          "held": "151.2660426"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-3870871",
+        "latitude": "-33.7680796",
+        "longitude": "151.2660426",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Warringah%20Mall%2C%20Warringah%20Mall%2C%20131%20Condamine%20St%2C%20Brookvale%2C%2C%20New%20South%20Wales%202100%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-3870871",
+        "name": "Bupa Optical Warringah Mall",
+        "full_address": "Westfield Warringah Mall, 131 Condamine Street, Brookvale NSW 2100",
+        "suburb": "Brookvale",
+        "postcode": "2100",
+        "phone": "0291617466",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-warringah-mall",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-warringah-mall",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-warringah-mall",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Operator and named map give 131 Condamine Street; official centre directory independently confirms the tenant. The old point is about 1.51 km displaced. Preserve address formatting evidence without claiming an exact shop frontage. The web-reader centre copy is three weeks old and retains an older phone.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain reviewed Condamine Street address and reviewed approximate point. Current branch confirms 131 Condamine Street and Westfield Warringah Mall; existing coordinate review documents the displaced old locator pin.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain reviewed Condamine Street address and reviewed approximate point. Current branch confirms 131 Condamine Street and Westfield Warringah Mall; existing coordinate review documents the displaced old locator pin.",
+      "generated_verification": {
+        "full_address": "Westfield Warringah Mall, 131 Condamine Street, Brookvale NSW 2100",
+        "latitude": "-33.7680796",
+        "longitude": "151.2660426",
+        "phone": "0291617466",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626264",
+      "differences": {
+        "latitude": {
+          "current_source": "-37.87062046",
+          "held": "-37.8686817"
+        },
+        "longitude": {
+          "current_source": "145.24237964",
+          "held": "145.2393324"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626264",
+        "latitude": "-37.8686817",
+        "longitude": "145.2393324",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Knox%20Westfield",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626264",
+        "name": "Bupa Optical & Hearing Knox City",
+        "full_address": "Shop 2079 Westfield Knox Shopping Centre, 425 Burwood Hwy, Wantirna South, VIC, 3152, Australia",
+        "suburb": "Wantirna South",
+        "postcode": "3152",
+        "phone": "0391940698",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-knox-city",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-knox-city",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-knox-city",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 2079 Westfield Knox Shopping Centre, 425 Burwood Hwy, Wantirna South, VIC, 3152, Australia",
+        "latitude": "-37.8686817",
+        "longitude": "145.2393324",
+        "phone": "0391940698",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626263",
+      "differences": {
+        "latitude": {
+          "current_source": "-27.49747000",
+          "held": "-27.499702"
+        },
+        "longitude": {
+          "current_source": "152.97305000",
+          "held": "152.9730189"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626263",
+        "latitude": "-27.499702",
+        "longitude": "152.9730189",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Indooroopilly%2C%20Shop%203078%20Indooroopilly%20Shopping%20Centre%2C%2C%20322%20Moggill%20Rd%2C%20Indooroopilly%2C%2C%20Queensland%204068%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626263",
+        "name": "Bupa Optical & Hearing Indooroopilly",
+        "full_address": "Shop 3078 Indooroopilly Shopping Centre, 322 Moggill Rd, Indooroopilly, QLD, 4068, Australia",
+        "suburb": "Indooroopilly",
+        "postcode": "4068",
+        "phone": "0730634618",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-indooroopilly",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-indooroopilly",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-indooroopilly",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 3078 Indooroopilly Shopping Centre, 322 Moggill Rd, Indooroopilly, QLD, 4068, Australia",
+        "latitude": "-27.499702",
+        "longitude": "152.9730189",
+        "phone": "0730634618",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-3870870",
+      "differences": {
+        "latitude": {
+          "current_source": "-33.89142000",
+          "held": "-33.8915245"
+        },
+        "longitude": {
+          "current_source": "151.25082000",
+          "held": "151.2502849"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-3870870",
+        "latitude": "-33.8915245",
+        "longitude": "151.2502849",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Bondi%20Junction%2C%20Shop%202056%20Westfield%20Bondi%20Junction%2C%2C%20500%20Oxford%20St%2C%20Bondi%20Junction%2C%2C%20New%20South%20Wales%202022%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-3870870",
+        "name": "Bupa Optical Bondi Junction",
+        "full_address": "Shop 2056 Westfield Bondi Junction, 500 Oxford St, Bondi Junction, NSW, 2022, Australia",
+        "suburb": "Bondi Junction",
+        "postcode": "2022",
+        "phone": "0272574434",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-bondi-junction",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-bondi-junction",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-bondi-junction",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Operator shop number (2056) conflicts with named-map shop number (2058). Retain the operator address as the preferred source with this explicit unresolved unit warning; centre identity is separately established and exact tenancy frontage is not verified.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 2056 Westfield Bondi Junction, 500 Oxford St, Bondi Junction, NSW, 2022, Australia",
+        "latitude": "-33.8915245",
+        "longitude": "151.2502849",
+        "phone": "0272574434",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-3870845",
+      "differences": {
+        "latitude": {
+          "current_source": "-37.77291000",
+          "held": "-37.7736396"
+        },
+        "longitude": {
+          "current_source": "144.88635600",
+          "held": "144.8892877"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-3870845",
+        "latitude": "-37.7736396",
+        "longitude": "144.8892877",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Highpoint%2C%20Shop%202160%20Highpoint%20Shopping%20Centre%2C%2C%20200%20Rosamond%20Rd%2C%20Maribyrnong%2C%2C%20Victoria%203032%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-3870845",
+        "name": "Bupa Optical Highpoint",
+        "full_address": "Shop 2160 Highpoint Shopping Centre, 200 Rosamond Rd, Maribyrnong, VIC, 3032, Australia",
+        "suburb": "Maribyrnong",
+        "postcode": "3032",
+        "phone": "0391940687",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-highpoint",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-highpoint",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-highpoint",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 2160 Highpoint Shopping Centre, 200 Rosamond Rd, Maribyrnong, VIC, 3032, Australia",
+        "latitude": "-37.7736396",
+        "longitude": "144.8892877",
+        "phone": "0391940687",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-3870840",
+      "differences": {
+        "latitude": {
+          "current_source": "-34.92366473",
+          "held": "-34.9234552"
+        },
+        "longitude": {
+          "current_source": "138.60022236",
+          "held": "138.5998534"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-3870840",
+        "latitude": "-34.9234552",
+        "longitude": "138.5998534",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Adelaide%2C%2060%20King%20William%20Street%20Adelaide%2C%2C%20South%20Australia%205000%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-3870840",
+        "name": "Bupa Optical Adelaide",
+        "full_address": "60 King William Street, Adelaide, SA, 5000, Australia",
+        "suburb": "Adelaide",
+        "postcode": "5000",
+        "phone": "0871603036",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-adelaide",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-adelaide",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-adelaide",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Adelaide branch-page phone 0730023670 is also Brisbane's number and conflicts with the Adelaide locator and named map. Retain their agreeing Adelaide number 0871603036; preserve the apparent cross-branch page error.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "60 King William Street, Adelaide, SA, 5000, Australia",
+        "latitude": "-34.9234552",
+        "longitude": "138.5998534",
+        "phone": "0871603036",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626279",
+      "differences": {
+        "latitude": {
+          "current_source": "-34.83157068",
+          "held": "-34.8311846"
+        },
+        "longitude": {
+          "current_source": "138.69122723",
+          "held": "138.6909343"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626279",
+        "latitude": "-34.8311846",
+        "longitude": "138.6909343",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Tea%20Tree%20Plaza%2C%20Shop%2035%20Westfield%20Shopping%20Centre%2C%2C%20976%20North%20East%20Rd%2C%20Modbury%2C%2C%20South%20Australia%205092%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626279",
+        "name": "Bupa Optical & Hearing Tea Tree Plaza",
+        "full_address": "Shop 35 Westfield Shopping Centre, 976 North East Rd, Modbury, SA, 5092, Australia",
+        "suburb": "Modbury",
+        "postcode": "5092",
+        "phone": "0871401419",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-tea-tree-plaza",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-tea-tree-plaza",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-tea-tree-plaza",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 35 Westfield Shopping Centre, 976 North East Rd, Modbury, SA, 5092, Australia",
+        "latitude": "-34.8311846",
+        "longitude": "138.6909343",
+        "phone": "0871401419",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626281",
+      "differences": {
+        "latitude": {
+          "current_source": "-34.95084000",
+          "held": "-34.9503371"
+        },
+        "longitude": {
+          "current_source": "138.60614000",
+          "held": "138.6066746"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626281",
+        "latitude": "-34.9503371",
+        "longitude": "138.6066746",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Unley%2C%20Shop%2038%20Unley%20Shopping%20Centre%2C%2C%20204%20Unley%20Rd%2C%20Unley%2C%2C%20South%20Australia%205061%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626281",
+        "name": "Bupa Optical & Hearing Unley",
+        "full_address": "Shop 38 Unley Shopping Centre, 204 Unley Rd, Unley, SA, 5061, Australia",
+        "suburb": "Unley",
+        "postcode": "5061",
+        "phone": "0871303962",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-unley",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-unley",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-unley",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 38 Unley Shopping Centre, 204 Unley Rd, Unley, SA, 5061, Australia",
+        "latitude": "-34.9503371",
+        "longitude": "138.6066746",
+        "phone": "0871303962",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626274",
+      "differences": {
+        "latitude": {
+          "current_source": "-33.81755407",
+          "held": "-33.8177151"
+        },
+        "longitude": {
+          "current_source": "151.00224740",
+          "held": "151.0029087"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626274",
+        "latitude": "-33.8177151",
+        "longitude": "151.0029087",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Parramatta%2C%20Shop%202175%2C%20Westfield%20Parramatta%2C%2C%20159-175%20Church%20St%2C%20Parramatta%20NSW%202150",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626274",
+        "name": "Bupa Optical & Hearing Parramatta",
+        "full_address": "Shop 2175 Westfield Parramatta, 159-175 Church St, Parramatta, NSW, 2150, Australia",
+        "suburb": "Parramatta",
+        "postcode": "2150",
+        "phone": "0283119664",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-parramatta",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-parramatta",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-parramatta",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 2175 Westfield Parramatta, 159-175 Church St, Parramatta, NSW, 2150, Australia",
+        "latitude": "-33.8177151",
+        "longitude": "151.0029087",
+        "phone": "0283119664",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626284",
+      "differences": {
+        "latitude": {
+          "current_source": "-37.87758900",
+          "held": "-37.8760255"
+        },
+        "longitude": {
+          "current_source": "144.68275800",
+          "held": "144.6775067"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626284",
+        "latitude": "-37.8760255",
+        "longitude": "144.6775067",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Werribee%2C%20Shop%20303%20Pacific%20Werribee%20Shopping%20Centre%2C%20Corner%20of%20Heaths%20and%20Derrimut%20Rd%2C%20Werribee%2C%20Victoria%203030%2C%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626284",
+        "name": "Bupa Optical & Hearing Werribee",
+        "full_address": "Shop 303 Pacific Werribee Shopping Centre, Corner of Heaths and Derrimut Rd, Werribee, VIC, 3030, Australia",
+        "suburb": "Werribee",
+        "postcode": "3030",
+        "phone": "0399177862",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-werribee",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-werribee",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-werribee",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 303 Pacific Werribee Shopping Centre, Corner of Heaths and Derrimut Rd, Werribee, VIC, 3030, Australia",
+        "latitude": "-37.8760255",
+        "longitude": "144.6775067",
+        "phone": "0399177862",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-3870862",
+      "differences": {
+        "latitude": {
+          "current_source": "-33.73055264",
+          "held": "-33.7293849"
+        },
+        "longitude": {
+          "current_source": "151.00624741",
+          "held": "151.0072387"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-3870862",
+        "latitude": "-33.7293849",
+        "longitude": "151.0072387",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Castle%20Hill%2C%20Shop%20374%20Castle%20Towers%20Shopping%20Centre%2C%2C%206/14%20Castle%20Street%2C%20Castle%20Hill%2C%2C%20New%20South%20Wales%202154%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-3870862",
+        "name": "Bupa Optical Castle Hill",
+        "full_address": "Shop 374 Castle Towers Shopping Centre, 6/14 Castle Street, Castle Hill, NSW, 2154, Australia",
+        "suburb": "Castle Hill",
+        "postcode": "2154",
+        "phone": "0279083557",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-castle-hill",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-castle-hill",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-castle-hill",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 374 Castle Towers Shopping Centre, 6/14 Castle Street, Castle Hill, NSW, 2154, Australia",
+        "latitude": "-33.7293849",
+        "longitude": "151.0072387",
+        "phone": "0279083557",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626244",
+      "differences": {
+        "full_address": {
+          "current_source": "1/43 Queen Street, Brisbane City, QLD, 4000, Australia",
+          "held": "Queen Adelaide Building, 59 Adelaide Street, Brisbane City, QLD, 4000, Australia"
+        },
+        "latitude": {
+          "current_source": "-27.47091019",
+          "held": "-27.4695743"
+        },
+        "longitude": {
+          "current_source": "153.02409789",
+          "held": "153.0239344"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626244",
+        "latitude": "-27.4695743",
+        "longitude": "153.0239344",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Brisbane%2C%20Queen%20Adelaide%20Building%2C%20%2C%2059%20Adelaide%20Street%2C%2C%20Brisbane%20City%2C%20Queensland%204000%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626244",
+        "name": "Bupa Optical & Hearing Brisbane",
+        "full_address": "Queen Adelaide Building, 59 Adelaide Street, Brisbane City, QLD, 4000, Australia",
+        "suburb": "Brisbane City",
+        "postcode": "4000",
+        "phone": "0730023670",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-adelaide-st-brisbane",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-adelaide-st-brisbane",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-adelaide-st-brisbane",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Current locator, branch address and named map agree Queen Adelaide Building, 59 Adelaide Street. Branch notice announces a future move to 1/43 Queen Street, final trading Friday 16 October and reopening Tuesday 27 October; the notice does not explicitly print a year. Retain current active premises and do not count the future address as a second store.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Relocation corrected and verified in current generated data:1/43QueenStreet; original ID and source date preserved; temporary closure excludes current network/place competition. Old AdelaideStreet association removed. Evidence:docs/OPTICAL_READINESS_BUPA_BRISBANE_RELOCATION.json.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Material relocation requires repair: direct live public branch HTML now confirms 1/43 Queen Street and 0730023670, agreeing with current locator. Web search reader returned a four-week-old Adelaide Street copy and different phone; do not use that stale copy over direct live evidence. Preserve existing ID and relocation history; new point and place membership still need reconciliation before applying.",
+      "generated_verification": {
+        "full_address": "1/43 Queen Street, Brisbane City, QLD, 4000, Australia",
+        "latitude": "-27.47091019",
+        "longitude": "153.02409789",
+        "phone": "0730023670",
+        "status": "Temporarily Closed",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-26"
+      }
+    },
+    {
+      "store_id": "bupa-optical-3870857",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 71A, Westfield Shopping Centre, Benjamin Way, Benjamin Way, ACT, 2617, Australia",
+          "held": "Shop 71A, Westfield Belconnen, Benjamin Way, Belconnen ACT 2617"
+        },
+        "latitude": {
+          "current_source": "-35.23805000",
+          "held": "-35.2376953"
+        },
+        "longitude": {
+          "current_source": "149.06730000",
+          "held": "149.0642704"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-3870857",
+        "latitude": "-35.2376953",
+        "longitude": "149.0642704",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Belconnen%20Westfield",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-3870857",
+        "name": "Bupa Optical Belconnen",
+        "full_address": "Shop 71A, Westfield Belconnen, Benjamin Way, Belconnen ACT 2617",
+        "suburb": "Belconnen",
+        "postcode": "2617",
+        "phone": "0266109119",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-belconnen",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-belconnen",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-belconnen",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Correct locality from the road name Benjamin Way to Belconnen using written operator/map premises evidence.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection. SameShop71A/BenjaminWay; retain reviewed Belconnen locality rather than duplicated road in locator city field.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 71A, Westfield Belconnen, Benjamin Way, Belconnen ACT 2617",
+        "latitude": "-35.2376953",
+        "longitude": "149.0642704",
+        "phone": "0266109119",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-3870864",
+      "differences": {
+        "latitude": {
+          "current_source": "-34.03455762",
+          "held": "-34.0352634"
+        },
+        "longitude": {
+          "current_source": "151.09924756",
+          "held": "151.1008045"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-3870864",
+        "latitude": "-34.0352634",
+        "longitude": "151.1008045",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Miranda%2C%20Shop%201092%20Westfield%20Miranda%2C%2C%20600%20Kingsway%2C%20Miranda%2C%2C%20New%20South%20Wales%202228%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-3870864",
+        "name": "Bupa Optical Miranda",
+        "full_address": "Shop 1092 Westfield Miranda, 600 Kingsway, Miranda, NSW, 2228, Australia",
+        "suburb": "Miranda",
+        "postcode": "2228",
+        "phone": "0283119662",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-miranda",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-miranda",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-miranda",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 1092 Westfield Miranda, 600 Kingsway, Miranda, NSW, 2228, Australia",
+        "latitude": "-34.0352634",
+        "longitude": "151.1008045",
+        "phone": "0283119662",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-3870859",
+      "differences": {
+        "full_address": {
+          "current_source": "129 Rouse Hill Town Centre, Rouse Hill, NSW, 2155, Australia",
+          "held": "Shop G129, Rouse Hill Town Centre, Rouse Hill NSW 2155"
+        },
+        "latitude": {
+          "current_source": "-33.68655193",
+          "held": "-33.6904044"
+        },
+        "longitude": {
+          "current_source": "150.90524724",
+          "held": "150.9254742"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-3870859",
+        "latitude": "-33.6904044",
+        "longitude": "150.9254742",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Rouse%20Hill%2C%20Shop%20G129%20Rouse%20Hill%20Town%20Centre%2C%2C%20Rouse%20Hill%2C%2C%20New%20South%20Wales%202155%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-3870859",
+        "name": "Bupa Optical Rouse Hill",
+        "full_address": "Shop G129, Rouse Hill Town Centre, Rouse Hill NSW 2155",
+        "suburb": "Rouse Hill",
+        "postcode": "2155",
+        "phone": "0283311613",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-rouse-hill",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-rouse-hill",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-rouse-hill",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Restore the operator-confirmed G129 unit. The existing point is about 1.92 km from the matching named business feature; the reviewed point corrects that displacement, not a newly announced relocation.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection. SameRouseHillTownCentre tenant; retain explicitShopG129 rather than treating129as a street address.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop G129, Rouse Hill Town Centre, Rouse Hill NSW 2155",
+        "latitude": "-33.6904044",
+        "longitude": "150.9254742",
+        "phone": "0283311613",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-4924963",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 105 The Avenue 12 Salonika Street, Parap, NT, 0804, Australia",
+          "held": "Shop 105, The Avenue, 12 Salonika Street, Parap NT 0820"
+        },
+        "latitude": {
+          "current_source": "-12.44065731",
+          "held": "-12.440724"
+        },
+        "longitude": {
+          "current_source": "130.83993403",
+          "held": "130.84027"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-4924963",
+        "latitude": "-12.440724",
+        "longitude": "130.84027",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Helen%20Summers%20Optometrists%20Darwin%2C%20Shop%20105%20The%20Avenue%2012%20Salonika%20Street%2C%20Parap%2C%20Darwin%2C%20NT%2C%200804",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-4924963",
+        "name": "Helen Summers Optometrists Darwin",
+        "full_address": "Shop 105, The Avenue, 12 Salonika Street, Parap NT 0820",
+        "suburb": "Parap",
+        "postcode": "0820",
+        "phone": "0889240702",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/helen-summers-optometrists",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/helen-summers-optometrists",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/helen-summers-optometrists",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Named-map phone 0889959595 conflicts with agreeing operator locator/branch phone 0889240702. Prefer the current operator phone; do not infer a second business from this field discrepancy. Operator explicitly identifies Helen Summers as part of Bupa Optical. Australia Post distinguishes Parap 0820 delivery addresses from 0804 post-office boxes; the named business street address agrees 0820. Correct the physical postcode while preserving operator 0804 and conflicting map-phone evidence.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain physical postcode correction 0820 under existing Australia Post evidence. Operator still prints 0804, so preserve that conflicting source value in this reconciliation.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain physical postcode correction 0820 under existing Australia Post evidence. Operator still prints 0804, so preserve that conflicting source value in this reconciliation.",
+      "generated_verification": {
+        "full_address": "Shop 105, The Avenue, 12 Salonika Street, Parap NT 0820",
+        "latitude": "-12.440724",
+        "longitude": "130.84027",
+        "phone": "0889240702",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-3870872",
+      "differences": {
+        "latitude": {
+          "current_source": "-32.94061200",
+          "held": "-32.9428845"
+        },
+        "longitude": {
+          "current_source": "151.71227100",
+          "held": "151.7111169"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-3870872",
+        "latitude": "-32.9428845",
+        "longitude": "151.7111169",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Kotara%2C%20Shop%201050A%20Westfield%20Kotara%2C%2C%20Northcott%20Drive%20%26amp%3B%20Park%20Ave%2C%20Kotara%2C%2C%20New%20South%20Wales%202289%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-3870872",
+        "name": "Bupa Optical Kotara",
+        "full_address": "Shop 1050A Westfield Kotara, Northcott Drive & Park Ave, Kotara, NSW, 2289, Australia",
+        "suburb": "Kotara",
+        "postcode": "2289",
+        "phone": "0283113858",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-kotara",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-kotara",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-kotara",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 1050A Westfield Kotara, Northcott Drive & Park Ave, Kotara, NSW, 2289, Australia",
+        "latitude": "-32.9428845",
+        "longitude": "151.7111169",
+        "phone": "0283113858",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-3870877",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 1368 Westfield Garden City, 1368 Logan Rd, Upper Mt Gravatt, QLD, 4122, Australia",
+          "held": "Shop 1361S, Westfield Garden City, Cnr Logan Road & Kessels Road, Upper Mt Gravatt, QLD 4122, Australia"
+        },
+        "phone": {
+          "current_source": "07 3053 5486",
+          "held": "0730887698"
+        },
+        "latitude": {
+          "current_source": "-27.56454942",
+          "held": "-27.5644577"
+        },
+        "longitude": {
+          "current_source": "153.08500624",
+          "held": "153.0840536"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-3870877",
+        "latitude": "-27.5644577",
+        "longitude": "153.0840536",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Mt%20Gravatt%2C%20Shop%201361S%20Westfield%20Garden%20City%2C%20Cnr%20Logan%20Rd%20%26amp%3B%20Kessels%20Rd%2C%20Upper%20Mt%20Gravatt%2C%20Queensland%204122%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-3870877",
+        "name": "Bupa Optical Mt Gravatt",
+        "full_address": "Shop 1361S, Westfield Garden City, Cnr Logan Road & Kessels Road, Upper Mt Gravatt, QLD 4122, Australia",
+        "suburb": "Upper Mt Gravatt",
+        "postcode": "4122",
+        "phone": "0730887698",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-mt-gravatt",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-mt-gravatt",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-mt-gravatt",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Mt Gravatt branch page and named map agree 0730887698; the locator retains 0730535486. Prefer the two agreeing branch-specific sources.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain held phone 0730887698 and Shop 1361S highway-corner address: current official Mt Gravatt branch page confirms both. Locator shop 1368 and phone 0730535486 are not preferred.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain held phone 0730887698 and Shop 1361S highway-corner address: current official Mt Gravatt branch page confirms both. Locator shop 1368 and phone 0730535486 are not preferred.",
+      "generated_verification": {
+        "full_address": "Shop 1361S, Westfield Garden City, Cnr Logan Road & Kessels Road, Upper Mt Gravatt, QLD 4122, Australia",
+        "latitude": "-27.5644577",
+        "longitude": "153.0840536",
+        "phone": "0730887698",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626285",
+      "differences": {
+        "latitude": {
+          "current_source": "-34.87963000",
+          "held": "-34.8800233"
+        },
+        "longitude": {
+          "current_source": "138.49230000",
+          "held": "138.4909094"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626285",
+        "latitude": "-34.8800233",
+        "longitude": "138.4909094",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Westlakes%2C%20Shop%20222%20Westfield%20West%20Lakes%2C%2C%20111%20West%20Lakes%20Blvd%2C%20West%20Lakes%2C%2C%20South%20Australia%205021%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626285",
+        "name": "Bupa Optical & Hearing Westlakes",
+        "full_address": "Shop 222 Westfield West Lakes, 111 West Lakes Blvd, West Lakes, SA, 5021, Australia",
+        "suburb": "West Lakes",
+        "postcode": "5021",
+        "phone": "0871401349",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-westlakes",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-westlakes",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-westlakes",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Operator shop number (222) conflicts with named-map shop number (111). Retain the operator address as the preferred source with this explicit unresolved unit warning; centre identity is separately established and exact tenancy frontage is not verified.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 222 Westfield West Lakes, 111 West Lakes Blvd, West Lakes, SA, 5021, Australia",
+        "latitude": "-34.8800233",
+        "longitude": "138.4909094",
+        "phone": "0871401349",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626256",
+      "differences": {
+        "latitude": {
+          "current_source": "-33.79595537",
+          "held": "-33.79552"
+        },
+        "longitude": {
+          "current_source": "151.18524770",
+          "held": "151.18512"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626256",
+        "latitude": "-33.79552",
+        "longitude": "151.18512",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Chatswood%2C%20381%20Victoria%20Avenue%2C%2C%20Chatswood%2C%20New%20South%20Wales%202067%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626256",
+        "name": "Bupa Optical & Hearing Chatswood",
+        "full_address": "381 Victoria Avenue, Chatswood, NSW, 2067, Australia",
+        "suburb": "Chatswood",
+        "postcode": "2067",
+        "phone": "0283112394",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-chatswood",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-chatswood",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-chatswood",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "381 Victoria Avenue, Chatswood, NSW, 2067, Australia",
+        "latitude": "-33.79552",
+        "longitude": "151.18512",
+        "phone": "0283112394",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-29430212",
+      "differences": {
+        "latitude": {
+          "current_source": "-31.74379962",
+          "held": "-31.7437054"
+        },
+        "longitude": {
+          "current_source": "115.76649201",
+          "held": "115.7655934"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-29430212",
+        "latitude": "-31.7437054",
+        "longitude": "115.7655934",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Joondalup%2C%20Shop%20T30%2C%20Lakeside%20Joondalup%20Shopping%20City%2C%20420%20Joondalup%20Drive%20Joondalup%2C%2C%20Western%20Australia%206027%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-29430212",
+        "name": "Bupa Optical & Hearing Joondalup",
+        "full_address": "Shop T30 , Lakeside Shopping Centre, 420 Joondalup Drive, Joondalup, WA, 6027, Australia",
+        "suburb": "Joondalup",
+        "postcode": "6027",
+        "phone": "0891019164",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-joondalup",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-joondalup",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-joondalup",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop T30 , Lakeside Shopping Centre, 420 Joondalup Drive, Joondalup, WA, 6027, Australia",
+        "latitude": "-31.7437054",
+        "longitude": "115.7655934",
+        "phone": "0891019164",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-8139006",
+      "differences": {
+        "phone": {
+          "current_source": "07 3088 7698",
+          "held": "0399177851"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-8139006",
+        "latitude": "-38.220552",
+        "longitude": "145.039527",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Mornington%20148%20Main%20Street",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Retain the existing approximate point, corroborated within 25 metres by the named business feature.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-8139006",
+        "name": "Bupa Optical Mornington",
+        "full_address": "148 Main Street, Mornington, VIC, 3931, Australia",
+        "suburb": "Mornington",
+        "postcode": "3931",
+        "phone": "0399177851",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-mornington",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-mornington",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-mornington",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Mornington locator phone 0730887698 belongs to the separately evidenced Mt Gravatt branch. Use Mornington branch-page and named-map number 0399177851.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain held phone 0399177851: current official Mornington branch page explicitly confirms it. Locator phone 0730887698 conflicts with branch evidence.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain held phone 0399177851: current official Mornington branch page explicitly confirms it. Locator phone 0730887698 conflicts with branch evidence.",
+      "generated_verification": {
+        "full_address": "148 Main Street, Mornington, VIC, 3931, Australia",
+        "latitude": "-38.220552",
+        "longitude": "145.039527",
+        "phone": "0399177851",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626266",
+      "differences": {
+        "latitude": {
+          "current_source": "-33.92219000",
+          "held": "-33.919461"
+        },
+        "longitude": {
+          "current_source": "150.92347000",
+          "held": "150.9246269"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626266",
+        "latitude": "-33.919461",
+        "longitude": "150.9246269",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Liverpool%2C%20Shop%20173%2C%20Westfield%20Liverpool%2C%2C%20Macquarie%20Street%20Liverpool%2C%2C%20NSW%202170%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626266",
+        "name": "Bupa Optical & Hearing Liverpool",
+        "full_address": "Shop 173, Westfield Liverpool, Macquarie Street, Liverpool, NSW, 2170, Australia",
+        "suburb": "Liverpool",
+        "postcode": "2170",
+        "phone": "0283116330",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-liverpool",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-liverpool",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-liverpool",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 173, Westfield Liverpool, Macquarie Street, Liverpool, NSW, 2170, Australia",
+        "latitude": "-33.919461",
+        "longitude": "150.9246269",
+        "phone": "0283116330",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-3870853",
+      "differences": {
+        "full_address": {
+          "current_source": "Shop 134 Smithfield Shopping Centre, 134 Captain Cook Hwy, Smithfield, QLD, 4878, Australia",
+          "held": "Shop 134, Smithfield Shopping Centre, corner Kennedy Highway and Captain Cook Highway, Smithfield QLD 4878"
+        },
+        "latitude": {
+          "current_source": "-16.83531900",
+          "held": "-16.8366905"
+        },
+        "longitude": {
+          "current_source": "145.69217100",
+          "held": "145.6922158"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-3870853",
+        "latitude": "-16.8366905",
+        "longitude": "145.6922158",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Smithfield%2C%20Shop%20134%20Smithfield%20Shopping%20Centre%2C%2C%20Cnr%20Kennedy%20Hwy%20%26amp%3B%20Captain%20Cook%20Hwy%2C%2C%20Smithfield%2C%20Queensland%204878%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-3870853",
+        "name": "Bupa Optical Smithfield",
+        "full_address": "Shop 134, Smithfield Shopping Centre, corner Kennedy Highway and Captain Cook Highway, Smithfield QLD 4878",
+        "suburb": "Smithfield",
+        "postcode": "4878",
+        "phone": "0731844902",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-smithfield",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-smithfield",
+        "services": "Eye examinations; prescription eyewear; contact lenses",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-smithfield",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Remove the duplicated shop number previously presented as a civic street number; preserve the operator-confirmed highway corner.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain reviewed highway-corner address. Current branch confirms shop 134 separately from the Kennedy/Captain Cook highway corner; do not turn shop number into street number.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain reviewed highway-corner address. Current branch confirms shop 134 separately from the Kennedy/Captain Cook highway corner; do not turn shop number into street number.",
+      "generated_verification": {
+        "full_address": "Shop 134, Smithfield Shopping Centre, corner Kennedy Highway and Captain Cook Highway, Smithfield QLD 4878",
+        "latitude": "-16.8366905",
+        "longitude": "145.6922158",
+        "phone": "0731844902",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626280",
+      "differences": {
+        "latitude": {
+          "current_source": "-27.56145157",
+          "held": "-27.5615763"
+        },
+        "longitude": {
+          "current_source": "151.95024896",
+          "held": "151.9512466"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626280",
+        "latitude": "-27.5615763",
+        "longitude": "151.9512466",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Toowoomba%2C%20Shop%202096%2C%20Grand%20Central%20Shopping%20Centre%2C%2C%201-7%20Dent%20St%2C%20Toowoomba%2C%2C%20Queensland%204350%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626280",
+        "name": "Bupa Optical & Hearing Toowoomba",
+        "full_address": "Shop 2096, Grand Central Shopping Centre, 1-7 Dent St, Toowoomba, QLD, 4350, Australia",
+        "suburb": "Toowoomba",
+        "postcode": "4350",
+        "phone": "0731882450",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-toowoomba",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-toowoomba",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-toowoomba",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 2096, Grand Central Shopping Centre, 1-7 Dent St, Toowoomba, QLD, 4350, Australia",
+        "latitude": "-27.5615763",
+        "longitude": "151.9512466",
+        "phone": "0731882450",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626259",
+      "differences": {
+        "latitude": {
+          "current_source": "-37.78761910",
+          "held": "-37.7848203"
+        },
+        "longitude": {
+          "current_source": "145.12523777",
+          "held": "145.1257931"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626259",
+        "latitude": "-37.7848203",
+        "longitude": "145.1257931",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Doncaster%2C%20Shop%20G065-G066%20Westfield%20Doncaster%2C%20619%20Doncaster%20Rd%2C%20Doncaster%20VIC%203108",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626259",
+        "name": "Bupa Optical & Hearing Doncaster",
+        "full_address": "Shop G065-G066 Westfield Doncaster, 619 Doncaster Rd, Doncaster, VIC, 3108, Australia",
+        "suburb": "Doncaster",
+        "postcode": "3108",
+        "phone": "0391940659",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-doncaster",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-doncaster",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-doncaster",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop G065-G066 Westfield Doncaster, 619 Doncaster Rd, Doncaster, VIC, 3108, Australia",
+        "latitude": "-37.7848203",
+        "longitude": "145.1257931",
+        "phone": "0391940659",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626286",
+      "differences": {
+        "latitude": {
+          "current_source": "-35.34552000",
+          "held": "-35.3465038"
+        },
+        "longitude": {
+          "current_source": "149.08488750",
+          "held": "149.0859558"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626286",
+        "latitude": "-35.3465038",
+        "longitude": "149.0859558",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Woden%2C%20Shop%2075%20Westfield%20Woden%2C%2C%20Keltie%20Street%20Woden%2C%2C%20Australian%20Capital%20Territory%202606%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626286",
+        "name": "Bupa Optical & Hearing Woden",
+        "full_address": "Shop 75 Westfield Woden, Keltie Street, Woden, ACT, 2606, Australia",
+        "suburb": "Woden",
+        "postcode": "2606",
+        "phone": "0266109139",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-woden",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-woden",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-woden",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 75 Westfield Woden, Keltie Street, Woden, ACT, 2606, Australia",
+        "latitude": "-35.3465038",
+        "longitude": "149.0859558",
+        "phone": "0266109139",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626278",
+      "differences": {
+        "latitude": {
+          "current_source": "-37.95862191",
+          "held": "-37.957912"
+        },
+        "longitude": {
+          "current_source": "145.05023765",
+          "held": "145.0541519"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626278",
+        "latitude": "-37.957912",
+        "longitude": "145.0541519",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20Southland%20Westfield",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626278",
+        "name": "Bupa Optical & Hearing Southland",
+        "full_address": "Shop 3023 Westfield Shopping Centre, 1239 Nepean Hwy, Cheltenham, VIC, 3192, Australia",
+        "suburb": "Cheltenham",
+        "postcode": "3192",
+        "phone": "0399177860",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-southland",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-southland",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-southland",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. Named-map phone 0370420275 conflicts with agreeing operator locator/branch phone 0399177860. Prefer the current operator phone; do not infer a second business from this field discrepancy.",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 3023 Westfield Shopping Centre, 1239 Nepean Hwy, Cheltenham, VIC, 3192, Australia",
+        "latitude": "-37.957912",
+        "longitude": "145.0541519",
+        "phone": "0399177860",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    },
+    {
+      "store_id": "bupa-optical-13626267",
+      "differences": {
+        "latitude": {
+          "current_source": "-33.77742300",
+          "held": "-33.7769608"
+        },
+        "longitude": {
+          "current_source": "151.11805950",
+          "held": "151.1205174"
+        }
+      },
+      "existing_coordinate_review": {
+        "store_id": "bupa-optical-13626267",
+        "latitude": "-33.7769608",
+        "longitude": "151.1205174",
+        "evidence_url": "https://www.google.com/maps?output=embed&q=Bupa%20Optical%20and%20Hearing%20Macquarie%2C%20Shop%2021%20Macquarie%20Centre%2C%2C%20Crn%20Herring%20and%20Waterloo%20Road%2C%20North%20Ryde%2C%2C%20New%20South%20Wales%202113%20%2C%20Australia",
+        "coordinate_source": "Named public business map corroborated by written branch identity",
+        "verified_at": "2026-10-08",
+        "reason": "Use the named business feature matching the written operator premises; this is an approximate shop reference, not a surveyed frontage.",
+        "coordinate_confidence": "Medium — approximate premises point; exact shop frontage unverified"
+      },
+      "existing_public_fact_review": {
+        "store_id": "bupa-optical-13626267",
+        "name": "Bupa Optical & Hearing Macquarie",
+        "full_address": "Shop 21 Macquarie Centre, Cnr Herring and Waterloo Roads, North Ryde, NSW, 2113, Australia",
+        "suburb": "North Ryde",
+        "postcode": "2113",
+        "phone": "0283117578",
+        "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-macquarie",
+        "website_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-macquarie",
+        "services": "Eye examinations; prescription eyewear; contact lenses; audiology",
+        "business_type": "Prescription eyewear retail",
+        "evidence_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-macquarie",
+        "verified_at": "2026-10-08",
+        "reason": "Current complete official locator and branch page confirm this optical-retail premises. Written name/address and available named-business feature establish identity; distance alone does not establish identity or formal place membership. Preserve original source dates and stable ID. Existing accepted formal place mapping is retained unless specifically reviewed below. ",
+        "retailer": "Bupa Optical",
+        "affiliations": "",
+        "clear_fields": "",
+        "directory_url": ""
+      },
+      "review_outcome": "Retain existing dated identity-matched business point and written branch evidence. Current locator does not establish a changed premises; coordinate difference alone does not justify overwriting reviewed evidence. Approximate shop reference, not surveyed frontage. Original point-review date retained; not a fresh map inspection.",
+      "reviewed_at": "2026-10-26",
+      "previous_review_outcome": "Retain existing reviewed values pending final point review; formatting differences alone do not justify replacing richer held addresses.",
+      "generated_verification": {
+        "full_address": "Shop 21 Macquarie Centre, Cnr Herring and Waterloo Roads, North Ryde, NSW, 2113, Australia",
+        "latitude": "-33.7769608",
+        "longitude": "151.1205174",
+        "phone": "0283117578",
+        "status": "Active",
+        "fetched_at": "2026-09-03T00:05:23.931384+00:00",
+        "coordinates_verified_at": "2026-10-08"
+      }
+    }
+  ],
+  "source_records": [
+    {
+      "id": 13626248,
+      "name": "Bupa Optical & Hearing Bridge St Sydney",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Sydney",
+      "postal_code": "2000",
+      "full_address": "10 Bridge St, Sydney, NSW, 2000, Australia",
+      "phone": "02 7908 3421",
+      "latitude": "-33.86355482",
+      "longitude": "151.20824774",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-bridge-street",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626244,
+      "name": "Bupa Optical & Hearing Brisbane",
+      "status": "Active",
+      "country": "Australia",
+      "state": "QLD",
+      "city": "Brisbane City",
+      "postal_code": "4000",
+      "full_address": "1/43 Queen Street, Brisbane City, QLD, 4000, Australia",
+      "phone": "07 3002 3670",
+      "latitude": "-27.47091019",
+      "longitude": "153.02409789",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-adelaide-st-brisbane",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626250,
+      "name": "Bupa Optical & Hearing Burwood",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Burwood",
+      "postal_code": "2134",
+      "full_address": "Shop 348 Westfield Burwood, 100 Burwood Road, Burwood, NSW, 2134, Australia",
+      "phone": "02 7908 3422",
+      "latitude": "-33.87455500",
+      "longitude": "151.10524757",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-burwood",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626252,
+      "name": "Bupa Optical & Hearing Camberwell",
+      "status": "Active",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "Camberwell",
+      "postal_code": "3124",
+      "full_address": "Shop 1-5 Camberwell Arcade, 600-606 Burke Road, Camberwell, VIC, 3124, Australia",
+      "phone": "03 4108 9424",
+      "latitude": "-37.83009033",
+      "longitude": "145.05714913",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-camberwell",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626253,
+      "name": "Bupa Optical & Hearing Carindale",
+      "status": "Active",
+      "country": "Australia",
+      "state": "QLD",
+      "city": "Carindale",
+      "postal_code": "4152",
+      "full_address": "Shop 1113, Ground Floor, Westfield Shopping Centre, 1151 Creek Rd, Carindale, QLD, 4152, Australia",
+      "phone": "07 3053 5565",
+      "latitude": "-27.50445063",
+      "longitude": "153.10025084",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-carindale",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626256,
+      "name": "Bupa Optical & Hearing Chatswood",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Chatswood",
+      "postal_code": "2067",
+      "full_address": "381 Victoria Avenue, Chatswood, NSW, 2067, Australia",
+      "phone": "02 8311 2394",
+      "latitude": "-33.79595537",
+      "longitude": "151.18524770",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-chatswood",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626257,
+      "name": "Bupa Optical & Hearing Chermside",
+      "status": "Active",
+      "country": "Australia",
+      "state": "QLD",
+      "city": "Chermside",
+      "postal_code": "4032",
+      "full_address": "Shop 354 Westfield Chermside, Gympie Rd, Chermside, QLD, 4032, Australia",
+      "phone": "07 3053 5647",
+      "latitude": "-27.38138000",
+      "longitude": "153.03159000",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-chermside",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626258,
+      "name": "Bupa Optical & Hearing Colonnades",
+      "status": "Active",
+      "country": "Australia",
+      "state": "SA",
+      "city": "Colonnades",
+      "postal_code": "5168",
+      "full_address": "Colonnades Shopping Centre, Shop SP193, 54 Beach Rd, Noarlunga Centre, Colonnades, SA, 5168, Australia",
+      "phone": "08 7079 4637",
+      "latitude": "-35.14261500",
+      "longitude": "138.49577100",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-colonnades",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626259,
+      "name": "Bupa Optical & Hearing Doncaster",
+      "status": "Active",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "Doncaster",
+      "postal_code": "3108",
+      "full_address": "Shop G065-G066 Westfield Doncaster, 619 Doncaster Rd, Doncaster, VIC, 3108, Australia",
+      "phone": "03 9194 0659",
+      "latitude": "-37.78761910",
+      "longitude": "145.12523777",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-doncaster",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626262,
+      "name": "Bupa Optical & Hearing Hobart",
+      "status": "Active",
+      "country": "Australia",
+      "state": "TAS",
+      "city": "Hobart",
+      "postal_code": "7000",
+      "full_address": "112 Liverpool St, Hobart, TAS, 7000, Australia",
+      "phone": "03 4108 9411",
+      "latitude": "-42.88227703",
+      "longitude": "147.32640241",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-hobart",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626263,
+      "name": "Bupa Optical & Hearing Indooroopilly",
+      "status": "Active",
+      "country": "Australia",
+      "state": "QLD",
+      "city": "Indooroopilly",
+      "postal_code": "4068",
+      "full_address": "Shop 3078 Indooroopilly Shopping Centre, 322 Moggill Rd, Indooroopilly, QLD, 4068, Australia",
+      "phone": "07 3063 4618",
+      "latitude": "-27.49747000",
+      "longitude": "152.97305000",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-indooroopilly",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 29430212,
+      "name": "Bupa Optical & Hearing Joondalup",
+      "status": "Active",
+      "country": "Australia",
+      "state": "WA",
+      "city": "Joondalup",
+      "postal_code": "6027",
+      "full_address": "Shop T30 , Lakeside Shopping Centre, 420 Joondalup Drive, Joondalup, WA, 6027, Australia",
+      "phone": "08 9101 9164",
+      "latitude": "-31.74379962",
+      "longitude": "115.76649201",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-joondalup",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626264,
+      "name": "Bupa Optical & Hearing Knox City",
+      "status": "Active",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "Wantirna South",
+      "postal_code": "3152",
+      "full_address": "Shop 2079 Westfield Knox Shopping Centre, 425 Burwood Hwy, Wantirna South, VIC, 3152, Australia",
+      "phone": "03 9194 0698",
+      "latitude": "-37.87062046",
+      "longitude": "145.24237964",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-knox-city",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626266,
+      "name": "Bupa Optical & Hearing Liverpool",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Liverpool",
+      "postal_code": "2170",
+      "full_address": "Shop 173, Westfield Liverpool, Macquarie Street, Liverpool, NSW, 2170, Australia",
+      "phone": "02 8311 6330",
+      "latitude": "-33.92219000",
+      "longitude": "150.92347000",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-liverpool",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626267,
+      "name": "Bupa Optical & Hearing Macquarie",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "North Ryde",
+      "postal_code": "2113",
+      "full_address": "Shop 21 Macquarie Centre, Cnr Herring and Waterloo Roads, North Ryde, NSW, 2113, Australia",
+      "phone": "02 8311 7578",
+      "latitude": "-33.77742300",
+      "longitude": "151.11805950",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-macquarie",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626268,
+      "name": "Bupa Optical & Hearing Marion",
+      "status": "Active",
+      "country": "Australia",
+      "state": "SA",
+      "city": "Oaklands Park",
+      "postal_code": "5046",
+      "full_address": "Shop 2061 Westfield Marion, 297 Diagonal Rd, Oaklands Park, SA, 5046, Australia",
+      "phone": "08 7130 3957",
+      "latitude": "-35.01595800",
+      "longitude": "138.54490200",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-marion",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626269,
+      "name": "Bupa Optical & Hearing Maroochydore",
+      "status": "Active",
+      "country": "Australia",
+      "state": "QLD",
+      "city": "Maroochydore",
+      "postal_code": "4558",
+      "full_address": "Shop GD543 Sunshine Plaza, 154-164 Horton Parade, Maroochydore, QLD, 4558, Australia",
+      "phone": "07 3063 4896",
+      "latitude": "-26.65464367",
+      "longitude": "153.09025082",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-maroochydore",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 35589156,
+      "name": "Bupa Optical & Hearing Melbourne Emporium",
+      "status": "Active",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "Melbourne",
+      "postal_code": "3000",
+      "full_address": "287 Lonsdale Street, Emporium Shopping Centre, Shop T3 – 013, Melbourne, VIC, 3000, Australia",
+      "phone": "03 7042 0287",
+      "latitude": "-37.81208600",
+      "longitude": "144.96369519",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-hearing-melbourne-emporium",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 19555346,
+      "name": "Bupa Optical & Hearing Norwood",
+      "status": "Active",
+      "country": "Australia",
+      "state": "SA",
+      "city": "Norwood",
+      "postal_code": "5067",
+      "full_address": "254 The Parade, Norwood, SA, 5067, Australia",
+      "phone": "08 7150 1563",
+      "latitude": "-34.92115339",
+      "longitude": "138.64043160",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-norwood",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626273,
+      "name": "Bupa Optical & Hearing Pacific Fair",
+      "status": "Active",
+      "country": "Australia",
+      "state": "QLD",
+      "city": "Broadbeach",
+      "postal_code": "4218",
+      "full_address": "Shop 70 & 80 Pacific Fair Shopping Centre, 2-32 Hooker Boulevard, Broadbeach, QLD, 4218, Australia",
+      "phone": "07 3184 4340",
+      "latitude": "-28.03654800",
+      "longitude": "153.42782400",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-pacific-fair",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626274,
+      "name": "Bupa Optical & Hearing Parramatta",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Parramatta",
+      "postal_code": "2150",
+      "full_address": "Shop 2175 Westfield Parramatta, 159-175 Church St, Parramatta, NSW, 2150, Australia",
+      "phone": "02 8311 9664",
+      "latitude": "-33.81755407",
+      "longitude": "151.00224740",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-parramatta",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626278,
+      "name": "Bupa Optical & Hearing Southland",
+      "status": "Active",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "Cheltenham",
+      "postal_code": "3192",
+      "full_address": "Shop 3023 Westfield Shopping Centre, 1239 Nepean Hwy, Cheltenham, VIC, 3192, Australia",
+      "phone": "03 9917 7860",
+      "latitude": "-37.95862191",
+      "longitude": "145.05023765",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-southland",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626279,
+      "name": "Bupa Optical & Hearing Tea Tree Plaza",
+      "status": "Active",
+      "country": "Australia",
+      "state": "SA",
+      "city": "Modbury",
+      "postal_code": "5092",
+      "full_address": "Shop 35 Westfield Shopping Centre, 976 North East Rd, Modbury, SA, 5092, Australia",
+      "phone": "08 7140 1419",
+      "latitude": "-34.83157068",
+      "longitude": "138.69122723",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-tea-tree-plaza",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626280,
+      "name": "Bupa Optical & Hearing Toowoomba",
+      "status": "Active",
+      "country": "Australia",
+      "state": "QLD",
+      "city": "Toowoomba",
+      "postal_code": "4350",
+      "full_address": "Shop 2096, Grand Central Shopping Centre, 1-7 Dent St, Toowoomba, QLD, 4350, Australia",
+      "phone": "07 3188 2450",
+      "latitude": "-27.56145157",
+      "longitude": "151.95024896",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-toowoomba",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626281,
+      "name": "Bupa Optical & Hearing Unley",
+      "status": "Active",
+      "country": "Australia",
+      "state": "SA",
+      "city": "Unley",
+      "postal_code": "5061",
+      "full_address": "Shop 38 Unley Shopping Centre, 204 Unley Rd, Unley, SA, 5061, Australia",
+      "phone": "08 7130 3962",
+      "latitude": "-34.95084000",
+      "longitude": "138.60614000",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-unley",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626284,
+      "name": "Bupa Optical & Hearing Werribee",
+      "status": "Active",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "Werribee",
+      "postal_code": "3030",
+      "full_address": "Shop 303 Pacific Werribee Shopping Centre, Corner of Heaths and Derrimut Rd, Werribee, VIC, 3030, Australia",
+      "phone": "03 9917 7862",
+      "latitude": "-37.87758900",
+      "longitude": "144.68275800",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-werribee",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626285,
+      "name": "Bupa Optical & Hearing Westlakes",
+      "status": "Active",
+      "country": "Australia",
+      "state": "SA",
+      "city": "West Lakes",
+      "postal_code": "5021",
+      "full_address": "Shop 222 Westfield West Lakes, 111 West Lakes Blvd, West Lakes, SA, 5021, Australia",
+      "phone": "08 7140 1349",
+      "latitude": "-34.87963000",
+      "longitude": "138.49230000",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-westlakes",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626286,
+      "name": "Bupa Optical & Hearing Woden",
+      "status": "Active",
+      "country": "Australia",
+      "state": "ACT",
+      "city": "Woden",
+      "postal_code": "2606",
+      "full_address": "Shop 75 Westfield Woden, Keltie Street, Woden, ACT, 2606, Australia",
+      "phone": "02 6610 9139",
+      "latitude": "-35.34552000",
+      "longitude": "149.08488750",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-woden",
+      "services": "hearing|optical",
+      "audiology": "true",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870840,
+      "name": "Bupa Optical Adelaide",
+      "status": "Active",
+      "country": "Australia",
+      "state": "SA",
+      "city": "Adelaide",
+      "postal_code": "5000",
+      "full_address": "60 King William Street, Adelaide, SA, 5000, Australia",
+      "phone": "08 7160 3036",
+      "latitude": "-34.92366473",
+      "longitude": "138.60022236",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-adelaide",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870857,
+      "name": "Bupa Optical Belconnen",
+      "status": "Active",
+      "country": "Australia",
+      "state": "ACT",
+      "city": "Benjamin Way",
+      "postal_code": "2617",
+      "full_address": "Shop 71A, Westfield Shopping Centre, Benjamin Way, Benjamin Way, ACT, 2617, Australia",
+      "phone": "02 6610 9119",
+      "latitude": "-35.23805000",
+      "longitude": "149.06730000",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-belconnen",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870870,
+      "name": "Bupa Optical Bondi Junction",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Bondi Junction",
+      "postal_code": "2022",
+      "full_address": "Shop 2056 Westfield Bondi Junction, 500 Oxford St, Bondi Junction, NSW, 2022, Australia",
+      "phone": "02 7257 4434",
+      "latitude": "-33.89142000",
+      "longitude": "151.25082000",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-bondi-junction",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870854,
+      "name": "Bupa Optical Cairns",
+      "status": "Active",
+      "country": "Australia",
+      "state": "QLD",
+      "city": "Cairns City",
+      "postal_code": "4870",
+      "full_address": "Shop 17, 21 McLeod Street, Cairns Central Shopping Centre, Cairns City, QLD, 4870, Australia",
+      "phone": "07 3053 5564",
+      "latitude": "-16.92494481",
+      "longitude": "145.77169565",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-cairns",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870862,
+      "name": "Bupa Optical Castle Hill",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Castle Hill",
+      "postal_code": "2154",
+      "full_address": "Shop 374 Castle Towers Shopping Centre, 6/14 Castle Street, Castle Hill, NSW, 2154, Australia",
+      "phone": "02 7908 3557",
+      "latitude": "-33.73055264",
+      "longitude": "151.00624741",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-castle-hill",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 17654193,
+      "name": "Bupa Optical Geelong",
+      "status": "Active",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "Geelong West",
+      "postal_code": "3218",
+      "full_address": "149A Pakington Street, Geelong West, VIC, 3218, Australia",
+      "phone": "03 7042 0256",
+      "latitude": "-38.14052748",
+      "longitude": "144.34813190",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-geelong",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870845,
+      "name": "Bupa Optical Highpoint",
+      "status": "Active",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "Maribyrnong",
+      "postal_code": "3032",
+      "full_address": "Shop 2160 Highpoint Shopping Centre, 200 Rosamond Rd, Maribyrnong, VIC, 3032, Australia",
+      "phone": "03 9194 0687",
+      "latitude": "-37.77291000",
+      "longitude": "144.88635600",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-highpoint",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870872,
+      "name": "Bupa Optical Kotara",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Kotara",
+      "postal_code": "2289",
+      "full_address": "Shop 1050A Westfield Kotara, Northcott Drive & Park Ave, Kotara, NSW, 2289, Australia",
+      "phone": "02 8311 3858",
+      "latitude": "-32.94061200",
+      "longitude": "151.71227100",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-kotara",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870864,
+      "name": "Bupa Optical Miranda",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Miranda",
+      "postal_code": "2228",
+      "full_address": "Shop 1092 Westfield Miranda, 600 Kingsway, Miranda, NSW, 2228, Australia",
+      "phone": "02 8311 9662",
+      "latitude": "-34.03455762",
+      "longitude": "151.09924756",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-miranda",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 8139006,
+      "name": "Bupa Optical Mornington",
+      "status": "Active",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "Mornington",
+      "postal_code": "3931",
+      "full_address": "148 Main Street, Mornington, VIC, 3931, Australia",
+      "phone": "07 3088 7698",
+      "latitude": "-38.22055200",
+      "longitude": "145.03952700",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-mornington",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870877,
+      "name": "Bupa Optical Mt Gravatt",
+      "status": "Active",
+      "country": "Australia",
+      "state": "QLD",
+      "city": "Upper Mt Gravatt",
+      "postal_code": "4122",
+      "full_address": "Shop 1368 Westfield Garden City, 1368 Logan Rd, Upper Mt Gravatt, QLD, 4122, Australia",
+      "phone": "07 3053 5486",
+      "latitude": "-27.56454942",
+      "longitude": "153.08500624",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-mt-gravatt",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 13626255,
+      "name": "Bupa Optical Oakleigh",
+      "status": "Active",
+      "country": "Australia",
+      "state": "VIC",
+      "city": "Oakleigh",
+      "postal_code": "3166",
+      "full_address": "Shop SP003, Oakleigh Central, 39 Hanover St, Oakleigh, VIC, 3166, Australia",
+      "phone": "03 7042 0276",
+      "latitude": "-37.90183787",
+      "longitude": "145.09155534",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-oakleigh",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870836,
+      "name": "Bupa Optical Perth",
+      "status": "Active",
+      "country": "Australia",
+      "state": "WA",
+      "city": "Perth",
+      "postal_code": "6000",
+      "full_address": "89 Saint Georges Terrace, Perth, WA, 6000, Australia",
+      "phone": "08 6193 7407",
+      "latitude": "-31.95534600",
+      "longitude": "115.85758050",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-perth",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870859,
+      "name": "Bupa Optical Rouse Hill",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Rouse Hill",
+      "postal_code": "2155",
+      "full_address": "129 Rouse Hill Town Centre, Rouse Hill, NSW, 2155, Australia",
+      "phone": "02 8331 1613",
+      "latitude": "-33.68655193",
+      "longitude": "150.90524724",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-rouse-hill",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870853,
+      "name": "Bupa Optical Smithfield",
+      "status": "Active",
+      "country": "Australia",
+      "state": "QLD",
+      "city": "Smithfield",
+      "postal_code": "4878",
+      "full_address": "Shop 134 Smithfield Shopping Centre, 134 Captain Cook Hwy, Smithfield, QLD, 4878, Australia",
+      "phone": "07 3184 4902",
+      "latitude": "-16.83531900",
+      "longitude": "145.69217100",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-smithfield",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870881,
+      "name": "Bupa Optical Townsville",
+      "status": "Active",
+      "country": "Australia",
+      "state": "QLD",
+      "city": "Pimlico",
+      "postal_code": "4812",
+      "full_address": "Shop 98 Castletown Shopping Centre, 35-47 Kings Road, Pimlico, QLD, 4812, Australia",
+      "phone": "07 3506 2602",
+      "latitude": "-19.27194226",
+      "longitude": "146.79063936",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-townsville",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870856,
+      "name": "Bupa Optical Wagga Wagga",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Wagga Wagga",
+      "postal_code": "2650",
+      "full_address": "155 Baylis Street, Wagga Wagga, NSW, 2650, Australia",
+      "phone": "02 8776 3359",
+      "latitude": "-35.11288783",
+      "longitude": "147.37045475",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-wagga",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870871,
+      "name": "Bupa Optical Warringah Mall",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Brookvale",
+      "postal_code": "2100",
+      "full_address": "131 Warringah Mall, Brookvale, NSW, 2100, Australia",
+      "phone": "02 9161 7466",
+      "latitude": "-33.75468314",
+      "longitude": "151.26901891",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-warringah-mall",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 3870868,
+      "name": "Bupa Optical World Square",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NSW",
+      "city": "Sydney",
+      "postal_code": "2000",
+      "full_address": "Shop 9.41, LG Level World Square Shopping Centre, 644 George St, Sydney, NSW, 2000, Australia",
+      "phone": "02 7908 6000",
+      "latitude": "-33.87801000",
+      "longitude": "151.20743000",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-world-square",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    },
+    {
+      "id": 4924963,
+      "name": "Helen Summers Optometrists Darwin",
+      "status": "Active",
+      "country": "Australia",
+      "state": "NT",
+      "city": "Parap",
+      "postal_code": "0804",
+      "full_address": "Shop 105 The Avenue 12 Salonika Street, Parap, NT, 0804, Australia",
+      "phone": "08 8924 0702",
+      "latitude": "-12.44065731",
+      "longitude": "130.83993403",
+      "official_url": "https://bupaoptical.bupa.com.au/pages/store/helen-summers-optometrists",
+      "services": "optical",
+      "audiology": "false",
+      "source_url": "https://bupaoptical.bupa.com.au/pages/store-locator"
+    }
+  ],
+  "limitations": "Original source and point-review dates preserved. Source reconciliation is not independent current trading verification or surveyed precision. Current-source warnings remain. No centre membership inferred from coordinates.",
+  "reconciliation_status": "All48identities reconciled. All40exception records reviewed:39point differences,9address differences and2phone conflicts (overlapping records). Brisbane relocation corrected and excluded while temporarily closed. Other38point exceptions retain existing dated business-identity evidence; no fresh map verification claimed. Phone conflicts retain current branch-supported values; non-relocation address differences retain reviewed premises details.",
+  "branch_conflict_review": {
+    "checked_at": "2026-10-26",
+    "phone_conflicts": "Both held phone numbers confirmed by official branch pages.",
+    "brisbane_live_evidence": {
+      "url": "https://bupaoptical.bupa.com.au/pages/store/bupa-optical-adelaide-st-brisbane",
+      "checked_at": "2026-10-26",
+      "text": " Bupa Optical & Hearing Brisbane Logout Skip to content Free tracked shipping and returns on all orders 20% off contact lenses for Bupa Members* 20% off 1st pair designer & sunglasses for Bupa Members² 50% off 2nd pair from designer & sunglasses for all customers³ Find your nearest Bupa Optical store Stores 0 ? $store.wishlistStore.count + ' item' + ($store.wishlistStore.count === 1 ? '' : 's') + ' in Wishlist' : 'Wishlist'\" > 0\" x-text=\"$store.wishlistStore.count\" x-cloak > Wishlist Login Cart Cart Glasses Glasses View all glasses Offers Bupa Member Discounts 1 pair from $169 1 pair from $199 1 pair from $249 1 pair from $299 20% off first pair 50% off second pair Brands Shop All Burberry Camilla Carrera Gucci Le Specs Meta AI Oakley Oroton Ralph Ray-Ban Roberto Cavalli Saint Laurent Tom Ford Gender & Age Men Women Kids Glasses Guides View all Lens guide Blue light glasses Chloe Jones Collection Find your face shape Safety glasses Shop Ray-Ban Now Ray-Ban Frame and single vision stock lenses $299 Ray-Ban Frame and single vision stock lenses $299 Sunglasses Sunglasses View all sunglasses Offers Bupa Member Discounts 20% off first pair 50% off second pair Brands Shop All Bill Bass Boss Emporio Armani Furla Gucci Le Specs Meta AI Oakley Oroton Ray Ban Saint Laurent Tiffany Tom Ford Gender Mens Womens Sunglasses Guides View All Lens guide Chloe Jones Collection Prescription sunglasses Shielding your eyes Meta AI Contact Lenses Contact Lenses View all contact lenses Brands Shop All Acuvue 1 Day Moist Acuvue Oasys Air Optix Biofinity Dailies MyDay Precision 1 Precision 7 Total 1 Total 30 Visual Type Sphere Toric Multifocal Frequency Daily Fortnightly Weekly Monthly Contact Lenses Guides View All Contact lenses 101 Are contact lenses right for you? Shop contact lenses Members get 20% off contact lenses Members get 20% off contact lenses Eye Health Eye Health Eye Test View All What happens in an eye test? Do I need an eye test? Eye Conditions View All Eye health tool Glaucoma Eye Care Tips View All How to look after your eyes Eyesight deterioration Glasses guide View All Safety Glasses Foggy glasses? Blue light glasses Sunglasses guide View All Prescription sunglasses Shielding your eyes all year round Contact lenses guide View All Contact lenses 101 Are contact lenses right for you? Hearing Hearing Hearing concerns Signs of hearing loss Stigma around hearing loss Causes of hearing loss Supporting others Understanding hearing loss Discussing hearing loss Hearing services Partnership with Amplifon The future of hearing Hearing aids Offers Offers View all offers Glasses Offers 1 pair from $169 1 pair from $199 1 pair from $249 1 pair from $299 20% off first pair 50% off second pair Sunglasses Offers 20% off first pair 50% off second pair Bupa Member Exclusive Offers Bupa Member Discounts 20% off Contact Lens 20% off first pair Re-order contact lenses Book an appointment Menu Book Cart Glasses Sunglasses Meta AI Contact Lenses Eye Health Hearing Offers Login Create Account Customer Support Shipping & Returns 0 ? $store.wishlistStore.count + ' item' + ($store.wishlistStore.count === 1 ? '' : 's') + ' in Wishlist' : 'Wishlist'\" > Wishlist 0\" x-text=\"' (' + $store.wishlistStore.count + ')'\" aria-hidden=\"true\" x-cloak > Find a store Make a booking Re-order contact lenses Glasses View all glasses Offers Brands Gender & Age Glasses Guides Shop all Shop Ray-Ban Now Ray-Ban Frame and single vision stock lenses $299 Ray-Ban Frame and single vision stock lenses $299 Offers Bupa Member Discounts 1 pair from $169 1 pair from $199 1 pair from $249 1 pair from $299 20% off first pair 50% off second pair Brands Shop All Burberry Camilla Carrera Gucci Le Specs Meta AI Oakley Oroton Ralph Ray-Ban Roberto Cavalli Saint Laurent Tom Ford Gender & Age Men Women Kids Glasses Guides View all Lens guide Blue light glasses Chloe Jones Collection Find your face shape Safety glasses Sunglasses View all sunglasses Offers Brands Gender Sunglasses Guides Shop all Offers Bupa Member Discounts 20% off first pair 50% off second pair Brands Shop All Bill Bass Boss Emporio Armani Furla Gucci Le Specs Meta AI Oakley Oroton Ray Ban Saint Laurent Tiffany Tom Ford Gender Mens Womens Sunglasses Guides View All Lens guide Chloe Jones Collection Prescription sunglasses Shielding your eyes Contact Lenses View all contact lenses Brands Type Frequency Contact Lenses Guides Shop all Shop contact lenses Members get 20% off contact lenses Members get 20% off contact lenses Brands Shop All Acuvue 1 Day Moist Acuvue Oasys Air Optix Biofinity Dailies MyDay Precision 1 Precision 7 Total 1 Total 30 Visual Type Sphere Toric Multifocal Frequency Daily Fortnightly Weekly Monthly Contact Lenses Guides View All Contact lenses 101 Are contact lenses right for you? Eye Health Eye Test Eye Conditions Eye Care Tips Glasses guide Sunglasses guide Contact lenses guide Eye Test View All What happens in an eye test? Do I need an eye test? Eye Conditions View All Eye health tool Glaucoma Eye Care Tips View All How to look after your eyes Eyesight deterioration Glasses guide View All Safety Glasses Foggy glasses? Blue light glasses Sunglasses guide View All Prescription sunglasses Shielding your eyes all year round Contact lenses guide View All Contact lenses 101 Are contact lenses right for you? Hearing Hearing concerns Supporting others Hearing services Hearing concerns Signs of hearing loss Stigma around hearing loss Causes of hearing loss Supporting others Understanding hearing loss Discussing hearing loss Hearing services Partnership with Amplifon The future of hearing Hearing aids Offers View all offers Glasses Offers Sunglasses Offers Bupa Member Exclusive Offers Glasses Offers 1 pair from $169 1 pair from $199 1 pair from $249 1 pair from $299 20% off first pair 50% off second pair Sunglasses Offers 20% off first pair 50% off second pair Bupa Member Exclusive Offers Bupa Member Discounts 20% off Contact Lens 20% off first pair Your wishlist is full (50 items). Remove an item to add another. We encountered an error with your login attempt. Please try again. If the problem persists, please call us at 134 135 for further assistance. Sign in to your Bupa account to enjoy these benefits below Access member discounts Automatic claiming View your remaining limits Prefill prescriptions Sign in Set up my digital identity Learn more about digital identity Continue without signing in We’re making important security changes As of July 2023 , we've added a more secure way to manage your policies. If you are an existing or new member, you'll need to set up a new digital identity to access your account. What you need to do in 3 easy steps 1 Create your digital identity Create your digital identity using your email address to access your account. This is one-time set up process 2 Link your policies User your membership number and date of birth to link your policies 3 Enjoy Bupa Optical benefits Easy claim and reviewing your remaining limits Set up my digital identity Almost there... - We're just checking a few things behind the scenes. It should only take a few seconds, so stay on this page while we finish up. Almost there... - We're just checking a few things behind the scenes. It should only take a few seconds, so stay on this page while we finish up. 0\" :data-active=\"getPageIndex() === 0\" :data-before-active=\"getPageIndex() - 1 === 0\" aria-current=\"getPageIndex() === 0\" > Store Store 1\" :data-active=\"getPageIndex() === 1\" :data-before-active=\"getPageIndex() - 1 === 1\" aria-current=\"getPageIndex() === 1\" > Type Type 2\" :data-active=\"getPageIndex() === 2\" :data-before-active=\"getPageIndex() - 1 === 2\" aria-current=\"getPageIndex() === 2\" > Time Time 3\" :data-active=\"getPageIndex() === 3\" :data-before-active=\"getPageIndex() - 1 === 3\" aria-current=\"getPageIndex() === 3\" > Details Details 4\" :data-active=\"getPageIndex() === 4\" :data-before-active=\"getPageIndex() - 1 === 4\" aria-current=\"getPageIndex() === 4\" > Confirm Confirm Step 1 Find your nearest store Loading... 0\" @click=\"previousPage()\" aria-label=\"Go to previous page\" > Go back Step 2 Book an appointment Change store Comprehensive eye test or specific eye health check 30 min 0\"> Bulk billed This means that if you are an eligible Medicare card holder you may not have to pay out of pocket expenses. Some consultations are not covered by Medicare, including some contact lens consultations. Please contact us for more information. 0\"> A comprehensive eye examination to check your vision, eye health, and to determine prescription requirements. Your optometrist will provide advice for your individual needs and lifestyle. For people living with diabetes, or who need a longer appointment, please select the Diabetes Assessment appointment type or call the store for further assistance. Select Contact lens fitting for first time wearers 60 min 0\"> Bulk billed Tooltip text $99.00 0\"> This examination includes a comprehensive eye test, which will determine your suitability for contact lenses and your specific requirements for this type of vision correction solution. Contact lens consultations may be covered by Medicare. Please contact the store for further information. Select Contact lens prescription review 30 min 0\"> Bulk billed Tooltip text $33.00 0\"> This appointment is for an existing contact lens wearer who needs a check of their eyes and contact lenses, or an update of their contact lens prescription. Contact lens consultations may be covered by Medicare. Please contact the store for further information. Select Diabetes eye health assessment 60 min 0\"> Bulk billed Tooltip text 0\"> This assessment includes a comprehensive eye test and retinal check and may require eye drops to dilate your pupils. If eye drops are used during your appointment, your vision may be affected and you may not be able to drive for up to four hours afterwards. We recommend bringing sunglasses to your appointment to reduce brightness which may be experienced as a result of your dilated pupils. Select Can't find what you're looking for? 0\" @click=\"previousPage()\" aria-label=\"Go to previous page\" > Go back Step 3 Choose appointment Change store Appointment timeslot Complete these steps to continue Booking time: Select a preferred time to book your appointment Preferred optometrist (optional) Any optometrist Date and time handleDayButton(event.target, day.time)\" :tabindex=\"day.active ? 0 : -1\" :aria-label=\"day.weekday + ' ' + day.dayMonth + (day.available ? ', ' + day.available + ' slots available' : ', no slots available')\" :aria-pressed=\"day.active ? 'true' : 'false'\" > Loading... Morning Afternoon Evening All Select a preferred time to book Continue 0\" @click=\"previousPage()\" aria-label=\"Go to previous page\" > Go back Step 4 Personal Details Booking summary Edit at with Given name If you've visited before, use the same name so we can match your records Enter your first name Enter a valid given name Maximum number of characters is 30 Family name If you've visited before, use the same name so we can match your records Enter your family name Enter a valid family name Maximum number of characters is 30 Date of birth Enter as DD/MM/YYYY Enter your date of birth Enter a valid date of birth Email address Enter your email address Enter a valid email address I would like to receive lastest offers via email Mobile number Enter your mobile number Please enter a valid mobile number, starting with 04 Confirm appointment By booking this appointment, you agree to our terms & conditions . For more information about how we handle your personal data, see our privacy policy . You consent to being contacted about this appointment, our products and services. You can opt out of marketing at any time by contacting us as outlined in our privacy policy . Booked Appointment scheduled at Add to calendar For with Book again at this store A fee may apply for consultations not covered by Medicare. For more information, contact your Bupa Optical Store. What happens next? Appointment email You’ll receive an email shortly with your appointment details and options to cancel or reschedule if needed. Before your appointment Arrive 10 minutes early to allow time to check in, and bring your Medicare card (if applicable). On the day Book a hearing test Book free hearing test Learn more about Bupa optical Eye Health What should i expect during my eye test Your optometrist will start by asking about your eyes, general health and lifestyle to help tailor the test to suit you. This helps them to understand what's happening with your vision so they can plan how to best support you. Read article Offers Offers Whether you're choosing frames or contact lenses, it shouldn't hurt your wallet. Discover offers you can't look away from. See our offers Glasses Shop glasses Due for a new pair of glasses? Shop our range and find the right fit for you Shop glasses Bupa Optical & Hearing Brisbane 1/43 Queen Street, Brisbane City, Queensland 4000 Australia Contact us Get directions 07 3002 3670 optical.brisbane@bupa.com.au Book an eye test Book a free hearing test Opening hours Day Store Hours and Closure Information Monday 8:30 am - 5:00 pm Tuesday 8:30 am - 5:00 pm Wednesday 8:30 am - 5:00 pm Thursday 8:30 am - 5:00 pm Friday 8:30 am - 5:00 pm Saturday 8:30 am - 5:00 pm Sunday Closed * Store hours may vary on public holidays, please contact the store directly to confirm. Map Description Did you know regular eye tests can help detect eye conditions like cataracts and glaucoma? They can also help highlight health conditions like diabetes and high blood pressure. If a health problem is detected, you can discuss it further with your Optometrist or a trusted medical professional. At Bupa Optical and Hearing Brisbane we can check the health of your eyes, fit you in the latest fashion frames and our hearing partner Amplifon can also give you a comprehensive hearing assessment. Yes that's right, you can get a free hearing test too. Thinking about contact lenses? We can help you find out if they're right for you. We bulk bill eye tests for eligible Medicare card holders. Why choose this store? Conveniently located on Queen Steet in Brisbane's CBD Professional eye care delivered by qualified optometrists Comprehensive eye health examinations to help detect vision changes and eye conditions Children's eye testing tailored to growing eyes and developing vision Access to premium designer glasses from leading global brands Contact lens consultations, fittings and ongoing support Hearing examinations Health fund claiming available via HICAPS Terms & Conditions Members discount: 20% off Contact Lenses *Offer available in-store and online at Bupa Optical. Bupa health insurance members receive 20% off the RRP on contact lenses. Offer not available to goods supplied pursuant to any agreement between Bupa and any commonwealth government or associated entity. Offer available instore and online by entering your Bupa member number at checkout on the Bupa Optical website Bupa Optical Pty Ltd ABN 24 126 819 154. Value Range ¹Includes standard single vision lenses (Grind included when clinically required). Lens upgrades and enhancements available at additional cost. Frame only, may be purchased at the same amount as the frame & single vision stock lenses package price. Offer not available to goods supplied pursuant to any agreement between Bupa and any commonwealth government or associated entity. Bupa Optical Pty Ltd ABN 24 126 819 154. Member discount: 20% off Designer frames, Sunglasses, Lenses and Lens enhancements ²Bupa health insurance members receive 20% off RRP of Designer frames and sunglasses and 20% off RRP prescription lenses (excluding Hoya lenses and standard single vision lenses included in the Value range), lens upgrades and lens enhancements. Offer not available to goods supplied pursuant to any agreement between Bupa and any commonwealth government or associated entity. Bupa Optical Pty Ltd ABN 24 126 819 154. 50% off 2nd pair ³Buy any pair of prescription glasses or prescription sunglasses and receive 50% off RRP on any second prescription pair of equal or lesser value. Second pair in this offer must either be purchased in the same transaction, or if you are purchasing in-store it can also be within 30 days of collection of an eligible first pair. Offer not available to goods supplied pursuant to any agreement between Bupa and any commonwealth government or associated entity. Bupa Optical Pty Ltd ABN 24 126 819 154 EyeInspect and Microvascular Health Assessment ⁴If you proceed with EyeInspect or Microvascular Health Assessment (MHA) (retinal screenings), Bupa Optical Pty Ltd ABN 24 126 819 154 (Bupa, we, us or our) will collect your personal information (PI) (your age, patient ID, gender and retinal images) from you for the purpose of conducting the retinal screening and reporting to you. The findings in your report will be based upon your retinal screening, but will not constitute a clinical diagnosis, recommended treatment or medication, nor be a substitute for advice from your eye health professional or other health care practitioner. We will disclose your PI to the providers of the retinal screening tool we use, Eyetelligence Pty Ltd, for the purpose of conducting the retinal screening and generating the retinal screening report. If you do not provide all of the PI requested, we may not be able to conduct the retinal screening or provide you with your retinal screening report. Bupa handles your PI in accordance with its Privacy Policy found at https://bupaoptical.bupa.com.au/pages/privacy-policy. This Privacy Policy lets you know how to access and correct your PI, how to make a complaint if you believe we have not complied with the Australian Privacy Principles and how we will handle your complaint. You can also contact us at Bupa Optical Head Office – Level 15, 33 Exhibition Street, Melbourne VIC 3000, or via email at feedback@bupaoptical.com.au Microvascular Health Assessment: Free for Bupa members ⁵This offer is available for Bupa Health Insurance members between the ages of 40 and 80 to use at Bupa Optical for a free Microvascular Health Assessment (valued at $25). Microvascular Health Assessments are suitable for people between the ages of 40 and 80. Offer must be applied in a single transaction and is available in-store only. The offer may be redeemed once per person and once per transaction. This offer is not transferable and not available in conjunction with any other offer or discount, except Bupa Health Insurance member discounts. Any Bupa Health Insurance member discounts (if applicable) will be applied prior to the discount amount of this offer. Offer not available to goods supplied pursuant to any agreement between Bupa and any Commonwealth government or associated entity. Bupa Optical Pty Ltd ABN 24 126 819 154. Chloe Jones Collection ⁶From 6 November 2024, ongoing and until sold out (donation period), Bupa Foundation will donate $25 from every sale of glasses (prescription only) or sunglasses (prescription or non-prescription) from the Chloe Jones limited-edition range (1000 units available) to The Brien Holden Vision Institute Foundation (ABN 86 081 872 586) while stocks last. Donation does not apply to accessory or non-prescription glasses sales. Excludes all ADF contract sales. Customers are not eligible to claim any tax deduction or benefit. Eligible items that were purchased and then refunded or returned during the donation period will not be included in the final count to determine donation dollar amount. The final donation amount, as determined by the number of eligible items sold and will be donated to The Brien Holden Vision Institute Foundation (ABN 86 081 872 586) within 90 days of the donation period ending. Hearing ˜ Free for Bupa customers – a Bupa customer is anyone who has engaged with a Bupa-branded product or service including health insurance, dental, optical, medical, Mindplace and aged care services. Direct family includes a spouse or former spouse, children over 18, parents, grandparents, and siblings. Not eligible for family members under 18. ^ Offer available on hearing aids from a higher technology level than the Hearing Services Program (HSP) range (Eligible Products). For HSP customers, 25% discount will apply to the balance owing on Eligible Products once any applicable HSP funding is applied. Offer available for the duration of the Bupa and Amplifon partnership. This offer cannot be used in conjunction with any other offer. ^^ Discount available on any in-store hearing offer at Bupa Optical & Hearing or Amplifon stores for the duration of the Bupa and Amplifon partnership. † Hearing aids can be trialled for up to 30 days from the date of fitting, with no obligation to purchase. If not fully satisfied, hearing aids can be returned within the trial period. Offer available for the duration of the Bupa and Amplifon partnership. ‡ Aftercare support includes regular check-ups, device cleaning and adjustments provided by Amplifon following your hearing aid purchase, for the duration of the Bupa and Amplifon partnership. Bupa About Bupa Optical About Bupa Hearing Bupa Health Insurance Bupa Aged Care Bupa Dental Blua Customer Service Warranty Shipping & Returns Contact Us Find a Store Opticycle Recycling Program General & Company Privacy Policy Terms & Conditions Careers Newsroom Sustainability Pay securely online Connect With Us Facebook Twitter Instagram YouTube LinkedIn Bupa Optical Pty Ltd | ABN 24 126 819 154 | Bupa Health Services Pty Ltd | ABN 50 003 098 655 Choosing a selection results in a full page refresh. Opens in a new window. "
+    },
+    "remaining": "Source comparison and generated exception verification complete. Final browser/export acceptance remains."
+  }
+}

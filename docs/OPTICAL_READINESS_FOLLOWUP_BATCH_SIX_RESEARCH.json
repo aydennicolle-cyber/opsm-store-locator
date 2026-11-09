@@ -1,0 +1,30 @@
+{
+  "status": "Initial operator research captured; membership outcomes not yet applied or completed.",
+  "checked_at": "2026-10-27",
+  "records": [
+    {
+      "store_id": "independent-other-optical-reviewed-nz-canon-street-optometrists",
+      "source": "https://canonstreetoptometrists.co.nz/contact/",
+      "finding": "Full contact page confirms26CanonStreetTimaru7910 and036889791. No named centre in contact details. No accepted Canon Street corridor found in local inventory.",
+      "next": "Check relevant district/property evidence, then record outcome."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-terrace-optometrist-timaru",
+      "source": "https://www.theterraceoptometrist.co.nz/",
+      "finding": "Full operator page confirms21cTheTerraceTimaru7910; describes purpose-built1970s downstairs optometry with upstairs private residence at21TheTerrace. No explicit named centre. Existing The Terrace corridors inWellington andNorthIpswich are unrelated.",
+      "next": "Record supported premises context and unresolved exact canonical study membership without dropping unitC."
+    },
+    {
+      "store_id": "independent-other-optical-osm-ne-node-12611705756",
+      "source": "https://www.gisborneoptometrists.co.nz/team",
+      "finding": "Full operator page confirms211GladstoneRdGisborne4010 and068675465; explicitly describes block by the clock. Existing canonical corridor-nz-gisborne-gisborne-gladstone-road is available.",
+      "next": "Inspect existing corridor section and corroborate operator contact before accepting."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-shattky-hastings",
+      "source": "https://www.shattky.co.nz/",
+      "finding": "Operator homepage confirms116RussellStSouthHastings and068763777. Separately refers Waipukurau patients. No named shopping centre in inspected premises information.",
+      "next": "Inspect district/corridor evidence; no Russell Street corridor found in earlier name scan."
+    }
+  ]
+}

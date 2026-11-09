@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-26",
+  "previous_rows": {
+    "data/store_public_fact_overrides.csv:george-matilda-393": [],
+    "data/store_public_fact_overrides.csv:george-matilda-446": [],
+    "data/store_place_overrides.csv:george-matilda-446": [],
+    "data/store_place_overrides.csv:specsavers-3688": [],
+    "data/place_canonical_overrides.csv:place-au-wa-currambine-central": [],
+    "retired_point": [
+      {
+        "place_id": "corridor-au-wa-currambine-marmion-avenue",
+        "latitude": "-31.74159792481115",
+        "longitude": "115.73802246587165",
+        "evidence_url": "https://www.openstreetmap.org/way/579330277",
+        "verified_at": "2026-10-18",
+        "confidence": "Medium",
+        "method": "Reviewed street geometry",
+        "reference_store_id": "",
+        "reason": "Approximate display reference on evidenced Marmion Avenue road geometry. Exact recorded road name; bounded road-only query. Larger displacement individually inspected against retained mapped road geometry. Not surveyed frontage, study boundary or customer catchment. Does not establish shop membership."
+      }
+    ],
+    "data/retired_place_coordinate_reviews.csv:corridor-au-wa-currambine-marmion-avenue": [],
+    "data/store_coordinate_overrides.csv:eyecare-plus-163379": []
+  }
+}

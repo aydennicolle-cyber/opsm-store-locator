@@ -23,7 +23,9 @@ class OpticalEvidenceTests(unittest.TestCase):
         place['directory_records'] = copy.deepcopy(place['observations'])
         place['coverage'] = {'captured_listings': 2}
         place['features'] = {'brand:city optics': ['0', '1'], 'category:food': ['1']}
-        reviews = [{'place_id': 'centre', 'source_id': str(i), 'store_id': 'c', 'decision': decision} for i, decision in enumerate(['pair', 'duplicate'])]
+        reviews = [{'place_id': 'centre', 'source_id': str(i), 'store_id': 'c', 'decision': decision,
+                    'basis': 'Synthetic identity review', 'review_date': '2026-10-15',
+                    'source_url': 'https://example.org/store'} for i, decision in enumerate(['pair', 'duplicate'])]
         result = reconcile(p, {'centre'}, reviews)[0]
         self.assertEqual(result['directory_listed_count'], 1)
         self.assertEqual(result['census_linked_count'], 1)
@@ -115,7 +117,9 @@ class OpticalEvidenceTests(unittest.TestCase):
         self.assertNotIn('place-au-sa-westlakes-shopping-centre', {p['place_id'] for p in places})
 
     def test_reviewed_identity_requires_existing_accepted_membership(self):
-        decision = {'place_id':'centre', 'source_id':'0', 'store_id':'s', 'decision':'pair'}
+        decision = {'place_id':'centre', 'source_id':'0', 'store_id':'s', 'decision':'pair',
+                    'basis':'Synthetic identity review', 'review_date':'2026-10-15',
+                    'source_url':'https://example.org/store'}
         p = self.payload(names=('Practice name',))
         reconcile(p, {'centre'}, [decision])
         self.assertIsNone(p['places'][0]['optical_reconciliation']['directory_records'][0]['store_id'])
@@ -164,6 +168,43 @@ class OpticalEvidenceTests(unittest.TestCase):
         self.assertFalse(r['review_items'][0]['resolved'])
         self.assertEqual(r['review_items'][0]['reason'], decision['basis'])
         self.assertEqual(r['census_linked_count'], 1)
+
+
+    def test_partial_source_omission_is_explained_without_changing_outlet(self):
+        census = [{'store_id': 's', 'operator': 'Specsavers'}]
+        p = self.payload(census, ())
+        p['places'][0]['coverage'] = {'directory_complete': False}
+        reconcile(p, {'centre'}, [])
+        r = p['places'][0]['optical_reconciliation']
+        self.assertEqual(p['places'][0]['optical'], census)
+        self.assertEqual(r['census_not_in_directory'], ['s'])
+        self.assertEqual((r['unresolved_issue_count'], r['explained_difference_count']), (0, 1))
+        self.assertTrue(r['review_items'][0]['explained_by_source_coverage'])
+        self.assertNotIn('review_date', r['review_items'][0])
+        self.assertEqual(p['places'][0]['other_optical_presence'], 'present')
+
+    def test_complete_street_publisher_page_is_not_complete_street_coverage(self):
+        p = self.payload([{'store_id': 's', 'operator': 'Specsavers'}], ())
+        p['places'][0]['coverage'] = {'directory_complete': True, 'format_scope': 'named street'}
+        reconcile(p, {'centre'}, [])
+        r = p['places'][0]['optical_reconciliation']
+        self.assertEqual(r['unresolved_issue_count'], 0)
+        self.assertEqual(r['explained_difference_count'], 1)
+
+    def test_complete_centre_source_omission_still_requires_review(self):
+        p = self.payload([{'store_id': 's', 'operator': 'Specsavers'}], ())
+        p['places'][0]['coverage'] = {'directory_complete': True, 'format_scope': 'canonical centre'}
+        reconcile(p, {'centre'}, [])
+        self.assertEqual(p['places'][0]['optical_reconciliation']['unresolved_issue_count'], 1)
+
+    def test_partial_source_does_not_explain_ambiguous_same_brand_branches(self):
+        p = self.payload([{'store_id': 'a', 'operator': 'Specsavers'},
+                          {'store_id': 'b', 'operator': 'Specsavers'}])
+        p['places'][0]['coverage'] = {'directory_complete': False}
+        reconcile(p, {'centre'}, [])
+        r = p['places'][0]['optical_reconciliation']
+        self.assertEqual(r['unresolved_issue_count'], 3)
+        self.assertTrue(all(not r['resolved'] for r in r['review_items']))
 
 
 if __name__ == '__main__':

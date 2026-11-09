@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-10-27",
+  "browser_observations": [
+    "CS Square alias search returns exactly one Caroline Springs Square result",
+    "Profile 29-35 Lake Street whole-property address and original 2026-10-26 check date preserved",
+    "Both Specsavers and Spectacle Hub shown IN CENTRE with accepted place explanation",
+    "Approximate point and missing retail-context warnings visible"
+  ],
+  "download": {
+    "path": "/Users/ayden/Downloads/bailey-place-tenants-2026-10-27 (10).csv",
+    "sha256": "a6ed0feac6d1b722dc4728c13b99330a8186cae59aad8dc58275c385ef720509",
+    "rows": [
+      {
+        "place_id": "place-au-vic-caroline-springs-square",
+        "place_name": "Caroline Springs Square",
+        "country": "Australia",
+        "state": "VIC",
+        "membership_type": "Accepted exact-place optical membership",
+        "tenant_id": "optical-store-independent-other-optical-provision-186700",
+        "tenant_name": "Spectacle Hub \u2013 Caroline Springs",
+        "retailer": "Independent / Other optical",
+        "category": "Optical",
+        "anchor_flag": "false",
+        "selection_basis": "Official CS Square directory and operator contact page agree on Spectacle Hub Shop 63, 29-35 Lake Street, Caroline Springs and phone 03 9363 3255. Explicit centre tenancy supersedes Lake Street-only association. Retain original source capture date, trading status and map position.",
+        "status": "Active",
+        "source_url": "https://www.cssquare.com.au/stores/spectacle-hub-optometrists",
+        "source_type": "Accepted store-place evidence",
+        "source_date": "",
+        "verified_at": "2026-10-27",
+        "confidence": "High"
+      },
+      {
+        "place_id": "place-au-vic-caroline-springs-square",
+        "place_name": "Caroline Springs Square",
+        "country": "Australia",
+        "state": "VIC",
+        "membership_type": "Accepted exact-place optical membership",
+        "tenant_id": "optical-store-specsavers-3648",
+        "tenant_name": "Caroline Springs",
+        "retailer": "Specsavers",
+        "category": "Optical",
+        "anchor_flag": "false",
+        "selection_basis": "Canonicalised from the store's named retail-place evidence",
+        "status": "Active",
+        "source_url": "https://www.specsavers.com.au/stores/carolinesprings",
+        "source_type": "Accepted store-place evidence",
+        "source_date": "",
+        "verified_at": "2026-09-01",
+        "confidence": "High"
+      }
+    ],
+    "checks_passed": true
+  }
+}

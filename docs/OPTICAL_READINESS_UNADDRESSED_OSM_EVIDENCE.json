@@ -1,0 +1,46 @@
+{
+  "source_url": "https://www.openstreetmap.org/api/0.6/nodes.json?nodes=2613244951%2C4546327090%2C3991780847",
+  "checked_at": "2026-10-27",
+  "elements": [
+    {
+      "id": 2613244951,
+      "lat": -34.0546197,
+      "lon": 151.151824,
+      "tags": {
+        "name": "Eye care Optometrist",
+        "shop": "optician",
+        "source": "survey",
+        "source:location": "bing"
+      },
+      "timestamp": "2014-01-07T11:02:49Z",
+      "version": 1,
+      "url": "https://www.openstreetmap.org/node/2613244951"
+    },
+    {
+      "id": 3991780847,
+      "lat": -33.8231438,
+      "lon": 151.194206,
+      "tags": {
+        "name": "avian eyecare",
+        "opening_hours": "Mo-Fr 09:00-17:00",
+        "shop": "optician"
+      },
+      "timestamp": "2018-11-04T01:34:47Z",
+      "version": 2,
+      "url": "https://www.openstreetmap.org/node/3991780847"
+    },
+    {
+      "id": 4546327090,
+      "lat": -33.9213668,
+      "lon": 150.9241029,
+      "tags": {
+        "name": "Optometrists",
+        "name:en": "Optometrists",
+        "shop": "optician"
+      },
+      "timestamp": "2016-12-09T11:46:32Z",
+      "version": 2,
+      "url": "https://www.openstreetmap.org/node/4546327090"
+    }
+  ]
+}

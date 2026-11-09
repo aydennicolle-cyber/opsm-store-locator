@@ -1,0 +1,247 @@
+{
+  "status": "Prepared inventory context for individual research; no corrections applied.",
+  "records": [
+    {
+      "store": {
+        "store_id": "independent-other-optical-osm-au-node-13670708403",
+        "name": "J & J Optical",
+        "retailer": "Independent / Other optical",
+        "address": "1A, The Pavilion, 17 Mitchell Drive, East Maitland NSW 2323",
+        "status": "Active",
+        "retained_evidence_url": "https://www.jjoptical.com.au/",
+        "retained_evidence_date": "2026-10-01",
+        "retained_evidence_reason": "Current operator publishes a named physical retail practice and regular trading hours; corroborating named map and public directory evidence agrees. No closure evidence established. This is a public-evidence check, not an onsite or telephone verification.",
+        "candidate": null,
+        "disposition": "Needs individual evidence assessment; inventory listing is not a completed review."
+      },
+      "inventory_candidates": [
+        {
+          "place_id": "corridor-au-nsw-maitland-high-street",
+          "name": "High Street",
+          "suburb": "Maitland",
+          "state": "NSW",
+          "address": "High Street",
+          "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
+          "source_basis": "Corridor derived from mapped street-front optical stores on the same street and locality"
+        },
+        {
+          "place_id": "place-au-nsw-maitland-central",
+          "name": "Maitland Central",
+          "suburb": "Maitland",
+          "state": "NSW",
+          "address": "Shop 7, Maitland Central, 405 High Street, Maitland NSW 2320",
+          "source_url": "https://www.hunteroptics.com.au/contact-us",
+          "source_basis": "The public practice or centre directory explicitly identifies this outlet in Maitland Central. Membership is independent of point precision."
+        },
+        {
+          "place_id": "place-au-nsw-stockland-green-hills-shopping-centre",
+          "name": "Stockland Green Hills",
+          "suburb": "East Maitland",
+          "state": "NSW",
+          "address": "1 Molly Morgan Drive, East Maitland NSW 2323",
+          "source_url": "https://www.stockland.com.au/shopping-centres/centres/stockland-green-hills",
+          "source_basis": "Official property homepage publishes this centre address in its contact/location content or metadata. This check confirms the published address, not a surveyed boundary or entrance. Address publication date unknown; generic website modification dates do not date the address."
+        }
+      ],
+      "limitation": "Text matches only; no membership decision or fresh external verification."
+    },
+    {
+      "store": {
+        "store_id": "independent-other-optical-reviewed-au-emu-plains-optical",
+        "name": "Emu Plains Optical",
+        "retailer": "Independent / Other optical",
+        "address": "2 Emerald Street, Emu Plains NSW 2750",
+        "status": "Active",
+        "retained_evidence_url": "https://www.emuplainsoptical.com.au/contact-us/",
+        "retained_evidence_date": "2026-09-12",
+        "retained_evidence_reason": "Official practice website confirms optical retail, current published contact or appointment availability and this premises. Coordinate reference is the matching prescription-provider entry eyres:809 in the public Eyres by Shamir practice locator; its update date and exact tenancy accuracy are unverified. Review date records the check, not a claimed source update.",
+        "candidate": null,
+        "disposition": "Needs individual evidence assessment; inventory listing is not a completed review."
+      },
+      "inventory_candidates": [
+        {
+          "place_id": "place-au-nsw-lennox-village",
+          "name": "Lennox Village",
+          "suburb": "Emu Plains",
+          "state": "NSW",
+          "address": "Shop 25, Lennox Village, corner Great Western Highway and Pyramid Street, Emu Plains NSW 2750",
+          "source_url": "https://absoluteeyecare.com.au/",
+          "source_basis": "Official practice page explicitly identifies the outlet in Lennox Village."
+        }
+      ],
+      "limitation": "Text matches only; no membership decision or fresh external verification."
+    },
+    {
+      "store": {
+        "store_id": "independent-other-optical-osm-au-node-4353406489",
+        "name": "Hornsby Optical",
+        "retailer": "Independent / Other optical",
+        "address": "Shop 4, 43A Florence Street, Hornsby NSW 2077",
+        "status": "Active",
+        "retained_evidence_url": "https://www.hornsbyoptical.com.au/",
+        "retained_evidence_date": "2026-10-01",
+        "retained_evidence_reason": "Current operator site provides this branch contact, eye-test appointments and opening schedule, with no closure notice observed. This dated branch check does not refresh the original OSM source.",
+        "candidate": null,
+        "disposition": "Needs individual evidence assessment; inventory listing is not a completed review."
+      },
+      "inventory_candidates": [
+        {
+          "place_id": "place-au-nsw-westfield-hornsby",
+          "name": "Westfield Hornsby",
+          "suburb": "Hornsby",
+          "state": "NSW",
+          "address": "236 Pacific Highway, Hornsby NSW 2077",
+          "source_url": "https://www.westfield.com.au/hornsby",
+          "source_basis": "Official centre homepage identifies the property and publishes this whole-centre address. No tenant unit, frontage, entrance or boundary inferred; source publication date is not stated."
+        }
+      ],
+      "limitation": "Text matches only; no membership decision or fresh external verification."
+    },
+    {
+      "store": {
+        "store_id": "independent-other-optical-reviewed-au-icon-eyewear-hurstville",
+        "name": "ICON Eyewear \u2014 Hurstville",
+        "retailer": "Independent / Other optical",
+        "address": "28/2A Cross Street, Hurstville NSW 2220, Australia",
+        "status": "Active",
+        "retained_evidence_url": "https://iconeyewear.com.au/pages/contact",
+        "retained_evidence_date": "2026-09-27",
+        "retained_evidence_reason": "Operator homepage advertises physical frames and prescription lenses with current seasonal promotions. Its contact page gives this unit, phone and direct access ramp from Cross Street; the named public profile agrees. The partner hearing clinic is not counted as an additional optical retailer. No formal centre or precinct membership is established. Public coordinates use the named business feature, not the map viewport, and are approximate; exact shop-front position is unverified. No onsite or telephone confirmation is claimed. Uncertain formal setting does not exclude this physical retailer from network or competition analysis.",
+        "candidate": {
+          "priority": "Low",
+          "review_reason": "Possible missed centre",
+          "store_id": "independent-other-optical-reviewed-au-icon-eyewear-hurstville",
+          "retailer": "Independent / Other optical",
+          "name": "ICON Eyewear \u2014 Hurstville",
+          "current_location_type": "Unclassified",
+          "current_venue_id": "",
+          "full_address": "28/2A Cross Street, Hurstville NSW 2220, Australia",
+          "candidate_venue_id": "nsw-hurstville-westfield",
+          "candidate_venue_name": "Westfield Hurstville",
+          "evidence": "Coordinates are within 125 m of a named centre; proximity is not proof",
+          "distance_m": "81.4",
+          "automatic_action": "None - human review required",
+          "review_status": "Pending"
+        },
+        "disposition": "Needs individual evidence assessment; inventory listing is not a completed review."
+      },
+      "inventory_candidates": [
+        {
+          "place_id": "corridor-au-nsw-hurstville-the-avenue",
+          "name": "The Avenue",
+          "suburb": "Hurstville",
+          "state": "NSW",
+          "address": "The Avenue",
+          "source_url": "https://www.provision.com.au/practice/kimber-optical/",
+          "source_basis": "Corridor derived from mapped street-front optical stores on the same street and locality"
+        },
+        {
+          "place_id": "place-au-nsw-westfield-hurstville",
+          "name": "Westfield Hurstville",
+          "suburb": "Hurstville",
+          "state": "NSW",
+          "address": "Cnr Cross St and Park Rd, Hurstville NSW 2220",
+          "source_url": "https://www.westfield.com.au/hurstville",
+          "source_basis": "Official centre homepage identifies the property and publishes this whole-centre address. No tenant unit, frontage, entrance or boundary inferred; source publication date is not stated."
+        }
+      ],
+      "limitation": "Text matches only; no membership decision or fresh external verification."
+    },
+    {
+      "store": {
+        "store_id": "independent-other-optical-reviewed-au-brennan-smith-inverell",
+        "name": "Brennan & Smith Optometrists \u2014 Inverell",
+        "retailer": "Independent / Other optical",
+        "address": "36 Otho Street, Inverell NSW 2360",
+        "status": "Active",
+        "retained_evidence_url": "https://www.brennanandsmith.com.au/inverell",
+        "retained_evidence_date": "2026-09-12",
+        "retained_evidence_reason": "Official practice website confirms optical retail, current published contact or appointment availability and this premises. Coordinate reference is the matching prescription-provider entry eyres:1250 in the public Eyres by Shamir practice locator; its update date and exact tenancy accuracy are unverified. Review date records the check, not a claimed source update.",
+        "candidate": null,
+        "disposition": "Needs individual evidence assessment; inventory listing is not a completed review."
+      },
+      "inventory_candidates": [
+        {
+          "place_id": "corridor-au-nsw-inverell-byron-street",
+          "name": "Byron Street",
+          "suburb": "Inverell",
+          "state": "NSW",
+          "address": "Byron Street",
+          "source_url": "https://www.specsavers.com.au/stores/inverell",
+          "source_basis": "Corridor derived from mapped street-front optical stores on the same street and locality"
+        }
+      ],
+      "limitation": "Text matches only; no membership decision or fresh external verification."
+    },
+    {
+      "store": {
+        "store_id": "independent-other-optical-reviewed-au-westfund-lithgow",
+        "name": "Westfund Eye Care \u2014 Lithgow",
+        "retailer": "Independent / Other optical",
+        "address": "120 Main Street, Lithgow NSW 2790",
+        "status": "Active",
+        "retained_evidence_url": "https://www.westfund.com.au/health-services/eye-care/",
+        "retained_evidence_date": "2026-09-19",
+        "retained_evidence_reason": "Official eye-care page confirms frames, lenses, optical appointments and this branch address. The practice-linked directions URL resolves to the named premises destination; point is not surveyed tenancy geometry. Public discovery from the current eye-care network. Public evidence captured on 12 September 2026 and reviewed for this admission on 19 September; the review date is not a claimed source-update date.",
+        "candidate": null,
+        "disposition": "Needs individual evidence assessment; inventory listing is not a completed review."
+      },
+      "inventory_candidates": [
+        {
+          "place_id": "corridor-au-nsw-lithgow-main-street",
+          "name": "Main Street",
+          "suburb": "Lithgow",
+          "state": "NSW",
+          "address": "Main Street",
+          "source_url": "https://chemistwarehouseoptometry.com.au/pages/store-details/lithgow-optical",
+          "source_basis": "Corridor derived from mapped street-front optical stores on the same street and locality"
+        }
+      ],
+      "limitation": "Text matches only; no membership decision or fresh external verification."
+    },
+    {
+      "store": {
+        "store_id": "independent-other-optical-reviewed-au-new-look-maitland",
+        "name": "New Look Eyewear",
+        "retailer": "Independent / Other optical",
+        "address": "451 High Street, Maitland NSW 2320",
+        "status": "Active",
+        "retained_evidence_url": "https://www.newlookeyewear.com.au",
+        "retained_evidence_date": "2026-09-12",
+        "retained_evidence_reason": "Official practice website confirms optical retail, current published contact or appointment availability and this premises. Coordinate reference is the matching prescription-provider entry eyres:1108 in the public Eyres by Shamir practice locator; its update date and exact tenancy accuracy are unverified. Review date records the check, not a claimed source update.",
+        "candidate": null,
+        "disposition": "Needs individual evidence assessment; inventory listing is not a completed review."
+      },
+      "inventory_candidates": [
+        {
+          "place_id": "corridor-au-nsw-maitland-high-street",
+          "name": "High Street",
+          "suburb": "Maitland",
+          "state": "NSW",
+          "address": "High Street",
+          "source_url": "https://www.opsm.com.au/en/opsm-au/find-store",
+          "source_basis": "Corridor derived from mapped street-front optical stores on the same street and locality"
+        },
+        {
+          "place_id": "place-au-nsw-maitland-central",
+          "name": "Maitland Central",
+          "suburb": "Maitland",
+          "state": "NSW",
+          "address": "Shop 7, Maitland Central, 405 High Street, Maitland NSW 2320",
+          "source_url": "https://www.hunteroptics.com.au/contact-us",
+          "source_basis": "The public practice or centre directory explicitly identifies this outlet in Maitland Central. Membership is independent of point precision."
+        },
+        {
+          "place_id": "place-au-nsw-stockland-green-hills-shopping-centre",
+          "name": "Stockland Green Hills",
+          "suburb": "East Maitland",
+          "state": "NSW",
+          "address": "1 Molly Morgan Drive, East Maitland NSW 2323",
+          "source_url": "https://www.stockland.com.au/shopping-centres/centres/stockland-green-hills",
+          "source_basis": "Official property homepage publishes this centre address in its contact/location content or metadata. This check confirms the published address, not a surveyed boundary or entrance. Address publication date unknown; generic website modification dates do not date the address."
+        }
+      ],
+      "limitation": "Text matches only; no membership decision or fresh external verification."
+    }
+  ]
+}

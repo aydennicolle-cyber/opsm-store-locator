@@ -1,0 +1,108 @@
+{
+  "fetched_at": "2026-10-20T13:20:41.320857+00:00",
+  "source_urls": [
+    "https://stores.ray-ban.com/australia"
+  ],
+  "scope": "Australia; no claim of New Zealand completeness",
+  "directory_count": 1,
+  "captured_count": 1,
+  "stores": [
+    {
+      "id": "C280",
+      "uid": 15882093,
+      "slug": "australia/vic/chadstone/1341-dandenong-road-shop",
+      "name": "Ray-Ban",
+      "address": {
+        "city": "Chadstone",
+        "countryCode": "AU",
+        "line1": "1341 Dandenong Road Shop",
+        "line2": "Unit FB188, Level 1",
+        "localizedCountryName": "Australia",
+        "localizedRegionName": "Victoria",
+        "postalCode": "3148",
+        "region": "VIC"
+      },
+      "geocodedCoordinate": {
+        "latitude": -37.8858541,
+        "longitude": 145.0847703
+      },
+      "yextDisplayCoordinate": {
+        "latitude": -37.88586362602766,
+        "longitude": 145.08431164225843
+      },
+      "mainPhone": "+61 3 8840 0940",
+      "hours": {
+        "friday": {
+          "openIntervals": [
+            {
+              "end": "21:00",
+              "start": "09:00"
+            }
+          ]
+        },
+        "monday": {
+          "openIntervals": [
+            {
+              "end": "17:30",
+              "start": "09:00"
+            }
+          ]
+        },
+        "saturday": {
+          "openIntervals": [
+            {
+              "end": "21:00",
+              "start": "09:00"
+            }
+          ]
+        },
+        "sunday": {
+          "openIntervals": [
+            {
+              "end": "19:00",
+              "start": "10:00"
+            }
+          ]
+        },
+        "thursday": {
+          "openIntervals": [
+            {
+              "end": "21:00",
+              "start": "09:00"
+            }
+          ]
+        },
+        "tuesday": {
+          "openIntervals": [
+            {
+              "end": "17:30",
+              "start": "09:00"
+            }
+          ]
+        },
+        "wednesday": {
+          "openIntervals": [
+            {
+              "end": "17:30",
+              "start": "09:00"
+            }
+          ]
+        }
+      },
+      "source_url": "https://stores.ray-ban.com/australia/vic/chadstone/1341-dandenong-road-shop",
+      "page_sha256": "1fa6bfe050a2fa648c9657eea4716aae711cd89b4bfdb35afcc71425fa7f192d"
+    }
+  ],
+  "supplementary_evidence": [
+    {
+      "source_url": "https://www.chadstone.com.au/stores/ray-ban",
+      "observed_at": "2026-10-20T13:20:41.320857+00:00",
+      "facts": "Centre directory names Ray-Ban, same phone, and explicitly advertises a full-time optometrist and comprehensive eye tests. Locator says Level 1; centre directory says Lower Ground. Floor discrepancy retained; exact frontage unverified."
+    }
+  ],
+  "directory_source_id": "rayBanDirectory_au",
+  "directory_sha256": "04cacf4c17498af7c15dd23ce9ba4c9f3fb6a8568edc6f49b0e863eb7efa4f5f",
+  "directory_branch_slugs": [
+    "australia/vic/chadstone/1341-dandenong-road-shop"
+  ]
+}

@@ -12,6 +12,7 @@ from collections import Counter, defaultdict
 from datetime import date, datetime, timezone
 from pathlib import Path
 from market_points import resolve_market
+from place_metric_evidence import observation, reconcile, merge_place_metrics
 from urllib.parse import urlparse
 
 
@@ -592,39 +593,35 @@ def market_for_place(place: dict, market_features: list[dict]) -> dict:
 
 def portfolio_metrics(assets: list[dict]) -> dict[str, dict]:
     """Use the same accepted, active asset metrics in property and screening builds."""
-    by_place: dict[str, dict] = defaultdict(dict)
+    reports = defaultdict(lambda: defaultdict(list))
     for asset in assets:
         place_id = asset.get("matched_place_id", "")
         if not place_id or asset.get("status") != "ACTIVE":
             continue
-        metrics = by_place[place_id]
         for source_field, field, multiplier in (
             ("gla_sqm", "gla_sqm", 1),
             ("tenancy_count", "tenancy_count", 1),
             ("annual_visits_m", "annual_visits", 1_000_000),
         ):
             raw = asset.get(source_field)
-            if raw in (None, "") or field in metrics:
+            if raw in (None, ""):
                 continue
-            value = float(raw) * multiplier
-            if not math.isfinite(value) or value < 0:
-                raise ValueError(f"Invalid portfolio metric: {asset['portfolio_asset_id']}.{source_field}")
-            if field == "tenancy_count" and not value.is_integer():
-                raise ValueError(f"Non-integer tenancy count: {asset['portfolio_asset_id']}")
-            metrics[field] = int(value) if field == "tenancy_count" else value
             evidence = {key: asset.get(key, "") for key in (
                 "portfolio_asset_id", "source_url", "source_date", "last_verified_at", "confidence"
             )}
             if source_field == "gla_sqm" and asset.get("gla_source_url"):
-                # A metric can have a different source/vintage from ownership evidence.
                 evidence.update(source_url=asset["gla_source_url"],
                                 source_date=asset.get("gla_source_date", ""),
                                 source_period=asset.get("gla_source_period", ""),
                                 last_verified_at=asset.get("gla_last_verified_at", ""))
-            metrics.setdefault("metric_evidence", {})[field] = evidence
+            reports[place_id][field].append(observation(field, float(raw) * multiplier, evidence))
+    result = {pid: reconcile(fields) for pid, fields in reports.items()}
+    for metrics in result.values():
+        # Compatibility only. Individual measures retain their own evidence above.
+        for evidence in metrics["metric_evidence"].values():
             for key in ("source_url", "source_date", "last_verified_at"):
                 metrics.setdefault(key, evidence[key])
-    return dict(by_place)
+    return result
 
 
 def main() -> None:
@@ -784,6 +781,7 @@ def main() -> None:
             "competitor_context": competition,
             "market": market,
             **portfolio_metrics_by_place.get(place_id, {}),
+            **merge_place_metrics(place, portfolio_metrics_by_place.get(place_id, {})),
         }
         summaries[place_id] = summary
         feature_vectors[place_id] = {

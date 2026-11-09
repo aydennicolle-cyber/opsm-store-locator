@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-10-30",
+  "scope": "Two repaired AU property profiles and actual downloads; not final whole-app verification",
+  "summary_checks": [
+    {
+      "path": "/Users/ayden/Downloads/bailey-place-summary-2026-10-30.csv",
+      "sha256": "ecfda52dfadda241fd1d12690be4618c774ec9b54f09b5ced57d31d431412464",
+      "place_id": "place-au-nt-yeperenye-shopping-centre",
+      "address": "36\u201338 Hartley Street",
+      "address_evidence": {
+        "source_url": "https://www.yeperenye.com.au/contact-us",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-10-27",
+        "basis": "Official centre/property page explicitly publishes this property reference address. Address review only; no new surveyed boundary, entrance, shopfront position, tenant or trading-status assertion. Individual business addresses and original records retained. Publication date unavailable."
+      },
+      "coordinate_reason": "Approximate display point averaged from the retained centre references; not a surveyed boundary, entrance or shopfront.",
+      "passed": true
+    },
+    {
+      "path": "/Users/ayden/Downloads/bailey-place-summary-2026-10-30 (1).csv",
+      "sha256": "ba30cd303040fef0312e30694d8447553cb61a762a0165e2e8b83ffbc58d764d",
+      "place_id": "place-au-wa-northgate-shopping-centre",
+      "address": "110 Chapman Road",
+      "address_evidence": {
+        "source_url": "https://retail.centuria.com.au/retail-centre/northgate-shopping-centre/",
+        "source_date": null,
+        "record_date": "",
+        "checked_at": "2026-10-27",
+        "basis": "Official centre/property page explicitly publishes this property reference address. Address review only; no new surveyed boundary, entrance, shopfront position, tenant or trading-status assertion. Individual business addresses and original records retained. Publication date unavailable."
+      },
+      "coordinate_reason": "Approximate display point averaged from the retained centre references; not a surveyed boundary, entrance or shopfront.",
+      "passed": true
+    }
+  ],
+  "tenant_check": {
+    "path": "/Users/ayden/Downloads/bailey-place-tenants-2026-10-30.csv",
+    "rows": 3,
+    "passed": true,
+    "identifier_basis": "Export prefixes source store IDs with optical-store-; compared exact prefixed IDs."
+  },
+  "browser_observations": [
+    "Yeperenye search selects Alice Springs profile and centres map on named pin. Correct address, source link, unknown publication date, retained review date and approximate-point explanation visible.",
+    "Yeperenye shows Eyecare Plus, OPSM and BrightEyes IN CENTRE; Optical Superstore at Alice Plaza separately within 2km.",
+    "Northgate search distinguishes Geraldton and Glenorchy; two additional records have unrecorded locality and remain in address triage.",
+    "Northgate Geraldton shows corrected address and evidence, three accepted tenants separate from nearby Specsavers, Midwest Optical and SpecsPlus.",
+    "Screening completeness explicitly does not measure local census completeness or investment confidence; missing co-tenancy research does not imply absence."
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "status": "Coordinate repair validated in generated data, live store profile and actual Store CSV. Full-goal clean rebuild and final audit remain.",
+  "original_store": {
+    "retailer": "George & Matilda",
+    "store_id": "george-matilda-477",
+    "affiliations": "",
+    "name": "George & Matilda Eyecare for Mount Martha Optical",
+    "status": "Active",
+    "country": "Australia",
+    "state": "VIC",
+    "suburb": "Mount Martha",
+    "postcode": "3934",
+    "full_address": "2 Watson Road, Shop 2, Mount Martha, VIC, 3934, Australia",
+    "phone": "(03) 5974 4000",
+    "latitude": "-38.2672584",
+    "longitude": "145.0115692",
+    "official_url": "https://georgeandmatilda.com.au/stores/optometrist-mount-martha-vic/",
+    "website_url": "",
+    "instagram_url": "",
+    "facebook_url": "",
+    "directory_url": "",
+    "services": "",
+    "audiology": "false",
+    "venue_name": "",
+    "venue_id": "",
+    "location_type": "Main Street / Street-front",
+    "classification_confidence": "Medium",
+    "classification_basis": "Official address has a shop/unit within a numbered street address but no named centre evidence",
+    "store_area_sqm": "",
+    "area_measure": "",
+    "area_source": "",
+    "area_date": "",
+    "area_confidence": "Unknown",
+    "source_url": "https://georgeandmatilda.com.au/find-a-store/",
+    "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+    "business_type": "",
+    "identity_reviewed": "",
+    "coordinates_reviewed": "",
+    "status_evidence_url": "",
+    "status_verified_at": "",
+    "status_reason": "",
+    "coordinate_confidence": "",
+    "coordinate_evidence_url": "",
+    "coordinates_verified_at": "",
+    "coordinate_reason": "",
+    "public_facts_verified_at": "",
+    "public_facts_evidence_url": "",
+    "public_facts_reason": ""
+  },
+  "coordinate_evidence_url": "https://www.google.com/maps/place/George+%26+Matilda+Eyecare+for+Mount+Martha+Optical/@-38.267032,145.0141344,17z/data=!3m1!4b1!4m6!3m5!1s0x6ad5db0529a22975:0x518933de9b6413dd!8m2!3d-38.267032!4d145.0141344!16s%2Fg%2F11g8_bk78r",
+  "latitude": -38.267032,
+  "longitude": 145.0141344,
+  "checked_at": "2026-10-27",
+  "operator_source": "https://georgeandmatilda.com.au/stores/optometrist-mount-martha-vic/",
+  "basis": "The official branch page links Google place ID ChIJdSmiKQXb1WoR3RNkm94ziVE. The visible named map matches Shop 2/2 Watson Road and phone 03 5974 4000. Use the business coordinates from the place URL (3d/4d), not viewport centre. This is a premises reference, not surveyed frontage or entrance. Raw original point remains preserved in source and this receipt; no relocation asserted.",
+  "next_steps": "After current membership validation, apply coordinate override, stage exactly one store change preserving all other facts/status/source dates, query ABS for new point, and rebuild dependent outputs.",
+  "raw_store_sha256_before": "5b740422dd8cda129a186aebbe852b67024828387293982a741e7a57768e68eb",
+  "coordinate_override": {
+    "store_id": "george-matilda-477",
+    "latitude": "-38.267032",
+    "longitude": "145.0141344",
+    "evidence_url": "https://www.google.com/maps/place/George+%26+Matilda+Eyecare+for+Mount+Martha+Optical/@-38.267032,145.0141344,17z/data=!3m1!4b1!4m6!3m5!1s0x6ad5db0529a22975:0x518933de9b6413dd!8m2!3d-38.267032!4d145.0141344!16s%2Fg%2F11g8_bk78r",
+    "coordinate_source": "Operator-linked named business map",
+    "verified_at": "2026-10-27",
+    "reason": "The official branch page links Google place ID ChIJdSmiKQXb1WoR3RNkm94ziVE. The visible named map matches Shop 2/2 Watson Road and phone 03 5974 4000. Use the business coordinates from the place URL (3d/4d), not viewport centre. This is a premises reference, not surveyed frontage or entrance. Raw original point remains preserved in source and this receipt; no relocation asserted.",
+    "coordinate_confidence": "Medium"
+  },
+  "staged_comparison": {
+    "george-matilda-477": {
+      "latitude": [
+        "-38.2672584",
+        "-38.267032"
+      ],
+      "longitude": [
+        "145.0115692",
+        "145.0141344"
+      ],
+      "coordinate_confidence": [
+        "",
+        "Medium"
+      ],
+      "coordinate_evidence_url": [
+        "",
+        "https://www.google.com/maps/place/George+%26+Matilda+Eyecare+for+Mount+Martha+Optical/@-38.267032,145.0141344,17z/data=!3m1!4b1!4m6!3m5!1s0x6ad5db0529a22975:0x518933de9b6413dd!8m2!3d-38.267032!4d145.0141344!16s%2Fg%2F11g8_bk78r"
+      ],
+      "coordinates_verified_at": [
+        "",
+        "2026-10-27"
+      ],
+      "coordinate_reason": [
+        "",
+        "The official branch page links Google place ID ChIJdSmiKQXb1WoR3RNkm94ziVE. The visible named map matches Shop 2/2 Watson Road and phone 03 5974 4000. Use the business coordinates from the place URL (3d/4d), not viewport centre. This is a premises reference, not surveyed frontage or entrance. Raw original point remains preserved in source and this receipt; no relocation asserted."
+      ]
+    }
+  },
+  "raw_store_sha256_after": "0f21e5de9ec30d6a5859a362440c79c4e1eac1271be3991739bed4e9e3053ae0",
+  "abs_new_point": {
+    "latitude": -38.267032,
+    "longitude": 145.0141344,
+    "match_status": "Unique",
+    "sa2_code": "214021382",
+    "sa2_name": "Mount Martha",
+    "match_count": 1,
+    "source_url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SA2/FeatureServer/0/query?where=1%3D1&geometry=145.0141344%2C-38.267032&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=sa2_code_2021%2Csa2_name_2021&returnGeometry=false&f=json",
+    "checked_at": "2026-10-27T10:07:09.587933+00:00"
+  },
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": {
+    "original_store_history_preserved": true,
+    "same_watson_road_membership": true,
+    "corrected_point_authoritatively_linked": true
+  },
+  "browser_store_export": {
+    "checked_at": "2026-10-27",
+    "path": "/Users/ayden/Downloads/optical-stores-filtered-2026-10-27.csv",
+    "sha256": "7bd1e4b1b530cbf96e81f54d943c14edd76170d8e827a65671c714923dfb8a96",
+    "verified": [
+      "One store search result",
+      "Watson Road accepted association preserved",
+      "Original source date and freshness warning visible",
+      "Operator-linked point explanation visible",
+      "Mount Martha ABS market shown",
+      "Nearby distances independent of filters",
+      "Actual filtered Store CSV has corrected point, confidence and evidence date while retaining original source capture"
+    ]
+  }
+}

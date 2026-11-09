@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-27",
+  "status": "Prepared; not applied",
+  "method": "Standard web full operator branch pages; no Firecrawl",
+  "cases": {
+    "bailey-nelson-fremantle": [
+      "https://baileynelson.com.au/pages/optometrist-fremantle",
+      "Full operator branch page confirms Unit9/71 Market Street and phone08 6149 9474. Retain the Market Street association and original unit address. A numbered unit does not by itself establish Manning Arcade tenancy; no additional named-arcade membership is asserted."
+    ],
+    "opsm-1083": [
+      "https://www.opsm.com.au/stores/wa/fremantle/opsm-fremantle/1083",
+      "Full operator branch page confirms89 Market Street and phone08 9335 3066. Retain Market Street; no explicit Manning Arcade tenancy established."
+    ],
+    "opsm-1082": [
+      "https://www.opsm.com.au/stores/wa/perth/opsm-perth-hay-st/1082",
+      "Full operator branch page confirms726 Hay Street and phone08 9321 5333. Retain Hay Street. The candidate names Sunglass Hut Perth Piccadilly Arcade, a different retailer; this name and nearby coordinates cannot establish OPSM membership."
+    ],
+    "independent-other-optical-osm-au-node-9892744780": [
+      "https://www.oakley.com/en-au/store-finder/store-details/o-store/393-george-st-sydney-new-south-wales-2000?storeId=C250C250",
+      "Full operator branch page confirms393 George Street and phone02 9299 0908. Retain George Street; no explicit Strand Arcade tenancy established. Preserve source-derived stable ID and accepted branch identity."
+    ]
+  }
+}

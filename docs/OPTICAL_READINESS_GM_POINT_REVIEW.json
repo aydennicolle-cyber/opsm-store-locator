@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-10-26",
+  "items": [
+    {
+      "store_id": "george-matilda-446",
+      "evidence": {
+        "url": "https://www.google.com/maps?output=embed&q=George%20and%20Matilda%20Eyecare%20Pad%201A%20Currambine%20Central%201244%20Marmion%20Avenue%20Currambine%20WA",
+        "checked_at": "2026-10-26",
+        "features": [
+          {
+            "feature_id": "0x2bcd549474e3e589:0x23c3a3df4a99cd9",
+            "name": "George & Matilda Eyecare for Eyes On Optometrists",
+            "point": [
+              -31.7396371,
+              115.7385397
+            ],
+            "address": "Pad 1A, Currambine Central, 1244 Marmion Ave, Currambine WA 6028",
+            "status_flag": null
+          }
+        ],
+        "limitation": "Named-query result; identity must be compared to operator written premises before use. Not a surveyed frontage."
+      },
+      "operator_linked_place_id": "ChIJieXjdJRUzSsR2Zyp9D06PAI",
+      "operator_map_cid_matches": true,
+      "next_action": "Applied; staged and rebuilt verification pending.",
+      "latitude": -31.7396371,
+      "longitude": 115.7385397,
+      "previous_store_point": {
+        "latitude": "-31.741214",
+        "longitude": "115.739481",
+        "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+        "full_address": "Pad 1A, Currambine Central, 1244 Marmion Avenue, Currambine WA 6028"
+      }
+    },
+    {
+      "store_id": "george-matilda-17206",
+      "evidence": {
+        "url": "https://www.google.com/maps?output=embed&q=Visual%20Eyes%20Optometry%20Maroochydore",
+        "checked_at": "2026-10-26",
+        "features": [
+          {
+            "feature_id": "0x6b9375dd89c1b3fd:0xe61ac51e8a63388f",
+            "name": "Visual Eyes Optometry",
+            "point": [
+              -26.6556415,
+              153.0884399
+            ],
+            "address": "154-164 Horton Parade, L1 Shop/319 Sunshine Plaza, Maroochydore QLD 4558",
+            "status_flag": null
+          }
+        ],
+        "limitation": "Named-query result; identity must be compared to operator written premises before use. Not a surveyed frontage."
+      },
+      "operator_linked_place_id": "ChIJ_bPBid11k2sRjzhjih7FGuY",
+      "operator_map_cid_matches": true,
+      "next_action": "Applied; staged and rebuilt verification pending.",
+      "latitude": -26.6556415,
+      "longitude": 153.0884399,
+      "previous_store_point": {
+        "latitude": "-26.6552899",
+        "longitude": "153.0896739",
+        "fetched_at": "2026-09-02T12:40:25.820359+00:00",
+        "full_address": "L1 Shop 319 Sunshine Plaza, Maroochydore, QLD, 4558, Australia"
+      }
+    }
+  ],
+  "status": "Two store point corrections and explicit low-confidence Currambine property reference applied. Original points retained here. Rebuild verification pending."
+}

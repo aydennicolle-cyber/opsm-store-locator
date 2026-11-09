@@ -1,0 +1,216 @@
+{
+  "checked_at": "2026-10-27",
+  "status": "All nine validation stages passed; seven generated outcomes verified. Browser and export verification remains pending.",
+  "raw_store_sha256": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "accepted": [
+    {
+      "store_id": "independent-other-optical-reviewed-nz-paterson-burn-cambridge",
+      "location_setting": "High Street",
+      "canonical_name": "Duke Street",
+      "place_type": "High Street Corridor",
+      "official_url": "https://www.patersonburn.co.nz/practices/cambridge",
+      "evidence_basis": "Operator branch and eight-practice booking directory retrieved 27 October 2026 explicitly identify 49 Duke Street. Accept the existing street-and-locality corridor from written premises evidence, not proximity. Keep distinct from Matthews at 33 Duke Street; both have independently named premises on this Cambridge street. Original store point and source dates retained; no surveyed corridor boundary claimed.",
+      "confidence": "Medium",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "corridor-nz-waikato-cambridge-duke-street"
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-paterson-burn-thames",
+      "location_setting": "High Street",
+      "canonical_name": "Pollen Street",
+      "place_type": "High Street Corridor",
+      "official_url": "https://www.patersonburn.co.nz/practices/thames",
+      "evidence_basis": "Operator branch and eight-practice booking directory retrieved 27 October 2026 explicitly identify 457 Pollen Street. Accept the existing street-and-locality corridor from written premises evidence, not proximity. Retain the older provider-list conflict at 452 Pollen Street in evidence; current operator confirms 457. Do not create a second branch or assign Goldfields Shopping Centre. Original store point and source dates retained; no surveyed corridor boundary claimed.",
+      "confidence": "Medium",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "corridor-nz-waikato-thames-pollen-street"
+    },
+    {
+      "store_id": "independent-other-optical-osm-ne-node-4757538924",
+      "location_setting": "Other",
+      "canonical_name": "The Sails",
+      "place_type": "Other",
+      "official_url": "https://foate.co.nz/",
+      "evidence_basis": "Operator homepage explicitly locates its Ferrymead practice at The Sails, 1025 Ferry Road, with dedicated phone and booking. Colliers identifies a first-floor office within the same Sails Development at 1025 Ferry Road. Accept the named commercial property as Other, not a conventional shopping centre or whole Ferrymead precinct. The separate Bishopdale branch remains distinct. An old opening-hours page has inconsistent 2025 holiday dates and is not used to infer current closure or reopening.",
+      "confidence": "High",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "place-nz-canterbury-ferrymead-the-sails"
+    }
+  ],
+  "unresolved": [
+    {
+      "store_id": "independent-other-optical-reviewed-nz-paterson-burn-waiuku",
+      "store_fingerprint": "4f53df783e625750aad9128c8c021ceffce42232d3fc28959dbdb508fdbf9375",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.patersonburn.co.nz/practices/waiuku",
+      "reason": "Public premises and membership investigation reviewed 27 October 2026. Owned branch and booking directory confirm 7 Bowen Street and phone 09 235 8510. Waiuku business association directory also identifies Town Central Waiuku. This establishes business and broad town-centre context, not the boundary of an accepted canonical study area. No existing Bowen Street place is available; leave exact membership unresolved without inventing a shopping-centre tenancy or corridor boundary. Original store-source dates unchanged."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-paterson-burn-fraser-street",
+      "store_fingerprint": "18c3c24f00876c502c83257eacce2ddb1adde89250ea577dce6ea8aef594ba7b",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.patersonburn.co.nz/practices/fraser-st-tauranga",
+      "reason": "Public premises and membership investigation reviewed 27 October 2026. Owned branch and booking directory confirm 194 Fraser Street and phone 07 578 4316; government supplier listing corroborates the address under Tauranga South. Preserve Avenues/Tauranga South as locality variants rather than separate shops. Neither establishes a named property or precise retail precinct. Retain unresolved canonical membership; no shopping-centre association from proximity. Original store-source dates unchanged."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-papamoa-optometrists",
+      "store_fingerprint": "a2e1cd9296e5c1d09241aabe9abcdd77e7f2a6108863418b001c4b77f278ab72",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.papopt.co.nz/",
+      "reason": "Public premises and membership investigation reviewed 27 October 2026. Owned page confirms 25 Domain Road and describes it as opposite PaknSave. Keep the street address separate from postal PO Box 11351/Papamoa 3151. Nearby plaza references and shared locality do not prove tenancy, and focused research found no explicit plaza membership. Preserve the corroborated business point and original address; exact canonical place membership remains unresolved. Original store-source dates unchanged."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-tauranga-eyecare",
+      "store_fingerprint": "d7c452d17ecef28088853ebc2d7e1381fe00416315d64a82633bd408d35ce4bd",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.taurangaeyecare.co.nz/contact-us",
+      "reason": "Public premises and membership investigation reviewed 27 October 2026. Owned contact page confirms Unit 1, 394 Cameron Road at Sixth Avenue, with its own phone, and describes designated parking outside the practice. It separately identifies Omokoroa at 170 Omokoroa Road; that branch and nearby Bay Eye Care are not this business. No named centre or defined corridor is established by the retrieved sources. Keep exact membership unresolved; preserve the store point, unit and historical Langford Callard identity. Original store-source dates unchanged."
+    }
+  ],
+  "place_override": {
+    "place_id": "place-nz-canterbury-ferrymead-the-sails",
+    "canonical_name": "The Sails",
+    "aliases": "The Sails Development",
+    "official_url": "",
+    "evidence_url": "https://foate.co.nz/",
+    "verified_at": "2026-10-27",
+    "reason": "Named commercial development explicitly identified by optical tenant and independently by a property agent. No complete tenant list or site boundary claimed.",
+    "state": "Canterbury",
+    "locality": "Ferrymead",
+    "postcode": "",
+    "address": "1025 Ferry Road",
+    "location_setting": "Other",
+    "address_source_date": "",
+    "address_evidence_url": "https://foate.co.nz/",
+    "address_checked_at": "2026-10-27",
+    "address_basis": "Shared building number published by Foate for The Sails and corroborated by Colliers for a separate unit in the Sails Development. No unit number is promoted to whole-property address; extent and entrance unverified. Publication date unknown."
+  },
+  "point_override": {
+    "place_id": "place-nz-canterbury-ferrymead-the-sails",
+    "latitude": "-43.5574386",
+    "longitude": "172.7036358",
+    "evidence_url": "https://foate.co.nz/",
+    "verified_at": "2026-10-27",
+    "confidence": "Low",
+    "method": "Accepted tenant reference",
+    "reference_store_id": "independent-other-optical-osm-ne-node-4757538924",
+    "reason": "Approximate property display reference inherited unchanged from the accepted Foate Ferrymead business point. It is not a surveyed development centroid, boundary or entrance."
+  },
+  "sources": [
+    "https://www.patersonburn.co.nz/book-appointment",
+    "https://www.waiukutown.co.nz/businesses/",
+    "https://www.moneymanagementsuppliers.workandincome.govt.nz/?start=4530",
+    "https://www.colliers.co.nz/en-nz/properties/elevate-your-workspace/nzl-81025-ferry-road-ferrymead-christchurch-city-canterbury/nzl67036994"
+  ],
+  "limits": "Branch pages and operator contacts fully retrieved. Crawl ages vary from yesterday to one month; publication dates unstated. Government supplier list retains some conflicting older addresses. No fresh whole-network trading guarantee.",
+  "initial_validation_failure": "419/420 tests passed; retained Foate test expected Uncertain before explicit The Sails membership evidence. Updated assertion to accepted Other, and retained address-alone exclusion coverage using Papamoa. No production logic weakened.",
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": [
+    {
+      "store_id": "independent-other-optical-reviewed-nz-paterson-burn-cambridge",
+      "checks": {
+        "accepted_place": true,
+        "place_eligible": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-paterson-burn-thames",
+      "checks": {
+        "accepted_place": true,
+        "place_eligible": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-ne-node-4757538924",
+      "checks": {
+        "accepted_place": true,
+        "place_eligible": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-paterson-burn-waiuku",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-paterson-burn-fraser-street",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-papamoa-optometrists",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-nz-tauranga-eyecare",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true
+      }
+    }
+  ],
+  "property_verification": {
+    "retail_places.json": {
+      "single_identity": true,
+      "address": true,
+      "point": true,
+      "reference_method": true,
+      "date_not_invented": true,
+      "low_confidence": true
+    },
+    "retail_environments.json": {
+      "single_identity": true,
+      "address": true,
+      "point": true,
+      "reference_method": true,
+      "date_not_invented": true,
+      "approximation_explained": true
+    }
+  }
+}

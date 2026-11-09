@@ -1,0 +1,97 @@
+{
+  "checked_at": "2026-10-26",
+  "source_url": "https://www.oscarwylee.co.nz/locations/",
+  "method": "Opened operator all-stores list and each of nine linked branch pages using web retrieval. Compared normalized address and phone against current optical_stores.csv. Coordinates not rechecked.",
+  "stores": [
+    {
+      "store_id": "oscar-wylee-nz-optometrist-auckland-cbd",
+      "source_url": "https://www.oscarwylee.co.nz/locations/optometrist-auckland-cbd.html",
+      "observed_address": "Shop S9, 163 Queen Street, Auckland CBD, Auckland 1010",
+      "observed_phone": "092820368",
+      "address_matches": true,
+      "phone_matches": true
+    },
+    {
+      "store_id": "oscar-wylee-nz-optometrist-new-lynn",
+      "source_url": "https://www.oscarwylee.co.nz/locations/optometrist-new-lynn.html",
+      "observed_address": "LynnMall, 3058 Great North Road, New Lynn, Auckland 0600",
+      "observed_phone": "092820421",
+      "address_matches": true,
+      "phone_matches": true
+    },
+    {
+      "store_id": "oscar-wylee-nz-optometrist-manukau",
+      "source_url": "https://www.oscarwylee.co.nz/locations/optometrist-manukau.html",
+      "observed_address": "Westfield Manukau City, Shop S-041, 1 Leyton Way, Manukau City Centre Auckland 2104",
+      "observed_phone": "092176391",
+      "address_matches": true,
+      "phone_matches": true
+    },
+    {
+      "store_id": "oscar-wylee-nz-optometrist-northlands",
+      "source_url": "https://www.oscarwylee.co.nz/locations/optometrist-northlands.html",
+      "observed_address": "Northlands Mall, Shop 070, 55 Main North Road, Papanui Christchurch 8052",
+      "observed_phone": "039260069",
+      "address_matches": true,
+      "phone_matches": true
+    },
+    {
+      "store_id": "oscar-wylee-nz-optometrist-queensgate",
+      "source_url": "https://www.oscarwylee.co.nz/locations/optometrist-queensgate.html",
+      "observed_address": "Queensgate Shopping Centre, Shop 128, Cnr Queens Drive and, Bunny Street, Lower Hutt Central Wellington 5011",
+      "observed_phone": "042800058",
+      "address_matches": true,
+      "phone_matches": true
+    },
+    {
+      "store_id": "oscar-wylee-nz-optometrist-palmerston-north",
+      "source_url": "https://www.oscarwylee.co.nz/locations/optometrist-palmerston-north.html",
+      "observed_address": "The Plaza, Shop 48-A, 84 The Square, Palmerston North 4410",
+      "observed_phone": "062800014",
+      "address_matches": true,
+      "phone_matches": true
+    },
+    {
+      "store_id": "oscar-wylee-nz-optometrist-wellington-central",
+      "source_url": "https://www.oscarwylee.co.nz/locations/optometrist-wellington-central.html",
+      "observed_address": "G01, 18 Willis Street, Wellington, Central Wellington 6011",
+      "observed_phone": "042800120",
+      "address_matches": true,
+      "phone_matches": true
+    },
+    {
+      "store_id": "oscar-wylee-nz-optometrist-albany",
+      "source_url": "https://www.oscarwylee.co.nz/locations/optometrist-albany.html",
+      "observed_address": "Westfield Albany, Shop S229, 219 Don McKinnon Drive, Albany Auckland 0632",
+      "observed_phone": "092810674",
+      "address_matches": true,
+      "phone_matches": true
+    },
+    {
+      "store_id": "oscar-wylee-nz-optometrist-riccarton",
+      "source_url": "https://www.oscarwylee.co.nz/locations/optometrist-riccarton.html",
+      "observed_address": "Westfield Riccarton, Shop S007, 129 Riccarton Road, Riccarton, Christchurch 8041",
+      "observed_phone": "036674014",
+      "address_matches": true,
+      "phone_matches": true
+    }
+  ],
+  "coverage_limitation": "All nine currently listed branches match held identities, addresses and phones. Additional St Lukes and Broadway Newmarket references investigated and official branch pages explicitly report closure. Generic ten-store prose, booking list and neighbouring-store directions conflict with explicit closures and are not treated as active inventory. Original source snapshot and warnings preserved; coordinates and independent current trading not reverified.",
+  "follow_up_sources": [
+    "https://www.oscarwylee.co.nz/booking/index/index/faq-ordering.html",
+    "https://www.westfield.co.nz/store/6M7fLD0ibA49LcbfPgkV4e/oscar-wylee"
+  ],
+  "original_snapshot_preserved": true,
+  "additional_references_resolved": [
+    {
+      "name": "St Lukes",
+      "source_url": "https://www.oscarwylee.co.nz/locations/stlukes.html",
+      "outcome": "Opened official branch page explicitly states store has closed. No exact closure date inferred; not in current nine-record inventory."
+    },
+    {
+      "name": "Broadway Newmarket",
+      "source_url": "https://www.oscarwylee.co.nz/locations/optometrist-broadway-newmarket.html",
+      "outcome": "Opened official branch page explicitly states store has closed. No exact closure date inferred; not in current nine-record inventory."
+    }
+  ]
+}

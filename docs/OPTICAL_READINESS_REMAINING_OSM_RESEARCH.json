@@ -1,0 +1,121 @@
+{
+  "status": "Research in progress; no data changes or completed reviews claimed.",
+  "checked_at": "2026-10-27",
+  "method": "Retained raw OSM plus standard web search and reader. No Firecrawl.",
+  "original_elements": [
+    {
+      "type": "node",
+      "id": 3403667607,
+      "lat": -37.6893754,
+      "lon": 144.9608007,
+      "tags": {
+        "name": "Optometrist",
+        "shop": "optician"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3761152258,
+      "lat": -37.769197,
+      "lon": 145.000375,
+      "tags": {
+        "name": "Merringtons Optometrists",
+        "shop": "optician"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4041048209,
+      "lat": -37.9494928,
+      "lon": 145.152215,
+      "tags": {
+        "name": "Optometrist",
+        "shop": "optician"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5213706373,
+      "lat": -37.9516109,
+      "lon": 145.1513431,
+      "tags": {
+        "name": "Ngh\u1ec7 Quang",
+        "shop": "optician"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5227802671,
+      "lat": -37.9872508,
+      "lon": 145.2163583,
+      "tags": {
+        "name": "Optometrist",
+        "shop": "optician"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6033469826,
+      "lat": -37.7989451,
+      "lon": 144.901011,
+      "tags": {
+        "name": "Y Si Nhan Khoa",
+        "shop": "optician"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11391637426,
+      "lat": -31.8765326,
+      "lon": 115.77942,
+      "tags": {
+        "level": "0",
+        "name": "Eye Junction",
+        "shop": "optician"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12522399957,
+      "lat": -32.0549468,
+      "lon": 115.7464861,
+      "tags": {
+        "check_date": "2025-01-22",
+        "name": "B N Optometry",
+        "shop": "optician"
+      }
+    }
+  ],
+  "findings": [
+    {
+      "id": 11391637426,
+      "source": "https://www.eyejunction.com.au/",
+      "finding": "Operator page explicitly announces temporary closure while seeking a new location within Karrinyup Shopping Centre and redirects enquiries to sister store Churchlands Optical. Notice has no publication or reopening date. Do not copy the Churchlands address to Eye Junction.",
+      "next": "Reconcile temporary closure into supported status schema and historical Karrinyup membership; verify centre source for any new premises. Preserve raw point and missing tenant address until independently supported."
+    },
+    {
+      "id": 3761152258,
+      "source": "https://mivision.com.au/2009/11/merringtons-cease-trading/",
+      "finding": "Article dated 1 November 2009 reports chain liquidation but explicitly says Northcote, Niddrie and Melton practices continued under new ownership and different names. It does not establish closure of this raw Northcote point. A legacy directory lists 364 High Street / 2 Separation Street, but raw node has no address or phone.",
+      "next": "Investigate exact successor before identity merge or address transfer; do not classify closure from chain article."
+    },
+    {
+      "id": 5213706373,
+      "source": "https://australia-streets.openalfa.com/streets/kintore-street-3171-springvale-city-of-greater-dandenong",
+      "finding": "OSM-derived mirror associates the name with 268 Springvale Road. This is not independent corroboration and retained raw node has no address.",
+      "next": "Find independent operator or centre evidence; do not infer Springvale Central membership."
+    },
+    {
+      "id": 6033469826,
+      "source": "https://australia-streets.openalfa.com/streets/nicholson-street-mall-3011-footscray-city-of-maribyrnong",
+      "finding": "OSM-derived mirror associates label with 30 Leeds Street. Label is a generic Vietnamese optometry description, not sufficient business identity.",
+      "next": "Investigate operator identity; do not treat map mirrors as independent confirmation."
+    },
+    {
+      "id": 12522399957,
+      "source": "https://australia-streets.openalfa.com/streets/market-street-6160-fremantle-city-of-fremantle",
+      "finding": "Searches found OSM-derived mirrors placing B N Optometry on Market Street without a number. Retained source check_date is 2025-01-22; no phone or address.",
+      "next": "Find independent business identity; do not assume Bailey Nelson from initials or proximity."
+    }
+  ]
+}

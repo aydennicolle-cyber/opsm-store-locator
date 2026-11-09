@@ -1,0 +1,100 @@
+{
+  "checked_at": "2026-10-26",
+  "locator_checked_at": "2026-10-25",
+  "source_url": "https://www.oscarwylee.com.au/locations/",
+  "scrape_id": "01a172a5-017f-7536-b959-4a35dc78f8fa",
+  "locator_sha256": "11e9a9d264f98a33f047d01c95ac08f57ad22de55f463303f5f9fa29b3260bce",
+  "existing_records": 123,
+  "listed_identities": 121,
+  "unmatched_locator_ids": [],
+  "not_listed": {
+    "oscar-wylee-99": {
+      "status": "Closed",
+      "evidence": {
+        "store_id": "oscar-wylee-99",
+        "status": "Closed",
+        "evidence_url": "https://www.oscarwylee.com.au/locations/optometrist-orange.html",
+        "verified_at": "2026-10-25",
+        "reason": "Current official branch page explicitly states this store has closed and directs customers to continuing eye care. Specific closure notice supersedes retained generic promotional text and old reviews further down the page. Locator omission is corroborating only, not the basis for closure. Preserve last-known premises and original source ID/date; exact closure date unknown."
+      }
+    },
+    "oscar-wylee-100": {
+      "status": "Closed",
+      "evidence": {
+        "store_id": "oscar-wylee-100",
+        "status": "Closed",
+        "evidence_url": "https://www.oscarwylee.com.au/locations/optometrist-wagga-wagga.html",
+        "verified_at": "2026-10-25",
+        "reason": "Current official branch page explicitly states this store has closed and directs customers to continuing eye care. Specific closure notice supersedes retained generic promotional text and old reviews further down the page. Locator omission is corroborating only, not the basis for closure. Preserve last-known premises and original source ID/date; exact closure date unknown."
+      }
+    }
+  },
+  "retained_reviewed_differences": {
+    "oscar-wylee-47": {
+      "latitude": {
+        "retained": "-33.8953533",
+        "locator": -33.8804298
+      },
+      "longitude": {
+        "retained": "151.1813704",
+        "locator": 151.1771151
+      }
+    },
+    "oscar-wylee-115": {
+      "full_address": {
+        "retained": "Shop GD 220, Casuarina Square, 247 Trower Road, Casuarina NT 0810",
+        "locator": "Shop GD 220, Casuarina Square, 247 Tower Rd Casuarina NT 0810"
+      },
+      "latitude": {
+        "retained": "-12.3749688",
+        "locator": -12.372933344429
+      },
+      "longitude": {
+        "retained": "130.8805878",
+        "locator": 130.88095408466
+      }
+    }
+  },
+  "coordinate_reviews": {
+    "oscar-wylee-47": {
+      "store_id": "oscar-wylee-47",
+      "latitude": "-33.8953533",
+      "longitude": "151.1813704",
+      "evidence_url": "https://www.oscarwylee.com.au/locations/optometrist-newtown.html",
+      "coordinate_source": "Operator-embedded named branch map",
+      "verified_at": "2026-10-18",
+      "reason": "Official page confirms229KingStreet,Newtown2042 and embeds the named OscarWylee map feature at this public reference. Correct the former off-street feed point about1.7km north. Approximate branch-map reference; exact shop frontage and opening date are not inferred.",
+      "coordinate_confidence": "Medium"
+    },
+    "oscar-wylee-115": {
+      "store_id": "oscar-wylee-115",
+      "latitude": "-12.3749688",
+      "longitude": "130.8805878",
+      "evidence_url": "https://www.google.com/maps?q=Oscar+Wylee+Casuarina+Square&output=embed",
+      "coordinate_source": "Named public business map with matching branch address, phone and official domain",
+      "verified_at": "2026-10-02",
+      "reason": "Current operator and centre directory confirm GD220 branch and phone. Operator street spelling Tower conflicts with named map and centre address Trower; use corroborated Trower. Current named feature has the same business ID as the operator embedded map and corrects the displaced source point. Exact shop frontage remains approximate.",
+      "coordinate_confidence": "Medium — approximate named premises point; exact shop frontage unverified"
+    }
+  },
+  "address_review": {
+    "store_id": "oscar-wylee-115",
+    "name": "Casuarina Square",
+    "full_address": "Shop GD 220, Casuarina Square, 247 Trower Road, Casuarina NT 0810",
+    "suburb": "Casuarina",
+    "postcode": "0810",
+    "phone": "0889005704",
+    "official_url": "https://www.oscarwylee.com.au/locations/optometrist-casuarina.html",
+    "website_url": "",
+    "services": "Eye tests; prescription glasses; prescription sunglasses",
+    "business_type": "Permanent retail optometry",
+    "evidence_url": "https://www.oscarwylee.com.au/locations/optometrist-casuarina.html",
+    "verified_at": "2026-10-02",
+    "reason": "Current operator and centre directory confirm GD220 branch and phone. Operator street spelling Tower conflicts with named map and centre address Trower; use corroborated Trower. Current named feature has the same business ID as the operator embedded map and corrects the displaced source point. Exact shop frontage remains approximate.",
+    "retailer": "",
+    "affiliations": "",
+    "clear_fields": "",
+    "directory_url": ""
+  },
+  "limitations": "Identity/address/phone/point reconciliation against retained25October official locator capture, not independent current-trading verification. Original source dates and stale warnings retained; reviewed corrections override stale locator errors."
+}

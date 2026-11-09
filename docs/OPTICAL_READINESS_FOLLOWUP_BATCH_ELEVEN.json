@@ -1,0 +1,144 @@
+{
+  "status": "All nine validation stages passed; six generated outcomes verified. Browser and export verification remains pending.",
+  "raw_store_sha256": "6e51bb24d19f0a4c606374753e35d036e1d75063790f9fdd1a3b9aff26802e21",
+  "accepted": [
+    {
+      "store_id": "independent-other-optical-reviewed-au-westfund-lithgow",
+      "location_setting": "High Street",
+      "canonical_name": "Main Street",
+      "place_type": "High Street Corridor",
+      "official_url": "https://www.westfund.com.au/health-services/eye-care/",
+      "evidence_basis": "Full operator eye-care page retrieved 27 October 2026 explicitly locates Lithgow at 120 Main Street, with optical services and appointments. Accept the existing Lithgow Main Street corridor, which also has an evidenced practice at 67 Main Street. This is a street-and-locality association, not proof of a surveyed boundary or shopping-centre tenancy. Preserve original address, point and source dates.",
+      "confidence": "Medium",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "corridor-au-nsw-lithgow-main-street"
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-new-look-maitland",
+      "location_setting": "High Street",
+      "canonical_name": "High Street",
+      "place_type": "High Street Corridor",
+      "official_url": "https://www.newlookeyewear.com.au/",
+      "evidence_basis": "Full operator homepage retrieved 27 October 2026 confirms 451 High Street, Maitland and 02 4934 1687, with prescription eyewear and optometry services. Accept the existing Maitland High Street corridor, which also has OPSM at 418 High Street. Do not infer Maitland Central or Stockland Green Hills tenancy or a surveyed corridor boundary. Original point and source dates remain unchanged.",
+      "confidence": "Medium",
+      "source_date": "2026-10-27",
+      "owner": "",
+      "manager": "",
+      "place_official_url": "",
+      "canonical_place_id": "corridor-au-nsw-maitland-high-street"
+    }
+  ],
+  "unresolved": [
+    {
+      "store_id": "independent-other-optical-reviewed-au-emu-plains-optical",
+      "store_fingerprint": "ae25899859e5613e3dc019a77198e72fe51395f18e8eb66687d59f9a13c960b5",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.emuplainsoptical.com.au/contact-us/",
+      "reason": "Full operator contact page retrieved 27 October 2026 confirms 2 Emerald Street, Emu Plains. Healthdirect and manufacturer search excerpts corroborate the address, but neither the operator page nor focused premises research establishes a named shopping centre or defined precinct. No accepted Emerald Street corridor exists in the inventory. Retain the supported address and approximate provider point with its existing limitations; do not assign Lennox Village by locality or proximity."
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-4353406489",
+      "store_fingerprint": "2f21481ca019887681c6cfea4962107ea4f6ca0c105a728c526f0f8b761b8fcc",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.hornsbyoptical.com.au/",
+      "reason": "Full operator homepage retrieved 27 October 2026 confirms Shop 4, 43A Florence Street. Focused public directory search corroborates that unit address but does not establish Westfield Hornsby tenancy or a defined Florence Street precinct. The current accepted inventory has no Florence Street corridor. Preserve the operating practice, original point and source dates; canonical membership remains unresolved rather than inferring Westfield membership from nearby premises."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-icon-eyewear-hurstville",
+      "store_fingerprint": "7d0bad11e6a8abf80aa011c0468af8d9eaffd3a3d6a7af54432d0f70095e8015",
+      "candidate_venue_id": "nsw-hurstville-westfield",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://iconeyewear.com.au/pages/contact",
+      "reason": "Full operator contact page retrieved 27 October 2026 confirms 28/2A Cross Street and a direct wheelchair/pram access ramp from Cross Street. Directory excerpts corroborate the address. Neither those directions nor the 81.4 m Westfield Hurstville candidate establishes centre tenancy; The Avenue is a different street. Retain supported premises and point, with canonical place membership unresolved. Do not count the associated hearing service as a separate optical practice."
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-brennan-smith-inverell",
+      "store_fingerprint": "16eb416aef92e59c79180b6eadfebaffb5035c55ea06c4f092a6e91af9f10b8e",
+      "candidate_venue_id": "",
+      "reviewed_at": "2026-10-27",
+      "evidence_url": "https://www.brennanandsmith.com.au/inverell",
+      "reason": "Full operator Inverell page retrieved 27 October 2026 confirms 36 Otho Street, current practice team and booking link. Targeted search corroborates that address through the booking provider and owned social profile. No named shopping centre or defined Otho Street precinct is established; the accepted Inverell corridor is Byron Street, not Otho Street. Preserve supported premises and original approximate provider point and source dates. Canonical membership remains unresolved; a shared locality is not evidence of precinct membership."
+    }
+  ],
+  "limits": "No raw store status, addresses, points or original dates changed. Four unresolved practices retain network eligibility; no proximity-based tenancy. J & J Optical Pavilion identity is separately researched and not included in this batch.",
+  "validation_results": {
+    "retail_places": 0,
+    "recognition": 0,
+    "property_intelligence": 0,
+    "data_health": 0,
+    "readiness_register": 0,
+    "tests": 0,
+    "intelligence": 0,
+    "privacy": 0,
+    "diff": 0
+  },
+  "generated_verification": [
+    {
+      "store_id": "independent-other-optical-reviewed-au-westfund-lithgow",
+      "checks": {
+        "accepted_place": true,
+        "place_eligible": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-new-look-maitland",
+      "checks": {
+        "accepted_place": true,
+        "place_eligible": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-emu-plains-optical",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-osm-au-node-4353406489",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-icon-eyewear-hurstville",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    },
+    {
+      "store_id": "independent-other-optical-reviewed-au-brennan-smith-inverell",
+      "checks": {
+        "current_receipt": true,
+        "blank_place": true,
+        "uncertain": true,
+        "excluded": true,
+        "reason_propagated": true,
+        "evidence_propagated": true,
+        "network_status_preserved": true
+      }
+    }
+  ]
+}
