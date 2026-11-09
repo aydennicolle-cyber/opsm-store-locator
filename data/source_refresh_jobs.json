@@ -1,0 +1,349 @@
+{
+  "version": 1,
+  "coverage": {
+    "scope": "Optical repository and its City Beach/Ozmosis feeds only. Separate shared-data, Car Wash and Surf repositories are not connected.",
+    "not_automated": [
+      "ABS/Stats NZ release ingestion",
+      "Shopping-centre directories, public portfolio research and place-membership verification",
+      "OpenStreetMap discovery and individually reviewed independents",
+      "Ray-Ban, Oakley, Gentle Monster, Valley Eyewear, MOSCOT, AM Eyewear and The Eye Piece: reviewed evidence has no maintained scheduled collector in this setup"
+    ],
+    "policy": "Only unchanged identities and phone/fax/hours changes are automatically adopted. Every other changed feed is retained as a review artifact, never inferred as a closure. Collector receipt dates are separate from publication dates.",
+    "changedetection": "Optional supplementary monitor; no hosted service, subscription or AI key is configured."
+  },
+  "jobs": [
+    {
+      "id": "opsm-au",
+      "folders": [
+        "opsm"
+      ],
+      "commands": [
+        [
+          "python",
+          "scripts/fetch_opsm_stores.py"
+        ]
+      ],
+      "interval_days": 7,
+      "retry_days": 2,
+      "priority": 1,
+      "timeout_seconds": 240,
+      "outputs": [
+        "opsm_stores.csv",
+        "opsm_stores.geojson",
+        "retailers/opsm/stores.csv",
+        "retailers/opsm/stores.geojson",
+        "retailers/opsm/source_snapshot.json"
+      ]
+    },
+    {
+      "id": "opsm-nz",
+      "folders": [
+        "opsm-nz"
+      ],
+      "commands": [
+        [
+          "python",
+          "scripts/fetch_opsm_nz_stores.py"
+        ]
+      ],
+      "interval_days": 7,
+      "retry_days": 2,
+      "priority": 1,
+      "timeout_seconds": 240,
+      "outputs": [
+        "retailers/opsm-nz/stores.csv",
+        "retailers/opsm-nz/stores.geojson",
+        "retailers/opsm-nz/source_snapshot.json"
+      ]
+    },
+    {
+      "id": "bailey-nelson-au",
+      "folders": [
+        "bailey-nelson"
+      ],
+      "commands": [
+        [
+          "python",
+          "scripts/fetch_bailey_nelson_stores.py"
+        ]
+      ],
+      "interval_days": 7,
+      "retry_days": 2,
+      "priority": 1,
+      "timeout_seconds": 360,
+      "outputs": [
+        "retailers/bailey-nelson/stores.csv",
+        "retailers/bailey-nelson/stores.geojson",
+        "retailers/bailey-nelson/source_snapshot.json"
+      ]
+    },
+    {
+      "id": "bailey-nelson-nz",
+      "folders": [
+        "bailey-nelson-nz"
+      ],
+      "commands": [
+        [
+          "python",
+          "scripts/fetch_bailey_nelson_nz_stores.py"
+        ]
+      ],
+      "interval_days": 7,
+      "retry_days": 2,
+      "priority": 1,
+      "timeout_seconds": 240,
+      "outputs": [
+        "retailers/bailey-nelson-nz/stores.csv",
+        "retailers/bailey-nelson-nz/stores.geojson",
+        "retailers/bailey-nelson-nz/source_snapshot.json"
+      ]
+    },
+    {
+      "id": "oscar-wylee-au",
+      "folders": [
+        "oscar-wylee"
+      ],
+      "commands": [
+        [
+          "python",
+          "scripts/fetch_oscar_wylee_stores.py"
+        ]
+      ],
+      "interval_days": 7,
+      "retry_days": 2,
+      "priority": 2,
+      "timeout_seconds": 240,
+      "outputs": [
+        "retailers/oscar-wylee/stores.csv",
+        "retailers/oscar-wylee/stores.geojson",
+        "retailers/oscar-wylee/source_snapshot.json"
+      ]
+    },
+    {
+      "id": "city-beach-au",
+      "folders": [
+        "city-beach"
+      ],
+      "commands": [
+        [
+          "python",
+          "scripts/fetch_city_beach_stores.py"
+        ]
+      ],
+      "interval_days": 7,
+      "retry_days": 2,
+      "priority": 3,
+      "timeout_seconds": 240,
+      "outputs": [
+        "retailers/city-beach/stores.csv",
+        "retailers/city-beach/stores.geojson",
+        "retailers/city-beach/city_beach_store_locator_raw.json"
+      ]
+    },
+    {
+      "id": "ozmosis-au",
+      "folders": [
+        "ozmosis"
+      ],
+      "commands": [
+        [
+          "python",
+          "scripts/fetch_ozmosis_stores.py"
+        ]
+      ],
+      "interval_days": 7,
+      "retry_days": 2,
+      "priority": 3,
+      "timeout_seconds": 240,
+      "outputs": [
+        "retailers/ozmosis/stores.csv",
+        "retailers/ozmosis/stores.geojson",
+        "retailers/ozmosis/ozmosis_store_locator_raw.json"
+      ]
+    },
+    {
+      "id": "additional-optical",
+      "folders": [
+        "george-and-matilda",
+        "eyecare-plus",
+        "optical-superstore",
+        "1001-optometry",
+        "eyeq-optometrists",
+        "laubman-and-pank",
+        "provision"
+      ],
+      "commands": [
+        [
+          "python",
+          "scripts/fetch_additional_optical_networks.py"
+        ]
+      ],
+      "interval_days": 14,
+      "retry_days": 2,
+      "priority": 3,
+      "timeout_seconds": 720,
+      "outputs": [
+        "retailers/george-and-matilda/stores.csv",
+        "retailers/george-and-matilda/source_snapshot.json",
+        "retailers/eyecare-plus/stores.csv",
+        "retailers/eyecare-plus/source_snapshot.json",
+        "retailers/optical-superstore/stores.csv",
+        "retailers/optical-superstore/source_snapshot.json",
+        "retailers/1001-optometry/stores.csv",
+        "retailers/1001-optometry/source_snapshot.json",
+        "retailers/eyeq-optometrists/stores.csv",
+        "retailers/eyeq-optometrists/source_snapshot.json",
+        "retailers/laubman-and-pank/stores.csv",
+        "retailers/laubman-and-pank/source_snapshot.json",
+        "retailers/provision/stores.csv",
+        "retailers/provision/source_snapshot.json"
+      ]
+    },
+    {
+      "id": "priority-optical",
+      "folders": [
+        "bupa-optical",
+        "chemist-warehouse-optometry",
+        "dresden-vision",
+        "optical-warehouse",
+        "the-optical-company",
+        "national-pharmacies-optical",
+        "matthews-eyecare"
+      ],
+      "commands": [
+        [
+          "python",
+          "scripts/fetch_priority_optical_networks.py"
+        ]
+      ],
+      "interval_days": 14,
+      "retry_days": 2,
+      "priority": 3,
+      "timeout_seconds": 720,
+      "outputs": [
+        "retailers/bupa-optical/stores.csv",
+        "retailers/bupa-optical/source_snapshot.json",
+        "retailers/bupa-optical/geocoding_evidence.json",
+        "retailers/chemist-warehouse-optometry/stores.csv",
+        "retailers/chemist-warehouse-optometry/source_snapshot.json",
+        "retailers/chemist-warehouse-optometry/geocoding_evidence.json",
+        "retailers/dresden-vision/stores.csv",
+        "retailers/dresden-vision/source_snapshot.json",
+        "retailers/dresden-vision/geocoding_evidence.json",
+        "retailers/optical-warehouse/stores.csv",
+        "retailers/optical-warehouse/source_snapshot.json",
+        "retailers/optical-warehouse/geocoding_evidence.json",
+        "retailers/the-optical-company/stores.csv",
+        "retailers/the-optical-company/source_snapshot.json",
+        "retailers/the-optical-company/geocoding_evidence.json",
+        "retailers/national-pharmacies-optical/stores.csv",
+        "retailers/national-pharmacies-optical/source_snapshot.json",
+        "retailers/national-pharmacies-optical/geocoding_evidence.json",
+        "retailers/matthews-eyecare/stores.csv",
+        "retailers/matthews-eyecare/source_snapshot.json",
+        "retailers/matthews-eyecare/geocoding_evidence.json"
+      ]
+    },
+    {
+      "id": "sunglass-hut-anz",
+      "folders": [
+        "sunglass-hut"
+      ],
+      "commands": [
+        [
+          "python",
+          "scripts/fetch_sunglass_hut.py"
+        ],
+        [
+          "python",
+          "scripts/sunglass_hut.py"
+        ]
+      ],
+      "interval_days": 14,
+      "retry_days": 2,
+      "priority": 3,
+      "timeout_seconds": 720,
+      "outputs": [
+        "retailers/sunglass-hut/stores.csv",
+        "retailers/sunglass-hut/source_snapshot.json"
+      ]
+    },
+    {
+      "id": "specsavers-au",
+      "folders": [
+        "specsavers"
+      ],
+      "commands": [
+        [
+          "node",
+          "scripts/fetch_specsavers_stores.mjs"
+        ],
+        [
+          "python",
+          "scripts/build_specsavers_stores.py"
+        ]
+      ],
+      "interval_days": 14,
+      "retry_days": 2,
+      "priority": 3,
+      "timeout_seconds": 900,
+      "outputs": [
+        "retailers/specsavers/stores.csv",
+        "retailers/specsavers/stores.geojson",
+        "retailers/specsavers/source_snapshot.json"
+      ],
+      "env": {
+        "SPECSAVERS_COUNTRY": "AU"
+      }
+    },
+    {
+      "id": "specsavers-nz",
+      "folders": [
+        "specsavers-nz"
+      ],
+      "commands": [
+        [
+          "node",
+          "scripts/fetch_specsavers_stores.mjs"
+        ],
+        [
+          "python",
+          "scripts/build_specsavers_stores.py"
+        ]
+      ],
+      "interval_days": 14,
+      "retry_days": 2,
+      "priority": 3,
+      "timeout_seconds": 900,
+      "outputs": [
+        "retailers/specsavers-nz/stores.csv",
+        "retailers/specsavers-nz/stores.geojson",
+        "retailers/specsavers-nz/source_snapshot.json"
+      ],
+      "env": {
+        "SPECSAVERS_COUNTRY": "NZ"
+      }
+    },
+    {
+      "id": "oscar-wylee-nz",
+      "folders": [
+        "oscar-wylee-nz"
+      ],
+      "commands": [
+        [
+          "node",
+          "scripts/fetch_oscar_wylee_nz_stores.mjs"
+        ]
+      ],
+      "interval_days": 14,
+      "retry_days": 2,
+      "priority": 3,
+      "timeout_seconds": 360,
+      "outputs": [
+        "retailers/oscar-wylee-nz/stores.csv",
+        "retailers/oscar-wylee-nz/stores.geojson",
+        "retailers/oscar-wylee-nz/source_snapshot.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "last_run_at": "2026-11-09T03:54:52.485771+00:00",
+  "ai_calls": 0,
+  "jobs": {
+    "opsm-au": {
+      "last_attempt_at": "2026-11-09T03:54:52.485771+00:00",
+      "status": "needs_review",
+      "feeds": [
+        {
+          "folder": "opsm",
+          "before_count": 335,
+          "after_count": 335,
+          "added_ids": [],
+          "missing_ids": [],
+          "edits": [
+            {
+              "source_store_id": "1050",
+              "fields": [
+                "hours"
+              ]
+            },
+            {
+              "source_store_id": "1169",
+              "fields": [
+                "identifier",
+                "name"
+              ]
+            },
+            {
+              "source_store_id": "1193",
+              "fields": [
+                "hours"
+              ]
+            },
+            {
+              "source_store_id": "1214",
+              "fields": [
+                "services"
+              ]
+            },
+            {
+              "source_store_id": "1237",
+              "fields": [
+                "services"
+              ]
+            },
+            {
+              "source_store_id": "1283",
+              "fields": [
+                "hours"
+              ]
+            },
+            {
+              "source_store_id": "1328",
+              "fields": [
+                "services"
+              ]
+            },
+            {
+              "source_store_id": "1346",
+              "fields": [
+                "services"
+              ]
+            },
+            {
+              "source_store_id": "1354",
+              "fields": [
+                "hours"
+              ]
+            },
+            {
+              "source_store_id": "1375",
+              "fields": [
+                "hours"
+              ]
+            },
+            {
+              "source_store_id": "1495",
+              "fields": [
+                "hours"
+              ]
+            },
+            {
+              "source_store_id": "1507",
+              "fields": [
+                "services"
+              ]
+            },
+            {
+              "source_store_id": "2287",
+              "fields": [
+                "services"
+              ]
+            },
+            {
+              "source_store_id": "4718",
+              "fields": [
+                "hours"
+              ]
+            },
+            {
+              "source_store_id": "7071",
+              "fields": [
+                "hours",
+                "services"
+              ]
+            }
+          ],
+          "requires_review": true,
+          "content_sha256": "c8fa40dcb8ca604199f3471f3353efb99570ee5e8d57f70f4a31256a44bee801"
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "scope": "Optical repository and its City Beach/Ozmosis feeds only. Separate shared-data, Car Wash and Surf repositories are not connected.",
+    "not_automated": [
+      "ABS/Stats NZ release ingestion",
+      "Shopping-centre directories, public portfolio research and place-membership verification",
+      "OpenStreetMap discovery and individually reviewed independents",
+      "Ray-Ban, Oakley, Gentle Monster, Valley Eyewear, MOSCOT, AM Eyewear and The Eye Piece: reviewed evidence has no maintained scheduled collector in this setup"
+    ],
+    "policy": "Only unchanged identities and phone/fax/hours changes are automatically adopted. Every other changed feed is retained as a review artifact, never inferred as a closure. Collector receipt dates are separate from publication dates.",
+    "changedetection": "Optional supplementary monitor; no hosted service, subscription or AI key is configured."
+  },
+  "run_url": ""
+}

@@ -1,0 +1,93 @@
+name: Refresh public sources
+
+on:
+  schedule:
+    - cron: "37 19 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/source-refresh.yml
+      - scripts/refresh_sources.py
+      - data/source_refresh_jobs.json
+
+concurrency:
+  group: public-source-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    permissions:
+      contents: write
+    outputs:
+      updated: ${{ steps.commit.outputs.updated }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install existing dependencies
+        run: |
+          pip install -r requirements.txt
+          npm install --ignore-scripts --no-audit --no-fund --package-lock=false
+      - name: Install browser only when a browser collector is due
+        run: |
+          python scripts/refresh_sources.py --plan > /tmp/refresh-plan.json
+          if python -c 'import json,sys; jobs=json.load(open("/tmp/refresh-plan.json"))["due_jobs"]; sys.exit(0 if any(j in jobs for j in ("specsavers-au", "specsavers-nz", "oscar-wylee-nz")) else 1)'; then
+            npx playwright install --with-deps chrome
+          fi
+      - name: Collect and compare due public sources
+        env:
+          SOURCE_REFRESH_RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python scripts/refresh_sources.py --max-jobs 3
+      - name: Rebuild public data and validate all changes
+        run: |
+          python scripts/build_optical_network.py
+          python scripts/build_retail_places.py
+          python scripts/build_property_intelligence.py
+          python scripts/build_data_health.py
+          python -m unittest discover -s tests -v
+          node tests/test_intelligence.js
+          node tests/test_location_news.js
+          python scripts/scan_public_privacy.py
+      - name: Save collector review files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-refresh-review
+          path: output/source-refresh/
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Save validated refresh and status
+        id: commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/ retailers/ opsm_stores.csv opsm_stores.geojson
+          if git diff --cached --quiet; then
+            echo 'updated=false' >> "$GITHUB_OUTPUT"
+          else
+            git commit -m 'data: refresh validated public sources and freshness status'
+            # A concurrent edit makes this fail; never force or overwrite another writer.
+            git push origin HEAD:main
+            echo 'updated=true' >> "$GITHUB_OUTPUT"
+          fi
+  publish:
+    needs: refresh
+    if: needs.refresh.outputs.updated == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

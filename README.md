@@ -118,6 +118,8 @@ Private inputs, comparisons, derived hypotheses and QA screenshots stay outside 
 
 ## Refresh Data
 
+Scheduled source collection, review safeguards and coverage limits are documented in [Automatic public source refresh](docs/SOURCE_REFRESH.md). Open [Automatic source updates](source-refresh.html) for the latest per-collector status. Routine runs use no AI calls.
+
 Refresh OPSM from its public locator endpoint:
 
 ```bash
