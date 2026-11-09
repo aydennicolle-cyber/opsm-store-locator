@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source updates · Retail Garage</title>
+<style>
+body{font:16px/1.6 system-ui,sans-serif;max-width:1100px;margin:40px auto;padding:0 22px;color:#213b33;background:#f8faf9}h1{line-height:1.2}a{color:#165d48}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:12px;text-align:left;border-bottom:1px solid #cedad4;vertical-align:top}th{background:#e8f0ec}.scroll{overflow:auto}li{margin:8px 0}#error{color:#8e2626}.note{padding:16px;background:#e8f0ec}small{display:block}time{white-space:nowrap}
+</style>
+<p><a href="index.html">← Return to map</a></p>
+<h1>Automatic source updates</h1>
+<p class="note">Routine collection uses no AI calls. Only unchanged store identities and phone, fax or opening-hour changes are adopted automatically. Other changes await review; a missing listing never automatically becomes a closure.</p>
+<p id="last">Loading update status…</p><p id="error" role="alert"></p>
+<p id="run"></p>
+<div class="scroll"><table><thead><tr><th>Collector</th><th>Frequency</th><th>Latest result</th><th>Last attempt</th><th>Last adopted check</th></tr></thead><tbody id="jobs"></tbody></table></div>
+<h2>Coverage and limitations</h2><p id="scope"></p><ul id="limitations"></ul>
+<p>A successful check confirms what that source returned. It does not prove that the publisher's information is current. Publication dates, accepted place memberships and existing evidence dates remain separate.</p>
+<p>For changes awaiting review, open the latest run and download <strong>source-refresh-review</strong>. Review files are retained for 30 days. The next attempt will collect them again if unresolved. Historical run reports remain available in GitHub Actions.</p>
+<script>
+const date=value=>value?new Date(value).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short'}):'Not yet';
+async function load(){
+const responses=await Promise.all(['data/source_refresh_status.json','data/source_refresh_jobs.json'].map(url=>fetch(url,{cache:'no-store'})));
+if(responses.some(r=>!r.ok))throw Error('Update status could not be loaded.');
+const [status,config]=await Promise.all(responses.map(r=>r.json()));
+document.getElementById('last').textContent=status.last_run_at?'Last automation run: '+date(status.last_run_at):'Automation is configured; the first run has not yet been recorded.';
+if(/^https:\/\/github\.com\/aydennicolle-cyber\/opsm-store-locator\/actions\/runs\/\d+$/.test(status.run_url||'')){const a=document.createElement('a');a.href=status.run_url;a.textContent='Open latest run and review files';document.getElementById('run').append(a);}
+for(const job of config.jobs){const state=status.jobs[job.id]||{};const tr=document.createElement('tr');for(const value of [job.id,job.interval_days+' days',state.status||'Not checked',date(state.last_attempt_at),date(state.last_success_at)]){const td=document.createElement('td');td.textContent=value;tr.append(td);}document.getElementById('jobs').append(tr);}
+document.getElementById('scope').textContent=config.coverage.scope;
+for(const text of config.coverage.not_automated){const li=document.createElement('li');li.textContent=text;document.getElementById('limitations').append(li);}
+}
+load().catch(error=>{document.getElementById('last').textContent='Status unavailable';document.getElementById('error').textContent=error.message;});
+</script>
+</html>
