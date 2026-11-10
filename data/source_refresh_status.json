@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_run_at": "2026-11-09T04:31:47.989860+00:00",
+  "last_run_at": "2026-11-10T02:22:47.737936+00:00",
   "ai_calls": 0,
   "jobs": {
     "opsm-au": {
@@ -780,6 +780,24 @@
           "content_sha256": "96453253d8869812c0073b5a910b69347e5ca95d0f08e5207f0855a53bee6cb2"
         }
       ]
+    },
+    "priority-optical": {
+      "last_attempt_at": "2026-11-10T02:22:47.737936+00:00",
+      "status": "failed",
+      "feeds": [],
+      "error": "CalledProcessError: collection or validation failed; existing feed retained"
+    },
+    "specsavers-au": {
+      "last_attempt_at": "2026-11-10T02:22:47.737936+00:00",
+      "status": "failed",
+      "feeds": [],
+      "error": "CalledProcessError: collection or validation failed; existing feed retained"
+    },
+    "specsavers-nz": {
+      "last_attempt_at": "2026-11-10T02:22:47.737936+00:00",
+      "status": "failed",
+      "feeds": [],
+      "error": "CalledProcessError: collection or validation failed; existing feed retained"
     }
   },
   "coverage": {
@@ -793,5 +811,5 @@
     "policy": "Only unchanged identities and phone/fax/hours changes are automatically adopted. Every other changed feed is retained as a review artifact, never inferred as a closure. Collector receipt dates are separate from publication dates.",
     "changedetection": "Optional supplementary monitor; no hosted service, subscription or AI key is configured."
   },
-  "run_url": "https://github.com/aydennicolle-cyber/opsm-store-locator/actions/runs/42562251309"
+  "run_url": "https://github.com/aydennicolle-cyber/opsm-store-locator/actions/runs/42742260271"
 }
