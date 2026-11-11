@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_run_at": "2026-11-10T02:22:47.737936+00:00",
+  "last_run_at": "2026-11-11T00:13:23.846542+00:00",
   "ai_calls": 0,
   "jobs": {
     "opsm-au": {
@@ -798,6 +798,2910 @@
       "status": "failed",
       "feeds": [],
       "error": "CalledProcessError: collection or validation failed; existing feed retained"
+    },
+    "sunglass-hut-anz": {
+      "last_attempt_at": "2026-11-11T00:13:23.846542+00:00",
+      "status": "needs_review",
+      "feeds": [
+        {
+          "folder": "sunglass-hut",
+          "before_count": 227,
+          "after_count": 235,
+          "added_ids": [
+            "F968",
+            "P385",
+            "P386",
+            "P391",
+            "P723",
+            "P733",
+            "P775",
+            "Q508"
+          ],
+          "missing_ids": [],
+          "edits": [
+            {
+              "source_store_id": "A571",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "A902",
+              "fields": [
+                "full_address",
+                "name"
+              ]
+            },
+            {
+              "source_store_id": "A928",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "AU3215",
+              "fields": [
+                "coordinate_evidence_url",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "AU3400",
+              "fields": [
+                "coordinate_evidence_url",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "AU3718",
+              "fields": [
+                "coordinate_evidence_url",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "AU4618",
+              "fields": [
+                "coordinate_evidence_url",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B626",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B627",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B628",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "postal_code",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B630",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B632",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B634",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B636",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B637",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B638",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B641",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B642",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B644",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B645",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B646",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "postal_code",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B647",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B648",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B649",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B652",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "postal_code",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B656",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B658",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B659",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B660",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B661",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B662",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B663",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B664",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B665",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B666",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B667",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B668",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B669",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B671",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B672",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B673",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B674",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B675",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B676",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B677",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B678",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B679",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B681",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B682",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B685",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B687",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B689",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B690",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B691",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B693",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B695",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B696",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B698",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B699",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "postal_code",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B700",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B701",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B702",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B704",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B705",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B706",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B707",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B709",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B713",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B715",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B716",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B717",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B718",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B721",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B722",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B723",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B725",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B726",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B728",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B729",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B730",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B731",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B732",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B733",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B735",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B736",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B737",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B739",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B741",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B742",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B743",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B744",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B746",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "postal_code",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B747",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B749",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B750",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B751",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B754",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "phone",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B757",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B758",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B759",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "postal_code",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B760",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B761",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B762",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B763",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B764",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B766",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B767",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B768",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B769",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "postal_code",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B770",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B771",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B772",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B773",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "postal_code",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B774",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B775",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B776",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B778",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B779",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B780",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B783",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B785",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B786",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B788",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B790",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B791",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B793",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B795",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B796",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "phone",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B797",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "phone",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B798",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B799",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B800",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B801",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B802",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B804",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "phone",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B805",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "phone",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B806",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "phone",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B807",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B808",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "phone",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B810",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B811",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "phone",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B812",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B813",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B814",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B815",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B816",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "phone",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B817",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "phone",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B818",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "phone",
+                "postal_code",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B819",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B820",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B821",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B822",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B824",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B825",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B826",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B827",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B829",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B833",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B835",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B838",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B840",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B845",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B848",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B850",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B851",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B854",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B855",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B856",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B858",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B860",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "phone",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B861",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B862",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "phone",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B863",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B864",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B865",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B867",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B868",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B869",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B871",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B872",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B874",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "phone",
+                "postal_code",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B875",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "phone",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B884",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B885",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "postal_code",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B886",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B890",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B892",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B893",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B894",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B895",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B896",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B897",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B898",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B899",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B902",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B903",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B904",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "postal_code",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "B905",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "C279",
+              "fields": [
+                "city",
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "C350",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "E524",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "E604",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "F641",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "F773",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "name",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "F833",
+              "fields": [
+                "full_address",
+                "latitude",
+                "longitude",
+                "name"
+              ]
+            },
+            {
+              "source_store_id": "F870",
+              "fields": [
+                "full_address"
+              ]
+            },
+            {
+              "source_store_id": "F986",
+              "fields": [
+                "full_address",
+                "latitude",
+                "longitude",
+                "name",
+                "phone"
+              ]
+            },
+            {
+              "source_store_id": "P102",
+              "fields": [
+                "full_address"
+              ]
+            },
+            {
+              "source_store_id": "Q101",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "Q747",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "official_url",
+                "source_url",
+                "status_evidence_url",
+                "website_url"
+              ]
+            },
+            {
+              "source_store_id": "Q767",
+              "fields": [
+                "coordinate_evidence_url",
+                "full_address",
+                "latitude",
+                "longitude",
+                "official_url",
+                "source_url",
+                "state",
+                "status_evidence_url",
+                "website_url"
+              ]
+            }
+          ],
+          "requires_review": true,
+          "content_sha256": "ce838272f411165761e38603dad2d0b37f64c6550b7a10b54f1916b13ce0c779"
+        }
+      ]
     }
   },
   "coverage": {
@@ -811,5 +3715,5 @@
     "policy": "Only unchanged identities and phone/fax/hours changes are automatically adopted. Every other changed feed is retained as a review artifact, never inferred as a closure. Collector receipt dates are separate from publication dates.",
     "changedetection": "Optional supplementary monitor; no hosted service, subscription or AI key is configured."
   },
-  "run_url": "https://github.com/aydennicolle-cyber/opsm-store-locator/actions/runs/42742260271"
+  "run_url": "https://github.com/aydennicolle-cyber/opsm-store-locator/actions/runs/42929592197"
 }
