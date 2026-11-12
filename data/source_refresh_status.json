@@ -1,119 +1,16 @@
 {
   "version": 1,
-  "last_run_at": "2026-11-11T00:13:23.846542+00:00",
+  "last_run_at": "2026-11-12T01:38:49.715755+00:00",
   "ai_calls": 0,
   "jobs": {
     "opsm-au": {
-      "last_attempt_at": "2026-11-09T03:54:52.485771+00:00",
-      "status": "needs_review",
-      "feeds": [
-        {
-          "folder": "opsm",
-          "before_count": 335,
-          "after_count": 335,
-          "added_ids": [],
-          "missing_ids": [],
-          "edits": [
-            {
-              "source_store_id": "1050",
-              "fields": [
-                "hours"
-              ]
-            },
-            {
-              "source_store_id": "1169",
-              "fields": [
-                "identifier",
-                "name"
-              ]
-            },
-            {
-              "source_store_id": "1193",
-              "fields": [
-                "hours"
-              ]
-            },
-            {
-              "source_store_id": "1214",
-              "fields": [
-                "services"
-              ]
-            },
-            {
-              "source_store_id": "1237",
-              "fields": [
-                "services"
-              ]
-            },
-            {
-              "source_store_id": "1283",
-              "fields": [
-                "hours"
-              ]
-            },
-            {
-              "source_store_id": "1328",
-              "fields": [
-                "services"
-              ]
-            },
-            {
-              "source_store_id": "1346",
-              "fields": [
-                "services"
-              ]
-            },
-            {
-              "source_store_id": "1354",
-              "fields": [
-                "hours"
-              ]
-            },
-            {
-              "source_store_id": "1375",
-              "fields": [
-                "hours"
-              ]
-            },
-            {
-              "source_store_id": "1495",
-              "fields": [
-                "hours"
-              ]
-            },
-            {
-              "source_store_id": "1507",
-              "fields": [
-                "services"
-              ]
-            },
-            {
-              "source_store_id": "2287",
-              "fields": [
-                "services"
-              ]
-            },
-            {
-              "source_store_id": "4718",
-              "fields": [
-                "hours"
-              ]
-            },
-            {
-              "source_store_id": "7071",
-              "fields": [
-                "hours",
-                "services"
-              ]
-            }
-          ],
-          "requires_review": true,
-          "content_sha256": "c8fa40dcb8ca604199f3471f3353efb99570ee5e8d57f70f4a31256a44bee801"
-        }
-      ]
+      "last_attempt_at": "2026-11-12T01:38:49.715755+00:00",
+      "status": "failed",
+      "feeds": [],
+      "error": "CalledProcessError: collection or validation failed; existing feed retained"
     },
     "bailey-nelson-au": {
-      "last_attempt_at": "2026-11-09T04:00:16.951444+00:00",
+      "last_attempt_at": "2026-11-12T01:38:49.715755+00:00",
       "status": "needs_review",
       "feeds": [
         {
@@ -209,8 +106,7 @@
             {
               "source_store_id": "north-lakes",
               "fields": [
-                "name",
-                "status"
+                "name"
               ]
             },
             {
@@ -257,12 +153,12 @@
             }
           ],
           "requires_review": true,
-          "content_sha256": "c92af732e9c019f958038d3f4c70b93ec9ad5091f08f72dafc64e2362bdd49d9"
+          "content_sha256": "ad48c296ffa3e3eb25f123dbdf117e7c72c4a243b2a5f4a83bdc115a25decebc"
         }
       ]
     },
     "bailey-nelson-nz": {
-      "last_attempt_at": "2026-11-09T04:00:16.951444+00:00",
+      "last_attempt_at": "2026-11-12T01:38:49.715755+00:00",
       "status": "needs_review",
       "feeds": [
         {
@@ -3715,5 +3611,5 @@
     "policy": "Only unchanged identities and phone/fax/hours changes are automatically adopted. Every other changed feed is retained as a review artifact, never inferred as a closure. Collector receipt dates are separate from publication dates.",
     "changedetection": "Optional supplementary monitor; no hosted service, subscription or AI key is configured."
   },
-  "run_url": "https://github.com/aydennicolle-cyber/opsm-store-locator/actions/runs/42929592197"
+  "run_url": "https://github.com/aydennicolle-cyber/opsm-store-locator/actions/runs/43135900620"
 }
