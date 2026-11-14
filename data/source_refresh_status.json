@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_run_at": "2026-11-13T00:40:06.034916+00:00",
+  "last_run_at": "2026-11-14T00:27:20.752795+00:00",
   "ai_calls": 0,
   "jobs": {
     "opsm-au": {
@@ -229,7 +229,7 @@
       "error": "TimeoutExpired: collection or validation failed; existing feed retained"
     },
     "oscar-wylee-nz": {
-      "last_attempt_at": "2026-11-09T04:31:47.989860+00:00",
+      "last_attempt_at": "2026-11-14T00:27:20.752795+00:00",
       "status": "needs_review",
       "feeds": [
         {
@@ -310,13 +310,13 @@
       ]
     },
     "priority-optical": {
-      "last_attempt_at": "2026-11-10T02:22:47.737936+00:00",
+      "last_attempt_at": "2026-11-14T00:27:20.752795+00:00",
       "status": "failed",
       "feeds": [],
       "error": "CalledProcessError: collection or validation failed; existing feed retained"
     },
     "specsavers-au": {
-      "last_attempt_at": "2026-11-10T02:22:47.737936+00:00",
+      "last_attempt_at": "2026-11-14T00:27:20.752795+00:00",
       "status": "failed",
       "feeds": [],
       "error": "CalledProcessError: collection or validation failed; existing feed retained"
@@ -3243,5 +3243,5 @@
     "policy": "Only unchanged identities and phone/fax/hours changes are automatically adopted. Every other changed feed is retained as a review artifact, never inferred as a closure. Collector receipt dates are separate from publication dates.",
     "changedetection": "Optional supplementary monitor; no hosted service, subscription or AI key is configured."
   },
-  "run_url": "https://github.com/aydennicolle-cyber/opsm-store-locator/actions/runs/43338831735"
+  "run_url": "https://github.com/aydennicolle-cyber/opsm-store-locator/actions/runs/43534206708"
 }
